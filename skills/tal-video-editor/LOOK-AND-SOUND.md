@@ -78,7 +78,7 @@ later one (a payoff usually lands at the end of a line).
 
 ## The sound
 
-**SFX are available** at `skills/toolbox/media-use/audio/assets/sfx/` — whoosh,
+**SFX are available** at `skills/tal-video-editor/assets/sfx/` — whoosh,
 whoosh-short, whoosh-cinematic, impact-bass, riser, pop, sparkle, chime, click.
 
 **MUSIC IS NOT.** There is no music library on this machine — only

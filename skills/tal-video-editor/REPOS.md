@@ -106,8 +106,9 @@ npx skills add https://github.com/latent-spaces/brag --skill brag-slim
 
 Both land in `.agents/skills/` and are symlinked into `skills/`, which
 `.claude/skills` junctions to — so `/brag` and `/brag-slim` are live. The raw
-`git clone` at `toolbox/brag/` is now redundant but kept, because it carries
-the `docs/` and `examples/` the installed skill does not. Nothing was deleted.
+`git clone` that used to sit at `toolbox/brag/` was removed in the
+2026-09-27 prune - the installed skill is the one that runs. Its `docs/` and
+`examples/` are one `git clone` away (`toolbox/CLONES.md`).
 
 **This makes three loadable skills where the rule says one, and the risk is
 real.** `brag` triggers on *"make a launch video"* and *"turn this into a
@@ -245,3 +246,34 @@ bimodal (36 frames near 0.25, 20 near 0.76). **Cluster the x values before
 using them; never take the median on a two-shot.** Used that way it replaces
 the manual gridded-still measurement, which is a real gain — that step was done
 by eye on the last two films.
+
+
+---
+
+## The global HyperFrames install — parked the parts that compete, 2026-09-27
+
+Installing `/brag` on 2026-09-26 pulled 15 HyperFrames skills into
+`~/.claude/skills`, where they load **on their own**. One of them,
+`hyperframes`, describes itself as the *"Mandatory entry point: read this
+first for any request to make, create, edit, animate, or render a video"* and
+lists *"existing footage"* as an input — so every "edit this" Tal said was
+contested between it and `tal-video-editor`. That is the exact failure
+CLAUDE.md §0a was written to prevent, and it arrived silently through an
+unrelated install.
+
+`/brag` reads five of them by name, so the family could not simply go. But
+brag's own SKILL.md says *"do not enter the `hyperframes` entry"* — it needs the
+domain skills, not the entry points. So:
+
+| | skills |
+|---|---|
+| **parked** → `~/.claude/skills-disabled/hyperframes-entry-points/` | `hyperframes`, `general-video`, `media-use`, `motion-graphics`, `faceless-explainer`, `product-launch-video`, `pr-to-video`, `slideshow`, `remotion-to-hyperframes`, `figma` |
+| **still loadable** (what `/brag` reads) | `hyperframes-core`, `-animation`, `-audio`, `-cli`, `-keyframes`, `-registry` |
+
+Parked, not deleted — move a folder back to restore it. `media-use`'s sound
+effects were copied to `tal-video-editor/assets/sfx/` first.
+
+**The lesson: installing any skill can install more than one.** After an
+install, list `~/.claude/skills` and read every new description for a trigger
+that claims "edit", "video" or "footage". Check the loader, not just the folder
+you cloned into.

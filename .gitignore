@@ -69,12 +69,9 @@ __pycache__/
 # redistributed through this repo.
 system/vendor/
 skills/toolbox/add-zooms/
-skills/toolbox/brag/
-skills/toolbox/claude-shorts/
 skills/toolbox/clipify/
 skills/toolbox/cut-video/
 skills/toolbox/find-broll/
-skills/toolbox/nl-video-editing/
 skills/toolbox/video-use/
 skills/toolbox/youtube-clipper/
 .agents/

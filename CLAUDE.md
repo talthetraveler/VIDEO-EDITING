@@ -38,7 +38,7 @@ FOOTAGE IN/   raw clips, one folder per shoot. READ-ONLY source.
 VIDEOS OUT/   finished cuts
 assets/       references - his own reels, his music, style refs, analysis
 skills/       tal-video-editor/  <- THE ONE SKILL
-              toolbox/           <- 138 demoted tools, NOT loadable skills
+              toolbox/           <- 49 tools, NOT loadable skills (pruned 2026-09-27)
 system/       scripts, tools, projects, node_modules, .env, bin, models, src
 ```
 
@@ -51,7 +51,7 @@ parse, Frame.io auth works, the caption renderer renders.
 it** (no admin needed). Tal sees one folder, the loader still finds it. Do not
 "repair" the junction.
 
-**Only `tal-video-editor` is a loadable skill, deliberately.** The other 138
+**Only `tal-video-editor` is a loadable skill, deliberately.** The other 49
 live in `skills/toolbox/`, which the loader ignores, because dozens of them
 declare triggers like *"use this skill EVERY time the user wants to create a
 video"* and would compete for the same request. They are reached on purpose,

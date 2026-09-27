@@ -184,11 +184,11 @@ Both are true at once, and the distinction is the whole point:
 > **He never picks a tool, and neither does a trigger. This file picks, by
 > sub-problem, and opens the file on purpose.**
 
-The 95 editing tools live in `skills/toolbox/` — read by path, never loaded as
+The 49 editing tools live in `skills/toolbox/` — read by path, never loaded as
 skills. That demotion is deliberate: dozens declare *"use this skill EVERY time
 the user wants to create a video"*, and when several match one request the wrong
 one can win silently, losing the framing, the grade and the caption rules with
-nothing erroring. 43 non-video tools are parked in `skills/toolbox/_not-video/`.
+nothing erroring. **Pruned 2026-09-27 from 140 to 49** - every cut, and why, is in `toolbox/PRUNED.md`.
 
 **USING THEM IS A STEP, NOT AN OPTION.** Before cutting, open the rows below
 that the job actually touches. "I have a toolbox" is not the same as reading it.
@@ -211,7 +211,7 @@ that the job actually touches. "I have a toolbox" is not the same as reading it.
 | motion / titles, when a film actually needs them | `toolbox/05-motion-graphics/`, `toolbox/motion-doctrine/`, `toolbox/style-library/` | taste only; they do not know this footage |
 | hook or caption copy | `toolbox/tal-scriptwriting/` | |
 | an INDEPENDENT check on caption timing | `caption-crosscheck.mjs` (AutoSubSync/ffsubsync) | a PASS is real evidence; anything else means **not checked**. It refuses on a montage and loses lock on sparse street speech - `REPOS.md` has the measurements |
-| a launch video about a PROJECT or a URL | `toolbox/brag/skills/brag-slim/` | reads a codebase, **not footage**. Never point it at a shoot |
+| a launch video about a PROJECT or a URL | `/brag-slim` (installed skill) | reads a codebase, **not footage**. Never point it at a shoot |
 
 **None of this closes the real gap.** Every failure Tal has flagged was a
 **selection** failure — the wrong moment chosen, a wheelbarrow captioned "FOR

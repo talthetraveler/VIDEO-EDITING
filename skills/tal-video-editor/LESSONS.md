@@ -956,7 +956,7 @@ as whatever the reference shot. Use YAVG as the target, SATAVG as a range.
 
 The reference's look includes a **continuous music bed** — measured at 2.8x the
 speech band during its quietest quarter. There is no music library on this
-machine; `skills/toolbox/media-use/audio/assets/sfx/` has whooshes, impacts and
+machine; `skills/tal-video-editor/assets/sfx/` has whooshes, impacts and
 risers but **no music**, and CLAUDE.md §1 Rights forbids lifting the bed from
 Tal's reference.
 
