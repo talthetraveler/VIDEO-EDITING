@@ -1,4 +1,4 @@
-# REFERENCE INDEX — 44 videos, 34 accounts
+# REFERENCE INDEX — 46 videos, 34 accounts
 
 Supplied by Tal 2026-09-20. **Titles and modes are his.** The `mode` column is
 his own categorisation; `tier` is a first pass by me and should be corrected as
@@ -23,11 +23,20 @@ creator. **[S]**
 | 31 | [Israel — paying kindness forward](https://www.instagram.com/reel/DS9-SeKjD6N/) | SIMPLE KINDNESS | STYLE | LISTED |
 | 32 | [Israeli youth pride moment](https://www.instagram.com/reel/DYKLnZHM98Z/) | STRANGER STORY | STYLE | LISTED |
 | 33 | [Normal day on an Israel train](https://www.instagram.com/reel/DY2QmhAoF-z/) | POV / SLICE | STYLE | LISTED |
+| SA-1 | **MATTHEW NO LIMITS** (Social Accords) — a man with Down syndrome at a Miami café | NAS-STYLE NARRATED STORY | **GOLDEN** | **MEASURED** 2026-09-27 — every shot, transcript, sound. `assets/references/nas-daily/` |
+| SA-2 | **OUR BIG KITCHEN V4** (Social Accords) — a Holocaust survivor's legacy kitchen | NAS-STYLE NARRATED STORY | **GOLDEN** | **MEASURED** 2026-09-27 — every shot, transcript, sound. `assets/references/nas-daily/` |
 
 Also his, already measured and held elsewhere on disk:
 **`Tal Sample.mp4`** (call-someone-you-love rig, 45.8s single take) and
 **`MONTANA TUCKER V3.mp4`** (his own reference *cut* — 181.5s, ~41 cuts/min,
 the Social Accords target).
+
+**SA-1 / SA-2 are the Social Accords NAS-style template** — both end on the
+Social Accords logo. Their measured recipe (12-beat arc, 29–39 cuts/min,
+~180 wpm, 1–2 word captions, gold key phrase) is in
+`tal-video-editor/formats/nas-explainer.md`, and the caption look is built:
+`"captionStyle": "nas"`. Frames, transcripts and sound measurements:
+`assets/analysis/nas-daily/`.
 
 ---
 

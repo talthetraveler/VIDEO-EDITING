@@ -145,6 +145,26 @@ lost, these eight rules are the minimum:
 **When Tal corrects something, append the correction to `LESSONS.md` in the same
 turn.** That file is the memory — it must grow on its own, not when asked.
 
+**When Tal hands over a REFERENCE video, it goes into the skill in the same
+turn — never left in chat.** Tal, 2026-09-28: *"whenever I give you a
+reference, you're gonna add it to my skills, right?"* Yes, every time, all five:
+
+1. **Copy** it to `assets/references/<name>/` (a copy — his original in
+   Downloads stays untouched).
+2. **Measure** it: every shot on a contact sheet, transcript with word
+   timings, cut rate, speech rate, captions, sound. Validate each instrument
+   before believing it (LESSONS 53).
+3. **Write the findings** into the matching `formats/*.md` — or a new one.
+   Where it contradicts the existing preset, the newer measurement of HIS
+   work wins, and the file says so.
+4. **Catalogue** it in `toolbox/tal-reference-library/references.md` as
+   MEASURED.
+5. **Commit and push** — a reference that only lives in a chat is lost at the
+   next `/compact`.
+
+If the reference needs something the pipeline cannot do yet (a caption look, a
+transition), build it and test it against the reference's own frames.
+
 **Pipeline (do not hand-roll):**
 ```bash
 node system/scripts/frameio-discover.mjs "<folder>" --fetch    # proxies only
