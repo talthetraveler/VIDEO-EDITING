@@ -64,6 +64,11 @@ emphasis happens only when a caption passes `"emphasis": true` or an explicit
 `"key_index"` — a hook-line device, never automatic. Height is `CAP_Y` in
 `build-edit.mjs`, default **0.66** of frame, per-project override `capY`.
 
+> **A second look exists: `"captionStyle": "nas"`** — sentence case, narrow
+> sans, one named phrase in gold #FACC27 at 1.4x on the line below. Measured
+> off his own Social Accords videos. Only for NAS-style narrated cuts; the
+> street look above stays the default. Spec: `formats/nas-explainer.md`.
+
 > **"Clear of faces, hands, and platform controls" is NOT automated.** Nothing
 > measures where the subject's face is before placing a caption. If a face sits
 > low in frame, set `capY` and confirm on a still.

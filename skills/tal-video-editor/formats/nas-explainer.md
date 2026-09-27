@@ -164,3 +164,47 @@ after the history and before the values.
 - Transcription errors in the source analysis: "Fieder" = Feder, "Lysi" =
   legacy, "OPKLA" = the kitchen's LA name. Matthew's closing line did not
   transcribe reliably.
+
+
+## USING IT — `"captionStyle": "nas"` (built 2026-09-27)
+
+```json
+{
+  "captionStyle": "nas",
+  "captionKeys": ["paycheck", "Coffee shop", "the Holocaust", "per year"]
+}
+```
+
+- **`captionStyle: "nas"`** switches `build-edit.mjs` to this look. Leave it
+  out and every project renders the street style exactly as before — the
+  change is 4 guarded lines in the builder and a purely additive block in
+  `render-caption.py` (verified by diff: 0 lines of the street path removed).
+- **`captionKeys`** names the gold phrases. **Gold is never automatic** —
+  about half their captions have none. A caption containing a key gets it
+  lifted; the longest match wins; everything else stays white.
+- Height defaults to block-centre **y 0.72** (white line ~0.70, gold ~0.77).
+  `capY` still overrides.
+
+**How it was matched, not guessed:**
+
+| | theirs (measured) | ours |
+|---|---|---|
+| gold | #F7CB30 – #FACC27 | `#FACC27` |
+| font | narrow humanist sans | Bahnschrift **SemiCondensed** — width **94.5–96%** of theirs at matched height |
+| gold word | 1.4× white, line below | 1.4×, line below |
+| gold size at 1080 wide | ~142px | 140px |
+| case | sentence case | preserved end to end, including hand corrections |
+| edge | soft shadow, no outline | soft wide shadow + a tight one, no outline |
+| numbers | big bold white, words beneath | Bold SemiCondensed 1.6×, words beneath |
+
+**Two deliberate differences:**
+- **A second, tighter shadow.** Theirs alone failed on a bright busy
+  background — white words over a white blanket went grey-on-white in the
+  first real render. Still no stroke.
+- **Always centred.** They sometimes stagger the white line left of the gold
+  one; that reads as a per-shot hand choice, so centre is the default.
+
+**Not identical:** the typeface family. Theirs is rounder and softer;
+Bahnschrift is more squared-off. Proportions match, personality does not
+quite. If Tal supplies their actual font file, swap `NAS_FONT` in
+`render-caption.py` and nothing else changes.

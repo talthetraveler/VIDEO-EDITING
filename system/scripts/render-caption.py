@@ -123,11 +123,136 @@ def render(text, key_idx, idx):
     img.save(path)
     return {"file": path.replace("\\", "/"), "w": img.width, "h": img.height, "size": size}
 
+
+# ============================================================ STYLE "nas"
+# The Social Accords NAS-style look — MEASURED 2026-09-27 off frames of his own
+# MATTHEW NO LIMITS and OUR BIG KITCHEN (formats/nas-explainer.md), not guessed:
+#
+#   - sentence case, exactly as spoken. Never uppercased.
+#   - a narrow sans at regular weight — tall letters, not heavy. Bahnschrift
+#     ships with Windows. Its width was MEASURED against theirs, not eyeballed:
+#     matching their letter height, SemiCondensed lands within 5% of their
+#     width (paycheck 96%, Coffee shop 94.5%). Condensed was 17-20% too narrow
+#     - the first attempt used it and visibly squeezed every word.
+#   - NO outline. A soft blurred drop shadow only.
+#   - white body; the key phrase in GOLD #FACC27 (sampled: #F7CB30..#FACC27
+#     across four frames) and ~1.4x LARGER, on its own line below:
+#         a real            No Limits
+#         paycheck          Coffee shop
+#     1.4x comes from paycheck / Coffee shop. The Holocaust frame measured
+#     bigger, but its "gold" included the yellow BIG logo on the host's cap.
+#   - a number is its own big BOLD white line, the words small beneath:
+#         300,000
+#         meals
+#
+# Gold is never automatic — about half their captions have no gold at all.
+# The caller names the phrase ("key": "Coffee shop"); otherwise it is white.
+NAS_FONT = "C:/Windows/Fonts/bahnschrift.ttf"
+NAS_GOLD = (0xFA, 0xCC, 0x27, 255)
+NAS_KEY_SCALE = 1.4
+NAS_NUM_SCALE = 1.6
+_nas_cache = {}
+
+def nas_font(sz, style="SemiCondensed"):
+    k = (sz, style)
+    if k not in _nas_cache:
+        f = ImageFont.truetype(NAS_FONT, sz)
+        names = f.get_variation_names()
+        want = [n for n in names if (n.decode() if isinstance(n, bytes) else n) == style]
+        if want:
+            f.set_variation_by_name(want[0])
+        _nas_cache[k] = f
+    return _nas_cache[k]
+
+NUMBER = re.compile(r"^[$€£]?\d[\d,.]*[%+]?$")
+
+def nas_span(words, key):
+    """Word index range [i, j) of the key phrase, matched case-insensitively
+    and ignoring punctuation. None if absent."""
+    if not key:
+        return None
+    norm = lambda w: re.sub(r"[^\w']", "", w).lower()
+    kw = [norm(w) for w in key.split() if norm(w)]
+    ws = [norm(w) for w in words]
+    for i in range(len(ws) - len(kw) + 1):
+        if ws[i:i + len(kw)] == kw:
+            return (i, i + len(kw))
+    return None
+
+def render_nas(text, key, idx):
+    words = [w for w in re.split(r"\s+", text.strip()) if w]
+    if not words:
+        return None
+    base = BASE
+    for _ in range(12):                       # shrink until every line fits
+        white = nas_font(base, "SemiCondensed")
+        gold = nas_font(round(base * NAS_KEY_SCALE), "SemiCondensed")
+        num = nas_font(round(base * NAS_NUM_SCALE), "Bold SemiCondensed")
+        span = nas_span(words, key)
+        lines = []                            # list of [(word, font, colour)]
+        if span and span[1] == len(words) and span[0] > 0:
+            # key at the end -> white line, then the gold line beneath it
+            lines.append([(w, white, WHITE) for w in words[:span[0]]])
+            lines.append([(w, gold, NAS_GOLD) for w in words[span[0]:]])
+        elif span:
+            # key first or mid-line -> one line, mixed sizes on a shared baseline
+            lines.append([(w, gold if span[0] <= i < span[1] else white,
+                           NAS_GOLD if span[0] <= i < span[1] else WHITE)
+                          for i, w in enumerate(words)])
+        elif NUMBER.match(words[0]) and len(words) > 1:
+            lines.append([(words[0], num, WHITE)])
+            lines.append([(w, white, WHITE) for w in words[1:]])
+        elif len(words) == 1 and NUMBER.match(words[0]):
+            lines.append([(words[0], num, WHITE)])
+        else:
+            lines.append([(w, white, WHITE) for w in words])
+        widths = [sum(wordw(w, f) for w, f, _ in ln) +
+                  wordw(" ", ln[0][1]) * (len(ln) - 1) for ln in lines]
+        if max(widths) <= MAXW:
+            break
+        base = int(base * 0.9)
+
+    pad = round(base * 0.35)
+    metrics = [max(f.getmetrics()[0] for _, f, _ in ln) for ln in lines]      # ascent
+    descs = [max(f.getmetrics()[1] for _, f, _ in ln) for ln in lines]
+    gap = round(base * 0.02)
+    W = max(widths) + pad * 2
+    H = sum(a + d for a, d in zip(metrics, descs)) + gap * (len(lines) - 1) + pad * 2
+    txt = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    shd = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    dt, ds = ImageDraw.Draw(txt), ImageDraw.Draw(shd)
+    y = pad
+    for ln, lw, asc, desc in zip(lines, widths, metrics, descs):
+        x = (W - lw) // 2
+        sp = wordw(" ", ln[0][1])
+        for w, f, col in ln:
+            yy = y + asc - f.getmetrics()[0]   # shared baseline across sizes
+            ds.text((x, yy + max(2, base // 24)), w, font=f, fill=(0, 0, 0, 200))
+            dt.text((x, yy), w, font=f, fill=col)
+            x += wordw(w, f) + sp
+        y += asc + desc + gap
+    from PIL import ImageFilter
+    # TWO shadows, still no outline. The soft wide one is their look; alone it
+    # failed on a bright busy background (white words over a white Stitch
+    # blanket went grey-on-white in the first real render). A tight second
+    # shadow hugging the glyphs restores the edge without drawing a stroke.
+    wide = shd.filter(ImageFilter.GaussianBlur(max(3, base // 14)))
+    tight = shd.filter(ImageFilter.GaussianBlur(max(1, base // 45)))
+    img = Image.alpha_composite(Image.alpha_composite(wide, tight), txt)
+    img = img.crop(img.getbbox() or (0, 0, W, H))
+    path = os.path.join(OUT, f"cap_{idx:04d}.png")
+    img.save(path)
+    return {"file": path.replace("\\", "/"), "w": img.width, "h": img.height, "size": base}
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     items = json.loads(sys.stdin.read())
     res = []
     for i, it in enumerate(items):
+        if isinstance(it, dict) and it.get("style") == "nas":
+            # sentence case preserved - see the "nas" block above
+            res.append(render_nas(it["text"], it.get("key"), i))
+            continue
         text = (it["text"] if isinstance(it, dict) else str(it)).upper()
         words = [w for w in re.split(r"\s+", text.strip()) if w]
         # White by default. Gold only on explicit request — see the header.

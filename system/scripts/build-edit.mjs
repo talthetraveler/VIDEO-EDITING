@@ -101,7 +101,14 @@ const BEAT_W = 1080, BEAT_H = 1920;   // beats ALWAYS full size; scale once at t
 // checks it. If a subject's face sits low in frame, set "capY" per project
 // (0.58 is already used on the phone-booth films, where the caller's face is
 // high and the rig's sign occupies the lower third) and CONFIRM ON A STILL.
-const CAP_Y = Math.round(1920 * (cfg.capY ?? 0.66));
+// CAPTION STYLE. Default = the street look (bold white CAPS, heavy stroke).
+// "captionStyle": "nas" = the Social Accords NAS look, measured 2026-09-27 off
+// his own videos (formats/nas-explainer.md): sentence case, narrow sans, soft
+// shadow, a named key phrase in gold #FACC27 at 1.4x on the line below.
+// It sits lower - white line measured at y~0.70, gold beneath at ~0.77 - so
+// its block centre defaults to 0.72 instead of 0.66.
+const NAS = cfg.captionStyle === "nas";
+const CAP_Y = Math.round(1920 * (cfg.capY ?? (NAS ? 0.72 : 0.66)));
 
 // caption-only corrections; audio is never altered
 const CORR = (() => {
@@ -504,7 +511,7 @@ function captionFilters(id, ss, to, n, opts = {}) {
           // contains the word.
           if (rule.exact ? cur === m : cur.includes(m)) {
             if (rule.to == null) { dropped = true; break; }
-            fixed = String(rule.to).toUpperCase();
+            fixed = NAS ? String(rule.to) : String(rule.to).toUpperCase();
           }
         }
         if (dropped) return;
@@ -558,13 +565,26 @@ function captionFilters(id, ss, to, n, opts = {}) {
 // gold word inside a white line would mean computing each word's x by hand and
 // stacking a filter per word. scripts/render-caption.py measures and draws the
 // line with PIL instead, and the result is composited with `movie=`+`overlay`.
+// GOLD IS A CHOICE, NOT A HEURISTIC. About half the captions in his own NAS-
+// style videos have no gold word at all. The edit names the phrases:
+//   "captionKeys": ["paycheck", "Coffee shop", "the Holocaust", "per year"]
+// A caption containing one gets it lifted; anything else stays white.
+function nasKey(text) {
+  const t = String(text).toLowerCase();
+  const hit = (cfg.captionKeys ?? [])
+    .filter((k) => t.includes(String(k).toLowerCase()))
+    .sort((a, b) => b.length - a.length)[0];          // longest match wins
+  return hit ?? null;
+}
+
 function captionOverlays(caps, tmpDir) {
   if (!caps.length) return { suffix: "", label: "[v]" };
   let meta = [];
   try {
     meta = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-caption.py"),
-      tmpDir, String(CAP_MAXW), String(CAP_SIZE)],
-      { input: JSON.stringify(caps.map((c) => ({ text: c.text }))), encoding: "utf8" }).trim());
+      tmpDir, String(CAP_MAXW), String(NAS ? 100 : CAP_SIZE)],
+      { input: JSON.stringify(caps.map((c) => (NAS ? { text: c.text, style: "nas", key: nasKey(c.text) }
+                                                   : { text: c.text }))), encoding: "utf8" }).trim());
   } catch (e) {
     console.log(`  !! caption render failed: ${String(e.message).slice(0, 90)}`);
     return { suffix: "", label: "[v]" };
