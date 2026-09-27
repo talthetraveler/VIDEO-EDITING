@@ -1,5 +1,10 @@
 # FORMAT — Nas-style Story / Explainer
 
+> **For a Social Accords video, skip to the section at the bottom** —
+> measured 2026-09-27 from two of his own. It overturns this table on the
+> things that matter most: **1–2 caption words, not 4–6; ~180 wpm, not 132;
+> 29–39 cuts/min, not 22.** The table below is NAS Daily's own channel.
+
 Script or VO drives the picture. Faster visual progression than a street
 conversation. Information delivered warmly. **[S]**
 
@@ -49,3 +54,113 @@ Presets: `caption/nas_caption.json` (`highlight: "keyword"`),
 - Karaoke-highlighting every word — this format is semantic emphasis
 - Putting captions at y 0.67 (that is the street format's position)
 - A big stat shown as a number over stock footage instead of its own beat
+
+---
+
+# SOCIAL ACCORDS IN NAS STYLE — measured from two of his own, 2026-09-27
+
+Tal handed over `MATTHEW NO LIMITS new intro` and `OUR BIG KITCHEN V4`:
+*"these are both nas daily style videos, study every shot, look at the script,
+transcribe ... understand the sound design and music."*
+
+**Both end on the Social Accords logo. These are HIS brand's videos in NAS
+style — so where they disagree with the NAS Daily numbers above, THESE WIN.**
+Every shot was looked at (contact sheets in `assets/analysis/nas-daily/`),
+both were transcribed with word timings, and the audio was measured.
+
+## The numbers — and where they overturn the table above
+
+| | Matthew | Kitchen | the NAS table above said |
+|---|---|---|---|
+| runtime | 96s (86s + 10s end card) | 143s (133s + 9s end card) | median 157s |
+| real shots | 42 | 87 | |
+| **cuts/min** | **29** | **39** | 22 |
+| **median shot** | **1.55s** | **1.13s** | 2.4s |
+| shots under 1s | 2 | **37** | 15% |
+| **speech rate** | **183 wpm** | **175 wpm** | 132 wpm |
+| pauses ≥0.3s | **1.0s in 87s** | **2.2s in 136s** | |
+| **caption words on screen** | **1–2** | **1–2** | 4–6 |
+| loudness | −15.5 LUFS | −16.6 LUFS | |
+
+**Faster, tighter, fewer words on screen than NAS Daily itself.** Cut rate
+tracks information: Kitchen (a dense history lesson) runs 39/min; Matthew (a
+character story) 29/min.
+
+Cut counts were validated, not trusted: Matthew held at 41–45 across detector
+thresholds 0.18–0.35 (robust); Kitchen swung 87–111 because whip transitions
+and push-ins register as several "cuts" — hits under 0.35 were checked on the
+contact sheet and dropped as artifacts of one shot.
+
+## The story arc — identical in both
+
+| beat | Matthew | Kitchen |
+|---|---|---|
+| **1. Hook = the surprising fact, in the first sentence** | "This is my new friend Matthew. He has Down syndrome, his father passed away from cancer…" | "This kitchen exists because of a teenager who survived the Holocaust" |
+| **2. Scale / stakes** | "…so today he works at a cafe to help his single mom" | "…and now it serves more than **300,000 meals per year**" |
+| **3. The hand-off line** | "Here's the story." | "Let me take you back 80 years ago." |
+| **4. Backstory** | 20 years teaching; the same problem every year | Hungary, age 14, Auschwitz, the camp kitchen |
+| **5. The obstacle** | "no one was willing or able to hire them" | "everyone around her was starving" |
+| **6. The turn** | "Kia took a huge **leap of faith**" | "Margaret did something incredibly dangerous" |
+| **7. What exists now** | No Limits Coffee Shop — work, earn, prove it | Our Big Kitchen, born in COVID, friends and neighbours joined |
+| **8. The subject in their own voice** | "I am Matthew" / what he does at work | the founder: "Everyone's welcome to receive a meal" |
+| **9. The value, stated plainly** | "Sometimes people don't need you to do everything for them. They just need someone to give them a chance." | "You can be a Jew, a Muslim, a Christian, a Hindu… if you are hungry, this kitchen feeds you." |
+| **10. Callback to the opening** | — | "80 years ago Margaret shared what little food she had… and today this place feeds those in need" |
+| **11. Brand line** | "So what are the limits?" | "Now **that** is the story of Our Big Kitchen." |
+| **12. End card** | Social Accords, ~10s | Social Accords, ~9s |
+
+The host is **personally inside** the story in Kitchen ("my grandmother was
+from Hungary… survived Auschwitz too") — that is the emotional peak, placed
+after the history and before the values.
+
+## Captions
+
+- **1–2 words at a time**, sentence case, white, **no heavy stroke**, soft shadow.
+- **One key word lifted in yellow/gold**: *story*, *paycheck*, *Coffee shop*,
+  *the Holocaust*, *Margaret Feder*, *per year*, *America*, *In need*.
+- Lower-middle of frame.
+- **Burned captions were hand-corrected where speech recognition fails.**
+  Matthew's own lines transcribe as nonsense ("I work at a scoop of food");
+  the video shows "I SERVE / I'M PUSHING / I CLEAN TABLES". With a speaker
+  who has a speech difference, a human writes the caption. Always.
+
+## Visual devices — each one a deliberate beat
+
+1. **Archival photo + a yellow circle drawn round the face** that matters.
+2. **A big number gets its own full-screen beat**, counting up: 296,793 → 300,000.
+3. **A document with yellow highlighter** on the key line (the eulogy, "in 2019").
+4. **AI-generated period imagery with ONE consistent character** — Margaret in
+   Hungary, the transport, the camp kitchen — where no footage can exist.
+5. **The identity montage**: one different person per word, ~0.6s each —
+   *a Jew / a Muslim / a Christian / a Hindu / an atheist / young / old / poor /
+   homeless*. The values line, made visible.
+6. **Host to camera in two settings**: on location, and a clean white studio
+   for the direct-address bridge.
+7. **The subject to camera** in their own words ("I am Matthew").
+8. Storefront / doorway reveal on "But this café…".
+
+## Sound
+
+- **A music bed under every second of speech**, never dropping out — its
+  stereo component is constant through speech and pauses alike (a mono voice
+  has none). Roughly **12–15 dB under the voice.**
+- **Pauses are removed.** 1–2 seconds of silence ≥0.3s across the whole film.
+  Every breath is cut.
+- **No SFX on ordinary cuts.** Measured against 300 random moments as a
+  control: cuts carry *less* high-frequency energy than chance, and fewer
+  spikes than chance predicts. The picture changes on the voice's rhythm alone.
+- **A real whoosh on the ONE structural transition** — the whip into the
+  flashback ("Let me take you back"): stereo high-frequency +22 dB against
+  +12 dB mono. Its stereo spread is what proves it is an effect and not the
+  voice's "s". The "80 years ago" callback, by the same test, is just the voice.
+- **End card**: Matthew keeps the music under it; Kitchen's is near-silent.
+- **Kitchen's true peak is +0.7 dBFS — it clips.** Do not copy that; hold −1 dBTP.
+
+## Honest limits of this analysis
+
+- Watched = contact sheets of every shot + transcripts + audio measurement.
+  Not continuous viewing — the renderer cannot play video.
+- The music was measured, not identified. Whether it is licensed library
+  music, and what it is, is unknown — **never lift it** (CLAUDE.md §1 Rights).
+- Transcription errors in the source analysis: "Fieder" = Feder, "Lysi" =
+  legacy, "OPKLA" = the kitchen's LA name. Matthew's closing line did not
+  transcribe reliably.
