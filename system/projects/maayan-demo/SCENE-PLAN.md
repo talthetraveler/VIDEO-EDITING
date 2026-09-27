@@ -2,7 +2,7 @@
 
 **Status: DRAFT — waiting for owner approval.** Nothing is built until this is approved.
 
-~72 s · 9:16 · English · text only, no voiceover · 11 beats · ~40 caption cards
+~72 s · 9:16 · English · text only, no voiceover · 12 beats · ~40 caption cards
 
 ## Look
 
