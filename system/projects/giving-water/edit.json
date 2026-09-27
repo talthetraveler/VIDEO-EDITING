@@ -1,0 +1,136 @@
+{
+  "layout": "vertical",
+  "title": "POV: I HANDED OUT COLD WATER TO PEOPLE\nWORKING IN THE HEAT IN ISRAEL",
+  "titleHold": 4,
+  "out": "GIVING_WATER_V7.mp4",
+  "beats": [
+    [
+      "54dffb0d-afd0-42ec-9bd1-615e2fdf9cbf",
+      3.7,
+      10.4,
+      0.5,
+      "OPEN ON A FACE: 'Would you like some water?' 'Yeah.' 'Omar.' 'Toda raba, Omar.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      34,
+      45.6,
+      0.5,
+      "[picture moved into the face run 33.6-49.6; audio unchanged]",
+      null,
+      {
+        "audio": {
+          "id": "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+          "at": 29.6
+        }
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      41,
+      47.4,
+      0.5,
+      "'Where are you guys from?' 'Sri Lanka?' 'I love Sri Lanka - my favourite country.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.2
+        ]
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      25.4,
+      32,
+      0.5,
+      "'You guys are the best.' 'I love Argentina.' 'I love Israel.'",
+      null,
+      {
+        "z": [
+          1.04,
+          1.2
+        ]
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      32,
+      42,
+      0.5,
+      "'Why do you love Israel?' 'Tel Aviv.' 'What's your favourite part?' 'Jaffa.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.24
+        ]
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      54.6,
+      64,
+      0.5,
+      "THE ENDING: thank you for your hard work — on the workers, not the tools",
+      null,
+      {
+        "audio": {
+          "id": "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+          "at": 53.2
+        }
+      }
+    ]
+  ],
+  "captionFix": [
+    {
+      "match": "SO YOU SHOULD DO IT FROM RIGHT",
+      "to": null
+    },
+    {
+      "match": "HERE, BRO",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "YOU SHOULD BE RIGHT",
+      "to": null
+    },
+    {
+      "match": "BEHIND ME",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "YOU SHOULD LITERALLY",
+      "to": null
+    },
+    {
+      "match": "RUN RIGHT BEHIND ME",
+      "to": null
+    },
+    {
+      "match": "KREMLIN",
+      "to": null
+    },
+    {
+      "match": "I LOVE ARGENTINA",
+      "to": null
+    },
+    {
+      "match": "DO YOU GUYS ARE THE BEST",
+      "to": "YOU GUYS ARE THE BEST"
+    },
+    {
+      "match": "HELLO BROTHER, I",
+      "to": "HELLO BROTHER"
+    }
+  ]
+}

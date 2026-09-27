@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-toys-montage/beats_5336481/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-toys-montage/beats_5336481/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-toys-montage/beats_5336481/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-toys-montage/beats_5336481/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-toys-montage/beats_5336481/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-toys-montage/beats_5336481/06.mp4'

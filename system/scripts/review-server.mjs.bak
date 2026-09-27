@@ -1,0 +1,899 @@
+#!/usr/bin/env node
+/**
+ * Local reel review + publish dashboard.  node scripts/review-server.mjs → :4100
+ *
+ * REVIEW tab: watch each pair (main + trial). Per video:
+ *   Post main  → schedules main to all platforms, next free 09:00 (Israel)
+ *   Post trial → schedules trial (IG trial reel + all), next free 20:00
+ *   Post both  → both on the same day
+ *   Changes    → save a note, stays in Review
+ *   Reject     → drops it
+ * On a Post action the card moves to the PUBLISHED tab.
+ *
+ * PUBLISHED tab: live from the ShortSync API (GET /posts) — scheduled / published
+ * / failed, with the platform links.
+ *
+ * A file scratch/batch/HOLD blocks the auto path; explicit Post buttons here are
+ * a human click = consent, so they post regardless.
+ */
+import { createServer } from "node:http";
+import { readFileSync, writeFileSync, existsSync, statSync, createReadStream, mkdirSync, copyFileSync } from "node:fs";
+import { join } from "node:path";
+import { spawn } from "node:child_process";
+import { warmup, renderLive, shutdownLive, isWarm, projectToData } from "./lib/live-render.mjs";
+
+const ROOT = process.cwd();
+const B = join(ROOT, "scratch", "batch");
+const PREV = join(B, "previews");
+const PORT = 4100;
+const TZ = "+03:00";
+const MORNING = "09:00:00";
+const EVENING = "20:00:00";
+const PLATFORMS = ["instagram", "tiktok", "youtube", "facebook", "threads", "twitter", "bluesky", "pinterest", "snapchat", "mastodon"];
+const CFG = JSON.parse(readFileSync(join(ROOT, "projects", "_publish", "shortsync.config.json"), "utf8"));
+
+const loadQueue = () => JSON.parse(readFileSync(join(B, "queue.json"), "utf8"));
+const revPath = join(B, "review.json");
+const loadRev = () => (existsSync(revPath) ? JSON.parse(readFileSync(revPath, "utf8")) : {});
+const saveRev = (r) => writeFileSync(revPath, JSON.stringify(r, null, 2));
+let rev = loadRev();
+if (!rev["v01-priest"]) rev["v01-priest"] = { status: "published", day: 1 }, saveRev(rev);
+
+const tomorrow = () => {
+  const d = new Date();
+  d.setDate(d.getDate() + 1);
+  return d.toISOString().slice(0, 10);
+};
+const dateForDay = (day) => {
+  const d = new Date(tomorrow() + "T12:00:00Z");
+  d.setUTCDate(d.getUTCDate() + (day - 1));
+  return d.toISOString().slice(0, 10);
+};
+const nextFreeDay = () => {
+  rev = loadRev();
+  const used = Object.values(rev)
+    .filter((v) => v.day && ["scheduled", "scheduling", "published"].includes(v.status))
+    .map((v) => v.day);
+  let d = 1;
+  while (used.includes(d)) d++;
+  return d;
+};
+const hookLineOf = (slug) => {
+  try {
+    return JSON.parse(readFileSync(join(B, "state.json"), "utf8")).plan.find((p) => p.slug === slug)?.hook_line || null;
+  } catch {
+    return null;
+  }
+};
+const preview = (slug, v) => (existsSync(join(PREV, `${slug}-${v}.mp4`)) ? `/media/${slug}-${v}.mp4` : null);
+
+const stageOf = (slug, v) => {
+  if (preview(slug, v)) return "ready";
+  if (existsSync(projJson(`${slug}-${v}`))) return "rendering";
+  return v === "b" ? "none" : "building";
+};
+const listVideos = () => {
+  rev = loadRev();
+  return loadQueue().map((q, i) => {
+    const st = rev[q.slug] || { status: "pending" };
+    return {
+      slug: q.slug,
+      n: i + 1,
+      title: q.title,
+      comp: !!q.comp,
+      hookLine: hookLineOf(q.slug),
+      main: preview(q.slug, "A"),
+      trial: preview(q.slug, "B"),
+      mainStage: stageOf(q.slug, "a"),
+      trialStage: stageOf(q.slug, "b"),
+      status: st.status,
+      changes: st.changes || "",
+      day: st.day || null,
+      date: st.day ? dateForDay(st.day) : null,
+      scope: st.scope || null,
+    };
+  });
+};
+
+// ---- manual edit: read / apply caption + title text edits, re-render preview
+const projJson = (proj) => join(ROOT, "projects", proj, "project.json");
+const readEdit = (slug, v) => {
+  const f = projJson(`${slug}-${v}`);
+  if (!existsSync(f)) return null;
+  const p = JSON.parse(readFileSync(f, "utf8"));
+  return {
+    title: p.tracks.title?.[0]?.text || "",
+    captions: (p.tracks.captions || []).map((c) => ({ id: c.id, t: +c.start.toFixed(1), text: c.text })),
+  };
+};
+const runOp = (proj, args) =>
+  new Promise((res) => {
+    const p = spawn(process.execPath, [join(ROOT, "scripts", "proj-op.mjs"), proj, ...args], { cwd: ROOT });
+    let out = "";
+    p.stdout.on("data", (d) => (out += d));
+    p.stderr.on("data", (d) => (out += d));
+    p.on("close", (c) => res({ code: c, out }));
+  });
+
+// full project state for the timeline editor
+const readProject = (slug, v) => {
+  const f = projJson(`${slug}-${v}`);
+  if (!existsSync(f)) return null;
+  const p = JSON.parse(readFileSync(f, "utf8"));
+  return {
+    title: p.tracks.title?.[0]?.text || "",
+    duration: +(p.duration || 0).toFixed(2),
+    clips: (p.tracks.video || []).map((c) => ({
+      id: c.id,
+      name: c.src.split("/").pop().replace(/_singular_display\.[Mm][Pp]4$/, ""),
+      in: +c.sourceIn.toFixed(2),
+      out: +c.sourceOut.toFixed(2),
+      tl: +(c.timelineStart || 0).toFixed(2),
+      dur: +((c.sourceOut - c.sourceIn) / (c.speed || 1)).toFixed(2),
+    })),
+    captions: (p.tracks.captions || []).map((c) => ({ id: c.id, t: +c.start.toFixed(1), text: c.text })),
+  };
+};
+
+// Fast preview re-render. Tries the warm-bundle in-process path first (seconds);
+// falls back to the standalone proj-render.mjs subprocess (bundles, ~minutes) if
+// the warm path errors. Copies the result into scratch/batch/previews and
+// updates review.json.
+const rerenderPreview = (slug, v, note) => {
+  const proj = `${slug}-${v}`;
+  const V = v.toUpperCase();
+  const logP = join(B, `edit-${slug}.log`);
+  writeFileSync(logP, "");
+  const app = (d) => {
+    try {
+      writeFileSync(logP, readFileSync(logP, "utf8") + d);
+    } catch {
+      /* noop */
+    }
+  };
+  const outPath = join(ROOT, "projects", proj, "preview", `${proj}.mp4`);
+  const publish = () => {
+    if (existsSync(outPath)) {
+      try {
+        copyFileSync(outPath, join(PREV, `${slug}-${V}.mp4`));
+      } catch {
+        /* noop */
+      }
+    }
+  };
+  const finish = (okStr) => {
+    rev = loadRev();
+    rev[slug] = { ...rev[slug], status: "changes_requested", changes: (note || "edited ") + V + okStr };
+    saveRev(rev);
+  };
+  const fallback = () => {
+    app("\n· warm path failed — falling back to full proj-render subprocess\n");
+    const r = spawn(process.execPath, [join(ROOT, "scripts", "proj-render.mjs"), proj, "--scale", "0.5", "--no-denoise"], { cwd: ROOT });
+    r.stdout.on("data", app);
+    r.stderr.on("data", app);
+    r.on("close", (code) => {
+      publish();
+      finish(code ? " (render failed)" : "");
+    });
+  };
+  renderLive(proj, { scale: 0.5, outPath, onLog: app })
+    .then((res) => {
+      if (res.ok) {
+        publish();
+        finish("");
+      } else {
+        fallback();
+      }
+    })
+    .catch(fallback);
+};
+
+// apply timeline ops (delete/move/trim), then recaption if clips changed, then
+// caption-text overrides, then low-res re-render
+const applyProject = async (slug, v, { title, ops = [], captions = {} }) => {
+  const proj = `${slug}-${v}`;
+  rev = loadRev();
+  rev[slug] = { ...(rev[slug] || {}), status: "editing" };
+  saveRev(rev);
+  const cur0 = readProject(slug, v);
+  let clipsChanged = false;
+  for (const o of ops) {
+    if (o.op === "delete") {
+      await runOp(proj, ["delete_clip", "--clip", o.clip]);
+      clipsChanged = true;
+    } else if (o.op === "move") {
+      await runOp(proj, ["move_clip", "--clip", o.clip, "--to", String(o.to)]);
+      clipsChanged = true;
+    } else if (o.op === "trim") {
+      await runOp(proj, ["trim_clip", "--clip", o.clip, "--in", String(o.in), "--out", String(o.out)]);
+      clipsChanged = true;
+    } else if (o.op === "split") {
+      await runOp(proj, ["split_clip", "--clip", o.clip, "--at", String(o.at)]);
+      clipsChanged = true;
+    }
+  }
+  if (title && title.trim() && title.trim() !== cur0.title) await runOp(proj, ["set_title_text", "--text", title.trim()]);
+  if (clipsChanged) await new Promise((r) => { const p = spawn(process.execPath, [join(ROOT, "scripts", "proj-recaption.mjs"), proj], { cwd: ROOT }); p.on("close", r); });
+  // caption text overrides — match by nearest current id/text (post-recaption ids may differ)
+  const after = readProject(slug, v);
+  for (const [id, text] of Object.entries(captions)) {
+    const src = cur0.captions.find((c) => c.id === id);
+    if (!src || text == null || text === src.text) continue;
+    const tgt = after.captions.find((c) => c.id === id) || after.captions.find((c) => Math.abs(c.t - src.t) < 0.4);
+    if (tgt) await runOp(proj, ["set_caption_text", "--id", tgt.id, "--text", text]);
+  }
+  // ---- record the manual revision so the system can study/learn from it ----
+  try {
+    const mePath = join(B, "manual-edits.json");
+    const me = existsSync(mePath) ? JSON.parse(readFileSync(mePath, "utf8")) : [];
+    const now = readProject(slug, v);
+    me.push({
+      at: new Date().toISOString(),
+      slug, v, hookLine: hookLineOf(slug),
+      title_before: cur0.title, title_after: now.title,
+      clips_before: cur0.clips.length, clips_after: now.clips.length,
+      deleted_clips: ops.filter((o) => o.op === "delete").map((o) => o.clip),
+      reordered: ops.some((o) => o.op === "move"),
+      trims: ops.filter((o) => o.op === "trim"),
+      caption_text_edits: Object.entries(captions).map(([id, t]) => ({ was: cur0.captions.find((c) => c.id === id)?.text, now: t })),
+      duration_before: cur0.duration, duration_after: now.duration,
+    });
+    writeFileSync(mePath, JSON.stringify(me, null, 2));
+  } catch {
+    /* noop */
+  }
+  rerenderPreview(slug, v, "edited ");
+};
+const applyEdit = async (slug, v, title, captions) => {
+  const proj = `${slug}-${v}`;
+  rev = loadRev();
+  rev[slug] = { ...(rev[slug] || {}), status: "editing" };
+  saveRev(rev);
+  const cur = readEdit(slug, v);
+  if (title && title.trim() && title.trim() !== cur.title) await runOp(proj, ["set_title_text", "--text", title.trim()]);
+  for (const [id, text] of Object.entries(captions || {})) {
+    const old = cur.captions.find((c) => c.id === id);
+    if (old && text != null && text !== old.text) await runOp(proj, ["set_caption_text", "--id", id, "--text", text]);
+  }
+  // re-render the LOW-RES preview only (full-res happens on publish)
+  rerenderPreview(slug, v, "manually edited ");
+};
+
+// ---- schedule: render full-res if needed, then publish.mjs schedule --confirm
+const scheduleVideo = (slug, scope) => {
+  rev = loadRev();
+  const day = rev[slug]?.day || nextFreeDay();
+  rev[slug] = { ...(rev[slug] || {}), status: "scheduling", day, scope, changes: rev[slug]?.changes || "" };
+  saveRev(rev);
+  const q = loadQueue().find((x) => x.slug === slug);
+  const date = dateForDay(day);
+  const capMain = q.title.replace(/\s*[·—-].*$/, "").replace(/^POV:\s*/i, "").trim();
+  const capTrial = (hookLineOf(slug) ? hookLineOf(slug) + " — " : "") + q.title.replace(/^POV:\s*/i, "").trim();
+  const rows = [];
+  if (scope === "main" || scope === "both")
+    rows.push({ project: `${slug}-a`, as: "main", at: `${date}T${MORNING}${TZ}`, platforms: PLATFORMS, caption: capMain });
+  if ((scope === "trial" || scope === "both") && existsSync(join(PREV, `${slug}-B.mp4`)))
+    rows.push({ project: `${slug}-b`, as: "trial", at: `${date}T${EVENING}${TZ}`, platforms: PLATFORMS, caption: capTrial });
+  if (!rows.length) {
+    rev = loadRev();
+    rev[slug].status = "error";
+    saveRev(rev);
+    return;
+  }
+  const planPath = join(B, `plan-${slug}.json`);
+  writeFileSync(planPath, JSON.stringify(rows, null, 2));
+  const steps = [];
+  for (const r of rows)
+    if (!existsSync(join(ROOT, "projects", r.project, "preview", `${r.project}_FINAL.mp4`)))
+      steps.push(["scripts/proj-render.mjs", r.project, "--final", "--crf", "20", "--preset", "fast"]);
+  steps.push(["scripts/publish.mjs", "schedule", "--plan", planPath, "--confirm"]);
+  const logPath = join(B, `sched-${slug}.log`);
+  writeFileSync(logPath, `${slug} scope=${scope} day=${day} ${date}\n`);
+  const next = (idx) => {
+    if (idx >= steps.length) {
+      const log = readFileSync(logPath, "utf8");
+      rev = loadRev();
+      rev[slug] = { ...rev[slug], status: log.includes("✓ schedule submitted") ? "scheduled" : "error", at: new Date().toISOString() };
+      saveRev(rev);
+      return;
+    }
+    const p = spawn(process.execPath, [join(ROOT, ...steps[idx][0].split("/")), ...steps[idx].slice(1)], { cwd: ROOT });
+    const app = (d) => writeFileSync(logPath, readFileSync(logPath, "utf8") + d);
+    p.stdout.on("data", app);
+    p.stderr.on("data", app);
+    p.on("close", (c) => {
+      app(`\n[step ${idx} exit ${c}]\n`);
+      if (c === 0) next(idx + 1);
+      else {
+        rev = loadRev();
+        rev[slug].status = "error";
+        saveRev(rev);
+      }
+    });
+  };
+  next(0);
+};
+
+// ---- ShortSync published/scheduled feed ----
+let feedCache = { at: 0, rows: [] };
+const shortsyncFeed = async () => {
+  if (Date.now() - feedCache.at < 20000) return feedCache.rows;
+  try {
+    const r = await fetch(`${CFG.base_url}/posts`, { headers: { Authorization: `Bearer ${CFG.api_key}` } });
+    const j = await r.json();
+    const rows = (j.data || j.posts || []).map((p) => ({
+      id: p.id,
+      platform: p.platform,
+      status: p.status,
+      when: p.published_at || p.scheduled_for,
+      caption: (p.caption || "").slice(0, 80),
+      url: p.platform_url || null,
+    }));
+    feedCache = { at: Date.now(), rows };
+  } catch (e) {
+    feedCache = { at: Date.now(), rows: [{ id: "-", platform: "-", status: "api error: " + e.message, when: "", caption: "" }] };
+  }
+  return feedCache.rows;
+};
+
+// ---- HTTP ----
+const HTML = `<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>Reel review</title><style>
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;background:#0d0d10;color:#e8e8ea}
+header{position:sticky;top:0;background:#0d0d10;border-bottom:1px solid #26262c;padding:12px 20px;z-index:5;display:flex;gap:18px;align-items:center}
+header b{font-weight:700}.sub{color:#8a8a92;font-size:13px}
+.tab{background:none;border:0;color:#8a8a92;font:inherit;font-weight:600;cursor:pointer;padding:6px 10px;border-radius:8px}
+.tab.on{background:#22222a;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:18px;padding:20px}
+.card{background:#16161b;border:1px solid #26262c;border-radius:14px;overflow:hidden}
+.card h3{margin:0;padding:12px 14px;font-size:13.5px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.n{color:#6a6a72}
+.vids{display:flex;gap:8px;padding:0 12px}
+.vids figure{margin:0;flex:1;min-width:0}
+.vids figcaption{font-size:11px;color:#8a8a92;padding:4px 0}
+video{width:100%;border-radius:8px;background:#000;aspect-ratio:9/16}
+.norender{width:100%;aspect-ratio:9/16;border-radius:8px;background:#0a0a0d;border:1px dashed #333;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px}
+.hookline{font-size:12px;color:#c9c9cf;padding:8px 14px;font-style:italic}
+.act{display:flex;gap:6px;padding:12px 14px;flex-wrap:wrap}
+button.b{font:inherit;border:0;border-radius:8px;padding:8px 12px;cursor:pointer;font-weight:600;font-size:13px}
+.main{background:#2ea043;color:#fff}.trial{background:#8957e5;color:#fff}.both{background:#1f6feb;color:#fff}
+.warn{background:#30302f;color:#e8e8ea;border:1px solid #444}.bad{background:#3a1d1d;color:#ff9b9b}
+textarea{width:100%;background:#0d0d10;border:1px solid #333;color:#e8e8ea;border-radius:8px;padding:8px;font:inherit;resize:vertical;min-height:36px}
+.badge{font-size:11px;padding:3px 8px;border-radius:20px;font-weight:700;white-space:nowrap}
+.b-pending{background:#33301a;color:#e8c860}.b-scheduled{background:#123a1c;color:#7ee08a}.b-published{background:#0f2f3a;color:#6fd6e8}
+.b-scheduling{background:#1a2f3a;color:#7ec8e0}.b-changes_requested{background:#3a2a12;color:#e0a860}
+.b-rejected{background:#3a1d1d;color:#ff9b9b}.b-error{background:#3a1d1d;color:#ff9b9b}.b-editing{background:#1a2f3a;color:#7ec8e0}
+.flags{margin:0 14px 8px;padding:7px 10px;background:#3a1d1d;border:1px solid #5a2a2a;border-radius:8px;color:#ffb0b0;font-size:12px}
+.edit{background:#30302f;color:#e8e8ea;border:1px solid #444}.dl{background:none;color:#6fd6e8;border:1px solid #2a4a55;text-decoration:none}
+/* CapCut-style timeline editor */
+#ov{position:fixed;inset:0;background:#0a0a0c;display:none;z-index:20;overflow:auto}
+#ov.on{display:flex;flex-direction:column}
+.ed{flex:1;display:flex;flex-direction:column;min-height:0}
+.edtop{display:flex;gap:16px;padding:14px 18px;border-bottom:1px solid #222;align-items:center}
+.edtop .ti{flex:1;background:#141418;border:1px solid #333;color:#e8e8ea;border-radius:8px;padding:8px 10px;font:inherit;font-size:14px}
+.edtop .x{background:none;border:0;color:#888;font-size:22px;cursor:pointer;padding:0 6px}
+.edmid{flex:1;display:flex;gap:14px;padding:16px 18px;min-height:0}
+.edprev{flex:none;width:300px;display:flex;flex-direction:column;gap:8px}
+.edprev video{width:100%;aspect-ratio:9/16;border-radius:10px;background:#000}
+#ed-player{width:100%;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#000}
+#ed-player>*{width:100%;height:100%}
+.transport{display:flex;gap:8px;justify-content:center}
+.transport button{background:#1b1b22;border:1px solid #333;color:#e8e8ea;border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit;font-weight:600}
+.edcaps{flex:1;min-width:0;overflow:auto;border:1px solid #222;border-radius:10px;padding:8px}
+.edcaps h4{margin:0 0 6px;font-size:11px;color:#888;text-transform:uppercase}
+.edcaps .cap{display:flex;gap:6px;align-items:center;margin-bottom:3px}
+.edcaps .cap b{color:#666;font-size:10px;width:36px;flex:none;text-align:right;font-weight:400}
+.edcaps .cap input{flex:1;background:#0d0d10;border:1px solid #2c2c34;color:#e8e8ea;border-radius:5px;padding:4px 8px;font:inherit;font-size:12px}
+.edcaps .cap.neg input{border-color:#5a2a2a;color:#ff9b9b}
+/* the timeline */
+.edtl{flex:none;border-top:1px solid #222;background:#111114;padding:8px 0 14px}
+.tlbar{display:flex;gap:6px;align-items:center;padding:0 18px 8px}
+.tlbar button{background:#1b1b22;border:1px solid #333;color:#ccc;border-radius:6px;padding:4px 9px;cursor:pointer;font:inherit;font-size:12px}
+.tlbar .zoom{margin-left:auto;display:flex;gap:6px;align-items:center;color:#888;font-size:12px}
+.tlwrap{position:relative;overflow-x:auto;overflow-y:hidden;padding:0 18px}
+.tlinner{position:relative;height:150px}
+.ruler{position:relative;height:20px;border-bottom:1px solid #2a2a30;color:#777;font-size:10px}
+.ruler .tick{position:absolute;top:0;height:20px;border-left:1px solid #2a2a30;padding-left:3px}
+.track{position:absolute;left:0;right:0;height:56px;background:#0c0c0f;border-radius:6px}
+.track.vid{top:24px}.track.cap{top:88px;height:36px}
+.seg{position:absolute;top:3px;height:50px;background:linear-gradient(180deg,#2b3d5f,#22304a);border:1px solid #3d5a86;border-radius:6px;overflow:hidden;cursor:grab;user-select:none}
+.seg.sel{border-color:#7ea8ff;box-shadow:0 0 0 2px rgba(126,168,255,.4)}
+.seg.dragging{opacity:.8;cursor:grabbing;z-index:5}
+.seg .lbl{padding:4px 6px;font-size:10px;color:#cfe0ff;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none}
+.seg .sub{padding:0 6px;font-size:9px;color:#9fb6da;pointer-events:none}
+.seg .h{position:absolute;top:0;width:8px;height:100%;cursor:ew-resize;background:rgba(126,168,255,.25)}
+.seg .h.l{left:0}.seg .h.r{right:0}
+.capseg{position:absolute;top:3px;height:30px;background:#3a3320;border:1px solid #6a5a2a;border-radius:5px;font-size:9px;color:#e8c860;padding:2px 4px;overflow:hidden;white-space:nowrap;cursor:pointer}
+.capseg.neg{background:#3a1d1d;border-color:#5a2a2a;color:#ff9b9b}
+.playhead{position:absolute;top:0;width:2px;background:#ff5252;z-index:8;pointer-events:none}
+.playhead::before{content:'';position:absolute;top:-2px;left:-5px;border:6px solid transparent;border-top-color:#ff5252}
+.edbot{display:flex;gap:8px;padding:12px 18px;border-top:1px solid #222}
+table{width:calc(100% - 40px);margin:20px;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #26262c}th{color:#8a8a92;font-weight:600}
+.st-published{color:#7ee08a}.st-scheduled{color:#6fd6e8}.st-failed{color:#ff9b9b}
+a{color:#6fd6e8}
+</style></head><body>
+<header><b>Reel review</b>
+<button class="tab on" id=t-review onclick="tab('review')">Review</button>
+<button class=tab id=t-published onclick="tab('published')">Published / Scheduled</button>
+<span class=sub id=summary></span></header>
+<div id=review class=grid></div>
+<div id=published hidden></div>
+<div id=ov><div class=ed id=ed></div></div>
+<script>
+let VIEW='review',BUILT={};
+function tab(v){VIEW=v;document.getElementById('review').hidden=v!=='review';document.getElementById('published').hidden=v!=='published';
+ document.getElementById('t-review').className='tab'+(v==='review'?' on':'');document.getElementById('t-published').className='tab'+(v==='published'?' on':'');
+ if(v==='published')loadPublished();}
+const fmt=s=>(s||'').replace(/_/g,' ');
+const esc=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+const anyPlaying=()=>[...document.querySelectorAll('video')].some(v=>!v.paused&&!v.ended);
+
+// incremental: build a card once, then only patch badge + fill video src.
+async function load(){
+ const r=await (await fetch('/api/list')).json();
+ const vs=r.videos;
+ const inreview=vs.filter(v=>['pending','changes_requested','scheduling','editing','error'].includes(v.status));
+ const gone=vs.filter(v=>['scheduled','published','rejected'].includes(v.status));
+ document.getElementById('summary').textContent=(r.held?'⏸ auto-post held · ':'')+(r.warm?'⚡ fast re-render · ':'⏳ warming bundle · ')+inreview.length+' to review · '+gone.length+' scheduled/published · '+vs.length+' total';
+ const grid=document.getElementById('review');
+ const want=new Set(inreview.map(v=>v.slug));
+ // remove cards that left review
+ [...grid.children].forEach(el=>{if(el.dataset.slug&&!want.has(el.dataset.slug))el.remove();});
+ if(!inreview.length&&!grid.children.length){grid.innerHTML='<p style="padding:20px;color:#666">nothing to review</p>';return;}
+ for(const v of inreview){
+  let el=grid.querySelector('[data-slug="'+v.slug+'"]');
+  if(!el){el=document.createElement('div');el.className='card';el.dataset.slug=v.slug;el.innerHTML=cardHTML(v);grid.appendChild(el);}
+  // patch badge
+  const bd=el.querySelector('.badge');bd.className='badge b-'+v.status;bd.textContent=fmt(v.status)+(v.date?' · '+v.date:'');
+  // fill in a video that finished rendering
+  patchVid(el,'A',v.main,v.mainStage);
+  patchVid(el,'B',v.trial,v.trialStage);
+ }
+}
+function patchVid(el,V,src,stage){
+ const slot=el.querySelector('.slot-'+V);if(!slot)return;
+ if(src&&!slot.querySelector('video')){slot.innerHTML='<video src="'+src+'" controls preload=metadata playsinline></video>';}
+ else if(!src){const msg=V==='B'?({none:'no hook variation — main only',building:'picking hook…',rendering:'trial rendering…'}[stage]||'no trial'):({building:'building…',rendering:'main rendering…'}[stage]||'rendering…');
+  if(!slot.querySelector('video'))slot.innerHTML='<div class=norender>'+msg+'</div>';}
+}
+function cardHTML(v){
+ return '<h3><span><span class=n>#'+v.n+(v.comp?' ▣':'')+'</span> '+esc(v.title)+'</span>'+
+  '<span class="badge b-'+v.status+'">'+fmt(v.status)+'</span></h3>'+
+  '<div class=vids><figure><div class="slot-A"></div><figcaption>MAIN → morning, all platforms</figcaption></figure>'+
+  '<figure><div class="slot-B"></div><figcaption>TRIAL → night, IG trial reel + all</figcaption></figure></div>'+
+  (v.hookLine?'<div class=hookline>hook: '+esc(v.hookLine)+'</div>':'')+
+  '<div class=act data-slug="'+v.slug+'">'+
+   '<button class="b main" data-a="post_main">Post main</button>'+
+   '<button class="b trial" data-a="post_trial">Post trial</button><button class="b both" data-a="post_both">Post both</button>'+
+   '<button class="b edit" data-a="edit" data-v="a">Edit main</button>'+
+   '<button class="b edit" data-a="edit" data-v="b">Edit trial</button>'+
+   (v.main?'<a class="b dl" href="'+v.main+'" download>DL main</a>':'')+
+   (v.trial?'<a class="b dl" href="'+v.trial+'" download>DL trial</a>':'')+
+   '<button class="b warn" data-a="changes">Save note</button>'+
+   '<button class="b bad" data-a="reject">Reject</button>'+
+  '</div><div class=ep id="ep-'+v.slug+'"></div>'+
+  '<div style="padding:0 14px 12px"><textarea id="ta-'+v.slug+'" placeholder="note...">'+esc(v.changes)+'</textarea></div>';
+}
+async function loadPublished(){
+ const rows=await (await fetch('/api/published')).json();
+ const mine=await (await fetch('/api/scheduled')).json();
+ document.getElementById('published').innerHTML=
+  '<div class=grid>'+mine.map(m=>'<div class=card><h3><span>#'+m.n+' '+esc(m.title)+'</span><span class="badge b-'+m.status+'">'+fmt(m.status)+(m.date?' · '+m.date:'')+'</span></h3>'+
+   '<div class=vids><figure>'+(m.main?'<video src="'+m.main+'" controls preload=metadata></video>':'<div class=norender>—</div>')+'<figcaption>main</figcaption></figure>'+
+   '<figure>'+(m.trial?'<video src="'+m.trial+'" controls preload=metadata></video>':'<div class=norender>—</div>')+'<figcaption>trial</figcaption></figure></div></div>').join('')+'</div>'+
+  '<table><tr><th>platform</th><th>status</th><th>when</th><th>caption</th><th>link</th></tr>'+
+   rows.map(p=>'<tr><td>'+p.platform+'</td><td class="st-'+p.status+'">'+p.status+'</td><td>'+(p.when||'').replace('T',' ').slice(0,16)+'</td><td>'+esc(p.caption)+'</td><td>'+(p.url?'<a target=_blank href="'+p.url+'">open</a>':'')+'</td></tr>').join('')+'</table>';
+}
+// ================= CapCut-style timeline editor =================
+let ED=null,PREVLIB=null;
+// lazy-load the esbuild-bundled <Player> mount (≈1MB) on first Edit open
+function ensurePreviewLib(){
+ if(window.__mountPreview)return Promise.resolve();
+ if(PREVLIB)return PREVLIB;
+ PREVLIB=new Promise((res)=>{const s=document.createElement('script');s.src='/editor-preview.js';s.onload=res;s.onerror=()=>res();document.head.appendChild(s);});
+ return PREVLIB;
+}
+async function openEdit(slug,v){
+ const d=await (await fetch('/api/project?slug='+slug+'&v='+v)).json();
+ if(d.error){alert('no project for '+slug+'-'+v+' yet — still rendering');return;}
+ let base=null;
+ try{base=await (await fetch('/api/livedata?slug='+slug+'&v='+v)).json();}catch(e){}
+ ED={slug,v,orig:d,base:(base&&!base.error?base:null),title:d.title,zoom:9,sel:null,playT:0,player:null,
+   clips:d.clips.map(c=>({id:c.id,name:c.name,in:c.in,out:c.out})),
+   caps:d.captions.map(c=>({id:c.id,t:c.t,text:c.text})),
+   capEdits:{}, splits:[]};
+ buildEditor();document.getElementById('ov').classList.add('on');
+ document.onkeydown=edKey;
+}
+function closeEd(){try{ED&&ED.player&&ED.player.destroy();}catch(e){}
+ document.getElementById('ov').classList.remove('on');document.onkeydown=null;ED=null;}
+const cdur=c=>Math.max(0.1,c.out-c.in);
+const totalDur=()=>ED.clips.reduce((s,c)=>s+cdur(c),0);
+const NEG=/\b(palestin|occupation|apartheid|genocide|coloniz|nakba|from the river|i don.?t like israel|hate israel|israel is (bad|fake|stolen)|i don.?t feel safe|not safe|kill(ing)? (the )?(jews|arabs|civilians))\b/i;
+
+// rebuild a full ProjectData from ED.base + the live edits, for the <Player>.
+// Approximate for captions (shifts them with their clip) — exact recaption still
+// runs server-side on Apply. Video edits (trim/reorder/delete/split) are exact.
+function buildLiveData(){
+ const base=ED.base; if(!base)return null;
+ const vById={}; base.tracks.video.forEach(c=>vById[c.id]=c);
+ let tl=0; const vid=[]; const place={};
+ for(const c of ED.clips){
+  const src=vById[c._from||c.id]||base.tracks.video[0];
+  const spd=src.speed||1, dur=Math.max(0.1,c.out-c.in);
+  vid.push(Object.assign({},src,{id:c.id,sourceIn:c.in,sourceOut:c.out,timelineStart:tl,speed:spd}));
+  place[c._from||c.id]={liveIn:c.in,liveOut:c.out,newStart:tl,spd};
+  tl+=dur/spd;
+ }
+ const caps=[];
+ for(const cap of base.tracks.captions){
+  const bc=base.tracks.video.find(vv=>{const s=vv.timelineStart||0;const e=s+((vv.sourceOut-vv.sourceIn)/(vv.speed||1));return cap.start>=s-0.01&&cap.start<e+0.01;});
+  if(!bc)continue;
+  const p=place[bc.id]; if(!p)continue;                 // clip deleted → drop caption
+  const srcPos=bc.sourceIn+(cap.start-(bc.timelineStart||0))*(bc.speed||1);
+  if(srcPos<p.liveIn-0.05||srcPos>p.liveOut+0.05)continue; // moment trimmed away
+  const txt=ED.capEdits[cap.id]??cap.text;
+  if(NEG.test(txt))continue;                            // positivity guard in preview too
+  const ns=p.newStart+(srcPos-p.liveIn)/p.spd, d=Math.max(0.2,cap.end-cap.start);
+  caps.push(Object.assign({},cap,{text:txt,start:+ns.toFixed(3),end:+(ns+d).toFixed(3)}));
+ }
+ caps.sort((a,b)=>a.start-b.start);
+ const title=(base.tracks.title||[]).map((t,i)=>i===0?Object.assign({},t,{text:ED.title||t.text}):t);
+ return Object.assign({},base,{duration:tl,tracks:Object.assign({},base.tracks,{video:vid,title,captions:caps})});
+}
+function livePreviewSync(){if(ED&&ED.player){const d=buildLiveData();if(d)ED.player.update(d);}}
+
+function buildEditor(){
+ const LANGS=[['src','Captions: Original'],['es','Español'],['ar','العربية'],['he','עברית'],['fr','Français'],['pt','Português'],['de','Deutsch'],['ru','Русский'],['hi','हिन्दी']];
+ const curLang=(ED.base&&ED.base.captionLang)||'src';
+ document.getElementById('ed').innerHTML=
+ '<div class=edtop><b>Edit '+ED.v.toUpperCase()+'</b>'+
+   '<input class=ti id=ed-title value="'+esc(ED.title)+'">'+
+   '<select id=ed-lang class=ti style="flex:none;width:auto;min-width:150px">'+
+     LANGS.map(function(l){return '<option value="'+l[0]+'"'+(l[0]===curLang?' selected':'')+'>'+l[1]+'</option>';}).join('')+
+   '</select>'+
+   '<span style="color:#888;font-size:12px" id=ed-dur></span>'+
+   '<button class=x id=ed-x>✕</button></div>'+
+ '<div class=edmid>'+
+   '<div class=edprev><div id=ed-player></div>'+
+     '<div class=transport><button id=ed-split>✂ Split</button><button id=ed-del>🗑 Delete</button></div>'+
+     '<div style="font-size:11px;color:#3fb950" id=ed-pvnote>● live preview — updates as you edit · MP4 only renders on Apply/Publish</div></div>'+
+   '<div class=edcaps id=ed-caps><h4>captions — click a word field to edit</h4>'+
+     ED.caps.map(c=>'<div class="cap'+(NEG.test(c.text)?' neg':'')+'"><b>'+c.t+'s</b><input data-cid="'+c.id+'" value="'+esc(c.text)+'"></div>').join('')+
+   '</div>'+
+ '</div>'+
+ '<div class=edtl><div class=tlbar>'+
+   '<button id=ed-zin>zoom +</button><button id=ed-zout>zoom −</button>'+
+   '<span style="color:#666;font-size:12px">drag clip = reorder · drag edge = trim · click ruler = seek</span>'+
+   '<span class=zoom><button class="b bad" id=ed-reset>reset</button></span></div>'+
+   '<div class=tlwrap id=ed-wrap><div class=tlinner id=ed-inner></div></div>'+
+ '</div>'+
+ '<div class=edbot><button class="b main" id=ed-apply>Apply + render MP4</button>'+
+   '<button class="b warn" id=ed-cancel>Cancel</button></div>';
+ renderTL();bindTL();
+ const mount=document.getElementById('ed-player');
+ const note=document.getElementById('ed-pvnote');
+ if(ED.base){
+  ensurePreviewLib().then(()=>{
+   if(!ED||!window.__mountPreview){if(note){note.textContent='live preview unavailable — edits still apply on Apply';note.style.color='#888';}return;}
+   const d=buildLiveData();
+   ED.player=window.__mountPreview(mount,d);
+  });
+ }else if(note){note.textContent='live preview unavailable for this clip — edits still apply on Apply';note.style.color='#888';}
+ // live-update the preview whenever a caption field changes
+ document.getElementById('ed-caps').addEventListener('input',e=>{
+  const i=e.target.closest('input[data-cid]');if(!i)return;
+  const o=ED.orig.captions.find(c=>c.id===i.dataset.cid);
+  if(o){if(i.value!==o.text)ED.capEdits[i.dataset.cid]=i.value;else delete ED.capEdits[i.dataset.cid];}
+  i.parentElement.classList.toggle('neg',NEG.test(i.value));
+  livePreviewSync();
+ });
+ document.getElementById('ed-title').addEventListener('input',e=>{ED.title=e.target.value;livePreviewSync();});
+ const langSel=document.getElementById('ed-lang');
+ if(langSel)langSel.addEventListener('change',async e=>{
+  const lang=e.target.value;const note=document.getElementById('ed-pvnote');
+  const was=note?note.textContent:'';if(note){note.textContent='translating captions to '+e.target.selectedOptions[0].text+'…';note.style.color='#e0a860';}
+  langSel.disabled=true;
+  try{
+   const r=await (await fetch('/api/caption-lang',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:ED.slug,v:ED.v,lang})})).json();
+   if(r.ok&&r.data){ED.base=r.data;livePreviewSync();}
+   else if(note){note.textContent='translation failed: '+(r.error||'?');note.style.color='#ff9b9b';}
+  }catch(err){if(note){note.textContent='translation failed';note.style.color='#ff9b9b';}}
+  langSel.disabled=false;
+  if(note&&note.style.color==='rgb(224, 168, 96)'){note.textContent=was;note.style.color='#3fb950';}
+ });
+}
+function renderTL(){
+ const z=ED.zoom, W=Math.max(600,totalDur()*z+40);
+ let x=0,segs='';
+ ED.clips.forEach(c=>{const w=cdur(c)*z;
+   segs+='<div class="seg'+(ED.sel===c.id?' sel':'')+'" data-id="'+c.id+'" style="left:'+x+'px;width:'+w+'px">'+
+     '<div class=h l></div><div class=lbl>'+esc(c.name)+'</div><div class=sub>'+c.in.toFixed(1)+'–'+c.out.toFixed(1)+' ('+cdur(c).toFixed(1)+'s)</div><div class=h r></div></div>';
+   x+=w;});
+ // caption blocks at original timeline positions (reference)
+ let caps='';ED.caps.forEach(c=>{caps+='<div class="capseg'+(NEG.test(ED.capEdits[c.id]??c.text)?' neg':'')+'" style="left:'+(c.t*z)+'px;width:'+Math.max(24,z*1.2)+'px" title="'+esc(ED.capEdits[c.id]??c.text)+'">'+esc((ED.capEdits[c.id]??c.text).slice(0,10))+'</div>';});
+ let ruler='';for(let s=0;s<=totalDur()+5;s+=5)ruler+='<div class=tick style="left:'+(s*z)+'px">'+s+'s</div>';
+ document.getElementById('ed-inner').innerHTML=
+   '<div class=ruler style="width:'+W+'px" id=ed-ruler>'+ruler+'</div>'+
+   '<div class="track vid" style="width:'+W+'px" id=ed-vtrack>'+segs+'</div>'+
+   '<div class="track cap" style="width:'+W+'px">'+caps+'</div>'+
+   '<div class=playhead id=ed-ph style="height:120px;left:'+(ED.playT*z)+'px"></div>';
+ document.getElementById('ed-dur').textContent='~'+totalDur().toFixed(1)+'s';
+ livePreviewSync();
+}
+function movePlayhead(){const ph=document.getElementById('ed-ph');if(ph)ph.style.left=(ED.playT*ED.zoom)+'px';}
+function bindTL(){
+ const inner=document.getElementById('ed-inner');
+ // seek on ruler / track click
+ inner.addEventListener('pointerdown',ev=>{
+  const seg=ev.target.closest('.seg');
+  if(!seg){ // ruler/empty → seek
+   const r=inner.getBoundingClientRect();const t=Math.max(0,(ev.clientX-r.left+inner.parentElement.scrollLeft)/ED.zoom);
+   ED.playT=t;movePlayhead();try{ED.player&&ED.player.seek(t);}catch(e){}
+   return;
+  }
+  const id=seg.dataset.id;ED.sel=id;
+  if(ev.target.classList.contains('h')){ // trim
+   const edge=ev.target.classList.contains('l')?'in':'out';const c=ED.clips.find(x=>x.id===id);
+   const sx=ev.clientX,i0=c.in,o0=c.out;
+   const mv=e2=>{const d=(e2.clientX-sx)/ED.zoom;
+    if(edge==='in')c.in=Math.min(c.out-0.3,Math.max(0,i0+d));
+    else c.out=Math.max(c.in+0.3,o0+d);renderTL();};
+   const up=()=>{document.removeEventListener('pointermove',mv);document.removeEventListener('pointerup',up);renderTL();};
+   document.addEventListener('pointermove',mv);document.addEventListener('pointerup',up);ev.preventDefault();return;
+  }
+  // drag body → reorder
+  const sx=ev.clientX;let moved=false;seg.classList.add('dragging');
+  const mv=e2=>{const d=e2.clientX-sx;if(Math.abs(d)>3)moved=true;seg.style.transform='translateX('+d+'px)';
+   // find target index by pointer x among segment centers
+   const segsEls=[...inner.querySelectorAll('.seg')];const cx=e2.clientX;
+   let ti=segsEls.length-1;for(let k=0;k<segsEls.length;k++){const rr=segsEls[k].getBoundingClientRect();if(cx<rr.left+rr.width/2){ti=k;break;}}
+   seg._ti=ti;};
+  const up=()=>{document.removeEventListener('pointermove',mv);document.removeEventListener('pointerup',up);
+   seg.classList.remove('dragging');seg.style.transform='';
+   if(moved&&seg._ti!=null){const from=ED.clips.findIndex(x=>x.id===id);let to=seg._ti;const c=ED.clips.splice(from,1)[0];if(to>from)to--;ED.clips.splice(to,0,c);}
+   renderTL();};
+  document.addEventListener('pointermove',mv);document.addEventListener('pointerup',up);
+ });
+ renderTL();
+}
+function edKey(e){
+ if(!ED)return;
+ if(e.key==='Escape'){closeEd();return;}
+ if((e.key==='Delete'||e.key==='Backspace')&&e.target.tagName!=='INPUT'&&ED.sel){edDelete();}
+}
+function edDelete(){if(!ED.sel)return;if(ED.clips.length<=1){alert('keep at least one clip');return;}ED.clips=ED.clips.filter(c=>c.id!==ED.sel);ED.sel=null;renderTL();}
+function edSplit(){
+ let pt=ED.playT;try{if(ED.player){const s=ED.player.getSeconds();if(s>0)pt=s;}}catch(e){}
+ ED.playT=pt;movePlayhead();
+ let acc=0;for(const c of ED.clips){const w=cdur(c);if(pt>=acc&&pt<acc+w){
+  const at=c.in+(ED.playT-acc);if(at-c.in<0.4||c.out-at<0.4)return;
+  const nc={id:c.id+'_s'+ED.splits.length,name:c.name+' (2)',in:at,out:c.out,_from:c.id,_at:+at.toFixed(2)};
+  c.out=at;ED.splits.push({clip:c.id,at:+at.toFixed(2)});
+  const i=ED.clips.indexOf(c);ED.clips.splice(i+1,0,nc);renderTL();return;}
+  acc+=w;}
+}
+document.getElementById('ov').addEventListener('click',async e=>{
+ const b=e.target.closest('button');if(!b||!ED)return;
+ if(b.id==='ed-x'||b.id==='ed-cancel'){closeEd();return;}
+ if(b.id==='ed-zin'){ED.zoom=Math.min(40,ED.zoom*1.4);renderTL();return;}
+ if(b.id==='ed-zout'){ED.zoom=Math.max(3,ED.zoom/1.4);renderTL();return;}
+ if(b.id==='ed-del'){edDelete();return;}
+ if(b.id==='ed-split'){edSplit();return;}
+ if(b.id==='ed-reset'){try{ED.player&&ED.player.destroy();}catch(e){}ED.player=null;ED.clips=ED.orig.clips.map(c=>({id:c.id,name:c.name,in:c.in,out:c.out}));ED.capEdits={};ED.splits=[];ED.sel=null;ED.title=ED.orig.title;buildEditor();return;}
+ if(b.id==='ed-apply'){
+  ED.title=document.getElementById('ed-title').value;
+  document.querySelectorAll('#ed-caps input[data-cid]').forEach(i=>{const o=ED.orig.captions.find(c=>c.id===i.dataset.cid);if(o&&i.value!==o.text)ED.capEdits[i.dataset.cid]=i.value;});
+  const origIds=ED.orig.clips.map(c=>c.id);
+  const liveOrig=ED.clips.filter(c=>origIds.includes(c.id));
+  const ops=[];
+  for(const oid of origIds)if(!liveOrig.find(c=>c.id===oid))ops.push({op:'delete',clip:oid});
+  for(const c of liveOrig){const o=ED.orig.clips.find(x=>x.id===c.id);if(Math.abs(o.in-c.in)>0.05||Math.abs(o.out-c.out)>0.05)ops.push({op:'trim',clip:c.id,in:+c.in.toFixed(2),out:+c.out.toFixed(2)});}
+  liveOrig.forEach((c,i)=>ops.push({op:'move',clip:c.id,to:i}));
+  for(const s of ED.splits)ops.push({op:'split',clip:s.clip,at:s.at});
+  b.textContent='working…';b.disabled=true;
+  await fetch('/api/apply',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug:ED.slug,v:ED.v,title:ED.title,ops,captions:ED.capEdits})});
+  closeEd();load();return;
+ }
+});
+
+document.addEventListener('click',async e=>{
+ const btn=e.target.closest('button[data-a]');if(!btn)return;
+ const slug=btn.closest('[data-slug]').dataset.slug, a=btn.dataset.a;
+ if(a==='edit'){openEdit(slug,btn.dataset.v);return;}
+ if(a.startsWith('post_')){
+  if(!confirm('Publish #'+slug+' ('+a.slice(5)+') to ShortSync?'))return;
+ }
+ const changes=a==='changes'?document.getElementById('ta-'+slug).value:undefined;
+ await fetch('/api/action',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slug,action:a,changes})});
+ load();
+});
+load();
+setInterval(()=>{if(VIEW==='review'&&!document.querySelector('.ep.on')&&!anyPlaying())load();},8000);
+</script></body></html>`;
+
+const server = createServer(async (req, res) => {
+  const u = new URL(req.url, "http://x");
+  if (u.pathname === "/") {
+    res.writeHead(200, { "content-type": "text/html; charset=utf-8" });
+    return res.end(HTML);
+  }
+  if (u.pathname === "/api/list") {
+    res.writeHead(200, { "content-type": "application/json" });
+    return res.end(JSON.stringify({ held: existsSync(join(B, "HOLD")), warm: isWarm(), videos: listVideos() }));
+  }
+  if (u.pathname === "/api/published") {
+    res.writeHead(200, { "content-type": "application/json" });
+    return res.end(JSON.stringify(await shortsyncFeed()));
+  }
+  if (u.pathname === "/api/scheduled") {
+    rev = loadRev();
+    const q = loadQueue();
+    const rows = Object.entries(rev)
+      .filter(([, s]) => ["scheduled", "scheduling", "published"].includes(s.status))
+      .map(([slug, s]) => {
+        const idx = q.findIndex((x) => x.slug === slug);
+        return { slug, n: idx + 1, title: q[idx]?.title || slug, status: s.status, day: s.day, date: s.day ? dateForDay(s.day) : null, main: preview(slug, "A"), trial: preview(slug, "B") };
+      })
+      .sort((a, b) => (a.day || 0) - (b.day || 0));
+    res.writeHead(200, { "content-type": "application/json" });
+    return res.end(JSON.stringify(rows));
+  }
+  if (u.pathname === "/api/project" && req.method === "GET") {
+    const d = readProject(u.searchParams.get("slug"), u.searchParams.get("v") || "a");
+    res.writeHead(d ? 200 : 404, { "content-type": "application/json" });
+    return res.end(JSON.stringify(d || { error: "no project" }));
+  }
+  // full ProjectData (video/title/caption tracks + presets) for the instant <Player>
+  if (u.pathname === "/api/livedata" && req.method === "GET") {
+    try {
+      const proj = `${u.searchParams.get("slug")}-${u.searchParams.get("v") || "a"}`;
+      const d = projectToData(proj);
+      res.writeHead(200, { "content-type": "application/json" });
+      return res.end(JSON.stringify(d));
+    } catch (e) {
+      res.writeHead(404, { "content-type": "application/json" });
+      return res.end(JSON.stringify({ error: String(e.message) }));
+    }
+  }
+  // the esbuild-bundled <Player> mount
+  if (u.pathname === "/editor-preview.js") {
+    const f = join(ROOT, "scratch", "editor-preview", "bundle.js");
+    if (!existsSync(f)) {
+      res.writeHead(503);
+      return res.end("// editor preview not built yet");
+    }
+    res.writeHead(200, { "content-type": "text/javascript; charset=utf-8" });
+    return res.end(readFileSync(f));
+  }
+  // static assets the <Player> pulls via staticFile(): source clips + flag SVGs
+  if (/^\/(footage|twemoji|fonts)\//.test(u.pathname)) {
+    const rel = decodeURIComponent(u.pathname.replace(/^\/+/, ""));
+    const f = join(ROOT, "public", rel);
+    if (!f.startsWith(join(ROOT, "public")) || !existsSync(f)) {
+      res.writeHead(404);
+      return res.end();
+    }
+    const ext = f.split(".").pop().toLowerCase();
+    const ct = { mp4: "video/mp4", mov: "video/quicktime", svg: "image/svg+xml", woff2: "font/woff2", woff: "font/woff", png: "image/png", jpg: "image/jpeg" }[ext] || "application/octet-stream";
+    const size = statSync(f).size;
+    const range = req.headers.range;
+    if (range && (ext === "mp4" || ext === "mov")) {
+      const [s, e] = range.replace("bytes=", "").split("-");
+      const start = parseInt(s, 10);
+      const end = e ? parseInt(e, 10) : size - 1;
+      res.writeHead(206, { "content-range": `bytes ${start}-${end}/${size}`, "accept-ranges": "bytes", "content-length": end - start + 1, "content-type": ct });
+      return createReadStream(f, { start, end }).pipe(res);
+    }
+    res.writeHead(200, { "content-length": size, "content-type": ct });
+    return createReadStream(f).pipe(res);
+  }
+  // caption language switch: translate (if needed) + set caption_lang, return fresh livedata
+  if (u.pathname === "/api/caption-lang" && req.method === "POST") {
+    let body = "";
+    req.on("data", (d) => (body += d));
+    req.on("end", async () => {
+      const { slug, v, lang } = JSON.parse(body || "{}");
+      const proj = `${slug}-${v || "a"}`;
+      const run = (args) =>
+        new Promise((resolve) => {
+          const p = spawn(process.execPath, [join(ROOT, "scripts", "proj-op.mjs"), proj, ...args], { cwd: ROOT });
+          let out = "";
+          p.stdout.on("data", (d) => (out += d));
+          p.stderr.on("data", (d) => (out += d));
+          p.on("close", (code) => resolve({ code, out }));
+        });
+      try {
+        if (lang && lang !== "src") {
+          const t = await run(["translate_captions", "--lang", lang]);
+          if (t.code !== 0) throw new Error(t.out.split("\n").filter(Boolean).pop());
+        }
+        const s = await run(["set_caption_lang", "--lang", lang || "src"]);
+        if (s.code !== 0) throw new Error(s.out.split("\n").filter(Boolean).pop());
+        res.writeHead(200, { "content-type": "application/json" });
+        res.end(JSON.stringify({ ok: true, data: projectToData(proj) }));
+      } catch (e) {
+        res.writeHead(500, { "content-type": "application/json" });
+        res.end(JSON.stringify({ ok: false, error: String(e.message || e) }));
+      }
+    });
+    return;
+  }
+  if (u.pathname === "/api/apply" && req.method === "POST") {
+    let body = "";
+    req.on("data", (d) => (body += d));
+    req.on("end", () => {
+      const { slug, v, title, ops, captions } = JSON.parse(body || "{}");
+      applyProject(slug, v || "a", { title, ops: ops || [], captions: captions || {} });
+      res.writeHead(200, { "content-type": "application/json" });
+      res.end(JSON.stringify({ ok: true }));
+    });
+    return;
+  }
+  if (u.pathname === "/api/action" && req.method === "POST") {
+    let body = "";
+    req.on("data", (d) => (body += d));
+    req.on("end", () => {
+      const { slug, action, changes } = JSON.parse(body || "{}");
+      rev = loadRev();
+      if (action === "changes") rev[slug] = { ...(rev[slug] || {}), status: "changes_requested", changes: changes || "" };
+      else if (action === "reject") rev[slug] = { ...(rev[slug] || {}), status: "rejected" };
+      else if (action?.startsWith("post_")) {
+        if (["scheduling", "scheduled", "published"].includes(rev[slug]?.status)) {
+          res.writeHead(200, { "content-type": "application/json" });
+          return res.end(JSON.stringify({ ok: false, msg: "already " + rev[slug].status }));
+        }
+        saveRev(rev);
+        scheduleVideo(slug, action.slice(5));
+        res.writeHead(200, { "content-type": "application/json" });
+        return res.end(JSON.stringify({ ok: true }));
+      }
+      saveRev(rev);
+      res.writeHead(200, { "content-type": "application/json" });
+      res.end(JSON.stringify({ ok: true }));
+    });
+    return;
+  }
+  if (u.pathname.startsWith("/media/")) {
+    const f = join(PREV, decodeURIComponent(u.pathname.slice(7)));
+    if (!f.startsWith(PREV) || !existsSync(f)) {
+      res.writeHead(404);
+      return res.end();
+    }
+    const size = statSync(f).size;
+    const range = req.headers.range;
+    if (range) {
+      const [s, e] = range.replace("bytes=", "").split("-");
+      const start = parseInt(s, 10);
+      const end = e ? parseInt(e, 10) : size - 1;
+      res.writeHead(206, { "content-range": `bytes ${start}-${end}/${size}`, "accept-ranges": "bytes", "content-length": end - start + 1, "content-type": "video/mp4" });
+      return createReadStream(f, { start, end }).pipe(res);
+    }
+    res.writeHead(200, { "content-length": size, "content-type": "video/mp4" });
+    return createReadStream(f).pipe(res);
+  }
+  res.writeHead(404);
+  res.end();
+});
+mkdirSync(PREV, { recursive: true });
+server.listen(PORT, () => {
+  console.log(`\n  Reel review → http://localhost:${PORT}\n`);
+  // build the instant-<Player> bundle for the editor (esbuild, ~1s)
+  const bp = spawn(process.execPath, [join(ROOT, "scripts", "build-editor-preview.mjs")], { cwd: ROOT });
+  bp.stdout.on("data", (d) => process.stdout.write(String(d)));
+  bp.stderr.on("data", (d) => process.stderr.write(String(d)));
+  // warm the MP4 render bundle in the background so Apply/Publish renders are faster
+  warmup().catch((e) => console.warn("warm bundle failed:", e.message));
+});
+
+const bye = async () => {
+  try {
+    await shutdownLive();
+  } catch {
+    /* noop */
+  }
+  process.exit(0);
+};
+process.on("SIGINT", bye);
+process.on("SIGTERM", bye);

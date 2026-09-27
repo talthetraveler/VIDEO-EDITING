@@ -1,0 +1,81 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Arial,126,&H00FFFFFF,&H000000FF,&H00141414,&H90000000,-1,0,0,0,100,100,0,0,1,5,2,2,70,70,455,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:02.94,0:00:03.54,Main,,0,0,0,,PEACE BE
+Dialogue: 0,0:00:03.54,0:00:04.17,Main,,0,0,0,,UPON YOU,
+Dialogue: 0,0:00:04.17,0:00:04.74,Main,,0,0,0,,MA'AM.
+Dialogue: 0,0:00:04.74,0:00:05.10,Main,,0,0,0,,AND UPON
+Dialogue: 0,0:00:05.10,0:00:05.50,Main,,0,0,0,,YOU PEACE.
+Dialogue: 0,0:00:05.50,0:00:05.97,Main,,0,0,0,,HOW ARE
+Dialogue: 0,0:00:05.97,0:00:06.38,Main,,0,0,0,,YOU?
+Dialogue: 0,0:00:06.40,0:00:07.02,Main,,0,0,0,,I'M FINE.
+Dialogue: 0,0:00:07.85,0:00:08.29,Main,,0,0,0,,HALF A
+Dialogue: 0,0:00:08.29,0:00:08.76,Main,,0,0,0,,KILO OF
+Dialogue: 0,0:00:08.76,0:00:09.34,Main,,0,0,0,,TOMATOES. BUT
+Dialogue: 0,0:00:09.34,0:00:09.78,Main,,0,0,0,,I HAVE
+Dialogue: 0,0:00:09.78,0:00:10.29,Main,,0,0,0,,NO MONEY.
+Dialogue: 0,0:00:10.83,0:00:11.39,Main,,0,0,0,,WHAT?
+Dialogue: 0,0:00:11.39,0:00:11.74,Main,,0,0,0,,I HAVE
+Dialogue: 0,0:00:11.74,0:00:12.14,Main,,0,0,0,,NO MONEY.
+Dialogue: 0,0:00:12.14,0:00:12.52,Main,,0,0,0,,HOW MANY
+Dialogue: 0,0:00:12.52,0:00:12.93,Main,,0,0,0,,TOMATOES?
+Dialogue: 0,0:00:12.95,0:00:13.47,Main,,0,0,0,,GIVE ME.
+Dialogue: 0,0:00:15.22,0:00:15.63,Main,,0,0,0,,HERE YOU
+Dialogue: 0,0:00:15.63,0:00:15.93,Main,,0,0,0,,GO.
+Dialogue: 0,0:00:16.17,0:00:17.33,Main,,0,0,0,,THANK YOU,
+Dialogue: 0,0:00:17.33,0:00:18.35,Main,,0,0,0,,MA'AM.
+Dialogue: 0,0:00:18.40,0:00:18.82,Main,,0,0,0,,MA'AM?
+Dialogue: 0,0:00:19.16,0:00:19.56,Main,,0,0,0,,YES.
+Dialogue: 0,0:00:19.72,0:00:20.25,Main,,0,0,0,,THIS WAS
+Dialogue: 0,0:00:20.25,0:00:20.72,Main,,0,0,0,,ONLY A
+Dialogue: 0,0:00:20.72,0:00:21.20,Main,,0,0,0,,TEST.
+Dialogue: 0,0:00:21.20,0:00:22.01,Main,,0,0,0,,IT WAS
+Dialogue: 0,0:00:22.01,0:00:22.61,Main,,0,0,0,,AN
+Dialogue: 0,0:00:22.61,0:00:23.65,Main,,0,0,0,,EXPERIMENT.
+Dialogue: 0,0:00:23.65,0:00:24.50,Main,,0,0,0,,WE WERE
+Dialogue: 0,0:00:24.50,0:00:25.54,Main,,0,0,0,,TESTING YOUR
+Dialogue: 0,0:00:25.54,0:00:26.58,Main,,0,0,0,,GENEROSITY.
+Dialogue: 0,0:00:27.22,0:00:27.52,Main,,0,0,0,,GOD BLESS
+Dialogue: 0,0:00:27.52,0:00:27.76,Main,,0,0,0,,YOU.
+Dialogue: 0,0:00:27.76,0:00:28.30,Main,,0,0,0,,HERE, MA'AM.
+Dialogue: 0,0:00:28.30,0:00:28.75,Main,,0,0,0,,THIS IS
+Dialogue: 0,0:00:28.75,0:00:29.22,Main,,0,0,0,,FOR YOU.
+Dialogue: 0,0:00:29.23,0:00:29.43,Main,,0,0,0,,THANK YOU.
+Dialogue: 0,0:00:29.43,0:00:29.71,Main,,0,0,0,,NO, MY
+Dialogue: 0,0:00:29.71,0:00:29.97,Main,,0,0,0,,SON.
+Dialogue: 0,0:00:29.97,0:00:30.51,Main,,0,0,0,,TAKE IT.
+Dialogue: 0,0:00:30.51,0:00:31.21,Main,,0,0,0,,NO, NO.
+Dialogue: 0,0:00:31.21,0:00:32.01,Main,,0,0,0,,THANK YOU.
+Dialogue: 0,0:00:32.01,0:00:32.60,Main,,0,0,0,,NO, THANK
+Dialogue: 0,0:00:32.60,0:00:33.07,Main,,0,0,0,,YOU.
+Dialogue: 0,0:00:33.07,0:00:33.49,Main,,0,0,0,,THESE ARE
+Dialogue: 0,0:00:33.49,0:00:33.90,Main,,0,0,0,,ALSO FOR
+Dialogue: 0,0:00:33.90,0:00:34.23,Main,,0,0,0,,YOU.
+Dialogue: 0,0:00:34.23,0:00:34.49,Main,,0,0,0,,THANK YOU.
+Dialogue: 0,0:00:34.49,0:00:34.85,Main,,0,0,0,,NO, MY
+Dialogue: 0,0:00:34.85,0:00:35.17,Main,,0,0,0,,SON.
+Dialogue: 0,0:00:35.17,0:00:36.07,Main,,0,0,0,,THANK YOU.
+Dialogue: 0,0:00:36.07,0:00:36.97,Main,,0,0,0,,THANK YOU.
+Dialogue: 0,0:00:36.97,0:00:37.41,Main,,0,0,0,,BECAUSE WE
+Dialogue: 0,0:00:37.41,0:00:37.86,Main,,0,0,0,,APPRECIATE
+Dialogue: 0,0:00:37.86,0:00:38.19,Main,,0,0,0,,YOU.
+Dialogue: 0,0:00:39.54,0:00:40.18,Main,,0,0,0,,THANK YOU.
+Dialogue: 0,0:00:40.18,0:00:40.48,Main,,0,0,0,,MAY GOD
+Dialogue: 0,0:00:40.48,0:00:40.81,Main,,0,0,0,,HELP YOU,
+Dialogue: 0,0:00:40.81,0:00:41.10,Main,,0,0,0,,MA'AM.
+Dialogue: 0,0:00:41.10,0:00:41.69,Main,,0,0,0,,MAY GOD
+Dialogue: 0,0:00:41.69,0:00:42.33,Main,,0,0,0,,HELP YOU.
+Dialogue: 0,0:00:42.33,0:00:42.91,Main,,0,0,0,,MAY GOD
+Dialogue: 0,0:00:42.91,0:00:43.60,Main,,0,0,0,,REWARD YOU.
+Dialogue: 0,0:00:43.60,0:00:44.28,Main,,0,0,0,,GOD BLESS
+Dialogue: 0,0:00:44.28,0:00:44.99,Main,,0,0,0,,YOU. THANK
+Dialogue: 0,0:00:44.99,0:00:45.62,Main,,0,0,0,,YOU FOR
+Dialogue: 0,0:00:45.62,0:00:46.16,Main,,0,0,0,,YOUR
+Dialogue: 0,0:00:46.16,0:00:46.92,Main,,0,0,0,,GENEROSITY.

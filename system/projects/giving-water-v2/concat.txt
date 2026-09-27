@@ -1,0 +1,5 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water-v2/beats_5903396/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water-v2/beats_5903396/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water-v2/beats_5903396/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water-v2/beats_5903396/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water-v2/beats_5903396/05.mp4'

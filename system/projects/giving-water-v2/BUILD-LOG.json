@@ -1,0 +1,244 @@
+{
+  "built": "2026-09-23T23:37:30.235Z",
+  "total_s": 51.92,
+  "out": "GIVING_WATER_ALT_V4.mp4",
+  "layout": "vertical",
+  "title": "POV: I GAVE COLD WATER TO PEOPLE WORKING\nIN THE HEAT IN ISRAEL",
+  "beats": [
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      6,
+      19.6,
+      0.5,
+      "[picture +6s, audio unchanged] HOOK: 'I got you guys water.' 'Thank you so much.' 'Where are you from?' 'Sri Lanka?' 'I l",
+      null,
+      {
+        "z": [
+          1,
+          1.16
+        ],
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 0
+        }
+      }
+    ],
+    [
+      "91c9bf59-60fb-491a-adc4-40cae2b0a0e8",
+      0,
+      4.6,
+      0.5,
+      "'Hi, shalom. Would you like some water?'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "54dffb0d-afd0-42ec-9bd1-615e2fdf9cbf",
+      0,
+      10.4,
+      0.5,
+      "'Would you like some water?' 'Omar.' 'Toda raba, Omar.'",
+      null,
+      {
+        "z": [
+          1.02,
+          1.16
+        ]
+      }
+    ],
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      17.4,
+      26.6,
+      0.5,
+      "'Thank you guys for all your hard work. We love you. Israel - you're home.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.22
+        ]
+      }
+    ],
+    [
+      "03901fb3-29c7-4dcc-8f14-07987e2afa6a",
+      7,
+      20.5,
+      0.5,
+      "[picture -2s, audio unchanged] ENDING: 'I'm Armenian - I went to Los Angeles when I was young, and now I live here.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.24
+        ],
+        "audio": {
+          "id": "03901fb3-29c7-4dcc-8f14-07987e2afa6a",
+          "at": 9
+        }
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.34,
+      "text": "I GOT YOU GUYS WATER"
+    },
+    {
+      "beat": "01",
+      "at": 3.96,
+      "text": "THANK YOU SO MUCH"
+    },
+    {
+      "beat": "01",
+      "at": 5.92,
+      "text": "THIS IS FOR YOU GUYS"
+    },
+    {
+      "beat": "01",
+      "at": 7.48,
+      "text": "WHERE ARE YOU GUYS FROM"
+    },
+    {
+      "beat": "01",
+      "at": 9.38,
+      "text": "YOU'RE FROM SRI LANKA"
+    },
+    {
+      "beat": "01",
+      "at": 10.64,
+      "text": "I LOVE SRI LANKA"
+    },
+    {
+      "beat": "01",
+      "at": 12.02,
+      "text": "MY FAVORITE COUNTRY"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "text": "HI, SHALOM"
+    },
+    {
+      "beat": "02",
+      "at": 0.82,
+      "text": "WOULD YOU LIKE SOME WATER"
+    },
+    {
+      "beat": "02",
+      "at": 3.5,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "03",
+      "at": 0.77,
+      "text": "WOULD YOU LIKE SOME"
+    },
+    {
+      "beat": "03",
+      "at": 3.87,
+      "text": "WATER? YEAH"
+    },
+    {
+      "beat": "03",
+      "at": 9,
+      "text": "TODA RABAH OMAR"
+    },
+    {
+      "beat": "03",
+      "at": 10.08,
+      "text": "YOM TOV"
+    },
+    {
+      "beat": "04",
+      "at": 0.42,
+      "text": "SRI LANKA, VERY BEAUTIFUL"
+    },
+    {
+      "beat": "04",
+      "at": 2.53,
+      "text": "FOR YOU, NICE TO MEET YOU"
+    },
+    {
+      "beat": "04",
+      "at": 4.03,
+      "text": "THANK YOU GUYS FOR ALL"
+    },
+    {
+      "beat": "04",
+      "at": 5.28,
+      "text": "YOUR HARD WORK"
+    },
+    {
+      "beat": "04",
+      "at": 6.08,
+      "text": "WE LOVE YOU"
+    },
+    {
+      "beat": "04",
+      "at": 7.62,
+      "text": "ISRAEL, YOU'RE HOME"
+    },
+    {
+      "beat": "05",
+      "at": 0.09,
+      "text": "I'M ARMENIAN"
+    },
+    {
+      "beat": "05",
+      "at": 1,
+      "text": "WHERE ARE YOU FROM? LA"
+    },
+    {
+      "beat": "05",
+      "at": 3.5,
+      "text": "LOS ANGELES. YEAH"
+    },
+    {
+      "beat": "05",
+      "at": 5,
+      "text": "I'M ARMENIAN"
+    },
+    {
+      "beat": "05",
+      "at": 6,
+      "text": "I LIVE IN LOS ANGELES"
+    },
+    {
+      "beat": "05",
+      "at": 7.25,
+      "text": "I'VE BEEN FOUR TIMES"
+    },
+    {
+      "beat": "05",
+      "at": 8.25,
+      "text": "TO THE UNITED STATES. REALLY"
+    },
+    {
+      "beat": "05",
+      "at": 9.5,
+      "text": "I WENT TO CUBA"
+    },
+    {
+      "beat": "05",
+      "at": 10.5,
+      "text": "WHEN I WAS YOUNG"
+    },
+    {
+      "beat": "05",
+      "at": 11.5,
+      "text": "AND I MOVED TO LA"
+    },
+    {
+      "beat": "05",
+      "at": 12.75,
+      "text": "LOS ANGELES. WOW"
+    }
+  ]
+}

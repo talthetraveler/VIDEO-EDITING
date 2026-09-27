@@ -1,0 +1,237 @@
+// WHERE A CAPTION APPEARS. One place, so it can be tested without rendering.
+//
+// Tal, 2026-09-22 and again 2026-09-24: *"make sure when I speak then the
+// captions show up."*
+//
+// THE RULE: a caption starts when the voice starts, and is replaced when the
+// next voice starts. Nothing else may move it.
+//
+// WHAT THIS REPLACED (bug found 2026-09-24, reproducible with
+// `node system/scripts/test-caption-timing.mjs --old`)
+//   The old code computed `a = Math.max(prevEnd, ...)` — a caption could not
+//   begin before the previous one ENDED. Every caption is held a readable
+//   minimum, so as soon as someone spoke faster than that minimum, each line
+//   pushed the next one later and the error ACCUMULATED down the beat:
+//     voice at 0.0 0.5 1.0 1.5 2.0  ->  caption at 0.0 0.8 1.6 2.4 3.0
+//   The fifth caption arrived a full second after the words it captions.
+//   At a normal pace (1.0s between lines) nothing was visibly wrong, which is
+//   why it survived: it only bit in fast exchanges — which is most of the
+//   good material.
+//
+// THE FIX, in two parts
+//   1. A caption's start is its own speech onset. The PREVIOUS caption is cut
+//      short by it, rather than the next one being delayed.
+//   2. When two onsets are closer together than a line can be read, the lines
+//      are MERGED into one caption. Delaying a line to make it readable is
+//      what caused the drift; merging keeps every caption on the voice.
+//      This is Tal's own rule — "treat captions as rhythm: rapid speech
+//      produces rapid replacements" — rather than a queue that slips.
+
+export const MIN_SHOW = 0.45;   // shortest a caption may be on screen
+export const HOLD_MAX = 2.2;    // longest, so a pause leaves the screen clean
+export const SNAP_WINDOW = 1.2; // how far an estimate may reach for a real onset
+const MERGE_MAX_WORDS = 7;      // do not build an unreadable line while merging
+
+/**
+ * @param onsets        measured speech starts within the beat, seconds, sorted
+ * @param texts         caption lines, in speaking order
+ * @param wordsPerChunk word count of each line
+ * @param a0,b0         the segment's span within the beat
+ * @returns [{a, b, text}] in order
+ */
+export function placeCaptions(onsets, texts, wordsPerChunk, a0, b0) {
+  const n = texts.length;
+  if (!n) return [];
+
+  // 1. ESTIMATE — position by word count through the segment's own span.
+  //    Only accurate enough to choose WHICH onset a line belongs to.
+  const total = wordsPerChunk.reduce((t, x) => t + x, 0) || 1;
+  let cum = 0;
+  let starts = wordsPerChunk.map((w) => {
+    const v = a0 + (cum / total) * (b0 - a0);
+    cum += w;
+    return v;
+  });
+
+  // 2. SNAP — assign lines to measured onsets IN ORDER, choosing the
+  //    assignment with the smallest total error.
+  //
+  //    NOT greedy-nearest-per-line. Greedy strands lines: with voice at
+  //    0.0 0.5 1.0 1.5 2.0 and five lines, line 3's estimate (1.28) sits
+  //    marginally nearer 1.5 than 1.0, takes it, and then line 5 finds every
+  //    onset used and falls back to its estimate — 0.56s after the voice.
+  //    Same failure around a pause: a line lands between two utterances and
+  //    plays over silence while a perfectly good onset goes unused.
+  //
+  //    So it is solved as a whole: pick strictly increasing onset indices for
+  //    the lines, minimising the total distance to their estimates. Small DP,
+  //    a handful of lines per segment.
+  if (onsets.length) {
+    starts = assignInOrder(starts, onsets);
+  }
+
+  // 3. MERGE lines that arrive closer together than they can be read.
+  //    Merging keeps both on the voice; delaying one would not.
+  const merged = [];
+  for (let i = 0; i < n; i++) {
+    const prev = merged[merged.length - 1];
+    const gap = prev ? starts[i] - prev.a : Infinity;
+    const wouldBe = prev ? prev.words + wordsPerChunk[i] : 0;
+    if (prev && gap < MIN_SHOW && wouldBe <= MERGE_MAX_WORDS) {
+      prev.text = `${prev.text} ${texts[i]}`.replace(/\s+/g, " ").trim();
+      prev.words = wouldBe;
+    } else {
+      merged.push({ a: starts[i], text: texts[i], words: wordsPerChunk[i] });
+    }
+  }
+
+  // 4. END — a caption lives until the next one arrives, capped so a pause
+  //    leaves the screen clean, and never past the segment.
+  const out = [];
+  for (let i = 0; i < merged.length; i++) {
+    const cur = merged[i];
+    const a = Math.min(Math.max(cur.a, a0), Math.max(a0, b0 - MIN_SHOW));
+    const next = i + 1 < merged.length ? merged[i + 1].a : Infinity;
+    const b = Math.min(next, b0, a + HOLD_MAX);
+    if (b - a < 0.15) continue;                 // nothing readable left
+    out.push({ a: round(a), b: round(Math.max(b, a + 0.15)), text: cur.text });
+  }
+  return out;
+}
+
+const round = (t) => Math.round(t * 1000) / 1000;
+
+/**
+ * LAY LINES INSIDE MEASURED SPEECH.
+ *
+ * Preferred over `placeCaptions` on real street audio. Onsets alone are not
+ * enough there: the mic fires on a bottle crinkle, a footstep, a scooter, and
+ * a caption snapped to one of those sits over silence even though the snapping
+ * was "correct". Measured 2026-09-24 on clip 01 — 6 of 19 captions landed on
+ * transients that way.
+ *
+ * A RUN has duration, so it cannot be a click. Lines are distributed across
+ * the runs inside their segment in proportion to word count, and a line is
+ * never placed outside one. That makes "is there speech under this caption"
+ * true by construction rather than by luck.
+ *
+ * @param runs  [[start,end], ...] measured speech inside the segment
+ * @param texts lines in speaking order
+ * @param words word count per line
+ */
+export function placeInSpeech(runs, texts, words) {
+  const spans = (runs ?? []).filter(([s, e]) => e > s);
+  if (!spans.length || !texts.length) return [];
+
+  const talk = spans.reduce((t, [s, e]) => t + (e - s), 0);
+  const totalW = words.reduce((t, x) => t + x, 0) || 1;
+
+  // walk the runs, giving each line a slice of SPEAKING time
+  const out = [];
+  let si = 0;
+  let cursor = spans[0][0];
+  for (let i = 0; i < texts.length; i++) {
+    const want = (words[i] / totalW) * talk;
+    const a = cursor;
+    // A CAPTION MUST NOT SPAN A GAP. Give it its share of speaking time, but
+    // never let the window run past the end of the run it starts in — a line
+    // whose slice reached into the next run took the silence between them with
+    // it ("KING, THIS IS" held 1.53s with speech under only 26% of it).
+    const end = Math.min(spans[si][1], a + want);
+    if (end <= a) break;
+    out.push({ a: round(a), b: round(end), text: texts[i] });
+    cursor = end;
+    // if the cursor has run off the end of this span, step to the next one so
+    // the following line starts on speech rather than in the gap after it
+    while (si < spans.length && cursor >= spans[si][1] - 1e-6) {
+      si++;
+      if (si < spans.length) cursor = spans[si][0];
+    }
+    if (si >= spans.length) break;
+  }
+
+  // merge anything too brief to read, rather than delaying it
+  const merged = [];
+  for (const c of out) {
+    const prev = merged[merged.length - 1];
+    if (prev && c.b - prev.a <= MIN_SHOW * 1.6 &&
+        (prev.text.split(/\s+/).length + c.text.split(/\s+/).length) <= 7) {
+      prev.text = `${prev.text} ${c.text}`;
+      prev.b = c.b;
+    } else {
+      merged.push({ ...c });
+    }
+  }
+  // A LINE MUST STILL BE READABLE. A slice can come out shorter than the eye
+  // can take in ("FOR YOU" for 0.26s). Extend into the gap that follows —
+  // sitting briefly over silence at the TAIL of a line is far less wrong than
+  // a caption that flashes and is gone before it is read.
+  for (let i = 0; i < merged.length; i++) {
+    const c = merged[i];
+    const ceiling = i + 1 < merged.length ? merged[i + 1].a : Infinity;
+    if (c.b - c.a < MIN_SHOW) c.b = Math.min(ceiling, c.a + MIN_SHOW);
+    c.b = round(Math.min(c.b, c.a + HOLD_MAX));   // a pause leaves the screen clean
+  }
+
+  // DO NOT FINISH BEFORE THE VOICE DOES. Shares are computed from word count,
+  // so the last line of a segment can run out while the person is still
+  // talking — clip 02's "HOT DAY" cleared at 2.53s against speech to 3.06s,
+  // and Tal saw a bare 3-4s. The final caption holds to the end of the run it
+  // is in, still capped so a pause stays clean.
+  const last = merged[merged.length - 1];
+  if (last) {
+    const run = spans.find(([s, e]) => last.a >= s - 1e-6 && last.a < e);
+    if (run) last.b = round(Math.min(Math.max(last.b, run[1]), last.a + HOLD_MAX));
+  }
+  return merged;
+}
+
+/**
+ * Assign every line to a speech onset, in order, minimising total error.
+ *
+ * dp[k][j] = cheapest way to place lines 0..k with line k on onset j, given
+ * lines before it used strictly earlier onsets. Prefix minima keep it O(n*m).
+ *
+ * When there are FEWER onsets than lines, lines are allowed to share an onset
+ * — they merge in the next step, which is the correct answer for speech too
+ * fast to caption separately.
+ */
+function assignInOrder(est, onsets) {
+  const n = est.length, m = onsets.length;
+  if (!n || !m) return est;
+
+  if (m < n) {
+    // not enough measured onsets: place each line on the nearest onset at or
+    // after the previous line's, allowing repeats (merging handles them).
+    let j = 0;
+    return est.map((t) => {
+      while (j + 1 < m && Math.abs(onsets[j + 1] - t) <= Math.abs(onsets[j] - t)) j++;
+      return onsets[j];
+    });
+  }
+
+  const INF = Infinity;
+  const cost = (k, j) => Math.abs(onsets[j] - est[k]);
+  const dp = Array.from({ length: n }, () => new Float64Array(m).fill(INF));
+  const from = Array.from({ length: n }, () => new Int32Array(m).fill(-1));
+
+  for (let j = 0; j < m; j++) dp[0][j] = cost(0, j);
+  for (let k = 1; k < n; k++) {
+    let bestPrev = INF, bestIdx = -1;
+    for (let j = 0; j < m; j++) {
+      if (j > 0 && dp[k - 1][j - 1] < bestPrev) { bestPrev = dp[k - 1][j - 1]; bestIdx = j - 1; }
+      if (bestIdx >= 0) { dp[k][j] = bestPrev + cost(k, j); from[k][j] = bestIdx; }
+    }
+  }
+
+  let end = -1, best = INF;
+  for (let j = 0; j < m; j++) if (dp[n - 1][j] < best) { best = dp[n - 1][j]; end = j; }
+  if (end < 0) return est;                       // nothing valid; keep estimates
+
+  const out = new Array(n);
+  for (let k = n - 1, j = end; k >= 0; k--) { out[k] = onsets[j]; j = from[k][j]; }
+
+  // A line whose chosen onset is absurdly far from its estimate is not really
+  // that line's onset — keep the estimate rather than teleport the caption.
+  return out.map((v, k) => (Math.abs(v - est[k]) > SNAP_WINDOW * 2 ? est[k] : v));
+}

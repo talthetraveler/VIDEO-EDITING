@@ -1,0 +1,92 @@
+{
+  "layout": "vertical",
+  "title": "POV: I TOLD A SHOP OWNER IN ISRAEL\nI WAS HUNGRY AND HAD NO MONEY",
+  "titleHold": 4,
+  "out": "SHOP_OWNER_BREAD_V5.mp4",
+  "beats": [
+    [
+      "0ca00e5d-e3f5-44a3-976b-13aa17395dfb",
+      0,
+      12.4,
+      0.5,
+      "THE TEST: 'Salamu Alaikum. I have a question - I'm really hungry, but I don't have any money. Can you help me?'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "0ca00e5d-e3f5-44a3-976b-13aa17395dfb",
+      12.2,
+      28.9,
+      0.5,
+      "'Yes.' 'Really? For free?' 'Yes.' 'Are you Muslim?' 'Yes - my name is Mustafa.' 'I'm Tal. I'm Jewish. I love you.' 'We are brothers.'",
+      null,
+      {
+        "z": [
+          1.04,
+          1.2
+        ]
+      }
+    ],
+    [
+      "0ca00e5d-e3f5-44a3-976b-13aa17395dfb",
+      28.8,
+      40.5,
+      0.5,
+      "THE REVEAL: 'Actually, I do have money. This is for you.' 'No, no, no.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.22
+        ]
+      }
+    ],
+    [
+      "0ca00e5d-e3f5-44a3-976b-13aa17395dfb",
+      41.9,
+      52,
+      0.5,
+      "'I was testing your kindness. You don't want the money?' 'No, thank you.' 'Why?' 'I don't know.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.26
+        ]
+      }
+    ],
+    [
+      "0ca00e5d-e3f5-44a3-976b-13aa17395dfb",
+      52,
+      62.6,
+      0.5,
+      "'Are you Palestinian?' 'Yes.' 'This is Palestinian culture.' 'I'm Israeli.' 'We are together. Inshallah. Salam and shalom.'",
+      null,
+      {
+        "z": [
+          1.12,
+          1.28
+        ]
+      }
+    ],
+    [
+      "0ca00e5d-e3f5-44a3-976b-13aa17395dfb",
+      63.1,
+      73.5,
+      0.5,
+      "THE ENDING: 'Habibi. Shukran. I'll take this bread and give it to someone who needs it.'",
+      null,
+      {
+        "z": [
+          1.14,
+          1.3
+        ]
+      }
+    ]
+  ]
+}

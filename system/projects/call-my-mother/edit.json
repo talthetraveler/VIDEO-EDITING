@@ -1,0 +1,62 @@
+{
+  "layout": "vertical",
+  "capY": 0.58,
+  "title": "CALL SOMEONE YOU LOVE\nDAMASCUS GATE, JERUSALEM",
+  "titleHold": 2.5,
+  "out": "CALL_MY_MOTHER_V3.mp4",
+  "beats": [
+    [
+      "local-aecb67d7801715e0",
+      14.6,
+      21.4,
+      0.5,
+      "'Hello. Yes - my mother.'",
+      null,
+      {
+        "z": [
+          1,
+          1.16
+        ]
+      }
+    ],
+    [
+      "local-aecb67d7801715e0",
+      21,
+      28.2,
+      0.5,
+      "'Take care of yourself. Don't be afraid. I love you.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.28
+        ]
+      }
+    ],
+    [
+      "local-aecb67d7801715e0",
+      28,
+      33.2,
+      0.5,
+      "'My mother is the most beautiful woman I love. God bless her.'",
+      null,
+      {
+        "z": [
+          1.18,
+          1.36
+        ]
+      }
+    ],
+    [
+      "local-aecb67d7801715e0",
+      33.2,
+      35.6,
+      0.5,
+      "SILENT HOLD: he hangs up and smiles — the film ends on the face",
+      null,
+      {
+        "nocap": true
+      }
+    ]
+  ]
+}

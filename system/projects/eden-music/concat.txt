@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/eden-music/beats_2750479/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/eden-music/beats_2750479/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/eden-music/beats_2750479/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/eden-music/beats_2750479/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/eden-music/beats_2750479/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/eden-music/beats_2750479/06.mp4'

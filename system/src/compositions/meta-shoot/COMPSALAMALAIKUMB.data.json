@@ -1,0 +1,757 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "beats": [
+    {
+      "src": "footage/meta-shoot/od_video-3896_singular_display.MP4",
+      "startSec": 0.16,
+      "endSec": 7.81
+    },
+    {
+      "src": "footage/meta-shoot/video-3467_singular_display.MP4",
+      "startSec": 3.21,
+      "endSec": 7.6
+    },
+    {
+      "src": "footage/meta-shoot/od_video-3392_singular_display.mov",
+      "startSec": 2.54,
+      "endSec": 5.7
+    },
+    {
+      "src": "footage/meta-shoot/od_video-3360_singular_display.MP4",
+      "startSec": 0.14,
+      "endSec": 5.3
+    },
+    {
+      "src": "footage/meta-shoot/video-3567_singular_display.MP4",
+      "startSec": 0.14,
+      "endSec": 5.21
+    },
+    {
+      "src": "footage/meta-shoot/od_video-3887_singular_display.MP4",
+      "startSec": 0.19,
+      "endSec": 5.51
+    },
+    {
+      "src": "footage/meta-shoot/od_video-3397_singular_display.MP4",
+      "startSec": 2.36,
+      "endSec": 5.6
+    },
+    {
+      "src": "footage/meta-shoot/video-4443_singular_display.MP4",
+      "startSec": 0.08,
+      "endSec": 9.37
+    },
+    {
+      "src": "footage/meta-shoot/od_video-4115_singular_display.MP4",
+      "startSec": 0.24,
+      "endSec": 8.27
+    },
+    {
+      "src": "footage/meta-shoot/od_video-3899_singular_display.MP4",
+      "startSec": 0.14,
+      "endSec": 5.78
+    },
+    {
+      "src": "footage/meta-shoot/od_video-4084_singular_display.MP4",
+      "startSec": 0.17,
+      "endSec": 5.43
+    }
+  ],
+  "captions": [
+    {
+      "text": " Hey",
+      "startMs": 280,
+      "endMs": 300,
+      "timestampMs": 290,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 530,
+      "endMs": 1110,
+      "timestampMs": 820,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 1110,
+      "endMs": 1950,
+      "timestampMs": 1530,
+      "confidence": 1
+    },
+    {
+      "text": " Walaikum",
+      "startMs": 2080,
+      "endMs": 2600,
+      "timestampMs": 2340,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 2600,
+      "endMs": 2950,
+      "timestampMs": 2775,
+      "confidence": 1
+    },
+    {
+      "text": " Nice",
+      "startMs": 3800,
+      "endMs": 4030,
+      "timestampMs": 3915,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 4030,
+      "endMs": 4230,
+      "timestampMs": 4130,
+      "confidence": 1
+    },
+    {
+      "text": " meet",
+      "startMs": 4230,
+      "endMs": 4620,
+      "timestampMs": 4425,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 4620,
+      "endMs": 4950,
+      "timestampMs": 4785,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 5100,
+      "endMs": 5140,
+      "timestampMs": 5120,
+      "confidence": 1
+    },
+    {
+      "text": " just",
+      "startMs": 5140,
+      "endMs": 5370,
+      "timestampMs": 5255,
+      "confidence": 1
+    },
+    {
+      "text": " landed",
+      "startMs": 5370,
+      "endMs": 5750,
+      "timestampMs": 5560,
+      "confidence": 1
+    },
+    {
+      "text": " in",
+      "startMs": 5750,
+      "endMs": 5850,
+      "timestampMs": 5800,
+      "confidence": 1
+    },
+    {
+      "text": " Israel",
+      "startMs": 5850,
+      "endMs": 6230,
+      "timestampMs": 6040,
+      "confidence": 1
+    },
+    {
+      "text": " and",
+      "startMs": 6230,
+      "endMs": 6420,
+      "timestampMs": 6325,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 6420,
+      "endMs": 6460,
+      "timestampMs": 6440,
+      "confidence": 1
+    },
+    {
+      "text": " was",
+      "startMs": 6460,
+      "endMs": 6630,
+      "timestampMs": 6545,
+      "confidence": 1
+    },
+    {
+      "text": " looking",
+      "startMs": 6630,
+      "endMs": 7420,
+      "timestampMs": 7025,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 7420,
+      "endMs": 7630,
+      "timestampMs": 7525,
+      "confidence": 1
+    },
+    {
+      "text": " Have",
+      "startMs": 7910,
+      "endMs": 8120,
+      "timestampMs": 8015,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 8120,
+      "endMs": 8220,
+      "timestampMs": 8170,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 8220,
+      "endMs": 8580,
+      "timestampMs": 8400,
+      "confidence": 1
+    },
+    {
+      "text": " day",
+      "startMs": 8580,
+      "endMs": 8810,
+      "timestampMs": 8695,
+      "confidence": 1
+    },
+    {
+      "text": " Well",
+      "startMs": 8910,
+      "endMs": 9120,
+      "timestampMs": 9015,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 9220,
+      "endMs": 9380,
+      "timestampMs": 9300,
+      "confidence": 1
+    },
+    {
+      "text": " too",
+      "startMs": 9380,
+      "endMs": 9540,
+      "timestampMs": 9460,
+      "confidence": 1
+    },
+    {
+      "text": " where's",
+      "startMs": 9640,
+      "endMs": 10000,
+      "timestampMs": 9820,
+      "confidence": 1
+    },
+    {
+      "text": " the",
+      "startMs": 10000,
+      "endMs": 10150,
+      "timestampMs": 10075,
+      "confidence": 1
+    },
+    {
+      "text": " Doffanarium",
+      "startMs": 10150,
+      "endMs": 10720,
+      "timestampMs": 10435,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 10820,
+      "endMs": 10990,
+      "timestampMs": 10905,
+      "confidence": 1
+    },
+    {
+      "text": " know",
+      "startMs": 10990,
+      "endMs": 11190,
+      "timestampMs": 11090,
+      "confidence": 1
+    },
+    {
+      "text": " where",
+      "startMs": 11190,
+      "endMs": 11550,
+      "timestampMs": 11370,
+      "confidence": 1
+    },
+    {
+      "text": " Wa",
+      "startMs": 12300,
+      "endMs": 13000,
+      "timestampMs": 12650,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 13000,
+      "endMs": 14200,
+      "timestampMs": 13600,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 15460,
+      "endMs": 15980,
+      "timestampMs": 15720,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 15980,
+      "endMs": 17080,
+      "timestampMs": 16530,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 17080,
+      "endMs": 17890,
+      "timestampMs": 17485,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 17890,
+      "endMs": 19010,
+      "timestampMs": 18450,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 19010,
+      "endMs": 19810,
+      "timestampMs": 19410,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 19810,
+      "endMs": 20390,
+      "timestampMs": 20100,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 20620,
+      "endMs": 20810,
+      "timestampMs": 20715,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 20810,
+      "endMs": 21490,
+      "timestampMs": 21150,
+      "confidence": 1
+    },
+    {
+      "text": " do",
+      "startMs": 21870,
+      "endMs": 21880,
+      "timestampMs": 21875,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 21880,
+      "endMs": 22160,
+      "timestampMs": 22020,
+      "confidence": 1
+    },
+    {
+      "text": " want",
+      "startMs": 22160,
+      "endMs": 22550,
+      "timestampMs": 22355,
+      "confidence": 1
+    },
+    {
+      "text": " me",
+      "startMs": 22550,
+      "endMs": 22730,
+      "timestampMs": 22640,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 22730,
+      "endMs": 23120,
+      "timestampMs": 22925,
+      "confidence": 1
+    },
+    {
+      "text": " take",
+      "startMs": 23120,
+      "endMs": 23320,
+      "timestampMs": 23220,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 23320,
+      "endMs": 23410,
+      "timestampMs": 23365,
+      "confidence": 1
+    },
+    {
+      "text": " picture",
+      "startMs": 23410,
+      "endMs": 24110,
+      "timestampMs": 23760,
+      "confidence": 1
+    },
+    {
+      "text": " of",
+      "startMs": 24110,
+      "endMs": 24280,
+      "timestampMs": 24195,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 24280,
+      "endMs": 24570,
+      "timestampMs": 24425,
+      "confidence": 1
+    },
+    {
+      "text": " guys",
+      "startMs": 24570,
+      "endMs": 24940,
+      "timestampMs": 24755,
+      "confidence": 1
+    },
+    {
+      "text": " Hey",
+      "startMs": 25690,
+      "endMs": 25880,
+      "timestampMs": 25785,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 26230,
+      "endMs": 27110,
+      "timestampMs": 26670,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 27110,
+      "endMs": 28310,
+      "timestampMs": 27710,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 28630,
+      "endMs": 29340,
+      "timestampMs": 28985,
+      "confidence": 1
+    },
+    {
+      "text": " How",
+      "startMs": 29460,
+      "endMs": 29670,
+      "timestampMs": 29565,
+      "confidence": 1
+    },
+    {
+      "text": " are",
+      "startMs": 29670,
+      "endMs": 29780,
+      "timestampMs": 29725,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 29780,
+      "endMs": 29940,
+      "timestampMs": 29860,
+      "confidence": 1
+    },
+    {
+      "text": " brother",
+      "startMs": 29940,
+      "endMs": 30330,
+      "timestampMs": 30135,
+      "confidence": 1
+    },
+    {
+      "text": " I'm",
+      "startMs": 30500,
+      "endMs": 30570,
+      "timestampMs": 30535,
+      "confidence": 1
+    },
+    {
+      "text": " fine",
+      "startMs": 30570,
+      "endMs": 30750,
+      "timestampMs": 30660,
+      "confidence": 1
+    },
+    {
+      "text": " Comelaughing",
+      "startMs": 31500,
+      "endMs": 32700,
+      "timestampMs": 32100,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 34250,
+      "endMs": 34620,
+      "timestampMs": 34435,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 34620,
+      "endMs": 35470,
+      "timestampMs": 35045,
+      "confidence": 1
+    },
+    {
+      "text": " these",
+      "startMs": 35720,
+      "endMs": 36320,
+      "timestampMs": 36020,
+      "confidence": 1
+    },
+    {
+      "text": " are",
+      "startMs": 36320,
+      "endMs": 36680,
+      "timestampMs": 36500,
+      "confidence": 1
+    },
+    {
+      "text": " for",
+      "startMs": 36680,
+      "endMs": 37030,
+      "timestampMs": 36855,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 37030,
+      "endMs": 37390,
+      "timestampMs": 37210,
+      "confidence": 1
+    },
+    {
+      "text": " guys",
+      "startMs": 37390,
+      "endMs": 37970,
+      "timestampMs": 37680,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 38130,
+      "endMs": 38620,
+      "timestampMs": 38375,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 38620,
+      "endMs": 39420,
+      "timestampMs": 39020,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 39420,
+      "endMs": 39710,
+      "timestampMs": 39565,
+      "confidence": 1
+    },
+    {
+      "text": " day",
+      "startMs": 39710,
+      "endMs": 40070,
+      "timestampMs": 39890,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 40310,
+      "endMs": 40450,
+      "timestampMs": 40380,
+      "confidence": 1
+    },
+    {
+      "text": " gift",
+      "startMs": 40450,
+      "endMs": 41320,
+      "timestampMs": 40885,
+      "confidence": 1
+    },
+    {
+      "text": " for",
+      "startMs": 41320,
+      "endMs": 41770,
+      "timestampMs": 41545,
+      "confidence": 1
+    },
+    {
+      "text": " free",
+      "startMs": 41770,
+      "endMs": 42790,
+      "timestampMs": 42280,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 43540,
+      "endMs": 44740,
+      "timestampMs": 44140,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 48910,
+      "endMs": 50110,
+      "timestampMs": 49510,
+      "confidence": 1
+    },
+    {
+      "text": " Hey",
+      "startMs": 51570,
+      "endMs": 51740,
+      "timestampMs": 51655,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 52050,
+      "endMs": 52820,
+      "timestampMs": 52435,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 52820,
+      "endMs": 53910,
+      "timestampMs": 53365,
+      "confidence": 1
+    },
+    {
+      "text": " Nice",
+      "startMs": 54210,
+      "endMs": 54940,
+      "timestampMs": 54575,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 54940,
+      "endMs": 55140,
+      "timestampMs": 55040,
+      "confidence": 1
+    },
+    {
+      "text": " meet",
+      "startMs": 55140,
+      "endMs": 55730,
+      "timestampMs": 55435,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 55730,
+      "endMs": 56460,
+      "timestampMs": 56095,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 57210,
+      "endMs": 57720,
+      "timestampMs": 57465,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 57720,
+      "endMs": 58890,
+      "timestampMs": 58305,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 58890,
+      "endMs": 60090,
+      "timestampMs": 59490,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 60250,
+      "endMs": 61450,
+      "timestampMs": 60850,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 61890,
+      "endMs": 61920,
+      "timestampMs": 61905,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 61920,
+      "endMs": 61960,
+      "timestampMs": 61940,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 61960,
+      "endMs": 61990,
+      "timestampMs": 61975,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 61990,
+      "endMs": 62030,
+      "timestampMs": 62010,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 62030,
+      "endMs": 62060,
+      "timestampMs": 62045,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 62060,
+      "endMs": 62100,
+      "timestampMs": 62080,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 62100,
+      "endMs": 62170,
+      "timestampMs": 62135,
+      "confidence": 1
+    }
+  ]
+}

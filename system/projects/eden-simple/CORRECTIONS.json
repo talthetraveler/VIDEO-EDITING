@@ -1,0 +1,24 @@
+{
+  "_why": "Caption-only corrections. The audio is never altered. Machine translation is unreliable on medical and idiomatic Hebrew - Tal caught every one of these.",
+  "corrections": {
+    "working with milk and milk": "fighting leukemia",
+    "milk and milk": "leukemia",
+    "get my diet": "was sick myself",
+    "you don't forgive her": "you don't give up",
+    "get active": "keep going",
+    "you can't lift your hands up when it's hard": "you can't give up when it's hard",
+    "and you can do it like this": "you can do this",
+    "to shake and to be a little bit sad": "you can shake, be a little sad",
+    "but not to lie down": "but don't put yourself down",
+    "to be able to lift your head up": "lift your head up",
+    "while I was able to get my diet": "while I was sick myself",
+    "the amazing Erin": "the amazing Eden",
+    "Erin": "Eden",
+    "you're in the Sartan": "you have cancer",
+    "in the Sartan": "have cancer",
+    "Sartan": "cancer",
+    "no cook cook": "leukemia",
+    "but don't lie down": "but don't put yourself down",
+    "not to lie down": "don't put yourself down"
+  }
+}

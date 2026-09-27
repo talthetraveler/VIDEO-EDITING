@@ -1,0 +1,130 @@
+{
+  "layout": "vertical",
+  "title": "POV: I GAVE FLOWERS TO STRANGERS IN ISRAEL\nFOR THE JEWISH NEW YEAR",
+  "titleHold": 4,
+  "out": "SHANA_TOVA_V4.mp4",
+  "beats": [
+    [
+      "516dd787-9c98-443c-9f21-69cc36672756",
+      5.42,
+      10.3,
+      0.5,
+      "SETUP: 'Today is the Jewish New Year, so we are in Israel - giving flowers to strangers.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "9cf1b25f-9d76-4cdb-898a-fe8906ee50ff",
+      7.58,
+      12.35,
+      0.5,
+      "'Hello brother - Chag Sameach! Shana Tova!'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "deb5193c-41bb-4fa3-baf0-c2b61154ef82",
+      4.38,
+      11.83,
+      0.5,
+      "'I wanted to tell you Shana Tova.' 'Nice to meet you.' 'Where are you from?'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "1c5c684f-afe6-4ae9-8152-1e1247c0db16",
+      12.72,
+      20.13,
+      0.5,
+      "DIVERSITY: 'I just wanted to wish you a good year - and a happy Christmas.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "7cbc2332-364c-42a6-b8fe-aefba3477160",
+      5.26,
+      11.79,
+      0.5,
+      "'Hello, brother. Excuse me - I wanted to tell you Shana Tova. Nice to meet you.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "d4bdb440-cddc-4272-977c-8059634c68b2",
+      6.12,
+      14.59,
+      0.5,
+      "'I wanted to tell you guys Shana Tova, Chag Sameach.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "3c9f414c-87d5-4f80-83bd-87ab5be54b51",
+      9.76,
+      19.13,
+      0.5,
+      "'What is your favourite part about Israel?' 'Israel is good.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "fad44e25-24bb-4c39-a663-03242bee4cec",
+      46.4,
+      62,
+      0.5,
+      "ENDING: 'What is your favourite part about Israel?' - 'This is your home.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.26
+        ]
+      }
+    ]
+  ],
+  "captionFix": [
+    {
+      "match": "SARATOV",
+      "to": "SHANA TOVA"
+    },
+    {
+      "match": "AND A HAPPY CHRISTMAS. SORRY",
+      "to": "AND A HAPPY CHRISTMAS"
+    }
+  ]
+}

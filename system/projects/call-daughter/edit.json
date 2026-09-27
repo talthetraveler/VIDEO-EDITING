@@ -1,0 +1,22 @@
+{
+  "layout": "vertical",
+  "title": "CALL SOMEONE YOU LOVE\nJERUSALEM",
+  "titleHold": 2.5,
+  "out": "CALL_DAUGHTER_V2.mp4",
+  "beats": [
+    [
+      "local-0c06a4d937b9b59f",
+      0,
+      49,
+      0.5,
+      "ONE TAKE: 'Shalom Aleichem. How are you, my sweet daughter? I miss you so much. I hope to see you before I die. Bye-bye, darling. I love you.'",
+      null,
+      {
+        "z": [
+          1,
+          1.26
+        ]
+      }
+    ]
+  ]
+}

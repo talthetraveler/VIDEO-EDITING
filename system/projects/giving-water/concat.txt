@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water/beats_6120672/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water/beats_6120672/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water/beats_6120672/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water/beats_6120672/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water/beats_6120672/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/giving-water/beats_6120672/06.mp4'

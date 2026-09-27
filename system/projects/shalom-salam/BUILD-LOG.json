@@ -1,0 +1,276 @@
+{
+  "built": "2026-09-24T00:10:28.428Z",
+  "total_s": 47.14,
+  "out": "SHALOM_SALAM_V7.mp4",
+  "layout": "vertical",
+  "title": "POV: I WISHED STRANGERS IN ISRAEL\nSHABBAT SHALOM",
+  "beats": [
+    [
+      "ac48a4a1-59e3-4685-8cab-008c21f210c1",
+      0.36,
+      4.25,
+      0.5,
+      "street, group of guys",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "927136c0-5784-4fe6-b6ec-261495e906bb",
+      0.66,
+      4.11,
+      0.5,
+      "Salamu Alaikum / Shabbat Shalom - the whole point",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "d3f8b4f2-5429-4256-b235-11462c7bbf8a",
+      2.08,
+      5.31,
+      0.5,
+      "'Shabbat Shalom! How is it going? Good to see you guys.'",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "5575c5d2-f4f6-4556-9b41-355bd4597b75",
+      4,
+      8.49,
+      0.5,
+      "'Be blessed and never forget to be Jewish.' 'Amen.'",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "ed55208a-67d9-46d5-9525-0ca0d105bf66",
+      1.68,
+      4.87,
+      0.5,
+      "'Shabbat Shalom, my friend.'",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "7230b51b-d8e2-4163-a7b6-4d56ea283d84",
+      1.56,
+      5.19,
+      0.5,
+      "'Shabbat Shalom.' 'How are you?'",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "b40b735f-721e-4589-9a3a-c1e673c5a0b7",
+      5.52,
+      9.95,
+      0.5,
+      "'This is for you. Have an amazing day.'",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "a56a569b-270d-410b-a492-bab5687dc401",
+      2.74,
+      6.25,
+      0.5,
+      "'Shabbat Shalom. Yom Tov.'",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "deb74341-f088-4b3c-8884-2ef4c4de03a2",
+      1.88,
+      4.73,
+      0.5,
+      "'Shabbat Shalom!' 'How are you?'",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "6c482b40-802a-4734-8629-4a826a43bdbd",
+      0.88,
+      4.87,
+      0.5,
+      "'Shabbat Shalom!' 'Have an amazing day!'",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "446ab78c-3cd8-4158-adcb-117c98eac7e9",
+      2.74,
+      4.95,
+      0.5,
+      "'Excuse me - Shabbat Shalom.'",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "446ab78c-3cd8-4158-adcb-117c98eac7e9",
+      2,
+      7.2,
+      0.5,
+      "THE POINT (VO over the promenade — the closing clip has no people in it)",
+      null,
+      {
+        "audio": {
+          "id": "0b3c21c0-87c4-4199-a008-8b553c09dcf3",
+          "at": 15.2
+        }
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.2,
+      "text": "YO, HOW'S IT GOING"
+    },
+    {
+      "beat": "01",
+      "at": 2.71,
+      "text": "SHABBAT SHALOM"
+    },
+    {
+      "beat": "03",
+      "at": 1.82,
+      "text": "HOW'S IT GOING"
+    },
+    {
+      "beat": "03",
+      "at": 2.8,
+      "text": "GOOD TO SEE YOU GUYS"
+    },
+    {
+      "beat": "04",
+      "at": 2.64,
+      "text": "BE BLESSED"
+    },
+    {
+      "beat": "04",
+      "at": 3.98,
+      "text": "FORGET TO"
+    },
+    {
+      "beat": "05",
+      "at": 0.32,
+      "text": "SHABBAT SHALOM MY FRIEND"
+    },
+    {
+      "beat": "06",
+      "at": 0.81,
+      "text": "SHABBAT SHALOM"
+    },
+    {
+      "beat": "06",
+      "at": 2.66,
+      "text": "HOW ARE YOU"
+    },
+    {
+      "beat": "06",
+      "at": 3.46,
+      "text": "WHOA, BE CAREFUL"
+    },
+    {
+      "beat": "06",
+      "at": 4.26,
+      "text": "HOW'S IT GOING"
+    },
+    {
+      "beat": "07",
+      "at": 1.26,
+      "text": "THIS IS FOR YOU"
+    },
+    {
+      "beat": "07",
+      "at": 2.26,
+      "text": "HAVE AN AMAZING DAY"
+    },
+    {
+      "beat": "07",
+      "at": 3.81,
+      "text": "DON'T FORGET"
+    },
+    {
+      "beat": "08",
+      "at": 0.2,
+      "text": "ACTUALLY SHABBAT SHALOM"
+    },
+    {
+      "beat": "08",
+      "at": 1.79,
+      "text": "SHABBAT SHALOM"
+    },
+    {
+      "beat": "09",
+      "at": 2.46,
+      "text": "HOW ARE YOU"
+    },
+    {
+      "beat": "10",
+      "at": 0.22,
+      "text": "SHABBAT SHALOM! AND"
+    },
+    {
+      "beat": "10",
+      "at": 2.36,
+      "text": "HAVE AN AMAZING DAY"
+    },
+    {
+      "beat": "11",
+      "at": 1.98,
+      "text": "SHABBAT SHALOM"
+    }
+  ]
+}

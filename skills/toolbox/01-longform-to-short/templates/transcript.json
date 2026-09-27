@@ -1,0 +1,17 @@
+{
+  "_comment": "Written automatically by scripts/longform-index.mjs. Also see the human-readable TRANSCRIPT.md written alongside it — read that first.",
+  "slug": "slug",
+  "source": "footage/<slug>/<filename>",
+  "model": "medium",
+  "duration_s": 2832.4,
+  "word_count": 5104,
+  "words": [
+    { "word": "So", "start": 0.0, "end": 0.18, "norm": "so" },
+    { "word": "anyway,", "start": 0.2, "end": 0.61, "norm": "anyway" }
+  ],
+  "speech_regions": [
+    [0.0, 42.3],
+    [44.1, 118.9]
+  ],
+  "_speech_regions_note": "Informational only (gap >= 1.2s) — a rough scene/topic-break hint while reading the transcript. NOT used to cut anything."
+}

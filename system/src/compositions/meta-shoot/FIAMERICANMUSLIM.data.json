@@ -1,0 +1,1538 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "beats": [
+    {
+      "src": "footage/meta-shoot/video-1915_singular_display.MP4",
+      "startSec": 0.12,
+      "endSec": 9.57
+    },
+    {
+      "src": "footage/meta-shoot/video-1915_singular_display.MP4",
+      "startSec": 9.57,
+      "endSec": 19.03
+    },
+    {
+      "src": "footage/meta-shoot/video-1915_singular_display.MP4",
+      "startSec": 19.03,
+      "endSec": 28.49
+    },
+    {
+      "src": "footage/meta-shoot/video-1915_singular_display.MP4",
+      "startSec": 28.49,
+      "endSec": 37.94
+    },
+    {
+      "src": "footage/meta-shoot/video-1915_singular_display.MP4",
+      "startSec": 38.3,
+      "endSec": 46.67
+    },
+    {
+      "src": "footage/meta-shoot/video-1915_singular_display.MP4",
+      "startSec": 46.67,
+      "endSec": 55.05
+    },
+    {
+      "src": "footage/meta-shoot/video-1915_singular_display.MP4",
+      "startSec": 55.1,
+      "endSec": 64.06
+    },
+    {
+      "src": "footage/meta-shoot/video-1915_singular_display.MP4",
+      "startSec": 64.06,
+      "endSec": 73.02
+    },
+    {
+      "src": "footage/meta-shoot/video-1915_singular_display.MP4",
+      "startSec": 73.34,
+      "endSec": 83.44
+    }
+  ],
+  "captions": [
+    {
+      "text": " Sorry",
+      "startMs": 260,
+      "endMs": 860,
+      "timestampMs": 560,
+      "confidence": 1
+    },
+    {
+      "text": " do",
+      "startMs": 1210,
+      "endMs": 1560,
+      "timestampMs": 1385,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 1560,
+      "endMs": 2090,
+      "timestampMs": 1825,
+      "confidence": 1
+    },
+    {
+      "text": " guys",
+      "startMs": 2090,
+      "endMs": 2790,
+      "timestampMs": 2440,
+      "confidence": 1
+    },
+    {
+      "text": " speak",
+      "startMs": 2790,
+      "endMs": 3720,
+      "timestampMs": 3255,
+      "confidence": 1
+    },
+    {
+      "text": " English",
+      "startMs": 3720,
+      "endMs": 4870,
+      "timestampMs": 4295,
+      "confidence": 1
+    },
+    {
+      "text": " So",
+      "startMs": 5430,
+      "endMs": 5560,
+      "timestampMs": 5495,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 5560,
+      "endMs": 5620,
+      "timestampMs": 5590,
+      "confidence": 1
+    },
+    {
+      "text": " just",
+      "startMs": 5620,
+      "endMs": 5880,
+      "timestampMs": 5750,
+      "confidence": 1
+    },
+    {
+      "text": " landed",
+      "startMs": 5880,
+      "endMs": 6260,
+      "timestampMs": 6070,
+      "confidence": 1
+    },
+    {
+      "text": " from",
+      "startMs": 6260,
+      "endMs": 6560,
+      "timestampMs": 6410,
+      "confidence": 1
+    },
+    {
+      "text": " America",
+      "startMs": 6560,
+      "endMs": 7170,
+      "timestampMs": 6865,
+      "confidence": 1
+    },
+    {
+      "text": " and",
+      "startMs": 7170,
+      "endMs": 7310,
+      "timestampMs": 7240,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 7310,
+      "endMs": 7410,
+      "timestampMs": 7360,
+      "confidence": 1
+    },
+    {
+      "text": " saw",
+      "startMs": 7410,
+      "endMs": 7750,
+      "timestampMs": 7580,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 7750,
+      "endMs": 7830,
+      "timestampMs": 7790,
+      "confidence": 1
+    },
+    {
+      "text": " lot",
+      "startMs": 7830,
+      "endMs": 8030,
+      "timestampMs": 7930,
+      "confidence": 1
+    },
+    {
+      "text": " of",
+      "startMs": 8030,
+      "endMs": 8110,
+      "timestampMs": 8070,
+      "confidence": 1
+    },
+    {
+      "text": " Muslims",
+      "startMs": 8110,
+      "endMs": 8550,
+      "timestampMs": 8330,
+      "confidence": 1
+    },
+    {
+      "text": " here",
+      "startMs": 8550,
+      "endMs": 8780,
+      "timestampMs": 8665,
+      "confidence": 1
+    },
+    {
+      "text": " and",
+      "startMs": 8780,
+      "endMs": 8950,
+      "timestampMs": 8865,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 8950,
+      "endMs": 9010,
+      "timestampMs": 8980,
+      "confidence": 1
+    },
+    {
+      "text": " was",
+      "startMs": 9010,
+      "endMs": 9180,
+      "timestampMs": 9095,
+      "confidence": 1
+    },
+    {
+      "text": " really",
+      "startMs": 9180,
+      "endMs": 9560,
+      "timestampMs": 9370,
+      "confidence": 1
+    },
+    {
+      "text": " surprised",
+      "startMs": 9580,
+      "endMs": 9810,
+      "timestampMs": 9695,
+      "confidence": 1
+    },
+    {
+      "text": " so",
+      "startMs": 10170,
+      "endMs": 10340,
+      "timestampMs": 10255,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 10340,
+      "endMs": 10400,
+      "timestampMs": 10370,
+      "confidence": 1
+    },
+    {
+      "text": " was",
+      "startMs": 10400,
+      "endMs": 10510,
+      "timestampMs": 10455,
+      "confidence": 1
+    },
+    {
+      "text": " wondering",
+      "startMs": 10510,
+      "endMs": 11050,
+      "timestampMs": 10780,
+      "confidence": 1
+    },
+    {
+      "text": " can",
+      "startMs": 11050,
+      "endMs": 11210,
+      "timestampMs": 11130,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 11210,
+      "endMs": 11360,
+      "timestampMs": 11285,
+      "confidence": 1
+    },
+    {
+      "text": " speak",
+      "startMs": 11360,
+      "endMs": 11570,
+      "timestampMs": 11465,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 11570,
+      "endMs": 11670,
+      "timestampMs": 11620,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 11670,
+      "endMs": 11730,
+      "timestampMs": 11700,
+      "confidence": 1
+    },
+    {
+      "text": " Muslim",
+      "startMs": 11730,
+      "endMs": 12080,
+      "timestampMs": 11905,
+      "confidence": 1
+    },
+    {
+      "text": " for",
+      "startMs": 12080,
+      "endMs": 12340,
+      "timestampMs": 12210,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 12340,
+      "endMs": 12460,
+      "timestampMs": 12400,
+      "confidence": 1
+    },
+    {
+      "text": " second",
+      "startMs": 12460,
+      "endMs": 12760,
+      "timestampMs": 12610,
+      "confidence": 1
+    },
+    {
+      "text": " It's",
+      "startMs": 12910,
+      "endMs": 13300,
+      "timestampMs": 13105,
+      "confidence": 1
+    },
+    {
+      "text": " okay",
+      "startMs": 13300,
+      "endMs": 13400,
+      "timestampMs": 13350,
+      "confidence": 1
+    },
+    {
+      "text": " nice",
+      "startMs": 13520,
+      "endMs": 13770,
+      "timestampMs": 13645,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 13770,
+      "endMs": 13890,
+      "timestampMs": 13830,
+      "confidence": 1
+    },
+    {
+      "text": " meet",
+      "startMs": 13890,
+      "endMs": 14140,
+      "timestampMs": 14015,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 14140,
+      "endMs": 14450,
+      "timestampMs": 14295,
+      "confidence": 1
+    },
+    {
+      "text": " how's",
+      "startMs": 14480,
+      "endMs": 14760,
+      "timestampMs": 14620,
+      "confidence": 1
+    },
+    {
+      "text": " it",
+      "startMs": 14760,
+      "endMs": 14870,
+      "timestampMs": 14815,
+      "confidence": 1
+    },
+    {
+      "text": " going",
+      "startMs": 14870,
+      "endMs": 15440,
+      "timestampMs": 15155,
+      "confidence": 1
+    },
+    {
+      "text": " So",
+      "startMs": 15470,
+      "endMs": 15560,
+      "timestampMs": 15515,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 15560,
+      "endMs": 15620,
+      "timestampMs": 15590,
+      "confidence": 1
+    },
+    {
+      "text": " just",
+      "startMs": 15620,
+      "endMs": 15790,
+      "timestampMs": 15705,
+      "confidence": 1
+    },
+    {
+      "text": " landed",
+      "startMs": 15790,
+      "endMs": 16080,
+      "timestampMs": 15935,
+      "confidence": 1
+    },
+    {
+      "text": " in",
+      "startMs": 16080,
+      "endMs": 16170,
+      "timestampMs": 16125,
+      "confidence": 1
+    },
+    {
+      "text": " Israel",
+      "startMs": 16170,
+      "endMs": 16510,
+      "timestampMs": 16340,
+      "confidence": 1
+    },
+    {
+      "text": " in",
+      "startMs": 16510,
+      "endMs": 16550,
+      "timestampMs": 16530,
+      "confidence": 1
+    },
+    {
+      "text": " online",
+      "startMs": 16550,
+      "endMs": 16950,
+      "timestampMs": 16750,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 16990,
+      "endMs": 17050,
+      "timestampMs": 17020,
+      "confidence": 1
+    },
+    {
+      "text": " see",
+      "startMs": 17050,
+      "endMs": 17210,
+      "timestampMs": 17130,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 17210,
+      "endMs": 17260,
+      "timestampMs": 17235,
+      "confidence": 1
+    },
+    {
+      "text": " lot",
+      "startMs": 17260,
+      "endMs": 17420,
+      "timestampMs": 17340,
+      "confidence": 1
+    },
+    {
+      "text": " of",
+      "startMs": 17420,
+      "endMs": 17520,
+      "timestampMs": 17470,
+      "confidence": 1
+    },
+    {
+      "text": " videos",
+      "startMs": 17520,
+      "endMs": 17850,
+      "timestampMs": 17685,
+      "confidence": 1
+    },
+    {
+      "text": " saying",
+      "startMs": 17850,
+      "endMs": 18160,
+      "timestampMs": 18005,
+      "confidence": 1
+    },
+    {
+      "text": " that",
+      "startMs": 18160,
+      "endMs": 18370,
+      "timestampMs": 18265,
+      "confidence": 1
+    },
+    {
+      "text": " Muslims",
+      "startMs": 18370,
+      "endMs": 18750,
+      "timestampMs": 18560,
+      "confidence": 1
+    },
+    {
+      "text": " cannot",
+      "startMs": 18750,
+      "endMs": 19020,
+      "timestampMs": 18885,
+      "confidence": 1
+    },
+    {
+      "text": " live",
+      "startMs": 19070,
+      "endMs": 19230,
+      "timestampMs": 19150,
+      "confidence": 1
+    },
+    {
+      "text": " here",
+      "startMs": 19230,
+      "endMs": 19490,
+      "timestampMs": 19360,
+      "confidence": 1
+    },
+    {
+      "text": " so",
+      "startMs": 19590,
+      "endMs": 19690,
+      "timestampMs": 19640,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 19690,
+      "endMs": 19880,
+      "timestampMs": 19785,
+      "confidence": 1
+    },
+    {
+      "text": " was",
+      "startMs": 19880,
+      "endMs": 19900,
+      "timestampMs": 19890,
+      "confidence": 1
+    },
+    {
+      "text": " wondering",
+      "startMs": 19900,
+      "endMs": 20390,
+      "timestampMs": 20145,
+      "confidence": 1
+    },
+    {
+      "text": " what",
+      "startMs": 20390,
+      "endMs": 20710,
+      "timestampMs": 20550,
+      "confidence": 1
+    },
+    {
+      "text": " is",
+      "startMs": 20710,
+      "endMs": 20800,
+      "timestampMs": 20755,
+      "confidence": 1
+    },
+    {
+      "text": " it",
+      "startMs": 20800,
+      "endMs": 20910,
+      "timestampMs": 20855,
+      "confidence": 1
+    },
+    {
+      "text": " like",
+      "startMs": 20910,
+      "endMs": 21030,
+      "timestampMs": 20970,
+      "confidence": 1
+    },
+    {
+      "text": " being",
+      "startMs": 21030,
+      "endMs": 21480,
+      "timestampMs": 21255,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 21480,
+      "endMs": 21560,
+      "timestampMs": 21520,
+      "confidence": 1
+    },
+    {
+      "text": " Muslim",
+      "startMs": 21560,
+      "endMs": 22100,
+      "timestampMs": 21830,
+      "confidence": 1
+    },
+    {
+      "text": " here",
+      "startMs": 22100,
+      "endMs": 22470,
+      "timestampMs": 22285,
+      "confidence": 1
+    },
+    {
+      "text": " Like",
+      "startMs": 22750,
+      "endMs": 23080,
+      "timestampMs": 22915,
+      "confidence": 1
+    },
+    {
+      "text": " online",
+      "startMs": 23080,
+      "endMs": 23580,
+      "timestampMs": 23330,
+      "confidence": 1
+    },
+    {
+      "text": " on",
+      "startMs": 23580,
+      "endMs": 23890,
+      "timestampMs": 23735,
+      "confidence": 1
+    },
+    {
+      "text": " Instagram",
+      "startMs": 23890,
+      "endMs": 24490,
+      "timestampMs": 24190,
+      "confidence": 1
+    },
+    {
+      "text": " it",
+      "startMs": 24650,
+      "endMs": 24810,
+      "timestampMs": 24730,
+      "confidence": 1
+    },
+    {
+      "text": " says",
+      "startMs": 24810,
+      "endMs": 25270,
+      "timestampMs": 25040,
+      "confidence": 1
+    },
+    {
+      "text": " that",
+      "startMs": 25270,
+      "endMs": 25470,
+      "timestampMs": 25370,
+      "confidence": 1
+    },
+    {
+      "text": " Muslims",
+      "startMs": 25470,
+      "endMs": 26190,
+      "timestampMs": 25830,
+      "confidence": 1
+    },
+    {
+      "text": " cannot",
+      "startMs": 26190,
+      "endMs": 26500,
+      "timestampMs": 26345,
+      "confidence": 1
+    },
+    {
+      "text": " live",
+      "startMs": 26500,
+      "endMs": 26670,
+      "timestampMs": 26585,
+      "confidence": 1
+    },
+    {
+      "text": " in",
+      "startMs": 26670,
+      "endMs": 26770,
+      "timestampMs": 26720,
+      "confidence": 1
+    },
+    {
+      "text": " Israel",
+      "startMs": 26770,
+      "endMs": 27180,
+      "timestampMs": 26975,
+      "confidence": 1
+    },
+    {
+      "text": " No",
+      "startMs": 27310,
+      "endMs": 27500,
+      "timestampMs": 27405,
+      "confidence": 1
+    },
+    {
+      "text": " Muslims",
+      "startMs": 27690,
+      "endMs": 28360,
+      "timestampMs": 28025,
+      "confidence": 1
+    },
+    {
+      "text": " live",
+      "startMs": 28480,
+      "endMs": 28740,
+      "timestampMs": 28610,
+      "confidence": 1
+    },
+    {
+      "text": " in",
+      "startMs": 28740,
+      "endMs": 28930,
+      "timestampMs": 28835,
+      "confidence": 1
+    },
+    {
+      "text": " this",
+      "startMs": 28930,
+      "endMs": 29310,
+      "timestampMs": 29120,
+      "confidence": 1
+    },
+    {
+      "text": " place",
+      "startMs": 29310,
+      "endMs": 29790,
+      "timestampMs": 29550,
+      "confidence": 1
+    },
+    {
+      "text": " they",
+      "startMs": 30010,
+      "endMs": 30360,
+      "timestampMs": 30185,
+      "confidence": 1
+    },
+    {
+      "text": " are",
+      "startMs": 30360,
+      "endMs": 30650,
+      "timestampMs": 30505,
+      "confidence": 1
+    },
+    {
+      "text": " Muslims",
+      "startMs": 30650,
+      "endMs": 31430,
+      "timestampMs": 31040,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 31540,
+      "endMs": 31590,
+      "timestampMs": 31565,
+      "confidence": 1
+    },
+    {
+      "text": " was",
+      "startMs": 31590,
+      "endMs": 31740,
+      "timestampMs": 31665,
+      "confidence": 1
+    },
+    {
+      "text": " really",
+      "startMs": 31740,
+      "endMs": 32080,
+      "timestampMs": 31910,
+      "confidence": 1
+    },
+    {
+      "text": " surprised",
+      "startMs": 32080,
+      "endMs": 32500,
+      "timestampMs": 32290,
+      "confidence": 1
+    },
+    {
+      "text": " by",
+      "startMs": 32500,
+      "endMs": 32620,
+      "timestampMs": 32560,
+      "confidence": 1
+    },
+    {
+      "text": " this",
+      "startMs": 32620,
+      "endMs": 32830,
+      "timestampMs": 32725,
+      "confidence": 1
+    },
+    {
+      "text": " what",
+      "startMs": 33220,
+      "endMs": 34030,
+      "timestampMs": 33625,
+      "confidence": 1
+    },
+    {
+      "text": " is",
+      "startMs": 34030,
+      "endMs": 34200,
+      "timestampMs": 34115,
+      "confidence": 1
+    },
+    {
+      "text": " it",
+      "startMs": 34200,
+      "endMs": 34370,
+      "timestampMs": 34285,
+      "confidence": 1
+    },
+    {
+      "text": " like",
+      "startMs": 34370,
+      "endMs": 34700,
+      "timestampMs": 34535,
+      "confidence": 1
+    },
+    {
+      "text": " being",
+      "startMs": 34700,
+      "endMs": 35130,
+      "timestampMs": 34915,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 35130,
+      "endMs": 35220,
+      "timestampMs": 35175,
+      "confidence": 1
+    },
+    {
+      "text": " Muslim",
+      "startMs": 35220,
+      "endMs": 35740,
+      "timestampMs": 35480,
+      "confidence": 1
+    },
+    {
+      "text": " 30",
+      "startMs": 36030,
+      "endMs": 36410,
+      "timestampMs": 36220,
+      "confidence": 1
+    },
+    {
+      "text": " percent",
+      "startMs": 36410,
+      "endMs": 36850,
+      "timestampMs": 36630,
+      "confidence": 1
+    },
+    {
+      "text": " of",
+      "startMs": 36850,
+      "endMs": 36970,
+      "timestampMs": 36910,
+      "confidence": 1
+    },
+    {
+      "text": " the",
+      "startMs": 36970,
+      "endMs": 37160,
+      "timestampMs": 37065,
+      "confidence": 1
+    },
+    {
+      "text": " country",
+      "startMs": 37160,
+      "endMs": 37630,
+      "timestampMs": 37395,
+      "confidence": 1
+    },
+    {
+      "text": " really",
+      "startMs": 38030,
+      "endMs": 38640,
+      "timestampMs": 38335,
+      "confidence": 1
+    },
+    {
+      "text": " And",
+      "startMs": 38750,
+      "endMs": 38800,
+      "timestampMs": 38775,
+      "confidence": 1
+    },
+    {
+      "text": " what",
+      "startMs": 38800,
+      "endMs": 38870,
+      "timestampMs": 38835,
+      "confidence": 1
+    },
+    {
+      "text": " is",
+      "startMs": 38870,
+      "endMs": 38970,
+      "timestampMs": 38920,
+      "confidence": 1
+    },
+    {
+      "text": " it",
+      "startMs": 38970,
+      "endMs": 39070,
+      "timestampMs": 39020,
+      "confidence": 1
+    },
+    {
+      "text": " like",
+      "startMs": 39070,
+      "endMs": 39320,
+      "timestampMs": 39195,
+      "confidence": 1
+    },
+    {
+      "text": " being",
+      "startMs": 39320,
+      "endMs": 39430,
+      "timestampMs": 39375,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 39430,
+      "endMs": 39520,
+      "timestampMs": 39475,
+      "confidence": 1
+    },
+    {
+      "text": " Muslim",
+      "startMs": 39520,
+      "endMs": 40090,
+      "timestampMs": 39805,
+      "confidence": 1
+    },
+    {
+      "text": " in",
+      "startMs": 40090,
+      "endMs": 40220,
+      "timestampMs": 40155,
+      "confidence": 1
+    },
+    {
+      "text": " Israel",
+      "startMs": 40220,
+      "endMs": 40850,
+      "timestampMs": 40535,
+      "confidence": 1
+    },
+    {
+      "text": " It's",
+      "startMs": 41150,
+      "endMs": 42350,
+      "timestampMs": 41750,
+      "confidence": 1
+    },
+    {
+      "text": " the",
+      "startMs": 42520,
+      "endMs": 43550,
+      "timestampMs": 43035,
+      "confidence": 1
+    },
+    {
+      "text": " same",
+      "startMs": 43550,
+      "endMs": 44750,
+      "timestampMs": 44150,
+      "confidence": 1
+    },
+    {
+      "text": " It's",
+      "startMs": 45990,
+      "endMs": 46300,
+      "timestampMs": 46145,
+      "confidence": 1
+    },
+    {
+      "text": " the",
+      "startMs": 46390,
+      "endMs": 46690,
+      "timestampMs": 46540,
+      "confidence": 1
+    },
+    {
+      "text": " same",
+      "startMs": 46690,
+      "endMs": 47100,
+      "timestampMs": 46895,
+      "confidence": 1
+    },
+    {
+      "text": " what",
+      "startMs": 47100,
+      "endMs": 47510,
+      "timestampMs": 47305,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 47510,
+      "endMs": 47810,
+      "timestampMs": 47660,
+      "confidence": 1
+    },
+    {
+      "text": " see",
+      "startMs": 47810,
+      "endMs": 48150,
+      "timestampMs": 47980,
+      "confidence": 1
+    },
+    {
+      "text": " it's",
+      "startMs": 48250,
+      "endMs": 48270,
+      "timestampMs": 48260,
+      "confidence": 1
+    },
+    {
+      "text": " the",
+      "startMs": 48270,
+      "endMs": 48400,
+      "timestampMs": 48335,
+      "confidence": 1
+    },
+    {
+      "text": " same",
+      "startMs": 48400,
+      "endMs": 48510,
+      "timestampMs": 48455,
+      "confidence": 1
+    },
+    {
+      "text": " what",
+      "startMs": 48510,
+      "endMs": 48660,
+      "timestampMs": 48585,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 48660,
+      "endMs": 48750,
+      "timestampMs": 48705,
+      "confidence": 1
+    },
+    {
+      "text": " see",
+      "startMs": 48750,
+      "endMs": 49350,
+      "timestampMs": 49050,
+      "confidence": 1
+    },
+    {
+      "text": " No",
+      "startMs": 49470,
+      "endMs": 49650,
+      "timestampMs": 49560,
+      "confidence": 1
+    },
+    {
+      "text": " way",
+      "startMs": 49650,
+      "endMs": 49930,
+      "timestampMs": 49790,
+      "confidence": 1
+    },
+    {
+      "text": " you're",
+      "startMs": 50130,
+      "endMs": 50730,
+      "timestampMs": 50430,
+      "confidence": 1
+    },
+    {
+      "text": " telling",
+      "startMs": 50730,
+      "endMs": 51350,
+      "timestampMs": 51040,
+      "confidence": 1
+    },
+    {
+      "text": " me",
+      "startMs": 51350,
+      "endMs": 51590,
+      "timestampMs": 51470,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 51590,
+      "endMs": 51920,
+      "timestampMs": 51755,
+      "confidence": 1
+    },
+    {
+      "text": " cannot",
+      "startMs": 51920,
+      "endMs": 52390,
+      "timestampMs": 52155,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 52390,
+      "endMs": 52770,
+      "timestampMs": 52580,
+      "confidence": 1
+    },
+    {
+      "text": " the",
+      "startMs": 52770,
+      "endMs": 53050,
+      "timestampMs": 52910,
+      "confidence": 1
+    },
+    {
+      "text": " same",
+      "startMs": 53050,
+      "endMs": 53430,
+      "timestampMs": 53240,
+      "confidence": 1
+    },
+    {
+      "text": " rights",
+      "startMs": 53430,
+      "endMs": 53900,
+      "timestampMs": 53665,
+      "confidence": 1
+    },
+    {
+      "text": " here",
+      "startMs": 53900,
+      "endMs": 54380,
+      "timestampMs": 54140,
+      "confidence": 1
+    },
+    {
+      "text": " Really",
+      "startMs": 54780,
+      "endMs": 55980,
+      "timestampMs": 55380,
+      "confidence": 1
+    },
+    {
+      "text": " Look",
+      "startMs": 56700,
+      "endMs": 56960,
+      "timestampMs": 56830,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 57070,
+      "endMs": 57420,
+      "timestampMs": 57245,
+      "confidence": 1
+    },
+    {
+      "text": " know",
+      "startMs": 57420,
+      "endMs": 57430,
+      "timestampMs": 57425,
+      "confidence": 1
+    },
+    {
+      "text": " it's",
+      "startMs": 57430,
+      "endMs": 57690,
+      "timestampMs": 57560,
+      "confidence": 1
+    },
+    {
+      "text": " not",
+      "startMs": 57690,
+      "endMs": 57900,
+      "timestampMs": 57795,
+      "confidence": 1
+    },
+    {
+      "text": " perfect",
+      "startMs": 57900,
+      "endMs": 58670,
+      "timestampMs": 58285,
+      "confidence": 1
+    },
+    {
+      "text": " because",
+      "startMs": 58670,
+      "endMs": 58900,
+      "timestampMs": 58785,
+      "confidence": 1
+    },
+    {
+      "text": " obviously",
+      "startMs": 58900,
+      "endMs": 59220,
+      "timestampMs": 59060,
+      "confidence": 1
+    },
+    {
+      "text": " there",
+      "startMs": 59220,
+      "endMs": 59560,
+      "timestampMs": 59390,
+      "confidence": 1
+    },
+    {
+      "text": " is",
+      "startMs": 59560,
+      "endMs": 59640,
+      "timestampMs": 59600,
+      "confidence": 1
+    },
+    {
+      "text": " racism",
+      "startMs": 59640,
+      "endMs": 60020,
+      "timestampMs": 59830,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 60090,
+      "endMs": 60140,
+      "timestampMs": 60115,
+      "confidence": 1
+    },
+    {
+      "text": " understand",
+      "startMs": 60140,
+      "endMs": 61340,
+      "timestampMs": 60740,
+      "confidence": 1
+    },
+    {
+      "text": " but",
+      "startMs": 62570,
+      "endMs": 62880,
+      "timestampMs": 62725,
+      "confidence": 1
+    },
+    {
+      "text": " I'm",
+      "startMs": 62880,
+      "endMs": 63070,
+      "timestampMs": 62975,
+      "confidence": 1
+    },
+    {
+      "text": " curious",
+      "startMs": 63070,
+      "endMs": 63580,
+      "timestampMs": 63325,
+      "confidence": 1
+    },
+    {
+      "text": " like",
+      "startMs": 63640,
+      "endMs": 63840,
+      "timestampMs": 63740,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 63960,
+      "endMs": 64240,
+      "timestampMs": 64100,
+      "confidence": 1
+    },
+    {
+      "text": " know",
+      "startMs": 64240,
+      "endMs": 64420,
+      "timestampMs": 64330,
+      "confidence": 1
+    },
+    {
+      "text": " here",
+      "startMs": 64570,
+      "endMs": 64820,
+      "timestampMs": 64695,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 64820,
+      "endMs": 65030,
+      "timestampMs": 64925,
+      "confidence": 1
+    },
+    {
+      "text": " can",
+      "startMs": 65030,
+      "endMs": 65220,
+      "timestampMs": 65125,
+      "confidence": 1
+    },
+    {
+      "text": " live",
+      "startMs": 65220,
+      "endMs": 65490,
+      "timestampMs": 65355,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 65620,
+      "endMs": 65670,
+      "timestampMs": 65645,
+      "confidence": 1
+    },
+    {
+      "text": " know",
+      "startMs": 65670,
+      "endMs": 65950,
+      "timestampMs": 65810,
+      "confidence": 1
+    },
+    {
+      "text": " it's",
+      "startMs": 65950,
+      "endMs": 66210,
+      "timestampMs": 66080,
+      "confidence": 1
+    },
+    {
+      "text": " not",
+      "startMs": 66210,
+      "endMs": 66410,
+      "timestampMs": 66310,
+      "confidence": 1
+    },
+    {
+      "text": " the",
+      "startMs": 66410,
+      "endMs": 66610,
+      "timestampMs": 66510,
+      "confidence": 1
+    },
+    {
+      "text": " same",
+      "startMs": 66610,
+      "endMs": 66880,
+      "timestampMs": 66745,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 67010,
+      "endMs": 67070,
+      "timestampMs": 67040,
+      "confidence": 1
+    },
+    {
+      "text": " know",
+      "startMs": 67070,
+      "endMs": 67500,
+      "timestampMs": 67285,
+      "confidence": 1
+    },
+    {
+      "text": " it's",
+      "startMs": 67500,
+      "endMs": 67700,
+      "timestampMs": 67600,
+      "confidence": 1
+    },
+    {
+      "text": " sad",
+      "startMs": 67700,
+      "endMs": 68340,
+      "timestampMs": 68020,
+      "confidence": 1
+    },
+    {
+      "text": " it's",
+      "startMs": 68500,
+      "endMs": 69660,
+      "timestampMs": 69080,
+      "confidence": 1
+    },
+    {
+      "text": " really",
+      "startMs": 69660,
+      "endMs": 70860,
+      "timestampMs": 70260,
+      "confidence": 1
+    },
+    {
+      "text": " sad",
+      "startMs": 71420,
+      "endMs": 72300,
+      "timestampMs": 71860,
+      "confidence": 1
+    },
+    {
+      "text": " Israel",
+      "startMs": 72700,
+      "endMs": 73900,
+      "timestampMs": 73300,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 74510,
+      "endMs": 74610,
+      "timestampMs": 74560,
+      "confidence": 1
+    },
+    {
+      "text": " think",
+      "startMs": 74610,
+      "endMs": 74760,
+      "timestampMs": 74685,
+      "confidence": 1
+    },
+    {
+      "text": " the",
+      "startMs": 74760,
+      "endMs": 74940,
+      "timestampMs": 74850,
+      "confidence": 1
+    },
+    {
+      "text": " future",
+      "startMs": 74940,
+      "endMs": 75180,
+      "timestampMs": 75060,
+      "confidence": 1
+    },
+    {
+      "text": " between",
+      "startMs": 75180,
+      "endMs": 75540,
+      "timestampMs": 75360,
+      "confidence": 1
+    },
+    {
+      "text": " like",
+      "startMs": 75540,
+      "endMs": 75620,
+      "timestampMs": 75580,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 75620,
+      "endMs": 75760,
+      "timestampMs": 75690,
+      "confidence": 1
+    },
+    {
+      "text": " know",
+      "startMs": 75760,
+      "endMs": 75900,
+      "timestampMs": 75830,
+      "confidence": 1
+    },
+    {
+      "text": " Muslims",
+      "startMs": 75900,
+      "endMs": 76690,
+      "timestampMs": 76295,
+      "confidence": 1
+    },
+    {
+      "text": " and",
+      "startMs": 76690,
+      "endMs": 76830,
+      "timestampMs": 76760,
+      "confidence": 1
+    },
+    {
+      "text": " Jews",
+      "startMs": 76830,
+      "endMs": 77060,
+      "timestampMs": 76945,
+      "confidence": 1
+    },
+    {
+      "text": " they",
+      "startMs": 77060,
+      "endMs": 77740,
+      "timestampMs": 77400,
+      "confidence": 1
+    },
+    {
+      "text": " need",
+      "startMs": 77740,
+      "endMs": 78580,
+      "timestampMs": 78160,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 78580,
+      "endMs": 78960,
+      "timestampMs": 78770,
+      "confidence": 1
+    },
+    {
+      "text": " be",
+      "startMs": 78960,
+      "endMs": 79340,
+      "timestampMs": 79150,
+      "confidence": 1
+    },
+    {
+      "text": " no",
+      "startMs": 79720,
+      "endMs": 80150,
+      "timestampMs": 79935,
+      "confidence": 1
+    },
+    {
+      "text": " it's",
+      "startMs": 80480,
+      "endMs": 81240,
+      "timestampMs": 80860,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 81240,
+      "endMs": 81610,
+      "timestampMs": 81425,
+      "confidence": 1
+    }
+  ]
+}

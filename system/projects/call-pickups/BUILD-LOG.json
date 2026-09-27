@@ -1,0 +1,284 @@
+{
+  "built": "2026-09-23T22:31:17.281Z",
+  "total_s": 33.61,
+  "out": "CALL_PICKUPS_V2.mp4",
+  "layout": "vertical",
+  "title": "CALL SOMEONE YOU LOVE\nDAMASCUS GATE, JERUSALEM",
+  "beats": [
+    [
+      "local-0c06a4d937b9b59f",
+      0,
+      1.2,
+      0.5,
+      "picks up the phone",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "local-aecb67d7801715e0",
+      0,
+      1.2,
+      0.5,
+      "picks up the phone",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "local-ef2bd97d952d5a3d",
+      0,
+      1.2,
+      0.5,
+      "picks up the phone",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "local-497e41742d46382a",
+      0,
+      1.2,
+      0.5,
+      "picks up the phone",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "local-cbc7ee30aca174a5",
+      0,
+      1.2,
+      0.5,
+      "picks up the phone",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "local-eb2915589e3d75c7",
+      0,
+      1.2,
+      0.5,
+      "picks up the phone",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "local-db7a44879f2c1d54",
+      0,
+      1.2,
+      0.5,
+      "picks up the phone",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "local-ca8da5dda84b3a52",
+      0,
+      1.2,
+      0.5,
+      "picks up the phone",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "local-ef2bd97d952d5a3d",
+      25.2,
+      27.6,
+      0.5,
+      "'Life is short.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.22
+        ]
+      }
+    ],
+    [
+      "local-eb2915589e3d75c7",
+      3,
+      4.9,
+      0.5,
+      "'Spread love.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.24
+        ]
+      }
+    ],
+    [
+      "local-0c06a4d937b9b59f",
+      7,
+      13.5,
+      0.5,
+      "'I miss you so much. I love you.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.28
+        ]
+      }
+    ],
+    [
+      "local-497e41742d46382a",
+      0,
+      7,
+      0.5,
+      "'Peace be upon you. God willing, we will be connected in this country.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.24
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.03,
+      "text": "HELLO, SHALOM ALEICHEM"
+    },
+    {
+      "beat": "03",
+      "at": 0,
+      "text": "HELLO"
+    },
+    {
+      "beat": "03",
+      "at": 0.8,
+      "text": "IT'S FAKE"
+    },
+    {
+      "beat": "04",
+      "at": 0.01,
+      "text": "PEACE BE UPON YOU, I AM"
+    },
+    {
+      "beat": "05",
+      "at": 0,
+      "text": "YES, YES, ISRAELI"
+    },
+    {
+      "beat": "06",
+      "at": 0,
+      "text": "IN ARABIC OR IN ENGLISH"
+    },
+    {
+      "beat": "07",
+      "at": 0,
+      "text": "YOU WANTED TO SHARE TO"
+    },
+    {
+      "beat": "08",
+      "at": 0.01,
+      "text": "HELLO, HOW ARE"
+    },
+    {
+      "beat": "09",
+      "at": 0.03,
+      "text": "FIGHT FOR ANYTHING"
+    },
+    {
+      "beat": "09",
+      "at": 1.38,
+      "text": "LIFE IS SHORT"
+    },
+    {
+      "beat": "10",
+      "at": 0.28,
+      "text": "SPREAD LOVE"
+    },
+    {
+      "beat": "10",
+      "at": 1.28,
+      "text": "WHAT ELSE DO"
+    },
+    {
+      "beat": "11",
+      "at": 0,
+      "text": "YOU MY SWEET DAUGHTER"
+    },
+    {
+      "beat": "11",
+      "at": 3.02,
+      "text": "I MISS YOU SO MUCH"
+    },
+    {
+      "beat": "11",
+      "at": 5.81,
+      "text": "I LOVE YOU"
+    },
+    {
+      "beat": "11",
+      "at": 8.62,
+      "text": "I HOPE TO"
+    },
+    {
+      "beat": "12",
+      "at": 0,
+      "text": "PEACE BE UPON YOU, I AM IN"
+    },
+    {
+      "beat": "12",
+      "at": 1.85,
+      "text": "BAB AL-AMOUD IN QUDS"
+    },
+    {
+      "beat": "12",
+      "at": 2.93,
+      "text": "BY THE WILL OF GOD"
+    },
+    {
+      "beat": "12",
+      "at": 4.92,
+      "text": "WE WILL BE CONNECTED"
+    },
+    {
+      "beat": "12",
+      "at": 5.92,
+      "text": "IN THIS COUNTRY"
+    }
+  ]
+}

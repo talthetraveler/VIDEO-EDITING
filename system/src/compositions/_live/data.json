@@ -1,0 +1,16 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "duration": 1,
+  "handle": null,
+  "tracks": {
+    "video": [{ "id": "placeholder", "src": "footage/placeholder.mp4", "sourceIn": 0, "sourceOut": 1, "speed": 1 }],
+    "broll": [],
+    "title": [],
+    "captions": []
+  },
+  "captionPreset": {},
+  "titlePreset": {},
+  "titlePresets": {}
+}

@@ -1,0 +1,92 @@
+{
+  "layout": "vertical",
+  "title": "POV: I SPENT A DAY GIVING TOYS\nTO SICK KIDS IN ISRAEL",
+  "titleHold": 4,
+  "out": "HOSPITAL_TOYS_MONTAGE_V4.mp4",
+  "beats": [
+    [
+      "40d2c60c-dc39-4c40-ba97-c897965d847a",
+      0,
+      13,
+      0.5,
+      "'So we got you some gifts. We heard you're not feeling so well - so we got you some games.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      6.5,
+      13.2,
+      0.5,
+      "the next room: 'This is for you. Assalamualaikum.'",
+      null,
+      {
+        "z": [
+          1.02,
+          1.16
+        ]
+      }
+    ],
+    [
+      "40d2c60c-dc39-4c40-ba97-c897965d847a",
+      15.8,
+      20,
+      0.5,
+      "'So here you have a hairbrush.'",
+      null,
+      {
+        "z": [
+          1.04,
+          1.16
+        ]
+      }
+    ],
+    [
+      "40d2c60c-dc39-4c40-ba97-c897965d847a",
+      36,
+      40.6,
+      0.5,
+      "'And how do you feel now?' 'Good.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.2
+        ]
+      }
+    ],
+    [
+      "40d2c60c-dc39-4c40-ba97-c897965d847a",
+      40.4,
+      50.2,
+      0.5,
+      "'What's your name?' 'Heger.' 'Salamu alaikum.' 'Inshallah.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.24
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      63.4,
+      74.4,
+      0.5,
+      "THE ENDING: 'At the end of the day we're all human beings. We all deserve health. I'm Jewish and you're Muslim - we're brothers.'",
+      null,
+      {
+        "z": [
+          1.12,
+          1.3
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "_why": "Speech-to-text gets real words wrong in ways no automated check can catch, because the output is still valid English. These are CAPTION-ONLY fixes: the audio is never altered, and we never 'correct' what someone actually said - only what the model misheard. Verified by listening to the clip before adding an entry.",
+  "_rule": "left = what the model wrote, right = what the person actually says. Case-insensitive, whole-phrase.",
+  "corrections": {
+    "three here": "three years",
+    "it take me actually three here": "it took me three years",
+    "a chdut": "achdut",
+    "Ahdut": "achdut",
+    "kaka kaka": "kaka kaka",
+    "circle for no one": "circle for now, man",
+    "no one.": "now, man"
+  }
+}

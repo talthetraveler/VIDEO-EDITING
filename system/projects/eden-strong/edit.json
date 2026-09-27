@@ -1,0 +1,163 @@
+{
+  "layout": "vertical",
+  "capY": 0.66,
+  "autoFrame": false,
+  "out": "EDEN_HOW_STRONG_V5.mp4",
+  "note": "SHORT #2 out of the 8:23 interview, and deliberately NOT a reshuffle of EDEN HER STORY - it uses a stretch that film never touches (5:47-7:07). The subject is HIS reaction, which is the hook: he has never met anyone with cancer before, and he says so. Then the turn - 'a few years ago you were like me' - then the line the whole short exists for: 'Eden, do you understand how strong you are?' Her answer is a shake of the head, so it carries NO caption: in Hebrew her 'lo' agrees with him, in English 'NO' would read as contradiction. Ends on her own prescription - go up, believe, smile - not on the V9 closer. autoFrame OFF; xc per beat. FRAMING, v4: the source is ALREADY 9:16 (1920x1080 with rotation), so `crop=1080:1920` removes nothing and the per-beat `xc` was inert - every beat came out as the same locked wide, faces a tenth of the frame with the bottom half a duvet. The only lever that does anything here is the zoompan push, so framing is {z,x,y} per beat. Measured off a gridded still at 352s: Tal's face x0.17 y0.44, Eden's x0.72 y0.45.",
+  "beats": [
+    [
+      "local-49f1fbc4b3367b2b",
+      347.1,
+      357.3,
+      0.3,
+      "HOOK. 'You are the first woman in my life I have met who has cancer. Did you know that?'",
+      null,
+      {
+        "z": [
+          1.18,
+          1.24
+        ],
+        "x": 0.45,
+        "y": 0.46
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      357.3,
+      367.4,
+      0.3,
+      "THE TURN. 'It touches my heart - a few years ago you were like me, healthy. One day everything changed, and you don't give up.'",
+      null,
+      {
+        "z": [
+          1.18,
+          1.24
+        ],
+        "x": 0.45,
+        "y": 0.46
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      369.3,
+      383.2,
+      0.3,
+      "THE LINE. 'But Eden, do you understand how strong you are? Really - think about it. You are surviving a disease and you don't give up.' (recovered by a targeted large-v3 pass; the whole-file transcript had 16s of nothing here)",
+      null,
+      {
+        "z": [
+          1.2,
+          1.32
+        ],
+        "x": 0.46,
+        "y": 0.46
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      383.4,
+      387.2,
+      0.85,
+      "HER ANSWER - a shake of the head. NO CAPTION, deliberately.",
+      null,
+      {
+        "nocap": true,
+        "z": [
+          1.45,
+          1.55
+        ],
+        "x": 0.68,
+        "y": 0.45
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      408.2,
+      416.2,
+      0.85,
+      "'You always have to -' 'Go up.' 'And to -' 'Believe.' 'And to -' 'Smile.' 'Always.'",
+      null,
+      {
+        "z": [
+          1.15,
+          1.2
+        ],
+        "x": 0.5,
+        "y": 0.46
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      416.3,
+      419.4,
+      0.6,
+      "'It makes me happy that you smile.'",
+      null,
+      {
+        "z": [
+          1.35,
+          1.42
+        ],
+        "x": 0.62,
+        "y": 0.45
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      419.4,
+      427.6,
+      0.6,
+      "THE CLOSER. 'You just have to smile, and believe, and that people will come and visit you and pray for you.'",
+      null,
+      {
+        "z": [
+          1.22,
+          1.3
+        ],
+        "x": 0.52,
+        "y": 0.46
+      }
+    ]
+  ],
+  "captionFix": [
+    {
+      "match": "touches my heart because",
+      "to": "It touches my heart"
+    },
+    {
+      "match": "and one day everything changed and you don't give up.",
+      "to": "One day everything changed. And you don't give up"
+    },
+    {
+      "match": "You don't forget it?",
+      "to": "You don't forget that?"
+    },
+    {
+      "match": "You don't understand.",
+      "to": ""
+    },
+    {
+      "match": "No.",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "Yes.",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "I don't know",
+      "to": ""
+    },
+    {
+      "match": "forbidden",
+      "to": ""
+    },
+    {
+      "match": "and you don't give up.",
+      "exact": true,
+      "to": null
+    }
+  ]
+}

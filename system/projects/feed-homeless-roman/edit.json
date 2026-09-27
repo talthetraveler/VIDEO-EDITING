@@ -1,0 +1,161 @@
+{
+  "layout": "vertical",
+  "title": "POV: I GAVE A HOMELESS MAN IN TEL AVIV\nCLOTHES AND FOOD - THEN HE TOLD ME THIS",
+  "titleHold": 4,
+  "denoise": 16,
+  "out": "ROMAN_TEL_AVIV_V9.mp4",
+  "beats": [
+    [
+      "local-ca1bb9b65735004c",
+      6.4,
+      17.5,
+      0.5,
+      "'This is for you. Take off your shirt - we'll put a new one on you.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "local-19018606b6d6b0ee",
+      31.5,
+      43,
+      0.5,
+      "[picture +2s, audio unchanged] 'What's your name?' 'Roman.' 'Where are you from?' 'Tel Aviv.' 'How old are you?' '33.'",
+      null,
+      {
+        "z": [
+          1.04,
+          1.22
+        ],
+        "audio": {
+          "id": "local-19018606b6d6b0ee",
+          "at": 29.5
+        }
+      }
+    ],
+    [
+      "local-e0275debb5700e8f",
+      75.5,
+      88.2,
+      0.5,
+      "[picture -2s, audio unchanged] 'So here - we brought you some food.' 'Thank you. My brother, cheers.'",
+      null,
+      {
+        "z": [
+          1.02,
+          1.18
+        ],
+        "audio": {
+          "id": "local-e0275debb5700e8f",
+          "at": 77.5
+        }
+      }
+    ],
+    [
+      "local-e0275debb5700e8f",
+      108.6,
+      121,
+      0.5,
+      "'How long have you not eaten?' ... 'Two days you haven't eaten?'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.26
+        ]
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      0,
+      10.5,
+      0.5,
+      "'Who do you miss the most?' ... 'My father.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.26
+        ]
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      0.4,
+      9,
+      0.5,
+      "[picture -12s, audio unchanged] as a kid he thought everything his father did was against him - he rebelled at all of it",
+      null,
+      {
+        "z": [
+          1.12,
+          1.32
+        ],
+        "audio": {
+          "id": "local-3843b9158bfb6eb6",
+          "at": 12.4
+        }
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      32.2,
+      48.5,
+      0.5,
+      "THE TURN: 'Only after he died ... you realise the man was only ever trying to guide you.'",
+      null,
+      {
+        "z": [
+          1.16,
+          1.36
+        ]
+      }
+    ],
+    [
+      "local-530bd874ad57bc14",
+      18.6,
+      27.4,
+      0.5,
+      "THE LINE: 'If I have the strength to give someone something to eat, I always give them something to eat. I never say to someone in my life not to eat.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.3
+        ]
+      }
+    ],
+    [
+      "local-3b90089c8902a9e6",
+      332.5,
+      342,
+      0.5,
+      "'So you need a home?' 'Not a home. A place to rest. One metre by one metre.'",
+      null,
+      {
+        "z": [
+          1.14,
+          1.34
+        ]
+      }
+    ],
+    [
+      "local-da9f3edcbca2e9b2",
+      0,
+      10,
+      0.5,
+      "THE JOY - new clothes: 'Wow, amazing. You're happy? You look good.'",
+      null,
+      {
+        "z": [
+          1,
+          1.16
+        ]
+      }
+    ]
+  ]
+}

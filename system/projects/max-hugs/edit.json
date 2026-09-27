@@ -1,0 +1,102 @@
+{
+  "layout": "vertical",
+  "title": "POV: I HUGGED STRANGERS IN ISRAEL",
+  "titleHold": 4,
+  "out": "MAX_HUGS_V4.mp4",
+  "beats": [
+    [
+      "3197f611-44dc-492e-aa63-709c6fd91a37",
+      2.33,
+      6.07,
+      0.5,
+      "'Do you want to give me a hug?' - 'I am Maxine. I love you.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "3a9292a4-eb85-463b-a4ff-2e4541c43e83",
+      0,
+      8.71,
+      0.5,
+      "'Oh, it is the best thing. The world needs more hugs.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "7a3ac3b4-2e48-439a-ba76-5b9837b7f6c4",
+      1.03,
+      9.49,
+      0.5,
+      "'And we always hug.' - 'That hug really meant the world to me.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "26e39f88-0670-4d0b-be54-82c4947e05d5",
+      4.07,
+      10.11,
+      0.5,
+      "'And from the heart.' 'Where are you from?'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "d32eccb3-aeef-4eeb-bcb0-07bebe8809fc",
+      4.49,
+      13.13,
+      0.5,
+      "'If you put a positive one...'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "cc0c6013-f7d2-4baf-b244-24cb0f011749",
+      1.11,
+      8.59,
+      0.5,
+      "'Come, give me five - just five. Hamza!'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ]
+  ],
+  "captionFix": [
+    {
+      "match": "ONE YOU SHOULD HAVE MADE",
+      "to": null
+    },
+    {
+      "match": "I'M GONNA HAVE TO",
+      "to": null
+    }
+  ]
+}

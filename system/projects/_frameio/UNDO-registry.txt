@@ -1,0 +1,6 @@
+Undo the Frame.io URL-protocol handler (user-level, no admin needed):
+
+  reg delete "HKCU\Software\Classes\adobe+8dbd241ec9a25997c909020b2c2cfbbf8fe89892" /f
+
+This key did NOT exist before 2026-09-20, so deleting it restores the machine
+exactly. Nothing was written to HKLM and no admin rights were used.

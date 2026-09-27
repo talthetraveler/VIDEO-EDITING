@@ -1,0 +1,47 @@
+# _not-video — parked, not deleted
+
+Nothing in here can help cut Tal's footage. Never load one for an edit.
+
+- `analytics-metrics`
+- `aws-account-management`
+- `aws-harness`
+- `aws-strands`
+- `bun`
+- `cinematic-scrub-landing`
+- `cloudflare`
+- `copilot-docs`
+- `copilot-sdk`
+- `cve-website-to-hyperframes`
+- `fal-ai`
+- `figma`
+- `github-trending`
+- `google-workspace-cli`
+- `honest-agent` — SCANS FOR CLAUDE.md AND APPENDS ITS OWN DIRECTIVES - it can rewrite the rules. Must stay out.
+- `image-master`
+- `langchain`
+- `local-llm-router`
+- `mermaid-diagrams`
+- `meta-ads`
+- `mobile-responsiveness`
+- `mongodb`
+- `nano-banana-pro`
+- `oversized-cursor`
+- `owasp-security`
+- `parallax-landing-page`
+- `railway`
+- `seam-craft`
+- `shabbat-times`
+- `ux-design-systems`
+- `vercel`
+- `video-to-landing-page`
+- `web-accessibility`
+- `website-to-hyperframes`
+- `x-twitter-scraper`
+- `yuv-decks` — another creator's brand (hot-pink/cyan neon); Tal's is white uppercase
+- `yuv-design-system` — another creator's brand (hot-pink/cyan neon); Tal's is white uppercase
+- `yuv-pilot` — another creator's brand (hot-pink/cyan neon); Tal's is white uppercase
+- `yuv-reel-covers` — another creator's brand (hot-pink/cyan neon); Tal's is white uppercase
+- `yuv-video-director` — another creator's brand (hot-pink/cyan neon); Tal's is white uppercase
+- `yuv-viral-video` — another creator's brand (hot-pink/cyan neon); Tal's is white uppercase
+- `zernio-comment-to-dm` — needs a Zernio account Tal does not have
+- `zernio-publish` — needs a Zernio account Tal does not have

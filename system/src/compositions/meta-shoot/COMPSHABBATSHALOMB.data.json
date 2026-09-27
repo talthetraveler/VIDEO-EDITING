@@ -1,0 +1,792 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "beats": [
+    {
+      "src": "footage/meta-shoot/video-3497_singular_display.MP4",
+      "startSec": 0.12,
+      "endSec": 8.12
+    },
+    {
+      "src": "footage/meta-shoot/od_video-2429_singular_display.MP4",
+      "startSec": 0.12,
+      "endSec": 5.43
+    },
+    {
+      "src": "footage/meta-shoot/od_video-3378_singular_display.mov",
+      "startSec": 0.06,
+      "endSec": 5.43
+    },
+    {
+      "src": "footage/meta-shoot/video-3569_singular_display.MP4",
+      "startSec": 0.1,
+      "endSec": 6.3
+    },
+    {
+      "src": "footage/meta-shoot/video-3512_singular_display.MP4",
+      "startSec": 0.14,
+      "endSec": 7.6
+    },
+    {
+      "src": "footage/meta-shoot/video-3437_singular_display.MP4",
+      "startSec": 0.12,
+      "endSec": 6.67
+    },
+    {
+      "src": "footage/meta-shoot/od_video-2470_singular_display.MP4",
+      "startSec": 0.15,
+      "endSec": 6.4
+    },
+    {
+      "src": "footage/meta-shoot/od_video-2453_singular_display.MP4",
+      "startSec": 0.12,
+      "endSec": 5.87
+    },
+    {
+      "src": "footage/meta-shoot/video-3452_singular_display.MP4",
+      "startSec": 0.12,
+      "endSec": 7.6
+    },
+    {
+      "src": "footage/meta-shoot/video-2512_singular_display.MP4",
+      "startSec": 0.08,
+      "endSec": 7.03
+    },
+    {
+      "src": "footage/meta-shoot/od_video-4086_singular_display.MP4",
+      "startSec": 0.04,
+      "endSec": 5.47
+    }
+  ],
+  "captions": [
+    {
+      "text": " Shabbat",
+      "startMs": 260,
+      "endMs": 1460,
+      "timestampMs": 860,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 1740,
+      "endMs": 2940,
+      "timestampMs": 2340,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 3690,
+      "endMs": 4890,
+      "timestampMs": 4290,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 5670,
+      "endMs": 6870,
+      "timestampMs": 6270,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 7020,
+      "endMs": 7130,
+      "timestampMs": 7075,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 7130,
+      "endMs": 7220,
+      "timestampMs": 7175,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 7250,
+      "endMs": 7360,
+      "timestampMs": 7305,
+      "confidence": 1
+    },
+    {
+      "text": " Excuse",
+      "startMs": 8260,
+      "endMs": 8380,
+      "timestampMs": 8320,
+      "confidence": 1
+    },
+    {
+      "text": " me",
+      "startMs": 8380,
+      "endMs": 8510,
+      "timestampMs": 8445,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 8640,
+      "endMs": 8700,
+      "timestampMs": 8670,
+      "confidence": 1
+    },
+    {
+      "text": " just",
+      "startMs": 8700,
+      "endMs": 8970,
+      "timestampMs": 8835,
+      "confidence": 1
+    },
+    {
+      "text": " wanted",
+      "startMs": 8970,
+      "endMs": 9350,
+      "timestampMs": 9160,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 9350,
+      "endMs": 9470,
+      "timestampMs": 9410,
+      "confidence": 1
+    },
+    {
+      "text": " tell",
+      "startMs": 9470,
+      "endMs": 9740,
+      "timestampMs": 9605,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 9740,
+      "endMs": 9930,
+      "timestampMs": 9835,
+      "confidence": 1
+    },
+    {
+      "text": " guys",
+      "startMs": 9930,
+      "endMs": 10190,
+      "timestampMs": 10060,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 10190,
+      "endMs": 10640,
+      "timestampMs": 10415,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 10640,
+      "endMs": 11020,
+      "timestampMs": 10830,
+      "confidence": 1
+    },
+    {
+      "text": " Good",
+      "startMs": 11370,
+      "endMs": 11640,
+      "timestampMs": 11505,
+      "confidence": 1
+    },
+    {
+      "text": " luck",
+      "startMs": 11640,
+      "endMs": 11910,
+      "timestampMs": 11775,
+      "confidence": 1
+    },
+    {
+      "text": " sir",
+      "startMs": 12040,
+      "endMs": 12240,
+      "timestampMs": 12140,
+      "confidence": 1
+    },
+    {
+      "text": " Good",
+      "startMs": 12500,
+      "endMs": 12760,
+      "timestampMs": 12630,
+      "confidence": 1
+    },
+    {
+      "text": " luck",
+      "startMs": 12760,
+      "endMs": 13040,
+      "timestampMs": 12900,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 13560,
+      "endMs": 14040,
+      "timestampMs": 13800,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 14040,
+      "endMs": 14620,
+      "timestampMs": 14330,
+      "confidence": 1
+    },
+    {
+      "text": " Brother",
+      "startMs": 14620,
+      "endMs": 15370,
+      "timestampMs": 14995,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 15730,
+      "endMs": 16350,
+      "timestampMs": 16040,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 16350,
+      "endMs": 16660,
+      "timestampMs": 16505,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 16660,
+      "endMs": 17840,
+      "timestampMs": 17250,
+      "confidence": 1
+    },
+    {
+      "text": " day",
+      "startMs": 17840,
+      "endMs": 18360,
+      "timestampMs": 18100,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 18940,
+      "endMs": 19750,
+      "timestampMs": 19345,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 19750,
+      "endMs": 20690,
+      "timestampMs": 20220,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 20990,
+      "endMs": 22040,
+      "timestampMs": 21515,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 22040,
+      "endMs": 22930,
+      "timestampMs": 22485,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 23240,
+      "endMs": 23840,
+      "timestampMs": 23540,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 23840,
+      "endMs": 24140,
+      "timestampMs": 23990,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 24140,
+      "endMs": 24930,
+      "timestampMs": 24535,
+      "confidence": 1
+    },
+    {
+      "text": " Brother",
+      "startMs": 25140,
+      "endMs": 26340,
+      "timestampMs": 25740,
+      "confidence": 1
+    },
+    {
+      "text": " actually",
+      "startMs": 27020,
+      "endMs": 27640,
+      "timestampMs": 27330,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 27790,
+      "endMs": 28290,
+      "timestampMs": 28040,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 28290,
+      "endMs": 28850,
+      "timestampMs": 28570,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 29070,
+      "endMs": 29520,
+      "timestampMs": 29295,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 29520,
+      "endMs": 29850,
+      "timestampMs": 29685,
+      "confidence": 1
+    },
+    {
+      "text": " how",
+      "startMs": 29860,
+      "endMs": 29870,
+      "timestampMs": 29865,
+      "confidence": 1
+    },
+    {
+      "text": " are",
+      "startMs": 29870,
+      "endMs": 29880,
+      "timestampMs": 29875,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 29880,
+      "endMs": 29890,
+      "timestampMs": 29885,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 29900,
+      "endMs": 29930,
+      "timestampMs": 29915,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 29930,
+      "endMs": 29960,
+      "timestampMs": 29945,
+      "confidence": 1
+    },
+    {
+      "text": " Yom",
+      "startMs": 30010,
+      "endMs": 30610,
+      "timestampMs": 30310,
+      "confidence": 1
+    },
+    {
+      "text": " Tov",
+      "startMs": 30610,
+      "endMs": 30850,
+      "timestampMs": 30730,
+      "confidence": 1
+    },
+    {
+      "text": " Yom",
+      "startMs": 31840,
+      "endMs": 32240,
+      "timestampMs": 32040,
+      "confidence": 1
+    },
+    {
+      "text": " Tov",
+      "startMs": 32240,
+      "endMs": 32450,
+      "timestampMs": 32345,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 32600,
+      "endMs": 33400,
+      "timestampMs": 33000,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 33400,
+      "endMs": 34320,
+      "timestampMs": 33860,
+      "confidence": 1
+    },
+    {
+      "text": " Let's",
+      "startMs": 34560,
+      "endMs": 35140,
+      "timestampMs": 34850,
+      "confidence": 1
+    },
+    {
+      "text": " go",
+      "startMs": 35140,
+      "endMs": 35370,
+      "timestampMs": 35255,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 35370,
+      "endMs": 35590,
+      "timestampMs": 35480,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 35590,
+      "endMs": 36330,
+      "timestampMs": 35960,
+      "confidence": 1
+    },
+    {
+      "text": " It's",
+      "startMs": 36330,
+      "endMs": 36820,
+      "timestampMs": 36575,
+      "confidence": 1
+    },
+    {
+      "text": " good",
+      "startMs": 36820,
+      "endMs": 37310,
+      "timestampMs": 37065,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 37310,
+      "endMs": 37580,
+      "timestampMs": 37445,
+      "confidence": 1
+    },
+    {
+      "text": " see",
+      "startMs": 37580,
+      "endMs": 37930,
+      "timestampMs": 37755,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 37930,
+      "endMs": 38320,
+      "timestampMs": 38125,
+      "confidence": 1
+    },
+    {
+      "text": " too",
+      "startMs": 38360,
+      "endMs": 38420,
+      "timestampMs": 38390,
+      "confidence": 1
+    },
+    {
+      "text": " It's",
+      "startMs": 38470,
+      "endMs": 38540,
+      "timestampMs": 38505,
+      "confidence": 1
+    },
+    {
+      "text": " good",
+      "startMs": 38540,
+      "endMs": 38620,
+      "timestampMs": 38580,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 38620,
+      "endMs": 38680,
+      "timestampMs": 38650,
+      "confidence": 1
+    },
+    {
+      "text": " see",
+      "startMs": 38680,
+      "endMs": 38720,
+      "timestampMs": 38700,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 38720,
+      "endMs": 38780,
+      "timestampMs": 38750,
+      "confidence": 1
+    },
+    {
+      "text": " It's",
+      "startMs": 38830,
+      "endMs": 38900,
+      "timestampMs": 38865,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 38900,
+      "endMs": 38970,
+      "timestampMs": 38935,
+      "confidence": 1
+    },
+    {
+      "text": " Excuse",
+      "startMs": 39150,
+      "endMs": 40350,
+      "timestampMs": 39750,
+      "confidence": 1
+    },
+    {
+      "text": " me",
+      "startMs": 43460,
+      "endMs": 44660,
+      "timestampMs": 44060,
+      "confidence": 1
+    },
+    {
+      "text": " excuse",
+      "startMs": 45400,
+      "endMs": 45650,
+      "timestampMs": 45525,
+      "confidence": 1
+    },
+    {
+      "text": " me",
+      "startMs": 45650,
+      "endMs": 45820,
+      "timestampMs": 45735,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 46010,
+      "endMs": 46580,
+      "timestampMs": 46295,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 46580,
+      "endMs": 47130,
+      "timestampMs": 46855,
+      "confidence": 1
+    },
+    {
+      "text": " Hello",
+      "startMs": 47220,
+      "endMs": 47660,
+      "timestampMs": 47440,
+      "confidence": 1
+    },
+    {
+      "text": " Hellolaughter",
+      "startMs": 48060,
+      "endMs": 49260,
+      "timestampMs": 48660,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 51090,
+      "endMs": 51610,
+      "timestampMs": 51350,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 51610,
+      "endMs": 52240,
+      "timestampMs": 51925,
+      "confidence": 1
+    },
+    {
+      "text": " guys",
+      "startMs": 52450,
+      "endMs": 52880,
+      "timestampMs": 52665,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 53160,
+      "endMs": 54110,
+      "timestampMs": 53635,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 54110,
+      "endMs": 54870,
+      "timestampMs": 54490,
+      "confidence": 1
+    },
+    {
+      "text": " No",
+      "startMs": 55370,
+      "endMs": 55700,
+      "timestampMs": 55535,
+      "confidence": 1
+    },
+    {
+      "text": " worries",
+      "startMs": 55700,
+      "endMs": 56880,
+      "timestampMs": 56290,
+      "confidence": 1
+    },
+    {
+      "text": " the",
+      "startMs": 56880,
+      "endMs": 57000,
+      "timestampMs": 56940,
+      "confidence": 1
+    },
+    {
+      "text": " camera",
+      "startMs": 57000,
+      "endMs": 58200,
+      "timestampMs": 57600,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 58630,
+      "endMs": 59490,
+      "timestampMs": 59060,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 59490,
+      "endMs": 60420,
+      "timestampMs": 59955,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 60730,
+      "endMs": 61820,
+      "timestampMs": 61275,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 61820,
+      "endMs": 62750,
+      "timestampMs": 62285,
+      "confidence": 1
+    },
+    {
+      "text": " You",
+      "startMs": 63060,
+      "endMs": 63570,
+      "timestampMs": 63315,
+      "confidence": 1
+    },
+    {
+      "text": " need",
+      "startMs": 63570,
+      "endMs": 64100,
+      "timestampMs": 63835,
+      "confidence": 1
+    },
+    {
+      "text": " help",
+      "startMs": 64100,
+      "endMs": 64830,
+      "timestampMs": 64465,
+      "confidence": 1
+    },
+    {
+      "text": " Hi",
+      "startMs": 65580,
+      "endMs": 65620,
+      "timestampMs": 65600,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 65770,
+      "endMs": 66540,
+      "timestampMs": 66155,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 66550,
+      "endMs": 67210,
+      "timestampMs": 66880,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 67210,
+      "endMs": 67780,
+      "timestampMs": 67495,
+      "confidence": 1
+    },
+    {
+      "text": " How",
+      "startMs": 67970,
+      "endMs": 68260,
+      "timestampMs": 68115,
+      "confidence": 1
+    },
+    {
+      "text": " are",
+      "startMs": 68260,
+      "endMs": 68550,
+      "timestampMs": 68405,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 68550,
+      "endMs": 68930,
+      "timestampMs": 68740,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 69030,
+      "endMs": 69700,
+      "timestampMs": 69365,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 69700,
+      "endMs": 70370,
+      "timestampMs": 70035,
+      "confidence": 1
+    }
+  ]
+}

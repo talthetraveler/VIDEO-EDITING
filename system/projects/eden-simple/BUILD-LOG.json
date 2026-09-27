@@ -1,0 +1,333 @@
+{
+  "built": "2026-09-23T23:03:15.729Z",
+  "total_s": 72.03,
+  "out": "EDEN_SIMPLE_V8.mp4",
+  "layout": "vertical",
+  "title": "POV: I SAT WITH A WOMAN IN ISRAEL\nFIGHTING CANCER WHO WON’T GIVE UP",
+  "beats": [
+    [
+      "af001998-8ac2-4caf-9dab-fd22d07f5bec",
+      2.4,
+      4.95,
+      0.5,
+      "OPEN: 'Hi, Eden.'",
+      null,
+      {
+        "z": [
+          1,
+          1.08
+        ]
+      }
+    ],
+    [
+      "af001998-8ac2-4caf-9dab-fd22d07f5bec",
+      7.4,
+      15.5,
+      0.5,
+      "'I heard about your story - that you have cancer - and I wanted to come and talk to you about it.'",
+      null,
+      {
+        "z": [
+          1.02,
+          1.12
+        ]
+      }
+    ],
+    [
+      "11daa6c3-3ea6-462e-a814-38184327e7e2",
+      14,
+      28.5,
+      0.5,
+      "'I'm Eden, 30, fighting leukemia for a year. I lost my mother a year ago.' - while she was sick herself",
+      0,
+      {
+        "z": [
+          1,
+          1.28
+        ],
+        "x": 0.74,
+        "y": 0.5
+      }
+    ],
+    [
+      "11daa6c3-3ea6-462e-a814-38184327e7e2",
+      34,
+      42.8,
+      0.5,
+      "'She passed away from cancer.' / 'How long?' / '17 years.'",
+      0,
+      {
+        "z": [
+          1.16,
+          1.4
+        ],
+        "x": 0.76,
+        "y": 0.5
+      }
+    ],
+    [
+      "11daa6c3-3ea6-462e-a814-38184327e7e2",
+      73.8,
+      83.4,
+      0.5,
+      "THE TURN: 'Because I need to be strong - for everyone, for myself, for my family.'",
+      0,
+      {
+        "z": [
+          1.2,
+          1.44
+        ],
+        "x": 0.76,
+        "y": 0.5
+      }
+    ],
+    [
+      "11daa6c3-3ea6-462e-a814-38184327e7e2",
+      83.4,
+      89.4,
+      0.5,
+      "'And what is your dream?' 'To be a healthy girl. To take care of myself.'",
+      0,
+      {
+        "z": [
+          1.28,
+          1.48
+        ],
+        "x": 0.76,
+        "y": 0.5
+      }
+    ],
+    [
+      "11daa6c3-3ea6-462e-a814-38184327e7e2",
+      206.5,
+      227.7,
+      0.5,
+      "HER MESSAGE: 'you can't give up when it's hard. You can shake, be a little sad - but don't lie down. Lift your head up.'",
+      0,
+      {
+        "z": [
+          1.2,
+          1.46
+        ],
+        "x": 0.76,
+        "y": 0.5
+      }
+    ],
+    [
+      "c93c918c-ae77-41ee-83e4-04405249f5d6",
+      17.5,
+      33.3,
+      0.5,
+      "CLOSE: 'I want you to make Eden's dream come true. Two things - pray for her, and come visit her.'",
+      0,
+      {
+        "z": [
+          1,
+          1.08
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "text": "GREAT"
+    },
+    {
+      "beat": "01",
+      "at": 0.8,
+      "text": "HI, EDEN"
+    },
+    {
+      "beat": "01",
+      "at": 1.6,
+      "text": "WHAT'S THE SITUATION"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "text": "THAT YOU HAVE CANCER"
+    },
+    {
+      "beat": "02",
+      "at": 1.42,
+      "text": "AND I WANTED TO COME AND"
+    },
+    {
+      "beat": "03",
+      "at": 0.58,
+      "text": "OF COURSE"
+    },
+    {
+      "beat": "03",
+      "at": 1.38,
+      "text": "SO I AM EDEN"
+    },
+    {
+      "beat": "03",
+      "at": 2.38,
+      "text": "I AM 30 YEARS"
+    },
+    {
+      "beat": "03",
+      "at": 3.74,
+      "text": "OLD AND I HAVE BEEN FIGHTING"
+    },
+    {
+      "beat": "03",
+      "at": 5.26,
+      "text": "LEUKEMIA FOR A YEAR"
+    },
+    {
+      "beat": "03",
+      "at": 6.26,
+      "text": "I LOST MY MOTHER"
+    },
+    {
+      "beat": "03",
+      "at": 7.26,
+      "text": "A YEAR AGO"
+    },
+    {
+      "beat": "03",
+      "at": 9.31,
+      "text": "WHAT"
+    },
+    {
+      "beat": "03",
+      "at": 10.11,
+      "text": "YOU LOST YOUR MOTHER"
+    },
+    {
+      "beat": "03",
+      "at": 11.11,
+      "text": "A YEAR AGO"
+    },
+    {
+      "beat": "03",
+      "at": 11.91,
+      "text": "YES, WHILE I WAS SICK MYSELF"
+    },
+    {
+      "beat": "04",
+      "at": 0,
+      "text": "DID SHE PASS AWAY"
+    },
+    {
+      "beat": "04",
+      "at": 1.04,
+      "text": "SHE PASSED AWAY FROM CANCER"
+    },
+    {
+      "beat": "04",
+      "at": 5.62,
+      "text": "YES"
+    },
+    {
+      "beat": "04",
+      "at": 7.08,
+      "text": "HOW LONG DID SHE HAVE CANCER"
+    },
+    {
+      "beat": "04",
+      "at": 8.58,
+      "text": "17 YEARS"
+    },
+    {
+      "beat": "05",
+      "at": 0.36,
+      "text": "WHY NOT"
+    },
+    {
+      "beat": "05",
+      "at": 1.16,
+      "text": "BECAUSE I NEED TO BE STRONG"
+    },
+    {
+      "beat": "05",
+      "at": 4.38,
+      "text": "FOR EVERYONE AND FOR MYSELF"
+    },
+    {
+      "beat": "05",
+      "at": 7.22,
+      "text": "AND FOR MY FAMILY"
+    },
+    {
+      "beat": "06",
+      "at": 0,
+      "text": "WHAT IS YOUR DREAM"
+    },
+    {
+      "beat": "06",
+      "at": 2.36,
+      "text": "I WANT TO BE A HEALTHY"
+    },
+    {
+      "beat": "06",
+      "at": 3.86,
+      "text": "GIRL AND TO BE ABLE"
+    },
+    {
+      "beat": "06",
+      "at": 5.11,
+      "text": "TO TAKE CARE OF MYSELF"
+    },
+    {
+      "beat": "07",
+      "at": 0.23,
+      "text": "THAT YOU CAN'T GIVE"
+    },
+    {
+      "beat": "07",
+      "at": 2.73,
+      "text": "UP WHEN IT'S HARD"
+    },
+    {
+      "beat": "07",
+      "at": 5.23,
+      "text": "YOU CAN DO THIS"
+    },
+    {
+      "beat": "07",
+      "at": 9.23,
+      "text": "YOU CAN SHAKE, BE A LITTLE SAD"
+    },
+    {
+      "beat": "07",
+      "at": 14.23,
+      "text": "BUT DON'T PUT"
+    },
+    {
+      "beat": "08",
+      "at": 0.12,
+      "text": "AND I'M MAKING THIS VIDEO"
+    },
+    {
+      "beat": "08",
+      "at": 1.87,
+      "text": "BECAUSE I WANT YOU TO MAKE"
+    },
+    {
+      "beat": "08",
+      "at": 3.98,
+      "text": "EDEN'S DREAM COME TRUE"
+    },
+    {
+      "beat": "08",
+      "at": 6.18,
+      "text": "THERE'S TWO THINGS SHE WANTS"
+    },
+    {
+      "beat": "08",
+      "at": 7.43,
+      "text": "FROM YOU GUYS"
+    },
+    {
+      "beat": "08",
+      "at": 8.88,
+      "text": "ONE IS FOR YOU GUYS TO"
+    }
+  ]
+}

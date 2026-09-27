@@ -1,0 +1,20 @@
+{
+  "_comment": "Filled in BY CLAUDE after rendering stills and actually looking at them (see .claude/agents/quality-control.md and the QUALITY CHECK section of references/pipeline.md). Never mark a check true without having inspected a frame for it.",
+  "clip_id": "he_gave_me_his_motorcycle",
+  "stills_inspected": ["output/check_frame0.png", "output/check_frame450.png", "output/check_frame_last.png"],
+  "checks": {
+    "standalone_without_source": true,
+    "strong_first_2s": true,
+    "no_unnecessary_setup": true,
+    "strongest_line_not_buried": true,
+    "satisfying_ending": true,
+    "captions_accurate": true,
+    "vertical_framing_correct": true,
+    "speech_understandable": true,
+    "nothing_misleading": true,
+    "could_trim_1_3s_more": false
+  },
+  "defects": [],
+  "verdict": "pass",
+  "checked_at": "2026-09-05T00:00:00.000Z"
+}

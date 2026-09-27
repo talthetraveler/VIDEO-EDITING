@@ -1,0 +1,5 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-daughter-cut/beats_1981880/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-daughter-cut/beats_1981880/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-daughter-cut/beats_1981880/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-daughter-cut/beats_1981880/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-daughter-cut/beats_1981880/05.mp4'

@@ -1,0 +1,104 @@
+{
+  "layout": "vertical",
+  "title": "POV: I GAVE COLD WATER TO PEOPLE WORKING\nIN THE HEAT IN ISRAEL",
+  "titleHold": 4,
+  "out": "GIVING_WATER_ALT_V4.mp4",
+  "beats": [
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      6,
+      19.6,
+      0.5,
+      "[picture +6s, audio unchanged] HOOK: 'I got you guys water.' 'Thank you so much.' 'Where are you from?' 'Sri Lanka?' 'I l",
+      null,
+      {
+        "z": [
+          1,
+          1.16
+        ],
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 0
+        }
+      }
+    ],
+    [
+      "91c9bf59-60fb-491a-adc4-40cae2b0a0e8",
+      0,
+      4.6,
+      0.5,
+      "'Hi, shalom. Would you like some water?'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "54dffb0d-afd0-42ec-9bd1-615e2fdf9cbf",
+      0,
+      10.4,
+      0.5,
+      "'Would you like some water?' 'Omar.' 'Toda raba, Omar.'",
+      null,
+      {
+        "z": [
+          1.02,
+          1.16
+        ]
+      }
+    ],
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      17.4,
+      26.6,
+      0.5,
+      "'Thank you guys for all your hard work. We love you. Israel - you're home.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.22
+        ]
+      }
+    ],
+    [
+      "03901fb3-29c7-4dcc-8f14-07987e2afa6a",
+      7,
+      20.5,
+      0.5,
+      "[picture -2s, audio unchanged] ENDING: 'I'm Armenian - I went to Los Angeles when I was young, and now I live here.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.24
+        ],
+        "audio": {
+          "id": "03901fb3-29c7-4dcc-8f14-07987e2afa6a",
+          "at": 9
+        }
+      }
+    ]
+  ],
+  "captionFix": [
+    {
+      "match": "KREMLIN",
+      "to": null
+    },
+    {
+      "match": "NO, ARAM",
+      "to": null
+    },
+    {
+      "match": "I AM ARMENIAN, VERY FROM",
+      "to": null
+    },
+    {
+      "match": "VERY FROM... LA",
+      "to": null
+    }
+  ]
+}

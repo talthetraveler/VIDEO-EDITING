@@ -1,0 +1,236 @@
+{
+  "built": "2026-09-24T00:31:01.623Z",
+  "total_s": 47.28,
+  "out": "WHAT_MAKES_YOU_HAPPY_FAST_V6.mp4",
+  "layout": "vertical",
+  "title": "POV: I ASKED PEOPLE IN ISRAEL\nWHAT MAKES THEM HAPPY",
+  "beats": [
+    [
+      "1ac947e9-e7f1-498c-a97b-e75ee6559759",
+      8,
+      11.6,
+      0.5,
+      "HOOK - Yoav, straight to it: 'What makes you happy?' 'Football.'"
+    ],
+    [
+      "497b99b0-dd7b-40c6-a079-9a0ae544bbac",
+      1.4,
+      5.6,
+      0.5,
+      "'Mango. I love mango.'"
+    ],
+    [
+      "1212f34c-b13c-4bec-88b7-150c31dbaa56",
+      5.6,
+      8.1,
+      0.5,
+      "'To be here in Israel.'"
+    ],
+    [
+      "e7b3722f-26f3-4eef-8bbc-3b35bc9e8d8e",
+      3.2,
+      5.2,
+      0.5,
+      "'Love, baby.'"
+    ],
+    [
+      "1244b4e9-cbc5-4ef7-8abd-ca7604baf3cd",
+      3.5,
+      6.2,
+      0.5,
+      "'Oh, being here. Life.'"
+    ],
+    [
+      "ccc2c841-9d7b-425f-bdd8-230aca7a4c3a",
+      2.6,
+      7.4,
+      0.5,
+      "'Dogs.'"
+    ],
+    [
+      "c1c2a290-08ff-4d11-a47c-bc238fcc75ec",
+      3.4,
+      6.5,
+      0.5,
+      "'Life.'"
+    ],
+    [
+      "7d4aa365-362c-4c7d-8074-e774a98f9a3d",
+      2.5,
+      5,
+      0.5,
+      "'Everything. Being here in Tel Aviv.'"
+    ],
+    [
+      "b01d2676-fc73-41bb-acfb-712e475da7e3",
+      10.3,
+      15.7,
+      0.5,
+      "'So many things - but right now, just being able to go to the Kotel.'"
+    ],
+    [
+      "ab438368-b1c8-4d7f-86b8-d1b97b4c9530",
+      13.9,
+      26.3,
+      0.5,
+      "ENDING: 'We had fun on the dance floor and this is how it ended up.' ... 'It's fine. I'm so happy.'"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "text": "AND WHAT MAKES YOU HAPPY"
+    },
+    {
+      "beat": "01",
+      "at": 1.67,
+      "text": "FOOTBALL"
+    },
+    {
+      "beat": "01",
+      "at": 3,
+      "text": "YEAH"
+    },
+    {
+      "beat": "02",
+      "at": 0.22,
+      "text": "WHAT MAKES YOU HAPPY"
+    },
+    {
+      "beat": "02",
+      "at": 2.39,
+      "text": "MANGO"
+    },
+    {
+      "beat": "02",
+      "at": 3.52,
+      "text": "I LOVE MANGO"
+    },
+    {
+      "beat": "03",
+      "at": 0,
+      "text": "ME HAPPY"
+    },
+    {
+      "beat": "03",
+      "at": 0.8,
+      "text": "WHAT MAKES YOU HAPPY"
+    },
+    {
+      "beat": "03",
+      "at": 1.84,
+      "text": "TO BE HERE IN ISRAEL"
+    },
+    {
+      "beat": "04",
+      "at": 0.12,
+      "text": "WHAT MAKES YOU HAPPY"
+    },
+    {
+      "beat": "04",
+      "at": 1.12,
+      "text": "LOVE, BABY"
+    },
+    {
+      "beat": "05",
+      "at": 1.59,
+      "text": "OH, BEING HERE, LIFE"
+    },
+    {
+      "beat": "06",
+      "at": 0.44,
+      "text": "DOGS AND CUBS"
+    },
+    {
+      "beat": "07",
+      "at": 0.98,
+      "text": "WHAT? LIFE"
+    },
+    {
+      "beat": "08",
+      "at": 1,
+      "text": "EVERYTHING"
+    },
+    {
+      "beat": "08",
+      "at": 1.8,
+      "text": "BE HERE IN TEL AVIV"
+    },
+    {
+      "beat": "09",
+      "at": 0.91,
+      "text": "AND WHAT MAKES YOU HAPPY"
+    },
+    {
+      "beat": "09",
+      "at": 2.16,
+      "text": "SO MANY THINGS, BUT RIGHT NOW"
+    },
+    {
+      "beat": "09",
+      "at": 3.88,
+      "text": "JUST BEING ABLE TO GO"
+    },
+    {
+      "beat": "09",
+      "at": 5.13,
+      "text": "TO THE KOTAL"
+    },
+    {
+      "beat": "10",
+      "at": 0.98,
+      "text": "WELL, WE HAD FUN"
+    },
+    {
+      "beat": "10",
+      "at": 1.98,
+      "text": "AT THE DANCE FLOOR"
+    },
+    {
+      "beat": "10",
+      "at": 2.98,
+      "text": "AND THIS IS HOW IT ENDED"
+    },
+    {
+      "beat": "10",
+      "at": 4.54,
+      "text": "UP. YEAH"
+    },
+    {
+      "beat": "10",
+      "at": 5.34,
+      "text": "ARE YOU SERIOUS? YEAH"
+    },
+    {
+      "beat": "10",
+      "at": 7.46,
+      "text": "NO WAY"
+    },
+    {
+      "beat": "10",
+      "at": 8.26,
+      "text": "WELL, CONGRATULATIONS"
+    },
+    {
+      "beat": "10",
+      "at": 9.06,
+      "text": "ON GETTING MARRIED"
+    },
+    {
+      "beat": "10",
+      "at": 9.86,
+      "text": "SORRY ABOUT"
+    },
+    {
+      "beat": "10",
+      "at": 10.66,
+      "text": "IT'S FINE"
+    },
+    {
+      "beat": "10",
+      "at": 12.26,
+      "text": "I'M SO HAPPY"
+    }
+  ]
+}

@@ -1,0 +1,557 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "beats": [
+    {
+      "src": "footage/meta-shoot/od_video-3378_singular_display.mov",
+      "startSec": 0.06,
+      "endSec": 5.43
+    },
+    {
+      "src": "footage/meta-shoot/video-3497_singular_display.MP4",
+      "startSec": 0.12,
+      "endSec": 8.12
+    },
+    {
+      "src": "footage/meta-shoot/video-2338_singular_display.MP4",
+      "startSec": 0.08,
+      "endSec": 10.6
+    },
+    {
+      "src": "footage/meta-shoot/video-2165_singular_display.MP4",
+      "startSec": 0.12,
+      "endSec": 4.99
+    },
+    {
+      "src": "footage/meta-shoot/od_video-2490_singular_display.MP4",
+      "startSec": 0,
+      "endSec": 5.82
+    },
+    {
+      "src": "footage/meta-shoot/video-2512_singular_display.MP4",
+      "startSec": 0.08,
+      "endSec": 7.03
+    }
+  ],
+  "captions": [
+    {
+      "text": " Shabbat",
+      "startMs": 250,
+      "endMs": 730,
+      "timestampMs": 490,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 730,
+      "endMs": 1310,
+      "timestampMs": 1020,
+      "confidence": 1
+    },
+    {
+      "text": " Brother",
+      "startMs": 1310,
+      "endMs": 2060,
+      "timestampMs": 1685,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 2420,
+      "endMs": 3040,
+      "timestampMs": 2730,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 3040,
+      "endMs": 3350,
+      "timestampMs": 3195,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 3350,
+      "endMs": 4530,
+      "timestampMs": 3940,
+      "confidence": 1
+    },
+    {
+      "text": " day",
+      "startMs": 4530,
+      "endMs": 5050,
+      "timestampMs": 4790,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 5630,
+      "endMs": 6830,
+      "timestampMs": 6230,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 7110,
+      "endMs": 8310,
+      "timestampMs": 7710,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 9060,
+      "endMs": 10260,
+      "timestampMs": 9660,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 11040,
+      "endMs": 12240,
+      "timestampMs": 11640,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 12390,
+      "endMs": 12500,
+      "timestampMs": 12445,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 12500,
+      "endMs": 12590,
+      "timestampMs": 12545,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 12620,
+      "endMs": 12730,
+      "timestampMs": 12675,
+      "confidence": 1
+    },
+    {
+      "text": " Thank",
+      "startMs": 13630,
+      "endMs": 14640,
+      "timestampMs": 14135,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 14640,
+      "endMs": 15400,
+      "timestampMs": 15020,
+      "confidence": 1
+    },
+    {
+      "text": " Brother",
+      "startMs": 15550,
+      "endMs": 16100,
+      "timestampMs": 15825,
+      "confidence": 1
+    },
+    {
+      "text": " Can",
+      "startMs": 16330,
+      "endMs": 16570,
+      "timestampMs": 16450,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 16570,
+      "endMs": 16650,
+      "timestampMs": 16610,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 16650,
+      "endMs": 16960,
+      "timestampMs": 16805,
+      "confidence": 1
+    },
+    {
+      "text": " one",
+      "startMs": 16960,
+      "endMs": 17200,
+      "timestampMs": 17080,
+      "confidence": 1
+    },
+    {
+      "text": " rose",
+      "startMs": 17200,
+      "endMs": 17510,
+      "timestampMs": 17355,
+      "confidence": 1
+    },
+    {
+      "text": " so",
+      "startMs": 17510,
+      "endMs": 17670,
+      "timestampMs": 17590,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 17670,
+      "endMs": 17760,
+      "timestampMs": 17715,
+      "confidence": 1
+    },
+    {
+      "text": " can",
+      "startMs": 17760,
+      "endMs": 17990,
+      "timestampMs": 17875,
+      "confidence": 1
+    },
+    {
+      "text": " give",
+      "startMs": 17990,
+      "endMs": 18300,
+      "timestampMs": 18145,
+      "confidence": 1
+    },
+    {
+      "text": " it",
+      "startMs": 18300,
+      "endMs": 18460,
+      "timestampMs": 18380,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 18460,
+      "endMs": 18620,
+      "timestampMs": 18540,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 18620,
+      "endMs": 18700,
+      "timestampMs": 18660,
+      "confidence": 1
+    },
+    {
+      "text": " stranger",
+      "startMs": 18700,
+      "endMs": 19400,
+      "timestampMs": 19050,
+      "confidence": 1
+    },
+    {
+      "text": " and",
+      "startMs": 19400,
+      "endMs": 19440,
+      "timestampMs": 19420,
+      "confidence": 1
+    },
+    {
+      "text": " tell",
+      "startMs": 19440,
+      "endMs": 19600,
+      "timestampMs": 19520,
+      "confidence": 1
+    },
+    {
+      "text": " them",
+      "startMs": 19600,
+      "endMs": 20390,
+      "timestampMs": 19995,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 20390,
+      "endMs": 20440,
+      "timestampMs": 20415,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 20440,
+      "endMs": 20520,
+      "timestampMs": 20480,
+      "confidence": 1
+    },
+    {
+      "text": " No",
+      "startMs": 20750,
+      "endMs": 20900,
+      "timestampMs": 20825,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 21050,
+      "endMs": 21120,
+      "timestampMs": 21085,
+      "confidence": 1
+    },
+    {
+      "text": " need",
+      "startMs": 21120,
+      "endMs": 21410,
+      "timestampMs": 21265,
+      "confidence": 1
+    },
+    {
+      "text": " it",
+      "startMs": 21410,
+      "endMs": 21580,
+      "timestampMs": 21495,
+      "confidence": 1
+    },
+    {
+      "text": " But",
+      "startMs": 21900,
+      "endMs": 22040,
+      "timestampMs": 21970,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 22040,
+      "endMs": 22110,
+      "timestampMs": 22075,
+      "confidence": 1
+    },
+    {
+      "text": " can",
+      "startMs": 22110,
+      "endMs": 22400,
+      "timestampMs": 22255,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 22400,
+      "endMs": 22540,
+      "timestampMs": 22470,
+      "confidence": 1
+    },
+    {
+      "text": " one",
+      "startMs": 22540,
+      "endMs": 22610,
+      "timestampMs": 22575,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 22610,
+      "endMs": 22670,
+      "timestampMs": 22640,
+      "confidence": 1
+    },
+    {
+      "text": " give",
+      "startMs": 22670,
+      "endMs": 22800,
+      "timestampMs": 22735,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 22800,
+      "endMs": 22900,
+      "timestampMs": 22850,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 22900,
+      "endMs": 22990,
+      "timestampMs": 22945,
+      "confidence": 1
+    },
+    {
+      "text": " stranger",
+      "startMs": 22990,
+      "endMs": 23400,
+      "timestampMs": 23195,
+      "confidence": 1
+    },
+    {
+      "text": " Peace",
+      "startMs": 24150,
+      "endMs": 24190,
+      "timestampMs": 24170,
+      "confidence": 1
+    },
+    {
+      "text": " be",
+      "startMs": 24190,
+      "endMs": 24310,
+      "timestampMs": 24250,
+      "confidence": 1
+    },
+    {
+      "text": " upon",
+      "startMs": 24310,
+      "endMs": 24560,
+      "timestampMs": 24435,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 24560,
+      "endMs": 24740,
+      "timestampMs": 24650,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 24860,
+      "endMs": 25280,
+      "timestampMs": 25070,
+      "confidence": 1
+    },
+    {
+      "text": " Shalombirds",
+      "startMs": 25280,
+      "endMs": 26480,
+      "timestampMs": 25880,
+      "confidence": 1
+    },
+    {
+      "text": " chirping",
+      "startMs": 26900,
+      "endMs": 28100,
+      "timestampMs": 27500,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 28870,
+      "endMs": 29120,
+      "timestampMs": 28995,
+      "confidence": 1
+    },
+    {
+      "text": " just",
+      "startMs": 29120,
+      "endMs": 29390,
+      "timestampMs": 29255,
+      "confidence": 1
+    },
+    {
+      "text": " wanted",
+      "startMs": 29390,
+      "endMs": 30020,
+      "timestampMs": 29705,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 30020,
+      "endMs": 30230,
+      "timestampMs": 30125,
+      "confidence": 1
+    },
+    {
+      "text": " say",
+      "startMs": 30230,
+      "endMs": 30550,
+      "timestampMs": 30390,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 30550,
+      "endMs": 31270,
+      "timestampMs": 30910,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 31270,
+      "endMs": 31900,
+      "timestampMs": 31585,
+      "confidence": 1
+    },
+    {
+      "text": " Have",
+      "startMs": 32110,
+      "endMs": 32520,
+      "timestampMs": 32315,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 32520,
+      "endMs": 32730,
+      "timestampMs": 32625,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 32730,
+      "endMs": 33470,
+      "timestampMs": 33100,
+      "confidence": 1
+    },
+    {
+      "text": " day",
+      "startMs": 33470,
+      "endMs": 34090,
+      "timestampMs": 33780,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 34840,
+      "endMs": 35700,
+      "timestampMs": 35270,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 35700,
+      "endMs": 36630,
+      "timestampMs": 36165,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 36940,
+      "endMs": 38030,
+      "timestampMs": 37485,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 38030,
+      "endMs": 38960,
+      "timestampMs": 38495,
+      "confidence": 1
+    },
+    {
+      "text": " You",
+      "startMs": 39270,
+      "endMs": 39780,
+      "timestampMs": 39525,
+      "confidence": 1
+    },
+    {
+      "text": " need",
+      "startMs": 39780,
+      "endMs": 40310,
+      "timestampMs": 40045,
+      "confidence": 1
+    },
+    {
+      "text": " help",
+      "startMs": 40310,
+      "endMs": 41040,
+      "timestampMs": 40675,
+      "confidence": 1
+    }
+  ]
+}

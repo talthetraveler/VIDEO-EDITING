@@ -1,0 +1,64 @@
+{
+  "built": "2026-09-23T22:27:32.193Z",
+  "total_s": 16.4,
+  "out": "CALL_NO_ONE_V3.mp4",
+  "layout": "vertical",
+  "title": "CALL SOMEONE YOU LOVE\nDAMASCUS GATE, JERUSALEM",
+  "beats": [
+    [
+      "local-35ca932c338797e6",
+      0,
+      6.2,
+      0.5,
+      "'There's no one to talk to.' 'What's wrong?'",
+      null,
+      null
+    ],
+    [
+      "local-35ca932c338797e6",
+      9.6,
+      16.4,
+      0.5,
+      "'You have to tell your mother, your father, your sister...' 'No - they're all my brothers.'",
+      null,
+      null
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.03,
+      "text": "THERE'S NO ONE TO TALK TO"
+    },
+    {
+      "beat": "01",
+      "at": 2,
+      "text": "WHAT'S WRONG"
+    },
+    {
+      "beat": "01",
+      "at": 4,
+      "text": "I MEAN"
+    },
+    {
+      "beat": "01",
+      "at": 6,
+      "text": "IF THERE'S SOMEONE"
+    },
+    {
+      "beat": "02",
+      "at": 2.72,
+      "text": "YOU HAVE TO TELL"
+    },
+    {
+      "beat": "02",
+      "at": 4.54,
+      "text": "YOUR MOTHER, FATHER, SISTER"
+    },
+    {
+      "beat": "02",
+      "at": 6.06,
+      "text": "NO, THEY'RE ALL MY BROTHERS"
+    }
+  ]
+}

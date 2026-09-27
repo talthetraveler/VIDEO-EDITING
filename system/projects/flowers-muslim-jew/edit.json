@@ -1,0 +1,64 @@
+{
+  "layout": "vertical",
+  "title": "POV: A MUSLIM AND A JEW MEET ON THE STREET\nIN ISRAEL",
+  "titleHold": 4,
+  "out": "FLOWERS_MUSLIM_JEW_V3.mp4",
+  "beats": [
+    [
+      "46a6fe2b-200d-4b6c-ad8a-c48263410482",
+      0,
+      8,
+      0.5,
+      "'Salamu Alaikum. This is for you.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "46a6fe2b-200d-4b6c-ad8a-c48263410482",
+      21.4,
+      27,
+      0.5,
+      "'You are Muslim?' 'I'm Muslim.' 'I'm Jewish.' 'Yahudi.' 'I love you.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.26
+        ]
+      }
+    ],
+    [
+      "46a6fe2b-200d-4b6c-ad8a-c48263410482",
+      33,
+      39.6,
+      0.5,
+      "THE LINE: 'We are all human beings. My brother.'",
+      null,
+      {
+        "z": [
+          1.14,
+          1.32
+        ]
+      }
+    ],
+    [
+      "2f6772b0-a8b4-41ea-b819-de40f18d8044",
+      0,
+      11.9,
+      0.5,
+      "and again, to the next stranger: 'Salaamu Alaikum - I wanted to give you this as a gift, for free.'",
+      null,
+      {
+        "z": [
+          1,
+          1.16
+        ]
+      }
+    ]
+  ]
+}

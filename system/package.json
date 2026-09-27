@@ -1,0 +1,71 @@
+{
+  "name": "video-studio",
+  "version": "1.0.0",
+  "description": "Tal's AI video-editing system — fast-paced social videos built in Remotion",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@huggingface/transformers": "^3.8.1",
+    "@remotion/captions": "4.0.520",
+    "@remotion/cli": "4.0.520",
+    "@remotion/google-fonts": "4.0.520",
+    "@remotion/install-whisper-cpp": "4.0.520",
+    "@remotion/layout-utils": "4.0.520",
+    "@remotion/media": "4.0.520",
+    "@remotion/paths": "4.0.520",
+    "@remotion/player": "^4.0.520",
+    "@remotion/shapes": "4.0.520",
+    "@remotion/tailwind-v4": "4.0.520",
+    "@remotion/transitions": "4.0.520",
+    "@remotion/zod-types": "4.0.520",
+    "frameio": "^4.2.6",
+    "groq-sdk": "^1.6.0",
+    "mediabunny": "^1.55.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.520",
+    "tailwindcss": "4.0.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.520",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "^19.2.7",
+    "@types/web": "0.0.166",
+    "esbuild": "^0.28.2",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "studio": "remotion studio --no-open",
+    "build": "remotion bundle",
+    "render": "remotion render",
+    "upgrade": "remotion upgrade",
+    "new": "node scripts/new-video.mjs",
+    "tighten": "node scripts/tighten.mjs",
+    "index": "node scripts/index-footage.mjs",
+    "group": "node scripts/group-interactions.mjs",
+    "moments": "node scripts/extract-moments.mjs",
+    "summary": "node scripts/library-summary.mjs",
+    "search": "node scripts/search.mjs",
+    "reel": "node scripts/build-reel.mjs",
+    "longform:index": "node scripts/longform-index.mjs",
+    "longform:build": "node scripts/longform-build.mjs",
+    "generate": "node --strip-types scripts/generate.ts",
+    "voiceover": "node --strip-types scripts/generate-voiceover.ts",
+    "lint": "eslint src && tsc"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "allowScripts": {
+    "onnxruntime-node@1.21.0": true,
+    "sharp@0.34.5": true,
+    "esbuild@0.28.1": true,
+    "protobufjs@7.6.6": true
+  }
+}

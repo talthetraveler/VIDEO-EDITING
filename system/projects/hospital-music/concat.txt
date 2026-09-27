@@ -1,0 +1,5 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-music/beats_6286826/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-music/beats_6286826/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-music/beats_6286826/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-music/beats_6286826/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-music/beats_6286826/05.mp4'

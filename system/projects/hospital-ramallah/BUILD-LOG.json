@@ -1,0 +1,306 @@
+{
+  "built": "2026-09-23T23:54:26.656Z",
+  "total_s": 59.26,
+  "out": "HOSPITAL_RAMALLAH_V4.mp4",
+  "layout": "vertical",
+  "title": "POV: I BROUGHT TOYS TO SICK KIDS IN ISRAEL\nAND MET A FAMILY FROM RAMALLAH",
+  "beats": [
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      0,
+      13.2,
+      0.5,
+      "'We heard your baby is not feeling well, so we wanted to give you a gift.' 'This is for you. Assalamualaikum.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      14.2,
+      23,
+      0.5,
+      "'What's your daughter's name? How long has she been sick?' 'Just today.' 'I hope she feels better.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.2
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      35.8,
+      45,
+      0.5,
+      "'Where are you guys from?' 'I'm from Palestine.' 'You're from Ramallah?' 'Amazing.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.22
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      46.9,
+      63.4,
+      0.5,
+      "'You came here for healthcare?' 'Yes.' 'You can come from the West Bank into Israel to get healthcare?' 'Yes - first time.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.26
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      63.4,
+      74.4,
+      0.5,
+      "THE ENDING: 'At the end of the day we're all human beings. We all deserve health. I'm Jewish and you're Muslim - we're brothers.'",
+      null,
+      {
+        "z": [
+          1.14,
+          1.32
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.52,
+      "text": "ALL RIGHT, SO WE HEARD"
+    },
+    {
+      "beat": "01",
+      "at": 1.77,
+      "text": "YOUR BABY IS NOT FEELING"
+    },
+    {
+      "beat": "01",
+      "at": 3.02,
+      "text": "WELL, SO WE WANTED"
+    },
+    {
+      "beat": "01",
+      "at": 4.02,
+      "text": "TO GIVE YOU A GIFT"
+    },
+    {
+      "beat": "01",
+      "at": 5.27,
+      "text": "TO MAKE YOU FEEL"
+    },
+    {
+      "beat": "01",
+      "at": 6.27,
+      "text": "A BIT BETTER"
+    },
+    {
+      "beat": "01",
+      "at": 7.16,
+      "text": "THIS IS FOR YOU"
+    },
+    {
+      "beat": "01",
+      "at": 8.39,
+      "text": "ASSALAMUALAIKUM"
+    },
+    {
+      "beat": "01",
+      "at": 11.54,
+      "text": "THIS IS FOR YOU"
+    },
+    {
+      "beat": "02",
+      "at": 0.32,
+      "text": "WHAT'S YOUR DAUGHTER'S NAME"
+    },
+    {
+      "beat": "02",
+      "at": 2.28,
+      "text": "HOW LONG HAS SHE BEEN SICK FOR"
+    },
+    {
+      "beat": "02",
+      "at": 4.62,
+      "text": "JUST TODAY"
+    },
+    {
+      "beat": "02",
+      "at": 6.57,
+      "text": "WOW, I HOPE SHE WILL FEEL BETTER"
+    },
+    {
+      "beat": "02",
+      "at": 8.32,
+      "text": "THIS IS A"
+    },
+    {
+      "beat": "03",
+      "at": 0.52,
+      "text": "WHERE ARE YOU GUYS FROM"
+    },
+    {
+      "beat": "03",
+      "at": 1.86,
+      "text": "I'M FROM PALESTINE"
+    },
+    {
+      "beat": "03",
+      "at": 3.86,
+      "text": "NICE TO MEET YOU"
+    },
+    {
+      "beat": "03",
+      "at": 5.22,
+      "text": "YOU'RE FROM RAMALLAH"
+    },
+    {
+      "beat": "03",
+      "at": 6.9,
+      "text": "I'M FROM RAMALLAH"
+    },
+    {
+      "beat": "03",
+      "at": 8.1,
+      "text": "YOU'RE FROM RAMALLAH? AMAZING"
+    },
+    {
+      "beat": "04",
+      "at": 0.18,
+      "text": "YOU'RE FROM RAMALLAH"
+    },
+    {
+      "beat": "04",
+      "at": 1.06,
+      "text": "AND YOU CAME HERE"
+    },
+    {
+      "beat": "04",
+      "at": 2.52,
+      "text": "FOR HEALTH"
+    },
+    {
+      "beat": "04",
+      "at": 3.32,
+      "text": "YES. WOW"
+    },
+    {
+      "beat": "04",
+      "at": 4.12,
+      "text": "YOU CAN COME FROM THE WEST BANK"
+    },
+    {
+      "beat": "04",
+      "at": 5.87,
+      "text": "INTO ISRAEL TO GET"
+    },
+    {
+      "beat": "04",
+      "at": 6.87,
+      "text": "HEALTH CARE? YES"
+    },
+    {
+      "beat": "04",
+      "at": 7.67,
+      "text": "I DIDN'T KNOW"
+    },
+    {
+      "beat": "04",
+      "at": 8.47,
+      "text": "I JUST COME HERE"
+    },
+    {
+      "beat": "04",
+      "at": 9.47,
+      "text": "FOR THE FIRST TIME"
+    },
+    {
+      "beat": "04",
+      "at": 10.47,
+      "text": "BECAUSE WE LIVE IN RAMALLAH"
+    },
+    {
+      "beat": "04",
+      "at": 11.72,
+      "text": "BUT I HAVE THE"
+    },
+    {
+      "beat": "04",
+      "at": 12.72,
+      "text": "WOW"
+    },
+    {
+      "beat": "04",
+      "at": 13.52,
+      "text": "SO YOU CAN COME"
+    },
+    {
+      "beat": "04",
+      "at": 14.52,
+      "text": "HERE AND YOU CAN GET"
+    },
+    {
+      "beat": "04",
+      "at": 15.77,
+      "text": "THE HEALTH CARE"
+    },
+    {
+      "beat": "04",
+      "at": 16.57,
+      "text": "YEAH, YEAH"
+    },
+    {
+      "beat": "05",
+      "at": 0,
+      "text": "END OF THE DAY"
+    },
+    {
+      "beat": "05",
+      "at": 1,
+      "text": "WE'RE ALL HUMAN BEINGS"
+    },
+    {
+      "beat": "05",
+      "at": 2,
+      "text": "WE ALL DESERVE HEALTH"
+    },
+    {
+      "beat": "05",
+      "at": 4.2,
+      "text": "I'M JEWISH AND YOU'RE MUSLIM"
+    },
+    {
+      "beat": "05",
+      "at": 5.45,
+      "text": "WE'RE BROTHERS"
+    },
+    {
+      "beat": "05",
+      "at": 6.45,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "05",
+      "at": 7.25,
+      "text": "NICE TO MEET YOU"
+    },
+    {
+      "beat": "05",
+      "at": 9.74,
+      "text": "BYE-BYE"
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "built": "2026-09-23T23:28:38.015Z",
+  "total_s": 87.91,
+  "out": "FLOWERS_FOR_STRANGERS_V5.mp4",
+  "layout": "vertical",
+  "title": "POV: I GAVE FLOWERS TO STRANGERS IN ISRAEL\nWITHOUT ASKING THEIR RELIGION FIRST",
+  "beats": [
+    [
+      "d92b1927-0e15-4f65-bba9-d6ba6927766c",
+      2,
+      12.6,
+      0.5,
+      "[picture +2s, audio unchanged] 'Are you Jewish?' 'Yes.' 'This is for you.' 'Why?' 'Because you're Jewish - I want to spre",
+      null,
+      {
+        "audio": {
+          "id": "d92b1927-0e15-4f65-bba9-d6ba6927766c",
+          "at": 0
+        }
+      }
+    ],
+    [
+      "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+      6,
+      20.4,
+      0.5,
+      "[picture +6s, audio unchanged] THE TURN: 'Are you Jewish?' 'No.' 'Are you Christian?' 'I'm Muslim.' 'Wow, amazing. This i",
+      null,
+      {
+        "audio": {
+          "id": "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+          "at": 0
+        }
+      }
+    ],
+    [
+      "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+      21.5,
+      32.6,
+      0.5,
+      "[picture +2s, audio unchanged] 'Where are you from?' 'Originally Sudan - I've lived in Israel 20 years.' 'And as a Muslim",
+      null,
+      {
+        "audio": {
+          "id": "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+          "at": 19.5
+        }
+      }
+    ],
+    [
+      "5eed418a-4577-4fa8-8e9e-fa228feeb708",
+      0,
+      15.2,
+      0.5,
+      "'Are you Jewish?' 'No.' 'Are you Christian?' 'Yes.' 'These are for you - a gift to make your day a bit better.'"
+    ],
+    [
+      "15179d03-84ec-4999-8e0a-ba1849c46e48",
+      0,
+      16,
+      0.5,
+      "'Salamu Alaikum. These are for you guys, a gift for free - for you to smile.'"
+    ],
+    [
+      "46a6fe2b-200d-4b6c-ad8a-c48263410482",
+      19.4,
+      37.6,
+      0.5,
+      "[picture -2s, audio unchanged] THE ENDING: 'You are Muslim?' 'I'm Muslim.' 'I'm Jewish.' 'I love you.' ... 'We are all hu",
+      null,
+      {
+        "audio": {
+          "id": "46a6fe2b-200d-4b6c-ad8a-c48263410482",
+          "at": 21.4
+        }
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "text": "HEY, EXCUSE ME, SORRY"
+    },
+    {
+      "beat": "01",
+      "at": 2.93,
+      "text": "CAN I ASK, ARE YOU JEWISH? YES"
+    },
+    {
+      "beat": "01",
+      "at": 6.12,
+      "text": "THIS IS FOR YOU. WHY"
+    },
+    {
+      "beat": "01",
+      "at": 8.12,
+      "text": "BECAUSE YOU'RE JEWISH"
+    },
+    {
+      "beat": "01",
+      "at": 8.92,
+      "text": "I WANT TO SPREAD LOVE"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "text": "HI, EXCUSE ME"
+    },
+    {
+      "beat": "02",
+      "at": 1.74,
+      "text": "I'M SORRY TO BOTHER"
+    },
+    {
+      "beat": "02",
+      "at": 3.31,
+      "text": "ARE YOU JEWISH"
+    },
+    {
+      "beat": "02",
+      "at": 4.11,
+      "text": "NO, I'M NOT JEWISH"
+    },
+    {
+      "beat": "02",
+      "at": 5.52,
+      "text": "ARE YOU CHRISTIAN"
+    },
+    {
+      "beat": "02",
+      "at": 7.91,
+      "text": "I'M MUSLIM"
+    },
+    {
+      "beat": "02",
+      "at": 8.71,
+      "text": "WOW, AMAZING"
+    },
+    {
+      "beat": "02",
+      "at": 9.51,
+      "text": "THIS IS FOR YOU. WOW"
+    },
+    {
+      "beat": "02",
+      "at": 11.78,
+      "text": "YOU SEE"
+    },
+    {
+      "beat": "02",
+      "at": 13.38,
+      "text": "I'M GIVING FLOWERS TO MUSLIM"
+    },
+    {
+      "beat": "03",
+      "at": 0.13,
+      "text": "I'M FROM HERE"
+    },
+    {
+      "beat": "03",
+      "at": 0.93,
+      "text": "BUT ORIGINALLY FROM SUDAN"
+    },
+    {
+      "beat": "03",
+      "at": 1.93,
+      "text": "YOU'RE FROM SUDAN"
+    },
+    {
+      "beat": "03",
+      "at": 2.73,
+      "text": "YES, BRO"
+    },
+    {
+      "beat": "03",
+      "at": 3.53,
+      "text": "WOW, AND YOU MOVED"
+    },
+    {
+      "beat": "03",
+      "at": 4.64,
+      "text": "TO ISRAEL"
+    },
+    {
+      "beat": "03",
+      "at": 5.44,
+      "text": "I LIVE IN"
+    },
+    {
+      "beat": "03",
+      "at": 6.24,
+      "text": "ISRAEL 20 YEARS"
+    },
+    {
+      "beat": "03",
+      "at": 7.04,
+      "text": "WOW AND AS A MUSLIM"
+    },
+    {
+      "beat": "03",
+      "at": 8.29,
+      "text": "IS IT SAFE"
+    },
+    {
+      "beat": "03",
+      "at": 9.09,
+      "text": "IT IS SAFE"
+    },
+    {
+      "beat": "03",
+      "at": 9.89,
+      "text": "WOW AMAZING WELL THESE FLOWERS"
+    },
+    {
+      "beat": "04",
+      "at": 0,
+      "text": "HI, EXCUSE ME"
+    },
+    {
+      "beat": "04",
+      "at": 2.33,
+      "text": "SORRY TO BOTHER"
+    },
+    {
+      "beat": "04",
+      "at": 4.44,
+      "text": "ARE YOU JEWISH"
+    },
+    {
+      "beat": "04",
+      "at": 7.65,
+      "text": "NO"
+    },
+    {
+      "beat": "04",
+      "at": 8.45,
+      "text": "ARE YOU CHRISTIAN"
+    },
+    {
+      "beat": "04",
+      "at": 9.25,
+      "text": "YES. AMAZING"
+    },
+    {
+      "beat": "04",
+      "at": 10.05,
+      "text": "THESE ARE FOR YOU"
+    },
+    {
+      "beat": "04",
+      "at": 11.33,
+      "text": "A GIFT TO MAKE"
+    },
+    {
+      "beat": "04",
+      "at": 13.06,
+      "text": "YOUR DAY A BIT BETTER"
+    },
+    {
+      "beat": "04",
+      "at": 14.31,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "05",
+      "at": 0,
+      "text": "HI, SALAMU ALAIKUM"
+    },
+    {
+      "beat": "05",
+      "at": 1.05,
+      "text": "THESE ARE FOR YOU GUYS"
+    },
+    {
+      "beat": "05",
+      "at": 3.95,
+      "text": "HAVE AN AMAZING DAY"
+    },
+    {
+      "beat": "05",
+      "at": 5.41,
+      "text": "A GIFT FOR FREE"
+    },
+    {
+      "beat": "05",
+      "at": 9.93,
+      "text": "FOR YOU TO SMILE"
+    },
+    {
+      "beat": "05",
+      "at": 11,
+      "text": "HAVE AN AMAZING DAY"
+    },
+    {
+      "beat": "05",
+      "at": 12,
+      "text": "I SAW YOU WERE SAD"
+    },
+    {
+      "beat": "06",
+      "at": 0.72,
+      "text": "INSHALLAH"
+    },
+    {
+      "beat": "06",
+      "at": 1.52,
+      "text": "YOU ARE MUSLIM"
+    },
+    {
+      "beat": "06",
+      "at": 2.43,
+      "text": "I'M MUSLIM"
+    },
+    {
+      "beat": "06",
+      "at": 3.23,
+      "text": "I'M JEWISH. YAHUDI"
+    },
+    {
+      "beat": "06",
+      "at": 4.62,
+      "text": "I LOVE YOU"
+    },
+    {
+      "beat": "06",
+      "at": 6.4,
+      "text": "WE ARE"
+    },
+    {
+      "beat": "06",
+      "at": 7.2,
+      "text": "NO, ENGLISH. YEAH"
+    },
+    {
+      "beat": "06",
+      "at": 13.82,
+      "text": "WE ARE ALL HUMAN BEINGS"
+    },
+    {
+      "beat": "06",
+      "at": 16.97,
+      "text": "MY BROTHER. BYE-BYE"
+    }
+  ]
+}

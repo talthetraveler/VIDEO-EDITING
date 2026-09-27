@@ -1,0 +1,78 @@
+{
+  "layout": "vertical",
+  "title": "POV: I GAVE FLOWERS TO STRANGERS IN ISRAEL\nWITHOUT ASKING THEIR RELIGION FIRST",
+  "titleHold": 4,
+  "out": "FLOWERS_FOR_STRANGERS_V5.mp4",
+  "beats": [
+    [
+      "d92b1927-0e15-4f65-bba9-d6ba6927766c",
+      2,
+      12.6,
+      0.5,
+      "[picture +2s, audio unchanged] 'Are you Jewish?' 'Yes.' 'This is for you.' 'Why?' 'Because you're Jewish - I want to spre",
+      null,
+      {
+        "audio": {
+          "id": "d92b1927-0e15-4f65-bba9-d6ba6927766c",
+          "at": 0
+        }
+      }
+    ],
+    [
+      "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+      6,
+      20.4,
+      0.5,
+      "[picture +6s, audio unchanged] THE TURN: 'Are you Jewish?' 'No.' 'Are you Christian?' 'I'm Muslim.' 'Wow, amazing. This i",
+      null,
+      {
+        "audio": {
+          "id": "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+          "at": 0
+        }
+      }
+    ],
+    [
+      "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+      21.5,
+      32.6,
+      0.5,
+      "[picture +2s, audio unchanged] 'Where are you from?' 'Originally Sudan - I've lived in Israel 20 years.' 'And as a Muslim",
+      null,
+      {
+        "audio": {
+          "id": "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+          "at": 19.5
+        }
+      }
+    ],
+    [
+      "5eed418a-4577-4fa8-8e9e-fa228feeb708",
+      0,
+      15.2,
+      0.5,
+      "'Are you Jewish?' 'No.' 'Are you Christian?' 'Yes.' 'These are for you - a gift to make your day a bit better.'"
+    ],
+    [
+      "15179d03-84ec-4999-8e0a-ba1849c46e48",
+      0,
+      16,
+      0.5,
+      "'Salamu Alaikum. These are for you guys, a gift for free - for you to smile.'"
+    ],
+    [
+      "46a6fe2b-200d-4b6c-ad8a-c48263410482",
+      19.4,
+      37.6,
+      0.5,
+      "[picture -2s, audio unchanged] THE ENDING: 'You are Muslim?' 'I'm Muslim.' 'I'm Jewish.' 'I love you.' ... 'We are all hu",
+      null,
+      {
+        "audio": {
+          "id": "46a6fe2b-200d-4b6c-ad8a-c48263410482",
+          "at": 21.4
+        }
+      }
+    ]
+  ]
+}

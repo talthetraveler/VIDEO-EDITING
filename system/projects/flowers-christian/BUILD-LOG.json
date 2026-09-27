@@ -1,0 +1,154 @@
+{
+  "built": "2026-09-23T23:02:13.994Z",
+  "total_s": 29,
+  "out": "FLOWERS_CHRISTIAN_V4.mp4",
+  "layout": "vertical",
+  "title": "POV: I GAVE FLOWERS TO A CHRISTIAN STRANGER\nIN ISRAEL",
+  "beats": [
+    [
+      "5eed418a-4577-4fa8-8e9e-fa228feeb708",
+      0,
+      15.2,
+      0.5,
+      "'Are you Jewish?' 'No.' 'Are you Christian?' 'Yes.' 'Amazing - these are for you. A gift to make your day a bit better.'",
+      null,
+      {
+        "z": [
+          1,
+          1.16
+        ]
+      }
+    ],
+    [
+      "5eed418a-4577-4fa8-8e9e-fa228feeb708",
+      15.2,
+      29,
+      0.5,
+      "'Where are you from?' 'Uganda.' 'How long have you been in Israel?' 'Five years.' 'Welcome to Israel.' ... 'Keep smiling.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.26
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "text": "HI, EXCUSE ME"
+    },
+    {
+      "beat": "01",
+      "at": 2.33,
+      "text": "SORRY TO BOTHER"
+    },
+    {
+      "beat": "01",
+      "at": 4.44,
+      "text": "ARE YOU JEWISH"
+    },
+    {
+      "beat": "01",
+      "at": 7.65,
+      "text": "NO"
+    },
+    {
+      "beat": "01",
+      "at": 8.45,
+      "text": "ARE YOU CHRISTIAN"
+    },
+    {
+      "beat": "01",
+      "at": 9.25,
+      "text": "YES. AMAZING"
+    },
+    {
+      "beat": "01",
+      "at": 10.05,
+      "text": "THESE ARE FOR YOU"
+    },
+    {
+      "beat": "01",
+      "at": 11.33,
+      "text": "A GIFT TO MAKE"
+    },
+    {
+      "beat": "01",
+      "at": 13.06,
+      "text": "YOUR DAY A BIT BETTER"
+    },
+    {
+      "beat": "01",
+      "at": 14.31,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "text": "WHERE ARE YOU FROM? UGANDA"
+    },
+    {
+      "beat": "02",
+      "at": 1.25,
+      "text": "YOU'RE FROM UGANDA"
+    },
+    {
+      "beat": "02",
+      "at": 2.05,
+      "text": "NICE TO MEET YOU"
+    },
+    {
+      "beat": "02",
+      "at": 3.3,
+      "text": "HOW LONG HAVE YOU BEEN IN ISRAEL"
+    },
+    {
+      "beat": "02",
+      "at": 5.05,
+      "text": "FOR"
+    },
+    {
+      "beat": "02",
+      "at": 5.85,
+      "text": "FIVE YEARS"
+    },
+    {
+      "beat": "02",
+      "at": 7.45,
+      "text": "WELCOME TO ISRAEL"
+    },
+    {
+      "beat": "02",
+      "at": 8.25,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "02",
+      "at": 9.05,
+      "text": "THESE ARE A GIFT"
+    },
+    {
+      "beat": "02",
+      "at": 10.05,
+      "text": "TO MAKE YOUR DAY"
+    },
+    {
+      "beat": "02",
+      "at": 11.05,
+      "text": "A BIT BETTER"
+    },
+    {
+      "beat": "02",
+      "at": 11.85,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "02",
+      "at": 12.65,
+      "text": "KEEP SMILING"
+    }
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "built": "2026-09-24T00:18:05.773Z",
+  "total_s": 79.62,
+  "out": "SHOP_OWNER_7_V4.mp4",
+  "layout": "vertical",
+  "title": "POV: I ASKED A BAKER IN ISRAEL FOR BREAD\nWITH NO MONEY",
+  "beats": [
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      7.8,
+      20.4,
+      0.5,
+      "THE TEST: 'Salaamu Alaikum. Do you speak English? I want to buy one piece of bread - can I have one, please?'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      19.8,
+      33.4,
+      0.5,
+      "'I'm sorry, but I don't have money. Can you help me, please?' 'You want one?' 'Yeah, please - I'm just hungry.' 'Thank you so much.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.2
+        ]
+      }
+    ],
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      32.8,
+      44.4,
+      0.5,
+      "THE REVEAL: 'Actually, this is for you.' 'No, it's okay.' 'Take it.' 'Thank you.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.22
+        ]
+      }
+    ],
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      43.4,
+      53.4,
+      0.5,
+      "'Because you helped me - I want you to give bread for free to other people.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.24
+        ]
+      }
+    ],
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      53.8,
+      69.4,
+      0.5,
+      "'What's your name?' 'Muhammad.' 'You are Muslim?' 'Yes.' 'I'm Jewish. We are brothers - Muslims and Jews, we are all the same.'",
+      null,
+      {
+        "z": [
+          1.12,
+          1.28
+        ]
+      }
+    ],
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      76.4,
+      91.4,
+      0.5,
+      "THE ENDING - a stranger vouches for him: 'He can give it to you free. He's the best guy in the world. He is number one.'",
+      null,
+      {
+        "z": [
+          1.14,
+          1.3
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.62,
+      "text": "HI, SALAAMU ALAIKUM"
+    },
+    {
+      "beat": "01",
+      "at": 2.62,
+      "text": "NICE TO MEET YOU"
+    },
+    {
+      "beat": "01",
+      "at": 3.62,
+      "text": "DO YOU SPEAK ENGLISH"
+    },
+    {
+      "beat": "01",
+      "at": 4.62,
+      "text": "I WANT TO BUY"
+    },
+    {
+      "beat": "01",
+      "at": 6.83,
+      "text": "ONE PIECE OF BREAD"
+    },
+    {
+      "beat": "01",
+      "at": 8.62,
+      "text": "WHAT"
+    },
+    {
+      "beat": "01",
+      "at": 9.42,
+      "text": "CAN I HAVE ONE, PLEASE"
+    },
+    {
+      "beat": "02",
+      "at": 0.08,
+      "text": "SORRY, BUT I DON'T"
+    },
+    {
+      "beat": "02",
+      "at": 1.08,
+      "text": "HAVE MONEY"
+    },
+    {
+      "beat": "02",
+      "at": 1.88,
+      "text": "CAN YOU HELP ME"
+    },
+    {
+      "beat": "02",
+      "at": 3.2,
+      "text": "PLEASE, WITH ONE PIECE"
+    },
+    {
+      "beat": "02",
+      "at": 4.92,
+      "text": "OF BREAD"
+    },
+    {
+      "beat": "02",
+      "at": 5.72,
+      "text": "PLEASE, I DON'T HAVE MONEY"
+    },
+    {
+      "beat": "02",
+      "at": 7.73,
+      "text": "YOU WANT ONE"
+    },
+    {
+      "beat": "02",
+      "at": 8.96,
+      "text": "YEAH, PLEASE"
+    },
+    {
+      "beat": "02",
+      "at": 9.76,
+      "text": "I'M JUST HUNGRY"
+    },
+    {
+      "beat": "02",
+      "at": 10.6,
+      "text": "THANK YOU SO MUCH"
+    },
+    {
+      "beat": "03",
+      "at": 0.06,
+      "text": "THIS IS FOR YOU"
+    },
+    {
+      "beat": "03",
+      "at": 1.42,
+      "text": "NO, IT'S OKAY"
+    },
+    {
+      "beat": "03",
+      "at": 2.42,
+      "text": "FOR YOU"
+    },
+    {
+      "beat": "03",
+      "at": 3.63,
+      "text": "NO, FOR YOU"
+    },
+    {
+      "beat": "03",
+      "at": 4.43,
+      "text": "NO, THANKS"
+    },
+    {
+      "beat": "03",
+      "at": 5.42,
+      "text": "FOR ME"
+    },
+    {
+      "beat": "03",
+      "at": 6.42,
+      "text": "FOR YOU"
+    },
+    {
+      "beat": "03",
+      "at": 8.42,
+      "text": "TAKE IT"
+    },
+    {
+      "beat": "03",
+      "at": 9.86,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "03",
+      "at": 10.66,
+      "text": "BECAUSE YOU HELPED ME"
+    },
+    {
+      "beat": "04",
+      "at": 0.45,
+      "text": "I WANT TO SPREAD"
+    },
+    {
+      "beat": "04",
+      "at": 1.45,
+      "text": "TO YOU SO YOU CAN BUY"
+    },
+    {
+      "beat": "04",
+      "at": 2.95,
+      "text": "I WANT YOU TO BUY"
+    },
+    {
+      "beat": "04",
+      "at": 4.25,
+      "text": "GIVE BREAD FOR FREE"
+    },
+    {
+      "beat": "04",
+      "at": 5.46,
+      "text": "TO OTHER PEOPLE"
+    },
+    {
+      "beat": "04",
+      "at": 6.28,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "04",
+      "at": 7.08,
+      "text": "OKAY, SIR"
+    },
+    {
+      "beat": "04",
+      "at": 7.88,
+      "text": "YOU'RE WELCOME"
+    },
+    {
+      "beat": "05",
+      "at": 0.4,
+      "text": "WHAT'S YOUR NAME"
+    },
+    {
+      "beat": "05",
+      "at": 1.52,
+      "text": "MUHAMMAD. WHAT"
+    },
+    {
+      "beat": "05",
+      "at": 3.29,
+      "text": "AS-SALAMU ALAYKUM"
+    },
+    {
+      "beat": "05",
+      "at": 4.4,
+      "text": "YOU ARE MUSLIM? YES"
+    },
+    {
+      "beat": "05",
+      "at": 6.88,
+      "text": "I'M A JEWISH"
+    },
+    {
+      "beat": "05",
+      "at": 7.68,
+      "text": "I'M JEWISH"
+    },
+    {
+      "beat": "05",
+      "at": 8.48,
+      "text": "WE ARE BROTHERS"
+    },
+    {
+      "beat": "05",
+      "at": 9.65,
+      "text": "YOU KNOW, MUSLIMS AND JEWS"
+    },
+    {
+      "beat": "05",
+      "at": 10.9,
+      "text": "WE ARE ALL THE SAME"
+    },
+    {
+      "beat": "05",
+      "at": 12.4,
+      "text": "ALL OF A ONE"
+    },
+    {
+      "beat": "05",
+      "at": 14.86,
+      "text": "HAVE A GOOD DAY"
+    },
+    {
+      "beat": "05",
+      "at": 15.95,
+      "text": "AS-SALAMU ALAYKUM"
+    },
+    {
+      "beat": "06",
+      "at": 0,
+      "text": "YOU A MINUTE"
+    },
+    {
+      "beat": "06",
+      "at": 0.8,
+      "text": "NOW, MAY YOU HELP"
+    },
+    {
+      "beat": "06",
+      "at": 1.8,
+      "text": "HIM BECAUSE YOU WANT"
+    },
+    {
+      "beat": "06",
+      "at": 2.8,
+      "text": "TO PROTECT HIM"
+    },
+    {
+      "beat": "06",
+      "at": 3.6,
+      "text": "HE CAN GIVE IT TO YOU FREE"
+    },
+    {
+      "beat": "06",
+      "at": 5.35,
+      "text": "OR NOT"
+    },
+    {
+      "beat": "06",
+      "at": 6.15,
+      "text": "HE'S THE BEST GUY"
+    },
+    {
+      "beat": "06",
+      "at": 7.15,
+      "text": "IN THE WORLD"
+    },
+    {
+      "beat": "06",
+      "at": 7.95,
+      "text": "BUT HE CAN GIVE"
+    },
+    {
+      "beat": "06",
+      "at": 8.95,
+      "text": "IT TO YOU FREE"
+    },
+    {
+      "beat": "06",
+      "at": 10.26,
+      "text": "OF COURSE. ANYBODY"
+    },
+    {
+      "beat": "06",
+      "at": 11.06,
+      "text": "HE IS"
+    },
+    {
+      "beat": "06",
+      "at": 11.86,
+      "text": "A NUMBER ONE"
+    },
+    {
+      "beat": "06",
+      "at": 12.66,
+      "text": "HE IS A NUMBER ONE"
+    },
+    {
+      "beat": "06",
+      "at": 13.91,
+      "text": "OF COURSE, THANK YOU"
+    }
+  ]
+}

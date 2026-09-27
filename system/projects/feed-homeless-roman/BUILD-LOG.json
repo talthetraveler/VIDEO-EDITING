@@ -1,0 +1,433 @@
+{
+  "built": "2026-09-23T23:24:57.038Z",
+  "total_s": 109.47,
+  "out": "ROMAN_TEL_AVIV_V9.mp4",
+  "layout": "vertical",
+  "title": "POV: I GAVE A HOMELESS MAN IN TEL AVIV\nCLOTHES AND FOOD - THEN HE TOLD ME THIS",
+  "beats": [
+    [
+      "local-ca1bb9b65735004c",
+      6.4,
+      17.5,
+      0.5,
+      "'This is for you. Take off your shirt - we'll put a new one on you.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "local-19018606b6d6b0ee",
+      31.5,
+      43,
+      0.5,
+      "[picture +2s, audio unchanged] 'What's your name?' 'Roman.' 'Where are you from?' 'Tel Aviv.' 'How old are you?' '33.'",
+      null,
+      {
+        "z": [
+          1.04,
+          1.22
+        ],
+        "audio": {
+          "id": "local-19018606b6d6b0ee",
+          "at": 29.5
+        }
+      }
+    ],
+    [
+      "local-e0275debb5700e8f",
+      75.5,
+      88.2,
+      0.5,
+      "[picture -2s, audio unchanged] 'So here - we brought you some food.' 'Thank you. My brother, cheers.'",
+      null,
+      {
+        "z": [
+          1.02,
+          1.18
+        ],
+        "audio": {
+          "id": "local-e0275debb5700e8f",
+          "at": 77.5
+        }
+      }
+    ],
+    [
+      "local-e0275debb5700e8f",
+      108.6,
+      121,
+      0.5,
+      "'How long have you not eaten?' ... 'Two days you haven't eaten?'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.26
+        ]
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      0,
+      10.5,
+      0.5,
+      "'Who do you miss the most?' ... 'My father.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.26
+        ]
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      0.4,
+      9,
+      0.5,
+      "[picture -12s, audio unchanged] as a kid he thought everything his father did was against him - he rebelled at all of it",
+      null,
+      {
+        "z": [
+          1.12,
+          1.32
+        ],
+        "audio": {
+          "id": "local-3843b9158bfb6eb6",
+          "at": 12.4
+        }
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      32.2,
+      48.5,
+      0.5,
+      "THE TURN: 'Only after he died ... you realise the man was only ever trying to guide you.'",
+      null,
+      {
+        "z": [
+          1.16,
+          1.36
+        ]
+      }
+    ],
+    [
+      "local-530bd874ad57bc14",
+      18.6,
+      27.4,
+      0.5,
+      "THE LINE: 'If I have the strength to give someone something to eat, I always give them something to eat. I never say to someone in my life not to eat.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.3
+        ]
+      }
+    ],
+    [
+      "local-3b90089c8902a9e6",
+      332.5,
+      342,
+      0.5,
+      "'So you need a home?' 'Not a home. A place to rest. One metre by one metre.'",
+      null,
+      {
+        "z": [
+          1.14,
+          1.34
+        ]
+      }
+    ],
+    [
+      "local-da9f3edcbca2e9b2",
+      0,
+      10,
+      0.5,
+      "THE JOY - new clothes: 'Wow, amazing. You're happy? You look good.'",
+      null,
+      {
+        "z": [
+          1,
+          1.16
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.6,
+      "text": "THIS IS FOR YOU"
+    },
+    {
+      "beat": "01",
+      "at": 1.6,
+      "text": "HERE, TAKE OFF YOUR SHIRT"
+    },
+    {
+      "beat": "01",
+      "at": 2.85,
+      "text": "WE'LL PUT ON A NEW"
+    },
+    {
+      "beat": "01",
+      "at": 4.1,
+      "text": "ONE FOR YOU"
+    },
+    {
+      "beat": "01",
+      "at": 5.03,
+      "text": "TAKE THIS OFF, I'LL"
+    },
+    {
+      "beat": "01",
+      "at": 6.03,
+      "text": "PUT IT ON FOR YOU"
+    },
+    {
+      "beat": "02",
+      "at": 0.5,
+      "text": "WHAT'S YOUR NAME? ROMAN"
+    },
+    {
+      "beat": "02",
+      "at": 4.5,
+      "text": "WHERE ARE YOU FROM"
+    },
+    {
+      "beat": "02",
+      "at": 5.91,
+      "text": "I'M FROM TEL AVIV"
+    },
+    {
+      "beat": "02",
+      "at": 7.5,
+      "text": "HOW OLD ARE YOU? 33"
+    },
+    {
+      "beat": "02",
+      "at": 10.53,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "03",
+      "at": 1.19,
+      "text": "A HOUSE FOR EXAMPLE"
+    },
+    {
+      "beat": "03",
+      "at": 3.18,
+      "text": "A HOUSE TO WORK"
+    },
+    {
+      "beat": "03",
+      "at": 4.87,
+      "text": "AND TO LIVE APARTMENT"
+    },
+    {
+      "beat": "03",
+      "at": 7.08,
+      "text": "SO HERE WE BROUGHT"
+    },
+    {
+      "beat": "03",
+      "at": 9.29,
+      "text": "YOU SOME FOOD THANK YOU"
+    },
+    {
+      "beat": "04",
+      "at": 0.4,
+      "text": "HOW LONG HAVE YOU NOT EATEN"
+    },
+    {
+      "beat": "04",
+      "at": 10.4,
+      "text": "HOW LONG"
+    },
+    {
+      "beat": "05",
+      "at": 0,
+      "text": "WHO DO YOU MISS"
+    },
+    {
+      "beat": "05",
+      "at": 2,
+      "text": "THE MOST"
+    },
+    {
+      "beat": "05",
+      "at": 6.13,
+      "text": "MY FATHER"
+    },
+    {
+      "beat": "05",
+      "at": 8.46,
+      "text": "YOUR FATHER MISSES YOU THE MOST"
+    },
+    {
+      "beat": "07",
+      "at": 0.1,
+      "text": "WHEN DID I START"
+    },
+    {
+      "beat": "07",
+      "at": 1.1,
+      "text": "TO UNDERSTAND THIS"
+    },
+    {
+      "beat": "07",
+      "at": 2.1,
+      "text": "ONLY AFTER HE DIED, BROTHER"
+    },
+    {
+      "beat": "07",
+      "at": 4.1,
+      "text": "SLOWLY, SLOWLY, YOU SIT"
+    },
+    {
+      "beat": "07",
+      "at": 5.43,
+      "text": "WITH YOURSELF"
+    },
+    {
+      "beat": "07",
+      "at": 6.29,
+      "text": "YOU REPEAT THE CONVERSATIONS"
+    },
+    {
+      "beat": "07",
+      "at": 7.29,
+      "text": "THAT YOU HAD WITH HIM"
+    },
+    {
+      "beat": "07",
+      "at": 8.54,
+      "text": "AND YOU REALIZE THAT THE PERSON"
+    },
+    {
+      "beat": "07",
+      "at": 10.04,
+      "text": "IN THE END"
+    },
+    {
+      "beat": "07",
+      "at": 10.84,
+      "text": "IS TRYING TO GUIDE YOU"
+    },
+    {
+      "beat": "07",
+      "at": 12.48,
+      "text": "HE IS NOT TRYING"
+    },
+    {
+      "beat": "07",
+      "at": 13.48,
+      "text": "TO BE AGAINST YOU, BROTHER"
+    },
+    {
+      "beat": "07",
+      "at": 14.73,
+      "text": "BUT WHAT IS THE PROBLEM"
+    },
+    {
+      "beat": "07",
+      "at": 16.1,
+      "text": "ONLY AFTER YOU HAVE"
+    },
+    {
+      "beat": "08",
+      "at": 0.19,
+      "text": "AND WHY DO YOU DO THAT"
+    },
+    {
+      "beat": "08",
+      "at": 1.69,
+      "text": "WHY DO YOU TELL PEOPLE"
+    },
+    {
+      "beat": "08",
+      "at": 2.94,
+      "text": "BECAUSE IF I HAVE THE STRENGTH"
+    },
+    {
+      "beat": "08",
+      "at": 4.44,
+      "text": "TO GIVE SOMEONE"
+    },
+    {
+      "beat": "08",
+      "at": 5.24,
+      "text": "SOMETHING TO EAT"
+    },
+    {
+      "beat": "08",
+      "at": 6.04,
+      "text": "I ALWAYS GIVE THEM"
+    },
+    {
+      "beat": "08",
+      "at": 7.04,
+      "text": "SOMETHING TO EAT"
+    },
+    {
+      "beat": "08",
+      "at": 7.84,
+      "text": "I NEVER SAY TO SOMEONE"
+    },
+    {
+      "beat": "08",
+      "at": 9.09,
+      "text": "IN MY LIFE NOT TO EAT"
+    },
+    {
+      "beat": "09",
+      "at": 0,
+      "text": "OR TWO THAT I WILL BE HERE"
+    },
+    {
+      "beat": "09",
+      "at": 1.75,
+      "text": "SO YOU NEED A HOME"
+    },
+    {
+      "beat": "09",
+      "at": 4.18,
+      "text": "NOT A HOME, A PLACE"
+    },
+    {
+      "beat": "09",
+      "at": 5.82,
+      "text": "TO RELAX"
+    },
+    {
+      "beat": "09",
+      "at": 7.68,
+      "text": "ONE METER BY ONE METER"
+    },
+    {
+      "beat": "10",
+      "at": 0,
+      "text": "GOOD OKAY WOW AMAZING"
+    },
+    {
+      "beat": "10",
+      "at": 1.81,
+      "text": "WHAT AMAZING YEAH"
+    },
+    {
+      "beat": "10",
+      "at": 3.16,
+      "text": "YOU'RE HAPPY WHERE ARE YOUR PANTS"
+    },
+    {
+      "beat": "10",
+      "at": 5.87,
+      "text": "YOU LEFT IT THERE"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "_comment": "Written automatically by scripts/longform-build.mjs, appended to on each build. One entry per built short. public/footage/<slug>/clips.json",
+    "id": "he_gave_me_his_motorcycle",
+    "source": "footage/<slug>/<filename>",
+    "beats": [{ "start": 783.4, "end": 789.9, "label": "hook" }],
+    "tightened": true,
+    "raw_duration_s": 44.6,
+    "final_duration_s": 37.1,
+    "title": "HE JUST GAVE ME HIS MOTORCYCLE",
+    "composition": "src/compositions/<slug>/HeGaveMeHisMotorcycle.tsx",
+    "built_at": "2026-09-05T00:00:00.000Z"
+  }
+]

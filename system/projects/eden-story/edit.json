@@ -1,0 +1,189 @@
+{
+  "layout": "vertical",
+  "capY": 0.66,
+  "autoFrame": false,
+  "out": "EDEN_HER_STORY_V9.mp4",
+  "note": "THREE clips, not one. 06/IMG_9265 is the 1080p sit-down; 04/IMG_8823 and 01/IMG_8814 are 4K solo shots of Eden from earlier the same afternoon and are the better picture, so her strongest answers come from those. Order is the STORY: the ask, who she is, her mother, how hard it is, why she chooses to live, the strength, belief, the message, the last word. autoFrame is OFF - it locked onto Tal's face (nearer the lens) and cut Eden off at the right edge while she was speaking. xc per beat instead: 06 is a two-shot, Tal LEFT and Eden RIGHT; 01 and 04 are Eden alone, centre-left.",
+  "beats": [
+    [
+      "local-49f1fbc4b3367b2b",
+      0.0,
+      10.2,
+      0.3,
+      "'Hi Eden. I heard about your story - you have cancer and you are not giving up. I wanted to come and hear it.'"
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      11.6,
+      14.4,
+      0.55,
+      "'Can I sit down and listen?' - 'Of course.'"
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      14.4,
+      19.2,
+      0.85,
+      "'I'm Eden, I'm 30, and I've been fighting leukemia for a year.'"
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      19.0,
+      24.6,
+      0.6,
+      "'I lost my mother a year ago.' - 'You lost your mother a year ago?'"
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      33.2,
+      36.6,
+      0.85,
+      "'How did she pass away?' - 'She passed away from cancer.'"
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      39.9,
+      42.6,
+      0.85,
+      "'How long did she have cancer?' - '17 years.'"
+    ],
+    [
+      "local-98627ce0235e3574",
+      58.4,
+      62.8,
+      0.45,
+      "4K. 'It's hard.' - 'Every day is hard?'"
+    ],
+    [
+      "local-98627ce0235e3574",
+      71.4,
+      81.8,
+      0.45,
+      "4K. THE TURN. 'I'm happy to live my life, because I can't keep on crying. It isn't good and it isn't healthy.'"
+    ],
+    [
+      "local-abb77f2d77313a13",
+      67.0,
+      77.0,
+      0.45,
+      "4K. 'How do you stay so strong?' - 'It's not easy. But I'm not afraid of anything.'"
+    ],
+    [
+      "local-abb77f2d77313a13",
+      90.0,
+      96.2,
+      0.45,
+      "4K. 'Do you believe in yourself?' - 'Yes.' - 'Do you know how many people believe in you?' - 'Yes.'"
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      152.4,
+      162.9,
+      0.85,
+      "'What is your dream?' - 'Come and visit. I would be very happy.'"
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      209.5,
+      222.4,
+      0.85,
+      "THE MESSAGE. 'You can be upset, you can be sad - but don't go straight down. Know how to lift yourself up.'"
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      462.6,
+      465.9,
+      0.85,
+      "THE LAST WORD. 'I will be stronger.'"
+    ]
+  ],
+  "captionFix": [
+    {
+      "match": "It's hard. It's hard",
+      "to": "It's hard"
+    },
+    {
+      "match": "It's hard It's hard",
+      "to": "It's hard"
+    },
+    {
+      "match": "Can I sit down and hear",
+      "to": "Can I sit down and listen"
+    },
+    {
+      "match": "and hear about your story",
+      "to": "and hear your story"
+    },
+    {
+      "match": "working with milk and honey for a year",
+      "to": "fighting leukemia for a year"
+    },
+    {
+      "match": "with milk and honey",
+      "to": "with leukemia"
+    },
+    {
+      "match": "milk and honey",
+      "to": "leukemia"
+    },
+    {
+      "match": "That we are not too difficult",
+      "to": "Don't let it show how hard it is"
+    },
+    {
+      "match": "a little bit frustrated and not know",
+      "to": "upset, and not know what to do"
+    },
+    {
+      "match": "But don't sleep on the floor",
+      "to": "But don't go straight down"
+    },
+    {
+      "match": "But don't sleep",
+      "to": "But don't go straight down"
+    },
+    {
+      "match": "To get active and come visit",
+      "to": "Come and visit"
+    },
+    {
+      "match": "To get active",
+      "to": "Come and visit"
+    },
+    {
+      "match": "and so on",
+      "to": ""
+    },
+    {
+      "match": "You didn't forget",
+      "to": ""
+    },
+    {
+      "match": "Yes, while I",
+      "to": ""
+    },
+    {
+      "match": "About that",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "Do you want",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "I don't know, I don't know",
+      "to": ""
+    },
+    {
+      "match": "I was very sad to see my mother in the hospital, I was sick myself",
+      "to": ""
+    },
+    {
+      "match": "course",
+      "exact": true,
+      "to": null
+    }
+  ]
+}

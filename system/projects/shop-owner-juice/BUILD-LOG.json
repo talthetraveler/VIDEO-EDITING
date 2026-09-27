@@ -1,0 +1,226 @@
+{
+  "built": "2026-09-24T00:25:23.289Z",
+  "total_s": 49.86,
+  "out": "SHOP_OWNER_JUICE_V3.mp4",
+  "layout": "vertical",
+  "title": "POV: I ASKED A STRANGER IN ISRAEL FOR JUICE\nWITH NO MONEY",
+  "beats": [
+    [
+      "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+      32.2,
+      48,
+      0.5,
+      "THE TEST: 'I'd like a juice - but actually I don't have money. Can you help me, please?'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+      48.6,
+      59.9,
+      0.5,
+      "'I'm really thirsty and I don't have any money.' - and he hands it over",
+      null,
+      {
+        "z": [
+          1.06,
+          1.2
+        ]
+      }
+    ],
+    [
+      "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+      59.2,
+      67.9,
+      0.5,
+      "'Really? Why did you help me?' 'Nothing.' 'Thank you so much.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.24
+        ]
+      }
+    ],
+    [
+      "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+      67.2,
+      82,
+      0.5,
+      "THE REVEAL: 'I'll be honest - I have money. I wanted to see how kind you are. This is for you.' 'No, no, no.'",
+      null,
+      {
+        "z": [
+          1.12,
+          1.28
+        ]
+      }
+    ],
+    [
+      "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+      4.9,
+      31.5,
+      0.5,
+      "AND WHO HE IS: 'I'm Jewish.' 'We are brothers.' 'Exactly. One God.' 'The world tries to divide - but in the end we are all the same. We live together.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.26
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.62,
+      "text": "I WANT TO HAVE ONE"
+    },
+    {
+      "beat": "01",
+      "at": 3.07,
+      "text": "JUICE BUT ACTUALLY I DON'T"
+    },
+    {
+      "beat": "01",
+      "at": 5.52,
+      "text": "HAVE MONEY"
+    },
+    {
+      "beat": "01",
+      "at": 6.5,
+      "text": "CAN YOU HELP ME PLEASE"
+    },
+    {
+      "beat": "01",
+      "at": 8.68,
+      "text": "CAN YOU GIVE ME"
+    },
+    {
+      "beat": "01",
+      "at": 12.43,
+      "text": "A HALF OF JUICE"
+    },
+    {
+      "beat": "02",
+      "at": 0.62,
+      "text": "I REALLY WANT JUICE"
+    },
+    {
+      "beat": "02",
+      "at": 1.62,
+      "text": "TO BE FIRST PLEASE"
+    },
+    {
+      "beat": "02",
+      "at": 2.62,
+      "text": "I'M REALLY THIRSTY AND I DON'T"
+    },
+    {
+      "beat": "02",
+      "at": 4.12,
+      "text": "HAVE THIS ONE"
+    },
+    {
+      "beat": "02",
+      "at": 4.92,
+      "text": "I'M REALLY THIRSTY AND I DON'T"
+    },
+    {
+      "beat": "02",
+      "at": 6.42,
+      "text": "HAVE ANY MONEY"
+    },
+    {
+      "beat": "02",
+      "at": 7.24,
+      "text": "I'M GOING TO BE ABLE"
+    },
+    {
+      "beat": "02",
+      "at": 8.49,
+      "text": "TO BUY SOME OF THESE"
+    },
+    {
+      "beat": "02",
+      "at": 9.74,
+      "text": "GREAT"
+    },
+    {
+      "beat": "03",
+      "at": 0.06,
+      "text": "REALLY"
+    },
+    {
+      "beat": "03",
+      "at": 0.86,
+      "text": "WHY DID YOU HELP ME"
+    },
+    {
+      "beat": "03",
+      "at": 3.68,
+      "text": "NOTHING"
+    },
+    {
+      "beat": "03",
+      "at": 5.68,
+      "text": "REALLY"
+    },
+    {
+      "beat": "03",
+      "at": 6.48,
+      "text": "THANK YOU SO MUCH"
+    },
+    {
+      "beat": "04",
+      "at": 0.01,
+      "text": "I'LL BE HONEST"
+    },
+    {
+      "beat": "04",
+      "at": 1.49,
+      "text": "I HAVE MONEY"
+    },
+    {
+      "beat": "04",
+      "at": 2.98,
+      "text": "AND I WANTED TO SEE"
+    },
+    {
+      "beat": "04",
+      "at": 4.23,
+      "text": "HOW KIND YOU ARE"
+    },
+    {
+      "beat": "04",
+      "at": 5.23,
+      "text": "THIS IS FOR YOU"
+    },
+    {
+      "beat": "04",
+      "at": 6.98,
+      "text": "NO, NO, NO"
+    },
+    {
+      "beat": "04",
+      "at": 8.98,
+      "text": "THIS IS FOR YOU"
+    },
+    {
+      "beat": "04",
+      "at": 10.98,
+      "text": "PLEASE, PLEASE"
+    },
+    {
+      "beat": "04",
+      "at": 12.98,
+      "text": "IF YOU WANT"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "layout": "vertical",
+  "capY": 0.58,
+  "title": "CALL SOMEONE YOU LOVE\nDAMASCUS GATE, JERUSALEM",
+  "titleHold": 2.5,
+  "out": "CALL_NO_ONE_V3.mp4",
+  "beats": [
+    [
+      "local-35ca932c338797e6",
+      0,
+      6.2,
+      0.5,
+      "'There's no one to talk to.' 'What's wrong?'",
+      null,
+      null
+    ],
+    [
+      "local-35ca932c338797e6",
+      9.6,
+      16.4,
+      0.5,
+      "'You have to tell your mother, your father, your sister...' 'No - they're all my brothers.'",
+      null,
+      null
+    ]
+  ]
+}

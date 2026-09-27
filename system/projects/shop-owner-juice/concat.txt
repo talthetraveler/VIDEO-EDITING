@@ -1,0 +1,4 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-juice/beats_9020987/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-juice/beats_9020987/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-juice/beats_9020987/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-juice/beats_9020987/04.mp4'

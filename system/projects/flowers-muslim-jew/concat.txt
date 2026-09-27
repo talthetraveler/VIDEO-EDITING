@@ -1,0 +1,4 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/flowers-muslim-jew/beats_4597329/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/flowers-muslim-jew/beats_4597329/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/flowers-muslim-jew/beats_4597329/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/flowers-muslim-jew/beats_4597329/04.mp4'

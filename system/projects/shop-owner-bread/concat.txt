@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-bread/beats_0949999/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-bread/beats_0949999/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-bread/beats_0949999/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-bread/beats_0949999/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-bread/beats_0949999/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-bread/beats_0949999/06.mp4'

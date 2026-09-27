@@ -1,0 +1,304 @@
+#!/usr/bin/env node
+// JAMAICA — THE BIKE.  Built from PROXIES (no originals downloaded yet).
+//
+// STRUCTURE (Tal's note): MD-Motivator order — the man tells his story FIRST,
+// the viewer comes to care, and only then does the bike happen.
+//
+// LAYOUT: square band on a 1080x1920 canvas with a blurred darkened fill above
+// and below, measured off Tal's reference DdeLOuyBAd2. A 9:16 centre-crop keeps
+// only 31% of the 16:9 width and decapitated people in V1; 1:1 keeps 56%.
+// Band sits above centre so faces are higher in frame.
+//
+// NOTHING NEGATIVE. The "Americans don't do that" ending is cut — Tal's videos
+// are always positive. It ends on "people are out there giving you hope".
+//
+// Proxy timecodes == original timecodes: this same list re-cuts at full quality.
+import { readFileSync, mkdirSync, writeFileSync, existsSync, rmSync, readdirSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { join } from "node:path";
+
+const FFDIR = "C:/Users/taldo/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.1-full_build/bin";
+const FF = join(FFDIR, "ffmpeg.exe"), FP = join(FFDIR, "ffprobe.exe");
+const ROOT = "C:/Users/taldo/Downloads/videos to edit/system";
+const DF = join(ROOT, "bin/deep-filter.exe");
+const PROXY = join(ROOT, "projects/_frameio/cache/proxies");
+// --hq: cut from the FULL-QUALITY spans fetched by scripts/fetch-hq.mjs
+// (1080-tall from the 4K originals) instead of the 360p discovery proxies.
+// Each span starts at its own `offset` in the original, so every in/out in
+// EDIT below has that offset subtracted. Without this the preview and the
+// final would be cut from different points in the footage.
+const HQMODE = process.argv.includes("--hq");
+const HQDIR = join(ROOT, "projects/_frameio/cache/hq");
+const HQMAN = HQMODE && existsSync(join(HQDIR, "jamaica-bike.json"))
+  ? JSON.parse(readFileSync(join(HQDIR, "jamaica-bike.json"), "utf8")) : {};
+const TRANS = join(ROOT, "projects/_frameio/cache/transcripts");
+const OUT = join(ROOT, "projects/jamaica-bike");
+const RUN = String(Date.now()).slice(-7);
+const BEATS = join(OUT, `beats_${RUN}`), TMP = join(OUT, `tmp_${RUN}`);
+const OUTNAME = HQMODE ? "JAMAICA HELP.mp4" : "JAMAICA_BIKE_V14_PREVIEW.mp4";
+// Windows holds a lock briefly after a previous run exits; retry rather than
+// dying. (Racing two builds at once corrupted output twice — don't do that.)
+
+mkdirSync(BEATS, { recursive: true }); mkdirSync(TMP, { recursive: true });
+for (const d of readdirSync(OUT)) {
+  if (/^(beats|tmp)_\d+$/.test(d) && !d.endsWith(RUN)) {
+    try { rmSync(join(OUT, d), { recursive: true, force: true }); } catch {}
+  }
+}
+
+const FONT = "C\\:/Windows/Fonts/arialbd.ttf";
+const GOLD = "0xF5C542";
+const CAP_SIZE = 78;      // Tal: "I like the big big yellow captions"
+const CAP_MAXW = 960;     // 1080 frame minus safe margins — captions MUST fit
+
+const idx = JSON.parse(readFileSync(join(ROOT, "projects/_frameio/cache/index/giving-back-in-jamaica.json"), "utf8"));
+const byTag = {}, idOf = {};
+for (const f of idx.files) {
+  const m = /^DJI_\d+_(\d{4})_/.exec(f.name);
+  if (m) { byTag[m[1]] = f.id; idOf[f.id] = f.name; }
+}
+const segsFor = (id) => {
+  const p = join(TRANS, `${id}.json`);
+  return existsSync(p) ? (JSON.parse(readFileSync(p, "utf8")).segments ?? []) : [];
+};
+
+const TITLE = "POV: I BOUGHT A BIKE FOR A MAN\nIN JAMAICA \u{1F1EF}\u{1F1F2} WHO LOST HIS HOME";
+
+// ---- THE EDIT --------------------------------------------------------------
+// Tal's running order (V4). It is also the TRUE CHRONOLOGY — the ask happened
+// at 22:36, "let's go buy him a bicycle" at 22:42, into the car at 22:48, and
+// the story interview at 22:57 during the drive. V3 rearranged events that
+// already had a natural order; this restores it.
+// EVERY in/out point sits on a real word boundary (verified by
+// scripts/verify-cut.mjs against Groq word timings). Nobody is cut off
+// mid-sentence — that is a hard rule, so beats are sized by where the speech
+// actually ends, not by a target duration.
+const EDIT = [
+  // HEAD pad ~0.12s so a word is never clipped at its onset.
+  // TAIL pad ~0.45s so a line is never cut on the frame it ends — V4 cut
+  // "let's make that happen" at exactly 48.90, the frame the word finished,
+  // and it snapped shut. A line needs air after it.
+  // AND: if the other person REPLIES, the reply belongs in the shot.
+  // OPEN ON A HUMAN. V13 opened on an empty landscape and then said
+  // "look at this / look at this / look at this" for 28 seconds without
+  // showing anything. Tal: "the first clip should show me vlogging and
+  // talking, or someone else. That's a rule."
+  // 0310 @0.6 is Tal's face inside the bunker — one context beat, not four.
+  ["0310",   0.32,  11.25, 0.50, "OPEN (Tal to camera, inside the shelter): 'this family of 10 completely lost their home ... you can see the baby sleeping on old mattresses'"],
+  // Tal, 2026-09-21: "you should have spoken about how they live, where the
+  // animals are - that's really crazy. You should include the most crazy part."
+  // 0306 is the clearest statement of it and V14 had no version of this at all.
+  ["0306",   6.60,  18.60, 0.50, "THE SITUATION: 'a family of 10 living in this concrete animal bunker. It used to hold calves, maybe pigs - and they're all living in one room.'"],
+  ["0311",   3.70,   5.55, 0.67, "HOOK: 'What's your dream for your birthday?'"],
+  ["0314",  38.44,  51.20, 0.30, "'...see if I could get a bicycle' / 'A bicycle?' / 'Okay, let's make that happen' -> HIS REPLY 'That would be really great, man'"],
+  ["0317",   0.10,   2.45, 0.75, "'alright guys, we'll be back with the bicycle'"],
+  ["0319",  13.50,  36.35, 0.55, "IN THE CAR — HIS STORY: 'my story is ... the hurricane ... three YEARS to build ... in a minute it's all gone'"],
+  ["0319",  99.72, 104.95, 0.55, "'...and I really appreciate it. And I just, I miss my home.'"],
+  // ADDED — this is the thematic heart of the film and V5 dropped it.
+  ["0318",   1.68,  10.90, 0.45, "'This is what life's about, helping people ... you lost everything, someone came to help you, and then you gotta help someone else. That's how the world works.'"],
+  ["0323",   0.05,   9.75, 0.48, "BIKE SHOP: 'we're buying him a bicycle' / 'matching your shirt?' / 'Yeah, man' — both smiling"],
+  ["0325",  24.90,  27.10, 0.45, "'I want to write Damien.' — him bent over the frame, writing"],
+  // "Birthday." ends at 11.22 and V10 cut at 11.34 — 0.12s of air, so it
+  // snapped shut. Tal heard it at ~1:49. Needs the full ~0.45s tail.
+  ["0325",   8.15,  11.78, 0.45, "PAYOFF for that line: 'What'd you write?' -> '33 ... my birthday.'"],
+  ["0327",   0.00,   5.80, 0.50, "HIM USING IT: 'What do you think? New bike, who this?'"],
+  ["0328",   0.75,   6.65, 0.50, "riding together: 'You know how to bike with two people?' ... 'Circle for now, man.'"],
+  ["0320",   1.76,  15.30, 0.42, "PAYOFF: 'you bring like a FULL ENJOYMENT to my life right now' — V4 chopped this after 'a'"],
+  ["0323",  14.52,  21.55, 0.50, "HIS MESSAGE (ending): 'Just continue. Do good. Leave negative thoughts. And let's be good in life, man.'"],
+];
+
+// DeepFilterNet at -a 10. NEVER -a 25 — it gated real speech to silence and
+// caused A/V drift. Street ambience stays: that texture is the proof it's real.
+function cleanAudio(src, ss, to, n) {
+  const raw = join(TMP, `${n}.wav`);
+  execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-to", String(to), "-i", src,
+    "-vn", "-ar", "48000", "-ac", "1", "-c:a", "pcm_s16le", raw], { stdio: "pipe" });
+  try {
+    execFileSync(DF, ["-a", "10", "-o", TMP, raw], { stdio: "pipe" });
+  } catch { /* best effort — never block the cut on denoise */ }
+  return raw;
+}
+
+// Caption-only corrections for words the model misheard. The audio is never
+// altered and we never change what a person actually said - only what STT got
+// wrong (Tal: "it took me three HERE" should be "three YEARS").
+const CORR = (() => {
+  const f = join(OUT, "CORRECTIONS.json");
+  if (!existsSync(f)) return [];
+  const j = JSON.parse(readFileSync(f, "utf8")).corrections ?? {};
+  return Object.entries(j)
+    .sort((a, b) => b[0].length - a[0].length)          // longest phrase first
+    .map(([from, to]) => {
+      const esc = [...from].map((ch) => (".*+?^${}()|[]\\".includes(ch) ? "\\" + ch : ch)).join("");
+      return [new RegExp(esc, "gi"), to];
+    });
+})();
+function applyCorrections(s) {
+  let out = s;
+  for (const [re, to] of CORR) out = out.replace(re, to);
+  return out;
+}
+
+// caption chunks: 1-3 words, ALL CAPS, gold — Tal's own system, measured off
+// his 1.7M reel. Short enough to read without looking away from the face.
+function captionFilters(id, ss, to, dir, n) {
+  // Captions come from REAL word timestamps (Groq --words), not from splitting a
+  // segment evenly. Even-splitting is what made V2 drift out of sync — a segment
+  // with a pause in it spread its words across the pause.
+  const p = join(TRANS, `${id}.json`);
+  const j = existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : {};
+
+  // Groq word timestamps OVERLAP when two people talk over each other, and the
+  // list is NOT sorted by time ("birthday?"[5.06-5.42] is followed by
+  // "Well,"[4.96-6.48]). Feeding that straight to drawtext enabled two captions
+  // at the same instant and they rendered ON TOP OF EACH OTHER
+  // ("FOR YOWEBLLRTHDAY"). Sort first, then force strictly non-overlapping
+  // windows below.
+  const words = (j.words ?? [])
+    .filter((w) => w.end > ss && w.start < to)
+    .slice()
+    .sort((x, y) => x.start - y.start || x.end - y.end);
+
+  // Collect the caption texts first so their widths can be measured in ONE
+  // python call. V6 raised the font to 78px without checking the text still
+  // fits and "LOST EVERYTHING, SOMEONE" ran off both edges of the frame.
+  const pending = [];
+  for (let i = 0; i < words.length; i += 3) {
+    const grp = words.slice(i, i + 3);
+    let t = grp.map((w) => String(w.word)).join(" ").replace(/[""]/g, "").replace(/\s+/g, " ").trim();
+    t = applyCorrections(t).replace(/[,.;:!?]+$/g, "").trim().toUpperCase();
+    pending.push(t);
+  }
+  let sizes = pending.map(() => CAP_SIZE);
+  if (pending.some(Boolean)) {
+    try {
+      sizes = JSON.parse(execFileSync("python",
+        [join(ROOT, "scripts/fit-caption.py"), String(CAP_MAXW), String(CAP_SIZE)],
+        { input: JSON.stringify(pending), encoding: "utf8" }));
+    } catch { /* fall back to base size */ }
+  }
+
+  const out = [];
+  let k = 0;
+  let prevEnd = 0;                       // last caption's end, in beat time
+  for (let i = 0; i < words.length; i += 3) {
+    const grp = words.slice(i, i + 3);
+    const txt = pending[i / 3];
+    if (!txt) continue;
+    const fsize = sizes[i / 3] ?? CAP_SIZE;
+
+    // strictly after the previous caption — never two on screen at once
+    let a = Math.max(prevEnd, Math.max(0, grp[0].start - ss));
+    const nextStart = words[i + 3] ? Math.max(0, words[i + 3].start - ss) : (to - ss);
+    let b = Math.min(to - ss, Math.max(nextStart, grp[grp.length - 1].end - ss + 0.2));
+    b = Math.min(b, nextStart > a ? nextStart : b);
+    if (b - a < 0.22) b = Math.min(to - ss, a + 0.22);
+    if (a >= to - ss - 0.05) continue;
+    prevEnd = b;
+
+    const tf = join(dir, `cap_${n}_${k++}.txt`);
+    writeFileSync(tf, txt, "utf8");
+    out.push(`drawtext=fontfile='${FONT}':textfile='${tf.replace(/\\/g, "/").replace(/:/g, "\\:")}'` +
+      `:fontcolor=${GOLD}:fontsize=${fsize}:borderw=6:bordercolor=black@0.85` +
+      `:x=(w-text_w)/2:y=1300:enable='between(t\\,${a.toFixed(2)}\\,${b.toFixed(2)})'`);
+  }
+  return out;
+}
+
+const list = [];
+let t = 0;
+EDIT.forEach(([tag, ss, to, xc, why], i) => {
+  const id = byTag[tag];
+  if (!id) return console.log(`  !! no id for ${tag}`);
+  const hq = HQMAN[id];
+  const src = hq ? join(HQDIR, `${id}.mp4`) : join(PROXY, `${id}.mp4`);
+  if (!existsSync(src)) return console.log(`  !! missing ${hq ? "hq span" : "proxy"} ${tag}`);
+  if (HQMODE && !hq) console.log(`  !! ${tag} has no HQ span - falling back to the 360p proxy`);
+  // HQ spans start partway into the original; rebase this beat onto the span.
+  //
+  // KEEP BOTH CLOCKS. The transcript's word timings are on the ORIGINAL
+  // timeline, so captions must be looked up with the original in/out. Only
+  // ffmpeg's seek moves onto the span's clock. Rebasing both silently read
+  // captions from the wrong part of the clip and emitted 0 for some beats.
+  const off = hq ? hq.offset : 0;
+  const capSs = ss, capTo = to;
+  ss = +(ss - off).toFixed(3); to = +(to - off).toFixed(3);
+  const dur = +(to - ss).toFixed(2);
+  const n = String(i + 1).padStart(2, "0");
+  const dest = join(BEATS, `${n}.mp4`);
+
+  const [W, H] = execFileSync(FP, ["-v", "error", "-select_streams", "v:0",
+    "-show_entries", "stream=width,height", "-of", "csv=p=0:nk=1", src],
+    { encoding: "utf8" }).trim().split(/[,\r\n]+/).map(Number);
+
+  const sqW = Math.min(W, H);
+  const sqX = Math.max(0, Math.min(W - sqW, Math.round(W * xc - sqW / 2)));
+  const bgW = Math.round(H * 9 / 16 / 2) * 2, bgX = Math.round((W - bgW) / 2);
+  const frames = Math.max(1, Math.round(dur * 30));
+  const BAND_Y = 330;
+  const GRADE = "eq=contrast=1.06:brightness=0.015:saturation=1.12,colorbalance=rm=0.02:bm=-0.02";
+
+  // captions come from the ORIGINAL timeline, not the HQ span clock
+  const caps = captionFilters(id, capSs, capTo, TMP, n);
+  const chain = [
+    `[bgb][fgs]overlay=(W-w)/2:${BAND_Y}`,
+    ...caps,
+  ].join(",");
+
+  const vf = [
+    "[0:v]split=2[bg][fg]",
+    `[bg]crop=${bgW}:${H}:${bgX}:0,scale=1080:1920,gblur=sigma=30,eq=brightness=-0.14:saturation=0.8[bgb]`,
+    `[fg]crop=${sqW}:${H}:${sqX}:0,scale=1080:1080:flags=lanczos,${GRADE},` +
+      `zoompan=z='min(1.0+0.06*on/${frames}\\,1.06)':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1080x1080:fps=30[fgs]`,
+    `${chain}[v]`,
+  ].join(";");
+
+  const wav = cleanAudio(src, ss, to, n);
+  execFileSync(FF, [
+    "-v", "error", "-y", "-ss", String(ss), "-to", String(to), "-i", src, "-i", wav,
+    "-filter_complex", vf, "-map", "[v]", "-map", "1:a",
+    // per-beat loudnorm removed: it normalised every beat to its own loudness
+    // and the level jumped at every cut. Fades kill the splice click.
+    "-af", `highpass=f=70,afade=t=in:st=0:d=0.025,afade=t=out:st=${Math.max(0, dur - 0.025).toFixed(3)}:d=0.025`,
+    "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p",
+    "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", "-shortest", dest,
+  ], { stdio: "pipe" });
+
+  console.log(`  ${n}  ${tag}  ${ss}->${to}  (${dur}s, ${caps.length} caps)  ${why}`);
+  list.push(dest); t += dur;
+});
+
+writeFileSync(join(OUT, "concat.txt"), list.map((p) => `file '${p.replace(/\\/g, "/")}'`).join("\n"), "utf8");
+
+// TITLE CARD — a real rounded pill with a soft shadow, rendered by
+// scripts/make-title.py and overlaid as a PNG. ffmpeg's drawtext can only draw
+// a hard-edged rectangle, which looked cheap next to Tal's own reels.
+const titlePng = join(OUT, "title.png");
+execFileSync("python", [join(ROOT, "scripts/make-title.py"), TITLE, titlePng, "52"], { stdio: "pipe" });
+
+execFileSync(FF, ["-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", join(OUT, "concat.txt"),
+  "-i", titlePng,
+  "-filter_complex",
+  // The beats are rendered at 1080x1920. Only the PREVIEW is downscaled —
+  // an --hq render that still stitched at 540x960 threw away everything the
+  // 4K fetch was for.
+  `[0:v][1:v]overlay=(W-w)/2:150:enable='lt(t\\,4.5)'[tv];[tv]scale=${HQMODE ? "1080:1920" : "540:960"}[v]`,
+  "-map", "[v]", "-map", "0:a",
+  // ONE loudness pass over the finished timeline, never per beat — per-beat
+  // normalisation made the level jump at every cut.
+  "-af", "dynaudnorm=f=250:g=15:p=0.9:m=4,loudnorm=I=-16:TP=-1.5:LRA=11",
+  "-c:v", "libx264", "-preset", "medium", "-crf", HQMODE ? "18" : "23", "-pix_fmt", "yuv420p",
+  "-c:a", "aac", "-b:a", "160k", "-ar", "48000", join(OUT, OUTNAME)], { stdio: "pipe" });
+
+// Keep RECIPES, not renders. EDIT.json is 4KB and rebuilds the film exactly;
+// the MP4 is 13MB and is just what it renders to. Old previews are deleted,
+// their recipe is kept as EDIT_<version>.json.
+const VER = /V(\d+)_PREVIEW/.exec(OUTNAME)?.[1] ?? "x";
+writeFileSync(join(OUT, `EDIT_v${VER}.json`), JSON.stringify({ built: new Date().toISOString(), total_s: +t.toFixed(2), title: TITLE, beats: EDIT }, null, 2), "utf8");
+for (const f of readdirSync(OUT)) {
+  if (!HQMODE && /_PREVIEW\.mp4$/.test(f) && f !== OUTNAME) rmSync(join(OUT, f), { force: true });
+}
+
+rmSync(TMP, { recursive: true, force: true });
+writeFileSync(join(OUT, "EDIT.json"), JSON.stringify({ built: new Date().toISOString(), source: "proxies", total_s: +t.toFixed(2), title: TITLE, beats: EDIT }, null, 2), "utf8");
+console.log(`\nTOTAL ${t.toFixed(1)}s  ->  projects/jamaica-bike/JAMAICA_BIKE_V14_PREVIEW.mp4`);

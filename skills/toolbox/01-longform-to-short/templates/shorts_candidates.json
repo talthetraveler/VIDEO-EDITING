@@ -1,0 +1,14 @@
+{
+  "_comment": "The DEFAULT OUTPUT AFTER ANALYSIS report (references/pipeline.md), machine-readable. Shown to Tal before any rendering — he picks which to actually build. Ranking is a heuristic, not a virality prediction.",
+  "slug": "slug",
+  "source_duration_s": 2832.4,
+  "analyzed_at": "2026-09-05T00:00:00.000Z",
+  "summary": {
+    "strong_candidates_found": 9,
+    "classification_counts": { "A": 3, "B": 4, "C": 2, "D": 0 }
+  },
+  "candidates": [
+    { "id": "moment_01", "classification": "A", "suggested_title": "HE JUST GAVE ME HIS MOTORCYCLE", "overall_score": 92, "estimated_short_duration_s": 41 },
+    { "id": "moment_02", "classification": "A", "suggested_title": "THE ANSWER SURPRISED EVERYONE", "overall_score": 90, "estimated_short_duration_s": 56 }
+  ]
+}

@@ -1,0 +1,5 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-ramallah/beats_6660470/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-ramallah/beats_6660470/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-ramallah/beats_6660470/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-ramallah/beats_6660470/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/hospital-ramallah/beats_6660470/05.mp4'

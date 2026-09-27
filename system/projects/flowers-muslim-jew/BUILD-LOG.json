@@ -1,0 +1,182 @@
+{
+  "built": "2026-09-23T23:20:06.888Z",
+  "total_s": 40.06,
+  "out": "FLOWERS_MUSLIM_JEW_V3.mp4",
+  "layout": "vertical",
+  "title": "POV: A MUSLIM AND A JEW MEET ON THE STREET\nIN ISRAEL",
+  "beats": [
+    [
+      "46a6fe2b-200d-4b6c-ad8a-c48263410482",
+      0,
+      8,
+      0.5,
+      "'Salamu Alaikum. This is for you.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "46a6fe2b-200d-4b6c-ad8a-c48263410482",
+      21.4,
+      27,
+      0.5,
+      "'You are Muslim?' 'I'm Muslim.' 'I'm Jewish.' 'Yahudi.' 'I love you.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.26
+        ]
+      }
+    ],
+    [
+      "46a6fe2b-200d-4b6c-ad8a-c48263410482",
+      33,
+      39.6,
+      0.5,
+      "THE LINE: 'We are all human beings. My brother.'",
+      null,
+      {
+        "z": [
+          1.14,
+          1.32
+        ]
+      }
+    ],
+    [
+      "2f6772b0-a8b4-41ea-b819-de40f18d8044",
+      0,
+      11.9,
+      0.5,
+      "and again, to the next stranger: 'Salaamu Alaikum - I wanted to give you this as a gift, for free.'",
+      null,
+      {
+        "z": [
+          1,
+          1.16
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.17,
+      "text": "HI, SALAMU ALAIKUM"
+    },
+    {
+      "beat": "01",
+      "at": 3.3,
+      "text": "THIS IS FOR YOU"
+    },
+    {
+      "beat": "01",
+      "at": 6.64,
+      "text": "I LOVE YOU"
+    },
+    {
+      "beat": "01",
+      "at": 11.42,
+      "text": "INSHALLAH WE"
+    },
+    {
+      "beat": "02",
+      "at": 0.72,
+      "text": "INSHALLAH"
+    },
+    {
+      "beat": "02",
+      "at": 1.52,
+      "text": "YOU ARE MUSLIM"
+    },
+    {
+      "beat": "02",
+      "at": 2.43,
+      "text": "I'M MUSLIM"
+    },
+    {
+      "beat": "02",
+      "at": 3.23,
+      "text": "I'M JEWISH. YAHUDI"
+    },
+    {
+      "beat": "02",
+      "at": 4.64,
+      "text": "I LOVE YOU"
+    },
+    {
+      "beat": "03",
+      "at": 0.62,
+      "text": "YEAH"
+    },
+    {
+      "beat": "03",
+      "at": 2.68,
+      "text": "WE ARE ALL HUMAN BEINGS"
+    },
+    {
+      "beat": "03",
+      "at": 5.83,
+      "text": "MY BROTHER. BYE-BYE"
+    },
+    {
+      "beat": "04",
+      "at": 0,
+      "text": "HI, SALAAMU ALAIKUM"
+    },
+    {
+      "beat": "04",
+      "at": 1.22,
+      "text": "I WANTED TO GIVE"
+    },
+    {
+      "beat": "04",
+      "at": 3.53,
+      "text": "YOU THIS AS A GIFT"
+    },
+    {
+      "beat": "04",
+      "at": 5.27,
+      "text": "FOR FREE"
+    },
+    {
+      "beat": "04",
+      "at": 6.07,
+      "text": "THANK YOU SO MUCH"
+    },
+    {
+      "beat": "04",
+      "at": 7.07,
+      "text": "WITH PLEASURE"
+    },
+    {
+      "beat": "04",
+      "at": 7.87,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "04",
+      "at": 8.67,
+      "text": "WITH PLEASURE"
+    },
+    {
+      "beat": "04",
+      "at": 9.47,
+      "text": "HAVE AN AMAZING DAY"
+    },
+    {
+      "beat": "04",
+      "at": 10.57,
+      "text": "YOU TOO"
+    },
+    {
+      "beat": "04",
+      "at": 11.37,
+      "text": "THANK YOU SO MUCH"
+    }
+  ]
+}

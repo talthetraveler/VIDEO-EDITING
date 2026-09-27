@@ -1,0 +1,12 @@
+{
+  "_comment": "INPUT to scripts/longform-build.mjs (one file per candidate, passed as --spec <this file>). Filename note: this is the SPEC you write, distinct from the clips.json LOG the build script writes to public/footage/<slug>/clips.json. Beats play in the order given, not source-chronological order — that's what enables hook reconstruction. start/end are absolute seconds into the long source named in transcript.json for this slug.",
+  "name": "he_gave_me_his_motorcycle",
+  "title": "HE JUST GAVE ME HIS MOTORCYCLE",
+  "uppercaseCaptions": true,
+  "tighten": true,
+  "beats": [
+    { "start": 783.4, "end": 789.9, "label": "hook — pulled forward from later in the scene" },
+    { "start": 761.2, "end": 783.4, "label": "context — the arrival and the setup" },
+    { "start": 789.9, "end": 805.0, "label": "payoff — his reaction, ending on the handshake", "objectPosition": "40%" }
+  ]
+}

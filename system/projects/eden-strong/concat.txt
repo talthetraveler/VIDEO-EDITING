@@ -1,0 +1,7 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/eden-strong/beats_4699743/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/eden-strong/beats_4699743/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/eden-strong/beats_4699743/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/eden-strong/beats_4699743/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/eden-strong/beats_4699743/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/eden-strong/beats_4699743/06.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/eden-strong/beats_4699743/07.mp4'

@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/max-hugs/beats_7668551/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/max-hugs/beats_7668551/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/max-hugs/beats_7668551/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/max-hugs/beats_7668551/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/max-hugs/beats_7668551/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/max-hugs/beats_7668551/06.mp4'

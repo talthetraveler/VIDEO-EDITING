@@ -1,0 +1,18 @@
+{
+  "_why": "Machine translation errors, hand-corrected. Hebrew->English is NOT reliable on medical terms: it rendered לוקמיה (leukemia) as 'working with milk and milk'. Captions only - the audio is untouched and stays in Hebrew.",
+  "corrections": {
+    "working with milk and milk": "fighting leukemia",
+    "milk and milk": "leukemia",
+    "get my diet": "was sick myself",
+    "you don't forgive her": "you don't give up",
+    "get active": "keep going",
+    "you can't lift your hands up when it's hard": "you can't give up when it's hard",
+    "and you can do it like this": "you can do this",
+    "to shake and to be a little bit sad": "you can shake, be a little sad",
+    "but not to lie down": "but don't lie down",
+    "to be able to lift your head up": "lift your head up",
+    "while I was able to get my diet": "while I was sick myself",
+    "the amazing Erin": "the amazing Eden",
+    "Erin": "Eden"
+  }
+}

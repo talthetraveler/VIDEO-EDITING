@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-7/beats_8211571/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-7/beats_8211571/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-7/beats_8211571/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-7/beats_8211571/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-7/beats_8211571/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/shop-owner-7/beats_8211571/06.mp4'

@@ -1,0 +1,120 @@
+{
+  "layout": "vertical",
+  "title": "POV: I TOLD A STRANGER IN ISRAEL\nI HAD NO MONEY AND WAS THIRSTY",
+  "titleHold": 4,
+  "out": "COFFEE_KINDNESS_V5.mp4",
+  "beats": [
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      3.2,
+      12.4,
+      0.5,
+      "THE TEST: 'Hi, how are you? I ran out of money, I don't have money to buy anything to drink, and I'm really thirsty.'",
+      null,
+      {
+        "z": [
+          1.22,
+          1.38
+        ],
+        "x": 0.5,
+        "y": 0.38
+      }
+    ],
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      12.9,
+      23.4,
+      0.5,
+      "THE DECISION: 'I was wondering if you can help me.' 'Yeah, of course. What do you want? Tell me.' 'I'll give you the best.'",
+      null,
+      {
+        "z": [
+          1.24,
+          1.4
+        ],
+        "x": 0.5,
+        "y": 0.38
+      }
+    ],
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      23.4,
+      30.6,
+      0.5,
+      "'What's your name?' 'Kiras.' 'Nice to meet you.'",
+      null,
+      {
+        "z": [
+          1.26,
+          1.42
+        ],
+        "x": 0.5,
+        "y": 0.38
+      }
+    ],
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      34.8,
+      42,
+      0.5,
+      "'Whatever you can give me, man, I'll be happy with.'",
+      null,
+      {
+        "z": [
+          1.28,
+          1.44
+        ],
+        "x": 0.5,
+        "y": 0.38
+      }
+    ],
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      42,
+      58.4,
+      0.5,
+      "THE PAYOFF: 'Why did you decide to help me?' 'Why not? If I can help, why not? We were raised in love, my friend.'",
+      null,
+      {
+        "z": [
+          1.3,
+          1.46
+        ],
+        "x": 0.5,
+        "y": 0.38
+      }
+    ],
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      58.4,
+      67.2,
+      0.5,
+      "'What do you mean, raised with love? Where were you raised?' 'Jaffa.'",
+      null,
+      {
+        "z": [
+          1.32,
+          1.48
+        ],
+        "x": 0.5,
+        "y": 0.38
+      }
+    ],
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      67.2,
+      80.8,
+      0.5,
+      "THE ENDING, IN HIS WORDS: 'I was raised as an Israeli Muslim Arab guy.' 'I'm Jewish.' 'We're brothers.'",
+      null,
+      {
+        "z": [
+          1.3399999999999999,
+          1.5
+        ],
+        "x": 0.5,
+        "y": 0.38
+      }
+    ]
+  ]
+}

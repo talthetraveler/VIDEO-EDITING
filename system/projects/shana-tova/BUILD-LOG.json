@@ -1,0 +1,283 @@
+{
+  "built": "2026-09-24T00:16:55.878Z",
+  "total_s": 81.68,
+  "out": "SHANA_TOVA_V4.mp4",
+  "layout": "vertical",
+  "title": "POV: I GAVE FLOWERS TO STRANGERS IN ISRAEL\nFOR THE JEWISH NEW YEAR",
+  "beats": [
+    [
+      "516dd787-9c98-443c-9f21-69cc36672756",
+      5.42,
+      10.3,
+      0.5,
+      "SETUP: 'Today is the Jewish New Year, so we are in Israel - giving flowers to strangers.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "9cf1b25f-9d76-4cdb-898a-fe8906ee50ff",
+      7.58,
+      12.35,
+      0.5,
+      "'Hello brother - Chag Sameach! Shana Tova!'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "deb5193c-41bb-4fa3-baf0-c2b61154ef82",
+      4.38,
+      11.83,
+      0.5,
+      "'I wanted to tell you Shana Tova.' 'Nice to meet you.' 'Where are you from?'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "1c5c684f-afe6-4ae9-8152-1e1247c0db16",
+      12.72,
+      20.13,
+      0.5,
+      "DIVERSITY: 'I just wanted to wish you a good year - and a happy Christmas.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "7cbc2332-364c-42a6-b8fe-aefba3477160",
+      5.26,
+      11.79,
+      0.5,
+      "'Hello, brother. Excuse me - I wanted to tell you Shana Tova. Nice to meet you.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "d4bdb440-cddc-4272-977c-8059634c68b2",
+      6.12,
+      14.59,
+      0.5,
+      "'I wanted to tell you guys Shana Tova, Chag Sameach.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "3c9f414c-87d5-4f80-83bd-87ab5be54b51",
+      9.76,
+      19.13,
+      0.5,
+      "'What is your favourite part about Israel?' 'Israel is good.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "fad44e25-24bb-4c39-a663-03242bee4cec",
+      46.4,
+      62,
+      0.5,
+      "ENDING: 'What is your favourite part about Israel?' - 'This is your home.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.26
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.26,
+      "text": "TODAY IS THE JEWISH"
+    },
+    {
+      "beat": "01",
+      "at": 1.26,
+      "text": "NEW YEAR, SO WE ARE IN ISRAEL"
+    },
+    {
+      "beat": "01",
+      "at": 3.01,
+      "text": "GIVING FLOWERS TO STRANGERS"
+    },
+    {
+      "beat": "02",
+      "at": 0.98,
+      "text": "SHANA TOVA"
+    },
+    {
+      "beat": "03",
+      "at": 0,
+      "text": "YOU SHANA TOVA"
+    },
+    {
+      "beat": "03",
+      "at": 0.99,
+      "text": "NICE TO MEET YOU"
+    },
+    {
+      "beat": "03",
+      "at": 2.72,
+      "text": "WHERE ARE YOU FROM"
+    },
+    {
+      "beat": "03",
+      "at": 4.28,
+      "text": "I'M FROM AFRICA"
+    },
+    {
+      "beat": "03",
+      "at": 6.07,
+      "text": "YOU'RE FROM IVORY COAST"
+    },
+    {
+      "beat": "03",
+      "at": 7.07,
+      "text": "FROM AFRICA"
+    },
+    {
+      "beat": "04",
+      "at": 0,
+      "text": "AND A HAPPY CHRISTMAS"
+    },
+    {
+      "beat": "04",
+      "at": 3.46,
+      "text": "HAPPY CHRISTMAS"
+    },
+    {
+      "beat": "04",
+      "at": 5.46,
+      "text": "OH, IT'S A GOOD YEAR"
+    },
+    {
+      "beat": "05",
+      "at": 0.02,
+      "text": "HELLO, BROTHER"
+    },
+    {
+      "beat": "05",
+      "at": 2.4,
+      "text": "EXCUSE ME"
+    },
+    {
+      "beat": "05",
+      "at": 3.2,
+      "text": "I WANTED TO TELL"
+    },
+    {
+      "beat": "05",
+      "at": 4.2,
+      "text": "SHANA TOVA"
+    },
+    {
+      "beat": "05",
+      "at": 5.54,
+      "text": "NICE TO MEET YOU"
+    },
+    {
+      "beat": "05",
+      "at": 6.54,
+      "text": "WHERE ARE YOU FROM"
+    },
+    {
+      "beat": "06",
+      "at": 0.04,
+      "text": "WANTED TO TELL YOU GUYS"
+    },
+    {
+      "beat": "06",
+      "at": 1.74,
+      "text": "SHANA TOVA, CHAG SAMEACH"
+    },
+    {
+      "beat": "06",
+      "at": 3.16,
+      "text": "TODAY IS THE JEWISH"
+    },
+    {
+      "beat": "06",
+      "at": 4.62,
+      "text": "NEW YEAR"
+    },
+    {
+      "beat": "06",
+      "at": 5.92,
+      "text": "TODAY IS THE HOLIDAY"
+    },
+    {
+      "beat": "06",
+      "at": 6.92,
+      "text": "FOR THE JEWISH PEOPLE"
+    },
+    {
+      "beat": "06",
+      "at": 7.92,
+      "text": "FOR YOU GUYS"
+    },
+    {
+      "beat": "07",
+      "at": 0.05,
+      "text": "WHAT IS YOUR FAVORITE"
+    },
+    {
+      "beat": "07",
+      "at": 1.05,
+      "text": "PART ABOUT ISRAEL"
+    },
+    {
+      "beat": "07",
+      "at": 8.06,
+      "text": "IS GOOD. WHY"
+    },
+    {
+      "beat": "08",
+      "at": 0,
+      "text": "IS YOUR FAVORITE PART"
+    },
+    {
+      "beat": "08",
+      "at": 14.57,
+      "text": "ABOUT ISRAEL"
+    },
+    {
+      "beat": "08",
+      "at": 21.52,
+      "text": "THIS IS YOUR HOME"
+    }
+  ]
+}

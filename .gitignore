@@ -1,0 +1,113 @@
+# VIDEO-EDITING — the SYSTEM is versioned here, the CONTENT is not.
+#
+# Tal, 2026-09-27: *"push the skills ... push everything besides the actual
+# content. And the heavy stuff."*
+#
+# Git is a COPY, not a move: everything below still lives on the laptop. This
+# repo exists so the part that took a year to get right survives the laptop.
+
+# ----------------------------------------------------------- THE CONTENT
+# Footage is replaceable (camera + Frame.io). The edit SPECS are not, and
+# those are .json/.md, so they are kept.
+FOOTAGE IN/
+VIDEOS OUT/
+assets/
+system/public/footage/
+system/projects/_build-scratch/
+system/projects/_tmp-*/
+**/proxies/
+**/_previews/
+**/_review/
+
+*.mp4
+*.mov
+*.m4v
+*.mkv
+*.avi
+*.webm
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.aac
+
+# ----------------------------------------------------------- SECRETS
+# A key pushed here is compromised even if deleted a minute later, even in a
+# private repo — it stays in the history and has to be rotated.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+token*.json
+**/credentials.json
+
+# ----------------------------------------------------------- HEAVY + REGENERABLE
+# ~11 GB of this folder. All of it comes back from a single install command.
+node_modules/
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+.cache/
+**/.remotion/
+**/chrome-headless-shell*/
+*.onnx
+*.bin
+*.dll
+*.lib
+*.exe
+*.pack
+*.dic
+*.safetensors
+*.pt
+*.pth
+
+# ----------------------------------------------------------- OTHER PEOPLE'S REPOS
+# Cloned here, restorable exactly from skills/toolbox/CLONES.md. Not
+# redistributed through this repo.
+system/vendor/
+skills/toolbox/add-zooms/
+skills/toolbox/brag/
+skills/toolbox/claude-shorts/
+skills/toolbox/clipify/
+skills/toolbox/cut-video/
+skills/toolbox/find-broll/
+skills/toolbox/nl-video-editing/
+skills/toolbox/video-use/
+skills/toolbox/youtube-clipper/
+.agents/
+skills/brag
+skills/brag-slim
+
+# ----------------------------------------------------------- noise
+.DS_Store
+Thumbs.db
+*.log
+
+# ----------------------------------------------------------- found on the first staging pass
+# .claude/skills is a JUNCTION to skills/ — git follows it and would commit
+# every skill twice. skills/ is the real directory; this is only a pointer.
+.claude/skills
+
+# Frame.io discovery caches hold SIGNED ASSET URLS — 3,126 time-limited access
+# tokens in discover-index.json alone. Regenerable with frameio-discover.mjs,
+# and not safe to publish even privately.
+system/projects/_frameio/cache/discover-index.json
+system/projects/_frameio/cache/index-backup-*.json
+system/projects/_frameio/cache/index/
+system/projects/_frameio/cache/framing/
+system/projects/_frameio/token*.json
+system/projects/_frameio/credentials.json
+
+# ----------------------------------------------------------- PEOPLE'S WORDS ARE CONTENT
+# Interview transcripts are the people in the videos, unedited - including
+# everything cut from the final film. GAZA-GUY-TRANSCRIPT.md alone names a
+# man's birth identity, his home town in Gaza, his imprisonment there and his
+# neighbours in Hamas leadership. Never in this repo, public or private.
+system/projects/_frameio/*TRANSCRIPT*.md
+system/projects/_frameio/cache/
+**/transcripts/
+**/translate/
+**/diarize/

@@ -1,0 +1,143 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "beats": [
+    {
+      "src": "footage/meta-shoot/video-4464_singular_display.MP4",
+      "startSec": 34.82,
+      "endSec": 45.82
+    },
+    {
+      "src": "footage/meta-shoot/video-4204_singular_display.MP4",
+      "startSec": 46.21,
+      "endSec": 53.5
+    },
+    {
+      "src": "footage/meta-shoot/video-3571_singular_display.MP4",
+      "startSec": 11.37,
+      "endSec": 18.87
+    }
+  ],
+  "captions": [
+    {
+      "text": " for",
+      "startMs": 2170,
+      "endMs": 2490,
+      "timestampMs": 2330,
+      "confidence": 1
+    },
+    {
+      "text": " free",
+      "startMs": 2490,
+      "endMs": 2940,
+      "timestampMs": 2715,
+      "confidence": 1
+    },
+    {
+      "text": " To",
+      "startMs": 3350,
+      "endMs": 3570,
+      "timestampMs": 3460,
+      "confidence": 1
+    },
+    {
+      "text": " be",
+      "startMs": 3570,
+      "endMs": 3850,
+      "timestampMs": 3710,
+      "confidence": 1
+    },
+    {
+      "text": " healthy",
+      "startMs": 3850,
+      "endMs": 4830,
+      "timestampMs": 4340,
+      "confidence": 1
+    },
+    {
+      "text": " Wait",
+      "startMs": 5290,
+      "endMs": 5570,
+      "timestampMs": 5430,
+      "confidence": 1
+    },
+    {
+      "text": " for",
+      "startMs": 12080,
+      "endMs": 12250,
+      "timestampMs": 12165,
+      "confidence": 1
+    },
+    {
+      "text": " free",
+      "startMs": 12250,
+      "endMs": 12480,
+      "timestampMs": 12365,
+      "confidence": 1
+    },
+    {
+      "text": " This",
+      "startMs": 12700,
+      "endMs": 12960,
+      "timestampMs": 12830,
+      "confidence": 1
+    },
+    {
+      "text": " is",
+      "startMs": 12960,
+      "endMs": 13120,
+      "timestampMs": 13040,
+      "confidence": 1
+    },
+    {
+      "text": " the",
+      "startMs": 13120,
+      "endMs": 13290,
+      "timestampMs": 13205,
+      "confidence": 1
+    },
+    {
+      "text": " stereotype",
+      "startMs": 13290,
+      "endMs": 13950,
+      "timestampMs": 13620,
+      "confidence": 1
+    },
+    {
+      "text": " best",
+      "startMs": 19180,
+      "endMs": 19460,
+      "timestampMs": 19320,
+      "confidence": 1
+    },
+    {
+      "text": " humus",
+      "startMs": 19460,
+      "endMs": 19630,
+      "timestampMs": 19545,
+      "confidence": 1
+    },
+    {
+      "text": " in",
+      "startMs": 19630,
+      "endMs": 19730,
+      "timestampMs": 19680,
+      "confidence": 1
+    },
+    {
+      "text": " Israel",
+      "startMs": 19730,
+      "endMs": 20040,
+      "timestampMs": 19885,
+      "confidence": 1
+    },
+    {
+      "text": " here",
+      "startMs": 20040,
+      "endMs": 20240,
+      "timestampMs": 20140,
+      "confidence": 1
+    }
+  ]
+}

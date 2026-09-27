@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "mimic-mcp": {
+      "command": "npx",
+      "args": ["-y", "mimic-reels-mcp"]
+    },
+    "obsidian-vault": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:/Users/taldo/Downloads/OBSEDIAN"]
+    }
+  }
+}

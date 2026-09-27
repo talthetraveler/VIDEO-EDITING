@@ -1,0 +1,125 @@
+{
+  "title": "I TOLD A STRANGER IN ISRAEL 🇮🇱\nI HAD NO MONEY FOR A DRINK",
+  "layout": "vertical",
+  "out": "COFFEE_KINDNESS_V8.mp4",
+  "beats": [
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      6,
+      13,
+      0.5,
+      "POV (Sony audio): 'I ran out of money... I'm really thirsty.'",
+      0,
+      {
+        "audio": {
+          "id": "c2417833-df9e-431c-93a1-97ccad1da33d",
+          "at": 25.6
+        }
+      }
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      32.4,
+      36.6,
+      0.5,
+      "THE ASK: 'I was wondering if you can help me.' 'Yeah, of course. Tell me.'",
+      1,
+      null
+    ],
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      22.4,
+      29.5,
+      0.5,
+      "POV (Sony audio): 'I'll give you the best.' 'What's your name?' 'Kiras.'",
+      0,
+      {
+        "audio": {
+          "id": "c2417833-df9e-431c-93a1-97ccad1da33d",
+          "at": 41.3
+        }
+      }
+    ],
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      34.8,
+      41.2,
+      0.5,
+      "POV CUTAWAY (Sony audio): the drink being made and handed over",
+      0,
+      {
+        "audio": {
+          "id": "c2417833-df9e-431c-93a1-97ccad1da33d",
+          "at": 51.6
+        }
+      }
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      61,
+      64.4,
+      0.5,
+      "THE QUESTION: 'Why did you decide to help me?' 'Why not?'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      66,
+      71.6,
+      0.5,
+      "'If I can help, why not? We were raised in love, my friend.'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      90.6,
+      96.3,
+      0.5,
+      "THE TURN: 'You're Muslim.' 'I'm Jewish.' 'We're brothers.'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      96.2,
+      102,
+      0.5,
+      "'The world is so divided now between Muslims and Jews.'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      144.2,
+      153.9,
+      0.5,
+      "THE LINE: 'I don't look at the colour or the language. We're all human beings.'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      159.5,
+      171.9,
+      0.5,
+      "JAFFA: 'Jews, Muslims, Christians, we live all together. We don't know how to be divided.'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      178.5,
+      184.9,
+      0.5,
+      "ENDING: 'Kulo Wahad. It means we're all one.'",
+      1,
+      null
+    ]
+  ],
+  "_camera_note": "SONY C0481 primary (mean luma 113); ONE Meta-glasses POV cutaway (luma 48). Tal: 'you should be using mostly the Sony camera video, like the long lens, that's just so much better.' The Sony also covers 438s against the glasses' 298s - the three strongest lines here (the colour/language answer, the Jaffa answer, and Kulo Wahad) exist ONLY on the Sony and were missing from every earlier version. The POV beat is kept for the one thing only it has: the drink arriving in Tal's own hands.",
+  "autoFrame": true,
+  "maxZoom": 2.2,
+  "faceMinY": 0.3
+}

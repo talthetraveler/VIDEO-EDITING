@@ -1,0 +1,223 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "beats": [
+    {
+      "src": "footage/meta-shoot/od_video-2421_singular_display.MP4",
+      "startSec": 0,
+      "endSec": 2.55
+    },
+    {
+      "src": "footage/meta-shoot/od_video-2429_singular_display.MP4",
+      "startSec": 1.57,
+      "endSec": 5.43
+    },
+    {
+      "src": "footage/meta-shoot/video-2338_singular_display.MP4",
+      "startSec": 5.86,
+      "endSec": 9.76
+    },
+    {
+      "src": "footage/meta-shoot/video-3467_singular_display.MP4",
+      "startSec": 0,
+      "endSec": 3.91
+    },
+    {
+      "src": "footage/meta-shoot/od_video-3332_singular_display.MP4",
+      "startSec": 0.11,
+      "endSec": 4.05
+    }
+  ],
+  "captions": [
+    {
+      "text": " Shabbat",
+      "startMs": 110,
+      "endMs": 610,
+      "timestampMs": 360,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 610,
+      "endMs": 940,
+      "timestampMs": 775,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 1030,
+      "endMs": 1280,
+      "timestampMs": 1155,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 1280,
+      "endMs": 1400,
+      "timestampMs": 1340,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 1400,
+      "endMs": 1850,
+      "timestampMs": 1625,
+      "confidence": 1
+    },
+    {
+      "text": " day",
+      "startMs": 1850,
+      "endMs": 2110,
+      "timestampMs": 1980,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 3290,
+      "endMs": 3740,
+      "timestampMs": 3515,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 3740,
+      "endMs": 4120,
+      "timestampMs": 3930,
+      "confidence": 1
+    },
+    {
+      "text": " Good",
+      "startMs": 4470,
+      "endMs": 4740,
+      "timestampMs": 4605,
+      "confidence": 1
+    },
+    {
+      "text": " luck",
+      "startMs": 4740,
+      "endMs": 5010,
+      "timestampMs": 4875,
+      "confidence": 1
+    },
+    {
+      "text": " sir",
+      "startMs": 5140,
+      "endMs": 5340,
+      "timestampMs": 5240,
+      "confidence": 1
+    },
+    {
+      "text": " Good",
+      "startMs": 5600,
+      "endMs": 5860,
+      "timestampMs": 5730,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 7650,
+      "endMs": 7700,
+      "timestampMs": 7675,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 7700,
+      "endMs": 7780,
+      "timestampMs": 7740,
+      "confidence": 1
+    },
+    {
+      "text": " No",
+      "startMs": 8010,
+      "endMs": 8160,
+      "timestampMs": 8085,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 8310,
+      "endMs": 8380,
+      "timestampMs": 8345,
+      "confidence": 1
+    },
+    {
+      "text": " need",
+      "startMs": 8380,
+      "endMs": 8670,
+      "timestampMs": 8525,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 10420,
+      "endMs": 10710,
+      "timestampMs": 10565,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 10710,
+      "endMs": 10880,
+      "timestampMs": 10795,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 10950,
+      "endMs": 11130,
+      "timestampMs": 11040,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 11130,
+      "endMs": 11390,
+      "timestampMs": 11260,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 11390,
+      "endMs": 11620,
+      "timestampMs": 11505,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 11620,
+      "endMs": 11830,
+      "timestampMs": 11725,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 14510,
+      "endMs": 15270,
+      "timestampMs": 14890,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 15270,
+      "endMs": 16370,
+      "timestampMs": 15820,
+      "confidence": 1
+    },
+    {
+      "text": " Shabbat",
+      "startMs": 16410,
+      "endMs": 17050,
+      "timestampMs": 16730,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 17050,
+      "endMs": 17720,
+      "timestampMs": 17385,
+      "confidence": 1
+    }
+  ]
+}

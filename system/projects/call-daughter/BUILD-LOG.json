@@ -1,0 +1,120 @@
+{
+  "built": "2026-09-23T22:26:15.445Z",
+  "total_s": 48.91,
+  "out": "CALL_DAUGHTER_V2.mp4",
+  "layout": "vertical",
+  "title": "CALL SOMEONE YOU LOVE\nJERUSALEM",
+  "beats": [
+    [
+      "local-0c06a4d937b9b59f",
+      0,
+      49,
+      0.5,
+      "ONE TAKE: 'Shalom Aleichem. How are you, my sweet daughter? I miss you so much. I hope to see you before I die. Bye-bye, darling. I love you.'",
+      null,
+      {
+        "z": [
+          1,
+          1.26
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "text": "HELLO, SHALOM ALEICHEM"
+    },
+    {
+      "beat": "01",
+      "at": 2.33,
+      "text": "HOW ARE YOU MY SWEET DAUGHTER"
+    },
+    {
+      "beat": "01",
+      "at": 7,
+      "text": "I MISS YOU SO MUCH"
+    },
+    {
+      "beat": "01",
+      "at": 10.62,
+      "text": "I LOVE YOU"
+    },
+    {
+      "beat": "01",
+      "at": 12.8,
+      "text": "I HOPE TO SEE"
+    },
+    {
+      "beat": "01",
+      "at": 15.7,
+      "text": "YOU BEFORE I DIE"
+    },
+    {
+      "beat": "01",
+      "at": 18.6,
+      "text": "GOD BLESS YOU AND SAVE"
+    },
+    {
+      "beat": "01",
+      "at": 22.22,
+      "text": "YOU FOR YOU AND YOUR CHILDREN"
+    },
+    {
+      "beat": "01",
+      "at": 24.89,
+      "text": "I LOVE YOU, MY SWEET DAUGHTER"
+    },
+    {
+      "beat": "01",
+      "at": 27.51,
+      "text": "TAKE CARE AND GOD"
+    },
+    {
+      "beat": "01",
+      "at": 28.51,
+      "text": "BLESS YOU"
+    },
+    {
+      "beat": "01",
+      "at": 29.5,
+      "text": "I HOPE WE WILL MEET AGAIN"
+    },
+    {
+      "beat": "01",
+      "at": 31.95,
+      "text": "AMERICA IS NOT FAR"
+    },
+    {
+      "beat": "01",
+      "at": 32.95,
+      "text": "IN ANY TIME WE CAN BE CLOSE"
+    },
+    {
+      "beat": "01",
+      "at": 36.45,
+      "text": "TOGETHER"
+    },
+    {
+      "beat": "01",
+      "at": 38.1,
+      "text": "TAKE CARE AND GOD"
+    },
+    {
+      "beat": "01",
+      "at": 42.46,
+      "text": "BLESS YOU"
+    },
+    {
+      "beat": "01",
+      "at": 43.94,
+      "text": "BYE-BYE, DARLING"
+    },
+    {
+      "beat": "01",
+      "at": 46.09,
+      "text": "I LOVE YOU"
+    }
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "built": "2026-09-23T22:37:00.328Z",
+  "total_s": 79.66,
+  "out": "COFFEE_KINDNESS_V8.mp4",
+  "layout": "vertical",
+  "title": "I TOLD A STRANGER IN ISRAEL 🇮🇱\nI HAD NO MONEY FOR A DRINK",
+  "beats": [
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      6,
+      13,
+      0.5,
+      "POV (Sony audio): 'I ran out of money... I'm really thirsty.'",
+      0,
+      {
+        "audio": {
+          "id": "c2417833-df9e-431c-93a1-97ccad1da33d",
+          "at": 25.6
+        }
+      }
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      32.4,
+      36.6,
+      0.5,
+      "THE ASK: 'I was wondering if you can help me.' 'Yeah, of course. Tell me.'",
+      1,
+      null
+    ],
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      22.4,
+      29.5,
+      0.5,
+      "POV (Sony audio): 'I'll give you the best.' 'What's your name?' 'Kiras.'",
+      0,
+      {
+        "audio": {
+          "id": "c2417833-df9e-431c-93a1-97ccad1da33d",
+          "at": 41.3
+        }
+      }
+    ],
+    [
+      "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+      34.8,
+      41.2,
+      0.5,
+      "POV CUTAWAY (Sony audio): the drink being made and handed over",
+      0,
+      {
+        "audio": {
+          "id": "c2417833-df9e-431c-93a1-97ccad1da33d",
+          "at": 51.6
+        }
+      }
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      61,
+      64.4,
+      0.5,
+      "THE QUESTION: 'Why did you decide to help me?' 'Why not?'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      66,
+      71.6,
+      0.5,
+      "'If I can help, why not? We were raised in love, my friend.'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      90.6,
+      96.3,
+      0.5,
+      "THE TURN: 'You're Muslim.' 'I'm Jewish.' 'We're brothers.'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      96.2,
+      102,
+      0.5,
+      "'The world is so divided now between Muslims and Jews.'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      144.2,
+      153.9,
+      0.5,
+      "THE LINE: 'I don't look at the colour or the language. We're all human beings.'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      159.5,
+      171.9,
+      0.5,
+      "JAFFA: 'Jews, Muslims, Christians, we live all together. We don't know how to be divided.'",
+      1,
+      null
+    ],
+    [
+      "c2417833-df9e-431c-93a1-97ccad1da33d",
+      178.5,
+      184.9,
+      0.5,
+      "ENDING: 'Kulo Wahad. It means we're all one.'",
+      1,
+      null
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.4,
+      "text": "UM I RAN OUT"
+    },
+    {
+      "beat": "01",
+      "at": 2.08,
+      "text": "OF MONEY AND I DON'T"
+    },
+    {
+      "beat": "01",
+      "at": 3.33,
+      "text": "HAVE MONEY TO BUY"
+    },
+    {
+      "beat": "01",
+      "at": 4.51,
+      "text": "ANYTHING TO DRINK AND I'M"
+    },
+    {
+      "beat": "01",
+      "at": 6.09,
+      "text": "REALLY THIRSTY"
+    },
+    {
+      "beat": "01",
+      "at": 6.89,
+      "text": "ON ME I WAS WONDERING IF"
+    },
+    {
+      "beat": "02",
+      "at": 1.14,
+      "text": "ON ME I WAS WONDERING"
+    },
+    {
+      "beat": "02",
+      "at": 2.39,
+      "text": "IF YOU CAN HELP"
+    },
+    {
+      "beat": "02",
+      "at": 3.39,
+      "text": "ME YEAH OF COURSE"
+    },
+    {
+      "beat": "02",
+      "at": 4.39,
+      "text": "WHAT DO YOU WANT"
+    },
+    {
+      "beat": "03",
+      "at": 0.5,
+      "text": "I'LL GIVE YOU THE BEST"
+    },
+    {
+      "beat": "03",
+      "at": 1.75,
+      "text": "WOW WHAT'S YOUR NAME"
+    },
+    {
+      "beat": "03",
+      "at": 3.32,
+      "text": "KIRA NICE TO MEET"
+    },
+    {
+      "beat": "03",
+      "at": 4.64,
+      "text": "YOU ARE YOU ARAB"
+    },
+    {
+      "beat": "03",
+      "at": 5.73,
+      "text": "YEAH WOW AMAZING MAN"
+    },
+    {
+      "beat": "03",
+      "at": 7.25,
+      "text": "THANK YOU SO"
+    },
+    {
+      "beat": "04",
+      "at": 0.07,
+      "text": "YOU WANT TO TRY"
+    },
+    {
+      "beat": "04",
+      "at": 1.07,
+      "text": "LIKE A FIZZ, LIKE"
+    },
+    {
+      "beat": "04",
+      "at": 2.07,
+      "text": "SODA WATER FLAVORED"
+    },
+    {
+      "beat": "04",
+      "at": 3.34,
+      "text": "WHATEVER YOU CAN GIVE ME"
+    },
+    {
+      "beat": "04",
+      "at": 4.64,
+      "text": "NO, WHATEVER YOU CAN GIVE"
+    },
+    {
+      "beat": "04",
+      "at": 5.89,
+      "text": "ME, MAN"
+    },
+    {
+      "beat": "05",
+      "at": 0.54,
+      "text": "WHY DID YOU DECIDE"
+    },
+    {
+      "beat": "05",
+      "at": 1.58,
+      "text": "TO HELP ME"
+    },
+    {
+      "beat": "05",
+      "at": 3.25,
+      "text": "WHY NOT"
+    },
+    {
+      "beat": "06",
+      "at": 0,
+      "text": "LOT OF PEOPLE"
+    },
+    {
+      "beat": "06",
+      "at": 0.8,
+      "text": "YEAH, OF COURSE"
+    },
+    {
+      "beat": "06",
+      "at": 1.6,
+      "text": "IF I CAN HELP"
+    },
+    {
+      "beat": "06",
+      "at": 3.27,
+      "text": "WHY NOT"
+    },
+    {
+      "beat": "06",
+      "at": 4.07,
+      "text": "WE WERE RAISED IN LOVE"
+    },
+    {
+      "beat": "06",
+      "at": 5.32,
+      "text": "MY FRIEND"
+    },
+    {
+      "beat": "07",
+      "at": 0.58,
+      "text": "OH, YOU'RE MUSLIM"
+    },
+    {
+      "beat": "07",
+      "at": 1.41,
+      "text": "YEAH, WOW, AMAZING"
+    },
+    {
+      "beat": "07",
+      "at": 3.93,
+      "text": "I'M JEWISH"
+    },
+    {
+      "beat": "07",
+      "at": 4.73,
+      "text": "WE'RE BROTHERS"
+    },
+    {
+      "beat": "08",
+      "at": 0.46,
+      "text": "OF COURSE"
+    },
+    {
+      "beat": "08",
+      "at": 1.26,
+      "text": "THANK YOU SO MUCH MAN"
+    },
+    {
+      "beat": "08",
+      "at": 2.51,
+      "text": "YOU'RE WELCOME"
+    },
+    {
+      "beat": "08",
+      "at": 3.31,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "08",
+      "at": 4.11,
+      "text": "THE WORLD IS SO DIVIDED"
+    },
+    {
+      "beat": "08",
+      "at": 5.36,
+      "text": "NOW, YOU KNOW BETWEEN"
+    },
+    {
+      "beat": "09",
+      "at": 0,
+      "text": "WOW"
+    },
+    {
+      "beat": "09",
+      "at": 0.8,
+      "text": "NO MATTER WHO IS THIS ONE"
+    },
+    {
+      "beat": "09",
+      "at": 3.01,
+      "text": "I DON'T LOOK ABOUT THE COLOR"
+    },
+    {
+      "beat": "09",
+      "at": 5.4,
+      "text": "OR THE LANGUAGE, THE ONE"
+    },
+    {
+      "beat": "09",
+      "at": 7.26,
+      "text": "WHO ASKS FOR HELP"
+    },
+    {
+      "beat": "09",
+      "at": 9.41,
+      "text": "IT DOESN'T MATTER"
+    },
+    {
+      "beat": "09",
+      "at": 10.21,
+      "text": "WE'RE ALL HUMAN BEINGS"
+    },
+    {
+      "beat": "10",
+      "at": 0.24,
+      "text": "IN JAFFA WE ARE RAISED"
+    },
+    {
+      "beat": "10",
+      "at": 2.38,
+      "text": "ALL TOGETHER"
+    },
+    {
+      "beat": "10",
+      "at": 3.24,
+      "text": "JEWS, MUSLIMS"
+    },
+    {
+      "beat": "10",
+      "at": 4.1,
+      "text": "CHRISTIANS, WE LIVE ALL TOGETHER"
+    },
+    {
+      "beat": "10",
+      "at": 6.24,
+      "text": "IT'S LIKE REALLY BEAUTIFUL"
+    },
+    {
+      "beat": "10",
+      "at": 8.42,
+      "text": "WE DON'T KNOW HOW TO BE DIVIDED"
+    },
+    {
+      "beat": "11",
+      "at": 0.6,
+      "text": "YOU KNOW I HEARD"
+    },
+    {
+      "beat": "11",
+      "at": 1.8,
+      "text": "A QUOTE, KULO WAHAD"
+    },
+    {
+      "beat": "11",
+      "at": 3,
+      "text": "KULO WAHAD"
+    },
+    {
+      "beat": "11",
+      "at": 3.8,
+      "text": "IT MEANS WE'RE ALL"
+    },
+    {
+      "beat": "11",
+      "at": 4.93,
+      "text": "ONE. YEAH"
+    },
+    {
+      "beat": "11",
+      "at": 5.73,
+      "text": "YEAH, OF COURSE"
+    },
+    {
+      "beat": "11",
+      "at": 6.6,
+      "text": "SO WHY DID YOU"
+    }
+  ]
+}

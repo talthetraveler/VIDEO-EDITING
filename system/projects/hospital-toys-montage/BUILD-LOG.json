@@ -1,0 +1,235 @@
+{
+  "built": "2026-09-23T15:01:37.875Z",
+  "total_s": 50.4,
+  "out": "HOSPITAL_TOYS_MONTAGE_V4.mp4",
+  "layout": "vertical",
+  "title": "POV: I SPENT A DAY GIVING TOYS\nTO SICK KIDS IN ISRAEL",
+  "beats": [
+    [
+      "40d2c60c-dc39-4c40-ba97-c897965d847a",
+      0,
+      13,
+      0.5,
+      "'So we got you some gifts. We heard you're not feeling so well - so we got you some games.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      6.5,
+      13.2,
+      0.5,
+      "the next room: 'This is for you. Assalamualaikum.'",
+      null,
+      {
+        "z": [
+          1.02,
+          1.16
+        ]
+      }
+    ],
+    [
+      "40d2c60c-dc39-4c40-ba97-c897965d847a",
+      15.8,
+      20,
+      0.5,
+      "'So here you have a hairbrush.'",
+      null,
+      {
+        "z": [
+          1.04,
+          1.16
+        ]
+      }
+    ],
+    [
+      "40d2c60c-dc39-4c40-ba97-c897965d847a",
+      36,
+      40.6,
+      0.5,
+      "'And how do you feel now?' 'Good.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.2
+        ]
+      }
+    ],
+    [
+      "40d2c60c-dc39-4c40-ba97-c897965d847a",
+      40.4,
+      50.2,
+      0.5,
+      "'What's your name?' 'Heger.' 'Salamu alaikum.' 'Inshallah.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.24
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      63.4,
+      74.4,
+      0.5,
+      "THE ENDING: 'At the end of the day we're all human beings. We all deserve health. I'm Jewish and you're Muslim - we're brothers.'",
+      null,
+      {
+        "z": [
+          1.12,
+          1.3
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "text": "SO WE GOT YOU SOME GIFTS"
+    },
+    {
+      "beat": "01",
+      "at": 4.24,
+      "text": "HOW ARE YOU"
+    },
+    {
+      "beat": "01",
+      "at": 5.04,
+      "text": "WE GOT YOU THIS"
+    },
+    {
+      "beat": "01",
+      "at": 7.5,
+      "text": "WE WANTED YOU TO FEEL BETTER"
+    },
+    {
+      "beat": "01",
+      "at": 9.06,
+      "text": "AND WE HEARD YOU'RE"
+    },
+    {
+      "beat": "01",
+      "at": 10.06,
+      "text": "NOT FEELING SO WELL"
+    },
+    {
+      "beat": "01",
+      "at": 11.06,
+      "text": "SO WE GOT YOU SOME"
+    },
+    {
+      "beat": "01",
+      "at": 12.31,
+      "text": "GIFTS, SOME GAMES"
+    },
+    {
+      "beat": "02",
+      "at": 0.66,
+      "text": "THIS IS FOR YOU"
+    },
+    {
+      "beat": "02",
+      "at": 1.88,
+      "text": "ASSALAMUALAIKUM"
+    },
+    {
+      "beat": "02",
+      "at": 4.84,
+      "text": "THIS IS FOR YOU"
+    },
+    {
+      "beat": "03",
+      "at": 0.86,
+      "text": "SO HERE YOU HAVE A HAIRBRUSH"
+    },
+    {
+      "beat": "04",
+      "at": 0.32,
+      "text": "WOW"
+    },
+    {
+      "beat": "04",
+      "at": 3.2,
+      "text": "AND HOW DO YOU FEEL"
+    },
+    {
+      "beat": "04",
+      "at": 4.45,
+      "text": "NOW? GOOD"
+    },
+    {
+      "beat": "05",
+      "at": 1.7,
+      "text": "HEGER"
+    },
+    {
+      "beat": "05",
+      "at": 4.04,
+      "text": "SALAMU ALAIKUM"
+    },
+    {
+      "beat": "05",
+      "at": 4.84,
+      "text": "TALAL HALAL"
+    },
+    {
+      "beat": "05",
+      "at": 7.18,
+      "text": "YALLA. INSHALLAH"
+    },
+    {
+      "beat": "06",
+      "at": 0.2,
+      "text": "MASHAALLAH"
+    },
+    {
+      "beat": "06",
+      "at": 1,
+      "text": "AT THE END OF THE DAY"
+    },
+    {
+      "beat": "06",
+      "at": 2.5,
+      "text": "WE'RE ALL HUMAN BEINGS"
+    },
+    {
+      "beat": "06",
+      "at": 3.5,
+      "text": "WE ALL DESERVE HEALTH"
+    },
+    {
+      "beat": "06",
+      "at": 5.02,
+      "text": "I'M JEWISH AND YOU'RE MUSLIM"
+    },
+    {
+      "beat": "06",
+      "at": 6.27,
+      "text": "WE'RE BROTHERS"
+    },
+    {
+      "beat": "06",
+      "at": 7.24,
+      "text": "THANK YOU"
+    },
+    {
+      "beat": "06",
+      "at": 8.04,
+      "text": "NICE TO MEET YOU"
+    },
+    {
+      "beat": "06",
+      "at": 10.64,
+      "text": "BYE-BYE"
+    }
+  ]
+}

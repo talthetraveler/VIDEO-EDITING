@@ -1,0 +1,248 @@
+#!/usr/bin/env node
+// GENERIC EDIT BUILDER — one builder for every video in the queue.
+//
+// Reads projects/<slug>/edit.json and renders a preview. Everything Tal has
+// taught is baked in: gold ALL-CAPS captions that FIT, one caption on screen at
+// a time, word-timed from Groq, rounded title pill, DeepFilterNet -a 10,
+// colour grade, and 9:16 or square-band layout.
+//
+//   node scripts/build-edit.mjs <slug> [--final]
+//
+// edit.json:
+// {
+//   "title": "ASKING PEOPLE IN ISRAEL 🇮🇱\nWHAT MAKES THEM HAPPY",
+//   "layout": "vertical" | "square",      // square = horizontal source
+//   "out": "NAME_V1.mp4",
+//   "beats": [ ["<frameio-id>", in, out, xCentre, "why"], ... ]
+// }
+import { readFileSync, writeFileSync, existsSync, mkdirSync, rmSync, readdirSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { join } from "node:path";
+
+const FFDIR = "C:/Users/taldo/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.1-full_build/bin";
+const FF = join(FFDIR, "ffmpeg.exe"), FP = join(FFDIR, "ffprobe.exe");
+const ROOT = "C:/Users/taldo/Downloads/videos to edit";
+const DF = join(ROOT, "bin/deep-filter.exe");
+const PROXY = join(ROOT, "projects/_frameio/cache/proxies");
+const TRANS = join(ROOT, "projects/_frameio/cache/transcripts");
+
+const slug = process.argv[2];
+if (!slug) { console.error("usage: node scripts/build-edit.mjs <slug>"); process.exit(1); }
+const FINAL = process.argv.includes("--final");
+const OUT = join(ROOT, "projects", slug);
+const cfg = JSON.parse(readFileSync(join(OUT, "edit.json"), "utf8"));
+const RUN = String(Date.now()).slice(-7);
+const BEATS = join(OUT, `beats_${RUN}`), TMP = join(OUT, `tmp_${RUN}`);
+
+mkdirSync(BEATS, { recursive: true }); mkdirSync(TMP, { recursive: true });
+for (const d of readdirSync(OUT)) {
+  if (/^(beats|tmp)_\d+$/.test(d) && !d.endsWith(RUN)) {
+    try { rmSync(join(OUT, d), { recursive: true, force: true }); } catch {}
+  }
+}
+
+const FONT = "C\\:/Windows/Fonts/arialbd.ttf";
+const GOLD = "0xF5C542";
+const CAP_SIZE = 78, CAP_MAXW = 960;
+const PREVIEW_W = FINAL ? 1080 : 540, PREVIEW_H = FINAL ? 1920 : 960;
+const BEAT_W = 1080, BEAT_H = 1920;   // beats ALWAYS full size; scale once at the end
+const CAP_Y = Math.round(1920 * 0.72);      // measured off Tal's own reels
+
+// caption-only corrections; audio is never altered
+const CORR = (() => {
+  const f = join(OUT, "CORRECTIONS.json");
+  if (!existsSync(f)) return [];
+  const j = JSON.parse(readFileSync(f, "utf8")).corrections ?? {};
+  return Object.entries(j).sort((a, b) => b[0].length - a[0].length).map(([from, to]) => {
+    const esc = [...from].map((c) => (".*+?^${}()|[]\\".includes(c) ? "\\" + c : c)).join("");
+    return [new RegExp(esc, "gi"), to];
+  });
+})();
+// ffmpeg filter paths need Windows separators flipped and colons escaped.
+// Inlining this regex kept getting mangled by patch tooling - keep it in ONE place.
+const BS = String.fromCharCode(92);
+const ffPath = (x) => x.split(BS).join("/").split(":").join(BS + ":");
+const fixWords = (s) => CORR.reduce((acc, [re, to]) => acc.replace(re, to), s);
+
+function captionFilters(id, ss, to, n) {
+  // TRANSLATED CAPTIONS: Hebrew/Arabic speech is captioned in ENGLISH (Tal:
+  // "only English captions"). Groq's translation endpoint returns SEGMENTS
+  // only - no word timestamps - so those captions are timed by splitting each
+  // segment across its words. Timing is approximate; wording is UNVERIFIED
+  // until hand-checked (it rendered "leukemia" as "milk and milk" once).
+  const tp = join(ROOT, "projects/_frameio/cache/translate", `${id}.json`);
+  if (existsSync(tp)) {
+    const segs = JSON.parse(readFileSync(tp, "utf8")).segments ?? [];
+    const out = [];
+    let k = 0, prevEnd = 0;
+    for (const sg of segs) {
+      if (sg.end <= ss || sg.start >= to) continue;
+      const words = fixWords(String(sg.text)).replace(/\s+/g, " ").trim().split(" ").filter(Boolean);
+      if (!words.length) continue;
+      const a0 = Math.max(0, sg.start - ss), b0 = Math.min(to - ss, sg.end - ss);
+      const chunks = [];
+      for (let i = 0; i < words.length; i += 3) chunks.push(words.slice(i, i + 3).join(" ").toUpperCase());
+      let sizes = chunks.map(() => CAP_SIZE);
+      try {
+        sizes = JSON.parse(execFileSync("python", [join(ROOT, "scripts/fit-caption.py"), String(CAP_MAXW), String(CAP_SIZE)],
+          { input: JSON.stringify(chunks), encoding: "utf8" }));
+      } catch {}
+      const per = Math.max(0.35, (b0 - a0) / chunks.length);
+      chunks.forEach((c, ci) => {
+        const a = Math.max(prevEnd, a0 + ci * per);
+        const b = Math.min(to - ss, a + per);
+        if (b - a < 0.2) return;
+        prevEnd = b;
+        const tf = join(TMP, `tc_${n}_${k++}.txt`);
+        writeFileSync(tf, c.replace(/[,.;:!?"]+$/g, ""), "utf8");
+        out.push(`drawtext=fontfile='${FONT}':textfile='${ffPath(tf)}'` +
+          `:fontcolor=${GOLD}:fontsize=${sizes[ci]}:borderw=6:bordercolor=black@0.85` +
+          `:x=(w-text_w)/2:y=${CAP_Y}:enable='between(t\\,${a.toFixed(2)}\\,${b.toFixed(2)})'`);
+      });
+    }
+    return out;
+  }
+
+  const p = join(TRANS, `${id}.json`);
+  const j = existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : {};
+  // Groq word timings OVERLAP between speakers and are NOT time-sorted. Sort,
+  // then force non-overlapping windows or two captions render on top of
+  // each other ("FOR YOWEBLLRTHDAY").
+  const words = (j.words ?? []).filter((w) => w.end > ss && w.start < to)
+    .slice().sort((a, b) => a.start - b.start || a.end - b.end);
+  if (!words.length) return [];
+
+  const texts = [];
+  for (let i = 0; i < words.length; i += 3) {
+    let t = words.slice(i, i + 3).map((w) => String(w.word)).join(" ").replace(/\s+/g, " ").trim();
+    texts.push(fixWords(t).replace(/[,.;:!?"]+$/g, "").trim().toUpperCase());
+  }
+  // Measure with the REAL font. Guessing widths put a caption off both edges.
+  let sizes = texts.map(() => CAP_SIZE);
+  try {
+    sizes = JSON.parse(execFileSync("python", [join(ROOT, "scripts/fit-caption.py"), String(CAP_MAXW), String(CAP_SIZE)],
+      { input: JSON.stringify(texts), encoding: "utf8" }));
+  } catch {}
+
+  const out = [];
+  let prevEnd = 0;
+  for (let i = 0; i < texts.length; i++) {
+    const grp = words.slice(i * 3, i * 3 + 3);
+    if (!texts[i] || !grp.length) continue;
+    let a = Math.max(prevEnd, Math.max(0, grp[0].start - ss));
+    const nxt = words[i * 3 + 3] ? Math.max(0, words[i * 3 + 3].start - ss) : (to - ss);
+    let b = Math.min(to - ss, Math.max(nxt, grp[grp.length - 1].end - ss + 0.2));
+    if (nxt > a) b = Math.min(b, nxt);
+    if (b - a < 0.22) b = Math.min(to - ss, a + 0.22);
+    if (a >= to - ss - 0.05) continue;
+    prevEnd = b;
+    const tf = join(TMP, `c_${n}_${i}.txt`);
+    // RTL: ffmpeg drawtext has no bidi engine, so Hebrew/Arabic comes out
+    // backwards. Reverse the string ourselves.
+    const isRTL = /[֐-׿؀-ۿ]/.test(texts[i]);
+    writeFileSync(tf, isRTL ? [...texts[i]].reverse().join("") : texts[i], "utf8");
+    out.push(`drawtext=fontfile='${FONT}':textfile='${tf.replace(/\\/g, "/").replace(/:/g, "\\:")}'` +
+      `:fontcolor=${GOLD}:fontsize=${sizes[i]}:borderw=6:bordercolor=black@0.85` +
+      `:x=(w-text_w)/2:y=${CAP_Y}:enable='between(t\\,${a.toFixed(2)}\\,${b.toFixed(2)})'`);
+  }
+  return out;
+}
+
+// DeepFilterNet -a 10. NEVER -a 25 — it gated real speech to silence.
+// Street ambience stays; that texture is the proof it's real.
+function cleanAudio(src, ss, to, n) {
+  const raw = join(TMP, `${n}.wav`);
+  execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-to", String(to), "-i", src,
+    "-vn", "-ar", "48000", "-ac", "1", "-c:a", "pcm_s16le", raw], { stdio: "pipe" });
+  try { execFileSync(DF, ["-a", "10", "-o", TMP, raw], { stdio: "pipe" }); } catch {}
+  return raw;
+}
+
+
+// A "CARD" beat is a full-screen text card, e.g. ["CARD", 0, 2.2, 0, "5 MINUTES LATER"].
+// Tal asked for one between Eden's interview and the singing.
+function buildCard(text, dur, dest) {
+  const tf = join(TMP, `card_${Math.random().toString(36).slice(2)}.txt`);
+  writeFileSync(tf, text, "utf8");
+  execFileSync(FF, ["-v", "error", "-y", "-f", "lavfi", "-i", `color=c=black:s=1080x1920:d=${dur}:r=30`,
+    "-f", "lavfi", "-i", `anullsrc=channel_layout=stereo:sample_rate=48000`,
+    "-vf", `drawtext=fontfile='${FONT}':textfile='${ffPath(tf)}':fontcolor=white:fontsize=72:x=(w-text_w)/2:y=(h-text_h)/2,setsar=1`,
+    "-t", String(dur), "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
+    "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", "-shortest", dest], { stdio: "pipe" });
+}
+
+const GRADE = "eq=contrast=1.06:brightness=0.015:saturation=1.12,colorbalance=rm=0.02:bm=-0.02";
+const list = [];
+let total = 0;
+
+cfg.beats.forEach(([id, ss, to, xc, why, beatRot], i) => {
+  const n0 = String(i + 1).padStart(2, "0");
+  if (id === "CARD") {
+    const d = +(to - ss).toFixed(2);
+    const dest = join(BEATS, `${n0}.mp4`);
+    buildCard(String(why), d, dest);
+    console.log(`  ${n0}  CARD  (${d}s)  "${why}"`);
+    list.push(dest); total += d;
+    return;
+  }
+  const src = join(PROXY, `${id}.mp4`);
+  if (!existsSync(src)) { console.log(`  !! missing proxy ${id}`); return; }
+  const dur = +(to - ss).toFixed(2);
+  const n = String(i + 1).padStart(2, "0");
+  const dest = join(BEATS, `${n}.mp4`);
+  const [W, H] = execFileSync(FP, ["-v", "error", "-select_streams", "v:0", "-show_entries",
+    "stream=width,height", "-of", "csv=p=0:nk=1", src], { encoding: "utf8" }).trim().split(/[,\r\n]+/).map(Number);
+  const frames = Math.max(1, Math.round(dur * 30));
+  // A landscape proxy inside an otherwise-vertical shoot is portrait content
+  // stored sideways. Heads point LEFT, so transpose=1 (90 clockwise) is right.
+  const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
+  const pre = rot ? `transpose=${rot},` : "";
+  const caps = captionFilters(id, ss, to, n);
+
+  let vf;
+  if (cfg.layout === "square") {
+    // horizontal source: square band on a blurred fill. A 9:16 centre-crop
+    // keeps only 31% of the width and decapitates people.
+    const sq = Math.min(W, H), sqX = Math.max(0, Math.min(W - sq, Math.round(W * xc - sq / 2)));
+    const bgW = Math.round(H * 9 / 16 / 2) * 2, bgX = Math.round((W - bgW) / 2);
+    vf = ["[0:v]split=2[bg][fg]",
+      `[bg]crop=${bgW}:${H}:${bgX}:0,scale=1080:1920,gblur=sigma=30,eq=brightness=-0.14:saturation=0.8[bgb]`,
+      `[fg]crop=${sq}:${H}:${sqX}:0,scale=1080:1080:flags=lanczos,${GRADE},zoompan=z='min(1.0+0.06*on/${frames}\\,1.06)':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1080x1080:fps=30[fgs]`,
+      `[bgb][fgs]overlay=(W-w)/2:330${caps.length ? "," + caps.join(",") : ""},setsar=1[v]`].join(";");
+  } else {
+    // already vertical: fill 1080x1920, slow punch-in, captions on top
+    vf = [`[0:v]${pre}scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,${GRADE},` +
+      `zoompan=z='min(1.0+0.05*on/${frames}\\,1.05)':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1080x1920:fps=30` +
+      `${caps.length ? "," + caps.join(",") : ""},setsar=1[v]`].join(";");
+  }
+
+  const wav = cleanAudio(src, ss, to, n);
+  execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-to", String(to), "-i", src, "-i", wav,
+    "-filter_complex", vf, "-map", "[v]", "-map", "1:a",
+    "-af", "highpass=f=70,loudnorm=I=-16:TP=-1.5:LRA=11",
+    "-c:v", "libx264", "-preset", "veryfast", "-crf", FINAL ? "19" : "21", "-pix_fmt", "yuv420p",
+    "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", "-shortest", dest], { stdio: "pipe" });
+
+  console.log(`  ${n}  ${id.slice(0, 8)}  ${ss}->${to} (${dur}s, ${caps.length} caps)  ${why ?? ""}`);
+  list.push(dest); total += dur;
+});
+
+writeFileSync(join(OUT, "concat.txt"), list.map((p) => `file '${p.replace(/\\/g, "/")}'`).join("\n"), "utf8");
+const outName = cfg.out ?? `${slug.toUpperCase()}_V1.mp4`;
+
+const args = ["-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", join(OUT, "concat.txt")];
+let fc = `[0:v]scale=${PREVIEW_W}:${PREVIEW_H}[v]`;
+if (cfg.title) {
+  const png = join(OUT, "title.png");
+  execFileSync("python", [join(ROOT, "scripts/make-title.py"), cfg.title, png, "52"], { stdio: "pipe" });
+  args.push("-i", png);
+  fc = `[0:v][1:v]overlay=(W-w)/2:150:enable='lt(t\\,${cfg.titleHold ?? 4.5})'[tv];[tv]scale=${PREVIEW_W}:${PREVIEW_H}[v]`;
+}
+execFileSync(FF, [...args, "-filter_complex", fc, "-map", "[v]", "-map", "0:a",
+  "-c:v", "libx264", "-preset", "medium", "-crf", FINAL ? "19" : "23", "-pix_fmt", "yuv420p",
+  "-c:a", "aac", "-b:a", "160k", join(OUT, outName)], { stdio: "pipe" });
+
+writeFileSync(join(OUT, "EDIT.json"), JSON.stringify({ built: new Date().toISOString(), total_s: +total.toFixed(2), title: cfg.title, beats: cfg.beats }, null, 2), "utf8");
+for (const f of readdirSync(OUT)) if (/_V\d+.*\.mp4$/.test(f) && f !== outName) rmSync(join(OUT, f), { force: true });
+ rmSync(TMP, { recursive: true, force: true });
+console.log(`\nTOTAL ${total.toFixed(1)}s  ->  projects/${slug}/${outName}`);

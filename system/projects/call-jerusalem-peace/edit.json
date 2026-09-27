@@ -1,0 +1,125 @@
+{
+  "layout": "vertical",
+  "capY": 0.58,
+  "title": "CALL SOMEONE YOU LOVE\nJERUSALEM",
+  "titleHold": 2.5,
+  "out": "CALL_JERUSALEM_PEACE_V4.mp4",
+  "beats": [
+    [
+      "local-ef2bd97d952d5a3d",
+      7.58,
+      12.29,
+      0.5,
+      "'I'm from Jerusalem.'",
+      null,
+      {
+        "z": [
+          1.04,
+          1.2
+        ]
+      }
+    ],
+    [
+      "local-ef2bd97d952d5a3d",
+      13.32,
+      15.21,
+      0.5,
+      "'Jerusalem wants peace.'",
+      null,
+      {
+        "z": [
+          1.062,
+          1.222
+        ]
+      }
+    ],
+    [
+      "local-ef2bd97d952d5a3d",
+      16.94,
+      18.79,
+      0.5,
+      "'What else do you want to say to the world?'",
+      null,
+      {
+        "z": [
+          1.084,
+          1.244
+        ]
+      }
+    ],
+    [
+      "local-ef2bd97d952d5a3d",
+      18.74,
+      22.32,
+      0.5,
+      "'The world wants peace.'",
+      null,
+      {
+        "z": [
+          1.106,
+          1.266
+        ]
+      }
+    ],
+    [
+      "local-ef2bd97d952d5a3d",
+      25.56,
+      27.93,
+      0.5,
+      "[picture +4s, audio unchanged] 'The world should be peace.'",
+      null,
+      {
+        "z": [
+          1.128,
+          1.288
+        ],
+        "audio": {
+          "id": "local-ef2bd97d952d5a3d",
+          "at": 21.56
+        }
+      }
+    ],
+    [
+      "local-ef2bd97d952d5a3d",
+      29.86,
+      31.74,
+      0.5,
+      "[picture +6s, audio unchanged] 'Don't fight for anything.'",
+      null,
+      {
+        "z": [
+          1.15,
+          1.31
+        ],
+        "audio": {
+          "id": "local-ef2bd97d952d5a3d",
+          "at": 23.86
+        }
+      }
+    ],
+    [
+      "local-ef2bd97d952d5a3d",
+      25.38,
+      27.53,
+      0.5,
+      "THE LINE: 'Life is short.'",
+      null,
+      {
+        "z": [
+          1.172,
+          1.332
+        ]
+      }
+    ]
+  ],
+  "captionFix": [
+    {
+      "match": "TO SAY TO THE",
+      "to": "TO SAY TO THE WORLD"
+    },
+    {
+      "match": "THE WORLD WANT PEACE",
+      "to": "THE WORLD WANTS PEACE"
+    }
+  ]
+}

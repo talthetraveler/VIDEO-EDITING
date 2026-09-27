@@ -1,0 +1,80 @@
+{
+  "built": "2026-09-23T23:46:09.850Z",
+  "total_s": 54.69,
+  "out": "HOSPITAL_MUSIC_CUT_V2.mp4",
+  "layout": "vertical",
+  "title": "POV: WE BROUGHT TOYS TO SICK KIDS\nIN ISRAEL",
+  "beats": [
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      0,
+      9,
+      0.5,
+      "walking in with the toys",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "40d2c60c-dc39-4c40-ba97-c897965d847a",
+      0,
+      12,
+      0.5,
+      "handing the gifts over",
+      null,
+      {
+        "z": [
+          1,
+          1.16
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      22,
+      33,
+      0.5,
+      "the mother, the child, the gifts",
+      null,
+      {
+        "z": [
+          1.04,
+          1.2
+        ]
+      }
+    ],
+    [
+      "40d2c60c-dc39-4c40-ba97-c897965d847a",
+      15,
+      24,
+      0.5,
+      "the hairbrush, her face",
+      null,
+      {
+        "z": [
+          1.06,
+          1.22
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      64,
+      74,
+      0.5,
+      "the handshake - ending on both faces",
+      null,
+      {
+        "z": [
+          1.1,
+          1.28
+        ]
+      }
+    ]
+  ],
+  "captions": []
+}

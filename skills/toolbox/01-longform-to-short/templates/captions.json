@@ -1,0 +1,7 @@
+{
+  "_comment": "Written automatically by scripts/longform-build.mjs. public/footage/<slug>/captions.json — keyed by clip id, one word-level Caption[] per built short (matches @remotion/captions' Caption type; <Captions> groups these into pages itself).",
+  "he_gave_me_his_motorcycle": [
+    { "text": " He", "startMs": 0, "endMs": 210, "timestampMs": 105, "confidence": 1 },
+    { "text": " just", "startMs": 210, "endMs": 420, "timestampMs": 315, "confidence": 1 }
+  ]
+}

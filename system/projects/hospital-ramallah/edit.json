@@ -1,0 +1,78 @@
+{
+  "layout": "vertical",
+  "title": "POV: I BROUGHT TOYS TO SICK KIDS IN ISRAEL\nAND MET A FAMILY FROM RAMALLAH",
+  "titleHold": 4,
+  "out": "HOSPITAL_RAMALLAH_V4.mp4",
+  "beats": [
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      0,
+      13.2,
+      0.5,
+      "'We heard your baby is not feeling well, so we wanted to give you a gift.' 'This is for you. Assalamualaikum.'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      14.2,
+      23,
+      0.5,
+      "'What's your daughter's name? How long has she been sick?' 'Just today.' 'I hope she feels better.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.2
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      35.8,
+      45,
+      0.5,
+      "'Where are you guys from?' 'I'm from Palestine.' 'You're from Ramallah?' 'Amazing.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.22
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      46.9,
+      63.4,
+      0.5,
+      "'You came here for healthcare?' 'Yes.' 'You can come from the West Bank into Israel to get healthcare?' 'Yes - first time.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.26
+        ]
+      }
+    ],
+    [
+      "a8195320-f0d7-4a8d-9d9d-6c77c8ea474d",
+      63.4,
+      74.4,
+      0.5,
+      "THE ENDING: 'At the end of the day we're all human beings. We all deserve health. I'm Jewish and you're Muslim - we're brothers.'",
+      null,
+      {
+        "z": [
+          1.14,
+          1.32
+        ]
+      }
+    ]
+  ]
+}

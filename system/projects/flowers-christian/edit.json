@@ -1,0 +1,36 @@
+{
+  "layout": "vertical",
+  "title": "POV: I GAVE FLOWERS TO A CHRISTIAN STRANGER\nIN ISRAEL",
+  "titleHold": 4,
+  "out": "FLOWERS_CHRISTIAN_V4.mp4",
+  "beats": [
+    [
+      "5eed418a-4577-4fa8-8e9e-fa228feeb708",
+      0,
+      15.2,
+      0.5,
+      "'Are you Jewish?' 'No.' 'Are you Christian?' 'Yes.' 'Amazing - these are for you. A gift to make your day a bit better.'",
+      null,
+      {
+        "z": [
+          1,
+          1.16
+        ]
+      }
+    ],
+    [
+      "5eed418a-4577-4fa8-8e9e-fa228feeb708",
+      15.2,
+      29,
+      0.5,
+      "'Where are you from?' 'Uganda.' 'How long have you been in Israel?' 'Five years.' 'Welcome to Israel.' ... 'Keep smiling.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.26
+        ]
+      }
+    ]
+  ]
+}

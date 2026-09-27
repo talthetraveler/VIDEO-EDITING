@@ -1,0 +1,92 @@
+{
+  "layout": "vertical",
+  "title": "POV: I ASKED A BAKER IN ISRAEL FOR BREAD\nWITH NO MONEY",
+  "titleHold": 4,
+  "out": "SHOP_OWNER_7_V4.mp4",
+  "beats": [
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      7.8,
+      20.4,
+      0.5,
+      "THE TEST: 'Salaamu Alaikum. Do you speak English? I want to buy one piece of bread - can I have one, please?'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      19.8,
+      33.4,
+      0.5,
+      "'I'm sorry, but I don't have money. Can you help me, please?' 'You want one?' 'Yeah, please - I'm just hungry.' 'Thank you so much.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.2
+        ]
+      }
+    ],
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      32.8,
+      44.4,
+      0.5,
+      "THE REVEAL: 'Actually, this is for you.' 'No, it's okay.' 'Take it.' 'Thank you.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.22
+        ]
+      }
+    ],
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      43.4,
+      53.4,
+      0.5,
+      "'Because you helped me - I want you to give bread for free to other people.'",
+      null,
+      {
+        "z": [
+          1.1,
+          1.24
+        ]
+      }
+    ],
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      53.8,
+      69.4,
+      0.5,
+      "'What's your name?' 'Muhammad.' 'You are Muslim?' 'Yes.' 'I'm Jewish. We are brothers - Muslims and Jews, we are all the same.'",
+      null,
+      {
+        "z": [
+          1.12,
+          1.28
+        ]
+      }
+    ],
+    [
+      "521a3333-5e55-4c43-b951-337e4e264a85",
+      76.4,
+      91.4,
+      0.5,
+      "THE ENDING - a stranger vouches for him: 'He can give it to you free. He's the best guy in the world. He is number one.'",
+      null,
+      {
+        "z": [
+          1.14,
+          1.3
+        ]
+      }
+    ]
+  ]
+}

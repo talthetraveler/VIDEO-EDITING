@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-jerusalem-peace/beats_1981925/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-jerusalem-peace/beats_1981925/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-jerusalem-peace/beats_1981925/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-jerusalem-peace/beats_1981925/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-jerusalem-peace/beats_1981925/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-jerusalem-peace/beats_1981925/06.mp4'

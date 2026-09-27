@@ -1,0 +1,4 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-my-mother/beats_2133040/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-my-mother/beats_2133040/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-my-mother/beats_2133040/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/call-my-mother/beats_2133040/04.mp4'

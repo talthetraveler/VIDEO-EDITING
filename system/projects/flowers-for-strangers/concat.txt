@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/projects/flowers-for-strangers/beats_4536873/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/flowers-for-strangers/beats_4536873/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/flowers-for-strangers/beats_4536873/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/flowers-for-strangers/beats_4536873/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/flowers-for-strangers/beats_4536873/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/projects/flowers-for-strangers/beats_4536873/06.mp4'

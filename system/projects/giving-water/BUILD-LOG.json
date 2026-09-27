@@ -1,0 +1,235 @@
+{
+  "built": "2026-09-23T23:47:16.942Z",
+  "total_s": 52.72,
+  "out": "GIVING_WATER_V7.mp4",
+  "layout": "vertical",
+  "title": "POV: I HANDED OUT COLD WATER TO PEOPLE\nWORKING IN THE HEAT IN ISRAEL",
+  "beats": [
+    [
+      "54dffb0d-afd0-42ec-9bd1-615e2fdf9cbf",
+      3.7,
+      10.4,
+      0.5,
+      "OPEN ON A FACE: 'Would you like some water?' 'Yeah.' 'Omar.' 'Toda raba, Omar.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      34,
+      45.6,
+      0.5,
+      "[picture moved into the face run 33.6-49.6; audio unchanged]",
+      null,
+      {
+        "audio": {
+          "id": "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+          "at": 29.6
+        }
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      41,
+      47.4,
+      0.5,
+      "'Where are you guys from?' 'Sri Lanka?' 'I love Sri Lanka - my favourite country.'",
+      null,
+      {
+        "z": [
+          1.06,
+          1.2
+        ]
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      25.4,
+      32,
+      0.5,
+      "'You guys are the best.' 'I love Argentina.' 'I love Israel.'",
+      null,
+      {
+        "z": [
+          1.04,
+          1.2
+        ]
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      32,
+      42,
+      0.5,
+      "'Why do you love Israel?' 'Tel Aviv.' 'What's your favourite part?' 'Jaffa.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.24
+        ]
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      54.6,
+      64,
+      0.5,
+      "THE ENDING: thank you for your hard work — on the workers, not the tools",
+      null,
+      {
+        "audio": {
+          "id": "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+          "at": 53.2
+        }
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.29,
+      "text": "WOULD YOU LIKE SOME"
+    },
+    {
+      "beat": "01",
+      "at": 3.4,
+      "text": "WATER? YEAH"
+    },
+    {
+      "beat": "01",
+      "at": 8.48,
+      "text": "TODA RABAH OMAR"
+    },
+    {
+      "beat": "01",
+      "at": 9.56,
+      "text": "YOM TOV"
+    },
+    {
+      "beat": "02",
+      "at": 0.4,
+      "text": "HELLO BROTHER"
+    },
+    {
+      "beat": "02",
+      "at": 4.4,
+      "text": "YOU GUYS WATER"
+    },
+    {
+      "beat": "02",
+      "at": 7.84,
+      "text": "THANK YOU SO MUCH"
+    },
+    {
+      "beat": "02",
+      "at": 9.4,
+      "text": "THIS IS FOR YOU GUYS"
+    },
+    {
+      "beat": "02",
+      "at": 11.4,
+      "text": "WHERE ARE YOU"
+    },
+    {
+      "beat": "03",
+      "at": 0.06,
+      "text": "FAVORITE COUNTRY"
+    },
+    {
+      "beat": "04",
+      "at": 0,
+      "text": "YOU GUYS ARE THE BEST"
+    },
+    {
+      "beat": "04",
+      "at": 4.22,
+      "text": "I LOVE ISRAEL"
+    },
+    {
+      "beat": "04",
+      "at": 5.22,
+      "text": "YOU LOVE ISRAEL? YEAH"
+    },
+    {
+      "beat": "05",
+      "at": 0,
+      "text": "WHY? WHY"
+    },
+    {
+      "beat": "05",
+      "at": 0.8,
+      "text": "DO YOU LOVE ISRAEL"
+    },
+    {
+      "beat": "05",
+      "at": 2.62,
+      "text": "TEL AVIV"
+    },
+    {
+      "beat": "05",
+      "at": 3.62,
+      "text": "YOU LIKE TEL AVIV"
+    },
+    {
+      "beat": "05",
+      "at": 4.62,
+      "text": "WHAT'S YOUR FAVORITE PART"
+    },
+    {
+      "beat": "05",
+      "at": 5.62,
+      "text": "WHAT'S YOUR FAVORITE"
+    },
+    {
+      "beat": "05",
+      "at": 6.62,
+      "text": "JAFFA"
+    },
+    {
+      "beat": "05",
+      "at": 9.62,
+      "text": "YEAH"
+    },
+    {
+      "beat": "06",
+      "at": 0.04,
+      "text": "NICE TO MEET YOU"
+    },
+    {
+      "beat": "06",
+      "at": 1.26,
+      "text": "THANK YOU GUYS FOR ALL"
+    },
+    {
+      "beat": "06",
+      "at": 2.51,
+      "text": "YOUR HARD WORK"
+    },
+    {
+      "beat": "06",
+      "at": 3.31,
+      "text": "WE LOVE YOU"
+    },
+    {
+      "beat": "06",
+      "at": 5.12,
+      "text": "ISRAEL, YOUR HOME"
+    },
+    {
+      "beat": "06",
+      "at": 6.8,
+      "text": "BYE-BYE"
+    },
+    {
+      "beat": "06",
+      "at": 8.8,
+      "text": "BYE"
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "built": "2026-09-27T07:42:59.825Z",
+  "total_s": 60.39,
+  "out": "EDEN_HOW_STRONG_V5.mp4",
+  "layout": "vertical",
+  "beats": [
+    [
+      "local-49f1fbc4b3367b2b",
+      347.1,
+      357.3,
+      0.3,
+      "HOOK. 'You are the first woman in my life I have met who has cancer. Did you know that?'",
+      null,
+      {
+        "z": [
+          1.18,
+          1.24
+        ],
+        "x": 0.45,
+        "y": 0.46
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      357.3,
+      367.4,
+      0.3,
+      "THE TURN. 'It touches my heart - a few years ago you were like me, healthy. One day everything changed, and you don't give up.'",
+      null,
+      {
+        "z": [
+          1.18,
+          1.24
+        ],
+        "x": 0.45,
+        "y": 0.46
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      369.3,
+      383.2,
+      0.3,
+      "THE LINE. 'But Eden, do you understand how strong you are? Really - think about it. You are surviving a disease and you don't give up.' (recovered by a targeted large-v3 pass; the whole-file transcript had 16s of nothing here)",
+      null,
+      {
+        "z": [
+          1.2,
+          1.32
+        ],
+        "x": 0.46,
+        "y": 0.46
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      383.4,
+      387.2,
+      0.85,
+      "HER ANSWER - a shake of the head. NO CAPTION, deliberately.",
+      null,
+      {
+        "nocap": true,
+        "z": [
+          1.45,
+          1.55
+        ],
+        "x": 0.68,
+        "y": 0.45
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      408.2,
+      416.2,
+      0.85,
+      "'You always have to -' 'Go up.' 'And to -' 'Believe.' 'And to -' 'Smile.' 'Always.'",
+      null,
+      {
+        "z": [
+          1.15,
+          1.2
+        ],
+        "x": 0.5,
+        "y": 0.46
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      416.3,
+      419.4,
+      0.6,
+      "'It makes me happy that you smile.'",
+      null,
+      {
+        "z": [
+          1.35,
+          1.42
+        ],
+        "x": 0.62,
+        "y": 0.45
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      419.4,
+      427.6,
+      0.6,
+      "THE CLOSER. 'You just have to smile, and believe, and that people will come and visit you and pray for you.'",
+      null,
+      {
+        "z": [
+          1.22,
+          1.3
+        ],
+        "x": 0.52,
+        "y": 0.46
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.39,
+      "to": 0.92,
+      "text": "You're the first"
+    },
+    {
+      "beat": "01",
+      "at": 1.47,
+      "to": 3.67,
+      "text": "woman in my life"
+    },
+    {
+      "beat": "01",
+      "at": 3.45,
+      "to": 4.37,
+      "text": "that I met"
+    },
+    {
+      "beat": "01",
+      "at": 4.37,
+      "to": 5.28,
+      "text": "who had cancer"
+    },
+    {
+      "beat": "01",
+      "at": 5.52,
+      "to": 6.02,
+      "text": "Did you know that"
+    },
+    {
+      "beat": "01",
+      "at": 6.53,
+      "to": 7.27,
+      "text": "I've never"
+    },
+    {
+      "beat": "01",
+      "at": 7.27,
+      "to": 8,
+      "text": "met someone"
+    },
+    {
+      "beat": "01",
+      "at": 8,
+      "to": 9.11,
+      "text": "who had cancer"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "to": 1.16,
+      "text": "It touches my heart"
+    },
+    {
+      "beat": "02",
+      "at": 1.57,
+      "to": 2.73,
+      "text": "Just a few"
+    },
+    {
+      "beat": "02",
+      "at": 2.73,
+      "to": 3.51,
+      "text": "years ago"
+    },
+    {
+      "beat": "02",
+      "at": 3.01,
+      "to": 4.44,
+      "text": "you were like me"
+    },
+    {
+      "beat": "02",
+      "at": 4.07,
+      "to": 4.52,
+      "text": "One day everything changed"
+    },
+    {
+      "beat": "02",
+      "at": 4.75,
+      "to": 5.25,
+      "text": "And you"
+    },
+    {
+      "beat": "02",
+      "at": 5.61,
+      "to": 7.02,
+      "text": "don't give up"
+    },
+    {
+      "beat": "03",
+      "at": 0.95,
+      "to": 1.4,
+      "text": "But Eden"
+    },
+    {
+      "beat": "03",
+      "at": 2.28,
+      "to": 2.84,
+      "text": "do you understand how"
+    },
+    {
+      "beat": "03",
+      "at": 3.09,
+      "to": 4.27,
+      "text": "strong you are"
+    },
+    {
+      "beat": "03",
+      "at": 4.91,
+      "to": 5.48,
+      "text": "You don't forget that"
+    },
+    {
+      "beat": "03",
+      "at": 7.87,
+      "to": 8.32,
+      "text": "Really Think about it"
+    },
+    {
+      "beat": "03",
+      "at": 9.47,
+      "to": 9.92,
+      "text": "You are surviving"
+    },
+    {
+      "beat": "03",
+      "at": 10.16,
+      "to": 10.61,
+      "text": "a disease"
+    },
+    {
+      "beat": "03",
+      "at": 12.37,
+      "to": 12.82,
+      "text": "and you"
+    },
+    {
+      "beat": "03",
+      "at": 13.05,
+      "to": 13.74,
+      "text": "don't give up"
+    },
+    {
+      "beat": "05",
+      "at": 0.4,
+      "to": 1.36,
+      "text": "You always have to"
+    },
+    {
+      "beat": "05",
+      "at": 1.69,
+      "to": 2.27,
+      "text": "go up"
+    },
+    {
+      "beat": "05",
+      "at": 3,
+      "to": 3.49,
+      "text": "And to"
+    },
+    {
+      "beat": "05",
+      "at": 4.22,
+      "to": 4.93,
+      "text": "believe And to"
+    },
+    {
+      "beat": "05",
+      "at": 5.24,
+      "to": 5.69,
+      "text": "smile To smile"
+    },
+    {
+      "beat": "05",
+      "at": 6.03,
+      "to": 7.16,
+      "text": "Always"
+    },
+    {
+      "beat": "06",
+      "at": 0.36,
+      "to": 0.97,
+      "text": "I'm happy"
+    },
+    {
+      "beat": "06",
+      "at": 0.97,
+      "to": 1.89,
+      "text": "that you smile"
+    },
+    {
+      "beat": "06",
+      "at": 2.41,
+      "to": 2.86,
+      "text": "Yes"
+    },
+    {
+      "beat": "07",
+      "at": 0.37,
+      "to": 0.94,
+      "text": "You just"
+    },
+    {
+      "beat": "07",
+      "at": 0.94,
+      "to": 1.39,
+      "text": "have to smile"
+    },
+    {
+      "beat": "07",
+      "at": 1.52,
+      "to": 2.09,
+      "text": "and believe"
+    },
+    {
+      "beat": "07",
+      "at": 2.09,
+      "to": 2.54,
+      "text": "in God"
+    },
+    {
+      "beat": "07",
+      "at": 3.01,
+      "to": 3.66,
+      "text": "and that people"
+    },
+    {
+      "beat": "07",
+      "at": 3.9,
+      "to": 4.47,
+      "text": "will come"
+    },
+    {
+      "beat": "07",
+      "at": 4.47,
+      "to": 5.18,
+      "text": "to visit you"
+    },
+    {
+      "beat": "07",
+      "at": 6.54,
+      "to": 6.99,
+      "text": "and they"
+    },
+    {
+      "beat": "07",
+      "at": 7.23,
+      "to": 7.62,
+      "text": "will pray"
+    },
+    {
+      "beat": "07",
+      "at": 7.62,
+      "to": 8.19,
+      "text": "for you"
+    }
+  ]
+}

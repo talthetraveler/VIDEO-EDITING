@@ -1,0 +1,47 @@
+{
+  "layout": "vertical",
+  "capY": 0.58,
+  "title": "CALL SOMEONE YOU LOVE\nDAMASCUS GATE, JERUSALEM",
+  "titleHold": 2.5,
+  "out": "CALL_SALAM_V3.mp4",
+  "beats": [
+    [
+      "local-cbc7ee30aca174a5",
+      3.4,
+      9.4,
+      0.5,
+      "'Hello - peace be upon you. I am here, alhamdulillah, at Bab al-Amoud.'",
+      null,
+      {
+        "z": [
+          1,
+          1.18
+        ]
+      }
+    ],
+    [
+      "local-cbc7ee30aca174a5",
+      9.5,
+      15,
+      0.5,
+      "'Inshallah. Peace be upon you.'",
+      null,
+      {
+        "z": [
+          1.12,
+          1.3
+        ]
+      }
+    ]
+  ],
+  "captionFix": [
+    {
+      "match": "I WILL BE COMPLETED",
+      "to": "GOD WILLING WE WILL BE CONNECTED"
+    },
+    {
+      "match": "THE STEADFAST, THE STEADFAST",
+      "to": "WE ARE STEADFAST"
+    }
+  ]
+}

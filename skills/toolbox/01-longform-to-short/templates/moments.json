@@ -1,0 +1,29 @@
+{
+  "_comment": "Written BY CLAUDE, by hand, after reading TRANSCRIPT.md and the extracted keyframes (STEP 1 + STEP 2 of references/pipeline.md). Not produced by a script — moment-finding and scoring is a semantic reading task. One array entry per candidate. Use only content that actually exists in the source; do not fabricate quotes or timings.",
+  "slug": "slug",
+  "source_duration_s": 2832.4,
+  "candidates": [
+    {
+      "id": "moment_01",
+      "start": 761.2,
+      "end": 795.0,
+      "original_topic": "arriving in the village and meeting the stranger",
+      "suggested_story": "a stranger hands over his motorcycle with no explanation",
+      "suggested_title": "HE JUST GAVE ME HIS MOTORCYCLE",
+      "best_hook_source": "line at 783.4s: \"He just gave me his motorcycle.\" — pull forward, see HOOK RECONSTRUCTION",
+      "hook_score": 92,
+      "clarity_score": 88,
+      "emotion_score": 70,
+      "shareability_score": 84,
+      "retention_score": 90,
+      "relevance_score": 85,
+      "visual_score": 80,
+      "standalone_score": 91,
+      "overall_score": 87,
+      "classification": "A",
+      "reason": "unexpected generosity, clean single-scene story, strong quotable line, works with zero context if the line opens it",
+      "frames_inspected": ["frame_1300.jpg", "frame_1320.jpg"],
+      "estimated_short_duration_s": 34
+    }
+  ]
+}

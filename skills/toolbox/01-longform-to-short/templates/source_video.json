@@ -1,0 +1,15 @@
+{
+  "_comment": "Written automatically by scripts/longform-index.mjs. One per long source video.",
+  "id": "slug",
+  "original_path": "C:/path/to/the/original/long-video.mp4 — never modified",
+  "path": "footage/<slug>/<filename> — staticFile-relative, a hardlink/copy of the original",
+  "duration_s": 2832.4,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "has_audio": true,
+  "aspect": "horizontal",
+  "model": "medium",
+  "frames_dir": "footage/<slug>/frames",
+  "indexed_at": "2026-09-05T00:00:00.000Z"
+}

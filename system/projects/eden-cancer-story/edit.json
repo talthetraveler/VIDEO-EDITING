@@ -1,0 +1,137 @@
+{
+  "layout": "vertical",
+  "title": "POV: I SAT WITH A WOMAN IN ISRAEL\nFIGHTING CANCER WHO WON'T GIVE UP",
+  "titleHold": 4,
+  "out": "EDEN_ARCHIVE_V4.mp4",
+  "beats": [
+    [
+      "af001998-8ac2-4caf-9dab-fd22d07f5bec",
+      2.6,
+      15.2,
+      0.5,
+      "WALK IN: 'Hi, Eden. What's the situation? I heard about your story, that you have cancer, and I wanted to come and talk to you about your story.'",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "11daa6c3-3ea6-462e-a814-38184327e7e2",
+      14,
+      28.5,
+      0.5,
+      "HER STORY: 'I'm Eden, 30, fighting leukemia for a year. I lost my mother a year ago.' - while she was sick herself",
+      null,
+      {
+        "z": [
+          1,
+          1.3
+        ],
+        "x": 0.74,
+        "y": 0.5
+      }
+    ],
+    [
+      "11daa6c3-3ea6-462e-a814-38184327e7e2",
+      34,
+      42.8,
+      0.5,
+      "'She passed away from cancer.' / 'How long?' / '17 years.'",
+      null,
+      {
+        "z": [
+          1.18,
+          1.42
+        ],
+        "x": 0.76,
+        "y": 0.5
+      }
+    ],
+    [
+      "11daa6c3-3ea6-462e-a814-38184327e7e2",
+      73.8,
+      83.4,
+      0.5,
+      "THE TURN: 'Because I need to be strong - for everyone, for myself, for my family.'",
+      null,
+      {
+        "z": [
+          1.22,
+          1.46
+        ],
+        "x": 0.76,
+        "y": 0.5
+      }
+    ],
+    [
+      "11daa6c3-3ea6-462e-a814-38184327e7e2",
+      83.4,
+      89.4,
+      0.5,
+      "'And what is your dream?' 'To be a healthy girl. To take care of myself.'",
+      null,
+      {
+        "z": [
+          1.3,
+          1.5
+        ],
+        "x": 0.76,
+        "y": 0.5
+      }
+    ],
+    [
+      "11daa6c3-3ea6-462e-a814-38184327e7e2",
+      206.5,
+      227.7,
+      0.5,
+      "HER MESSAGE: 'you can't give up when it's hard. You can shake, be a little sad - but don't lie down. Lift your head up.'",
+      null,
+      {
+        "z": [
+          1.2,
+          1.48
+        ],
+        "x": 0.76,
+        "y": 0.5
+      }
+    ],
+    [
+      "CARD",
+      0,
+      2.2,
+      0,
+      "5 MINUTES LATER"
+    ],
+    [
+      "06315624-7c72-4016-918e-6e87b875df95",
+      16.4,
+      24,
+      0.5,
+      "THE LIFT - the singers walk in: 'Hi, Eden. How are you?'",
+      null,
+      {
+        "z": [
+          1,
+          1.12
+        ]
+      }
+    ],
+    [
+      "c93c918c-ae77-41ee-83e4-04405249f5d6",
+      17.5,
+      33.3,
+      0.5,
+      "CLOSE on Tal, the ask: 'I want you to make Eden's dream come true. Two things - pray for her, and come visit her.'",
+      null,
+      {
+        "z": [
+          1,
+          1.08
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/*
+ * Global canvas resets. Keep this file tiny.
+ * Do NOT put CSS transitions/animations here — they will not render.
+ * Drive every animation with useCurrentFrame() + interpolate().
+ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}

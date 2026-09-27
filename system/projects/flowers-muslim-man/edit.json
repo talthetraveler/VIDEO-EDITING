@@ -1,0 +1,50 @@
+{
+  "layout": "vertical",
+  "title": "POV: I ASKED A STRANGER IN ISRAEL IF HE WAS JEWISH\nHE SAID HE WAS MUSLIM",
+  "titleHold": 4,
+  "out": "FLOWERS_MUSLIM_MAN_V4.mp4",
+  "beats": [
+    [
+      "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+      0,
+      14.4,
+      0.5,
+      "'Are you Jewish?' 'No, I'm not Jewish.' 'Are you Christian?' 'I'm Muslim.' 'Wow, amazing - this is for you.'",
+      null,
+      {
+        "z": [
+          1,
+          1.14
+        ]
+      }
+    ],
+    [
+      "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+      14.4,
+      30.6,
+      0.5,
+      "'Where are you from?' 'Originally Sudan - I've lived in Israel 20 years.' 'And as a Muslim, is it safe?' 'It is safe.'",
+      null,
+      {
+        "z": [
+          1.08,
+          1.24
+        ]
+      }
+    ],
+    [
+      "ca92a413-6ba4-4d5d-b72e-757439c0a918",
+      30.6,
+      41,
+      0.5,
+      "THE ENDING: 'What's your name, brother?' 'Tal. Keep smiling.' 'I made your day?' 'You made my day.' 'That was the point.'",
+      null,
+      {
+        "z": [
+          1.12,
+          1.3
+        ]
+      }
+    ]
+  ]
+}

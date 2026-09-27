@@ -1,0 +1,1 @@
+https://ims-na1.adobelogin.com/ims/authorize/v2?client_id=741f4a1117f443feabbd738408165c51&redirect_uri=https%3A%2F%2Flocalhost%3A8080%2Fcallback&scope=offline_access%2Copenid%2Cemail%2Cprofile%2Cadditional_info.roles&response_type=code&state=da5fcb9bc60438dce5b5d9df0d75c18e933836d5c1d82dca&code_challenge=55GarbuxzD5QsmOwuhOJxxAtWvcjPdt45SF1m2QJd5c&code_challenge_method=S256

@@ -1,0 +1,6 @@
+{
+  "credential_type": "OAuth Single-Page App",
+  "client_id": "741f4a1117f443feabbd738408165c51",
+  "redirect_uri": "https://localhost:8080/callback",
+  "note": "SPA = PKCE, no client secret. Adobe requires https even on localhost, so the callback server uses the self-signed cert in certs/."
+}

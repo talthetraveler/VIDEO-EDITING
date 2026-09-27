@@ -1,0 +1,207 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "beats": [
+    {
+      "src": "footage/meta-shoot/od_video-3392_singular_display.mov",
+      "startSec": 3.21,
+      "endSec": 5.7
+    },
+    {
+      "src": "footage/meta-shoot/od_video-2421_singular_display.MP4",
+      "startSec": 0,
+      "endSec": 2.55
+    },
+    {
+      "src": "footage/meta-shoot/od_video-3397_singular_display.MP4",
+      "startSec": 2.33,
+      "endSec": 5.55
+    },
+    {
+      "src": "footage/meta-shoot/od_video-2429_singular_display.MP4",
+      "startSec": 1.76,
+      "endSec": 5.43
+    },
+    {
+      "src": "footage/meta-shoot/video-3552_singular_display.MP4",
+      "startSec": 40.41,
+      "endSec": 44.14
+    },
+    {
+      "src": "footage/meta-shoot/video-2338_singular_display.MP4",
+      "startSec": 6.02,
+      "endSec": 9.76
+    }
+  ],
+  "captions": [
+    {
+      "text": " Alaikum",
+      "startMs": 290,
+      "endMs": 1490,
+      "timestampMs": 890,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 3100,
+      "endMs": 3430,
+      "timestampMs": 3265,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 3520,
+      "endMs": 3770,
+      "timestampMs": 3645,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 3770,
+      "endMs": 3890,
+      "timestampMs": 3830,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 3890,
+      "endMs": 4340,
+      "timestampMs": 4115,
+      "confidence": 1
+    },
+    {
+      "text": " day",
+      "startMs": 4340,
+      "endMs": 4600,
+      "timestampMs": 4470,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 5150,
+      "endMs": 5820,
+      "timestampMs": 5485,
+      "confidence": 1
+    },
+    {
+      "text": " Comelaughing",
+      "startMs": 5820,
+      "endMs": 7020,
+      "timestampMs": 6420,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 9260,
+      "endMs": 9640,
+      "timestampMs": 9450,
+      "confidence": 1
+    },
+    {
+      "text": " Good",
+      "startMs": 9990,
+      "endMs": 10260,
+      "timestampMs": 10125,
+      "confidence": 1
+    },
+    {
+      "text": " luck",
+      "startMs": 10260,
+      "endMs": 10530,
+      "timestampMs": 10395,
+      "confidence": 1
+    },
+    {
+      "text": " sir",
+      "startMs": 10660,
+      "endMs": 10860,
+      "timestampMs": 10760,
+      "confidence": 1
+    },
+    {
+      "text": " Good",
+      "startMs": 11120,
+      "endMs": 11380,
+      "timestampMs": 11250,
+      "confidence": 1
+    },
+    {
+      "text": " luck",
+      "startMs": 11380,
+      "endMs": 11660,
+      "timestampMs": 11520,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 12680,
+      "endMs": 13080,
+      "timestampMs": 12880,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 13080,
+      "endMs": 13520,
+      "timestampMs": 13300,
+      "confidence": 1
+    },
+    {
+      "text": " Salam",
+      "startMs": 13520,
+      "endMs": 13810,
+      "timestampMs": 13665,
+      "confidence": 1
+    },
+    {
+      "text": " How",
+      "startMs": 14010,
+      "endMs": 14210,
+      "timestampMs": 14110,
+      "confidence": 1
+    },
+    {
+      "text": " about",
+      "startMs": 14210,
+      "endMs": 14550,
+      "timestampMs": 14380,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 14550,
+      "endMs": 15020,
+      "timestampMs": 14785,
+      "confidence": 1
+    },
+    {
+      "text": " Shalom",
+      "startMs": 16790,
+      "endMs": 16870,
+      "timestampMs": 16830,
+      "confidence": 1
+    },
+    {
+      "text": " No",
+      "startMs": 17100,
+      "endMs": 17250,
+      "timestampMs": 17175,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 17400,
+      "endMs": 17470,
+      "timestampMs": 17435,
+      "confidence": 1
+    },
+    {
+      "text": " need",
+      "startMs": 17470,
+      "endMs": 17760,
+      "timestampMs": 17615,
+      "confidence": 1
+    }
+  ]
+}

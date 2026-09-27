@@ -1,0 +1,341 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "beats": [
+    {
+      "src": "footage/meta-shoot/video-4443_singular_display.MP4",
+      "startSec": 0.08,
+      "endSec": 11.3
+    },
+    {
+      "src": "footage/meta-shoot/video-4443_singular_display.MP4",
+      "startSec": 11.78,
+      "endSec": 21.41
+    }
+  ],
+  "captions": [
+    {
+      "text": " Salam",
+      "startMs": 260,
+      "endMs": 630,
+      "timestampMs": 445,
+      "confidence": 1
+    },
+    {
+      "text": " Alaikum",
+      "startMs": 630,
+      "endMs": 1480,
+      "timestampMs": 1055,
+      "confidence": 1
+    },
+    {
+      "text": " these",
+      "startMs": 1730,
+      "endMs": 2330,
+      "timestampMs": 2030,
+      "confidence": 1
+    },
+    {
+      "text": " are",
+      "startMs": 2330,
+      "endMs": 2690,
+      "timestampMs": 2510,
+      "confidence": 1
+    },
+    {
+      "text": " for",
+      "startMs": 2690,
+      "endMs": 3040,
+      "timestampMs": 2865,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 3040,
+      "endMs": 3400,
+      "timestampMs": 3220,
+      "confidence": 1
+    },
+    {
+      "text": " guys",
+      "startMs": 3400,
+      "endMs": 3980,
+      "timestampMs": 3690,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 4140,
+      "endMs": 4630,
+      "timestampMs": 4385,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 4630,
+      "endMs": 5430,
+      "timestampMs": 5030,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 5430,
+      "endMs": 5720,
+      "timestampMs": 5575,
+      "confidence": 1
+    },
+    {
+      "text": " day",
+      "startMs": 5720,
+      "endMs": 6080,
+      "timestampMs": 5900,
+      "confidence": 1
+    },
+    {
+      "text": " a",
+      "startMs": 6320,
+      "endMs": 6460,
+      "timestampMs": 6390,
+      "confidence": 1
+    },
+    {
+      "text": " gift",
+      "startMs": 6460,
+      "endMs": 7330,
+      "timestampMs": 6895,
+      "confidence": 1
+    },
+    {
+      "text": " for",
+      "startMs": 7330,
+      "endMs": 7780,
+      "timestampMs": 7555,
+      "confidence": 1
+    },
+    {
+      "text": " free",
+      "startMs": 7780,
+      "endMs": 8800,
+      "timestampMs": 8290,
+      "confidence": 1
+    },
+    {
+      "text": " for",
+      "startMs": 9330,
+      "endMs": 10070,
+      "timestampMs": 9700,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 10070,
+      "endMs": 10110,
+      "timestampMs": 10090,
+      "confidence": 1
+    },
+    {
+      "text": " to",
+      "startMs": 10110,
+      "endMs": 10190,
+      "timestampMs": 10150,
+      "confidence": 1
+    },
+    {
+      "text": " smile",
+      "startMs": 10190,
+      "endMs": 11030,
+      "timestampMs": 10610,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 11430,
+      "endMs": 11750,
+      "timestampMs": 11590,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 11750,
+      "endMs": 11940,
+      "timestampMs": 11845,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 11940,
+      "endMs": 12470,
+      "timestampMs": 12205,
+      "confidence": 1
+    },
+    {
+      "text": " day",
+      "startMs": 12470,
+      "endMs": 12710,
+      "timestampMs": 12590,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 12870,
+      "endMs": 12950,
+      "timestampMs": 12910,
+      "confidence": 1
+    },
+    {
+      "text": " saw",
+      "startMs": 12950,
+      "endMs": 13220,
+      "timestampMs": 13085,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 13220,
+      "endMs": 13430,
+      "timestampMs": 13325,
+      "confidence": 1
+    },
+    {
+      "text": " were",
+      "startMs": 13430,
+      "endMs": 13750,
+      "timestampMs": 13590,
+      "confidence": 1
+    },
+    {
+      "text": " sad",
+      "startMs": 13750,
+      "endMs": 13990,
+      "timestampMs": 13870,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 14150,
+      "endMs": 14230,
+      "timestampMs": 14190,
+      "confidence": 1
+    },
+    {
+      "text": " saw",
+      "startMs": 14230,
+      "endMs": 14470,
+      "timestampMs": 14350,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 14470,
+      "endMs": 14710,
+      "timestampMs": 14590,
+      "confidence": 1
+    },
+    {
+      "text": " were",
+      "startMs": 14710,
+      "endMs": 15060,
+      "timestampMs": 14885,
+      "confidence": 1
+    },
+    {
+      "text": " sad",
+      "startMs": 15060,
+      "endMs": 15270,
+      "timestampMs": 15165,
+      "confidence": 1
+    },
+    {
+      "text": " you",
+      "startMs": 15420,
+      "endMs": 15870,
+      "timestampMs": 15645,
+      "confidence": 1
+    },
+    {
+      "text": " were",
+      "startMs": 15870,
+      "endMs": 15990,
+      "timestampMs": 15930,
+      "confidence": 1
+    },
+    {
+      "text": " crying",
+      "startMs": 15990,
+      "endMs": 16550,
+      "timestampMs": 16270,
+      "confidence": 1
+    },
+    {
+      "text": " no",
+      "startMs": 17010,
+      "endMs": 17690,
+      "timestampMs": 17350,
+      "confidence": 1
+    },
+    {
+      "text": " I",
+      "startMs": 17710,
+      "endMs": 17830,
+      "timestampMs": 17770,
+      "confidence": 1
+    },
+    {
+      "text": " don't",
+      "startMs": 17830,
+      "endMs": 18110,
+      "timestampMs": 17970,
+      "confidence": 1
+    },
+    {
+      "text": " know",
+      "startMs": 18110,
+      "endMs": 18360,
+      "timestampMs": 18235,
+      "confidence": 1
+    },
+    {
+      "text": " okay",
+      "startMs": 18470,
+      "endMs": 18850,
+      "timestampMs": 18660,
+      "confidence": 1
+    },
+    {
+      "text": " have",
+      "startMs": 18880,
+      "endMs": 19100,
+      "timestampMs": 18990,
+      "confidence": 1
+    },
+    {
+      "text": " an",
+      "startMs": 19100,
+      "endMs": 19220,
+      "timestampMs": 19160,
+      "confidence": 1
+    },
+    {
+      "text": " amazing",
+      "startMs": 19220,
+      "endMs": 19770,
+      "timestampMs": 19495,
+      "confidence": 1
+    },
+    {
+      "text": " day",
+      "startMs": 19770,
+      "endMs": 19860,
+      "timestampMs": 19815,
+      "confidence": 1
+    },
+    {
+      "text": " bye",
+      "startMs": 20040,
+      "endMs": 20170,
+      "timestampMs": 20105,
+      "confidence": 1
+    }
+  ]
+}
