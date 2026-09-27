@@ -73,6 +73,24 @@ about the software. It cannot cut footage.
 > paragraph above exists to prevent, so it is written down rather than trusted
 > to the loader.
 
+## 0a-2. SUPERPOWERS — kept, and scoped
+
+Tal, 2026-09-27: *"Can I use superpowers? ... I think it makes it better."*
+Kept. It is a software-engineering toolkit, so it wins on ENGINEERING and
+stays out of EDITING:
+
+- **Building or fixing the pipeline** (a script, a render failure, caption
+  drift, a new tool) -> use it. `systematic-debugging` before any fix,
+  `verification-before-completion` before calling anything done,
+  `test-driven-development` for pipeline code. These make the system better.
+- **Editing a video** -> `tal-video-editor` owns it, start to finish.
+  `brainstorming` and `using-superpowers` do **not** gate an edit: no
+  interview before cutting, no plan document. Tal's words, repeatedly: *"go
+  faster"*, *"you don't gotta even show it to me."* Cut, verify, send.
+
+This instruction outranks those skills' own "MUST use before any creative
+work" triggers.
+
 ## 0b. EDITING A VIDEO — LOAD THIS FIRST, ALWAYS
 
 **Tal will never name a skill.** When he says *"edit this"*, *"make a video"*,
