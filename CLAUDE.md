@@ -608,6 +608,12 @@ working and how.
   `scripts/proj-render.mjs` now sweeps stale ones before bundling and deletes
   its own `serveUrl` in `finally`. If renders fail on `copyfile`/`write`, check
   `df -h /tmp` first and `rm -rf "$TEMP"/remotion-*`.
+- **Never measure folder sizes with Git Bash `du` here.** Over `system/`
+  (182,897 files, mostly `node_modules`) it ran past 10 minutes and was left
+  running in the background for an hour — after PowerShell had already given
+  the same answer quickly (`Get-ChildItem -Recurse -File | Measure-Object
+  Length -Sum`). Use PowerShell, and kill any background task the moment
+  its answer is already in hand.
 - Composition ids cannot start with a digit (invalid JS identifier) → `C` prefix.
 - **Remotion `<Folder name>` and composition ids allow ONLY `a-z A-Z 0-9 -`.**
   An underscore (`_Review`, `A1_Wrapped`) throws at *render* time, not build
