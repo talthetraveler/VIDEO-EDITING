@@ -265,6 +265,7 @@ Answer three questions first. Do not load a single specialist skill until you ha
 
 | Signal in the footage or the ask | Format |
 |---|---|
+| **Travelling with no money**: hitchhiking, asking strangers for a ride / a meal / a bed, the trip itself is the story (PROVISIONAL, 2026-09-28) | `no-money-travel` |
 | Meta Ray-Ban POV, handheld, first-person | `pov-meta-glasses` |
 | Walking up to strangers, greetings, giving something | `pov-kindness` |
 | One person, real substance, a payoff | `human-story` |
@@ -545,7 +546,7 @@ goes the wrong way.
 
 ### Provisional formats
 
-`nonprofit-story`, `startup-tech`, `longform`, `longform-to-shorts` are marked
+`nonprofit-story`, `startup-tech`, `longform`, `longform-to-shorts`, `no-money-travel` are marked
 **PROVISIONAL** — nothing in them was measured from an approved Tal video. On
 the first real edit in one of those formats, **replace the guessed rules with
 what he actually corrects.** Never present guessed style knowledge as though he
