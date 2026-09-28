@@ -279,6 +279,7 @@ Answer three questions first. Do not load a single specialist skill until you ha
 | Talking-head + machine-gun cutaways + kinetic type | `social-accords` |
 | 3+ minutes, YouTube | `longform` |
 | One long source → several verticals | `longform-to-shorts` |
+| A motion-graphic reference to rebuild — same timing, new look | `motion-recreation` |
 
 **State the format and keep going. Do not wait for approval.**
 
