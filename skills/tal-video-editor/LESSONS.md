@@ -1568,3 +1568,34 @@ this reason. **−14 LUFS stays the delivery target** (it is the platform
 norm), but never cite a download as evidence for it. What DOES survive the
 platform: loudness RANGE (song-driven 0.5–3 LU vs dialogue 7–11 LU), the
 music bed's level under the voice (mid vs side), and where the bed swells.
+
+## 59 — the self-review gate passed a video it never checked
+
+israel-batch, 2026-09-29. `selfreview.mjs` printed "0 captions, 0 flagged"
+on a test render that clearly had 53 captions on screen, and
+`verify-cut.mjs` verified nothing. Both resolved a beat's clip id only if it
+was a Frame.io uuid or a DJI tag. Local footage from `transcribe-local.mjs`
+has ids like `local-b7bc…`, matching neither, so every beat was skipped
+silently. **A gate that finds nothing to check must say so, not pass.**
+Fixed: an id with a transcript on disk is used as-is. selfreview now also
+prints section 2b, the captions as actually rendered (from BUILD-LOG.json),
+which is the list to read as English. After the fix the same test reported 9
+real cut-point problems and 2 garbled captions.
+
+## 60 — Groq timings on Meta-glasses footage are too loose to cut on
+
+Same batch. Groq's SEGMENT times came back rounded to whole seconds (0.0–2.0,
+2.0–5.0 …) and its WORD times were loose and out of order ("Someone who who
+loves is always"). The builder takes caption wording from segments and timing
+from words, so:
+- a sentence that straddled a cut was dropped whole: a beat about "what makes
+  you happy?" rendered with no captions at all;
+- cut points landed inside words ("Yeah", "for", "So", "Wow").
+
+Fix: `tools/align-cache.py` keeps Groq's TEXT and re-derives every segment
+and word time with WhisperX forced alignment (wav2vec2). Test clip: 0 words
+out of order (was scrambled), segment boundaries exact, verify-cut went from
+9 issues to 1 (a segment alignment couldn't pin, which kept its rounded
+times). It runs ~0.5x realtime on CPU, so align only the clips a catalogue
+marks usable, 3 workers in parallel (`--ids-file … --shard i/3`). **Cut on
+aligned SEGMENT boundaries.**

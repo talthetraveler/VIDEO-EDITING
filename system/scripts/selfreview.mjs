@@ -87,7 +87,13 @@ for (const b of edit.beats) {
   const [tag, ss, to] = b;
   // a beat may carry a full frame.io uuid directly (generic builder) or a
   // short DJI tag (jamaica). Accept both.
-  const id = /^[0-9a-f]{8}-/.test(String(tag)) ? tag : byTag[tag];
+  // LOCAL clips (transcribe-local ids, "local-<hash>") were matched by neither
+  // test, so every beat of a local-footage edit was skipped and the gate
+  // reported "0 captions" / nothing to verify - a pass that checked nothing
+  // (found 2026-09-29 on the israel-batch test). An id with a transcript on
+  // disk is used as-is.
+  const id = existsSync(join(TRANS, `${tag}.json`)) ? String(tag)
+    : /^[0-9a-f]{8}-/.test(String(tag)) ? tag : byTag[tag];
   const p = id ? join(TRANS, `${id}.json`) : null;
   const j = p && existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : {};
   const words = (j.words ?? []).filter((w) => w.end > ss && w.start < to).sort((x, y) => x.start - y.start);
@@ -100,6 +106,25 @@ for (const b of edit.beats) {
   acc += (to - ss);
 }
 console.log(`\n   ${capCount} captions, ${flagged} flagged as possible ASR errors.`);
+
+// ---- 2b. the captions that were ACTUALLY RENDERED --------------------------
+// The dump above rebuilds lines from the word array; the builder takes its
+// wording from SEGMENTS. What the viewer reads is whatever build-edit wrote to
+// BUILD-LOG.json - so read that, in order, as English.
+const logP = join(dirname(editPath), "BUILD-LOG.json");
+if (existsSync(logP)) {
+  const caps = JSON.parse(readFileSync(logP, "utf8")).captions ?? [];
+  if (caps.length) {
+    console.log(`\n2b. RENDERED CAPTIONS (${caps.length}) — exactly what is on screen, in order:\n`);
+    let rf = 0;
+    for (const c of caps) {
+      const hits = NONSENSE.filter(([re]) => re.test(String(c.text)));
+      console.log(`   ${String(c.beat ?? "").padStart(2)} ${(+c.at).toFixed(2).padStart(6)}-${(+c.to).toFixed(2).padEnd(6)} ${c.text}${hits.length ? "  <-- CHECK" : ""}`);
+      rf += hits.length ? 1 : 0;
+    }
+    console.log(`\n   ${caps.length} rendered captions, ${rf} flagged.`);
+  }
+}
 
 // ---- 4. boundary + post-render audio --------------------------------------
 console.log(`\n3. BOUNDARY + AUDIO VERIFICATION`);

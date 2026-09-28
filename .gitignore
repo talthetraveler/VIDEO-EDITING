@@ -131,3 +131,13 @@ system/projects/**/*.webp
 system/projects/_refs/
 **/transcript.txt
 **/transcripts/
+
+# ----------------------------------------------------------- BATCH TRANSCRIPTS
+# A batch inventory/catalogue is real people's unedited words (2026-09-29,
+# israel-batch: 425 clips). The repo is public - they never go up. The edit
+# specs (edit.json) and BUILD-BRIEF.md still do.
+system/projects/*/INVENTORY.md
+system/projects/*/inventory.json
+system/projects/*/catalog/
+system/projects/*/align-*.log
+system/projects/*/align-ids.txt

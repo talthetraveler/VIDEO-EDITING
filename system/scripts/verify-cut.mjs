@@ -38,7 +38,13 @@ edit.beats.forEach((b, i) => {
   const [tag, ss, to, , why] = b;
   // a beat may carry a full frame.io uuid directly (generic builder) or a
   // short DJI tag (jamaica). Accept both.
-  const id = /^[0-9a-f]{8}-/.test(String(tag)) ? tag : byTag[tag];
+  // LOCAL clips (transcribe-local ids, "local-<hash>") were matched by neither
+  // test, so every beat of a local-footage edit was skipped and the gate
+  // reported "0 captions" / nothing to verify - a pass that checked nothing
+  // (found 2026-09-29 on the israel-batch test). An id with a transcript on
+  // disk is used as-is.
+  const id = existsSync(join(TRANS, `${tag}.json`)) ? String(tag)
+    : /^[0-9a-f]{8}-/.test(String(tag)) ? tag : byTag[tag];
   const p = id ? join(TRANS, `${id}.json`) : null;
   if (!p || !existsSync(p)) { console.log(`  ${String(i + 1).padStart(2, "0")}  ${tag}  -- no transcript, cannot verify`); return; }
   const j = JSON.parse(readFileSync(p, "utf8"));

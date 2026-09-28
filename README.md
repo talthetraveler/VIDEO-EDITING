@@ -3,12 +3,20 @@
 Videos in. Videos out.
 
 ```
-FOOTAGE IN/     drop raw clips here, one folder per shoot
-VIDEOS OUT/     finished cuts come out here
-assets/         references — your own reels, your music, style refs
+FOOTAGE IN/     drop raw clips here, one folder per shoot ("2026-09-23 shoot")
+VIDEOS OUT/     finished cuts come out here, same folder name as the shoot
+assets/
+  references/   reference VIDEOS, one folder per source
+                (tal-own-reels, nas-daily, instagram-harvest, voiceover-broll-drive-...)
+  analysis/     what was MEASURED from them (contact sheets, transcripts, findings)
+  prompts/      image / video generation prompts
 skills/         everything I know about editing for you
 system/         the machine. you never need to open this.
 ```
+
+Your iCloud Photos library is synced by iCloud for Windows to
+`C:\Users\taldo\iCloudPhotos\Photos` and is readable from here as a footage
+source (`CLAUDE.md` §7).
 
 Then say **"edit this"**. Nothing else — no skill name, no format, no settings.
 

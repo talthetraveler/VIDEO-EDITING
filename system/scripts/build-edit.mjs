@@ -1050,7 +1050,26 @@ cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
 // Pass 0 in the beat's rotation slot for real landscape; the 9:16 crop then
 // picks the part of the frame to keep via xc.
 const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
-  const pre = rot ? `transpose=${rot},` : "";
+  // LEVEL. Tal, 2026-09-29: some POV shots are "not rotated, not straight" -
+  // a few degrees off because his head was tilted. A beat's {tilt} (degrees,
+  // + = rotate clockwise) or the project's measured `tilts[id]`
+  // (tools/level-detect.py, only written when its confidence is high) turns
+  // the picture level, then zooms just enough to hide the corners:
+  // s = cos(t) + (long/short) * sin(t) for the output's own aspect.
+  const tiltDeg = push?.tilt ?? cfg.tilts?.[id] ?? 0;
+  let lvl = "";
+  if (Math.abs(tiltDeg) >= 0.5 && Math.abs(tiltDeg) <= 12) {
+    const t = Math.abs(tiltDeg) * Math.PI / 180;
+    const s = Math.cos(t) + (1920 / 1080) * Math.sin(t);
+    // Crop back to the EXACT pre-rotation size: the face-aim crop that follows
+    // is computed on those dimensions, and a frame 2px short (rounding in an
+    // iw/s expression) makes that crop fail outright.
+    const w0 = rot ? H : W, h0 = rot ? W : H;
+    const sw = Math.ceil(w0 * s / 2) * 2, sh = Math.ceil(h0 * s / 2) * 2;
+    lvl = `rotate=${(tiltDeg * Math.PI / 180).toFixed(5)}:ow=iw:oh=ih:c=black,` +
+      `scale=${sw}:${sh},crop=${w0}:${h0},`;
+  }
+  const pre = (rot ? `transpose=${rot},` : "") + lvl;
   // MUSIC CUT: no captions at all. Tal wants two shapes per story - one with
   // the conversation, one carried by picture and music only.
   // CAPTIONS FOLLOW THE AUDIO, NOT THE PICTURE.
@@ -1291,7 +1310,10 @@ if (cfg.title) {
   const png = join(OUT, "title.png");
   execFileSync("python", [join(ROOT, "scripts/make-title.py"), cfg.title, png, "52"], { stdio: "pipe" });
   args.push("-i", png);
-  fc = `[0:v][1:v]overlay=(W-w)/2:150:enable='lt(t\\,${cfg.titleHold ?? 4.5})'[tv];[tv]scale=${PREVIEW_W}:${PREVIEW_H}[v]`;
+  // `titleY` = the pill's TOP edge in px on the 1920 frame. 150 (0.078) was
+  // the old guess; his posted "POV: MEETING A …" reels measure the pill at
+  // y ~0.15-0.19 (pov-meta-glasses.md section 5) -> "titleY": 260.
+  fc = `[0:v][1:v]overlay=(W-w)/2:${cfg.titleY ?? 150}:enable='lt(t\\,${cfg.titleHold ?? 4.5})'[tv];[tv]scale=${PREVIEW_W}:${PREVIEW_H}[v]`;
 }
 // THE TIMELINE AUDIO CHAIN.
 //

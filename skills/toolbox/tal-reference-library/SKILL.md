@@ -135,7 +135,7 @@ These carry actual numbers. Everything else does not.
 |---|---|---|
 | **#4 Tal POV bakery** (`DZiggEMxqSp`) | Tal's own | Downloaded 2026-09-20. Part of the 7-reel analysis: white+gold karaoke captions y≈0.64–0.68, white pill title top y≈0.06–0.10, hook kinds A–F |
 | **#25 Montana Tucker** | unity content | n=7 verticals: **6 of 7 are ONE unbroken shot**, 14–43s, zero text |
-| **#26 MD Motivator** | Michael | 9 frames + `reference-review-mdmotivator/editing-reference.md` |
+| **#26 MD Motivator** | Michael | 9 frames + `assets/analysis/mdmotivator-michael/editing-reference.md` |
 | **Tal Sample.mp4** | his call-someone-you-love | 45.8s single take, captions silent over two real pauses (5.4s, 2.4s), −19.7 LUFS, mild warm push |
 | **Hope Wins ep** | 3rd party, structure only | 44.9s, **8 pauses >1.2s all caption-silent**, **−14.28 LUFS / −0.03 dBTP** — the loudness calibration point |
 | **MONTANA TUCKER V3** | Tal's own reference cut | 181.5s, 136 shots, mean 1.33s, **~41 cuts/min**, 43% under 1s |

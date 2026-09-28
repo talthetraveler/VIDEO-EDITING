@@ -121,7 +121,7 @@ these. **[M]**
 | 15 | [Dhar Mann-style story / caption reference](https://www.instagram.com/reel/DcJzcPuSVhZ/) | — | **TECHNIQUE** (captions) | LISTED |
 | 16 | [Malaysia street love story](https://www.instagram.com/reel/DM2lX3BSdl0/) | STRANGER STORY | STYLE | LISTED |
 | 25 | [Montana Tucker — Muslim/Jewish unity](https://www.instagram.com/reel/C-nbjULPGts/) | UNITY | STYLE | **MEASURED** — n=7: 6 of 7 are ONE unbroken shot, 14–43s, zero on-screen text |
-| 26 | [MD Motivator — Michael](https://www.instagram.com/reel/CcyT0e_lYrb/) | STRANGER STORY | STYLE | **MEASURED** — 9 frames + `reference-review-mdmotivator/editing-reference.md` |
+| 26 | [MD Motivator — Michael](https://www.instagram.com/reel/CcyT0e_lYrb/) | STRANGER STORY | STYLE | **MEASURED** — 9 frames + `assets/analysis/mdmotivator-michael/editing-reference.md` |
 
 ---
 
