@@ -162,7 +162,7 @@ when the job needs it, not to find out what the rules are:
 
 | file | what it adds |
 |---|---|
-| `formats/*.md` | the 15 format presets — the more specific rule wins |
+| `formats/*.md` | the 16 format presets — the more specific rule wins |
 | `LESSONS.md` | 49 defects and their causes. **Read before a rebuild.** |
 | `LOOK-AND-SOUND.md` | the grade/caption/sound measurement working |
 | `EDITING-DOCTRINE.md` | provenance: his standard verbatim, as given |
@@ -269,6 +269,7 @@ Answer three questions first. Do not load a single specialist skill until you ha
 | Walking up to strangers, greetings, giving something | `pov-kindness` |
 | One person, real substance, a payoff | `human-story` |
 | Script/VO explaining something, facts, numbers | `nas-explainer` |
+| **Tal's own voice over B-roll**: his life story, a mission, a cause, "here's my voice, do the B-roll" | `voiceover-broll` |
 | One person to camera, no script | `talking-head` |
 | Asking strangers a question, many answers | `street-interview` |
 | An organisation, a cause, a mission | `nonprofit-story` |

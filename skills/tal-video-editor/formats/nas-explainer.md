@@ -59,6 +59,12 @@ Presets: `caption/nas_caption.json` (`highlight: "keyword"`),
 
 # SOCIAL ACCORDS IN NAS STYLE — measured from two of his own, 2026-09-27
 
+> **A third, 2026-09-28: Julius / Save a Child's Heart** — same arc, 199 wpm,
+> ~28 cuts/min, with the subject's sit-down interview and the org's name
+> shouted to camera. Measured in `voiceover-broll.md`, which also holds the
+> script -> B-roll method (PIVOT / NOUN / LIST / ABSTRACT / SUBJECT) that
+> both formats use.
+
 Tal handed over `MATTHEW NO LIMITS new intro` and `OUR BIG KITCHEN V4`:
 *"these are both nas daily style videos, study every shot, look at the script,
 transcribe ... understand the sound design and music."*

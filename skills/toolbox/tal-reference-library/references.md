@@ -25,6 +25,16 @@ creator. **[S]**
 | 33 | [Normal day on an Israel train](https://www.instagram.com/reel/DY2QmhAoF-z/) | POV / SLICE | STYLE | LISTED |
 | SA-1 | **MATTHEW NO LIMITS** (Social Accords) — a man with Down syndrome at a Miami café | NAS-STYLE NARRATED STORY | **GOLDEN** | **MEASURED** 2026-09-27 — every shot, transcript, sound. `assets/references/nas-daily/` |
 | SA-2 | **OUR BIG KITCHEN V4** (Social Accords) — a Holocaust survivor's legacy kitchen | NAS-STYLE NARRATED STORY | **GOLDEN** | **MEASURED** 2026-09-27 — every shot, transcript, sound. `assets/references/nas-daily/` |
+| VO-1 | **"For two years I traveled the whole world hiding that I was Jewish"** (`Tal Dooreck.mp4`): his manifesto, joining The Social Accords | VOICEOVER + B-ROLL (manifesto) | **GOLDEN** (Tal pointed to it first) | **MEASURED** 2026-09-28: 174 detector hits / ~85 real shots, word timings, sound. `formats/voiceover-broll.md` |
+| VO-2 | **Julius / Save a Child's Heart** (`Tal Dooreck-Julius.mp4`) | VOICEOVER + B-ROLL (subject story, NAS arc) | STYLE | **MEASURED** 2026-09-28: ~75 real shots, word timings, sound. `formats/voiceover-broll.md` |
+| KT-1 | **Bread stall, Damascus Gate: "I was testing your kindness"** (`2 updated.mov`) | KINDNESS TEST | STYLE | **MEASURED** 2026-09-28: 16 shots, speaker-coloured captions. `formats/kindness-test.md` |
+| KT-2 | **Coffee cart, 400 shekels, V3** (`3 enhanced audio.mov`) | KINDNESS TEST | STYLE | **MEASURED** 2026-09-28. `formats/kindness-test.md` |
+| KT-3 | **Coffee cart, 400 shekels, V4** (`4 revised.mov`): his revision of KT-2 | KINDNESS TEST | STYLE | **MEASURED** 2026-09-28: the V3->V4 delta is recorded. `formats/kindness-test.md` |
+
+VO-1…KT-3 came in one zip on 2026-09-28. Originals:
+`assets/references/voiceover-broll-drive-2026-09-28/`; sheets, shot lists,
+transcripts: `assets/analysis/voiceover-broll/` (both git-ignored). Rebuild the
+analysis of any video with `node system/scripts/reference-shots.mjs`.
 
 Also his, already measured and held elsewhere on disk:
 **`Tal Sample.mp4`** (call-someone-you-love rig, 45.8s single take) and

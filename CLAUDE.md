@@ -104,7 +104,8 @@ there should be like one skill ... this should all be one."* SKILL.md carries
 treatment, audio, and the 7-point quality check — so it is complete on its own.
 Everything else in that folder is an appendix, opened when a job needs it:
 
-- `formats/*.md` — the 15 presets; the more specific rule wins
+- `formats/*.md` — the 16 presets; the more specific rule wins. A voiceover
+  of his over B-roll is `voiceover-broll.md` (the script decides every shot)
 - `LESSONS.md` — 49 defects and their causes. **Read before any rebuild.**
 - `APPROVED-JAMAICA-V14.md` — the first cut Tal approved; the shape to hit on V1
 - `COMPILATION-ORDER.md` — who appears and in what order. Never open a new
