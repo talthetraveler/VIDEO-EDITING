@@ -806,7 +806,12 @@ const SKIP = new Set();   // beats fully contained in the one before them
 for (let i = 0; i < cfg.beats.length; i++) {
   const b = cfg.beats[i];
   if (!b || b[0] === "CARD") continue;
-  let [a, z, why] = snapBoundaries(b[0], b[1], b[2]);
+  // A MONTAGE CUTS ON ACTION, NOT ON WORDS. Snapping stretches every beat to
+  // finish its word - right for dialogue, wrong for a 1.5s shot of a shirt
+  // coming off. "snap": false (project) or push.exact (one beat) keeps the
+  // cut exactly where the edit put it. Default unchanged: snap.
+  let [a, z, why] = (cfg.snap === false || b[6]?.exact)
+    ? [b[1], b[2], ""] : snapBoundaries(b[0], b[1], b[2]);
   const dur = sourceDuration(b[0]);
   if (Number.isFinite(dur) && z > dur - 0.05) {
     console.log(`  !! beat ${i} asks for ${b[1]}-${b[2]} but ${String(b[0]).slice(0, 8)} ends at ` +
@@ -1003,6 +1008,36 @@ cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
         const inHi = Math.min(0.92, inMid + 0.30), outHi = Math.min(0.95, outMid + 0.28);
         lift = `curves=all='0/0 ${inMid.toFixed(3)}/${outMid.toFixed(3)} ${inHi.toFixed(3)}/${outHi.toFixed(3)} 1/1',`;
         console.log(`      exposure: luma ${y.toFixed(0)} -> curve mid ${inMid.toFixed(2)}->${outMid.toFixed(2)} (black point held)`);
+      } else if (y > 125) {
+        // TAME - the half this block was missing. Tal on ROMAN, 2026-09-28:
+        // *"some of the shots are overexposed. You gotta fix that."* This block
+        // only ever LIFTED dark beats (after "way too dark" on the coffee shop),
+        // so a midday street came through untouched - and then GRADE below
+        // RAISES the highlights (0.85 -> 0.92) and saturation +42% on top.
+        // Measured on the feed-homeless source: the new-clothes shot sat at
+        // luma 206 with 37% of the frame clipped to white; the POV walk-up 185.
+        //
+        // Pull the midtone DOWN, holding black. The source is 8-bit: sky that
+        // is already 255 is gone and no curve brings it back - but faces and
+        // skin come back to a normal level, and on the worst frames the white
+        // point drops a touch so blown areas read as bright, not burned.
+        // GRADE still runs after this and adds ~+0.05 to the mids, so the
+        // targets here sit just under where the finished shot should land.
+        // TESTED ON STILLS before rendering, old grade vs new, measured:
+        //   new clothes 206 -> 164, "you look good" 177 -> 149, POV shirt 185 -> 158,
+        //   POV walk-up 172 -> 148, Sony shirt 141 -> 129   (old grade: 214/187/200/185/149)
+        // A first version pulled the brightest shot to mid 0.48 at full saturation
+        // and the cream shirt went ORANGE AND BLOTCHY: darkening a near-white
+        // area reveals colour, and GRADE's +42% saturation then boosts it.
+        // So the brightest pull is gentler, and a tamed beat gives most of that
+        // saturation back (x0.72-0.82 here, against GRADE's x1.42).
+        const inMid = Math.min(0.85, y / 255);
+        const outMid = y > 185 ? 0.52 : (y > 170 ? 0.48 : 0.44);
+        const white = y > 185 ? 0.96 : 1;
+        const sat = y > 170 ? 0.72 : 0.82;
+        lift = `curves=all='0/0 ${inMid.toFixed(3)}/${outMid.toFixed(3)} 1/${white}',eq=saturation=${sat},`;
+        console.log(`      exposure: luma ${y.toFixed(0)} TOO BRIGHT -> mid ${inMid.toFixed(2)}->${outMid.toFixed(2)}` +
+          (white < 1 ? `, white ${white}` : "") + " (black point held)");
       }
     }
   } catch {}
@@ -1214,7 +1249,18 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     wav = cleanAudio(src, ss, to, n, sharedAtt());
   }
   execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-to", String(to), "-i", src, "-i", wav,
-    "-filter_complex", vf, "-map", "[v]", "-map", "1:a",
+    // ONE COLOUR RANGE FOR EVERY BEAT. The chest cam records FULL range
+    // (yuvj420p), the Sony LIMITED - and each beat used to be encoded in its
+    // source's range, then joined. The join reads ONE range for the whole
+    // file, so on ROMAN (2026-09-28) the Sony shots in the montage came out
+    // with blacks lifted from 0 to 16 and whites cut from 254 to 236 -
+    // washed out - while in the story one full-range shot went the other way.
+    // Measured by decoding the same frame from the beat file and the final.
+    // This is the root cause of the yuvj420p issue CLAUDE.md 7 had flagged
+    // since 09-12 as "not yet root-caused". Convert every beat to limited
+    // range here (a no-op for a beat already limited) and tag it as such.
+    "-filter_complex", vf + ";[v]scale=out_range=tv,format=yuv420p[vtv]", "-map", "[vtv]", "-map", "1:a",
+    "-color_range", "tv",
     // AUDIO AT THE JOINS. Tal: "when the clips would change, the audio would
     // mess up." Two causes, both here:
     //   1. loudnorm ran PER BEAT, so every beat was normalised to its own
@@ -1288,6 +1334,7 @@ execFileSync(FF, [...args, "-filter_complex", hasMusic ? `${fc};${amix}` : fc,
   "-map", "[v]", "-map", hasMusic ? "[a]" : "0:a",
   ...(hasMusic ? [] : ["-af", `${TIMELINE_AF},loudnorm=I=-16:TP=-1.5:LRA=11`]),
   "-c:v", "libx264", "-preset", "medium", "-crf", FINAL ? "19" : "23", "-pix_fmt", "yuv420p",
+  "-color_range", "tv",
   "-c:a", "aac", "-b:a", "160k", "-ar", "48000", join(OUT, outName)], { stdio: "pipe" });
 
 // NEVER write "EDIT.json" here. Windows paths are case-insensitive, so that

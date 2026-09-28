@@ -664,9 +664,17 @@ working and how.
   not `yuv420p` (standard limited-range).** Found 2026-09-12 via
   `ffmpeg-skill`'s `check.py --platform reels` on an already-posted final —
   QuickTime/iOS players can misinterpret full-range-tagged video (crushed or
-  washed-out color on Apple devices specifically). Not yet root-caused in our
-  render step or fixed pipeline-wide — flag it, don't silently assume past
-  renders are unaffected. `export.py`'s platform presets re-encode to
+  washed-out color on Apple devices specifically).
+  **ROOT-CAUSED AND FIXED 2026-09-28 (ROMAN).** It was worse than a tag. The
+  chest cam records FULL range (yuvj420p), the Sony LIMITED; `build-edit.mjs`
+  encoded each beat in its source's range and then joined them, and the join
+  reads one range for the whole file. Measured by decoding the same frame from
+  the beat file and from the final: Sony shots in the montage had blacks lifted
+  0 -> 16 and whites cut 254 -> 236 (washed out); in the story one full-range
+  shot was stretched the other way. **Every Sony + chest-cam render before
+  this date is suspect.** The fix converts every beat to limited range at the
+  end of its filter graph and tags the final `-color_range tv`; verified on a
+  mixed test (shot vs final within sampling noise, final `yuv420p,tv`). `export.py`'s platform presets re-encode to
   `yuv420p` as a stopgap; the real fix is an explicit `-pix_fmt yuv420p` on
   whatever ffmpeg args `renderMedia`/`proj-render.mjs` end up calling.
 - **An `interaction` is often NOT one conversation.** The ≤120 s gap rule

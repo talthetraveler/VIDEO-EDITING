@@ -1455,3 +1455,99 @@ Fourth time an instrument here has condemned good work — after caption-sync v1
 the 0.30 scene threshold, and the onset detector on street audio. The pattern is
 always the same and so is the fix: **before trusting a new measurement, feed it
 an answer you already know and check it gives that answer back.**
+
+## 54 — the exposure fix only ever went one way  [S]
+
+2026-09-28, ROMAN: *"some of the shots are overexposed. You gotta fix that."*
+The per-beat exposure block in `build-edit.mjs` was written after the coffee
+shop came out "way too dark", so it only LIFTED beats under luma 92. A midday
+street was never touched — and then `GRADE` ran on every beat and pushed the
+highlights UP (0.85 -> 0.92) with +42% saturation. Measured on the source: the
+new-clothes shot at luma **206 with 37% of the frame clipped to white**; after
+the old grade, **214**.
+
+**A correction for one direction is half a correction.** Added the TAME branch
+(luma > 125): midtone pulled down, black held, white point eased on the worst
+frames, and most of GRADE's saturation given back. Tested on stills before
+rendering — 206 -> 164, 185 -> 158, 172 -> 148, 141 -> 129.
+
+The first version overcorrected: pulling a near-white shirt down to the mids
+REVEALS colour, the +42% saturation then boosts it, and the cream shirt went
+orange and blotchy. Compare before/after stills of the worst shot every time.
+
+The honest ceiling: this footage is 8-bit. Sky already at 255 is gone. The
+fix restores faces and skin; it does not invent highlight detail.
+
+## 55 — whose line is it, and what does it actually say
+
+ROMAN had been cut before (V7, delivered 2026-09-21). Reading the Hebrew and
+looking at who was on camera found four errors that version carried:
+
+- **The best line was given to the wrong person.** *"If I have the strength to
+  give someone food, I always give it"* is the shawarma OWNER's — his mouth is
+  moving at C0491 21.0s/22.3s, and the lines around it are Tal asking *him* why
+  he helps people. V7 and the pasted brief both gave it to Roman. **Before
+  attributing a line, look at whose mouth moves.**
+- **A translation inverted the meaning.** *"I thought everything he did, he did
+  FOR me"* — the Hebrew is נגדי, **against** me. It is the whole point of the
+  father story. Also *"I was getting tired"* = I used to REBEL; *"eat them"* =
+  FEED them; *"what he doesn't kill with us is deceiving us"* = what doesn't
+  kill us makes us stronger.
+- **"Two days" was Tal's question, not Roman's answer.** He says *a day and a
+  half*. Caption what the person said, not what the brief assumed.
+- **The chronology the brief asked for was impossible**, and the footage had
+  the answer: the new clothes (C0488, 11:42) precede the food (C0489, 11:44),
+  but the real goodbye (C0492, 279-299s) is on the street *in* the new clothes
+  — so ending there is both chronological and the clothes payoff.
+
+Machine translation is a draft. On every line that carries the story, read
+the Hebrew.
+
+## 56 — two builder traps found on ROMAN, both silent
+
+**Snapping stretched a 3-second hook to 8.8 seconds.** `snapBoundaries`
+extends a beat to the edges of the utterance it sits in. On C0489 it pulled the
+hook's head from 123.4 back to 117.94 — the whole lead-in became the opening.
+It also dragged the goodbye back into a camera whip (278.5) and Roman's line
+forward into a passer-by (289.93), and added a stuttered "I... I" after "you
+look good". Nothing warned. **Read the `NN local-xx a->b (dur)` lines of the
+build log against the edit after every render** — any beat whose duration
+differs from what was asked has been moved. Pin it with `push.exact: true`, or
+`"snap": false` for a whole montage (added this session).
+
+**`captionFix` runs twice, and collides.** Once on the sentence before it is
+split, and again on every finished caption — where it also uppercases the
+replacement and bypasses the line-splitter. A rule whose `to` restated a whole
+sentence produced, on screen: *"This is for you / Here This is for you / THIS IS
+FOR YOU. TAKE OFF YOUR SHIRT."* **Correct the words in the translation cache
+(`cache/translate/<id>.json`, with the machine version kept as
+`.bak-machine`), not with caption rules.** Keep `captionFix` for dropping a
+line (`to: null`).
+
+**And time corrected lines from the Hebrew WORDS, not the machine segments.**
+The translation's segments are rounded to whole seconds; Roman pauses
+mid-thought ("בהתחלה" alone runs 11.2-13.6s), so captions spread across a
+rounded window landed in the gaps — `caption-sync` flagged 9 as over silence.
+Re-timed to word boundaries: every one of those moved onto speech. Where the
+transcriber stretched a word across a pause ("now" held 14.82-15.92), measure
+the voiced intervals with `speech-runs.py` instead.
+
+`caption-sync` itself was checked before being believed (LESSONS 53): the
+flagged windows were cut from the rendered file and re-transcribed. Where it
+said silence, whisper heard only "תודה" — its known hallucination on
+near-silence. Where it said a caption was off but whisper heard the words
+("Come on"), the flag was the instrument's, not the edit's.
+
+## 57 — a contact sheet cannot see a colour-range bug
+
+ROMAN, 2026-09-28. Every contact sheet looked right, and two finished files
+were still wrong. The chest cam is full range, the Sony limited; beats were
+encoded in their source's range and joined, and the finished file carries ONE
+range. Sheets are drawn by ffmpeg per beat, honouring each beat's own flag —
+so they look fine. A phone, or Instagram's re-encoder, reads the file's flag.
+
+The only way to see it: **decode the same frame from the beat file and from
+the final, and compare the black and white points.** Montage Sony shots: 0/254
+in the beat, 16/236 in the final. Fixed in `build-edit.mjs` (every beat ->
+limited range; final tagged `tv`). After any render that mixes cameras, run
+that comparison on one beat from each camera — it takes seconds.

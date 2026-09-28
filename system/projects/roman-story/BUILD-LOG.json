@@ -1,0 +1,859 @@
+{
+  "built": "2026-09-28T04:36:06.913Z",
+  "total_s": 107.44,
+  "out": "ROMAN_STORY_V9.mp4",
+  "layout": "vertical",
+  "beats": [
+    [
+      "local-e0275debb5700e8f",
+      123.4,
+      127.4,
+      0.5,
+      "HOOK (flash-forward): 'Two days you haven't eaten?'",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1.5,
+          1.58
+        ],
+        "x": 0.66,
+        "y": 0.4,
+        "manual": true
+      }
+    ],
+    [
+      "local-ca1bb9b65735004c",
+      0,
+      5.8,
+      0.5,
+      "POV walking up, lands on Roman: 'I want to bring you clothes.'"
+    ],
+    [
+      "local-19018606b6d6b0ee",
+      8.8,
+      13.3,
+      0.5,
+      "Sony: 'This is for you. Take off your shirt. Here's a new one.'",
+      null,
+      {
+        "audio": {
+          "id": "local-ca1bb9b65735004c",
+          "at": 6.610000000000001
+        },
+        "exact": true
+      }
+    ],
+    [
+      "local-ca1bb9b65735004c",
+      11.2,
+      13.4,
+      0.5,
+      "POV: the new shirt unfolded"
+    ],
+    [
+      "local-19018606b6d6b0ee",
+      21.8,
+      27.2,
+      0.5,
+      "Sony: the old shirt comes off. 'I'll help you.'",
+      null,
+      {
+        "audio": {
+          "id": "local-ca1bb9b65735004c",
+          "at": 19.61
+        },
+        "exact": true
+      }
+    ],
+    [
+      "local-ca1bb9b65735004c",
+      28.8,
+      32.3,
+      0.5,
+      "POV, his face: 'My brother, what's your name?' 'Roman.'"
+    ],
+    [
+      "local-ca1bb9b65735004c",
+      41.6,
+      44.9,
+      0.5,
+      "POV: the new shirt comes down - a breath",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-19018606b6d6b0ee",
+      58.3,
+      62.1,
+      0.5,
+      "Sony walk-off, chest-cam sound: 'Are you hungry?' 'Yes, I'm hungry.'",
+      null,
+      {
+        "audio": {
+          "id": "local-ca1bb9b65735004c",
+          "at": 56.11
+        }
+      }
+    ],
+    [
+      "local-da9f3edcbca2e9b2",
+      11.9,
+      13.1,
+      0.5,
+      "'Wow. Amazing.' (Tal off camera) over the clean frame of Roman in the new clothes, looking at camera",
+      null,
+      {
+        "z": [
+          1,
+          1.04
+        ],
+        "x": 0.45,
+        "y": 0.45,
+        "manual": true,
+        "audio": {
+          "id": "local-da9f3edcbca2e9b2",
+          "at": 2
+        },
+        "exact": true
+      }
+    ],
+    [
+      "local-da9f3edcbca2e9b2",
+      13.45,
+      16.6,
+      0.5,
+      "'Are you happy now? You look good.'",
+      null,
+      {
+        "z": [
+          1,
+          1.04
+        ],
+        "x": 0.45,
+        "y": 0.45,
+        "manual": true,
+        "exact": true
+      }
+    ],
+    [
+      "local-e0275debb5700e8f",
+      89.4,
+      94.3,
+      0.5,
+      "Food arrives: 'Here you go.' 'My brother, cheers.'"
+    ],
+    [
+      "local-e0275debb5700e8f",
+      137.2,
+      142.9,
+      0.5,
+      "'So two days you haven't eaten?' 'A day and a half. I haven't eaten anything.'",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1.5,
+          1.58
+        ],
+        "x": 0.66,
+        "y": 0.4,
+        "manual": true
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      0,
+      3,
+      0.5,
+      "'Who do you miss the most?'",
+      null,
+      {
+        "z": [
+          1.5,
+          1.58
+        ],
+        "x": 0.66,
+        "y": 0.42,
+        "manual": true
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      5.6,
+      7.3,
+      0.5,
+      "'My father.'",
+      null,
+      {
+        "z": [
+          1.5,
+          1.58
+        ],
+        "x": 0.66,
+        "y": 0.42,
+        "manual": true
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      11,
+      20,
+      0.5,
+      "'I thought everything he did, he did against me. I used to rebel.'",
+      null,
+      {
+        "z": [
+          1.5,
+          1.58
+        ],
+        "x": 0.66,
+        "y": 0.42,
+        "manual": true
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      32.2,
+      44.3,
+      0.5,
+      "THE TURN: 'Only after he passed away... he was only ever trying to guide you.'",
+      null,
+      {
+        "z": [
+          1.5,
+          1.58
+        ],
+        "x": 0.66,
+        "y": 0.42,
+        "manual": true
+      }
+    ],
+    [
+      "local-530bd874ad57bc14",
+      8,
+      12.8,
+      0.5,
+      "THE OWNER: 'I have at least five homeless people who come to eat at my place almost every day.'",
+      null,
+      {
+        "z": [
+          1.95,
+          2.05
+        ],
+        "x": 0.86,
+        "y": 0.62,
+        "manual": true
+      }
+    ],
+    [
+      "local-530bd874ad57bc14",
+      14.8,
+      26.4,
+      0.5,
+      "'Next time he comes, you'll feed him too?' 'Yes.' ... 'I'll never tell anyone not to eat.'",
+      null,
+      {
+        "z": [
+          1.95,
+          2.05
+        ],
+        "x": 0.86,
+        "y": 0.62,
+        "manual": true
+      }
+    ],
+    [
+      "local-e538e7e17faec033",
+      279,
+      282.4,
+      0.5,
+      "THE GOODBYE, on the street, in the new clothes: 'We love you. Good luck.'",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1.05,
+          1.1
+        ],
+        "x": 0.44,
+        "y": 0.45,
+        "manual": true
+      }
+    ],
+    [
+      "local-e538e7e17faec033",
+      284.3,
+      289.4,
+      0.5,
+      "Roman: 'You don't know anything about hard, brother. If you want, I'll tell you what hard is.'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-e538e7e17faec033",
+      291.9,
+      299.4,
+      0.5,
+      "'What you've lived through is very hard. So good luck.' / 'What doesn't kill us only makes us stronger.' - Roman wipes his eye"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "to": 1.43,
+      "text": "Two days"
+    },
+    {
+      "beat": "01",
+      "at": 1.43,
+      "to": 1.94,
+      "text": "you haven't eaten"
+    },
+    {
+      "beat": "02",
+      "at": 0.34,
+      "to": 0.98,
+      "text": "I want"
+    },
+    {
+      "beat": "02",
+      "at": 0.98,
+      "to": 1.61,
+      "text": "to bring"
+    },
+    {
+      "beat": "02",
+      "at": 1.61,
+      "to": 2.25,
+      "text": "you clothes"
+    },
+    {
+      "beat": "03",
+      "at": 0.61,
+      "to": 1.43,
+      "text": "This is for you"
+    },
+    {
+      "beat": "03",
+      "at": 2.24,
+      "to": 3.34,
+      "text": "Take off your shirt"
+    },
+    {
+      "beat": "03",
+      "at": 2.84,
+      "to": 3.8,
+      "text": "Here's a new one"
+    },
+    {
+      "beat": "04",
+      "at": 0.23,
+      "to": 1.25,
+      "text": "Take this off"
+    },
+    {
+      "beat": "05",
+      "at": 0.19,
+      "to": 0.85,
+      "text": "Come on"
+    },
+    {
+      "beat": "05",
+      "at": 0.85,
+      "to": 1.52,
+      "text": "I'll open"
+    },
+    {
+      "beat": "05",
+      "at": 1.52,
+      "to": 2.51,
+      "text": "it for you"
+    },
+    {
+      "beat": "05",
+      "at": 3.25,
+      "to": 3.7,
+      "text": "I'll help you"
+    },
+    {
+      "beat": "06",
+      "at": 0.13,
+      "to": 0.58,
+      "text": "My brother"
+    },
+    {
+      "beat": "06",
+      "at": 1.17,
+      "to": 2.07,
+      "text": "What's your name"
+    },
+    {
+      "beat": "06",
+      "at": 2.39,
+      "to": 2.84,
+      "text": "Roman"
+    },
+    {
+      "beat": "08",
+      "at": 0.99,
+      "to": 2.13,
+      "text": "Are you hungry"
+    },
+    {
+      "beat": "08",
+      "at": 3.54,
+      "to": 3.98,
+      "text": "Yes I'm hungry"
+    },
+    {
+      "beat": "09",
+      "at": 0,
+      "to": 0.52,
+      "text": "Wow"
+    },
+    {
+      "beat": "09",
+      "at": 0.52,
+      "to": 1.04,
+      "text": "Amazing"
+    },
+    {
+      "beat": "10",
+      "at": 0.81,
+      "to": 1.48,
+      "text": "Are you happy now"
+    },
+    {
+      "beat": "10",
+      "at": 2.33,
+      "to": 3.15,
+      "text": "You look good"
+    },
+    {
+      "beat": "11",
+      "at": 0.79,
+      "to": 2.09,
+      "text": "Here you go"
+    },
+    {
+      "beat": "11",
+      "at": 2.09,
+      "to": 2.52,
+      "text": "Cheers"
+    },
+    {
+      "beat": "11",
+      "at": 2.52,
+      "to": 2.97,
+      "text": "brother"
+    },
+    {
+      "beat": "11",
+      "at": 4.38,
+      "to": 5.45,
+      "text": "Bon appetit"
+    },
+    {
+      "beat": "12",
+      "at": 0,
+      "to": 0.65,
+      "text": "So two days"
+    },
+    {
+      "beat": "12",
+      "at": 1.49,
+      "to": 2.48,
+      "text": "you haven't eaten"
+    },
+    {
+      "beat": "12",
+      "at": 3.27,
+      "to": 4.35,
+      "text": "Day and a half"
+    },
+    {
+      "beat": "12",
+      "at": 3.95,
+      "to": 5.64,
+      "text": "I haven't eaten anything"
+    },
+    {
+      "beat": "13",
+      "at": 0,
+      "to": 0.45,
+      "text": "Who do you"
+    },
+    {
+      "beat": "13",
+      "at": 1.75,
+      "to": 3,
+      "text": "miss the most"
+    },
+    {
+      "beat": "14",
+      "at": 0.55,
+      "to": 1.65,
+      "text": "My father"
+    },
+    {
+      "beat": "15",
+      "at": 0.22,
+      "to": 0.99,
+      "text": "At first"
+    },
+    {
+      "beat": "15",
+      "at": 2.35,
+      "to": 2.92,
+      "text": "when I"
+    },
+    {
+      "beat": "15",
+      "at": 2.92,
+      "to": 3.78,
+      "text": "was a kid"
+    },
+    {
+      "beat": "15",
+      "at": 3.78,
+      "to": 4.35,
+      "text": "I thought"
+    },
+    {
+      "beat": "15",
+      "at": 3.85,
+      "to": 5.02,
+      "text": "everything he did"
+    },
+    {
+      "beat": "15",
+      "at": 5.02,
+      "to": 5.68,
+      "text": "against me"
+    },
+    {
+      "beat": "15",
+      "at": 6.59,
+      "to": 7.56,
+      "text": "I used to rebel"
+    },
+    {
+      "beat": "16",
+      "at": 0.79,
+      "to": 1.59,
+      "text": "When did I"
+    },
+    {
+      "beat": "16",
+      "at": 1.59,
+      "to": 2.4,
+      "text": "start to understand"
+    },
+    {
+      "beat": "16",
+      "at": 2.15,
+      "to": 2.6,
+      "text": "Only after"
+    },
+    {
+      "beat": "16",
+      "at": 2.69,
+      "to": 3.69,
+      "text": "he passed away"
+    },
+    {
+      "beat": "16",
+      "at": 3.69,
+      "to": 4.45,
+      "text": "brother"
+    },
+    {
+      "beat": "16",
+      "at": 3.95,
+      "to": 4.58,
+      "text": "Slowly you"
+    },
+    {
+      "beat": "16",
+      "at": 4.58,
+      "to": 5.53,
+      "text": "sit with yourself"
+    },
+    {
+      "beat": "16",
+      "at": 5.53,
+      "to": 5.98,
+      "text": "and replay"
+    },
+    {
+      "beat": "16",
+      "at": 6.29,
+      "to": 7.24,
+      "text": "the conversations you"
+    },
+    {
+      "beat": "16",
+      "at": 7.24,
+      "to": 8.44,
+      "text": "had with him"
+    },
+    {
+      "beat": "16",
+      "at": 8.94,
+      "to": 9.78,
+      "text": "and you realize"
+    },
+    {
+      "beat": "16",
+      "at": 9.78,
+      "to": 10.61,
+      "text": "he was only"
+    },
+    {
+      "beat": "16",
+      "at": 10.61,
+      "to": 11.16,
+      "text": "ever trying"
+    },
+    {
+      "beat": "16",
+      "at": 11.16,
+      "to": 12,
+      "text": "to guide you"
+    },
+    {
+      "beat": "17",
+      "at": 0.08,
+      "to": 1.07,
+      "text": "I have at least"
+    },
+    {
+      "beat": "17",
+      "at": 1.07,
+      "to": 1.57,
+      "text": "five homeless"
+    },
+    {
+      "beat": "17",
+      "at": 1.57,
+      "to": 2.07,
+      "text": "people who"
+    },
+    {
+      "beat": "17",
+      "at": 2.07,
+      "to": 2.81,
+      "text": "come to eat"
+    },
+    {
+      "beat": "17",
+      "at": 2.81,
+      "to": 3.49,
+      "text": "at my place"
+    },
+    {
+      "beat": "17",
+      "at": 3.99,
+      "to": 4.8,
+      "text": "almost every day"
+    },
+    {
+      "beat": "18",
+      "at": 0.08,
+      "to": 1.21,
+      "text": "Next time he comes"
+    },
+    {
+      "beat": "18",
+      "at": 1.21,
+      "to": 2.33,
+      "text": "you'll feed him too"
+    },
+    {
+      "beat": "18",
+      "at": 2.05,
+      "to": 2.5,
+      "text": "Yes yes"
+    },
+    {
+      "beat": "18",
+      "at": 3.99,
+      "to": 4.6,
+      "text": "Why do you"
+    },
+    {
+      "beat": "18",
+      "at": 4.6,
+      "to": 5.01,
+      "text": "do it"
+    },
+    {
+      "beat": "18",
+      "at": 5.01,
+      "to": 5.62,
+      "text": "Why do you"
+    },
+    {
+      "beat": "18",
+      "at": 5.62,
+      "to": 6.07,
+      "text": "help people"
+    },
+    {
+      "beat": "18",
+      "at": 5.65,
+      "to": 6.1,
+      "text": "Because if I"
+    },
+    {
+      "beat": "18",
+      "at": 6.64,
+      "to": 7.09,
+      "text": "have the strength"
+    },
+    {
+      "beat": "18",
+      "at": 7.63,
+      "to": 7.99,
+      "text": "to give"
+    },
+    {
+      "beat": "18",
+      "at": 7.99,
+      "to": 8.36,
+      "text": "someone food"
+    },
+    {
+      "beat": "18",
+      "at": 8.36,
+      "to": 9.15,
+      "text": "I'll always give it"
+    },
+    {
+      "beat": "18",
+      "at": 9.51,
+      "to": 10.08,
+      "text": "I'll never"
+    },
+    {
+      "beat": "18",
+      "at": 10.08,
+      "to": 10.65,
+      "text": "tell anyone"
+    },
+    {
+      "beat": "18",
+      "at": 10.65,
+      "to": 11.5,
+      "text": "not to eat"
+    },
+    {
+      "beat": "19",
+      "at": 0,
+      "to": 0.78,
+      "text": "We love you"
+    },
+    {
+      "beat": "19",
+      "at": 1.06,
+      "to": 2,
+      "text": "Good luck"
+    },
+    {
+      "beat": "20",
+      "at": 0.09,
+      "to": 0.38,
+      "text": "No"
+    },
+    {
+      "beat": "20",
+      "at": 0.38,
+      "to": 0.95,
+      "text": "my friend"
+    },
+    {
+      "beat": "20",
+      "at": 0.95,
+      "to": 1.81,
+      "text": "You don't know"
+    },
+    {
+      "beat": "20",
+      "at": 1.81,
+      "to": 2.66,
+      "text": "anything about hard"
+    },
+    {
+      "beat": "20",
+      "at": 2.66,
+      "to": 3.11,
+      "text": "brother"
+    },
+    {
+      "beat": "20",
+      "at": 2.55,
+      "to": 3.4,
+      "text": "If you want"
+    },
+    {
+      "beat": "20",
+      "at": 3.4,
+      "to": 4.24,
+      "text": "I'll tell you"
+    },
+    {
+      "beat": "20",
+      "at": 4.24,
+      "to": 5.09,
+      "text": "what hard is"
+    },
+    {
+      "beat": "21",
+      "at": 0.06,
+      "to": 0.61,
+      "text": "What you've"
+    },
+    {
+      "beat": "21",
+      "at": 0.61,
+      "to": 1.17,
+      "text": "lived through"
+    },
+    {
+      "beat": "21",
+      "at": 1.17,
+      "to": 1.75,
+      "text": "is very hard"
+    },
+    {
+      "beat": "21",
+      "at": 2.07,
+      "to": 3.15,
+      "text": "So good luck"
+    },
+    {
+      "beat": "21",
+      "at": 3.7,
+      "to": 4.37,
+      "text": "What doesn't"
+    },
+    {
+      "beat": "21",
+      "at": 4.37,
+      "to": 5.38,
+      "text": "kill us only"
+    },
+    {
+      "beat": "21",
+      "at": 5.38,
+      "to": 6.39,
+      "text": "makes us stronger"
+    }
+  ]
+}

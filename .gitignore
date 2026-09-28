@@ -108,3 +108,22 @@ system/projects/_frameio/cache/
 **/transcripts/
 **/translate/
 **/diarize/
+
+# ----------------------------------------------------------- FRAMES OF PEOPLE ARE CONTENT
+# 2026-09-28: 308 stills of Roman (inspection strips, contact sheets) were pushed
+# to this PUBLIC repo because the media rule listed video/audio extensions only.
+# A frame of a person is content exactly as a video is. Nothing a project
+# generates for inspection goes up.
+system/projects/**/_look/
+system/projects/**/contact/
+system/projects/**/_review/
+system/projects/**/preview/
+system/projects/**/beats_*/
+system/projects/**/tmp_*/
+system/projects/**/*.jpg
+system/projects/**/*.jpeg
+system/projects/**/*.png
+system/projects/**/*.webp
+system/projects/_refs/
+**/transcript.txt
+**/transcripts/

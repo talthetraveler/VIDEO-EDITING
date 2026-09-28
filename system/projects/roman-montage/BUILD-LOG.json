@@ -1,0 +1,295 @@
+{
+  "built": "2026-09-28T04:40:01.035Z",
+  "total_s": 39.45,
+  "out": "ROMAN_MONTAGE_V7.mp4",
+  "layout": "vertical",
+  "beats": [
+    [
+      "local-ca1bb9b65735004c",
+      2.6,
+      5.4,
+      0.5,
+      "walking up - Roman appears",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-19018606b6d6b0ee",
+      12,
+      14.2,
+      0.5,
+      "Sony: holding up the new shirt",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-ca1bb9b65735004c",
+      12,
+      13.6,
+      0.5,
+      "POV: the shirt unfolded (cut before the lens fills with his orange shirt)",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-19018606b6d6b0ee",
+      21.6,
+      24,
+      0.5,
+      "Sony: the old shirt comes off",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-ca1bb9b65735004c",
+      29.6,
+      31.6,
+      0.5,
+      "POV: Roman shirtless, smiling",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-ca1bb9b65735004c",
+      39.6,
+      41.6,
+      0.5,
+      "POV: the new shirt comes down",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-ca1bb9b65735004c",
+      50,
+      52.2,
+      0.5,
+      "POV: Roman standing in it",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-19018606b6d6b0ee",
+      59.6,
+      62.2,
+      0.5,
+      "Sony: they walk off together",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-e0275debb5700e8f",
+      89.4,
+      92,
+      0.5,
+      "food arrives",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-e0275debb5700e8f",
+      96.4,
+      99,
+      0.5,
+      "the first bite",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-e0275debb5700e8f",
+      137.2,
+      142.9,
+      0.5,
+      "LINE 1: 'So two days you haven't eaten?' 'A day and a half. I haven't eaten anything.'",
+      null,
+      {
+        "z": [
+          1.5,
+          1.58
+        ],
+        "x": 0.66,
+        "y": 0.4,
+        "manual": true
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      0,
+      3,
+      0.5,
+      "LINE 2a: 'Who do you miss the most?'",
+      null,
+      {
+        "z": [
+          1.5,
+          1.58
+        ],
+        "x": 0.66,
+        "y": 0.42,
+        "manual": true
+      }
+    ],
+    [
+      "local-3843b9158bfb6eb6",
+      5.6,
+      7.2,
+      0.5,
+      "LINE 2b: 'My father.'",
+      null,
+      {
+        "z": [
+          1.5,
+          1.58
+        ],
+        "x": 0.66,
+        "y": 0.42,
+        "manual": true
+      }
+    ],
+    [
+      "local-e538e7e17faec033",
+      150,
+      151.8,
+      0.5,
+      "eating, framed onto Roman",
+      null,
+      {
+        "z": [
+          1.55,
+          1.6
+        ],
+        "x": 0.62,
+        "y": 0.42,
+        "manual": true,
+        "nocap": true
+      }
+    ],
+    [
+      "local-da9f3edcbca2e9b2",
+      11.9,
+      13.1,
+      0.5,
+      "'Wow. Amazing.' (Tal off camera) over the clean frame of Roman in the new clothes, looking at camera",
+      null,
+      {
+        "z": [
+          1,
+          1.04
+        ],
+        "x": 0.45,
+        "y": 0.45,
+        "manual": true,
+        "audio": {
+          "id": "local-da9f3edcbca2e9b2",
+          "at": 2
+        },
+        "exact": true
+      }
+    ],
+    [
+      "local-da9f3edcbca2e9b2",
+      13.45,
+      16.6,
+      0.5,
+      "ENDING: 'Are you happy now? You look good.'",
+      null,
+      {
+        "z": [
+          1,
+          1.04
+        ],
+        "x": 0.45,
+        "y": 0.45,
+        "manual": true,
+        "exact": true
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "11",
+      "at": 0,
+      "to": 0.65,
+      "text": "So two days"
+    },
+    {
+      "beat": "11",
+      "at": 1.49,
+      "to": 2.48,
+      "text": "you haven't eaten"
+    },
+    {
+      "beat": "11",
+      "at": 3.27,
+      "to": 4.35,
+      "text": "Day and a half"
+    },
+    {
+      "beat": "11",
+      "at": 3.95,
+      "to": 5.64,
+      "text": "I haven't eaten anything"
+    },
+    {
+      "beat": "12",
+      "at": 0,
+      "to": 0.45,
+      "text": "Who do you"
+    },
+    {
+      "beat": "12",
+      "at": 1.75,
+      "to": 3,
+      "text": "miss the most"
+    },
+    {
+      "beat": "13",
+      "at": 0.55,
+      "to": 1.6,
+      "text": "My father"
+    },
+    {
+      "beat": "15",
+      "at": 0,
+      "to": 0.52,
+      "text": "Wow"
+    },
+    {
+      "beat": "15",
+      "at": 0.52,
+      "to": 1.04,
+      "text": "Amazing"
+    },
+    {
+      "beat": "16",
+      "at": 0.81,
+      "to": 1.48,
+      "text": "Are you happy now"
+    },
+    {
+      "beat": "16",
+      "at": 2.33,
+      "to": 3.15,
+      "text": "You look good"
+    }
+  ]
+}

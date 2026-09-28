@@ -1,0 +1,310 @@
+{
+ "layout": "vertical",
+ "out": "ROMAN_STORY_V9.mp4",
+ "note": "Two-camera kindness story, chronological. Sync measured by audio correlation: VID059 = C0484 - 2.19s (r 0.89); VID059 = C0485 + 85.00s (r 0.90); VID060 = C0485 - 173.26s (r 0.70). Translations corrected from the Hebrew transcripts - the machine had inverted the father line ('for me' vs 'against me'). The give-food line is the OWNER's (C0491, his mouth moving at 21-22s), not Roman's as V7 assumed. Roman says 'a day and a half', not two days - the two days is Tal's question. New clothes stay in the middle: C0488 (11:42) precedes the food (C0489 11:44). Ends on the real goodbye. V2, after looking at every clip on timeline strips: walk-up now lands on Roman (V059 5s); the name exchange is the POV (his face) not the wide Sony; the hungry exchange is the Sony walk-off with chest-cam sound; new clothes skip C0488's empty toilet doorway (0-3s), camera whip (4.5s) and lens obstruction (9-11s); the ending is the REAL goodbye on the street (C0492 279-299) - Roman in the new clothes, Tal's hand on his shoulder, 'you don't know anything about hard, brother', then 'what doesn't kill us only makes us stronger' over Roman wiping his eye. It starts at 279 because 276-279 is a camera whip past Tal's back, and skips 289.5-291.9 where a passer-by blocks the frame. V3 from the V2 contact sheet: the 'place to rest' beat is cut - C0485 is shot from behind Tal with a scooter helmet filling the lower half, and Tal asked for no shots of his back; C0488 framed by hand, full body, because autoframe cut Roman's head off on the payoff; father and owner framed by hand onto the speaker's face. Exposure: the new TAME branch (LESSONS 54).",
+ "beats": [
+  [
+   "local-e0275debb5700e8f",
+   123.4,
+   127.4,
+   0.5,
+   "HOOK (flash-forward): 'Two days you haven't eaten?'",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1.5,
+     1.58
+    ],
+    "x": 0.66,
+    "y": 0.4,
+    "manual": true
+   }
+  ],
+  [
+   "local-ca1bb9b65735004c",
+   0.0,
+   5.8,
+   0.5,
+   "POV walking up, lands on Roman: 'I want to bring you clothes.'"
+  ],
+  [
+   "local-19018606b6d6b0ee",
+   8.8,
+   13.3,
+   0.5,
+   "Sony: 'This is for you. Take off your shirt. Here's a new one.'",
+   null,
+   {
+    "audio": {
+     "id": "local-ca1bb9b65735004c",
+     "at": 6.610000000000001
+    },
+    "exact": true
+   }
+  ],
+  [
+   "local-ca1bb9b65735004c",
+   11.2,
+   13.4,
+   0.5,
+   "POV: the new shirt unfolded"
+  ],
+  [
+   "local-19018606b6d6b0ee",
+   21.8,
+   27.2,
+   0.5,
+   "Sony: the old shirt comes off. 'I'll help you.'",
+   null,
+   {
+    "audio": {
+     "id": "local-ca1bb9b65735004c",
+     "at": 19.61
+    },
+    "exact": true
+   }
+  ],
+  [
+   "local-ca1bb9b65735004c",
+   28.8,
+   32.3,
+   0.5,
+   "POV, his face: 'My brother, what's your name?' 'Roman.'"
+  ],
+  [
+   "local-ca1bb9b65735004c",
+   41.6,
+   44.9,
+   0.5,
+   "POV: the new shirt comes down - a breath",
+   null,
+   {
+    "nocap": true
+   }
+  ],
+  [
+   "local-19018606b6d6b0ee",
+   58.3,
+   62.1,
+   0.5,
+   "Sony walk-off, chest-cam sound: 'Are you hungry?' 'Yes, I'm hungry.'",
+   null,
+   {
+    "audio": {
+     "id": "local-ca1bb9b65735004c",
+     "at": 56.11
+    }
+   }
+  ],
+  [
+   "local-da9f3edcbca2e9b2",
+   11.9,
+   13.1,
+   0.5,
+   "'Wow. Amazing.' (Tal off camera) over the clean frame of Roman in the new clothes, looking at camera",
+   null,
+   {
+    "z": [
+     1.0,
+     1.04
+    ],
+    "x": 0.45,
+    "y": 0.45,
+    "manual": true,
+    "audio": {
+     "id": "local-da9f3edcbca2e9b2",
+     "at": 2.0
+    },
+    "exact": true
+   }
+  ],
+  [
+   "local-da9f3edcbca2e9b2",
+   13.45,
+   16.6,
+   0.5,
+   "'Are you happy now? You look good.'",
+   null,
+   {
+    "z": [
+     1.0,
+     1.04
+    ],
+    "x": 0.45,
+    "y": 0.45,
+    "manual": true,
+    "exact": true
+   }
+  ],
+  [
+   "local-e0275debb5700e8f",
+   89.4,
+   94.3,
+   0.5,
+   "Food arrives: 'Here you go.' 'My brother, cheers.'"
+  ],
+  [
+   "local-e0275debb5700e8f",
+   137.2,
+   142.9,
+   0.5,
+   "'So two days you haven't eaten?' 'A day and a half. I haven't eaten anything.'",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1.5,
+     1.58
+    ],
+    "x": 0.66,
+    "y": 0.4,
+    "manual": true
+   }
+  ],
+  [
+   "local-3843b9158bfb6eb6",
+   0.0,
+   3.0,
+   0.5,
+   "'Who do you miss the most?'",
+   null,
+   {
+    "z": [
+     1.5,
+     1.58
+    ],
+    "x": 0.66,
+    "y": 0.42,
+    "manual": true
+   }
+  ],
+  [
+   "local-3843b9158bfb6eb6",
+   5.6,
+   7.3,
+   0.5,
+   "'My father.'",
+   null,
+   {
+    "z": [
+     1.5,
+     1.58
+    ],
+    "x": 0.66,
+    "y": 0.42,
+    "manual": true
+   }
+  ],
+  [
+   "local-3843b9158bfb6eb6",
+   11.0,
+   20.0,
+   0.5,
+   "'I thought everything he did, he did against me. I used to rebel.'",
+   null,
+   {
+    "z": [
+     1.5,
+     1.58
+    ],
+    "x": 0.66,
+    "y": 0.42,
+    "manual": true
+   }
+  ],
+  [
+   "local-3843b9158bfb6eb6",
+   32.2,
+   44.3,
+   0.5,
+   "THE TURN: 'Only after he passed away... he was only ever trying to guide you.'",
+   null,
+   {
+    "z": [
+     1.5,
+     1.58
+    ],
+    "x": 0.66,
+    "y": 0.42,
+    "manual": true
+   }
+  ],
+  [
+   "local-530bd874ad57bc14",
+   8.0,
+   12.8,
+   0.5,
+   "THE OWNER: 'I have at least five homeless people who come to eat at my place almost every day.'",
+   null,
+   {
+    "z": [
+     1.95,
+     2.05
+    ],
+    "x": 0.86,
+    "y": 0.62,
+    "manual": true
+   }
+  ],
+  [
+   "local-530bd874ad57bc14",
+   14.8,
+   26.4,
+   0.5,
+   "'Next time he comes, you'll feed him too?' 'Yes.' ... 'I'll never tell anyone not to eat.'",
+   null,
+   {
+    "z": [
+     1.95,
+     2.05
+    ],
+    "x": 0.86,
+    "y": 0.62,
+    "manual": true
+   }
+  ],
+  [
+   "local-e538e7e17faec033",
+   279.0,
+   282.4,
+   0.5,
+   "THE GOODBYE, on the street, in the new clothes: 'We love you. Good luck.'",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1.05,
+     1.1
+    ],
+    "x": 0.44,
+    "y": 0.45,
+    "manual": true
+   }
+  ],
+  [
+   "local-e538e7e17faec033",
+   284.3,
+   289.4,
+   0.5,
+   "Roman: 'You don't know anything about hard, brother. If you want, I'll tell you what hard is.'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-e538e7e17faec033",
+   291.9,
+   299.4,
+   0.5,
+   "'What you've lived through is very hard. So good luck.' / 'What doesn't kill us only makes us stronger.' - Roman wipes his eye"
+  ]
+ ],
+ "captionFix": [
+  {
+   "match": "No, thanks",
+   "to": null
+  }
+ ]
+}
