@@ -208,6 +208,7 @@ that the job actually touches. "I have a toolbox" is not the same as reading it.
 | audio levels, ducking, cleanup | `toolbox/03-audio-post/` | the do-not-over-denoise line is absolute |
 | b-roll on the WORD it illustrates | `toolbox/find-broll/` | it does not choose the moment |
 | following a subject who WALKS | `toolbox/clipify/` | take the tracker, not its moment-picking |
+| genuinely HORIZONTAL footage -> 9:16 (long-form -> Shorts, horizontal B-roll) | `system/vendor/Autocrop-vertical` — `REPOS.md` has the command | one FIXED crop per scene from one frame; its letterbox fallback is not his look. **His Sony clips are sideways portrait with no rotation tag — rotate, never crop** |
 | zoom / punch-in emphasis | `toolbox/add-zooms/` | `zoompan` retimes by FRAME COUNT (LESSONS 21). `build-edit.mjs` already owns zoom — **never both on one file** |
 | a raw ffmpeg filter or encode question | `toolbox/ffmpeg-skill/` | 42 typed scripts; call with `python`, not `python3` |
 | reading a reference into a recipe | `toolbox/07-cinematic-reference/`, `toolbox/08-creator-formats/`, `toolbox/tal-reference-library/` | technique only, never assets (CLAUDE.md 1 Rights) |

@@ -19,6 +19,7 @@ turn, with a verified status, or it has not been dealt with.**
 | `francozanardi/tscaps` | **not installed, deliberately** — see below | — |
 | OpenChatCut | cloned, never wired | `system/vendor/OpenChatCut` |
 | `calesthio/OpenMontage` | **installed and working, 42/117 tools, zero keys** | `system/vendor/OpenMontage` |
+| `kamilstanuch/Autocrop-vertical` | **works after a 3-line patch** — horizontal -> 9:16, one fixed crop per scene. See below | `system/vendor/Autocrop-vertical` (own `.venv`) |
 
 ---
 
@@ -277,3 +278,77 @@ effects were copied to `tal-video-editor/assets/sfx/` first.
 install, list `~/.claude/skills` and read every new description for a trigger
 that claims "edit", "video" or "footage". Check the loader, not just the folder
 you cloned into.
+
+---
+
+## Autocrop-vertical — installed 2026-09-28, patched, and mostly NOT for his footage
+
+Tal, 2026-09-28, while starting long-form YouTube: *"install this ... I'll be
+giving you also like a reference of a bunch of YouTube videos and travel
+videos."* Clone at `system/vendor/Autocrop-vertical` (commit `e026639`), own
+venv (torch 2.14 CPU, ultralytics 8.4, scenedetect 0.6.7, OpenCV 4.14). **No
+licence in the repo** — fine to run locally, never redistribute it.
+
+```bash
+cd system/vendor/Autocrop-vertical
+.venv/Scripts/python.exe main.py -i in.mp4 -o out.mp4 --quality high
+.venv/Scripts/python.exe main.py -i in.mp4 -o out.mp4 --plan-only   # the per-scene decision, no encode
+```
+
+(Set `PYTHONIOENCODING=utf-8` from PowerShell — it prints emoji.)
+
+**What it actually does — read the code, not the name.** PySceneDetect splits
+the video into scenes; YOLOv8n looks at **ONE frame, the middle of each
+scene**; every person found counts, passers-by included. One person, or a group
+narrower than a 9:16 slice -> a **fixed** crop centred on them for the whole
+scene ("TRACK" does not track). Anything wider -> **LETTERBOX**: the whole 16:9
+frame shrunk into the middle with black bars. Nothing follows a subject who
+walks within a shot — that is still `toolbox/clipify/`.
+
+**Broken as shipped on this machine, patched here.** ffmpeg 9.0 (the Gyan build
+on PATH) removed `-vsync`; main.py passes it twice, ffmpeg refuses to start and
+Python dies with `OSError: [Errno 22] Invalid argument` on the frame pipe — a
+message that points nowhere near the cause. Found by re-running its exact ffmpeg
+command and reading stderr. Patch (vendor/ is gitignored, so it lives HERE —
+re-apply after any `git pull`):
+
+```
+'-vsync', 'cfr'  ->  '-fps_mode', 'cfr'                       (lines 297, 565)
+encoder: add '-nostats', '-loglevel', 'error'                  (line 560)
+```
+
+The second line is preventive: the encoder's stderr is piped and never read
+until the end, so on a long YouTube source the progress spam would fill the pipe
+and freeze the run. (First guess — odd output width — was wrong: it already
+rounds 607 -> 608. Checked before patching.)
+
+**Known-answer test, 2026-09-28.** A built 1920x1080 control clip: 0-5s one
+person placed at x 1250-1858; 5-10s two people at opposite edges.
+
+| expected | got |
+|---|---|
+| a scene cut at exactly 5.000s | 2 scenes, boundary 00:00:05.000 |
+| scene 1: crop x≈1250-1858 | TRACK, crop sits exactly on the person, no background visible |
+| scene 2: letterbox | LETTERBOX |
+| 10.0s, audio kept | 608x1080, yuv420p, 10.000s, audio stream present |
+
+Speed: **57s for 10s of 1080p (0.2x realtime)** including model load; scene
+detection alone took 23.6s. Not yet measured on a long file — expect a 20-min
+source to take the better part of an hour. Audio sync was NOT proven (the
+control's audio was silence).
+
+**Where it is useful, and where it is not:**
+
+- **NOT on his own footage, as of this date.** Every clip probed — Sony
+  feed-homeless (C0484, C0488), the Sony table rig (C0246), the phone clips in
+  `Downloads/travel` — is portrait content. The Sony files are 3840x2160 with
+  **no rotation tag** and the picture sideways: they need a 90° turn (the
+  rotation slot in `build-edit.mjs`), never a crop. Autocrop would cut a
+  vertical strip out of a man lying on his side. **Check rotation first.**
+- **Useful for genuinely horizontal footage** — a long-form YouTube cut being
+  mined for Shorts (`formats/longform-to-shorts.md`), horizontal B-roll, a
+  horizontal camera he has not used yet. Use TRACK scenes as they come.
+- **Its LETTERBOX fallback is not his look.** A tiny shot between big black
+  bars. For a horizontal conversation his format is the square band +
+  punch-ins (ROUTING §1). Run `--plan-only`, take the TRACK scenes, and build
+  the LETTERBOX ones as square-band beats instead.
