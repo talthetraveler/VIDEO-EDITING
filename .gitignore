@@ -12,6 +12,10 @@
 FOOTAGE IN/
 VIDEOS OUT/
 assets/
+# ...but `assets/` above also matches skill folders. The SFX library's
+# CREDITS.md + manifest.json are the record of where every sound came from
+# (Pixabay; REPOS.md). Keep that text; the .mp3s stay out via *.mp3 below.
+!skills/tal-video-editor/assets/
 system/public/footage/
 system/projects/_build-scratch/
 system/projects/_tmp-*/
