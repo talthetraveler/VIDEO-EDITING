@@ -1551,3 +1551,20 @@ the final, and compare the black and white points.** Montage Sony shots: 0/254
 in the beat, 16/236 in the final. Fixed in `build-edit.mjs` (every beat ->
 limited range; final tagged `tv`). After any render that mixes cameras, run
 that comparison on one beat from each camera — it takes seconds.
+
+## 58 — a reel downloaded from Instagram cannot tell you its loudness
+
+Instagram harvest, 2026-09-28. Six agents measured 58 downloaded reels from
+six accounts (Tal, NAS, aija, erez.v1, Montana, MD Motivator). **Every one
+read −14.0 to −14.7 LUFS** — dance clips, song reels, VO films, hidden-camera
+dialogue alike. The same day, Tal's ORIGINAL exports of his own films (the
+Drive zip) read −6.2, −6.4, −9.1, −13.3 and −14.5. Instagram normalises what it
+serves; the file you download is the platform's loudness, not the creator's mix.
+
+So "−14 LUFS, measured from a successful example" proves nothing if the
+example came off Instagram — `formats/social-accords.md`'s "Music −14 LUFS"
+row and the call-someone-you-love "calibration point" are both suspect for
+this reason. **−14 LUFS stays the delivery target** (it is the platform
+norm), but never cite a download as evidence for it. What DOES survive the
+platform: loudness RANGE (song-driven 0.5–3 LU vs dialogue 7–11 LU), the
+music bed's level under the voice (mid vs side), and where the bed swells.

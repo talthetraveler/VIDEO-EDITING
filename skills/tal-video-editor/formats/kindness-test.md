@@ -183,3 +183,44 @@ payoff transition, never on ordinary cuts.
 
 −6 LUFS with peaks at **+1.9 dBFS** is clipped. That's what "enhanced audio"
 did. Deliver at −14 LUFS, −1 dBTP as always. Street ambience stays in.
+
+---
+
+# THE POSTED CUT closes the caption flag (measured 2026-09-28)
+
+His **posted** coffee-cart kindness test (`Ddr6p4WIK_n`, 233K) is **120 s**,
+~22 cuts/min, **white bold caps 1-3 words** (y~0.54; later English + a smaller
+Hebrew line at y~0.69), a VO hook with a light-leak flash, a pay-it-forward
+ending to an Eritrean cleaner with a second flash, and a Social Accords
+watermark + end card. **So the gold full-sentence captions of the V3/V4 files
+above were drafts; his posted look agrees with THE STANDARD.** The flag above
+is closed. Source: `skills/toolbox/tal-reference-library/instagram-2026-09-28/talthetraveler.md`.
+
+**"Under 60s" is wrong when there is a second act.** His posted cut is 120 s;
+MD Motivator's are 105-180 s.
+
+# MD MOTIVATOR'S TEMPLATE: 10 reels, 2.7M-44.6M views (measured 2026-09-28)
+
+Full file: `skills/toolbox/tal-reference-library/instagram-2026-09-28/mdmotivator.md`.
+
+- **The first spoken line is the hook, captioned from frame 0**: a question or
+  an ask ("Would you rather have a brand new Spider-Man or $1,000 cash?"). No
+  title card.
+- **7/10 open on a ~3-4x punched-in face that pulls out to the wide in ~0.25 s.**
+  (Not in the pipeline yet.)
+- **Jump-cut the talk (median shot 1.5-4.5 s); HOLD THE REVEAL in one unbroken
+  shot.** The top 3 hold the first reveal **9.8-18 s (mean 13.3) vs 7.8 s** for
+  the other 7, the only thing found that separates them (hypothesis, n=10).
+  Tal's own reveal holds (11-15 s) already sit in the top-3 range.
+- **2-4 reveals ("one more surprise")**, and **6/10 end with the recipient
+  passing it on**: the ending Tal already uses.
+- **Music: dry open -> the bed enters at the story turn (16-19 s) -> swells
+  3-9 dB at the reveal, or is pulled out entirely for it.** Tal's V4 "rising
+  stereo layer" is the same move.
+- Time jumps covered by a small tag (`*10 minutes later*`), a pan, or a white flash.
+- Long lens for the ask, close camera for the reveal (= the two-camera rule).
+- Yellow marks the **hook and payoff lines only**, not the speaker (matches
+  CLAUDE.md rule 3). Keep THE STANDARD's type; take the colour logic.
+
+**Never copy:** a faked disability or injury as the test; the money / sponsor /
+celebrity escalation; true peaks over 0 dBFS.

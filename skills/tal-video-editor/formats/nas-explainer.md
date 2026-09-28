@@ -214,3 +214,30 @@ after the history and before the values.
 Bahnschrift is more squared-off. Proportions match, personality does not
 quite. If Tal supplies their actual font file, swap `NAS_FONT` in
 `render-caption.py` and nothing else changes.
+
+---
+
+# NAS DAILY AS OF 2026-09: his last 9 reels (measured 2026-09-28)
+
+Full file: `skills/toolbox/tal-reference-library/instagram-2026-09-28/nasdaily.md`. **The top table of this file is out of date for
+NAS himself:**
+
+| | table above (older NAS) | **NAS now (median of 9)** |
+|---|---|---|
+| runtime | 157 s | **122 s** |
+| cuts/min | 22 | **28.6** |
+| words per cut | ~6 | **~4.9** |
+| wpm | 132 | **140** |
+| captions | no stroke, y~0.76, 4-6 words | **solid black outline ~4-5 px + shadow, y~0.645, 1-6 words (median ~3)**; lemon-yellow #F8F800 key word **inline at the same size** in about half the cards; red for negative words; real emoji inline; a separate condensed ALL-CAPS yellow "punch word" layer |
+| end card | - | NASDAILY. (stories) / NAS.COM WEEK N (business) |
+
+**His top three are all "access stories"**: an insider place, a physical reveal
+on frame 1, the guest speaking on camera, a white flash at each section change,
+a values/callback ending. **The top two show the ending in the first seconds
+and pay that image off at the end.**
+
+**Consequence for `"captionStyle": "nas"`:** it was matched to his Social
+Accords videos (gold word 1.4x on its own line, no outline). It now matches
+neither NAS himself nor Tal's own narrated films (white, no gold word,
+`voiceover-broll.md` section 5). Use `captionKeys: []` for Tal's narrated films;
+a "NAS 2026" look (outline + inline yellow) would be a new style, not built.

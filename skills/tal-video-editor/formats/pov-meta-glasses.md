@@ -115,3 +115,40 @@ drop to 46-48px font if it overflows.
   `node system/scripts/selfreview.mjs <EDIT.json> <render.mp4>` before it is sent.
 - **Under 60 seconds** unless the story genuinely needs more.
 - Music optional. These carry on voices and faces alone.
+
+---
+
+## 5. POV "MEETING A <RELIGION> IN ISRAEL" — the single-subject POV (measured 2026-09-28)
+
+**A different format from the greeting compilation above**, and currently his
+best: the two top reels of his last 10 (**1M** `Ddt3vEkMYVz`, **536K**
+`Ddw_hauoMDq`, both collabs with @thesocialaccords). Full measurement:
+`skills/toolbox/tal-reference-library/instagram-2026-09-28/talthetraveler.md`.
+
+| | compilation (sections 1-4 above) | **meeting a <religion>** |
+|---|---|---|
+| people | many, ~2 s each | **one** (or one + a friend), a full conversation |
+| runtime | 36-59 s | **63-72 s** |
+| cuts/min | 15-30 | **~2 (536K: essentially one take) to ~18 (1M)**; holds of 4-7 s |
+| captions | gold ALL CAPS (measured on *Love is the answer*) | **WHITE**. 1M: bold italic ALL CAPS, **one word**, y~0.70. 536K: lowercase serif 2-3 words, y~0.69 |
+| title pill | ~4-5 s, y~0.11 | white rounded pill "POV: MEETING A MUSLIM IN ISRAEL", **y~0.15-0.19, 3-9 s** |
+
+**The shape:**
+1. Title pill from frame 0 naming the religion.
+2. Open mid-approach on a face.
+3. The identity reveal happens IN the dialogue ("you are Muslim, I am Jewish"
+   -> "we're brothers"), Tal the curious outsider.
+4. **The stranger says the thesis** ("we're all human, it doesn't matter").
+5. Something shared on screen: food, a hug, a tourist asked about Israel.
+6. End warm ("Welcome to Israel, bro" / "Shabbat Shalom"); SA end card on the 1M.
+
+The 1M has 3 scenes with food as the thread, one-word captions, a music bed and
+more cuts; the 536K is one take. **What both share is the religion in the
+title, not the pacing.** Across his last 10, the top four each name a religion
+or a Jewish holiday up front (a pattern to test, n=10).
+
+**Caption colour, resolved by format:** white here and in THE STANDARD
+(2026-09-24); gold stays for the greeting compilation it was measured on.
+**Open question for Tal:** the 536K's lowercase serif breaks THE STANDARD's
+uppercase sans, and the pipeline has no serif style. Default stays white
+uppercase sans until he says otherwise.

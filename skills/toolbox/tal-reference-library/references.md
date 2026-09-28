@@ -31,6 +31,8 @@ creator. **[S]**
 | KT-2 | **Coffee cart, 400 shekels, V3** (`3 enhanced audio.mov`) | KINDNESS TEST | STYLE | **MEASURED** 2026-09-28. `formats/kindness-test.md` |
 | KT-3 | **Coffee cart, 400 shekels, V4** (`4 revised.mov`): his revision of KT-2 | KINDNESS TEST | STYLE | **MEASURED** 2026-09-28: the V3->V4 delta is recorded. `formats/kindness-test.md` |
 
+| IG-2026-09-28 | **Last ~10 reels of six accounts: talthetraveler (10), nasdaily (9), aija (10), erez.v1 (9), montanatucker (10), mdmotivator (10)** | ALL | STYLE (his 1M / 536K POV "meeting a <religion>" = **GOLDEN candidate**) | **MEASURED** 2026-09-28: 58 reels, every shot on sheets, transcripts, audio. Text in `instagram-2026-09-28/` (README + one file per account) |
+
 VO-1…KT-3 came in one zip on 2026-09-28. Originals:
 `assets/references/voiceover-broll-drive-2026-09-28/`; sheets, shot lists,
 transcripts: `assets/analysis/voiceover-broll/` (both git-ignored). Rebuild the

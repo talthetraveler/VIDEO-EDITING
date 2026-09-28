@@ -20,6 +20,9 @@ the reaction is the video.
 **Two speeds, and the brief decides which:**
 - **MANY people** → 25-55 cuts/min, ~1.1-2.3s each.
 - **ONE person** (Old Lady, Cleaner) → 3-6 cuts/min. Hold the reaction.
+  *(2026-09-28: 3-6/min came from a near-silent reel. A one-person story where
+  people TALK runs 12-28/min, talk jump-cut and the reaction held:
+  `kindness-test.md`, MD Motivator section.)*
 
 ---
 
@@ -54,6 +57,8 @@ because there is nothing being said worth reading — the face is the content.
   "THANK YOU", "GOD BLESS YOU").
 - **Never caption an empty reaction shot.** Silence on screen is correct.
 - Gold ALL-CAPS, ~72% height, as everywhere else.
+- *(2026-09-28: stale. His posted kindness test carries a smaller Hebrew line
+  under the English; THE STANDARD allows it when it adds context.)*
 - **ENGLISH ONLY.** Tal: *"you shouldn't have captions in Hebrew, only
   English."* Hebrew and Arabic speech gets **translated** (`groqTranslate`),
   never captioned in the original script. The original transcript is kept in the

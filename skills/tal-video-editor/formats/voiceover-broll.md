@@ -202,3 +202,28 @@ lifts a word) and **`capY: 0.61`**.
   screen recordings and whip moves 2-3×.
 - Caption sizes and heights are measured off 540px-wide frames: ±2%.
 - The music was measured, not identified.
+
+---
+
+## Measured from aija, 2026-09-28: the founder arc
+
+`skills/toolbox/tal-reference-library/instagram-2026-09-28/aija.md`. Her numbers (median 25 shots/min, 178 wpm, a bed 12-19 dB
+under, VO that never stops) sit inside this format's ranges. What she adds is
+structure; her two best (933K, 663K) are founder reveals:
+
+1. Cold open on a two-shot, host + subject **already mid-action**, with a
+   **~0.3 s pull-back zoom** (1.3x -> 1x) on frame 0 (7/9 of her reels).
+2. One-sentence claim; **the payoff word lands at 3-6 s as one oversized
+   ALL-CAPS card (~2x)**, the only emphasis in the video.
+3. "This is <Name>" at ~7 s -> **the subject in their own voice**.
+4. Origin as a mini-arc; the problem made visible; numbers as **animated counters**.
+5. **End back on the opening frame with a contrarian thesis, acted out**
+   (she drops her phone and walks off). For Tal: "The headlines show you X.
+   But on this street..." over the opening two-shot.
+
+Her "come with me to meet X" (Kitty, 53K) is the closest to Tal's subject story
+and did worst: 139 s, a hook without a twist, a 19 s static close. **Keep the
+"come with me" frame at 90 s or less and cut the closing answer to its best
+line.** **Do not** borrow her AI recreations of real people or history: a
+credibility risk for "Israel beyond headlines".
+Not built: the pull-back open, the 2x single-word card, animated counters.

@@ -54,3 +54,26 @@ These shoots span a wide exposure range across subjects. Measure with
 `signalstats` and pull each clip **toward the group's chroma mean, not toward
 neutral 128** — that keeps the golden hour while making shots match. Correct
 ~70% of the way, not 100%. **[L]**
+
+---
+
+## Measured from other creators, 2026-09-28
+
+Files: `skills/toolbox/tal-reference-library/instagram-2026-09-28/`.
+
+**Montana Tucker's 9/11 street interview (555K)**, the closest of her last 10
+to Tal's work: open on the **strongest emotional quote** -> the controversial
+answer with live host pushback by 6-9 s -> question blocks -> end on the answers
+that bring people together. **Captions colour-coded by speaker: yellow for the
+person answering, white for the host's question, red for key words**, placed
+beside the speaker. (Tal's own bread-stall kindness cut does the same: stranger
+gold, Tal white; see `kindness-test.md`.)
+
+**erez.v1's best reel (629K)**: the question is spoken at **0.0 s** ("are you
+single?"), the answer at 1.2 s, a specific comment-prompt pill already on
+screen. It did **2.7x his next best**, and it is the only one of his 9 with
+real dialogue. Transfer: open on the spoken question; a *specific* comment
+prompt ("tell me where you're from"), not "like and follow"; one slow-motion
+hold (~1.5 s) on the best reaction; an emoji sticker on the subject's body at
+the reaction (waiting -> smiling), which needs a sticker layer the pipeline
+doesn't have.
