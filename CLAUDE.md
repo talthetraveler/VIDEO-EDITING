@@ -146,6 +146,20 @@ lost, these eight rules are the minimum:
 **When Tal corrects something, append the correction to `LESSONS.md` in the same
 turn.** That file is the memory — it must grow on its own, not when asked.
 
+**GITHUB IS KEPT IN SYNC WITHOUT BEING ASKED.** Tal, 2026-09-28: *"I don't
+really know how GitHub works ... you push it automatically, right?"* Yes. After
+ANY change to `skills/`, `system/scripts/`, `CLAUDE.md` or an edit spec, in the
+same turn: stage it, run the check below, and push to
+`talthetraveler/VIDEO-EDITING` (PUBLIC). Never wait to be told.
+
+```bash
+git diff --cached --name-only | grep -iE '\.(mp4|mov|mp3|wav|flac|jpg|jpeg|png|webp|gif)$|transcript|/_look/|/contact/|/_review/|\.env$'
+```
+
+**It must print nothing.** If it prints anything, do not push - unstage it and
+say what it was. 2026-09-28 a check that only matched video and audio pushed
+308 frames of Roman to the public repo; this is the check that replaced it.
+
 **When Tal hands over a REFERENCE video, it goes into the skill in the same
 turn — never left in chat.** Tal, 2026-09-28: *"whenever I give you a
 reference, you're gonna add it to my skills, right?"* Yes, every time, all five:
