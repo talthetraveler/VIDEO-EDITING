@@ -20,7 +20,8 @@ Inside it, `SKILL.md` carries the whole standard inline — story and pacing,
 captions, camera and cuts, the look, audio, and the quality check. Loading that
 one file is enough to cut a video correctly.
 
-`skills/toolbox/` holds 138 other editing tools. **They are not skills and are
+`skills/toolbox/` holds 49 other editing tools (pruned from 140 on 2026-09-27;
+see `skills/toolbox/PRUNED.md`). **They are not skills and are
 not offered as choices.** Many of them declare triggers like *"use this skill
 every time the user wants to create a video"* — with several competing for one
 trigger, the wrong one could win silently and quietly lose your framing, grade
@@ -36,6 +37,40 @@ on purpose, indexed by sub-problem. Nothing was deleted.
 5. Only then does anything go to Frame.io
 
 A render on this disk is not delivered, and a preview is never uploaded.
+
+## Restoring on a new machine (Windows)
+
+GitHub holds the **system**, not the content: skills, scripts, doctrine, every
+edit spec. Footage, renders, transcripts, keys and the heavy installs stay off
+it on purpose (see `.gitignore`). To rebuild, tested 2026-09-28 against a fresh
+clone:
+
+```bash
+git clone -c core.longpaths=true https://github.com/talthetraveler/VIDEO-EDITING.git "videos to edit"
+```
+
+`core.longpaths` matters: a few toolbox paths are ~130 characters and a clone
+into a deep folder hits Windows' 260-character limit. Without it the checkout
+fails silently: the clone arrives with **zero files** on disk.
+
+Then:
+
+1. `cd "videos to edit/system" && npm install` (Remotion, whisper.cpp, sharp...)
+2. Copy `system/.env.example` to `system/.env` and fill in the keys.
+3. Frame.io: `system/projects/_frameio/credentials.example.json`, and
+   `skills/tal-video-editor/reference/FRAMEIO-STATE.md` for the auth flow.
+4. Re-clone the third-party toolbox skills: `skills/toolbox/CLONES.md` has
+   each URL and pinned commit.
+5. `system/bin/`: `yt-dlp.exe` and `deep-filter.exe` (DeepFilterNet), both
+   from their GitHub releases. Full ffmpeg: `winget install Gyan.FFmpeg`.
+   Python 3.12 + `pip install whisperx scenedetect`.
+6. SFX: `skills/tal-video-editor/assets/sfx/CREDITS.md` lists every sound
+   (Pixabay).
+7. `.claude/skills` is a junction to `skills/`:
+   `mklink /J .claude\skills skills` (no admin needed).
+
+Check it worked: `node system/scripts/test-caption-timing.mjs` prints
+`0 off the voice, 0 too brief, 0 over silence`.
 
 ---
 
