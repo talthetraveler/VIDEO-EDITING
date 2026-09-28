@@ -232,16 +232,24 @@ Israel → What Makes You Happy and edit the best video"* — the source is
 Frame.io, not a local folder.
 
 ```bash
-node system/scripts/frameio.mjs discover "Assets/Shot in Israel/What Makes You Happy"
+node system/scripts/frameio-test.mjs                                  # login works? lists projects
+node system/scripts/frameio-discover.mjs "SHOT IN ISRAEL/WHAT MAKES YOU HAPPY" --fetch   # metadata + 180p proxies
+node system/scripts/frameio-transcribe.mjs --words                     # Groq, cached
+node system/scripts/fetch-hq.mjs <slug>                                # originals, ONLY the spans used
 ```
 
-**Discovery downloads NO originals.** It pulls metadata, Frame.io's own
-auto-transcripts, comments and durations, and caches them. Read the transcripts
-to find the strongest answers, characters, hooks and emotional moments. Pull
-**proxies** (`proxy <fileId>`) to look at the candidates visually.
+> **Not `frameio.mjs`.** That older CLI reads a `credentials.json` that does
+> not exist and fails with "No Frame.io credentials" (checked 2026-09-28).
+> The working login is the SPA+PKCE token the `frameio-*.mjs` scripts share
+> (`system/projects/_frameio/`); every session in this folder has it.
 
-**Only then** `pull <fileId>` the originals — for the handful of clips actually
-going in the cut. A shoot is hundreds of GB; discovery must never trigger that.
+**Discovery downloads NO originals.** It pulls metadata, comments, durations
+and tiny proxies, and caches them. **Frame.io V4 exposes no transcripts**, so
+we transcribe the proxies locally. Read the transcripts to find the strongest
+answers, characters, hooks and emotional moments; look at the proxies.
+
+**Only then** fetch the originals — for the handful of clips actually going in
+the cut. A shoot is hundreds of GB; discovery must never trigger that.
 
 **Source footage is read-only.** Never delete, rename, move, overwrite or modify
 anything in a source folder. The CLI has no such command — keep it that way.
@@ -251,7 +259,7 @@ Hebrew, Arabic or mixed-language, still run `multilingual-dialogue-qc` before
 final captions — Frame.io's transcript is not a substitute for the original /
 translation / speaker / uncertainty record.
 
-**Delivery:** after Tal approves, `node system/scripts/frameio.mjs deliver <final.mp4>`
+**Delivery:** after Tal approves, `node system/scripts/finish.mjs <slug> --name "TITLE.mp4"` (QA gate -> upload -> verify)
 uploads to **Assets → Shot in Israel → Final Videos → Edited by Claude** — the
 only approved destination. **Never upload V1/V2/review renders.** Those stay in
 chat. No trial variations unless he asks.
