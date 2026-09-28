@@ -14,6 +14,10 @@ sound was measured. Sheets, shot lists and transcripts:
 Originals: `assets/references/voiceover-broll-drive-2026-09-28/`.
 Rebuild any of it with `node system/scripts/reference-shots.mjs <video> --out <dir>`.
 
+**Every shot of both films, in words, next to the line spoken over it:
+`voiceover-broll-breakdown.md`.** Read it before cutting a VO film: it is the
+closest thing to watching him cut one.
+
 | | **"Hiding that I was Jewish"** (`Tal Dooreck.mp4`) | **Julius / Save a Child's Heart** (`Tal Dooreck-Julius.mp4`) |
 |---|---|---|
 | kind | **personal manifesto**: his life story -> a mission -> CTA | **subject story**: one person's story, told by Tal, with the subject's own voice |
