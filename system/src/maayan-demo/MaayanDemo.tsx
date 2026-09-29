@@ -171,6 +171,35 @@ const Hook: React.FC<{ len: number; cues: Cue[] }> = ({ len, cues }) => {
   );
 };
 
+const PhotoBeat: React.FC<{ image: string; len: number; cues: Cue[] }> = ({ image, len, cues }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const inP = spring({ frame, fps, config: { damping: 18, stiffness: 110 } });
+  const push = interpolate(frame, [0, len], [1.0, 1.12]);
+  return (
+    <AbsoluteFill>
+      <Img src={A(image)} style={{ width: "100%", height: "100%", objectFit: "cover", filter: "blur(40px) brightness(0.55)", scale: "1.2" }} />
+      <div
+        style={{
+          position: "absolute",
+          left: 40,
+          right: 40,
+          top: 470,
+          aspectRatio: "4 / 5",
+          borderRadius: 36,
+          overflow: "hidden",
+          boxShadow: "0 40px 120px rgba(0,0,0,0.55)",
+          opacity: inP,
+          translate: `0px ${interpolate(inP, [0, 1], [80, 0])}px`,
+        }}
+      >
+        <Img src={A(image)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 40%", scale: String(push), transformOrigin: "50% 22%" }} />
+      </div>
+      <Captions cues={cues} len={len} top={150} height={300} />
+    </AbsoluteFill>
+  );
+};
+
 const EndCard: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -217,6 +246,11 @@ export const MaayanDemo: React.FC = () => {
       {PLAN.filter((b) => b.kind === "hook").map((b) => (
         <Sequence key={b.id} from={b.from} durationInFrames={b.len}>
           <Hook len={b.len} cues={b.captions} />
+        </Sequence>
+      ))}
+      {PLAN.filter((b) => b.kind === "photo").map((b) => (
+        <Sequence key={b.id} from={b.from} durationInFrames={b.len}>
+          <PhotoBeat image={b.image!} len={b.len} cues={b.captions} />
         </Sequence>
       ))}
       {PLAN.filter((b) => b.kind === "end").map((b) => (

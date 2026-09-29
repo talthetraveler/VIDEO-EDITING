@@ -9,7 +9,8 @@ export type Segment = { clip: string; from: number; to: number; rate?: number };
 export type Cue = { at: number; to: number; text: string; accent?: string };
 export type Beat = {
   id: string;
-  kind: "hook" | "phone" | "end";
+  kind: "hook" | "phone" | "photo" | "end";
+  image?: string; // photo beats: path under public/maayan-demo/
   segments?: Segment[];
   duration?: number; // hook/end only
   captions: Cue[];
@@ -55,7 +56,7 @@ export const BEATS: Beat[] = [
   {
     id: "nearby",
     kind: "phone",
-    segments: [{ clip: "nearby", from: 3.8, to: 8.6, rate: 1.5 }],
+    segments: [{ clip: "nearby", from: 3.8, to: 8.6, rate: 1.7 }],
     captions: [{ at: 0, to: 99, text: "What's near me? One tap.", accent: "One tap." }],
   },
   {
@@ -63,7 +64,8 @@ export const BEATS: Beat[] = [
     kind: "phone",
     segments: [
       { clip: "save", from: 0.6, to: 1.9 },
-      { clip: "lists", from: 1.0, to: 4.9, rate: 1.2 },
+      { clip: "lists", from: 1.0, to: 1.7 }, // shelf + tap
+      { clip: "lists", from: 3.8, to: 4.9 }, // album, photos loaded (skeleton cut)
     ],
     captions: [{ at: 0, to: 99, text: "Save it. Sort it into lists." }],
   },
@@ -71,12 +73,13 @@ export const BEATS: Beat[] = [
     id: "trips",
     kind: "phone",
     segments: [
-      { clip: "tripnew", from: 3.0, to: 8.7, rate: 1.3 },
-      { clip: "trip", from: 0.6, to: 4.2 },
+      { clip: "tripnew", from: 3.0, to: 8.7, rate: 1.5 },
+      { clip: "trip", from: 0.6, to: 1.7 }, // dashboard + tap Gear
+      { clip: "trip", from: 2.62, to: 4.2 }, // packing list, "I will bring it" (skeleton cut)
     ],
     captions: [
-      { at: 0, to: 4.4, text: "Plan the trip together", accent: "together" },
-      { at: 4.4, to: 99, text: "Who brings what" },
+      { at: 0, to: 4.9, text: "Plan the trip together", accent: "together" },
+      { at: 4.9, to: 99, text: "Who brings what" }, // = packing list on screen
     ],
   },
   {
@@ -84,6 +87,17 @@ export const BEATS: Beat[] = [
     kind: "phone",
     segments: [{ clip: "community", from: 0.8, to: 4.4, rate: 1.2 }],
     captions: [{ at: 0, to: 99, text: "Find people to hike with" }],
+  },
+  {
+    // Belonging: the three founders, from the founder-story carousel (text-free crop, plate blurred).
+    id: "founders",
+    kind: "photo",
+    image: "founders/three-founders.jpg",
+    duration: 4.2,
+    captions: [
+      { at: 0, to: 2.0, text: "Made by three friends", accent: "three friends" },
+      { at: 2.0, to: 99, text: "Itay, Yotam and Yoav" },
+    ],
   },
   { id: "end", kind: "end", duration: 4.5, captions: [] },
 ];

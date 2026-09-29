@@ -74,3 +74,14 @@ Limits hit: the Drive connector downloads ≤10 MB (and dropped the session abov
 The index names "founders" only on the three 2020 photos; the rest need the owner to confirm who's
 in them. Ruled out: the "טרנד תיוג עצמי" raw clips (a friend's desert-camp shoot, no founders) and
 "Young hikers on cliff ledge" (children).
+
+## Mock v2 — 2026-09-29
+
+`preview/El Hamaayan demo - mock v2.mp4` — 43.9 s.
+- New beat 9 (35.4–39.6 s): the three founders on the Land Cruiser — "Made by three friends" →
+  "Itay, Yotam and Yoav", 4:5 card with a slow push-in toward them. Source: text-free band cropped
+  from the founder-story carousel slide (graded, 1122×840), licence plate blurred. The owner also
+  linked the clean original (`02-photo-clean.png`, Drive 1Rq6lYQgc1fhlwFq2bgQac7K9urLYx1FW,
+  1080×720, ungraded) — kept locally as a fallback; the carousel crop looks better at the same size.
+- Loading skeletons cut out of the lists (album) and trips (packing list) beats.
+- "Who brings what" now lands when the packing list is on screen.
