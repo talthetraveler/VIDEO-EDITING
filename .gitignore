@@ -140,4 +140,9 @@ system/projects/*/INVENTORY.md
 system/projects/*/inventory.json
 system/projects/*/catalog/
 system/projects/*/align-*.log
-system/projects/*/align-ids.txt
+system/projects/*/align-ids*.txt
+# agents' transcript/translation backups made while working around caption bugs
+system/projects/*/transcript-backup/
+system/projects/*/translate-backup/
+system/projects/ib-tools-*/
+system/projects/ib-comp-debug/

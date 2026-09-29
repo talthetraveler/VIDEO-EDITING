@@ -1,0 +1,7 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-eid-promenade/beats_5704734/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-eid-promenade/beats_5704734/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-eid-promenade/beats_5704734/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-eid-promenade/beats_5704734/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-eid-promenade/beats_5704734/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-eid-promenade/beats_5704734/06.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-eid-promenade/beats_5704734/07.mp4'

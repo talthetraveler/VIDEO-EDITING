@@ -1,0 +1,7 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-iraqi-arabic/beats_3600596/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-iraqi-arabic/beats_3600596/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-iraqi-arabic/beats_3600596/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-iraqi-arabic/beats_3600596/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-iraqi-arabic/beats_3600596/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-iraqi-arabic/beats_3600596/06.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-iraqi-arabic/beats_3600596/07.mp4'

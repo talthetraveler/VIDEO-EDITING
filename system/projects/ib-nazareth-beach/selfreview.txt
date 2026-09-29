@@ -1,0 +1,69 @@
+
+SELF-REVIEW  NAZARETH_BEACH_V1.mp4  29.0s
+
+1. CONTACT SHEET -> projects\ib-nazareth-beach\_review\SHEET.jpg   (LOOK AT IT — framing, decapitation, overlapping text)
+
+2. CAPTIONS — read every line. If a line does not make sense, it is wrong.
+
+     0.0s  local-8051d05511c72acd  So I saw your cross and I was wondering, in Israel there are Christians? Yeah, a lot of them. We're actually Arabs. You're Arab Christians? Yeah.
+     6.5s  local-8051d05511c72acd  What is that like? We are from Nazareth.
+     8.6s  local-8051d05511c72acd  do you have friends that are Jewish? Yeah, a lot of them. You have friends that are Muslim? Yes.
+    12.8s  local-8051d05511c72acd  here in Israel, what's your favorite part about living here?
+    15.3s  local-8051d05511c72acd  Mostly the weather, actually. Yeah, yeah, I like the weather. You know, everyone, when they think about Israel, they only think about politics. They f
+    22.6s  local-8051d05511c72acd  No, we don't care, bro. I don't care about politics either. We need to just be human. Yeah. Guys, have an amazing day. Shabbat Shalom.
+
+   41 captions, 0 flagged as possible ASR errors.
+
+2b. RENDERED CAPTIONS (39) — exactly what is on screen, in order:
+
+   01   0.00-0.36   So I
+   01   0.36-0.90   saw your cross
+   01   0.90-1.62   and I was wondering
+   01   1.62-1.98   in Israel
+   01   1.98-2.52   there are Christians
+   01   3.15-3.60   Yeah a lot of them
+   01   4.00-4.87   We're actually Arabs
+   01   5.20-6.36   You're Arab Christians? Yeah
+   02   0.00-0.47   What is that like
+   02   1.07-1.97   We are from Nazareth
+   03   0.09-0.67   do you have friends
+   03   0.67-1.12   that are Jewish
+   03   1.46-1.91   Yeah a lot of them
+   03   2.38-2.88   You have friends
+   03   2.88-3.37   that are Muslim
+   03   3.80-4.25   Yes
+   04   0.00-0.58   here in Israel
+   04   0.58-1.16   what's your favorite
+   04   1.16-1.54   part about
+   04   1.54-1.99   living here
+   05   0.00-0.62   Mostly the weather
+   05   0.62-1.07   actually
+   05   1.31-1.76   Yeah yeah  <-- CHECK
+   05   1.80-2.43   I like the weather
+   05   2.82-3.47   You know everyone
+   05   3.47-3.90   when they
+   05   3.90-4.54   think about Israel
+   05   4.54-4.97   they only
+   05   4.97-5.62   think about politics
+   05   5.62-6.07   They forget you guys
+   06   0.11-0.38   No
+   06   0.38-1.00   we don't care bro
+   06   1.00-1.66   I don't care
+   06   1.66-2.32   about politics either
+   06   2.32-2.77   We need
+   06   2.77-3.28   TO JUST BE HUMAN
+   06   3.71-4.16   Guys have
+   06   4.65-5.40   An amazing day
+   06   5.40-6.00   Shabbat Shalom
+
+   39 rendered captions, 1 flagged.
+
+3. BOUNDARY + AUDIO VERIFICATION
+  01  local-8051d05511c72acd 4.96->11.49  clean
+  02  local-8051d05511c72acd 16.38->18.45  clean
+  03  local-8051d05511c72acd 28.05->32.3  clean
+  04  local-8051d05511c72acd 82.72->85.13  clean
+  05  local-8051d05511c72acd 87.15->94.46  clean
+  06  local-8051d05511c72acd 95.07->101.44  clean
+
+DO NOT SEND until the contact sheet has been LOOKED AT and every flagged caption resolved.

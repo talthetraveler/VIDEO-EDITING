@@ -1,0 +1,68 @@
+{
+ "beats": [
+  [
+   "local-cbf49e5f0459868f",
+   4.27,
+   16.03,
+   0.5,
+   "Wa Alaikum Salaam. Where are you from? From Israel. Wait, you're from Israel and you speak Arabi"
+  ],
+  [
+   "local-2112710bce9e02e9",
+   6.44,
+   14.05,
+   0.5,
+   "And what's your favorite part about living here? The diversity. What do you mean? So many Jews f"
+  ],
+  [
+   "local-2112710bce9e02e9",
+   44.04,
+   55.87,
+   0.5,
+   "Tell me some countries that you've seen Jews coming from. There are Moroccans, there are Iraqis,"
+  ],
+  [
+   "local-2112710bce9e02e9",
+   55.82,
+   63.52,
+   0.5,
+   "And why do you love living in Israel? Diversity. Jerusalem so many religions so many languages."
+  ],
+  [
+   "local-2112710bce9e02e9",
+   63.45,
+   74.89,
+   0.5,
+   "In Israel do you see Christians Muslims and Jews living together? Yes. Really? There are in Haif"
+  ],
+  [
+   "local-2112710bce9e02e9",
+   90.32,
+   91.63,
+   0.5,
+   "Do you want war? No."
+  ],
+  [
+   "local-56b618cfbeebc887",
+   167.78,
+   180.39,
+   0.5,
+   "you know my age. I'm 53. I'm 20 years old. And I'm tired of those wars. I'm also tired of the wa"
+  ]
+ ],
+ "title": "POV: I MET AN ISRAELI\nWHO SPEAKS ARABIC 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "IB_IRAQI_ARABIC_V1.mp4",
+ "captionFix": [
+  {
+   "match": "Yafu",
+   "to": "Jaffa"
+  },
+  {
+   "match": "I really wanted to stop",
+   "to": "I really want it to stop"
+  }
+ ]
+}

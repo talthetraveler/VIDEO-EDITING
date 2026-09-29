@@ -1,0 +1,224 @@
+{
+  "built": "2026-09-29T03:32:30.453Z",
+  "total_s": 31.14,
+  "out": "POLICE_V1_r3.mp4",
+  "layout": "vertical",
+  "title": "POV: MEETING A CHRISTIAN\nPOLICE OFFICER IN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-a70544be30412e67",
+      17.36,
+      20.55,
+      0.5,
+      "cold-open identity flip: are you Muslim? no, Christian"
+    ],
+    [
+      "local-a70544be30412e67",
+      23.68,
+      33.47,
+      0.5,
+      "Christian police officers in Israel? Too many (Tal voices the misconception)"
+    ],
+    [
+      "local-a70544be30412e67",
+      33.47,
+      37.57,
+      0.5,
+      "and Arab: As-salamu alaykum"
+    ],
+    [
+      "local-a70544be30412e67",
+      38.36,
+      44.25,
+      0.5,
+      "from Nazareth, where Jesus is from"
+    ],
+    [
+      "local-a70544be30412e67",
+      76.11,
+      84.28,
+      0.5,
+      "positive close: Muslim police officer friends? Yep. Yep. (ends before Tal's \"Wow, amazing, I love that\", whose transcript timing is ~1.5s off and could not be captioned in sync)",
+      null,
+      {
+        "manual": true
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.1,
+      "to": 0.63,
+      "text": "Are you Muslim"
+    },
+    {
+      "beat": "01",
+      "at": 1.55,
+      "to": 2,
+      "text": "NO"
+    },
+    {
+      "beat": "01",
+      "at": 2.08,
+      "to": 3.08,
+      "text": "CHRISTIAN"
+    },
+    {
+      "beat": "02",
+      "at": 0.31,
+      "to": 1.03,
+      "text": "you're a Christian? Yeah"
+    },
+    {
+      "beat": "02",
+      "at": 1.39,
+      "to": 2.04,
+      "text": "And you're a police"
+    },
+    {
+      "beat": "02",
+      "at": 2.04,
+      "to": 2.69,
+      "text": "officer in Israel? Yeah"
+    },
+    {
+      "beat": "02",
+      "at": 3.25,
+      "to": 3.83,
+      "text": "There are Christian"
+    },
+    {
+      "beat": "02",
+      "at": 3.83,
+      "to": 4.22,
+      "text": "police officers"
+    },
+    {
+      "beat": "02",
+      "at": 4.22,
+      "to": 4.84,
+      "text": "in Israel? Too many"
+    },
+    {
+      "beat": "02",
+      "at": 5.82,
+      "to": 6.27,
+      "text": "Really"
+    },
+    {
+      "beat": "02",
+      "at": 6.41,
+      "to": 7.43,
+      "text": "I thought in Israel"
+    },
+    {
+      "beat": "02",
+      "at": 7.43,
+      "to": 8.46,
+      "text": "Christians are not allowed"
+    },
+    {
+      "beat": "02",
+      "at": 8.46,
+      "to": 9.48,
+      "text": "to be police officers"
+    },
+    {
+      "beat": "03",
+      "at": 0.4,
+      "to": 0.97,
+      "text": "And you're Arab"
+    },
+    {
+      "beat": "03",
+      "at": 1.39,
+      "to": 1.84,
+      "text": "Yeah"
+    },
+    {
+      "beat": "03",
+      "at": 2.02,
+      "to": 2.92,
+      "text": "You're an Arab Christian"
+    },
+    {
+      "beat": "03",
+      "at": 2.92,
+      "to": 3.21,
+      "text": "I'm Arab"
+    },
+    {
+      "beat": "03",
+      "at": 3.21,
+      "to": 4.1,
+      "text": "As-salamu alaykum"
+    },
+    {
+      "beat": "04",
+      "at": 0,
+      "to": 0.73,
+      "text": "Where are you from"
+    },
+    {
+      "beat": "04",
+      "at": 1.17,
+      "to": 1.62,
+      "text": "I am from Nazareth"
+    },
+    {
+      "beat": "04",
+      "at": 3.02,
+      "to": 3.64,
+      "text": "YOU'RE FROM NAZARETH"
+    },
+    {
+      "beat": "04",
+      "at": 4.33,
+      "to": 4.9,
+      "text": "This is where Jesus is from"
+    },
+    {
+      "beat": "05",
+      "at": 0.03,
+      "to": 0.48,
+      "text": "And you"
+    },
+    {
+      "beat": "05",
+      "at": 1.19,
+      "to": 1.89,
+      "text": "as a Christian"
+    },
+    {
+      "beat": "05",
+      "at": 1.89,
+      "to": 2.59,
+      "text": "you have friends"
+    },
+    {
+      "beat": "05",
+      "at": 2.59,
+      "to": 3.47,
+      "text": "that are Muslim"
+    },
+    {
+      "beat": "05",
+      "at": 4.36,
+      "to": 4.98,
+      "text": "You have police"
+    },
+    {
+      "beat": "05",
+      "at": 4.98,
+      "to": 5.6,
+      "text": "officer friends also"
+    },
+    {
+      "beat": "05",
+      "at": 5.6,
+      "to": 6.43,
+      "text": "that are Muslim? Yep"
+    }
+  ]
+}

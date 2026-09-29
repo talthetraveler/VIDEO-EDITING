@@ -1,0 +1,114 @@
+{
+ "beats": [
+  [
+   "local-0e4f08e3af77bc51",
+   13.9,
+   15.95,
+   0.5,
+   "his greeting in the mosque (Wa Alaikum Asalaam) as he turns to the camera; distant voice, own sub-beat so the caption reads"
+  ],
+  [
+   "local-0e4f08e3af77bc51",
+   15.95,
+   18,
+   0.5,
+   "nice to meet you, handshake, face close"
+  ],
+  [
+   "local-0e4f08e3af77bc51",
+   37.27,
+   52.78,
+   0.5,
+   "Tal: what is it like being a Muslim here? / his calm answer / Tal: can you pray safely here in Israel?"
+  ],
+  [
+   "local-0e4f08e3af77bc51",
+   52.78,
+   53.86,
+   0.5,
+   "his direct yes - own sub-beat so his quiet reply gets its caption"
+  ],
+  [
+   "local-0e4f08e3af77bc51",
+   67.6,
+   71.19,
+   0.5,
+   "Tal: I am Jewish, you are Muslim, we are cousins (he picks it up next)"
+  ],
+  [
+   "local-0e4f08e3af77bc51",
+   115.21,
+   117,
+   0.5,
+   "Tal: how can we live in peace?"
+  ],
+  [
+   "local-0e4f08e3af77bc51",
+   117,
+   128.01,
+   0.5,
+   "his answer: trust each other, as you said we are cousins, start dialogue"
+  ],
+  [
+   "local-0e4f08e3af77bc51",
+   162.32,
+   165.05,
+   0.5,
+   "Tal: the only way for peace is dialogue"
+  ],
+  [
+   "local-0e4f08e3af77bc51",
+   165.05,
+   177.05,
+   0.5,
+   "the best 15s: how would you know if I love you; love for all, hatred for none"
+  ],
+  [
+   "local-564cc7749299dfa1",
+   52.7,
+   57.1,
+   0.5,
+   "Tal: salam and shalom; his reply is a handshake on camera"
+  ],
+  [
+   "local-564cc7749299dfa1",
+   79.67,
+   83.5,
+   0.5,
+   "Tal: Judaism and Islam have more in common than people think"
+  ],
+  [
+   "local-564cc7749299dfa1",
+   83.5,
+   87.95,
+   0.5,
+   "his reply: same source, same Allah, same God"
+  ],
+  [
+   "local-564cc7749299dfa1",
+   123.39,
+   125.33,
+   0.5,
+   "Tal: thank you for letting me sit with you"
+  ],
+  [
+   "local-564cc7749299dfa1",
+   125.33,
+   128.16,
+   0.5,
+   "his warm ending: anytime, this is your home"
+  ]
+ ],
+ "title": "POV: MEETING A MUSLIM\nIN A MOSQUE IN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "AHMADI_MOSQUE_V1.mp4",
+ "captionFix": [
+  {
+   "match": "LIKE",
+   "exact": true,
+   "to": null
+  }
+ ]
+}

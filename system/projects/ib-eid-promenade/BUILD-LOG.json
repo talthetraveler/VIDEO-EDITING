@@ -1,0 +1,230 @@
+{
+  "built": "2026-09-29T04:27:43.953Z",
+  "total_s": 24.47,
+  "out": "EID_PROMENADE_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: SAYING EID MUBARAK\nIN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-354a11aec52a43d4",
+      3.54,
+      7.78,
+      0.5,
+      "approach: I just landed - there are Muslims in Israel? - Yes (manual full-height frame: he walks right up to the lens)",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "local-354a11aec52a43d4",
+      7.88,
+      9.95,
+      0.5,
+      "I did not know that - and now you know (manual full-height frame: he walks right up to the lens)",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "local-354a11aec52a43d4",
+      17.34,
+      20.9,
+      0.5,
+      "safety: you feel safe here, you can walk? - yeah"
+    ],
+    [
+      "local-354a11aec52a43d4",
+      21.88,
+      26.21,
+      0.5,
+      "the heart: videos say Muslims cannot live here - no, no, we live"
+    ],
+    [
+      "local-354a11aec52a43d4",
+      26.88,
+      28.67,
+      0.5,
+      "now you are celebrating Eid? - yeah"
+    ],
+    [
+      "local-354a11aec52a43d4",
+      28.88,
+      33.8,
+      0.5,
+      "payoff a: Eid Mubarak - thank you - Eid Mubarak and Shabbat Shalom"
+    ],
+    [
+      "local-354a11aec52a43d4",
+      33.8,
+      37.36,
+      0.5,
+      "payoff b: he says it back - Shabbat Shalom, yes - goodbye"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.09,
+      "to": 0.96,
+      "text": "I just landed here"
+    },
+    {
+      "beat": "01",
+      "at": 0.96,
+      "to": 1.84,
+      "text": "And I'm so surprised"
+    },
+    {
+      "beat": "01",
+      "at": 1.84,
+      "to": 2.25,
+      "text": "To see Muslims here"
+    },
+    {
+      "beat": "01",
+      "at": 2.25,
+      "to": 2.97,
+      "text": "There are Muslims"
+    },
+    {
+      "beat": "01",
+      "at": 2.97,
+      "to": 3.69,
+      "text": "in Israel? Yes"
+    },
+    {
+      "beat": "02",
+      "at": 0.02,
+      "to": 0.68,
+      "text": "I didn't know that"
+    },
+    {
+      "beat": "02",
+      "at": 1.12,
+      "to": 1.57,
+      "text": "And now you know"
+    },
+    {
+      "beat": "03",
+      "at": 0.1,
+      "to": 1.36,
+      "text": "You feel safe here"
+    },
+    {
+      "beat": "03",
+      "at": 1.78,
+      "to": 2.22,
+      "text": "You can walk"
+    },
+    {
+      "beat": "03",
+      "at": 2.22,
+      "to": 2.8,
+      "text": "and no problem? Yeah"
+    },
+    {
+      "beat": "04",
+      "at": 0,
+      "to": 0.48,
+      "text": "In Instagram"
+    },
+    {
+      "beat": "04",
+      "at": 0.48,
+      "to": 0.95,
+      "text": "I see"
+    },
+    {
+      "beat": "04",
+      "at": 0.95,
+      "to": 1.43,
+      "text": "only videos"
+    },
+    {
+      "beat": "04",
+      "at": 1.43,
+      "to": 1.88,
+      "text": "showing that Muslims"
+    },
+    {
+      "beat": "04",
+      "at": 2.07,
+      "to": 3.15,
+      "text": "cannot live here"
+    },
+    {
+      "beat": "04",
+      "at": 3.45,
+      "to": 3.9,
+      "text": "No no we live"
+    },
+    {
+      "beat": "05",
+      "at": 0,
+      "to": 0.43,
+      "text": "And now"
+    },
+    {
+      "beat": "05",
+      "at": 0.43,
+      "to": 1.29,
+      "text": "YOU'RE CELEBRATING EID? YEAH"
+    },
+    {
+      "beat": "06",
+      "at": 0.05,
+      "to": 0.62,
+      "text": "Eid Mubarak"
+    },
+    {
+      "beat": "06",
+      "at": 1.06,
+      "to": 1.51,
+      "text": "Ah thank you"
+    },
+    {
+      "beat": "06",
+      "at": 1.68,
+      "to": 2.08,
+      "text": "So nice"
+    },
+    {
+      "beat": "06",
+      "at": 2.08,
+      "to": 2.68,
+      "text": "to meet you"
+    },
+    {
+      "beat": "06",
+      "at": 3.04,
+      "to": 3.7,
+      "text": "Eid Mubarak"
+    },
+    {
+      "beat": "06",
+      "at": 3.7,
+      "to": 4.7,
+      "text": "and Shabbat Shalom"
+    },
+    {
+      "beat": "07",
+      "at": 0.19,
+      "to": 0.84,
+      "text": "SHABBAT SHALOM, YES"
+    },
+    {
+      "beat": "07",
+      "at": 1.16,
+      "to": 1.69,
+      "text": "Shabbat Shalom"
+    },
+    {
+      "beat": "07",
+      "at": 1.93,
+      "to": 2.38,
+      "text": "BYE-BYE, MA'A SALAMA"
+    }
+  ]
+}

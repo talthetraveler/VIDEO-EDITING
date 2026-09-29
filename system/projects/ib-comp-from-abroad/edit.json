@@ -1,0 +1,123 @@
+{
+ "title": "ASKING PEOPLE FROM ABROAD\nWHAT THEY THINK OF ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "COMP_FROM_ABROAD_V1_r6.mp4",
+ "beats": [
+  [
+   "local-3439538462ff80b4",
+   23.88,
+   26.95,
+   0.5,
+   "S42-e hook: Canadian at the Dome of the Rock: favorite part about Israel? Everything. The culture, the people, they're all amazing.",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-2aec9a483cd18613",
+   35.88,
+   38.86,
+   0.2,
+   "S2-a man from Nepal, four years in Israel: it's a very happy place and very secure",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-475be8d9efdda3ac",
+   55.5,
+   63.31,
+   0.5,
+   "S43-e STRONGEST: Irish tourist: food is very good; people are incredible on both sides; Jewish, Muslim and Christian friends; everybody amazing",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-a50e515ebcf017c8",
+   50.92,
+   54.45,
+   0.5,
+   "S41-c Indonesian tourist at the Western Wall: what do you love the most? The history.",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-55d22ac501968375",
+   30.08,
+   36.72,
+   0.5,
+   "S1-a Indian construction workers: I like Israel. Why? Israel is very good. Very good."
+  ],
+  [
+   "local-51eed769bc694962",
+   15.14,
+   19.22,
+   0.5,
+   "S16-c man from Berlin: what do you think so far? My sixth time here, and I will show my wife for the first time",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-a592a9ac15f28821",
+   81.1,
+   87.63,
+   0.5,
+   "S15-c END: tourist from Belarus: I'm surprised by people. They are very open, friendly. I love it.",
+   null,
+   {
+    "exact": true
+   }
+  ]
+ ],
+ "captionFix": [
+  {
+   "match": "And what's your favorite part about Israel? Everything.",
+   "to": "What's your favorite part about Israel?"
+  },
+  {
+   "match": "The culture, the people, they're all amazing.",
+   "to": "Everything. The culture, the people, they're all amazing."
+  },
+  {
+   "match": "So I have friends that are Jewish.",
+   "to": "I have friends that are Jewish."
+  },
+  {
+   "match": "And I've met some Christians out here.",
+   "to": "I've met some Christians out here."
+  },
+  {
+   "match": "And what do you think about Israel so far?",
+   "to": "What do you think about Israel so far?"
+  },
+  {
+   "match": "I know it's my sixth time here and I will show my wife for the first time.",
+   "to": "I know, it's my sixth time here, and I will show my wife for the first time."
+  },
+  {
+   "match": "WHAT DO YOU",
+   "to": "WHAT DO YOU THINK",
+   "exact": true
+  },
+  {
+   "match": "THINK ABOUT",
+   "to": "ABOUT ISRAEL SO FAR?",
+   "exact": true
+  },
+  {
+   "match": "EVERYTHING THE CULTURE",
+   "to": "EVERYTHING, THE CULTURE",
+   "exact": true
+  }
+ ]
+}

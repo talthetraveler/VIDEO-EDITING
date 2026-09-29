@@ -1,0 +1,136 @@
+{
+ "title": "POV: MEETING HINDUS\nFROM NEPAL IN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "NEPAL_HINDU_V1.mp4",
+ "captionFix": [
+  {
+   "match": "FOR FOUR YEARS? YEAH",
+   "exact": true,
+   "to": "FOR FOUR YEARS"
+  }
+ ],
+ "beats": [
+  [
+   "local-2aec9a483cd18613",
+   13.25,
+   24.14,
+   0.5,
+   "where are you from? Nepal / four years in Israel / just a wonderful place",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-2aec9a483cd18613",
+   35.88,
+   38.86,
+   0.5,
+   "his own verdict: a very happy place and very secure",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-2aec9a483cd18613",
+   80.16,
+   86.08,
+   0.5,
+   "in Nepal do people like Israel? yeah, of course (Tal echoes it back)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-2aec9a483cd18613",
+   91.24,
+   99.18,
+   0.5,
+   "are you Jewish? we are not Jewish, we are Hindu / safe to be Hindu? very, very safe",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-2aec9a483cd18613",
+   149.42,
+   150.57,
+   0.5,
+   "Tal: so you are welcome in Israel",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-2aec9a483cd18613",
+   150.57,
+   157.2,
+   0.5,
+   "thank you / this is your home - his friend answers with a namaste - we feel very happy",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-2aec9a483cd18613",
+   168.07,
+   175,
+   0.5,
+   "favorite part? the people are very friendly",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-2aec9a483cd18613",
+   176.69,
+   178.96,
+   0.5,
+   "ending: they respect each other (Tal echoes it). Jump cut deliberately skips \"They do not dominate\" - uncertain word, see notes",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ]
+ ]
+}

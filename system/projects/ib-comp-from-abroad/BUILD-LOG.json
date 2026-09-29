@@ -1,0 +1,288 @@
+{
+  "built": "2026-09-29T04:06:58.997Z",
+  "total_s": 34.64,
+  "out": "COMP_FROM_ABROAD_V1_r6.mp4",
+  "layout": "vertical",
+  "title": "ASKING PEOPLE FROM ABROAD\nWHAT THEY THINK OF ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-3439538462ff80b4",
+      23.88,
+      26.95,
+      0.5,
+      "S42-e hook: Canadian at the Dome of the Rock: favorite part about Israel? Everything. The culture, the people, they're all amazing.",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "local-2aec9a483cd18613",
+      35.88,
+      38.86,
+      0.2,
+      "S2-a man from Nepal, four years in Israel: it's a very happy place and very secure",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "local-475be8d9efdda3ac",
+      55.5,
+      63.31,
+      0.5,
+      "S43-e STRONGEST: Irish tourist: food is very good; people are incredible on both sides; Jewish, Muslim and Christian friends; everybody amazing",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-a50e515ebcf017c8",
+      50.92,
+      54.45,
+      0.5,
+      "S41-c Indonesian tourist at the Western Wall: what do you love the most? The history.",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "local-55d22ac501968375",
+      30.08,
+      36.72,
+      0.5,
+      "S1-a Indian construction workers: I like Israel. Why? Israel is very good. Very good."
+    ],
+    [
+      "local-51eed769bc694962",
+      15.14,
+      19.22,
+      0.5,
+      "S16-c man from Berlin: what do you think so far? My sixth time here, and I will show my wife for the first time",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-a592a9ac15f28821",
+      81.1,
+      87.63,
+      0.5,
+      "S15-c END: tourist from Belarus: I'm surprised by people. They are very open, friendly. I love it.",
+      null,
+      {
+        "exact": true
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "to": 0.45,
+      "text": "What's your favorite"
+    },
+    {
+      "beat": "01",
+      "at": 0.64,
+      "to": 1.27,
+      "text": "part about Israel"
+    },
+    {
+      "beat": "01",
+      "at": 1.27,
+      "to": 1.95,
+      "text": "EVERYTHING, THE CULTURE"
+    },
+    {
+      "beat": "01",
+      "at": 1.95,
+      "to": 2.4,
+      "text": "the people"
+    },
+    {
+      "beat": "01",
+      "at": 2.4,
+      "to": 3.07,
+      "text": "they're all amazing"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "to": 0.99,
+      "text": "It's a very happy"
+    },
+    {
+      "beat": "02",
+      "at": 1.22,
+      "to": 2.78,
+      "text": "place and very secure"
+    },
+    {
+      "beat": "03",
+      "at": 0.08,
+      "to": 0.63,
+      "text": "Food is very good"
+    },
+    {
+      "beat": "03",
+      "at": 0.63,
+      "to": 1.75,
+      "text": "People are incredible"
+    },
+    {
+      "beat": "03",
+      "at": 1.75,
+      "to": 2.47,
+      "text": "on both sides"
+    },
+    {
+      "beat": "03",
+      "at": 2.47,
+      "to": 3.5,
+      "text": "I have friends"
+    },
+    {
+      "beat": "03",
+      "at": 3.5,
+      "to": 4.15,
+      "text": "that are Jewish"
+    },
+    {
+      "beat": "03",
+      "at": 4.15,
+      "to": 4.86,
+      "text": "I have friends"
+    },
+    {
+      "beat": "03",
+      "at": 4.86,
+      "to": 5.19,
+      "text": "that are Muslim"
+    },
+    {
+      "beat": "03",
+      "at": 5.19,
+      "to": 6.14,
+      "text": "I've met some"
+    },
+    {
+      "beat": "03",
+      "at": 6.14,
+      "to": 6.67,
+      "text": "Christians out here"
+    },
+    {
+      "beat": "03",
+      "at": 6.67,
+      "to": 7.13,
+      "text": "And everybody's"
+    },
+    {
+      "beat": "03",
+      "at": 7.13,
+      "to": 7.81,
+      "text": "been just amazing"
+    },
+    {
+      "beat": "04",
+      "at": 0,
+      "to": 0.66,
+      "text": "And what do you"
+    },
+    {
+      "beat": "04",
+      "at": 0.66,
+      "to": 1.15,
+      "text": "love the most"
+    },
+    {
+      "beat": "04",
+      "at": 2.51,
+      "to": 2.96,
+      "text": "The history"
+    },
+    {
+      "beat": "05",
+      "at": 0.11,
+      "to": 0.67,
+      "text": "I like Israel"
+    },
+    {
+      "beat": "05",
+      "at": 0.67,
+      "to": 1.53,
+      "text": "You like Israel? Why"
+    },
+    {
+      "beat": "05",
+      "at": 3.07,
+      "to": 3.53,
+      "text": "Israel is very good"
+    },
+    {
+      "beat": "06",
+      "at": 0,
+      "to": 0.48,
+      "text": "WHAT DO YOU THINK"
+    },
+    {
+      "beat": "06",
+      "at": 0.48,
+      "to": 0.81,
+      "text": "ABOUT ISRAEL SO FAR?"
+    },
+    {
+      "beat": "06",
+      "at": 0.81,
+      "to": 1.11,
+      "text": "I know"
+    },
+    {
+      "beat": "06",
+      "at": 1.11,
+      "to": 1.82,
+      "text": "it's my sixth time here"
+    },
+    {
+      "beat": "06",
+      "at": 2.11,
+      "to": 2.71,
+      "text": "and I will show"
+    },
+    {
+      "beat": "06",
+      "at": 2.71,
+      "to": 3.41,
+      "text": "my wife for the first time"
+    },
+    {
+      "beat": "07",
+      "at": 0,
+      "to": 2.07,
+      "text": "I'm surprised by people"
+    },
+    {
+      "beat": "07",
+      "at": 2.07,
+      "to": 3.62,
+      "text": "They are very open"
+    },
+    {
+      "beat": "07",
+      "at": 3.86,
+      "to": 4.38,
+      "text": "friendly"
+    },
+    {
+      "beat": "07",
+      "at": 4.92,
+      "to": 6.05,
+      "text": "I love it"
+    }
+  ]
+}

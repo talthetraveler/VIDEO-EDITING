@@ -1,0 +1,115 @@
+{
+ "beats": [
+  [
+   "local-475be8d9efdda3ac",
+   3.06,
+   8.44,
+   0.5,
+   "approach: he is Irish, welcome to Israel"
+  ],
+  [
+   "local-475be8d9efdda3ac",
+   14.86,
+   23.56,
+   0.5,
+   "identity: not Jewish, I am Christian; feels safe",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-475be8d9efdda3ac",
+   26.66,
+   32.97,
+   0.5,
+   "honest and funny: 20 minutes in Jerusalem, everybody nice so far"
+  ],
+  [
+   "local-475be8d9efdda3ac",
+   51.06,
+   63.28,
+   0.5,
+   "what surprised him: people incredible on both sides, Jewish and Muslim friends"
+  ],
+  [
+   "local-475be8d9efdda3ac",
+   85.66,
+   99.3,
+   0.5,
+   "THE STORY: two kindnesses in one breath, Palestinians invited him home, a manager invited him for Shabbat"
+  ],
+  [
+   "local-475be8d9efdda3ac",
+   136.3,
+   144.19,
+   0.5,
+   "setup and payoff: Tal had to hide he was Jewish; if you come to Ireland you can eat at my house (in-point placed in the real silence at 136.10-136.45; the transcript puts the end of \"hate Israel\" 0.3s early, so a word-snap would re-include it)",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-475be8d9efdda3ac",
+   144.19,
+   152.76,
+   0.5,
+   "I do not hate anybody, governments are not people"
+  ],
+  [
+   "local-475be8d9efdda3ac",
+   157.55,
+   174.35,
+   0.5,
+   "the warm close: he compliments Tal (spread love); Tal: welcome to Israel, meet the Palestinians, the Christians, the Jews"
+  ]
+ ],
+ "title": "POV: MEETING AN IRISH CHRISTIAN\nIN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "IRISH_V1_r3.mp4",
+ "captionFix": [
+  {
+   "match": "and well just in Jerusalem for 20 minutes and everybody's",
+   "to": "Well, just in Jerusalem for 20 minutes, and everybody's"
+  },
+  {
+   "match": "and then you came here So far the kindness of people So I give two examples",
+   "to": "So far, the kindness of people. So I'll give two examples."
+  },
+  {
+   "match": "I met some Palestinians who been incredibly kind invited me to their home And then",
+   "to": "I met some Palestinians who've been incredibly kind, invited me to their home. And then"
+  },
+  {
+   "match": "the company I used to work at",
+   "to": "the company I used to work at,"
+  },
+  {
+   "match": "thank you so much man thank you very much this is i thought all people in ireland hate israel",
+   "to": "Thank you so much, man. Thank you very much. I thought all people in Ireland hate Israel."
+  },
+  {
+   "match": "i don't hate anybody you don't hate anybody wow because governments are not people",
+   "to": "I don't hate anybody. You don't hate anybody? Wow. Because governments are not people."
+  },
+  {
+   "match": "individual level that's i've only met you for two minutes but you seem like a nice person we need",
+   "to": "I look at everybody from the individual level. I've only met you for two minutes, but you seem like a nice person. We need"
+  },
+  {
+   "match": "Wow, welcome to Israel, man.",
+   "to": "Wow, welcome to Israel."
+  },
+  {
+   "match": "more people like you in this world that just want to spend love bro thank you man dude that's the",
+   "to": "more people like you in this world that just want to spread love. Bro, thank you man. Dude, that's the"
+  },
+  {
+   "match": "third time we dab up it's a nice one yo welcome to israel man enjoy here meet the palestinians",
+   "to": "third time we dab up. It's a nice one. Yo, welcome to Israel man. Enjoy here. Meet the Palestinians,"
+  }
+ ]
+}

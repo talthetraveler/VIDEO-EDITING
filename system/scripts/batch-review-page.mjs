@@ -27,6 +27,10 @@ for (const r of rows) {
   if (f && existsSync(join(outDir, f))) byFile.set(f, { ...r, file: f });
 }
 const vids = [...byFile.values()];
+// full-size pass results (scripts/batch-finalize.mjs): last record per file
+const fin = new Map();
+const ff = join(ROOT, "projects", slug, "finalize.jsonl");
+if (existsSync(ff)) for (const l of readFileSync(ff, "utf8").split(/\r?\n/).filter(Boolean)) { try { const r = JSON.parse(l); fin.set(r.file, r); } catch {} }
 const groups = new Map();
 for (const v of vids) {
   const g = (v.title || v.file).replace(/\s*-\s*V\d+.*$/i, "").replace(/\n/g, " ");
@@ -52,7 +56,8 @@ const cards = ordered.map(([g, list]) => `
         <video controls preload="metadata" playsinline src="${encodeURI(v.file)}"></video>
         <div class="meta">
           <div class="row"><b>${esc(v.variant || "")}</b><span>${fmt(v.duration)}</span>
-            ${v.status === "needs-tal" ? `<span class="badge">Your call</span>` : ""}</div>
+            ${v.status === "needs-tal" ? `<span class="badge">Your call</span>` : ""}
+            ${fin.get(v.file)?.ok ? `<span class="hq">Full quality</span>` : `<span class="pv">Preview</span>`}</div>
           ${v.hook ? `<p class="hook">“${esc(v.hook)}”</p>` : ""}
           ${v.note || v.status_note ? `<p class="note">${esc(v.note || v.status_note)}</p>` : ""}
           ${v.caption_note ? `<p class="cap">${esc(v.caption_note)}</p>` : ""}
@@ -85,7 +90,7 @@ h1{font-size:26px;margin:0 0 4px}.sub{color:var(--mute);margin:0 0 18px}
 .vid.tal video{outline:3px solid var(--warn);outline-offset:2px}
 .meta{padding:8px 2px 0}.row{display:flex;gap:10px;align-items:center}.row span{color:var(--mute)}
 .badge{color:var(--warn)!important;background:var(--warnbg);border-radius:6px;padding:1px 7px;font-size:12px;font-weight:600}
-.hook{margin:6px 0 0;font-style:italic}.note{margin:6px 0 0;color:var(--warn);font-size:13px}.cap{margin:4px 0 0;color:var(--mute);font-size:12px}
+.hq{color:#15803d!important;font-size:12px;font-weight:600}.pv{font-size:12px}.hook{margin:6px 0 0;font-style:italic}.note{margin:6px 0 0;color:var(--warn);font-size:13px}.cap{margin:4px 0 0;color:var(--mute);font-size:12px}
 .pick{display:flex;gap:6px;align-items:center;margin-top:8px;font-size:14px;cursor:pointer}.dl{font-size:13px;color:var(--acc)}
 .dock{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:10px 16px}
 .dock .in{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center}

@@ -1,0 +1,5 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-police-nazareth/beats_2363154/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-police-nazareth/beats_2363154/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-police-nazareth/beats_2363154/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-police-nazareth/beats_2363154/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-police-nazareth/beats_2363154/05.mp4'

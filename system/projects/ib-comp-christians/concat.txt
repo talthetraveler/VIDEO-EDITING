@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-christians/beats_8560924/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-christians/beats_8560924/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-christians/beats_8560924/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-christians/beats_8560924/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-christians/beats_8560924/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-christians/beats_8560924/06.mp4'

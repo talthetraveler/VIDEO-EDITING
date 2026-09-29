@@ -1,0 +1,760 @@
+{
+  "built": "2026-09-29T04:50:21.402Z",
+  "total_s": 81.8,
+  "out": "IRISH_V2_r3.mp4",
+  "layout": "vertical",
+  "title": "POV: MEETING AN IRISH CHRISTIAN\nIN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-475be8d9efdda3ac",
+      141.66,
+      143.95,
+      0.5,
+      "HOOK flash-forward: if you come to Ireland, you can eat at my house"
+    ],
+    [
+      "local-475be8d9efdda3ac",
+      3.06,
+      8.44,
+      0.5,
+      "approach: he is Irish, welcome to Israel"
+    ],
+    [
+      "local-475be8d9efdda3ac",
+      14.86,
+      23.56,
+      0.5,
+      "identity: not Jewish, I am Christian; feels safe",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-475be8d9efdda3ac",
+      26.66,
+      32.97,
+      0.5,
+      "honest and funny: 20 minutes in Jerusalem, everybody nice so far"
+    ],
+    [
+      "local-475be8d9efdda3ac",
+      51.06,
+      63.28,
+      0.5,
+      "what surprised him: people incredible on both sides, Jewish and Muslim friends"
+    ],
+    [
+      "local-475be8d9efdda3ac",
+      85.66,
+      99.3,
+      0.5,
+      "THE STORY: two kindnesses in one breath, Palestinians invited him home, a manager invited him for Shabbat"
+    ],
+    [
+      "local-475be8d9efdda3ac",
+      136.3,
+      144.19,
+      0.5,
+      "setup and payoff: Tal had to hide he was Jewish; if you come to Ireland you can eat at my house (in-point placed in the real silence at 136.10-136.45; the transcript puts the end of \"hate Israel\" 0.3s early, so a word-snap would re-include it)",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-475be8d9efdda3ac",
+      144.19,
+      152.76,
+      0.5,
+      "I do not hate anybody, governments are not people"
+    ],
+    [
+      "local-475be8d9efdda3ac",
+      157.55,
+      174.35,
+      0.5,
+      "the warm close: he compliments Tal (spread love); Tal: welcome to Israel, meet the Palestinians, the Christians, the Jews"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.04,
+      "to": 0.64,
+      "text": "Well listen if you"
+    },
+    {
+      "beat": "01",
+      "at": 0.64,
+      "to": 1.09,
+      "text": "come to Ireland"
+    },
+    {
+      "beat": "01",
+      "at": 1.09,
+      "to": 1.54,
+      "text": "you can eat"
+    },
+    {
+      "beat": "01",
+      "at": 1.54,
+      "to": 1.99,
+      "text": "at my house"
+    },
+    {
+      "beat": "02",
+      "at": 0.02,
+      "to": 0.75,
+      "text": "Are you from Israel"
+    },
+    {
+      "beat": "02",
+      "at": 1.24,
+      "to": 1.69,
+      "text": "No no no"
+    },
+    {
+      "beat": "02",
+      "at": 1.9,
+      "to": 2.58,
+      "text": "Where are you from? Irish"
+    },
+    {
+      "beat": "02",
+      "at": 2.93,
+      "to": 3.65,
+      "text": "You're from Ireland"
+    },
+    {
+      "beat": "02",
+      "at": 3.65,
+      "to": 3.95,
+      "text": "Yeah yeah"
+    },
+    {
+      "beat": "02",
+      "at": 3.95,
+      "to": 4.74,
+      "text": "welcome to Israel"
+    },
+    {
+      "beat": "02",
+      "at": 4.74,
+      "to": 5.27,
+      "text": "Thank you"
+    },
+    {
+      "beat": "03",
+      "at": 0,
+      "to": 0.45,
+      "text": "And are you Jewish"
+    },
+    {
+      "beat": "03",
+      "at": 1.75,
+      "to": 2.14,
+      "text": "No"
+    },
+    {
+      "beat": "03",
+      "at": 2.34,
+      "to": 2.96,
+      "text": "you're not Jewish"
+    },
+    {
+      "beat": "03",
+      "at": 2.96,
+      "to": 3.4,
+      "text": "No no"
+    },
+    {
+      "beat": "03",
+      "at": 4.01,
+      "to": 4.47,
+      "text": "I am Christian"
+    },
+    {
+      "beat": "03",
+      "at": 4.47,
+      "to": 5.23,
+      "text": "And in Israel"
+    },
+    {
+      "beat": "03",
+      "at": 5.23,
+      "to": 5.99,
+      "text": "as a Christian"
+    },
+    {
+      "beat": "03",
+      "at": 5.99,
+      "to": 6.7,
+      "text": "do you feel safe"
+    },
+    {
+      "beat": "03",
+      "at": 7.08,
+      "to": 7.59,
+      "text": "Very yeah"
+    },
+    {
+      "beat": "03",
+      "at": 7.77,
+      "to": 8.08,
+      "text": "So far"
+    },
+    {
+      "beat": "03",
+      "at": 8.08,
+      "to": 8.7,
+      "text": "it's been nice yeah"
+    },
+    {
+      "beat": "04",
+      "at": 0.15,
+      "to": 0.41,
+      "text": "Look"
+    },
+    {
+      "beat": "04",
+      "at": 0.41,
+      "to": 1.16,
+      "text": "I've been here"
+    },
+    {
+      "beat": "04",
+      "at": 1.16,
+      "to": 1.92,
+      "text": "for 20 minutes"
+    },
+    {
+      "beat": "04",
+      "at": 2.29,
+      "to": 2.91,
+      "text": "Well just in Jerusalem"
+    },
+    {
+      "beat": "04",
+      "at": 3.17,
+      "to": 4.04,
+      "text": "for 20 minutes"
+    },
+    {
+      "beat": "04",
+      "at": 4.04,
+      "to": 4.62,
+      "text": "and everybody's"
+    },
+    {
+      "beat": "04",
+      "at": 4.62,
+      "to": 5.2,
+      "text": "been nice"
+    },
+    {
+      "beat": "04",
+      "at": 5.2,
+      "to": 6.31,
+      "text": "so far"
+    },
+    {
+      "beat": "05",
+      "at": 0.09,
+      "to": 0.39,
+      "text": "And what"
+    },
+    {
+      "beat": "05",
+      "at": 0.39,
+      "to": 0.85,
+      "text": "is the thing"
+    },
+    {
+      "beat": "05",
+      "at": 0.85,
+      "to": 1.15,
+      "text": "that surprised"
+    },
+    {
+      "beat": "05",
+      "at": 1.15,
+      "to": 1.61,
+      "text": "you the most"
+    },
+    {
+      "beat": "05",
+      "at": 3.45,
+      "to": 4.04,
+      "text": "Food is very good"
+    },
+    {
+      "beat": "05",
+      "at": 5.07,
+      "to": 6.19,
+      "text": "People are incredible"
+    },
+    {
+      "beat": "05",
+      "at": 6.19,
+      "to": 6.91,
+      "text": "on both sides"
+    },
+    {
+      "beat": "05",
+      "at": 6.91,
+      "to": 7.5,
+      "text": "So I"
+    },
+    {
+      "beat": "05",
+      "at": 7.5,
+      "to": 8.09,
+      "text": "have friends"
+    },
+    {
+      "beat": "05",
+      "at": 8.09,
+      "to": 8.59,
+      "text": "that are Jewish"
+    },
+    {
+      "beat": "05",
+      "at": 8.59,
+      "to": 9.3,
+      "text": "I have friends"
+    },
+    {
+      "beat": "05",
+      "at": 9.3,
+      "to": 9.63,
+      "text": "that are Muslim"
+    },
+    {
+      "beat": "05",
+      "at": 9.63,
+      "to": 10.17,
+      "text": "And I've"
+    },
+    {
+      "beat": "05",
+      "at": 10.17,
+      "to": 10.72,
+      "text": "met some"
+    },
+    {
+      "beat": "05",
+      "at": 10.72,
+      "to": 11.11,
+      "text": "Christians out here"
+    },
+    {
+      "beat": "05",
+      "at": 11.11,
+      "to": 11.55,
+      "text": "And everybody's"
+    },
+    {
+      "beat": "05",
+      "at": 11.55,
+      "to": 12.22,
+      "text": "been just amazing"
+    },
+    {
+      "beat": "06",
+      "at": 0.15,
+      "to": 0.6,
+      "text": "So far"
+    },
+    {
+      "beat": "06",
+      "at": 0.6,
+      "to": 1.5,
+      "text": "the kindness of people"
+    },
+    {
+      "beat": "06",
+      "at": 1.5,
+      "to": 1.95,
+      "text": "So I'll"
+    },
+    {
+      "beat": "06",
+      "at": 1.95,
+      "to": 2.63,
+      "text": "give two examples"
+    },
+    {
+      "beat": "06",
+      "at": 2.63,
+      "to": 3.08,
+      "text": "I met"
+    },
+    {
+      "beat": "06",
+      "at": 3.71,
+      "to": 4.39,
+      "text": "some Palestinians who've"
+    },
+    {
+      "beat": "06",
+      "at": 4.39,
+      "to": 5.06,
+      "text": "been incredibly kind"
+    },
+    {
+      "beat": "06",
+      "at": 5.06,
+      "to": 5.51,
+      "text": "invited me"
+    },
+    {
+      "beat": "06",
+      "at": 5.51,
+      "to": 6.19,
+      "text": "to their home"
+    },
+    {
+      "beat": "06",
+      "at": 6.19,
+      "to": 6.86,
+      "text": "And then I"
+    },
+    {
+      "beat": "06",
+      "at": 6.86,
+      "to": 7.54,
+      "text": "got a manager"
+    },
+    {
+      "beat": "06",
+      "at": 7.54,
+      "to": 7.99,
+      "text": "in the company"
+    },
+    {
+      "beat": "06",
+      "at": 8.54,
+      "to": 8.99,
+      "text": "I used"
+    },
+    {
+      "beat": "06",
+      "at": 8.99,
+      "to": 9.59,
+      "text": "to work at"
+    },
+    {
+      "beat": "06",
+      "at": 9.59,
+      "to": 10.03,
+      "text": "I won't"
+    },
+    {
+      "beat": "06",
+      "at": 10.03,
+      "to": 10.37,
+      "text": "say the name"
+    },
+    {
+      "beat": "06",
+      "at": 10.37,
+      "to": 10.82,
+      "text": "but she invited"
+    },
+    {
+      "beat": "06",
+      "at": 11.26,
+      "to": 12.15,
+      "text": "me for Shabbat"
+    },
+    {
+      "beat": "06",
+      "at": 12.15,
+      "to": 12.52,
+      "text": "So I'm"
+    },
+    {
+      "beat": "06",
+      "at": 12.52,
+      "to": 12.88,
+      "text": "really looking"
+    },
+    {
+      "beat": "06",
+      "at": 12.88,
+      "to": 13.43,
+      "text": "forward to that"
+    },
+    {
+      "beat": "07",
+      "at": 0.24,
+      "to": 0.73,
+      "text": "I realized"
+    },
+    {
+      "beat": "07",
+      "at": 0.73,
+      "to": 1.29,
+      "text": "that people hate Israeli"
+    },
+    {
+      "beat": "07",
+      "at": 1.52,
+      "to": 2.25,
+      "text": "people because they've"
+    },
+    {
+      "beat": "07",
+      "at": 2.25,
+      "to": 3.4,
+      "text": "never met them"
+    },
+    {
+      "beat": "07",
+      "at": 4.07,
+      "to": 4.72,
+      "text": "And I had to hide"
+    },
+    {
+      "beat": "07",
+      "at": 4.72,
+      "to": 5.17,
+      "text": "I was Jewish"
+    },
+    {
+      "beat": "07",
+      "at": 5.39,
+      "to": 5.99,
+      "text": "Well listen if you"
+    },
+    {
+      "beat": "07",
+      "at": 5.99,
+      "to": 6.45,
+      "text": "come to Ireland"
+    },
+    {
+      "beat": "07",
+      "at": 6.45,
+      "to": 6.9,
+      "text": "you can eat"
+    },
+    {
+      "beat": "07",
+      "at": 6.9,
+      "to": 7.35,
+      "text": "at my house"
+    },
+    {
+      "beat": "08",
+      "at": 0.08,
+      "to": 0.85,
+      "text": "Thank you so much"
+    },
+    {
+      "beat": "08",
+      "at": 1.04,
+      "to": 1.82,
+      "text": "Thank you very much"
+    },
+    {
+      "beat": "08",
+      "at": 1.82,
+      "to": 2.4,
+      "text": "I thought all"
+    },
+    {
+      "beat": "08",
+      "at": 2.4,
+      "to": 2.97,
+      "text": "people in Ireland"
+    },
+    {
+      "beat": "08",
+      "at": 2.97,
+      "to": 3.42,
+      "text": "hate Israel"
+    },
+    {
+      "beat": "08",
+      "at": 3.8,
+      "to": 4.74,
+      "text": "I don't hate anybody"
+    },
+    {
+      "beat": "08",
+      "at": 5,
+      "to": 5.74,
+      "text": "You don't hate anybody"
+    },
+    {
+      "beat": "08",
+      "at": 6.42,
+      "to": 6.66,
+      "text": "Wow"
+    },
+    {
+      "beat": "08",
+      "at": 6.66,
+      "to": 7.14,
+      "text": "Because governments"
+    },
+    {
+      "beat": "08",
+      "at": 7.14,
+      "to": 8.11,
+      "text": "are not people"
+    },
+    {
+      "beat": "09",
+      "at": 0.76,
+      "to": 1.38,
+      "text": "I look at everybody"
+    },
+    {
+      "beat": "09",
+      "at": 1.38,
+      "to": 1.83,
+      "text": "from the individual level"
+    },
+    {
+      "beat": "09",
+      "at": 1.92,
+      "to": 2.54,
+      "text": "I've only met you"
+    },
+    {
+      "beat": "09",
+      "at": 2.54,
+      "to": 3.01,
+      "text": "for two minutes"
+    },
+    {
+      "beat": "09",
+      "at": 3.01,
+      "to": 3.63,
+      "text": "but you seem like"
+    },
+    {
+      "beat": "09",
+      "at": 3.63,
+      "to": 4.1,
+      "text": "a nice person"
+    },
+    {
+      "beat": "09",
+      "at": 4.1,
+      "to": 4.39,
+      "text": "We need"
+    },
+    {
+      "beat": "09",
+      "at": 4.39,
+      "to": 4.82,
+      "text": "more people"
+    },
+    {
+      "beat": "09",
+      "at": 4.82,
+      "to": 5.24,
+      "text": "like you"
+    },
+    {
+      "beat": "09",
+      "at": 5.24,
+      "to": 5.88,
+      "text": "in this world"
+    },
+    {
+      "beat": "09",
+      "at": 5.88,
+      "to": 6.51,
+      "text": "that just want"
+    },
+    {
+      "beat": "09",
+      "at": 6.51,
+      "to": 7.15,
+      "text": "to spread love"
+    },
+    {
+      "beat": "09",
+      "at": 7.15,
+      "to": 7.37,
+      "text": "Bro"
+    },
+    {
+      "beat": "09",
+      "at": 7.37,
+      "to": 8,
+      "text": "thank you man"
+    },
+    {
+      "beat": "09",
+      "at": 8,
+      "to": 8.45,
+      "text": "Dude"
+    },
+    {
+      "beat": "09",
+      "at": 8.74,
+      "to": 9.21,
+      "text": "that's the"
+    },
+    {
+      "beat": "09",
+      "at": 9.4,
+      "to": 10.37,
+      "text": "we dab up"
+    },
+    {
+      "beat": "09",
+      "at": 10.37,
+      "to": 11.66,
+      "text": "It's a nice one"
+    },
+    {
+      "beat": "09",
+      "at": 11.66,
+      "to": 11.99,
+      "text": "Yo"
+    },
+    {
+      "beat": "09",
+      "at": 11.99,
+      "to": 13.28,
+      "text": "welcome to Israel man"
+    },
+    {
+      "beat": "09",
+      "at": 13.28,
+      "to": 13.93,
+      "text": "Enjoy here"
+    },
+    {
+      "beat": "09",
+      "at": 13.93,
+      "to": 14.46,
+      "text": "Meet the Palestinians"
+    },
+    {
+      "beat": "09",
+      "at": 14.46,
+      "to": 15.12,
+      "text": "meet the Christians"
+    },
+    {
+      "beat": "09",
+      "at": 15.12,
+      "to": 15.77,
+      "text": "meet the Jews"
+    },
+    {
+      "beat": "09",
+      "at": 15.77,
+      "to": 16.43,
+      "text": "talk to them"
+    }
+  ]
+}

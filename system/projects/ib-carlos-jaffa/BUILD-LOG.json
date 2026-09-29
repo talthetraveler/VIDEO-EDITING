@@ -1,0 +1,498 @@
+{
+  "built": "2026-09-29T05:10:33.991Z",
+  "total_s": 56.75,
+  "out": "CARLOS_JAFFA_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: I SAID SHABBAT SHALOM\nTO A MUSLIM IN TEL AVIV 🇮🇱",
+  "beats": [
+    [
+      "local-806e85fd67dcbc4b",
+      3.88,
+      5.95,
+      1,
+      "Tal says Shabbat Shalom to him as he walks up - the premise of the title",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-806e85fd67dcbc4b",
+      17.01,
+      21.5,
+      0.5,
+      "Tal: and you are Muslim? what is it like being a Muslim in Israel? / him: it is very beautiful"
+    ],
+    [
+      "local-806e85fd67dcbc4b",
+      103.1,
+      103.8,
+      0.5,
+      "he introduces himself (own sub-beat so his quiet voice gets a caption; continuous shot)"
+    ],
+    [
+      "local-806e85fd67dcbc4b",
+      103.8,
+      118.3,
+      0.5,
+      "the Spanish-name story: not an Arab name / my father liked footballers / I just have the name of a Spanish"
+    ],
+    [
+      "local-806e85fd67dcbc4b",
+      160.07,
+      167.07,
+      0.5,
+      "Tal: as a Muslim, same rights as a Jew? / him: of course, of course, yes we do"
+    ],
+    [
+      "local-b80d70cb2f2c1a37",
+      46.31,
+      50.38,
+      0.5,
+      "Tal (his own line, not Carlos): more peace, more salam and more shalom / Carlos: nice to meet you"
+    ],
+    [
+      "local-b80d70cb2f2c1a37",
+      76.95,
+      78.3,
+      0.5,
+      "Carlos: it is not about Palestine or Israel (own sub-beat so the line is readable)"
+    ],
+    [
+      "local-b80d70cb2f2c1a37",
+      78.3,
+      84.18,
+      0.5,
+      "Tal: it is about people, bro. the world is so divided, you either choose Palestine or Israel"
+    ],
+    [
+      "local-b80d70cb2f2c1a37",
+      84.18,
+      85.25,
+      0.5,
+      "Tal: why not choose just people? (own sub-beat so the line is not clipped)"
+    ],
+    [
+      "local-b80d70cb2f2c1a37",
+      85.25,
+      90.78,
+      0.5,
+      "Carlos: exactly, we are all human beings, why hate this guy and this guy, come on"
+    ],
+    [
+      "local-b80d70cb2f2c1a37",
+      102.96,
+      113.05,
+      0.5,
+      "ending: ciao amigo (calls back the Spanish name), five handshakes, hummus in Jaffa, both laughing"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "to": 0.45,
+      "text": "Shabbat Shalom"
+    },
+    {
+      "beat": "02",
+      "at": 0.09,
+      "to": 0.68,
+      "text": "And you're Muslim"
+    },
+    {
+      "beat": "02",
+      "at": 1.49,
+      "to": 2.06,
+      "text": "what is it"
+    },
+    {
+      "beat": "02",
+      "at": 2.06,
+      "to": 2.44,
+      "text": "like being"
+    },
+    {
+      "beat": "02",
+      "at": 2.44,
+      "to": 2.81,
+      "text": "a Muslim"
+    },
+    {
+      "beat": "02",
+      "at": 2.81,
+      "to": 3.26,
+      "text": "in Israel"
+    },
+    {
+      "beat": "02",
+      "at": 3.51,
+      "to": 3.96,
+      "text": "It's very beautiful"
+    },
+    {
+      "beat": "03",
+      "at": 0,
+      "to": 0.5,
+      "text": "I'm Carlos"
+    },
+    {
+      "beat": "04",
+      "at": 0.08,
+      "to": 0.53,
+      "text": "But Carlos"
+    },
+    {
+      "beat": "04",
+      "at": 0.72,
+      "to": 1.23,
+      "text": "is not"
+    },
+    {
+      "beat": "04",
+      "at": 1.23,
+      "to": 1.72,
+      "text": "an Arab name"
+    },
+    {
+      "beat": "04",
+      "at": 1.72,
+      "to": 2.17,
+      "text": "I know"
+    },
+    {
+      "beat": "04",
+      "at": 2.17,
+      "to": 2.63,
+      "text": "it's actually"
+    },
+    {
+      "beat": "04",
+      "at": 2.97,
+      "to": 3.42,
+      "text": "it's a Spanish name"
+    },
+    {
+      "beat": "04",
+      "at": 3.95,
+      "to": 4.2,
+      "text": "Yeah"
+    },
+    {
+      "beat": "04",
+      "at": 4.2,
+      "to": 4.69,
+      "text": "you see"
+    },
+    {
+      "beat": "04",
+      "at": 4.69,
+      "to": 5.14,
+      "text": "it's a long story"
+    },
+    {
+      "beat": "04",
+      "at": 5.28,
+      "to": 5.74,
+      "text": "but one story short"
+    },
+    {
+      "beat": "04",
+      "at": 6.19,
+      "to": 6.92,
+      "text": "my father used"
+    },
+    {
+      "beat": "04",
+      "at": 6.92,
+      "to": 8.31,
+      "text": "to like footballers"
+    },
+    {
+      "beat": "04",
+      "at": 8.31,
+      "to": 9.4,
+      "text": "You speak Spanish"
+    },
+    {
+      "beat": "04",
+      "at": 11.18,
+      "to": 11.87,
+      "text": "Yeah I don't speak Spanish"
+    },
+    {
+      "beat": "04",
+      "at": 13.23,
+      "to": 13.84,
+      "text": "I just have the name"
+    },
+    {
+      "beat": "04",
+      "at": 13.84,
+      "to": 14.29,
+      "text": "of a Spanish"
+    },
+    {
+      "beat": "05",
+      "at": 0,
+      "to": 0.45,
+      "text": "And I'm just curious"
+    },
+    {
+      "beat": "05",
+      "at": 0.59,
+      "to": 0.94,
+      "text": "in Israel"
+    },
+    {
+      "beat": "05",
+      "at": 0.94,
+      "to": 1.48,
+      "text": "as a Muslim"
+    },
+    {
+      "beat": "05",
+      "at": 1.48,
+      "to": 1.83,
+      "text": "do you"
+    },
+    {
+      "beat": "05",
+      "at": 1.83,
+      "to": 2.34,
+      "text": "have the same"
+    },
+    {
+      "beat": "05",
+      "at": 2.64,
+      "to": 3.35,
+      "text": "rights as a Jew"
+    },
+    {
+      "beat": "05",
+      "at": 3.35,
+      "to": 4.06,
+      "text": "Of course"
+    },
+    {
+      "beat": "05",
+      "at": 5.78,
+      "to": 6.23,
+      "text": "We do"
+    },
+    {
+      "beat": "05",
+      "at": 6.28,
+      "to": 6.73,
+      "text": "Yes we do"
+    },
+    {
+      "beat": "06",
+      "at": 0.13,
+      "to": 0.75,
+      "text": "Dude I just wish"
+    },
+    {
+      "beat": "06",
+      "at": 1.04,
+      "to": 1.65,
+      "text": "bro more peace"
+    },
+    {
+      "beat": "06",
+      "at": 1.65,
+      "to": 2.1,
+      "text": "more salam"
+    },
+    {
+      "beat": "06",
+      "at": 2.21,
+      "to": 3.22,
+      "text": "and more shalom bro"
+    },
+    {
+      "beat": "06",
+      "at": 3.22,
+      "to": 3.67,
+      "text": "Nice to meet you"
+    },
+    {
+      "beat": "07",
+      "at": 0,
+      "to": 0.68,
+      "text": "It's not about"
+    },
+    {
+      "beat": "07",
+      "at": 0.68,
+      "to": 1.35,
+      "text": "Palestine or Israel"
+    },
+    {
+      "beat": "08",
+      "at": 0,
+      "to": 1.35,
+      "text": "It's about people bro"
+    },
+    {
+      "beat": "08",
+      "at": 3.51,
+      "to": 3.94,
+      "text": "The world"
+    },
+    {
+      "beat": "08",
+      "at": 3.94,
+      "to": 4.59,
+      "text": "is so divided"
+    },
+    {
+      "beat": "08",
+      "at": 4.59,
+      "to": 5.23,
+      "text": "you either choose"
+    },
+    {
+      "beat": "08",
+      "at": 5.23,
+      "to": 5.88,
+      "text": "Palestine or Israel"
+    },
+    {
+      "beat": "09",
+      "at": 0,
+      "to": 0.64,
+      "text": "Why not choose"
+    },
+    {
+      "beat": "09",
+      "at": 0.64,
+      "to": 1.07,
+      "text": "just people"
+    },
+    {
+      "beat": "10",
+      "at": 0.01,
+      "to": 0.34,
+      "text": "Exactly"
+    },
+    {
+      "beat": "10",
+      "at": 0.34,
+      "to": 1.66,
+      "text": "we're all human beings"
+    },
+    {
+      "beat": "10",
+      "at": 3.12,
+      "to": 3.4,
+      "text": "Like"
+    },
+    {
+      "beat": "10",
+      "at": 3.4,
+      "to": 3.95,
+      "text": "why hate"
+    },
+    {
+      "beat": "10",
+      "at": 3.95,
+      "to": 4.51,
+      "text": "this guy"
+    },
+    {
+      "beat": "10",
+      "at": 4.51,
+      "to": 4.86,
+      "text": "and this guy"
+    },
+    {
+      "beat": "10",
+      "at": 4.86,
+      "to": 5.53,
+      "text": "I mean come on"
+    },
+    {
+      "beat": "11",
+      "at": 0.07,
+      "to": 0.88,
+      "text": "My boy Carlos"
+    },
+    {
+      "beat": "11",
+      "at": 1.28,
+      "to": 1.73,
+      "text": "ciao amigo"
+    },
+    {
+      "beat": "11",
+      "at": 1.73,
+      "to": 2.42,
+      "text": "We did like"
+    },
+    {
+      "beat": "11",
+      "at": 2.42,
+      "to": 2.88,
+      "text": "five handshakes"
+    },
+    {
+      "beat": "11",
+      "at": 4.04,
+      "to": 4.59,
+      "text": "You deserve it"
+    },
+    {
+      "beat": "11",
+      "at": 4.59,
+      "to": 5.01,
+      "text": "When I"
+    },
+    {
+      "beat": "11",
+      "at": 5.01,
+      "to": 5.65,
+      "text": "come to Jaffa"
+    },
+    {
+      "beat": "11",
+      "at": 5.65,
+      "to": 6.28,
+      "text": "we have hummus"
+    },
+    {
+      "beat": "11",
+      "at": 6.77,
+      "to": 7.21,
+      "text": "You know"
+    },
+    {
+      "beat": "11",
+      "at": 7.21,
+      "to": 7.86,
+      "text": "who my best"
+    },
+    {
+      "beat": "11",
+      "at": 7.86,
+      "to": 8.31,
+      "text": "friend is"
+    },
+    {
+      "beat": "11",
+      "at": 8.59,
+      "to": 9.04,
+      "text": "Who is it"
+    },
+    {
+      "beat": "11",
+      "at": 9.05,
+      "to": 10.01,
+      "text": "Khalid from Abu Hassan"
+    }
+  ]
+}

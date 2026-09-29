@@ -1,0 +1,637 @@
+{
+  "built": "2026-09-29T03:40:57.605Z",
+  "total_s": 74.71,
+  "out": "CESAR_BEACH_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: MEETING AN ARAB CHRISTIAN\nIN TEL AVIV 🇮🇱",
+  "beats": [
+    [
+      "local-36b4941563f873db",
+      6.03,
+      10.61,
+      0.5,
+      "approach: I saw your cross - are you a Christian living in Israel? Yes",
+      null,
+      {
+        "tilt": -3.31
+      }
+    ],
+    [
+      "local-36b4941563f873db",
+      15.64,
+      21.73,
+      0.5,
+      "thesis 1: you can be Christian, Muslim, Arab, who you are",
+      null,
+      {
+        "tilt": -3.31
+      }
+    ],
+    [
+      "local-36b4941563f873db",
+      112.35,
+      120.59,
+      0.5,
+      "favourite part: freedom, big heart, balagan",
+      null,
+      {
+        "tilt": -3.31
+      }
+    ],
+    [
+      "local-36b4941563f873db",
+      123.18,
+      124.42,
+      0.5,
+      "balagan means chaos",
+      null,
+      {
+        "tilt": -3.31
+      }
+    ],
+    [
+      "local-36b4941563f873db",
+      156.32,
+      159.81,
+      0.5,
+      "all my friends are Jewish",
+      null,
+      {
+        "tilt": -3.31
+      }
+    ],
+    [
+      "local-36b4941563f873db",
+      168.22,
+      172.6,
+      0.5,
+      "they love me more because I am Christian",
+      null,
+      {
+        "tilt": -3.31
+      }
+    ],
+    [
+      "local-d9b46a9f639fea46",
+      12.83,
+      28.55,
+      0.5,
+      "BEST LINE: if somebody here dies I do not ask are you Jewish or Christian"
+    ],
+    [
+      "local-d9b46a9f639fea46",
+      48.76,
+      53.37,
+      0.5,
+      "works with a big show / TV Israel"
+    ],
+    [
+      "local-d9b46a9f639fea46",
+      59.59,
+      60.86,
+      0.5,
+      "stylist"
+    ],
+    [
+      "local-d9b46a9f639fea46",
+      69.56,
+      72.94,
+      0.5,
+      "works with everybody on Israeli TV"
+    ],
+    [
+      "local-d9b46a9f639fea46",
+      73.5,
+      77.6,
+      0.5,
+      "he is Arab, nobody hates him (Tal's No way cut)"
+    ],
+    [
+      "local-78207e0e9724ee9c",
+      93.28,
+      101.89,
+      0.5,
+      "Ta'al Israel - you can be who you want"
+    ],
+    [
+      "local-78207e0e9724ee9c",
+      102.34,
+      108.55,
+      0.5,
+      "nobody cares if you are Arab, Muslim, gay or straight"
+    ],
+    [
+      "local-78207e0e9724ee9c",
+      112.29,
+      115.08,
+      0.5,
+      "END warm: we are all humans who live to live, bro"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.05,
+      "to": 1.1,
+      "text": "I saw your cross"
+    },
+    {
+      "beat": "01",
+      "at": 1.42,
+      "to": 2.25,
+      "text": "and I was wondering"
+    },
+    {
+      "beat": "01",
+      "at": 2.25,
+      "to": 2.67,
+      "text": "are you"
+    },
+    {
+      "beat": "01",
+      "at": 2.67,
+      "to": 3.09,
+      "text": "a Christian"
+    },
+    {
+      "beat": "01",
+      "at": 3.09,
+      "to": 3.74,
+      "text": "living in Israel? Yes"
+    },
+    {
+      "beat": "02",
+      "at": 0.08,
+      "to": 0.71,
+      "text": "I didn't know"
+    },
+    {
+      "beat": "02",
+      "at": 0.71,
+      "to": 1.34,
+      "text": "that in Israel"
+    },
+    {
+      "beat": "02",
+      "at": 1.34,
+      "to": 1.97,
+      "text": "there are Christians"
+    },
+    {
+      "beat": "02",
+      "at": 2.25,
+      "to": 2.53,
+      "text": "Yeah of course"
+    },
+    {
+      "beat": "02",
+      "at": 2.53,
+      "to": 2.98,
+      "text": "You can be"
+    },
+    {
+      "beat": "02",
+      "at": 3.01,
+      "to": 3.46,
+      "text": "Christian"
+    },
+    {
+      "beat": "02",
+      "at": 3.52,
+      "to": 4.95,
+      "text": "Muslim Arab"
+    },
+    {
+      "beat": "02",
+      "at": 5.33,
+      "to": 5.92,
+      "text": "who you are"
+    },
+    {
+      "beat": "03",
+      "at": 0,
+      "to": 1.18,
+      "text": "Why you love Israel"
+    },
+    {
+      "beat": "03",
+      "at": 1.18,
+      "to": 1.64,
+      "text": "Oh wow"
+    },
+    {
+      "beat": "03",
+      "at": 1.88,
+      "to": 3.57,
+      "text": "the freedom"
+    },
+    {
+      "beat": "03",
+      "at": 3.57,
+      "to": 4.56,
+      "text": "people love here"
+    },
+    {
+      "beat": "03",
+      "at": 4.86,
+      "to": 5.42,
+      "text": "people have"
+    },
+    {
+      "beat": "03",
+      "at": 5.42,
+      "to": 6.27,
+      "text": "a big heart"
+    },
+    {
+      "beat": "03",
+      "at": 6.67,
+      "to": 7.84,
+      "text": "everybody loves Balagan here"
+    },
+    {
+      "beat": "04",
+      "at": 0,
+      "to": 1.04,
+      "text": "Balagan means chaos"
+    },
+    {
+      "beat": "05",
+      "at": 0.12,
+      "to": 0.48,
+      "text": "Do you"
+    },
+    {
+      "beat": "05",
+      "at": 0.48,
+      "to": 0.85,
+      "text": "have friends"
+    },
+    {
+      "beat": "05",
+      "at": 0.85,
+      "to": 1.39,
+      "text": "that are Jewish"
+    },
+    {
+      "beat": "05",
+      "at": 1.83,
+      "to": 2.52,
+      "text": "Yes all my friends are Jewish"
+    },
+    {
+      "beat": "06",
+      "at": 0.1,
+      "to": 0.98,
+      "text": "And do your Jewish"
+    },
+    {
+      "beat": "06",
+      "at": 0.98,
+      "to": 1.41,
+      "text": "friends hate"
+    },
+    {
+      "beat": "06",
+      "at": 1.41,
+      "to": 1.85,
+      "text": "you because"
+    },
+    {
+      "beat": "06",
+      "at": 1.85,
+      "to": 2.15,
+      "text": "you're a Christian"
+    },
+    {
+      "beat": "06",
+      "at": 2.15,
+      "to": 2.37,
+      "text": "No"
+    },
+    {
+      "beat": "06",
+      "at": 2.37,
+      "to": 3.04,
+      "text": "more love me"
+    },
+    {
+      "beat": "06",
+      "at": 3.04,
+      "to": 3.49,
+      "text": "because I'm a Christian"
+    },
+    {
+      "beat": "07",
+      "at": 0.13,
+      "to": 1.4,
+      "text": "people really love"
+    },
+    {
+      "beat": "07",
+      "at": 1.4,
+      "to": 2.64,
+      "text": "to be together"
+    },
+    {
+      "beat": "07",
+      "at": 2.64,
+      "to": 2.96,
+      "text": "Yeah"
+    },
+    {
+      "beat": "07",
+      "at": 2.96,
+      "to": 3.9,
+      "text": "to be together"
+    },
+    {
+      "beat": "07",
+      "at": 4.08,
+      "to": 4.68,
+      "text": "People don't"
+    },
+    {
+      "beat": "07",
+      "at": 4.68,
+      "to": 5.58,
+      "text": "care if you"
+    },
+    {
+      "beat": "07",
+      "at": 5.58,
+      "to": 6.18,
+      "text": "are Arab"
+    },
+    {
+      "beat": "07",
+      "at": 6.18,
+      "to": 7.38,
+      "text": "if you are Muslim"
+    },
+    {
+      "beat": "07",
+      "at": 7.38,
+      "to": 7.8,
+      "text": "because if"
+    },
+    {
+      "beat": "07",
+      "at": 7.8,
+      "to": 9.63,
+      "text": "somebody here dies"
+    },
+    {
+      "beat": "07",
+      "at": 9.94,
+      "to": 10.58,
+      "text": "I don't ask them"
+    },
+    {
+      "beat": "07",
+      "at": 10.8,
+      "to": 11.05,
+      "text": "hey"
+    },
+    {
+      "beat": "07",
+      "at": 11.05,
+      "to": 11.78,
+      "text": "you are Jewish"
+    },
+    {
+      "beat": "07",
+      "at": 11.78,
+      "to": 12.28,
+      "text": "or Christian"
+    },
+    {
+      "beat": "07",
+      "at": 12.28,
+      "to": 12.77,
+      "text": "I want"
+    },
+    {
+      "beat": "07",
+      "at": 12.77,
+      "to": 13.22,
+      "text": "to help you"
+    },
+    {
+      "beat": "07",
+      "at": 13.49,
+      "to": 14.07,
+      "text": "Nobody asks"
+    },
+    {
+      "beat": "07",
+      "at": 14.07,
+      "to": 14.52,
+      "text": "just come and help"
+    },
+    {
+      "beat": "08",
+      "at": 0,
+      "to": 0.87,
+      "text": "And I work"
+    },
+    {
+      "beat": "08",
+      "at": 0.87,
+      "to": 1.4,
+      "text": "with a big"
+    },
+    {
+      "beat": "08",
+      "at": 1.77,
+      "to": 2.71,
+      "text": "show in Israel"
+    },
+    {
+      "beat": "08",
+      "at": 2.71,
+      "to": 3.37,
+      "text": "I work"
+    },
+    {
+      "beat": "08",
+      "at": 3.37,
+      "to": 3.85,
+      "text": "with TV Israel"
+    },
+    {
+      "beat": "09",
+      "at": 0.15,
+      "to": 0.36,
+      "text": "Yes"
+    },
+    {
+      "beat": "09",
+      "at": 0.36,
+      "to": 0.99,
+      "text": "I'm a stylist"
+    },
+    {
+      "beat": "10",
+      "at": 0.21,
+      "to": 1.16,
+      "text": "Here in TV"
+    },
+    {
+      "beat": "10",
+      "at": 1.16,
+      "to": 1.79,
+      "text": "in Israel"
+    },
+    {
+      "beat": "10",
+      "at": 1.79,
+      "to": 3.05,
+      "text": "I work with everybody"
+    },
+    {
+      "beat": "11",
+      "at": 0.14,
+      "to": 0.7,
+      "text": "Yeah and I'm Arabic"
+    },
+    {
+      "beat": "11",
+      "at": 1.05,
+      "to": 1.54,
+      "text": "And you're Arab"
+    },
+    {
+      "beat": "11",
+      "at": 1.91,
+      "to": 2.35,
+      "text": "And they"
+    },
+    {
+      "beat": "11",
+      "at": 2.35,
+      "to": 2.8,
+      "text": "don't hate you? No"
+    },
+    {
+      "beat": "12",
+      "at": 0.07,
+      "to": 0.52,
+      "text": "I want"
+    },
+    {
+      "beat": "12",
+      "at": 0.52,
+      "to": 0.97,
+      "text": "to say"
+    },
+    {
+      "beat": "12",
+      "at": 0.97,
+      "to": 1.42,
+      "text": "to everybody"
+    },
+    {
+      "beat": "12",
+      "at": 1.81,
+      "to": 2.82,
+      "text": "Come to Israel"
+    },
+    {
+      "beat": "12",
+      "at": 3.94,
+      "to": 4.39,
+      "text": "Israel is"
+    },
+    {
+      "beat": "12",
+      "at": 4.39,
+      "to": 5.06,
+      "text": "the best one"
+    },
+    {
+      "beat": "12",
+      "at": 5.06,
+      "to": 5.73,
+      "text": "the Middle East"
+    },
+    {
+      "beat": "12",
+      "at": 6.35,
+      "to": 6.8,
+      "text": "You can"
+    },
+    {
+      "beat": "12",
+      "at": 6.93,
+      "to": 8.04,
+      "text": "be who you want"
+    },
+    {
+      "beat": "13",
+      "at": 0.02,
+      "to": 0.47,
+      "text": "And"
+    },
+    {
+      "beat": "13",
+      "at": 0.7,
+      "to": 1.65,
+      "text": "nobody cares about"
+    },
+    {
+      "beat": "13",
+      "at": 3.17,
+      "to": 3.91,
+      "text": "you if you"
+    },
+    {
+      "beat": "13",
+      "at": 3.91,
+      "to": 4.4,
+      "text": "are Arab"
+    },
+    {
+      "beat": "13",
+      "at": 4.4,
+      "to": 4.89,
+      "text": "or Muslim"
+    },
+    {
+      "beat": "13",
+      "at": 4.89,
+      "to": 5.38,
+      "text": "or gay"
+    },
+    {
+      "beat": "13",
+      "at": 5.38,
+      "to": 5.87,
+      "text": "or straight"
+    },
+    {
+      "beat": "14",
+      "at": 0.69,
+      "to": 0.96,
+      "text": "We are humans"
+    },
+    {
+      "beat": "14",
+      "at": 0.96,
+      "to": 1.54,
+      "text": "We are all"
+    },
+    {
+      "beat": "14",
+      "at": 1.54,
+      "to": 1.92,
+      "text": "humans who"
+    },
+    {
+      "beat": "14",
+      "at": 1.92,
+      "to": 2.69,
+      "text": "live to live bro"
+    }
+  ]
+}

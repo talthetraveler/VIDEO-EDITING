@@ -1,0 +1,69 @@
+{
+ "beats": [
+  [
+   "local-a70544be30412e67",
+   17.36,
+   20.55,
+   0.5,
+   "cold-open identity flip: are you Muslim? no, Christian"
+  ],
+  [
+   "local-a70544be30412e67",
+   23.68,
+   33.47,
+   0.5,
+   "Christian police officers in Israel? Too many (Tal voices the misconception)"
+  ],
+  [
+   "local-a70544be30412e67",
+   33.47,
+   37.57,
+   0.5,
+   "and Arab: As-salamu alaykum"
+  ],
+  [
+   "local-a70544be30412e67",
+   38.36,
+   44.25,
+   0.5,
+   "from Nazareth, where Jesus is from"
+  ],
+  [
+   "local-a70544be30412e67",
+   76.11,
+   84.28,
+   0.5,
+   "positive close: Muslim police officer friends? Yep. Yep. (ends before Tal's \"Wow, amazing, I love that\", whose transcript timing is ~1.5s off and could not be captioned in sync)",
+   null,
+   {
+    "manual": true
+   }
+  ]
+ ],
+ "title": "POV: MEETING A CHRISTIAN\nPOLICE OFFICER IN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "POLICE_V1_r3.mp4",
+ "captionFix": [
+  {
+   "match": "This is where Jesus is from. Yeah.",
+   "to": "This is where Jesus is from."
+  },
+  {
+   "match": "NO ARE YOU",
+   "exact": true,
+   "to": "NO"
+  },
+  {
+   "match": "CHRISTIAN YOU'RE CHRISTIAN",
+   "exact": true,
+   "to": "CHRISTIAN"
+  },
+  {
+   "match": "YOU'RE FROM NAZARETH? WOW",
+   "exact": true,
+   "to": "YOU'RE FROM NAZARETH"
+  }
+ ]
+}

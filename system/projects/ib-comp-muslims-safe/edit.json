@@ -1,0 +1,93 @@
+{
+ "title": "ASKING MUSLIMS IF THEY\nFEEL SAFE IN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "COMP_MUSLIMS_SAFE_V1_r3.mp4",
+ "beats": [
+  [
+   "local-2cd6d3f91d296699",
+   23.13,
+   27.43,
+   0.5,
+   "S42-b hook with the question: Moroccan woman in a red hijab, Old City: as a Muslim, do you feel safe? Yeah, definitely. Of course."
+  ],
+  [
+   "local-806e85fd67dcbc4b",
+   161.25,
+   167.07,
+   0.5,
+   "S18-g Carlos from Jaffa: as a Muslim, same rights as a Jew? Of course, of course, we do, yes we do",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-afb768867f6d4ba7",
+   51.7,
+   54.73,
+   0.5,
+   "S32-b STRONGEST: Yusuf, bakery manager: it's just on the media, it's the opposite",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-908972066238e4f0",
+   53.82,
+   58.25,
+   0.5,
+   "S17-e young woman in hijab, Jaffa seafront: no, no, we live here. Freely? Yeah. I'm from Jerusalem.",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-e1614dc16a5a2c1d",
+   78.22,
+   81.06,
+   0.5,
+   "S6-a Mahmoud behind the bakery counter: as a Muslim, you feel safe here? Of course."
+  ],
+  [
+   "local-0e4f08e3af77bc51",
+   49.9,
+   53.86,
+   0.5,
+   "S8-a Ahmadi Muslim in the mosque: practice your prayer safely here? Yes, I do."
+  ],
+  [
+   "local-4db5387b84293ad6",
+   17.68,
+   22.91,
+   0.5,
+   "S37-a Anas at the Zaatar counter: what is it like? It's very good. Safe to be Muslim? Yes."
+  ],
+  [
+   "local-521e3956dfface5a",
+   81.86,
+   86.09,
+   0.5,
+   "S29-c END: woman in hijab, thumbs up on the beach: I'm Jewish, you're Muslim, we are one. Exactly. Inshallah, no war."
+  ]
+ ],
+ "captionFix": [
+  {
+   "match": "Israel, as a Muslim, do you have the same rights as a Jew?",
+   "to": "In Israel, as a Muslim, do you have the same rights as a Jew?"
+  },
+  {
+   "match": "YEAH DEFINITELY REALLY",
+   "to": "YEAH, DEFINITELY",
+   "exact": true
+  },
+  {
+   "match": "REALLY? YES",
+   "to": "YES",
+   "exact": true
+  }
+ ]
+}

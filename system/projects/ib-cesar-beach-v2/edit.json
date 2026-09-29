@@ -1,0 +1,164 @@
+{
+ "beats": [
+  [
+   "local-d9b46a9f639fea46",
+   22.68,
+   26.31,
+   0.1,
+   "HOOK flash-forward: I do not ask them, are you Jewish or Christian - I want to help you (face-on) (manual full-height frame so the title clears his forehead)",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-36b4941563f873db",
+   6.03,
+   10.61,
+   0.5,
+   "approach: I saw your cross - are you a Christian living in Israel? Yes",
+   null,
+   {
+    "tilt": -3.31
+   }
+  ],
+  [
+   "local-36b4941563f873db",
+   15.64,
+   21.73,
+   0.5,
+   "thesis 1: you can be Christian, Muslim, Arab, who you are",
+   null,
+   {
+    "tilt": -3.31
+   }
+  ],
+  [
+   "local-36b4941563f873db",
+   112.35,
+   120.59,
+   0.5,
+   "favourite part: freedom, big heart, balagan",
+   null,
+   {
+    "tilt": -3.31
+   }
+  ],
+  [
+   "local-36b4941563f873db",
+   123.18,
+   124.42,
+   0.5,
+   "balagan means chaos",
+   null,
+   {
+    "tilt": -3.31
+   }
+  ],
+  [
+   "local-36b4941563f873db",
+   156.32,
+   159.81,
+   0.5,
+   "all my friends are Jewish",
+   null,
+   {
+    "tilt": -3.31
+   }
+  ],
+  [
+   "local-36b4941563f873db",
+   168.22,
+   172.6,
+   0.5,
+   "they love me more because I am Christian",
+   null,
+   {
+    "tilt": -3.31
+   }
+  ],
+  [
+   "local-d9b46a9f639fea46",
+   12.83,
+   28.55,
+   0.5,
+   "BEST LINE: if somebody here dies I do not ask are you Jewish or Christian"
+  ],
+  [
+   "local-d9b46a9f639fea46",
+   48.76,
+   53.37,
+   0.5,
+   "works with a big show / TV Israel"
+  ],
+  [
+   "local-d9b46a9f639fea46",
+   59.59,
+   60.86,
+   0.5,
+   "stylist"
+  ],
+  [
+   "local-d9b46a9f639fea46",
+   69.56,
+   72.94,
+   0.5,
+   "works with everybody on Israeli TV"
+  ],
+  [
+   "local-d9b46a9f639fea46",
+   73.5,
+   77.6,
+   0.5,
+   "he is Arab, nobody hates him (Tal's No way cut)"
+  ],
+  [
+   "local-78207e0e9724ee9c",
+   93.28,
+   101.89,
+   0.5,
+   "Ta'al Israel - you can be who you want"
+  ],
+  [
+   "local-78207e0e9724ee9c",
+   102.34,
+   108.55,
+   0.5,
+   "nobody cares if you are Arab, Muslim, gay or straight"
+  ],
+  [
+   "local-78207e0e9724ee9c",
+   112.29,
+   115.08,
+   0.5,
+   "END warm: we are all humans who live to live, bro"
+  ]
+ ],
+ "title": "POV: MEETING AN ARAB CHRISTIAN\nIN TEL AVIV 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "CESAR_BEACH_V2.mp4",
+ "captionFix": [
+  {
+   "match": "Yes, I want to say to everybody,",
+   "to": "I want to say to everybody,"
+  },
+  {
+   "match": "Ta'ala Isra'il.",
+   "to": "Come to Israel!"
+  },
+  {
+   "match": "is the best one, the Middle East.",
+   "to": "Israel is the best one, the Middle East."
+  },
+  {
+   "match": "You can be Christian, Muslim, Arab,",
+   "to": "You can be. Christian, Muslim, Arab,"
+  },
+  {
+   "match": "No, more love me because I'm a Christian.",
+   "to": "No, more love me, because I'm a Christian."
+  }
+ ]
+}

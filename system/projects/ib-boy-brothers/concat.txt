@@ -1,0 +1,5 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-boy-brothers/beats_9080337/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-boy-brothers/beats_9080337/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-boy-brothers/beats_9080337/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-boy-brothers/beats_9080337/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-boy-brothers/beats_9080337/05.mp4'

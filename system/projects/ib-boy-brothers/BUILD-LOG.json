@@ -1,0 +1,180 @@
+{
+  "built": "2026-09-29T05:22:56.045Z",
+  "total_s": 23.72,
+  "out": "BOY_BROTHERS_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: THIS KID IN ISRAEL\nLOVES EVERYONE 🇮🇱",
+  "beats": [
+    [
+      "local-47bddb0cd9e4302f",
+      21.29,
+      27.3,
+      0.5,
+      "Tal: we live in Israel, you are Muslim, I am Jewish, we need to be brothers / boy: we are brothers",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-47bddb0cd9e4302f",
+      35.31,
+      42.79,
+      0.5,
+      "boy: he is my brother / Tal: everyone is your brother / boy: like, everyone is my brother"
+    ],
+    [
+      "local-47bddb0cd9e4302f",
+      51.62,
+      54.27,
+      0.5,
+      "Tal: you love everyone? / boy: I love everyone"
+    ],
+    [
+      "local-47bddb0cd9e4302f",
+      65.89,
+      70.3,
+      0.5,
+      "Tal: you have a friend who is Jewish? / boy: yeah ... so many"
+    ],
+    [
+      "local-be3559f139c262a3",
+      25.53,
+      28.7,
+      0.5,
+      "ending: you love everywhere? / I love everyone in the world - arms wide"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.12,
+      "to": 0.57,
+      "text": "we both"
+    },
+    {
+      "beat": "01",
+      "at": 0.61,
+      "to": 1.4,
+      "text": "we live in Israel"
+    },
+    {
+      "beat": "01",
+      "at": 1.4,
+      "to": 1.99,
+      "text": "you are Muslim"
+    },
+    {
+      "beat": "01",
+      "at": 1.99,
+      "to": 2.58,
+      "text": "I am Jewish"
+    },
+    {
+      "beat": "01",
+      "at": 2.58,
+      "to": 2.98,
+      "text": "we need"
+    },
+    {
+      "beat": "01",
+      "at": 2.98,
+      "to": 3.7,
+      "text": "to be brothers"
+    },
+    {
+      "beat": "01",
+      "at": 4.49,
+      "to": 5.3,
+      "text": "We are brothers"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "to": 1.46,
+      "text": "He is my brother"
+    },
+    {
+      "beat": "02",
+      "at": 1.71,
+      "to": 2.6,
+      "text": "Everyone is your brother"
+    },
+    {
+      "beat": "02",
+      "at": 2.6,
+      "to": 3.34,
+      "text": "Does not matter"
+    },
+    {
+      "beat": "02",
+      "at": 3.34,
+      "to": 4.07,
+      "text": "about the religion"
+    },
+    {
+      "beat": "02",
+      "at": 5.97,
+      "to": 7.28,
+      "text": "everyone is my brother"
+    },
+    {
+      "beat": "03",
+      "at": 0.09,
+      "to": 0.92,
+      "text": "You love everyone"
+    },
+    {
+      "beat": "03",
+      "at": 1.5,
+      "to": 2.15,
+      "text": "I love everyone"
+    },
+    {
+      "beat": "04",
+      "at": 0.16,
+      "to": 0.91,
+      "text": "You have a friend"
+    },
+    {
+      "beat": "04",
+      "at": 0.91,
+      "to": 1.36,
+      "text": "WHO IS JEWISH"
+    },
+    {
+      "beat": "04",
+      "at": 1.92,
+      "to": 2.91,
+      "text": "And no problem"
+    },
+    {
+      "beat": "04",
+      "at": 3.64,
+      "to": 4.09,
+      "text": "So many"
+    },
+    {
+      "beat": "05",
+      "at": 0.13,
+      "to": 0.62,
+      "text": "You love everywhere"
+    },
+    {
+      "beat": "05",
+      "at": 0.62,
+      "to": 1.15,
+      "text": "I love everyone"
+    },
+    {
+      "beat": "05",
+      "at": 1.76,
+      "to": 2.22,
+      "text": "in the world"
+    }
+  ]
+}

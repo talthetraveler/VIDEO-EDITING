@@ -1,0 +1,362 @@
+{
+  "built": "2026-09-29T04:15:11.796Z",
+  "total_s": 35.4,
+  "out": "IB_MOROCCO_SAFE_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: ASKING A MUSLIM TOURIST\nIF SHE FEELS SAFE IN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-2cd6d3f91d296699",
+      3.08,
+      5.11,
+      0.5,
+      "Where are you guys from? Morocco."
+    ],
+    [
+      "local-2cd6d3f91d296699",
+      8.57,
+      17.59,
+      0.5,
+      "Wow, welcome to Israel. How long have you been here for? We just arrived. Wow, welcome home. Tha",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-2cd6d3f91d296699",
+      23.13,
+      27.43,
+      0.5,
+      "And as a Muslim, do you feel safe in Israel? Yeah, definitely. Really? Of course."
+    ],
+    [
+      "local-2cd6d3f91d296699",
+      34.53,
+      36.35,
+      0.5,
+      "Really? Of course we are safe."
+    ],
+    [
+      "local-2cd6d3f91d296699",
+      46.66,
+      49.45,
+      0.5,
+      "There's good people everywhere. Yeah, there are good people everywhere.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-2cd6d3f91d296699",
+      59.06,
+      67.45,
+      0.5,
+      "I'm Jewish, and I'm so happy to see Muslims visiting here. Yes. Because, you know, this is the h"
+    ],
+    [
+      "local-2cd6d3f91d296699",
+      73.63,
+      80.44,
+      0.5,
+      "we need to remember we're all human. Yeah, I agree. Inshallah. We are all human beings. We're al"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.13,
+      "to": 0.84,
+      "text": "Where are you guys from"
+    },
+    {
+      "beat": "01",
+      "at": 1.5,
+      "to": 2.2,
+      "text": "Morocco"
+    },
+    {
+      "beat": "02",
+      "at": 0.2,
+      "to": 0.79,
+      "text": "welcome to Israel"
+    },
+    {
+      "beat": "02",
+      "at": 1.25,
+      "to": 1.96,
+      "text": "How long have you"
+    },
+    {
+      "beat": "02",
+      "at": 1.96,
+      "to": 2.5,
+      "text": "been here for"
+    },
+    {
+      "beat": "02",
+      "at": 2.82,
+      "to": 3.46,
+      "text": "We just arrived"
+    },
+    {
+      "beat": "02",
+      "at": 3.68,
+      "to": 4.03,
+      "text": "Wow"
+    },
+    {
+      "beat": "02",
+      "at": 4.03,
+      "to": 4.53,
+      "text": "welcome home"
+    },
+    {
+      "beat": "02",
+      "at": 4.85,
+      "to": 5.38,
+      "text": "Thanks"
+    },
+    {
+      "beat": "02",
+      "at": 5.69,
+      "to": 6.09,
+      "text": "part about"
+    },
+    {
+      "beat": "02",
+      "at": 6.09,
+      "to": 6.54,
+      "text": "it here"
+    },
+    {
+      "beat": "02",
+      "at": 7.6,
+      "to": 8.05,
+      "text": "I love Jerusalem"
+    },
+    {
+      "beat": "03",
+      "at": 0.08,
+      "to": 0.84,
+      "text": "And as a Muslim"
+    },
+    {
+      "beat": "03",
+      "at": 0.84,
+      "to": 1.42,
+      "text": "do you feel"
+    },
+    {
+      "beat": "03",
+      "at": 1.42,
+      "to": 1.99,
+      "text": "safe in Israel"
+    },
+    {
+      "beat": "03",
+      "at": 3.12,
+      "to": 3.73,
+      "text": "Yeah definitely Really"
+    },
+    {
+      "beat": "03",
+      "at": 3.73,
+      "to": 4.18,
+      "text": "Of course"
+    },
+    {
+      "beat": "04",
+      "at": 0.02,
+      "to": 0.26,
+      "text": "Really"
+    },
+    {
+      "beat": "04",
+      "at": 0.26,
+      "to": 0.68,
+      "text": "Of course"
+    },
+    {
+      "beat": "04",
+      "at": 0.68,
+      "to": 1.13,
+      "text": "we are safe"
+    },
+    {
+      "beat": "05",
+      "at": 0.29,
+      "to": 1.11,
+      "text": "There's good people everywhere"
+    },
+    {
+      "beat": "05",
+      "at": 1.46,
+      "to": 1.67,
+      "text": "Yeah"
+    },
+    {
+      "beat": "05",
+      "at": 1.67,
+      "to": 2.28,
+      "text": "there are good"
+    },
+    {
+      "beat": "05",
+      "at": 2.28,
+      "to": 2.73,
+      "text": "people everywhere"
+    },
+    {
+      "beat": "06",
+      "at": 0.09,
+      "to": 0.49,
+      "text": "I'm Jewish"
+    },
+    {
+      "beat": "06",
+      "at": 0.49,
+      "to": 0.89,
+      "text": "and I'm"
+    },
+    {
+      "beat": "06",
+      "at": 0.89,
+      "to": 1.29,
+      "text": "so happy"
+    },
+    {
+      "beat": "06",
+      "at": 1.29,
+      "to": 1.69,
+      "text": "to see"
+    },
+    {
+      "beat": "06",
+      "at": 1.69,
+      "to": 2.18,
+      "text": "Muslims visiting here Yes"
+    },
+    {
+      "beat": "06",
+      "at": 2.57,
+      "to": 3.24,
+      "text": "Because you know"
+    },
+    {
+      "beat": "06",
+      "at": 3.24,
+      "to": 4.14,
+      "text": "this is the holy"
+    },
+    {
+      "beat": "06",
+      "at": 4.14,
+      "to": 4.82,
+      "text": "land for all people Yes"
+    },
+    {
+      "beat": "06",
+      "at": 5.19,
+      "to": 5.83,
+      "text": "For Muslims"
+    },
+    {
+      "beat": "06",
+      "at": 5.83,
+      "to": 6.47,
+      "text": "for Jews"
+    },
+    {
+      "beat": "06",
+      "at": 6.47,
+      "to": 6.87,
+      "text": "for Christians"
+    },
+    {
+      "beat": "06",
+      "at": 6.87,
+      "to": 7.65,
+      "text": "We are all one"
+    },
+    {
+      "beat": "06",
+      "at": 7.65,
+      "to": 8.1,
+      "text": "Exactly"
+    },
+    {
+      "beat": "07",
+      "at": 0.08,
+      "to": 0.5,
+      "text": "we need"
+    },
+    {
+      "beat": "07",
+      "at": 0.5,
+      "to": 0.93,
+      "text": "to remember"
+    },
+    {
+      "beat": "07",
+      "at": 0.93,
+      "to": 1.18,
+      "text": "we're all human"
+    },
+    {
+      "beat": "07",
+      "at": 1.18,
+      "to": 1.48,
+      "text": "Yeah"
+    },
+    {
+      "beat": "07",
+      "at": 1.48,
+      "to": 2.09,
+      "text": "I agree"
+    },
+    {
+      "beat": "07",
+      "at": 2.09,
+      "to": 2.54,
+      "text": "Inshallah"
+    },
+    {
+      "beat": "07",
+      "at": 2.65,
+      "to": 3.11,
+      "text": "We are all"
+    },
+    {
+      "beat": "07",
+      "at": 3.11,
+      "to": 3.56,
+      "text": "human beings"
+    },
+    {
+      "beat": "07",
+      "at": 3.78,
+      "to": 4.52,
+      "text": "We're all human beings"
+    },
+    {
+      "beat": "07",
+      "at": 5.7,
+      "to": 6.04,
+      "text": "We should be able"
+    },
+    {
+      "beat": "07",
+      "at": 6.04,
+      "to": 6.5,
+      "text": "to live together Yeah"
+    }
+  ]
+}

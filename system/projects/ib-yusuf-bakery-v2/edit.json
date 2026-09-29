@@ -1,0 +1,177 @@
+{
+ "beats": [
+  [
+   "local-b60896ceb0472d88",
+   7.3,
+   9.92,
+   0.5,
+   "HOOK flash-forward: the gift happens because Tal said Eid Mubarak"
+  ],
+  [
+   "local-afb768867f6d4ba7",
+   5.52,
+   14.38,
+   0.5,
+   "identity reveal + Eid Mubarak greeting, his face at the thank-you",
+   null,
+   {
+    "tilt": -4.25
+   }
+  ],
+  [
+   "local-afb768867f6d4ba7",
+   28.3,
+   32.99,
+   0.5,
+   "friends that are Jewish",
+   null,
+   {
+    "tilt": -4.25
+   }
+  ],
+  [
+   "local-afb768867f6d4ba7",
+   36.5,
+   40.43,
+   0.5,
+   "Muslims, Jews and Christians, every kind of people",
+   null,
+   {
+    "tilt": -4.25
+   }
+  ],
+  [
+   "local-afb768867f6d4ba7",
+   48,
+   54.73,
+   0.5,
+   "thesis: it is just on the media, it is the opposite",
+   null,
+   {
+    "tilt": -4.25
+   }
+  ],
+  [
+   "local-afb768867f6d4ba7",
+   66.52,
+   70.73,
+   0.5,
+   "hospitality: he wants to feed Tal",
+   null,
+   {
+    "tilt": -4.25
+   }
+  ],
+  [
+   "local-afb768867f6d4ba7",
+   73.18,
+   75.5,
+   0.5,
+   "Arab hospitality, of course",
+   null,
+   {
+    "tilt": -4.25
+   }
+  ],
+  [
+   "local-5e9f6f219042a379",
+   14.9,
+   20.98,
+   0.5,
+   "special for you at the oven (the transcript places \"Take a look\" ~0.6s late and the feta line ~1s late; the caption text is shifted onto the speech that is really there)",
+   null,
+   {
+    "tilt": 7.42,
+    "manual": true
+   }
+  ],
+  [
+   "local-5e9f6f219042a379",
+   56.09,
+   71.65,
+   0.3,
+   "he works on Eid so his staff can celebrate",
+   null,
+   {
+    "tilt": 7.42,
+    "manual": true
+   }
+  ],
+  [
+   "local-8adad22b40e744d2",
+   0.18,
+   8.1,
+   0.4,
+   "a Muslim manager, of course",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-b60896ceb0472d88",
+   3.76,
+   9.92,
+   0.5,
+   "payoff: gift because Tal said Eid Mubarak"
+  ],
+  [
+   "local-b60896ceb0472d88",
+   11.92,
+   19.2,
+   0.5,
+   "warm goodbye, Inshallah"
+  ]
+ ],
+ "title": "POV: MEETING A MUSLIM\nIN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "YUSUF_V2_r2.mp4",
+ "captionFix": [
+  {
+   "match": "Take a look.",
+   "to": "This is feta cheese, with olives."
+  },
+  {
+   "match": "I'm Jewish and I wanted just to tell you Edmar Barak.",
+   "to": "I'm Jewish, and I wanted just to tell you, Eid Mubarak."
+  },
+  {
+   "match": "came to, say, Edmar Barak",
+   "to": "came to say Eid Mubarak"
+  },
+  {
+   "match": "Edmar Barak",
+   "to": "Eid Mubarak"
+  },
+  {
+   "match": "Edmur Barak",
+   "to": "Eid Mubarak"
+  },
+  {
+   "match": "Edmure Barak",
+   "to": "Eid Mubarak"
+  },
+  {
+   "match": "This is a fair cheese with olive. Okay.",
+   "to": null
+  },
+  {
+   "match": "a fair cheese with olive",
+   "to": "feta cheese, with olives"
+  },
+  {
+   "match": "food for you. Come.",
+   "to": "food for you."
+  },
+  {
+   "match": "my other people to celebrate",
+   "to": "my other people celebrate"
+  },
+  {
+   "match": "You called me Eid Mubarak,",
+   "to": "You called me, Eid Mubarak,"
+  }
+ ]
+}

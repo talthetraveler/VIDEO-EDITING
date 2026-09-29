@@ -1,0 +1,68 @@
+{
+ "title": "POV: THIS KID IN ISRAEL\nLOVES EVERYONE 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "BOY_BROTHERS_V1.mp4",
+ "captionFix": [
+  {
+   "match": "Yehud",
+   "to": "Jewish"
+  },
+  {
+   "match": "LIKE",
+   "exact": true,
+   "to": null
+  },
+  {
+   "match": "WHO IS JEWISH? YEAH",
+   "exact": true,
+   "to": "WHO IS JEWISH"
+  }
+ ],
+ "beats": [
+  [
+   "local-47bddb0cd9e4302f",
+   21.29,
+   27.3,
+   0.5,
+   "Tal: we live in Israel, you are Muslim, I am Jewish, we need to be brothers / boy: we are brothers",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-47bddb0cd9e4302f",
+   35.31,
+   42.79,
+   0.5,
+   "boy: he is my brother / Tal: everyone is your brother / boy: like, everyone is my brother"
+  ],
+  [
+   "local-47bddb0cd9e4302f",
+   51.62,
+   54.27,
+   0.5,
+   "Tal: you love everyone? / boy: I love everyone"
+  ],
+  [
+   "local-47bddb0cd9e4302f",
+   65.89,
+   70.3,
+   0.5,
+   "Tal: you have a friend who is Jewish? / boy: yeah ... so many"
+  ],
+  [
+   "local-be3559f139c262a3",
+   25.53,
+   28.7,
+   0.5,
+   "ending: you love everywhere? / I love everyone in the world - arms wide"
+  ]
+ ]
+}

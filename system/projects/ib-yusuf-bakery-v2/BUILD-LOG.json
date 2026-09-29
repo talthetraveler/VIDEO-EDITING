@@ -1,0 +1,697 @@
+{
+  "built": "2026-09-29T03:59:38.340Z",
+  "total_s": 76.36,
+  "out": "YUSUF_V2_r2.mp4",
+  "layout": "vertical",
+  "title": "POV: MEETING A MUSLIM\nIN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-b60896ceb0472d88",
+      7.3,
+      9.92,
+      0.5,
+      "HOOK flash-forward: the gift happens because Tal said Eid Mubarak"
+    ],
+    [
+      "local-afb768867f6d4ba7",
+      5.52,
+      14.38,
+      0.5,
+      "identity reveal + Eid Mubarak greeting, his face at the thank-you",
+      null,
+      {
+        "tilt": -4.25
+      }
+    ],
+    [
+      "local-afb768867f6d4ba7",
+      28.3,
+      32.99,
+      0.5,
+      "friends that are Jewish",
+      null,
+      {
+        "tilt": -4.25
+      }
+    ],
+    [
+      "local-afb768867f6d4ba7",
+      36.5,
+      40.43,
+      0.5,
+      "Muslims, Jews and Christians, every kind of people",
+      null,
+      {
+        "tilt": -4.25
+      }
+    ],
+    [
+      "local-afb768867f6d4ba7",
+      48,
+      54.73,
+      0.5,
+      "thesis: it is just on the media, it is the opposite",
+      null,
+      {
+        "tilt": -4.25
+      }
+    ],
+    [
+      "local-afb768867f6d4ba7",
+      66.52,
+      70.73,
+      0.5,
+      "hospitality: he wants to feed Tal",
+      null,
+      {
+        "tilt": -4.25
+      }
+    ],
+    [
+      "local-afb768867f6d4ba7",
+      73.18,
+      75.5,
+      0.5,
+      "Arab hospitality, of course",
+      null,
+      {
+        "tilt": -4.25
+      }
+    ],
+    [
+      "local-5e9f6f219042a379",
+      14.9,
+      20.98,
+      0.5,
+      "special for you at the oven (the transcript places \"Take a look\" ~0.6s late and the feta line ~1s late; the caption text is shifted onto the speech that is really there)",
+      null,
+      {
+        "tilt": 7.42,
+        "manual": true
+      }
+    ],
+    [
+      "local-5e9f6f219042a379",
+      56.09,
+      71.65,
+      0.3,
+      "he works on Eid so his staff can celebrate",
+      null,
+      {
+        "tilt": 7.42,
+        "manual": true
+      }
+    ],
+    [
+      "local-8adad22b40e744d2",
+      0.18,
+      8.1,
+      0.4,
+      "a Muslim manager, of course",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "local-b60896ceb0472d88",
+      3.76,
+      9.92,
+      0.5,
+      "payoff: gift because Tal said Eid Mubarak"
+    ],
+    [
+      "local-b60896ceb0472d88",
+      11.92,
+      19.2,
+      0.5,
+      "warm goodbye, Inshallah"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.28,
+      "to": 0.85,
+      "text": "You called me"
+    },
+    {
+      "beat": "01",
+      "at": 0.85,
+      "to": 1.23,
+      "text": "Eid Mubarak"
+    },
+    {
+      "beat": "01",
+      "at": 1.23,
+      "to": 2,
+      "text": "this is a small"
+    },
+    {
+      "beat": "01",
+      "at": 2,
+      "to": 2.57,
+      "text": "gift for you"
+    },
+    {
+      "beat": "02",
+      "at": 0.02,
+      "to": 0.36,
+      "text": "Nice to meet you"
+    },
+    {
+      "beat": "02",
+      "at": 0.36,
+      "to": 1.05,
+      "text": "What's your name"
+    },
+    {
+      "beat": "02",
+      "at": 1.43,
+      "to": 1.88,
+      "text": "Yusuf"
+    },
+    {
+      "beat": "02",
+      "at": 2.02,
+      "to": 3.37,
+      "text": "are you Muslim? Yes"
+    },
+    {
+      "beat": "02",
+      "at": 3.6,
+      "to": 3.91,
+      "text": "Nice to meet you"
+    },
+    {
+      "beat": "02",
+      "at": 3.91,
+      "to": 4.39,
+      "text": "I'm Jewish"
+    },
+    {
+      "beat": "02",
+      "at": 4.39,
+      "to": 4.87,
+      "text": "and I"
+    },
+    {
+      "beat": "02",
+      "at": 4.87,
+      "to": 5.35,
+      "text": "wanted just"
+    },
+    {
+      "beat": "02",
+      "at": 5.35,
+      "to": 6.07,
+      "text": "to tell you"
+    },
+    {
+      "beat": "02",
+      "at": 6.07,
+      "to": 6.55,
+      "text": "Eid Mubarak"
+    },
+    {
+      "beat": "02",
+      "at": 6.96,
+      "to": 7.24,
+      "text": "Oh"
+    },
+    {
+      "beat": "02",
+      "at": 7.24,
+      "to": 7.8,
+      "text": "thank you"
+    },
+    {
+      "beat": "02",
+      "at": 7.9,
+      "to": 8.63,
+      "text": "I appreciate it"
+    },
+    {
+      "beat": "03",
+      "at": 0.04,
+      "to": 0.84,
+      "text": "Even though you're Muslim"
+    },
+    {
+      "beat": "03",
+      "at": 0.84,
+      "to": 1.43,
+      "text": "you have friends"
+    },
+    {
+      "beat": "03",
+      "at": 1.43,
+      "to": 1.87,
+      "text": "that are Jewish"
+    },
+    {
+      "beat": "03",
+      "at": 1.87,
+      "to": 2.65,
+      "text": "A lot of friends"
+    },
+    {
+      "beat": "03",
+      "at": 3.07,
+      "to": 3.27,
+      "text": "Really"
+    },
+    {
+      "beat": "03",
+      "at": 3.27,
+      "to": 3.58,
+      "text": "Yeah"
+    },
+    {
+      "beat": "03",
+      "at": 3.58,
+      "to": 4.2,
+      "text": "of course"
+    },
+    {
+      "beat": "04",
+      "at": 0.17,
+      "to": 0.62,
+      "text": "You find"
+    },
+    {
+      "beat": "04",
+      "at": 0.83,
+      "to": 1.67,
+      "text": "Muslims and Jews"
+    },
+    {
+      "beat": "04",
+      "at": 1.67,
+      "to": 2.07,
+      "text": "and Christians"
+    },
+    {
+      "beat": "04",
+      "at": 2.07,
+      "to": 3.73,
+      "text": "every kind of people"
+    },
+    {
+      "beat": "05",
+      "at": 0.1,
+      "to": 0.54,
+      "text": "I know"
+    },
+    {
+      "beat": "05",
+      "at": 0.54,
+      "to": 1.2,
+      "text": "there's a lot"
+    },
+    {
+      "beat": "05",
+      "at": 1.2,
+      "to": 1.86,
+      "text": "of hate online"
+    },
+    {
+      "beat": "05",
+      "at": 1.86,
+      "to": 2.53,
+      "text": "between these people"
+    },
+    {
+      "beat": "05",
+      "at": 2.53,
+      "to": 2.97,
+      "text": "but we're"
+    },
+    {
+      "beat": "05",
+      "at": 2.97,
+      "to": 3.41,
+      "text": "more similar"
+    },
+    {
+      "beat": "05",
+      "at": 3.41,
+      "to": 3.86,
+      "text": "than different"
+    },
+    {
+      "beat": "05",
+      "at": 5.45,
+      "to": 5.9,
+      "text": "It's the opposite"
+    },
+    {
+      "beat": "06",
+      "at": 0.17,
+      "to": 0.64,
+      "text": "You want"
+    },
+    {
+      "beat": "06",
+      "at": 0.64,
+      "to": 1.35,
+      "text": "to eat something"
+    },
+    {
+      "beat": "06",
+      "at": 1.47,
+      "to": 1.68,
+      "text": "No"
+    },
+    {
+      "beat": "06",
+      "at": 1.68,
+      "to": 2.3,
+      "text": "I don't want"
+    },
+    {
+      "beat": "06",
+      "at": 2.44,
+      "to": 2.88,
+      "text": "I just"
+    },
+    {
+      "beat": "06",
+      "at": 2.88,
+      "to": 3.53,
+      "text": "came to say"
+    },
+    {
+      "beat": "06",
+      "at": 3.53,
+      "to": 3.98,
+      "text": "Eid Mubarak"
+    },
+    {
+      "beat": "07",
+      "at": 0.1,
+      "to": 0.58,
+      "text": "Is this"
+    },
+    {
+      "beat": "07",
+      "at": 0.58,
+      "to": 1.31,
+      "text": "the Arab hospitality"
+    },
+    {
+      "beat": "07",
+      "at": 1.66,
+      "to": 2.23,
+      "text": "Yeah of course"
+    },
+    {
+      "beat": "08",
+      "at": 0.01,
+      "to": 0.71,
+      "text": "This is feta cheese"
+    },
+    {
+      "beat": "08",
+      "at": 0.71,
+      "to": 1.16,
+      "text": "with olives"
+    },
+    {
+      "beat": "08",
+      "at": 2.99,
+      "to": 3.47,
+      "text": "This is special"
+    },
+    {
+      "beat": "08",
+      "at": 3.47,
+      "to": 3.92,
+      "text": "for you"
+    },
+    {
+      "beat": "08",
+      "at": 4.44,
+      "to": 4.65,
+      "text": "Wow"
+    },
+    {
+      "beat": "08",
+      "at": 4.65,
+      "to": 5.52,
+      "text": "thank you so much"
+    },
+    {
+      "beat": "09",
+      "at": 0,
+      "to": 0.37,
+      "text": "Are you"
+    },
+    {
+      "beat": "09",
+      "at": 0.37,
+      "to": 0.93,
+      "text": "celebrating in Eid"
+    },
+    {
+      "beat": "09",
+      "at": 2.48,
+      "to": 3.16,
+      "text": "I am working"
+    },
+    {
+      "beat": "09",
+      "at": 3.73,
+      "to": 4.43,
+      "text": "Next week"
+    },
+    {
+      "beat": "09",
+      "at": 4.43,
+      "to": 5.26,
+      "text": "I will celebrate"
+    },
+    {
+      "beat": "09",
+      "at": 5.51,
+      "to": 5.96,
+      "text": "Really? Yeah"
+    },
+    {
+      "beat": "09",
+      "at": 5.96,
+      "to": 6.7,
+      "text": "With your family"
+    },
+    {
+      "beat": "09",
+      "at": 6.7,
+      "to": 7.1,
+      "text": "Yeah"
+    },
+    {
+      "beat": "09",
+      "at": 7.1,
+      "to": 7.88,
+      "text": "because I"
+    },
+    {
+      "beat": "09",
+      "at": 7.88,
+      "to": 9.06,
+      "text": "let my other"
+    },
+    {
+      "beat": "09",
+      "at": 9.06,
+      "to": 9.85,
+      "text": "people celebrate"
+    },
+    {
+      "beat": "09",
+      "at": 10.21,
+      "to": 10.72,
+      "text": "You let your other"
+    },
+    {
+      "beat": "09",
+      "at": 10.72,
+      "to": 11.24,
+      "text": "staff celebrate"
+    },
+    {
+      "beat": "09",
+      "at": 11.24,
+      "to": 11.76,
+      "text": "and you"
+    },
+    {
+      "beat": "09",
+      "at": 11.76,
+      "to": 12.54,
+      "text": "decided to work"
+    },
+    {
+      "beat": "09",
+      "at": 13.59,
+      "to": 14.04,
+      "text": "Yeah"
+    },
+    {
+      "beat": "09",
+      "at": 14.34,
+      "to": 15.37,
+      "text": "that so much"
+    },
+    {
+      "beat": "10",
+      "at": 0.15,
+      "to": 0.73,
+      "text": "Wait so you're"
+    },
+    {
+      "beat": "10",
+      "at": 0.73,
+      "to": 1.12,
+      "text": "a manager"
+    },
+    {
+      "beat": "10",
+      "at": 1.12,
+      "to": 1.7,
+      "text": "of this branch"
+    },
+    {
+      "beat": "10",
+      "at": 1.7,
+      "to": 2.28,
+      "text": "here in Israel"
+    },
+    {
+      "beat": "10",
+      "at": 2.97,
+      "to": 3.57,
+      "text": "Yes this place"
+    },
+    {
+      "beat": "10",
+      "at": 4.09,
+      "to": 4.54,
+      "text": "But even"
+    },
+    {
+      "beat": "10",
+      "at": 4.55,
+      "to": 5.07,
+      "text": "though you're Muslim"
+    },
+    {
+      "beat": "10",
+      "at": 5.07,
+      "to": 5.41,
+      "text": "you can"
+    },
+    {
+      "beat": "10",
+      "at": 5.41,
+      "to": 6.05,
+      "text": "be a manager"
+    },
+    {
+      "beat": "10",
+      "at": 7.17,
+      "to": 7.62,
+      "text": "Of course"
+    },
+    {
+      "beat": "11",
+      "at": 0.1,
+      "to": 0.55,
+      "text": "Welcome"
+    },
+    {
+      "beat": "11",
+      "at": 1,
+      "to": 1.7,
+      "text": "gift for you"
+    },
+    {
+      "beat": "11",
+      "at": 2.01,
+      "to": 2.7,
+      "text": "Gift? Yes Why"
+    },
+    {
+      "beat": "11",
+      "at": 3.71,
+      "to": 4.31,
+      "text": "You called me"
+    },
+    {
+      "beat": "11",
+      "at": 4.31,
+      "to": 4.71,
+      "text": "Eid Mubarak"
+    },
+    {
+      "beat": "11",
+      "at": 4.71,
+      "to": 5.5,
+      "text": "this is a small"
+    },
+    {
+      "beat": "11",
+      "at": 5.5,
+      "to": 6.1,
+      "text": "gift for you"
+    },
+    {
+      "beat": "12",
+      "at": 0.15,
+      "to": 0.6,
+      "text": "That's for you"
+    },
+    {
+      "beat": "12",
+      "at": 0.73,
+      "to": 1.43,
+      "text": "Bro you're the best"
+    },
+    {
+      "beat": "12",
+      "at": 1.82,
+      "to": 2.1,
+      "text": "Thank you"
+    },
+    {
+      "beat": "12",
+      "at": 2.1,
+      "to": 2.92,
+      "text": "Good to see you"
+    },
+    {
+      "beat": "12",
+      "at": 3.43,
+      "to": 3.9,
+      "text": "I hope"
+    },
+    {
+      "beat": "12",
+      "at": 3.9,
+      "to": 4.36,
+      "text": "to see"
+    },
+    {
+      "beat": "12",
+      "at": 4.68,
+      "to": 5.24,
+      "text": "you again"
+    },
+    {
+      "beat": "12",
+      "at": 6.03,
+      "to": 7.08,
+      "text": "Inshallah"
+    }
+  ]
+}

@@ -1,0 +1,443 @@
+{
+  "built": "2026-09-29T05:15:13.029Z",
+  "total_s": 44.71,
+  "out": "NEPAL_HINDU_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: MEETING HINDUS\nFROM NEPAL IN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-2aec9a483cd18613",
+      13.25,
+      24.14,
+      0.5,
+      "where are you from? Nepal / four years in Israel / just a wonderful place",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-2aec9a483cd18613",
+      35.88,
+      38.86,
+      0.5,
+      "his own verdict: a very happy place and very secure",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-2aec9a483cd18613",
+      80.16,
+      86.08,
+      0.5,
+      "in Nepal do people like Israel? yeah, of course (Tal echoes it back)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-2aec9a483cd18613",
+      91.24,
+      99.18,
+      0.5,
+      "are you Jewish? we are not Jewish, we are Hindu / safe to be Hindu? very, very safe",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-2aec9a483cd18613",
+      149.42,
+      150.57,
+      0.5,
+      "Tal: so you are welcome in Israel",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-2aec9a483cd18613",
+      150.57,
+      157.2,
+      0.5,
+      "thank you / this is your home - his friend answers with a namaste - we feel very happy",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-2aec9a483cd18613",
+      168.07,
+      175,
+      0.5,
+      "favorite part? the people are very friendly",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-2aec9a483cd18613",
+      176.69,
+      178.96,
+      0.5,
+      "ending: they respect each other (Tal echoes it). Jump cut deliberately skips \"They do not dominate\" - uncertain word, see notes",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "to": 0.72,
+      "text": "Where are you guys from"
+    },
+    {
+      "beat": "01",
+      "at": 1.06,
+      "to": 1.64,
+      "text": "I'm from Nepal"
+    },
+    {
+      "beat": "01",
+      "at": 1.64,
+      "to": 2.37,
+      "text": "You're from Nepal"
+    },
+    {
+      "beat": "01",
+      "at": 2.37,
+      "to": 3.23,
+      "text": "Nice to meet you"
+    },
+    {
+      "beat": "01",
+      "at": 3.97,
+      "to": 4.32,
+      "text": "How long"
+    },
+    {
+      "beat": "01",
+      "at": 4.32,
+      "to": 4.85,
+      "text": "have you guys"
+    },
+    {
+      "beat": "01",
+      "at": 4.85,
+      "to": 5.56,
+      "text": "been in Israel for"
+    },
+    {
+      "beat": "01",
+      "at": 5.8,
+      "to": 6.18,
+      "text": "I've been here"
+    },
+    {
+      "beat": "01",
+      "at": 6.18,
+      "to": 6.63,
+      "text": "about four years"
+    },
+    {
+      "beat": "01",
+      "at": 6.84,
+      "to": 7.59,
+      "text": "You've been in Israel"
+    },
+    {
+      "beat": "01",
+      "at": 7.59,
+      "to": 7.96,
+      "text": "FOR FOUR YEARS"
+    },
+    {
+      "beat": "01",
+      "at": 7.96,
+      "to": 8.27,
+      "text": "And what"
+    },
+    {
+      "beat": "01",
+      "at": 8.27,
+      "to": 8.75,
+      "text": "do you think"
+    },
+    {
+      "beat": "01",
+      "at": 9.32,
+      "to": 10.77,
+      "text": "Just a wonderful place"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "to": 0.99,
+      "text": "It's a very happy"
+    },
+    {
+      "beat": "02",
+      "at": 1.22,
+      "to": 2.78,
+      "text": "place and very secure"
+    },
+    {
+      "beat": "03",
+      "at": 0.04,
+      "to": 0.44,
+      "text": "In Nepal"
+    },
+    {
+      "beat": "03",
+      "at": 0.44,
+      "to": 1.03,
+      "text": "do a lot"
+    },
+    {
+      "beat": "03",
+      "at": 1.03,
+      "to": 1.43,
+      "text": "of people"
+    },
+    {
+      "beat": "03",
+      "at": 1.43,
+      "to": 1.88,
+      "text": "like Israel"
+    },
+    {
+      "beat": "03",
+      "at": 2.84,
+      "to": 3.37,
+      "text": "Yeah of course"
+    },
+    {
+      "beat": "03",
+      "at": 3.62,
+      "to": 4.24,
+      "text": "In Nepal"
+    },
+    {
+      "beat": "03",
+      "at": 4.24,
+      "to": 4.76,
+      "text": "people like Israel"
+    },
+    {
+      "beat": "03",
+      "at": 4.76,
+      "to": 5.14,
+      "text": "Yeah"
+    },
+    {
+      "beat": "03",
+      "at": 5.14,
+      "to": 5.92,
+      "text": "of course"
+    },
+    {
+      "beat": "04",
+      "at": 0.07,
+      "to": 0.74,
+      "text": "And are you Jewish"
+    },
+    {
+      "beat": "04",
+      "at": 1.53,
+      "to": 2.06,
+      "text": "We are not Jewish"
+    },
+    {
+      "beat": "04",
+      "at": 2.3,
+      "to": 2.89,
+      "text": "we are Hindu"
+    },
+    {
+      "beat": "04",
+      "at": 2.89,
+      "to": 3.84,
+      "text": "You are Hindus"
+    },
+    {
+      "beat": "04",
+      "at": 4.06,
+      "to": 4.87,
+      "text": "And in Israel"
+    },
+    {
+      "beat": "04",
+      "at": 4.87,
+      "to": 5.68,
+      "text": "you feel safe"
+    },
+    {
+      "beat": "04",
+      "at": 5.68,
+      "to": 6.17,
+      "text": "to be Hindu"
+    },
+    {
+      "beat": "04",
+      "at": 6.17,
+      "to": 6.64,
+      "text": "Very"
+    },
+    {
+      "beat": "04",
+      "at": 6.64,
+      "to": 7.09,
+      "text": "very safe"
+    },
+    {
+      "beat": "05",
+      "at": 0.08,
+      "to": 0.74,
+      "text": "So you are welcome"
+    },
+    {
+      "beat": "05",
+      "at": 0.74,
+      "to": 1.15,
+      "text": "in Israel"
+    },
+    {
+      "beat": "06",
+      "at": 0.33,
+      "to": 0.75,
+      "text": "Thank you"
+    },
+    {
+      "beat": "06",
+      "at": 0.88,
+      "to": 1.78,
+      "text": "It's so nice"
+    },
+    {
+      "beat": "06",
+      "at": 1.78,
+      "to": 2.16,
+      "text": "That's nice"
+    },
+    {
+      "beat": "06",
+      "at": 2.16,
+      "to": 2.74,
+      "text": "to meet you"
+    },
+    {
+      "beat": "06",
+      "at": 3.11,
+      "to": 3.78,
+      "text": "This is your home"
+    },
+    {
+      "beat": "06",
+      "at": 4.39,
+      "to": 5.07,
+      "text": "We feel very happy"
+    },
+    {
+      "beat": "06",
+      "at": 5.38,
+      "to": 6.35,
+      "text": "You feel super happy"
+    },
+    {
+      "beat": "07",
+      "at": 0.08,
+      "to": 0.42,
+      "text": "What is"
+    },
+    {
+      "beat": "07",
+      "at": 0.42,
+      "to": 0.93,
+      "text": "your favorite part"
+    },
+    {
+      "beat": "07",
+      "at": 1.24,
+      "to": 1.56,
+      "text": "Well"
+    },
+    {
+      "beat": "07",
+      "at": 1.56,
+      "to": 2.2,
+      "text": "everything is"
+    },
+    {
+      "beat": "07",
+      "at": 2.2,
+      "to": 2.83,
+      "text": "you know"
+    },
+    {
+      "beat": "07",
+      "at": 2.84,
+      "to": 4.16,
+      "text": "the favorite part"
+    },
+    {
+      "beat": "07",
+      "at": 4.16,
+      "to": 5.49,
+      "text": "is very friendly"
+    },
+    {
+      "beat": "07",
+      "at": 5.49,
+      "to": 6.69,
+      "text": "People are very friendly"
+    },
+    {
+      "beat": "08",
+      "at": 0,
+      "to": 1.02,
+      "text": "They respect each other"
+    }
+  ]
+}

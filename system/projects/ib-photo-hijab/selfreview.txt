@@ -1,0 +1,58 @@
+
+SELF-REVIEW  PHOTO_HIJAB_V1.mp4  20.9s
+
+1. CONTACT SHEET -> projects\ib-photo-hijab\_review\SHEET.jpg   (LOOK AT IT — framing, decapitation, overlapping text)
+
+2. CAPTIONS — read every line. If a line does not make sense, it is wrong.
+
+     0.0s  local-521e3956dfface5a  Salam alaikum. Do you want me to take a picture of you guys?
+     3.5s  local-521e3956dfface5a  I know how to take a picture.
+     4.8s  local-521e3956dfface5a  In portrait mode or normal?
+     6.8s  local-521e3956dfface5a  This one is good? Yes, yes.
+     8.1s  local-521e3956dfface5a  Do you speak Hebrew? No, I'm from America. Welcome.
+    11.1s  local-521e3956dfface5a  We are all one. I'm Jewish, you're Muslim, we are one. Exactly. Inshallah, no war.
+    16.5s  local-521e3956dfface5a  We need to be friends together.
+    18.8s  local-521e3956dfface5a  Thank you so much. Shabbat Shalom.
+
+   24 captions, 0 flagged as possible ASR errors.
+
+2b. RENDERED CAPTIONS (24) — exactly what is on screen, in order:
+
+   01   0.17-0.79   Salam alaikum
+   01   1.41-1.82   Do you want
+   01   1.82-2.51   me to take a picture
+   01   2.51-2.96   of you guys
+   02   0.00-0.33   I know
+   02   0.33-0.81   how to take
+   02   0.81-1.26   a picture
+   03   0.00-0.58   In portrait
+   03   0.58-1.44   mode or normal
+   04   0.14-0.77   This one is good
+   04   0.77-1.22   Yes yes  <-- CHECK
+   05   0.32-0.77   Do you speak Hebrew
+   05   1.38-1.91   I'm from America
+   05   2.70-2.99   Welcome
+   06   0.08-0.70   We are all one
+   06   1.00-1.51   I'm Jewish
+   06   1.51-2.03   you're Muslim
+   06   2.03-2.76   we are one
+   06   3.46-3.75   Exactly
+   06   3.75-4.20   Inshallah no war
+   07   0.00-0.56   We need
+   07   0.56-1.01   to be friends together
+   08   0.13-0.77   Thank you so much
+   08   1.01-1.67   Shabbat Shalom
+
+   24 rendered captions, 1 flagged.
+
+3. BOUNDARY + AUDIO VERIFICATION
+  01  local-521e3956dfface5a 1.38->4.84  clean
+  02  local-521e3956dfface5a 12.42->13.79  clean
+  03  local-521e3956dfface5a 22.41->24.34  clean
+  04  local-521e3956dfface5a 27.84->29.2  clean
+  05  local-521e3956dfface5a 62.76->65.75  clean
+  06  local-521e3956dfface5a 80.74->86.09  clean
+  07  local-521e3956dfface5a 87.52->89.82  clean
+  08  local-521e3956dfface5a 93.64->95.74  clean
+
+DO NOT SEND until the contact sheet has been LOOKED AT and every flagged caption resolved.

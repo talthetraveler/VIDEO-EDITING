@@ -1,0 +1,7 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-morocco-safe/beats_4529731/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-morocco-safe/beats_4529731/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-morocco-safe/beats_4529731/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-morocco-safe/beats_4529731/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-morocco-safe/beats_4529731/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-morocco-safe/beats_4529731/06.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-morocco-safe/beats_4529731/07.mp4'

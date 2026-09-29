@@ -1,0 +1,425 @@
+{
+  "built": "2026-09-29T04:19:07.486Z",
+  "total_s": 48.14,
+  "out": "IB_ANGOLA_PRIDE_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: HE CAME FROM ANGOLA\nTO CELEBRATE PRIDE IN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-1dedde3e70ecdbc0",
+      4.21,
+      16.37,
+      0.5,
+      "Are you from Israel? No, I am from Angola...",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-1dedde3e70ecdbc0",
+      16.48,
+      27.45,
+      0.5,
+      "In Angola we don't have a gay pride and it's a very big opportunity to celebrate our life, our r",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-1dedde3e70ecdbc0",
+      47.93,
+      56.24,
+      0.5,
+      "I'm feel safe to be gay here than in Angola. Really? You feel safer to be gay in Israel than you",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-1dedde3e70ecdbc0",
+      84.13,
+      87.86,
+      0.5,
+      "And in Israel, as a black gay man, do you feel safe? Yes.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-1dedde3e70ecdbc0",
+      108.55,
+      112.19,
+      0.5,
+      "and what's your favorite part about Israel? oh my god.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-1dedde3e70ecdbc0",
+      116.09,
+      125.42,
+      0.5,
+      "in the same place where was the drag show and the lesbian show. Yeah. And you see that here in I",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.1,
+      "to": 0.8,
+      "text": "Are you from Israel"
+    },
+    {
+      "beat": "01",
+      "at": 1.28,
+      "to": 1.55,
+      "text": "No"
+    },
+    {
+      "beat": "01",
+      "at": 1.55,
+      "to": 2.36,
+      "text": "I'm from Angola"
+    },
+    {
+      "beat": "01",
+      "at": 2.36,
+      "to": 2.95,
+      "text": "You're from Angola? Yeah"
+    },
+    {
+      "beat": "01",
+      "at": 3.66,
+      "to": 4.28,
+      "text": "And what are you"
+    },
+    {
+      "beat": "01",
+      "at": 4.28,
+      "to": 4.72,
+      "text": "doing in Israel"
+    },
+    {
+      "beat": "01",
+      "at": 4.72,
+      "to": 5.44,
+      "text": "I'm just"
+    },
+    {
+      "beat": "01",
+      "at": 5.44,
+      "to": 6.52,
+      "text": "coming to celebrate"
+    },
+    {
+      "beat": "01",
+      "at": 6.52,
+      "to": 7.24,
+      "text": "a pride"
+    },
+    {
+      "beat": "01",
+      "at": 7.24,
+      "to": 7.96,
+      "text": "and enjoy"
+    },
+    {
+      "beat": "01",
+      "at": 7.96,
+      "to": 8.56,
+      "text": "this week especially"
+    },
+    {
+      "beat": "01",
+      "at": 8.56,
+      "to": 9.16,
+      "text": "Wait you came to Israel"
+    },
+    {
+      "beat": "01",
+      "at": 9.47,
+      "to": 9.84,
+      "text": "to celebrate"
+    },
+    {
+      "beat": "01",
+      "at": 9.84,
+      "to": 10.55,
+      "text": "gay pride"
+    },
+    {
+      "beat": "01",
+      "at": 10.64,
+      "to": 11.52,
+      "text": "Of course"
+    },
+    {
+      "beat": "01",
+      "at": 11.52,
+      "to": 11.97,
+      "text": "honey"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "to": 0.67,
+      "text": "In Angola"
+    },
+    {
+      "beat": "02",
+      "at": 0.67,
+      "to": 1.35,
+      "text": "we don't"
+    },
+    {
+      "beat": "02",
+      "at": 1.35,
+      "to": 2.26,
+      "text": "have a gay"
+    },
+    {
+      "beat": "02",
+      "at": 2.62,
+      "to": 3.2,
+      "text": "pride and it's"
+    },
+    {
+      "beat": "02",
+      "at": 3.64,
+      "to": 4.65,
+      "text": "a very big"
+    },
+    {
+      "beat": "02",
+      "at": 4.65,
+      "to": 5.66,
+      "text": "opportunity to celebrate"
+    },
+    {
+      "beat": "02",
+      "at": 5.66,
+      "to": 6.17,
+      "text": "our life"
+    },
+    {
+      "beat": "02",
+      "at": 7.58,
+      "to": 8.24,
+      "text": "our rules"
+    },
+    {
+      "beat": "02",
+      "at": 8.24,
+      "to": 8.6,
+      "text": "and to feel"
+    },
+    {
+      "beat": "02",
+      "at": 8.6,
+      "to": 9.47,
+      "text": "safe in Israel"
+    },
+    {
+      "beat": "03",
+      "at": 0.07,
+      "to": 1.05,
+      "text": "I feel safe"
+    },
+    {
+      "beat": "03",
+      "at": 1.05,
+      "to": 2.03,
+      "text": "to be gay"
+    },
+    {
+      "beat": "03",
+      "at": 2.03,
+      "to": 2.48,
+      "text": "here than"
+    },
+    {
+      "beat": "03",
+      "at": 2.55,
+      "to": 3.2,
+      "text": "in Angola"
+    },
+    {
+      "beat": "03",
+      "at": 3.2,
+      "to": 3.65,
+      "text": "Really"
+    },
+    {
+      "beat": "03",
+      "at": 4.43,
+      "to": 5.15,
+      "text": "You feel safer"
+    },
+    {
+      "beat": "03",
+      "at": 5.15,
+      "to": 5.86,
+      "text": "to be gay"
+    },
+    {
+      "beat": "03",
+      "at": 5.86,
+      "to": 6.34,
+      "text": "in Israel"
+    },
+    {
+      "beat": "03",
+      "at": 6.6,
+      "to": 7.61,
+      "text": "feel in Africa"
+    },
+    {
+      "beat": "03",
+      "at": 7.61,
+      "to": 8.29,
+      "text": "Of course"
+    },
+    {
+      "beat": "04",
+      "at": 0.08,
+      "to": 0.81,
+      "text": "And in Israel"
+    },
+    {
+      "beat": "04",
+      "at": 0.81,
+      "to": 1.51,
+      "text": "as a black"
+    },
+    {
+      "beat": "04",
+      "at": 1.75,
+      "to": 2.23,
+      "text": "gay man"
+    },
+    {
+      "beat": "04",
+      "at": 2.23,
+      "to": 2.8,
+      "text": "do you feel safe? Yes"
+    },
+    {
+      "beat": "05",
+      "at": 0.09,
+      "to": 0.53,
+      "text": "And what's"
+    },
+    {
+      "beat": "05",
+      "at": 0.53,
+      "to": 0.98,
+      "text": "your favorite"
+    },
+    {
+      "beat": "05",
+      "at": 0.98,
+      "to": 1.64,
+      "text": "part about Israel"
+    },
+    {
+      "beat": "05",
+      "at": 2.34,
+      "to": 3.13,
+      "text": "Oh my god"
+    },
+    {
+      "beat": "06",
+      "at": 0,
+      "to": 1.07,
+      "text": "in the same"
+    },
+    {
+      "beat": "06",
+      "at": 1.07,
+      "to": 1.35,
+      "text": "place where"
+    },
+    {
+      "beat": "06",
+      "at": 1.35,
+      "to": 2.78,
+      "text": "was the drag show"
+    },
+    {
+      "beat": "06",
+      "at": 2.78,
+      "to": 3.23,
+      "text": "and the lesbian show Yeah"
+    },
+    {
+      "beat": "06",
+      "at": 6.14,
+      "to": 6.66,
+      "text": "And you"
+    },
+    {
+      "beat": "06",
+      "at": 6.66,
+      "to": 7.44,
+      "text": "see that here"
+    },
+    {
+      "beat": "06",
+      "at": 7.44,
+      "to": 7.96,
+      "text": "in Israel"
+    },
+    {
+      "beat": "06",
+      "at": 8.24,
+      "to": 8.96,
+      "text": "drag shows"
+    }
+  ]
+}

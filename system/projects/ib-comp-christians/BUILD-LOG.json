@@ -1,0 +1,269 @@
+{
+  "built": "2026-09-29T05:15:56.845Z",
+  "total_s": 32.31,
+  "out": "COMP_CHRISTIANS_V1_r3.mp4",
+  "layout": "vertical",
+  "title": "ASKING CHRISTIANS\nWHAT IT'S LIKE IN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-a70544be30412e67",
+      26.8,
+      29.41,
+      0.5,
+      "S43-b hook: Christian Arab police officer at an Old City gate. There are Christian police officers in Israel? Too many."
+    ],
+    [
+      "local-f244078c370969e5",
+      21.86,
+      27.39,
+      0.5,
+      "S42-d Indonesian Christian tourist at the Western Wall: as a Christian you feel safe? Yes, we feel safe.",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "local-36b4941563f873db",
+      51.58,
+      58.55,
+      0.5,
+      "S30-a STRONGEST: Cesar, Arab Christian on the Tel Aviv beach: you can be free, Arab, Christian... you can be everything"
+    ],
+    [
+      "local-8051d05511c72acd",
+      28.08,
+      32.31,
+      0.5,
+      "S29-b Arab Christians from Nazareth on the beach: friends that are Jewish? A lot. Muslim? Yes.",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-475be8d9efdda3ac",
+      17.98,
+      22.58,
+      0.5,
+      "S43-e Irish Christian tourist: I am Christian; do you feel safe? Very, yeah.",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-fc498d78875075f1",
+      125.23,
+      133.6,
+      0.5,
+      "S36-a END: Elias's restaurant (same man as S29-d): we have Muslims, we have Jewish... we work together, we love each other, we respect each other"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.13,
+      "to": 0.66,
+      "text": "There are Christian"
+    },
+    {
+      "beat": "01",
+      "at": 0.66,
+      "to": 1.37,
+      "text": "police officers in Israel"
+    },
+    {
+      "beat": "01",
+      "at": 1.37,
+      "to": 1.82,
+      "text": "Too many"
+    },
+    {
+      "beat": "02",
+      "at": 0.09,
+      "to": 0.81,
+      "text": "And you're a Christian? Yes"
+    },
+    {
+      "beat": "02",
+      "at": 1.64,
+      "to": 2.31,
+      "text": "And in Israel"
+    },
+    {
+      "beat": "02",
+      "at": 2.31,
+      "to": 2.98,
+      "text": "as a Christian"
+    },
+    {
+      "beat": "02",
+      "at": 2.98,
+      "to": 3.43,
+      "text": "you feel safe"
+    },
+    {
+      "beat": "02",
+      "at": 3.97,
+      "to": 4.42,
+      "text": "Yes we feel safe"
+    },
+    {
+      "beat": "03",
+      "at": 0.02,
+      "to": 1.16,
+      "text": "You can be free"
+    },
+    {
+      "beat": "03",
+      "at": 1.16,
+      "to": 2.29,
+      "text": "you can be Arab"
+    },
+    {
+      "beat": "03",
+      "at": 2.29,
+      "to": 2.74,
+      "text": "Christian"
+    },
+    {
+      "beat": "03",
+      "at": 2.78,
+      "to": 3.92,
+      "text": "you can be gay"
+    },
+    {
+      "beat": "03",
+      "at": 3.92,
+      "to": 4.77,
+      "text": "if you want"
+    },
+    {
+      "beat": "03",
+      "at": 4.77,
+      "to": 5.22,
+      "text": "straight"
+    },
+    {
+      "beat": "03",
+      "at": 5.61,
+      "to": 6.61,
+      "text": "You can be everything"
+    },
+    {
+      "beat": "04",
+      "at": 0.06,
+      "to": 0.64,
+      "text": "do you have friends"
+    },
+    {
+      "beat": "04",
+      "at": 0.64,
+      "to": 1.09,
+      "text": "that are Jewish"
+    },
+    {
+      "beat": "04",
+      "at": 1.43,
+      "to": 1.88,
+      "text": "Yeah a lot of them"
+    },
+    {
+      "beat": "04",
+      "at": 2.35,
+      "to": 2.85,
+      "text": "You have friends"
+    },
+    {
+      "beat": "04",
+      "at": 2.85,
+      "to": 3.34,
+      "text": "that are Muslim"
+    },
+    {
+      "beat": "04",
+      "at": 3.77,
+      "to": 4.22,
+      "text": "Yes"
+    },
+    {
+      "beat": "05",
+      "at": 0,
+      "to": 0.63,
+      "text": "Are you Christian"
+    },
+    {
+      "beat": "05",
+      "at": 0.89,
+      "to": 1.35,
+      "text": "I am Christian"
+    },
+    {
+      "beat": "05",
+      "at": 1.35,
+      "to": 1.95,
+      "text": "And in Israel"
+    },
+    {
+      "beat": "05",
+      "at": 1.95,
+      "to": 2.56,
+      "text": "as a Christian"
+    },
+    {
+      "beat": "05",
+      "at": 2.56,
+      "to": 3.36,
+      "text": "do you feel safe"
+    },
+    {
+      "beat": "05",
+      "at": 3.36,
+      "to": 3.81,
+      "text": "Very yeah"
+    },
+    {
+      "beat": "06",
+      "at": 0,
+      "to": 0.79,
+      "text": "We have Muslims"
+    },
+    {
+      "beat": "06",
+      "at": 0.79,
+      "to": 1.58,
+      "text": "we have Jewish"
+    },
+    {
+      "beat": "06",
+      "at": 2.03,
+      "to": 2.99,
+      "text": "You're working here"
+    },
+    {
+      "beat": "06",
+      "at": 2.99,
+      "to": 3.69,
+      "text": "YEAH, OF COURSE"
+    },
+    {
+      "beat": "06",
+      "at": 5.53,
+      "to": 6.59,
+      "text": "We work together"
+    },
+    {
+      "beat": "06",
+      "at": 6.83,
+      "to": 7.42,
+      "text": "We love each other"
+    },
+    {
+      "beat": "06",
+      "at": 7.42,
+      "to": 8.01,
+      "text": "we respect each other"
+    }
+  ]
+}

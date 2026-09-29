@@ -1,0 +1,406 @@
+{
+  "built": "2026-09-29T05:00:54.633Z",
+  "total_s": 34.01,
+  "out": "JERUSALEM_SEAFRONT_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: ASKING A MUSLIM WOMAN\nIF SHE CAN LIVE IN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-908972066238e4f0",
+      15.49,
+      21.27,
+      0.5,
+      "Tal: online they told me there are no Muslims, and I see so many",
+      null,
+      {
+        "tilt": 7.97,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-908972066238e4f0",
+      21.27,
+      22.8,
+      0.5,
+      "her identity in her own words: no, we are Muslims here",
+      null,
+      {
+        "tilt": 7.97,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-908972066238e4f0",
+      22.87,
+      26.9,
+      0.5,
+      "Tal: in Israel you can be Muslim? / yeah / really?",
+      null,
+      {
+        "tilt": 7.97
+      }
+    ],
+    [
+      "local-908972066238e4f0",
+      26.9,
+      29.25,
+      0.5,
+      "her invitation: come to Jerusalem, you will see the Muslims",
+      null,
+      {
+        "tilt": 7.97
+      }
+    ],
+    [
+      "local-908972066238e4f0",
+      49.73,
+      53.86,
+      0.5,
+      "Tal: they told me it is scary for Muslims to live here",
+      null,
+      {
+        "tilt": 7.97
+      }
+    ],
+    [
+      "local-908972066238e4f0",
+      53.86,
+      54.5,
+      0.5,
+      "no, no (first word is loud, likely Tal) - split so her line gets its caption",
+      null,
+      {
+        "tilt": 7.97
+      }
+    ],
+    [
+      "local-908972066238e4f0",
+      54.5,
+      55.66,
+      0.5,
+      "her answer, the hook: we live here",
+      null,
+      {
+        "tilt": 7.97
+      }
+    ],
+    [
+      "local-908972066238e4f0",
+      55.66,
+      56.72,
+      0.5,
+      "Tal: you live here freely?",
+      null,
+      {
+        "tilt": 7.97
+      }
+    ],
+    [
+      "local-908972066238e4f0",
+      56.72,
+      58.25,
+      0.5,
+      "her: yeah, yeah. I am from Jerusalem",
+      null,
+      {
+        "tilt": 7.97
+      }
+    ],
+    [
+      "local-908972066238e4f0",
+      64.74,
+      68.16,
+      0.5,
+      "Tal: online the media says the opposite",
+      null,
+      {
+        "tilt": 7.97
+      }
+    ],
+    [
+      "local-908972066238e4f0",
+      68.16,
+      76.54,
+      0.5,
+      "her best line: places with only Jews, only Muslims, and both - like Jaffa here, you see both",
+      null,
+      {
+        "tilt": 7.97
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.06,
+      "to": 0.51,
+      "text": "I'm so curious"
+    },
+    {
+      "beat": "01",
+      "at": 0.51,
+      "to": 0.91,
+      "text": "because online"
+    },
+    {
+      "beat": "01",
+      "at": 0.91,
+      "to": 1.31,
+      "text": "on Instagram"
+    },
+    {
+      "beat": "01",
+      "at": 1.31,
+      "to": 1.72,
+      "text": "they told"
+    },
+    {
+      "beat": "01",
+      "at": 1.72,
+      "to": 2.32,
+      "text": "me that there"
+    },
+    {
+      "beat": "01",
+      "at": 2.32,
+      "to": 2.72,
+      "text": "are no"
+    },
+    {
+      "beat": "01",
+      "at": 2.72,
+      "to": 3.32,
+      "text": "Muslims so I"
+    },
+    {
+      "beat": "01",
+      "at": 3.32,
+      "to": 3.72,
+      "text": "came here"
+    },
+    {
+      "beat": "01",
+      "at": 3.72,
+      "to": 4.17,
+      "text": "and I see"
+    },
+    {
+      "beat": "01",
+      "at": 4.54,
+      "to": 5.78,
+      "text": "so many Muslims"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "to": 0.45,
+      "text": "No we"
+    },
+    {
+      "beat": "02",
+      "at": 0.63,
+      "to": 1.21,
+      "text": "are Muslims here"
+    },
+    {
+      "beat": "03",
+      "at": 0.08,
+      "to": 0.79,
+      "text": "And in Israel"
+    },
+    {
+      "beat": "03",
+      "at": 0.79,
+      "to": 1.74,
+      "text": "you can be Muslim"
+    },
+    {
+      "beat": "03",
+      "at": 1.74,
+      "to": 2.19,
+      "text": "Yeah"
+    },
+    {
+      "beat": "03",
+      "at": 2.58,
+      "to": 3.03,
+      "text": "Really"
+    },
+    {
+      "beat": "03",
+      "at": 3.23,
+      "to": 3.9,
+      "text": "I didn't know that"
+    },
+    {
+      "beat": "04",
+      "at": 0.18,
+      "to": 0.7,
+      "text": "You can come"
+    },
+    {
+      "beat": "04",
+      "at": 0.7,
+      "to": 1.05,
+      "text": "to Jerusalem"
+    },
+    {
+      "beat": "04",
+      "at": 1.05,
+      "to": 1.58,
+      "text": "you will see"
+    },
+    {
+      "beat": "04",
+      "at": 1.58,
+      "to": 2.03,
+      "text": "the Muslims"
+    },
+    {
+      "beat": "05",
+      "at": 0.09,
+      "to": 0.57,
+      "text": "When I came"
+    },
+    {
+      "beat": "05",
+      "at": 0.57,
+      "to": 1.05,
+      "text": "here they told"
+    },
+    {
+      "beat": "05",
+      "at": 1.05,
+      "to": 1.5,
+      "text": "me that it's"
+    },
+    {
+      "beat": "05",
+      "at": 1.95,
+      "to": 2.43,
+      "text": "scary for Muslims"
+    },
+    {
+      "beat": "05",
+      "at": 2.43,
+      "to": 2.91,
+      "text": "to live here"
+    },
+    {
+      "beat": "05",
+      "at": 2.91,
+      "to": 3.56,
+      "text": "and then I see"
+    },
+    {
+      "beat": "05",
+      "at": 3.56,
+      "to": 4.13,
+      "text": "them walking around"
+    },
+    {
+      "beat": "06",
+      "at": 0,
+      "to": 0.45,
+      "text": "No no"
+    },
+    {
+      "beat": "07",
+      "at": 0.04,
+      "to": 0.88,
+      "text": "We live here"
+    },
+    {
+      "beat": "08",
+      "at": 0.02,
+      "to": 0.47,
+      "text": "You live here freely"
+    },
+    {
+      "beat": "09",
+      "at": 0.28,
+      "to": 1.33,
+      "text": "I'm from Jerusalem"
+    },
+    {
+      "beat": "10",
+      "at": 0.04,
+      "to": 0.49,
+      "text": "I see"
+    },
+    {
+      "beat": "10",
+      "at": 0.55,
+      "to": 1.28,
+      "text": "online a lot"
+    },
+    {
+      "beat": "10",
+      "at": 1.28,
+      "to": 1.76,
+      "text": "of media"
+    },
+    {
+      "beat": "10",
+      "at": 1.76,
+      "to": 2.21,
+      "text": "saying the opposite"
+    },
+    {
+      "beat": "11",
+      "at": 0,
+      "to": 0.52,
+      "text": "Actually"
+    },
+    {
+      "beat": "11",
+      "at": 0.86,
+      "to": 1.72,
+      "text": "there are many"
+    },
+    {
+      "beat": "11",
+      "at": 1.72,
+      "to": 2.58,
+      "text": "places that you"
+    },
+    {
+      "beat": "11",
+      "at": 2.58,
+      "to": 3.15,
+      "text": "see only"
+    },
+    {
+      "beat": "11",
+      "at": 3.15,
+      "to": 3.6,
+      "text": "Jews and only"
+    },
+    {
+      "beat": "11",
+      "at": 3.77,
+      "to": 5.11,
+      "text": "Muslims and both"
+    },
+    {
+      "beat": "11",
+      "at": 5.55,
+      "to": 7.14,
+      "text": "So like Jaffa here"
+    },
+    {
+      "beat": "11",
+      "at": 7.14,
+      "to": 8.33,
+      "text": "you see both"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+ "beats": [
+  [
+   "local-244b88e3cb81a5e8",
+   2.21,
+   14.94,
+   0,
+   "למה אמרת כן? למה לא? הולה, האמת היא אני לא חשבתי שאני אקבל טרמפ לתל אביב, כל אחד אמר לי לא ואת א",
+   null,
+   {
+    "exact": true,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-1f93a550cc64cd11",
+   4.76,
+   10.04,
+   0.5,
+   "Sorry, are you going to Tel Aviv? No, I take the bus"
+  ],
+  [
+   "local-940bf8e6e8406904",
+   5.76,
+   7.78,
+   0.5,
+   "אין סיכוי"
+  ],
+  [
+   "local-cff7cabea57921a3",
+   14.2,
+   21.44,
+   0.5,
+   "Sorry, they're going to Tel Aviv? I am. Really? Can I get a seat? Yalla. Easy. Let's go."
+  ],
+  [
+   "local-cff7cabea57921a3",
+   28.74,
+   31.59,
+   0.3,
+   "I have 10 people, all of them didn't go to Tel Aviv.",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-002e67eae052c5dc",
+   38.44,
+   40.57,
+   0,
+   "What's your favorite part about living in Israel?",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-002e67eae052c5dc",
+   45.9,
+   47.31,
+   0,
+   "I like everything.",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-baaf56b4a3276cda",
+   0.26,
+   18.46,
+   0,
+   "וואלה, איזה מטורף זה. את מורידה אותי ממש פה וכאילו אני גר פשוט פה. כן. אתה רואה מה קורה שפשוט מב",
+   null,
+   {
+    "tilt": -5.4,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-baaf56b4a3276cda",
+   19.46,
+   26.98,
+   0,
+   "Hebrew lesson",
+   null,
+   {
+    "tilt": -5.4,
+    "exact": true,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-baaf56b4a3276cda",
+   27.04,
+   28,
+   0,
+   "No, in law.",
+   null,
+   {
+    "tilt": -5.4,
+    "exact": true,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-aa17f91fa3595799",
+   2.77,
+   3.58,
+   0,
+   "That's it, it was fun.",
+   null,
+   {
+    "exact": true,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-aa17f91fa3595799",
+   3.58,
+   9.91,
+   0,
+   "goodbye",
+   null,
+   {
+    "exact": true,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ]
+ ],
+ "title": "POV: EVERYONE SAID NO\nUNTIL SHE SAID YES 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "IB_HITCHHIKE_V1.mp4"
+}

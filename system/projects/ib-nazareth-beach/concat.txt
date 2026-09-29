@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-nazareth-beach/beats_4046786/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-nazareth-beach/beats_4046786/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-nazareth-beach/beats_4046786/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-nazareth-beach/beats_4046786/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-nazareth-beach/beats_4046786/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-nazareth-beach/beats_4046786/06.mp4'

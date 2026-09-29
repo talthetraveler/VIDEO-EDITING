@@ -1,0 +1,219 @@
+{
+  "built": "2026-09-29T03:51:44.223Z",
+  "total_s": 20.86,
+  "out": "PHOTO_HIJAB_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: I OFFERED TO TAKE\nTHEIR PHOTO IN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-521e3956dfface5a",
+      1.38,
+      4.84,
+      0.5,
+      "approach: Salam alaikum - do you want me to take a picture of you guys?"
+    ],
+    [
+      "local-521e3956dfface5a",
+      12.42,
+      13.79,
+      0.5,
+      "reassurance: I know how to take a picture"
+    ],
+    [
+      "local-521e3956dfface5a",
+      22.41,
+      24.34,
+      0.5,
+      "taking it: portrait mode or normal?"
+    ],
+    [
+      "local-521e3956dfface5a",
+      27.84,
+      29.2,
+      0.25,
+      "her approval: this one is good? yes, yes (manual full-height frame: auto-crop cut her face; out before Tal's Okay)",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "local-521e3956dfface5a",
+      62.76,
+      65.75,
+      0.25,
+      "she tries Hebrew; he is from America; she says Welcome (manual full-height frame: auto-crop cut her face)",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "local-521e3956dfface5a",
+      80.74,
+      86.09,
+      0.5,
+      "unity: I am Jewish, you are Muslim, we are one - exactly. Inshallah, no war"
+    ],
+    [
+      "local-521e3956dfface5a",
+      87.52,
+      89.82,
+      0.5,
+      "we need to be friends together"
+    ],
+    [
+      "local-521e3956dfface5a",
+      93.64,
+      95.74,
+      0.5,
+      "goodbye: thank you so much, Shabbat Shalom"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.17,
+      "to": 0.79,
+      "text": "Salam alaikum"
+    },
+    {
+      "beat": "01",
+      "at": 1.41,
+      "to": 1.82,
+      "text": "Do you want"
+    },
+    {
+      "beat": "01",
+      "at": 1.82,
+      "to": 2.51,
+      "text": "me to take a picture"
+    },
+    {
+      "beat": "01",
+      "at": 2.51,
+      "to": 2.96,
+      "text": "of you guys"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "to": 0.33,
+      "text": "I know"
+    },
+    {
+      "beat": "02",
+      "at": 0.33,
+      "to": 0.81,
+      "text": "how to take"
+    },
+    {
+      "beat": "02",
+      "at": 0.81,
+      "to": 1.26,
+      "text": "a picture"
+    },
+    {
+      "beat": "03",
+      "at": 0,
+      "to": 0.58,
+      "text": "In portrait"
+    },
+    {
+      "beat": "03",
+      "at": 0.58,
+      "to": 1.44,
+      "text": "mode or normal"
+    },
+    {
+      "beat": "04",
+      "at": 0.14,
+      "to": 0.77,
+      "text": "This one is good"
+    },
+    {
+      "beat": "04",
+      "at": 0.77,
+      "to": 1.22,
+      "text": "Yes yes"
+    },
+    {
+      "beat": "05",
+      "at": 0.32,
+      "to": 0.77,
+      "text": "Do you speak Hebrew"
+    },
+    {
+      "beat": "05",
+      "at": 1.38,
+      "to": 1.91,
+      "text": "I'm from America"
+    },
+    {
+      "beat": "05",
+      "at": 2.7,
+      "to": 2.99,
+      "text": "Welcome"
+    },
+    {
+      "beat": "06",
+      "at": 0.08,
+      "to": 0.7,
+      "text": "We are all one"
+    },
+    {
+      "beat": "06",
+      "at": 1,
+      "to": 1.51,
+      "text": "I'm Jewish"
+    },
+    {
+      "beat": "06",
+      "at": 1.51,
+      "to": 2.03,
+      "text": "you're Muslim"
+    },
+    {
+      "beat": "06",
+      "at": 2.03,
+      "to": 2.76,
+      "text": "we are one"
+    },
+    {
+      "beat": "06",
+      "at": 3.46,
+      "to": 3.75,
+      "text": "Exactly"
+    },
+    {
+      "beat": "06",
+      "at": 3.75,
+      "to": 4.2,
+      "text": "Inshallah no war"
+    },
+    {
+      "beat": "07",
+      "at": 0,
+      "to": 0.56,
+      "text": "We need"
+    },
+    {
+      "beat": "07",
+      "at": 0.56,
+      "to": 1.01,
+      "text": "to be friends together"
+    },
+    {
+      "beat": "08",
+      "at": 0.13,
+      "to": 0.77,
+      "text": "Thank you so much"
+    },
+    {
+      "beat": "08",
+      "at": 1.01,
+      "to": 1.67,
+      "text": "Shabbat Shalom"
+    }
+  ]
+}

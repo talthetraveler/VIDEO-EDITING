@@ -1,0 +1,98 @@
+{
+ "beats": [
+  [
+   "local-fc498d78875075f1",
+   72.09,
+   78.36,
+   0.5,
+   "Look all around the world you can see people like this people like this We respect everybody we ",
+   null,
+   {
+    "tilt": 4.98,
+    "exact": true
+   }
+  ],
+  [
+   "local-fc498d78875075f1",
+   88.17,
+   92.28,
+   0.5,
+   "We are human, we need to respect each other, live together, love each other. We",
+   null,
+   {
+    "tilt": 4.98,
+    "exact": true
+   }
+  ],
+  [
+   "local-fc498d78875075f1",
+   99.63,
+   103.83,
+   0.5,
+   "You can see here in the place. People here are sitting. We need to be together.",
+   null,
+   {
+    "tilt": 4.98
+   }
+  ],
+  [
+   "local-fc498d78875075f1",
+   113.19,
+   117.94,
+   0.5,
+   "What's your name? Roger. Roger. You're also Christian? Yeah.",
+   null,
+   {
+    "tilt": 4.98,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-fc498d78875075f1",
+   118.27,
+   127.28,
+   0.5,
+   "Wait, so everyone that works here is Christian? No, I have also Muslim. He's Muslim. You're Musl",
+   null,
+   {
+    "tilt": 4.98,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-fc498d78875075f1",
+   127.21,
+   133.6,
+   0.5,
+   "You're working here? Yeah, of course. Wow. We work together. Really? We love each other, we resp",
+   null,
+   {
+    "tilt": 4.98,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ]
+ ],
+ "title": "POV: A CHRISTIAN RESTAURANT\nWITH MUSLIM AND JEWISH STAFF 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "IB_RESTAURANT_V1.mp4"
+}

@@ -1,0 +1,298 @@
+{
+  "built": "2026-09-29T03:45:47.556Z",
+  "total_s": 32.25,
+  "out": "IB_BUSDRIVER_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: I THOUGHT MY BUS DRIVER\nWAS MUSLIM 🇮🇱",
+  "beats": [
+    [
+      "local-5b5dcefe59123e4f",
+      4.54,
+      11.1,
+      0.5,
+      "I just landed in Israel. It's my first time and I'm so surprised to see Muslims in Israel. She's",
+      null,
+      {
+        "tilt": 2.52
+      }
+    ],
+    [
+      "local-5b5dcefe59123e4f",
+      11.06,
+      13.66,
+      0.5,
+      "No, I'm not. But welcome to Israel. I'm a Jew.",
+      null,
+      {
+        "tilt": 2.52
+      }
+    ],
+    [
+      "local-5b5dcefe59123e4f",
+      13.88,
+      21.04,
+      0.5,
+      "Really? What is this? I'm a... like a... You're a religious Jew? Yeah.",
+      null,
+      {
+        "tilt": 2.52
+      }
+    ],
+    [
+      "local-5b5dcefe59123e4f",
+      25.98,
+      28.78,
+      0.5,
+      "It's very similar to the hijab of a Muslim, no? Yeah, I know.",
+      null,
+      {
+        "tilt": 2.52
+      }
+    ],
+    [
+      "local-5b5dcefe59123e4f",
+      30.36,
+      35.63,
+      0.5,
+      "But I think it's the same. To cover up. Yeah, the same. Wow, so interesting.",
+      null,
+      {
+        "tilt": 2.52
+      }
+    ],
+    [
+      "local-5b5dcefe59123e4f",
+      41.08,
+      44.17,
+      0.5,
+      "And you were born and you raised your whole life in Israel? Yes.",
+      null,
+      {
+        "tilt": 2.52
+      }
+    ],
+    [
+      "local-5b5dcefe59123e4f",
+      46.35,
+      50.65,
+      0.5,
+      "You're a Jewish? Yeah, I'm Jewish. Yeah. Yeah, of course.",
+      null,
+      {
+        "tilt": 2.52
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.13,
+      "to": 0.57,
+      "text": "I just"
+    },
+    {
+      "beat": "01",
+      "at": 0.57,
+      "to": 0.98,
+      "text": "landed in Israel"
+    },
+    {
+      "beat": "01",
+      "at": 0.98,
+      "to": 1.43,
+      "text": "It's my first"
+    },
+    {
+      "beat": "01",
+      "at": 1.49,
+      "to": 2.21,
+      "text": "time and I'm"
+    },
+    {
+      "beat": "01",
+      "at": 2.21,
+      "to": 2.69,
+      "text": "so surprised"
+    },
+    {
+      "beat": "01",
+      "at": 2.69,
+      "to": 3.17,
+      "text": "to see"
+    },
+    {
+      "beat": "01",
+      "at": 3.17,
+      "to": 4.34,
+      "text": "Muslims in Israel"
+    },
+    {
+      "beat": "01",
+      "at": 4.77,
+      "to": 5.5,
+      "text": "She's not a Muslim"
+    },
+    {
+      "beat": "01",
+      "at": 5.5,
+      "to": 6.08,
+      "text": "it's not"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "to": 0.43,
+      "text": "No I'm not"
+    },
+    {
+      "beat": "02",
+      "at": 0.43,
+      "to": 0.89,
+      "text": "But welcome to Israel"
+    },
+    {
+      "beat": "02",
+      "at": 1.48,
+      "to": 2.37,
+      "text": "I'm a Jew"
+    },
+    {
+      "beat": "03",
+      "at": 0.09,
+      "to": 0.54,
+      "text": "Really"
+    },
+    {
+      "beat": "03",
+      "at": 1.05,
+      "to": 1.8,
+      "text": "What is this"
+    },
+    {
+      "beat": "03",
+      "at": 3.8,
+      "to": 4.25,
+      "text": "I'M A... LIKE A..."
+    },
+    {
+      "beat": "03",
+      "at": 5.4,
+      "to": 6.12,
+      "text": "You're a religious Jew"
+    },
+    {
+      "beat": "03",
+      "at": 6.12,
+      "to": 6.57,
+      "text": "Yeah Wow"
+    },
+    {
+      "beat": "04",
+      "at": 0,
+      "to": 0.68,
+      "text": "It's very similar"
+    },
+    {
+      "beat": "04",
+      "at": 0.68,
+      "to": 1.35,
+      "text": "to the hijab"
+    },
+    {
+      "beat": "04",
+      "at": 1.35,
+      "to": 1.77,
+      "text": "of a Muslim no"
+    },
+    {
+      "beat": "04",
+      "at": 1.77,
+      "to": 2.25,
+      "text": "Yeah I know"
+    },
+    {
+      "beat": "05",
+      "at": 0.42,
+      "to": 0.87,
+      "text": "But I think it's the same"
+    },
+    {
+      "beat": "05",
+      "at": 1.77,
+      "to": 2.62,
+      "text": "To cover up"
+    },
+    {
+      "beat": "05",
+      "at": 3.17,
+      "to": 3.62,
+      "text": "Yeah the same"
+    },
+    {
+      "beat": "05",
+      "at": 3.87,
+      "to": 4.32,
+      "text": "Wow"
+    },
+    {
+      "beat": "05",
+      "at": 4.32,
+      "to": 5.21,
+      "text": "so interesting"
+    },
+    {
+      "beat": "06",
+      "at": 0.08,
+      "to": 0.44,
+      "text": "And you"
+    },
+    {
+      "beat": "06",
+      "at": 0.44,
+      "to": 0.81,
+      "text": "were born"
+    },
+    {
+      "beat": "06",
+      "at": 0.81,
+      "to": 1.17,
+      "text": "and raised"
+    },
+    {
+      "beat": "06",
+      "at": 1.17,
+      "to": 1.53,
+      "text": "your whole"
+    },
+    {
+      "beat": "06",
+      "at": 1.53,
+      "to": 2.08,
+      "text": "life in Israel"
+    },
+    {
+      "beat": "06",
+      "at": 2.53,
+      "to": 2.98,
+      "text": "Yes"
+    },
+    {
+      "beat": "07",
+      "at": 0.67,
+      "to": 1.05,
+      "text": "Yeah"
+    },
+    {
+      "beat": "07",
+      "at": 1.05,
+      "to": 1.66,
+      "text": "I'm Jewish Yeah"
+    },
+    {
+      "beat": "07",
+      "at": 2.6,
+      "to": 3.2,
+      "text": "of course"
+    }
+  ]
+}

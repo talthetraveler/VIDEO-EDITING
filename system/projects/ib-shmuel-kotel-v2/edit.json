@@ -1,0 +1,138 @@
+{
+ "beats": [
+  [
+   "local-b70d911b995a74a4",
+   73.96,
+   76.98,
+   0.5,
+   "HOOK flash-forward: there is no such thing as a stranger, because we are really all part of one family (taken from 4230, not 4236: a same-clip hook placed before an earlier moment of that clip makes build-edit drop the next beat)",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-5582ec9160ac3584",
+   3.6,
+   15.03,
+   0.5,
+   "approach at the Western Wall: made Aliyah last week, from Kentucky",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-5582ec9160ac3584",
+   15.03,
+   22.59,
+   0.5,
+   "why he moved: to be a part of Am Yisrael, this is home (split from the approach so his quiet answer gets captioned)",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-5582ec9160ac3584",
+   27.88,
+   37.85,
+   0.5,
+   "favourite part: right here, the most holy place for the entire world (in-point moved back to catch his \"Ah\")",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-5582ec9160ac3584",
+   43.96,
+   48.73,
+   0.5,
+   "Isaiah: a house of prayer for all nations",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-5582ec9160ac3584",
+   51.24,
+   53.95,
+   0.5,
+   "the question: as a Jewish person, you do not hate Muslims?",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-5582ec9160ac3584",
+   56.95,
+   59.45,
+   0.5,
+   "the answer: as a Jewish person, I love all people. Absolutely. (ends before the consent span 59.54-92.20)",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-1a6921931e148b87",
+   35.8,
+   38.58,
+   0.7,
+   "free for anyone",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-1a6921931e148b87",
+   49.99,
+   56.77,
+   0.5,
+   "Tal thanks him: welcome home (the stereotype joke before it is cut)"
+  ],
+  [
+   "local-b70d911b995a74a4",
+   72.04,
+   87.28,
+   0.5,
+   "mirror moment: no such thing as a stranger; that is exactly what I just did to you; I think that we are soul brothers here (ends before Tal's outro line, which the transcript is missing)"
+  ]
+ ],
+ "title": "POV: MEETING A JEWISH MAN\nIN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "SHMUEL_V2_r4.mp4",
+ "captionFix": [
+  {
+   "match": "I am recently.",
+   "to": "I am, recently."
+  },
+  {
+   "match": "I think that we are soul brothers here.",
+   "to": "I think that we are, soul brothers here."
+  },
+  {
+   "match": "I go up to strangers, quote unquote.",
+   "to": "I go up, to strangers, quote unquote."
+  },
+  {
+   "match": "I go up to people, I say,",
+   "to": "I go up, to people, I say,"
+  },
+  {
+   "match": "did to you, man.",
+   "to": "did to you."
+  },
+  {
+   "match": "I AM RECENTLY",
+   "exact": true,
+   "to": "I AM, RECENTLY"
+  }
+ ]
+}

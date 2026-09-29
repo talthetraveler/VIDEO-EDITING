@@ -1,0 +1,73 @@
+{
+ "beats": [
+  [
+   "local-521e3956dfface5a",
+   1.38,
+   4.84,
+   0.5,
+   "approach: Salam alaikum - do you want me to take a picture of you guys?"
+  ],
+  [
+   "local-521e3956dfface5a",
+   12.42,
+   13.79,
+   0.5,
+   "reassurance: I know how to take a picture"
+  ],
+  [
+   "local-521e3956dfface5a",
+   22.41,
+   24.34,
+   0.5,
+   "taking it: portrait mode or normal?"
+  ],
+  [
+   "local-521e3956dfface5a",
+   27.84,
+   29.2,
+   0.25,
+   "her approval: this one is good? yes, yes (manual full-height frame: auto-crop cut her face; out before Tal's Okay)",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-521e3956dfface5a",
+   62.76,
+   65.75,
+   0.25,
+   "she tries Hebrew; he is from America; she says Welcome (manual full-height frame: auto-crop cut her face)",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-521e3956dfface5a",
+   80.74,
+   86.09,
+   0.5,
+   "unity: I am Jewish, you are Muslim, we are one - exactly. Inshallah, no war"
+  ],
+  [
+   "local-521e3956dfface5a",
+   87.52,
+   89.82,
+   0.5,
+   "we need to be friends together"
+  ],
+  [
+   "local-521e3956dfface5a",
+   93.64,
+   95.74,
+   0.5,
+   "goodbye: thank you so much, Shabbat Shalom"
+  ]
+ ],
+ "title": "POV: I OFFERED TO TAKE\nTHEIR PHOTO IN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "PHOTO_HIJAB_V1.mp4"
+}

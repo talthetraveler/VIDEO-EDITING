@@ -1,0 +1,72 @@
+{
+ "beats": [
+  [
+   "local-2cd6d3f91d296699",
+   3.08,
+   5.11,
+   0.5,
+   "Where are you guys from? Morocco."
+  ],
+  [
+   "local-2cd6d3f91d296699",
+   8.57,
+   17.59,
+   0.5,
+   "Wow, welcome to Israel. How long have you been here for? We just arrived. Wow, welcome home. Tha",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-2cd6d3f91d296699",
+   23.13,
+   27.43,
+   0.5,
+   "And as a Muslim, do you feel safe in Israel? Yeah, definitely. Really? Of course."
+  ],
+  [
+   "local-2cd6d3f91d296699",
+   34.53,
+   36.35,
+   0.5,
+   "Really? Of course we are safe."
+  ],
+  [
+   "local-2cd6d3f91d296699",
+   46.66,
+   49.45,
+   0.5,
+   "There's good people everywhere. Yeah, there are good people everywhere.",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "local-2cd6d3f91d296699",
+   59.06,
+   67.45,
+   0.5,
+   "I'm Jewish, and I'm so happy to see Muslims visiting here. Yes. Because, you know, this is the h"
+  ],
+  [
+   "local-2cd6d3f91d296699",
+   73.63,
+   80.44,
+   0.5,
+   "we need to remember we're all human. Yeah, I agree. Inshallah. We are all human beings. We're al"
+  ]
+ ],
+ "title": "POV: ASKING A MUSLIM TOURIST\nIF SHE FEELS SAFE IN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "IB_MOROCCO_SAFE_V1.mp4"
+}

@@ -1,0 +1,7 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-busdriver/beats_2829437/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-busdriver/beats_2829437/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-busdriver/beats_2829437/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-busdriver/beats_2829437/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-busdriver/beats_2829437/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-busdriver/beats_2829437/06.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-busdriver/beats_2829437/07.mp4'

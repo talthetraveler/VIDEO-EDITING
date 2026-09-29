@@ -1,0 +1,402 @@
+{
+  "built": "2026-09-29T04:07:54.829Z",
+  "total_s": 63.73,
+  "out": "IB_IRAQI_ARABIC_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: I MET AN ISRAELI\nWHO SPEAKS ARABIC 🇮🇱",
+  "beats": [
+    [
+      "local-cbf49e5f0459868f",
+      4.27,
+      16.03,
+      0.5,
+      "Wa Alaikum Salaam. Where are you from? From Israel. Wait, you're from Israel and you speak Arabi"
+    ],
+    [
+      "local-2112710bce9e02e9",
+      6.44,
+      14.05,
+      0.5,
+      "And what's your favorite part about living here? The diversity. What do you mean? So many Jews f"
+    ],
+    [
+      "local-2112710bce9e02e9",
+      44.04,
+      55.87,
+      0.5,
+      "Tell me some countries that you've seen Jews coming from. There are Moroccans, there are Iraqis,"
+    ],
+    [
+      "local-2112710bce9e02e9",
+      55.82,
+      63.52,
+      0.5,
+      "And why do you love living in Israel? Diversity. Jerusalem so many religions so many languages."
+    ],
+    [
+      "local-2112710bce9e02e9",
+      63.45,
+      74.89,
+      0.5,
+      "In Israel do you see Christians Muslims and Jews living together? Yes. Really? There are in Haif"
+    ],
+    [
+      "local-2112710bce9e02e9",
+      90.32,
+      91.63,
+      0.5,
+      "Do you want war? No."
+    ],
+    [
+      "local-56b618cfbeebc887",
+      167.78,
+      180.39,
+      0.5,
+      "you know my age. I'm 53. I'm 20 years old. And I'm tired of those wars. I'm also tired of the wa"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.8,
+      "to": 1.21,
+      "text": "Wa Alaikum Salaam"
+    },
+    {
+      "beat": "01",
+      "at": 1.21,
+      "to": 1.76,
+      "text": "Where are you from"
+    },
+    {
+      "beat": "01",
+      "at": 2.77,
+      "to": 3.04,
+      "text": "Israel"
+    },
+    {
+      "beat": "01",
+      "at": 3.04,
+      "to": 3.83,
+      "text": "you're from Israel"
+    },
+    {
+      "beat": "01",
+      "at": 3.83,
+      "to": 4.36,
+      "text": "and you"
+    },
+    {
+      "beat": "01",
+      "at": 4.36,
+      "to": 4.88,
+      "text": "speak Arabic"
+    },
+    {
+      "beat": "01",
+      "at": 5.78,
+      "to": 6.3,
+      "text": "Yes I do Wow how"
+    },
+    {
+      "beat": "01",
+      "at": 7.4,
+      "to": 7.96,
+      "text": "Because I"
+    },
+    {
+      "beat": "01",
+      "at": 7.96,
+      "to": 8.41,
+      "text": "have Arabic origins"
+    },
+    {
+      "beat": "01",
+      "at": 9.83,
+      "to": 10.28,
+      "text": "My parents both of them"
+    },
+    {
+      "beat": "01",
+      "at": 10.44,
+      "to": 10.89,
+      "text": "are from Iraq"
+    },
+    {
+      "beat": "02",
+      "at": 0.03,
+      "to": 0.47,
+      "text": "And what's"
+    },
+    {
+      "beat": "02",
+      "at": 0.47,
+      "to": 1.12,
+      "text": "your favorite part"
+    },
+    {
+      "beat": "02",
+      "at": 1.12,
+      "to": 1.78,
+      "text": "about living here"
+    },
+    {
+      "beat": "02",
+      "at": 2.65,
+      "to": 3.22,
+      "text": "The diversity"
+    },
+    {
+      "beat": "02",
+      "at": 4.01,
+      "to": 4.52,
+      "text": "What do you mean"
+    },
+    {
+      "beat": "02",
+      "at": 5.17,
+      "to": 6.01,
+      "text": "So many Jews"
+    },
+    {
+      "beat": "02",
+      "at": 6.01,
+      "to": 7.12,
+      "text": "from so many countries"
+    },
+    {
+      "beat": "03",
+      "at": 0,
+      "to": 0.39,
+      "text": "Tell me"
+    },
+    {
+      "beat": "03",
+      "at": 0.39,
+      "to": 0.78,
+      "text": "some countries"
+    },
+    {
+      "beat": "03",
+      "at": 0.78,
+      "to": 1.37,
+      "text": "that you've seen"
+    },
+    {
+      "beat": "03",
+      "at": 1.37,
+      "to": 1.96,
+      "text": "Jews coming from"
+    },
+    {
+      "beat": "03",
+      "at": 2.65,
+      "to": 3.4,
+      "text": "There are Moroccans"
+    },
+    {
+      "beat": "03",
+      "at": 3.4,
+      "to": 4.07,
+      "text": "there are Iraqis there are Syrians"
+    },
+    {
+      "beat": "03",
+      "at": 4.55,
+      "to": 5.2,
+      "text": "a bit of Lebanese"
+    },
+    {
+      "beat": "03",
+      "at": 7.74,
+      "to": 8.86,
+      "text": "there are Egyptians"
+    },
+    {
+      "beat": "03",
+      "at": 9.78,
+      "to": 11.63,
+      "text": "there are Ethiopians"
+    },
+    {
+      "beat": "04",
+      "at": 0.07,
+      "to": 0.41,
+      "text": "And why"
+    },
+    {
+      "beat": "04",
+      "at": 0.41,
+      "to": 0.92,
+      "text": "do you love"
+    },
+    {
+      "beat": "04",
+      "at": 0.92,
+      "to": 1.43,
+      "text": "living in Israel"
+    },
+    {
+      "beat": "04",
+      "at": 1.8,
+      "to": 2.57,
+      "text": "Diversity"
+    },
+    {
+      "beat": "04",
+      "at": 4.39,
+      "to": 4.85,
+      "text": "Jerusalem"
+    },
+    {
+      "beat": "04",
+      "at": 4.85,
+      "to": 6.22,
+      "text": "so many religions"
+    },
+    {
+      "beat": "04",
+      "at": 6.22,
+      "to": 7.6,
+      "text": "so many languages"
+    },
+    {
+      "beat": "05",
+      "at": 0.01,
+      "to": 0.54,
+      "text": "In Israel"
+    },
+    {
+      "beat": "05",
+      "at": 0.54,
+      "to": 1.61,
+      "text": "do you see Christians"
+    },
+    {
+      "beat": "05",
+      "at": 1.61,
+      "to": 2.4,
+      "text": "Muslims and Jews"
+    },
+    {
+      "beat": "05",
+      "at": 2.4,
+      "to": 2.86,
+      "text": "living together"
+    },
+    {
+      "beat": "05",
+      "at": 3.35,
+      "to": 3.62,
+      "text": "Yes Really"
+    },
+    {
+      "beat": "05",
+      "at": 3.62,
+      "to": 4.17,
+      "text": "There are"
+    },
+    {
+      "beat": "05",
+      "at": 4.17,
+      "to": 4.73,
+      "text": "in Haifa"
+    },
+    {
+      "beat": "05",
+      "at": 4.73,
+      "to": 5.18,
+      "text": "which I know"
+    },
+    {
+      "beat": "05",
+      "at": 6.6,
+      "to": 7.31,
+      "text": "I tell you only"
+    },
+    {
+      "beat": "05",
+      "at": 7.31,
+      "to": 7.73,
+      "text": "about the things"
+    },
+    {
+      "beat": "05",
+      "at": 7.73,
+      "to": 8.41,
+      "text": "I know"
+    },
+    {
+      "beat": "05",
+      "at": 9.2,
+      "to": 10.2,
+      "text": "And Jaffa as well"
+    },
+    {
+      "beat": "05",
+      "at": 10.2,
+      "to": 10.64,
+      "text": "because I know"
+    },
+    {
+      "beat": "06",
+      "at": 0.16,
+      "to": 0.93,
+      "text": "Do you want war? No"
+    },
+    {
+      "beat": "07",
+      "at": 0.15,
+      "to": 0.84,
+      "text": "You know my age I'm 53"
+    },
+    {
+      "beat": "07",
+      "at": 2.46,
+      "to": 3.7,
+      "text": "I'm 20 years old"
+    },
+    {
+      "beat": "07",
+      "at": 4.59,
+      "to": 5.51,
+      "text": "And I'm tired"
+    },
+    {
+      "beat": "07",
+      "at": 5.51,
+      "to": 6.44,
+      "text": "of those wars"
+    },
+    {
+      "beat": "07",
+      "at": 7.17,
+      "to": 7.8,
+      "text": "I'm also tired"
+    },
+    {
+      "beat": "07",
+      "at": 7.96,
+      "to": 8.79,
+      "text": "I really want"
+    },
+    {
+      "beat": "07",
+      "at": 8.79,
+      "to": 9.63,
+      "text": "it to stop"
+    },
+    {
+      "beat": "07",
+      "at": 10.44,
+      "to": 11.02,
+      "text": "Me too"
+    },
+    {
+      "beat": "07",
+      "at": 11.29,
+      "to": 12.16,
+      "text": "Inshallah we can"
+    }
+  ]
+}

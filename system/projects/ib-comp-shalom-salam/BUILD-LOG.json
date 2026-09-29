@@ -1,0 +1,247 @@
+{
+  "built": "2026-09-29T04:05:46.386Z",
+  "total_s": 37.9,
+  "out": "COMP_SHALOM_SALAM_V1_r7.mp4",
+  "layout": "vertical",
+  "title": "SAYING SHABBAT SHALOM\nAND SALAM IN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-1be0e35cfcb66f50",
+      4.12,
+      6.13,
+      0.5,
+      "S18-e hook: worker in hi-vis answers Shabbat shalom with habibi, handshake, face close"
+    ],
+    [
+      "local-99db9ce89e3756de",
+      2.7,
+      4.66,
+      0.5,
+      "S29-g3517 young man, huge grin: yo, Shabbat shalom",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-13063148cd7ea65c",
+      15.92,
+      20.05,
+      0.5,
+      "S42-h STRONGEST: older man on the Temple Mount: thank you so much, we are brothers, Jewish and Muslim are brothers",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-abe69b69503b5224",
+      1.68,
+      4.97,
+      0.5,
+      "S29-g3467 white-haired woman: Shabbat shalom back, have an amazing day / well, you too (the warm laugh)",
+      null,
+      {
+        "exact": true,
+        "manual": true
+      }
+    ],
+    [
+      "local-769eddae1e8fec7e",
+      1.2,
+      4.95,
+      0.5,
+      "S41-a Haredi man at the Wall, seated, shakes hands: shalom, Shabbat shalom"
+    ],
+    [
+      "local-354a11aec52a43d4",
+      31.92,
+      34.8,
+      0.5,
+      "S19-a man celebrating Eid: Eid Mubarak and Shabbat shalom / Shabbat shalom, yes"
+    ],
+    [
+      "local-4e75f814244b5669",
+      1.5,
+      4,
+      0.5,
+      "S42-g elderly man in keffiyeh: Assalamu alaikum (only line captioned; MT after 4s is hallucinated)",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-4e75f814244b5669",
+      4,
+      7.2,
+      0.5,
+      "S42-g the handshake and his smile, no words captioned",
+      null,
+      {
+        "exact": true,
+        "nocap": true
+      }
+    ],
+    [
+      "local-18652d01dbb1c57a",
+      0.42,
+      3.29,
+      0.5,
+      "S29-g3342 man in a cap, face close: Shabbat shalom, have an amazing day"
+    ],
+    [
+      "local-721db28c13bb24da",
+      0.8,
+      4.55,
+      0.5,
+      "S29-g3427 woman in hijab waves and answers: salamu aleikum, Shabbat shalom / Shabbat shalom (UNCAPTIONED: the only translation is one 6s segment, which the builder can only place over the salam half)",
+      null,
+      {
+        "nocap": true
+      }
+    ],
+    [
+      "local-b2353016a2b010e1",
+      2.4,
+      4.73,
+      0.5,
+      "S18-f two men on a bench answer: Shabbat shalom my friend / Shabbat shalom brother, handshake"
+    ],
+    [
+      "local-e57b5322d5c9836c",
+      0.47,
+      5.7,
+      0.5,
+      "S29-g3437 END: a man runs in for a hug (camera sees the plaza during the hug), then his big smile close to camera"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.6,
+      "to": 1,
+      "text": "Habibi"
+    },
+    {
+      "beat": "01",
+      "at": 1,
+      "to": 1.81,
+      "text": "Shabbat shalom"
+    },
+    {
+      "beat": "02",
+      "at": 0.13,
+      "to": 0.5,
+      "text": "Yo"
+    },
+    {
+      "beat": "02",
+      "at": 0.5,
+      "to": 1.6,
+      "text": "SHABBAT SHALOM"
+    },
+    {
+      "beat": "03",
+      "at": 0.13,
+      "to": 0.54,
+      "text": "Thank you so much"
+    },
+    {
+      "beat": "03",
+      "at": 0.54,
+      "to": 1.31,
+      "text": "We are brothers"
+    },
+    {
+      "beat": "03",
+      "at": 2.2,
+      "to": 3.05,
+      "text": "Jewish and Muslim"
+    },
+    {
+      "beat": "03",
+      "at": 3.05,
+      "to": 3.62,
+      "text": "are brothers"
+    },
+    {
+      "beat": "04",
+      "at": 0.22,
+      "to": 0.75,
+      "text": "Shabbat Shalom"
+    },
+    {
+      "beat": "04",
+      "at": 1.43,
+      "to": 2.38,
+      "text": "Have an amazing day"
+    },
+    {
+      "beat": "04",
+      "at": 2.61,
+      "to": 3.25,
+      "text": "Well you too"
+    },
+    {
+      "beat": "05",
+      "at": 0.58,
+      "to": 1.19,
+      "text": "SHALOM, SHABBAT SHALOM"
+    },
+    {
+      "beat": "06",
+      "at": 0,
+      "to": 0.71,
+      "text": "Eid Mubarak"
+    },
+    {
+      "beat": "06",
+      "at": 0.71,
+      "to": 1.66,
+      "text": "AND SHABBAT SHALOM"
+    },
+    {
+      "beat": "07",
+      "at": 0.79,
+      "to": 1.63,
+      "text": "Assalamu Alaikum"
+    },
+    {
+      "beat": "09",
+      "at": 0,
+      "to": 0.76,
+      "text": "Shabbat Shalom"
+    },
+    {
+      "beat": "09",
+      "at": 1.66,
+      "to": 2.41,
+      "text": "Have an amazing day"
+    },
+    {
+      "beat": "11",
+      "at": 1.13,
+      "to": 1.8,
+      "text": "Shabbat Shalom"
+    },
+    {
+      "beat": "11",
+      "at": 1.8,
+      "to": 2.25,
+      "text": "brother"
+    },
+    {
+      "beat": "12",
+      "at": 0.02,
+      "to": 1.68,
+      "text": "Shabbat shalom"
+    },
+    {
+      "beat": "12",
+      "at": 3.32,
+      "to": 4.35,
+      "text": "GOOD TO SEE YOU TOO"
+    }
+  ]
+}

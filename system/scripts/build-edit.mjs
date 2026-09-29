@@ -24,7 +24,11 @@ const FFDIR = "C:/Users/taldo/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpe
 const FF = join(FFDIR, "ffmpeg.exe"), FP = join(FFDIR, "ffprobe.exe");
 import { placeInSpeech } from "./lib/caption-timing.mjs";
 import { captionLines } from "./lib/caption-lines.mjs";
-const RX_ESCAPE = new RegExp("[.*+?^${}()|\[\]\\]", "g");
+// A REGEX LITERAL, not new RegExp("..."): inside a string the backslashes were
+// eaten, the class closed early, and it only matched "<symbol>]" - so a
+// captionFix "match" containing ? or . ran as a pattern and misfired
+// (a blank caption in the Carlos cut, israel-batch 2026-09-29).
+const RX_ESCAPE = /[.*+?^${}()|[\]\\]/g;
 const ROOT = "C:/Users/taldo/Downloads/videos to edit/system";
 const DF = join(ROOT, "bin/deep-filter.exe");
 const PROXY = join(ROOT, "projects/_frameio/cache/proxies");
@@ -617,7 +621,9 @@ function captionOverlays(caps, tmpDir) {
     parts.push(`movie='${fp}'[cm${i}]`);
     const next = `[vc${i}]`;
     parts.push(`${prev}[cm${i}]overlay=x=(W-w)/2:y=${CAP_Y}-h/2:eval=init:` +
-      `enable='between(t\\,${c.a}\\,${c.b})'${next}`);
+      // half-open [a, b): between() includes BOTH ends, so where one caption
+      // ends on the exact frame the next begins, both drew for ~33ms.
+      `enable='gte(t\\,${c.a})*lt(t\\,${c.b})'${next}`);
     prev = next; used++;
   });
   if (!used) return { suffix: "", label: "[v]" };

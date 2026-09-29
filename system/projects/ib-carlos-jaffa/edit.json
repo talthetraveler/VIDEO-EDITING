@@ -1,0 +1,124 @@
+{
+ "title": "POV: I SAID SHABBAT SHALOM\nTO A MUSLIM IN TEL AVIV 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "CARLOS_JAFFA_V1.mp4",
+ "captionFix": [
+  {
+   "match": "like, uh, footballers",
+   "to": "like footballers"
+  },
+  {
+   "match": "Yaffa",
+   "to": "Jaffa"
+  },
+  {
+   "match": " Wow.",
+   "to": ""
+  },
+  {
+   "match": "I mean, like, why not?",
+   "to": null
+  },
+  {
+   "match": "Bro, when I",
+   "to": "When I"
+  },
+  {
+   "match": "Okay, there you go.",
+   "to": null
+  },
+  {
+   "match": "ciao amigo, bro.",
+   "to": "ciao amigo."
+  }
+ ],
+ "beats": [
+  [
+   "local-806e85fd67dcbc4b",
+   3.88,
+   5.95,
+   1,
+   "Tal says Shabbat Shalom to him as he walks up - the premise of the title",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-806e85fd67dcbc4b",
+   17.01,
+   21.5,
+   0.5,
+   "Tal: and you are Muslim? what is it like being a Muslim in Israel? / him: it is very beautiful"
+  ],
+  [
+   "local-806e85fd67dcbc4b",
+   103.1,
+   103.8,
+   0.5,
+   "he introduces himself (own sub-beat so his quiet voice gets a caption; continuous shot)"
+  ],
+  [
+   "local-806e85fd67dcbc4b",
+   103.8,
+   118.3,
+   0.5,
+   "the Spanish-name story: not an Arab name / my father liked footballers / I just have the name of a Spanish"
+  ],
+  [
+   "local-806e85fd67dcbc4b",
+   160.07,
+   167.07,
+   0.5,
+   "Tal: as a Muslim, same rights as a Jew? / him: of course, of course, yes we do"
+  ],
+  [
+   "local-b80d70cb2f2c1a37",
+   46.31,
+   50.38,
+   0.5,
+   "Tal (his own line, not Carlos): more peace, more salam and more shalom / Carlos: nice to meet you"
+  ],
+  [
+   "local-b80d70cb2f2c1a37",
+   76.95,
+   78.3,
+   0.5,
+   "Carlos: it is not about Palestine or Israel (own sub-beat so the line is readable)"
+  ],
+  [
+   "local-b80d70cb2f2c1a37",
+   78.3,
+   84.18,
+   0.5,
+   "Tal: it is about people, bro. the world is so divided, you either choose Palestine or Israel"
+  ],
+  [
+   "local-b80d70cb2f2c1a37",
+   84.18,
+   85.25,
+   0.5,
+   "Tal: why not choose just people? (own sub-beat so the line is not clipped)"
+  ],
+  [
+   "local-b80d70cb2f2c1a37",
+   85.25,
+   90.78,
+   0.5,
+   "Carlos: exactly, we are all human beings, why hate this guy and this guy, come on"
+  ],
+  [
+   "local-b80d70cb2f2c1a37",
+   102.96,
+   113.05,
+   0.5,
+   "ending: ciao amigo (calls back the Spanish name), five handshakes, hummus in Jaffa, both laughing"
+  ]
+ ]
+}

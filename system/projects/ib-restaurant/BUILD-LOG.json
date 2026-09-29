@@ -1,0 +1,292 @@
+{
+  "built": "2026-09-29T04:11:23.158Z",
+  "total_s": 34.66,
+  "out": "IB_RESTAURANT_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: A CHRISTIAN RESTAURANT\nWITH MUSLIM AND JEWISH STAFF 🇮🇱",
+  "beats": [
+    [
+      "local-fc498d78875075f1",
+      72.09,
+      78.36,
+      0.5,
+      "Look all around the world you can see people like this people like this We respect everybody we ",
+      null,
+      {
+        "tilt": 4.98,
+        "exact": true
+      }
+    ],
+    [
+      "local-fc498d78875075f1",
+      88.17,
+      92.28,
+      0.5,
+      "We are human, we need to respect each other, live together, love each other. We",
+      null,
+      {
+        "tilt": 4.98,
+        "exact": true
+      }
+    ],
+    [
+      "local-fc498d78875075f1",
+      99.63,
+      103.83,
+      0.5,
+      "You can see here in the place. People here are sitting. We need to be together.",
+      null,
+      {
+        "tilt": 4.98
+      }
+    ],
+    [
+      "local-fc498d78875075f1",
+      113.19,
+      117.94,
+      0.5,
+      "What's your name? Roger. Roger. You're also Christian? Yeah.",
+      null,
+      {
+        "tilt": 4.98,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-fc498d78875075f1",
+      118.27,
+      127.28,
+      0.5,
+      "Wait, so everyone that works here is Christian? No, I have also Muslim. He's Muslim. You're Musl",
+      null,
+      {
+        "tilt": 4.98,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-fc498d78875075f1",
+      127.21,
+      133.6,
+      0.5,
+      "You're working here? Yeah, of course. Wow. We work together. Really? We love each other, we resp",
+      null,
+      {
+        "tilt": 4.98,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.76,
+      "to": 1.48,
+      "text": "Look all around the world"
+    },
+    {
+      "beat": "01",
+      "at": 1.73,
+      "to": 2.43,
+      "text": "you can see"
+    },
+    {
+      "beat": "01",
+      "at": 2.43,
+      "to": 3.12,
+      "text": "people like this"
+    },
+    {
+      "beat": "01",
+      "at": 3.92,
+      "to": 4.62,
+      "text": "We respect everybody"
+    },
+    {
+      "beat": "01",
+      "at": 4.62,
+      "to": 6.16,
+      "text": "we live here together"
+    },
+    {
+      "beat": "02",
+      "at": 0.13,
+      "to": 0.76,
+      "text": "We are human"
+    },
+    {
+      "beat": "02",
+      "at": 0.76,
+      "to": 1.19,
+      "text": "we need"
+    },
+    {
+      "beat": "02",
+      "at": 1.19,
+      "to": 1.64,
+      "text": "to respect each other"
+    },
+    {
+      "beat": "02",
+      "at": 1.98,
+      "to": 2.64,
+      "text": "live together love each other"
+    },
+    {
+      "beat": "03",
+      "at": 0,
+      "to": 0.56,
+      "text": "You can see"
+    },
+    {
+      "beat": "03",
+      "at": 0.82,
+      "to": 1.51,
+      "text": "here in the place"
+    },
+    {
+      "beat": "03",
+      "at": 1.51,
+      "to": 2.54,
+      "text": "People here are sitting"
+    },
+    {
+      "beat": "03",
+      "at": 3.25,
+      "to": 3.55,
+      "text": "We need"
+    },
+    {
+      "beat": "03",
+      "at": 3.55,
+      "to": 4,
+      "text": "to be together"
+    },
+    {
+      "beat": "04",
+      "at": 0.01,
+      "to": 0.56,
+      "text": "What's your name"
+    },
+    {
+      "beat": "04",
+      "at": 1.43,
+      "to": 1.88,
+      "text": "Roger"
+    },
+    {
+      "beat": "04",
+      "at": 3.5,
+      "to": 4.42,
+      "text": "You're also Christian? Yeah"
+    },
+    {
+      "beat": "05",
+      "at": 0,
+      "to": 0.71,
+      "text": "Wait so everyone"
+    },
+    {
+      "beat": "05",
+      "at": 0.71,
+      "to": 1.19,
+      "text": "that works"
+    },
+    {
+      "beat": "05",
+      "at": 1.19,
+      "to": 1.81,
+      "text": "here is Christian"
+    },
+    {
+      "beat": "05",
+      "at": 1.81,
+      "to": 2.16,
+      "text": "No"
+    },
+    {
+      "beat": "05",
+      "at": 2.16,
+      "to": 3.28,
+      "text": "I have also Muslim"
+    },
+    {
+      "beat": "05",
+      "at": 3.56,
+      "to": 4.25,
+      "text": "He's Muslim"
+    },
+    {
+      "beat": "05",
+      "at": 4.25,
+      "to": 5.55,
+      "text": "You're Muslim? Yeah"
+    },
+    {
+      "beat": "05",
+      "at": 6.83,
+      "to": 7.47,
+      "text": "We have Muslims"
+    },
+    {
+      "beat": "05",
+      "at": 7.7,
+      "to": 8.54,
+      "text": "we have Jewish"
+    },
+    {
+      "beat": "06",
+      "at": 0,
+      "to": 0.94,
+      "text": "You're working here"
+    },
+    {
+      "beat": "06",
+      "at": 0.94,
+      "to": 1.64,
+      "text": "Yeah of course Wow"
+    },
+    {
+      "beat": "06",
+      "at": 3.48,
+      "to": 4.54,
+      "text": "We work together"
+    },
+    {
+      "beat": "06",
+      "at": 4.54,
+      "to": 4.78,
+      "text": "Really"
+    },
+    {
+      "beat": "06",
+      "at": 4.78,
+      "to": 5.37,
+      "text": "We love each other"
+    },
+    {
+      "beat": "06",
+      "at": 5.37,
+      "to": 5.96,
+      "text": "we respect each other"
+    }
+  ]
+}

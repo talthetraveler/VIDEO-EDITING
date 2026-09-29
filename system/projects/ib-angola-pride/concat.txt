@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-angola-pride/beats_4932553/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-angola-pride/beats_4932553/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-angola-pride/beats_4932553/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-angola-pride/beats_4932553/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-angola-pride/beats_4932553/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-angola-pride/beats_4932553/06.mp4'

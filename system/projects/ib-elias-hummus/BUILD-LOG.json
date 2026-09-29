@@ -1,0 +1,722 @@
+{
+  "built": "2026-09-29T04:49:19.394Z",
+  "total_s": 73.88,
+  "out": "ELIAS_HUMMUS_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: MEETING AN ARAB CHRISTIAN\nIN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-06b40a0b0e3b52a7",
+      7.73,
+      12.31,
+      0.5,
+      "open on his face: \"best hummus in Israel\" - \"this is the best place of hummus\"",
+      null
+    ],
+    [
+      "local-06b40a0b0e3b52a7",
+      12.24,
+      19.38,
+      0.5,
+      "identity reveal: are you Muslim? No, I am Christian",
+      null
+    ],
+    [
+      "local-06b40a0b0e3b52a7",
+      20.66,
+      30.55,
+      0.5,
+      "Arabic Christian that live here -> same rights, owns the business",
+      null
+    ],
+    [
+      "local-b9243dd9bee628ee",
+      15.14,
+      20.08,
+      0,
+      "name + legacy: 60 years, I am the third one, Elias (2nd take, only this line). Manual frame: auto-framer locked onto the worker in white",
+      null,
+      {
+        "manual": true
+      }
+    ],
+    [
+      "local-f42c8d058a6721fc",
+      0.18,
+      4.65,
+      0.5,
+      "food keeps coming - I only asked for hummus",
+      null
+    ],
+    [
+      "local-f42c8d058a6721fc",
+      9.03,
+      13.3,
+      0.5,
+      "Ayman: also Christian",
+      null
+    ],
+    [
+      "local-11791bbf5e80ce31",
+      0.2,
+      2.28,
+      0.5,
+      "so much food",
+      null
+    ],
+    [
+      "local-11791bbf5e80ce31",
+      5.78,
+      9.07,
+      0.5,
+      "hospitality: our responsibility, you came to our house",
+      null
+    ],
+    [
+      "local-d55a1f5089d2c823",
+      0.18,
+      5.33,
+      0.5,
+      "surprise fact: kosher AND halal",
+      null,
+      {
+        "tilt": 5.71
+      }
+    ],
+    [
+      "local-ae34022744dc9ca0",
+      1.23,
+      6.5,
+      0.5,
+      "PAYOFF a: I would like to pay, how much is it? - my friend, nothing",
+      null,
+      {
+        "tilt": -4.91
+      }
+    ],
+    [
+      "local-ae34022744dc9ca0",
+      6.5,
+      10.65,
+      0.5,
+      "PAYOFF b: what do you mean? - it is okay my friend - no you cannot, our house (one beat: the builder drops a segment from a beat holding <55% of it)",
+      null,
+      {
+        "tilt": -4.91
+      }
+    ],
+    [
+      "local-ae34022744dc9ca0",
+      38.3,
+      43.49,
+      0.5,
+      "legacy: my grandfather, my father and now me",
+      null,
+      {
+        "tilt": -4.91
+      }
+    ],
+    [
+      "local-ae34022744dc9ca0",
+      50.81,
+      55.73,
+      0.5,
+      "thesis: we all want peace, we live all together",
+      null,
+      {
+        "tilt": -4.91
+      }
+    ],
+    [
+      "local-ae34022744dc9ca0",
+      69.16,
+      72.45,
+      0.5,
+      "warmest line: this is your place",
+      null,
+      {
+        "tilt": -4.91
+      }
+    ],
+    [
+      "local-e3b33a795f0f8782",
+      0.73,
+      6.05,
+      0.5,
+      "walk-out, the whole counter waves",
+      null
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.05,
+      "to": 0.47,
+      "text": "I heard"
+    },
+    {
+      "beat": "01",
+      "at": 0.47,
+      "to": 0.88,
+      "text": "you guys"
+    },
+    {
+      "beat": "01",
+      "at": 0.88,
+      "to": 1.51,
+      "text": "have the best"
+    },
+    {
+      "beat": "01",
+      "at": 1.51,
+      "to": 2.04,
+      "text": "hummus in Israel here"
+    },
+    {
+      "beat": "01",
+      "at": 2.04,
+      "to": 2.3,
+      "text": "Yeah"
+    },
+    {
+      "beat": "01",
+      "at": 2.3,
+      "to": 2.67,
+      "text": "of course"
+    },
+    {
+      "beat": "01",
+      "at": 2.67,
+      "to": 3.38,
+      "text": "This is the best place of hummus"
+    },
+    {
+      "beat": "02",
+      "at": 0.06,
+      "to": 0.83,
+      "text": "So I heard"
+    },
+    {
+      "beat": "02",
+      "at": 0.83,
+      "to": 1.12,
+      "text": "you speaking Arabic"
+    },
+    {
+      "beat": "02",
+      "at": 1.12,
+      "to": 1.52,
+      "text": "Are you Muslim"
+    },
+    {
+      "beat": "02",
+      "at": 1.52,
+      "to": 1.98,
+      "text": "No"
+    },
+    {
+      "beat": "02",
+      "at": 1.98,
+      "to": 2.91,
+      "text": "I'm Christian"
+    },
+    {
+      "beat": "02",
+      "at": 3.44,
+      "to": 3.68,
+      "text": "Wait"
+    },
+    {
+      "beat": "02",
+      "at": 3.68,
+      "to": 4.38,
+      "text": "you're a Christian"
+    },
+    {
+      "beat": "02",
+      "at": 4.38,
+      "to": 4.83,
+      "text": "who speaks"
+    },
+    {
+      "beat": "02",
+      "at": 4.95,
+      "to": 5.46,
+      "text": "Arabic in Israel"
+    },
+    {
+      "beat": "02",
+      "at": 5.46,
+      "to": 5.79,
+      "text": "Yeah"
+    },
+    {
+      "beat": "02",
+      "at": 5.79,
+      "to": 6.25,
+      "text": "of course"
+    },
+    {
+      "beat": "03",
+      "at": 0.12,
+      "to": 1.24,
+      "text": "I speak Arabic"
+    },
+    {
+      "beat": "03",
+      "at": 1.24,
+      "to": 1.5,
+      "text": "I'm Christian"
+    },
+    {
+      "beat": "03",
+      "at": 1.5,
+      "to": 2.17,
+      "text": "Arabic Christian"
+    },
+    {
+      "beat": "03",
+      "at": 2.17,
+      "to": 3.16,
+      "text": "that live here"
+    },
+    {
+      "beat": "03",
+      "at": 3.58,
+      "to": 4.15,
+      "text": "and in Israel"
+    },
+    {
+      "beat": "03",
+      "at": 4.15,
+      "to": 4.91,
+      "text": "as an Arab Christian"
+    },
+    {
+      "beat": "03",
+      "at": 4.91,
+      "to": 5.28,
+      "text": "do you"
+    },
+    {
+      "beat": "03",
+      "at": 5.28,
+      "to": 5.85,
+      "text": "have the same"
+    },
+    {
+      "beat": "03",
+      "at": 5.85,
+      "to": 6.11,
+      "text": "rights as Jews"
+    },
+    {
+      "beat": "03",
+      "at": 6.11,
+      "to": 6.56,
+      "text": "Yeah of course"
+    },
+    {
+      "beat": "03",
+      "at": 7.93,
+      "to": 8.43,
+      "text": "You own"
+    },
+    {
+      "beat": "03",
+      "at": 8.43,
+      "to": 9.43,
+      "text": "the business here? Yeah"
+    },
+    {
+      "beat": "04",
+      "at": 0.48,
+      "to": 0.93,
+      "text": "60 years here"
+    },
+    {
+      "beat": "04",
+      "at": 1.1,
+      "to": 1.77,
+      "text": "You've been 60"
+    },
+    {
+      "beat": "04",
+      "at": 1.77,
+      "to": 2.22,
+      "text": "years here"
+    },
+    {
+      "beat": "04",
+      "at": 2.58,
+      "to": 2.85,
+      "text": "Wow"
+    },
+    {
+      "beat": "04",
+      "at": 2.85,
+      "to": 3.41,
+      "text": "what's your name"
+    },
+    {
+      "beat": "04",
+      "at": 3.41,
+      "to": 3.86,
+      "text": "I'm the third one"
+    },
+    {
+      "beat": "04",
+      "at": 4,
+      "to": 4.71,
+      "text": "Elias"
+    },
+    {
+      "beat": "05",
+      "at": 0.1,
+      "to": 0.35,
+      "text": "Wow"
+    },
+    {
+      "beat": "05",
+      "at": 0.35,
+      "to": 1,
+      "text": "thank you so much"
+    },
+    {
+      "beat": "05",
+      "at": 1,
+      "to": 1.79,
+      "text": "I didn't"
+    },
+    {
+      "beat": "05",
+      "at": 1.79,
+      "to": 2.52,
+      "text": "even order this"
+    },
+    {
+      "beat": "05",
+      "at": 2.52,
+      "to": 3.09,
+      "text": "I just asked"
+    },
+    {
+      "beat": "05",
+      "at": 3.09,
+      "to": 3.65,
+      "text": "you to make"
+    },
+    {
+      "beat": "05",
+      "at": 3.65,
+      "to": 4.1,
+      "text": "me hummus"
+    },
+    {
+      "beat": "06",
+      "at": 0.03,
+      "to": 0.61,
+      "text": "What's your name"
+    },
+    {
+      "beat": "06",
+      "at": 0.89,
+      "to": 1.68,
+      "text": "Ayman"
+    },
+    {
+      "beat": "06",
+      "at": 2.16,
+      "to": 3.22,
+      "text": "You're also Christian? Yeah"
+    },
+    {
+      "beat": "07",
+      "at": 0.08,
+      "to": 0.53,
+      "text": "Wow you bring us"
+    },
+    {
+      "beat": "07",
+      "at": 0.95,
+      "to": 2.08,
+      "text": "so much food"
+    },
+    {
+      "beat": "08",
+      "at": 0.07,
+      "to": 1.1,
+      "text": "It's our responsibility"
+    },
+    {
+      "beat": "08",
+      "at": 1.1,
+      "to": 1.35,
+      "text": "my friend"
+    },
+    {
+      "beat": "08",
+      "at": 1.35,
+      "to": 1.84,
+      "text": "You came"
+    },
+    {
+      "beat": "08",
+      "at": 1.84,
+      "to": 2.82,
+      "text": "for our house here"
+    },
+    {
+      "beat": "09",
+      "at": 0.11,
+      "to": 0.79,
+      "text": "Wait so you're"
+    },
+    {
+      "beat": "09",
+      "at": 0.79,
+      "to": 1.47,
+      "text": "a Christian shop"
+    },
+    {
+      "beat": "09",
+      "at": 1.47,
+      "to": 2.15,
+      "text": "and your meat"
+    },
+    {
+      "beat": "09",
+      "at": 2.15,
+      "to": 2.5,
+      "text": "is kosher"
+    },
+    {
+      "beat": "09",
+      "at": 2.5,
+      "to": 3.57,
+      "text": "the meat is kosher"
+    },
+    {
+      "beat": "09",
+      "at": 3.8,
+      "to": 4.99,
+      "text": "It's kosher and halal"
+    },
+    {
+      "beat": "10",
+      "at": 0.14,
+      "to": 0.4,
+      "text": "Brother"
+    },
+    {
+      "beat": "10",
+      "at": 0.4,
+      "to": 0.92,
+      "text": "the food"
+    },
+    {
+      "beat": "10",
+      "at": 0.92,
+      "to": 1.47,
+      "text": "was so good"
+    },
+    {
+      "beat": "10",
+      "at": 1.73,
+      "to": 2.51,
+      "text": "I would like"
+    },
+    {
+      "beat": "10",
+      "at": 2.51,
+      "to": 3.04,
+      "text": "to pay"
+    },
+    {
+      "beat": "10",
+      "at": 3.04,
+      "to": 4.08,
+      "text": "How much is it"
+    },
+    {
+      "beat": "10",
+      "at": 4.08,
+      "to": 4.74,
+      "text": "My friend"
+    },
+    {
+      "beat": "10",
+      "at": 4.74,
+      "to": 5.19,
+      "text": "nothing"
+    },
+    {
+      "beat": "11",
+      "at": 0.13,
+      "to": 1.02,
+      "text": "What do you mean"
+    },
+    {
+      "beat": "11",
+      "at": 1.27,
+      "to": 2.2,
+      "text": "It's okay my friend"
+    },
+    {
+      "beat": "11",
+      "at": 2.2,
+      "to": 2.65,
+      "text": "Why? No"
+    },
+    {
+      "beat": "11",
+      "at": 2.74,
+      "to": 3.21,
+      "text": "You can't"
+    },
+    {
+      "beat": "11",
+      "at": 3.21,
+      "to": 3.92,
+      "text": "Our house"
+    },
+    {
+      "beat": "12",
+      "at": 0,
+      "to": 0.73,
+      "text": "Your father used"
+    },
+    {
+      "beat": "12",
+      "at": 0.73,
+      "to": 1.35,
+      "text": "to own it"
+    },
+    {
+      "beat": "12",
+      "at": 1.57,
+      "to": 2.06,
+      "text": "My grandfather"
+    },
+    {
+      "beat": "12",
+      "at": 2.06,
+      "to": 2.66,
+      "text": "No way"
+    },
+    {
+      "beat": "12",
+      "at": 3.05,
+      "to": 3.65,
+      "text": "My grandfather"
+    },
+    {
+      "beat": "12",
+      "at": 3.65,
+      "to": 4.24,
+      "text": "my father"
+    },
+    {
+      "beat": "12",
+      "at": 4.24,
+      "to": 5.13,
+      "text": "and now me"
+    },
+    {
+      "beat": "13",
+      "at": 0.11,
+      "to": 1.26,
+      "text": "we all want peace"
+    },
+    {
+      "beat": "13",
+      "at": 1.67,
+      "to": 2.4,
+      "text": "CHRISTIAN, JEWS"
+    },
+    {
+      "beat": "13",
+      "at": 2.4,
+      "to": 2.65,
+      "text": "Yeah"
+    },
+    {
+      "beat": "13",
+      "at": 2.65,
+      "to": 3.14,
+      "text": "of course"
+    },
+    {
+      "beat": "13",
+      "at": 3.43,
+      "to": 4.72,
+      "text": "We live all together"
+    },
+    {
+      "beat": "14",
+      "at": 0.11,
+      "to": 0.51,
+      "text": "Thank you"
+    },
+    {
+      "beat": "14",
+      "at": 0.51,
+      "to": 0.92,
+      "text": "for giving"
+    },
+    {
+      "beat": "14",
+      "at": 0.92,
+      "to": 1.52,
+      "text": "me the food"
+    },
+    {
+      "beat": "14",
+      "at": 1.52,
+      "to": 1.97,
+      "text": "and hosting me"
+    },
+    {
+      "beat": "14",
+      "at": 2.01,
+      "to": 3.07,
+      "text": "This is your place"
+    },
+    {
+      "beat": "15",
+      "at": 0,
+      "to": 0.81,
+      "text": "We tell everyone"
+    },
+    {
+      "beat": "15",
+      "at": 0.81,
+      "to": 1.4,
+      "text": "yalla habibi bye"
+    },
+    {
+      "beat": "15",
+      "at": 2.46,
+      "to": 3.08,
+      "text": "Ma'a salama"
+    },
+    {
+      "beat": "15",
+      "at": 3.08,
+      "to": 3.53,
+      "text": "shukran"
+    },
+    {
+      "beat": "15",
+      "at": 3.97,
+      "to": 4.73,
+      "text": "Bye bye"
+    },
+    {
+      "beat": "15",
+      "at": 4.73,
+      "to": 5.18,
+      "text": "habibi"
+    }
+  ]
+}

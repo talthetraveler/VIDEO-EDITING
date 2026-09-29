@@ -1,0 +1,655 @@
+{
+  "built": "2026-09-29T04:28:08.498Z",
+  "total_s": 67.48,
+  "out": "IB_HITCHHIKE_V1.mp4",
+  "layout": "vertical",
+  "title": "POV: EVERYONE SAID NO\nUNTIL SHE SAID YES 🇮🇱",
+  "beats": [
+    [
+      "local-244b88e3cb81a5e8",
+      2.21,
+      14.94,
+      0,
+      "למה אמרת כן? למה לא? הולה, האמת היא אני לא חשבתי שאני אקבל טרמפ לתל אביב, כל אחד אמר לי לא ואת א",
+      null,
+      {
+        "exact": true,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-1f93a550cc64cd11",
+      4.76,
+      10.04,
+      0.5,
+      "Sorry, are you going to Tel Aviv? No, I take the bus"
+    ],
+    [
+      "local-940bf8e6e8406904",
+      5.76,
+      7.78,
+      0.5,
+      "אין סיכוי"
+    ],
+    [
+      "local-cff7cabea57921a3",
+      14.2,
+      21.44,
+      0.5,
+      "Sorry, they're going to Tel Aviv? I am. Really? Can I get a seat? Yalla. Easy. Let's go."
+    ],
+    [
+      "local-cff7cabea57921a3",
+      28.74,
+      31.59,
+      0.3,
+      "I have 10 people, all of them didn't go to Tel Aviv.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-002e67eae052c5dc",
+      38.44,
+      40.57,
+      0,
+      "What's your favorite part about living in Israel?",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-002e67eae052c5dc",
+      45.9,
+      47.31,
+      0,
+      "I like everything.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-baaf56b4a3276cda",
+      0.26,
+      18.46,
+      0,
+      "וואלה, איזה מטורף זה. את מורידה אותי ממש פה וכאילו אני גר פשוט פה. כן. אתה רואה מה קורה שפשוט מב",
+      null,
+      {
+        "tilt": -5.4,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-baaf56b4a3276cda",
+      19.46,
+      26.98,
+      0,
+      "Hebrew lesson",
+      null,
+      {
+        "tilt": -5.4,
+        "exact": true,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-baaf56b4a3276cda",
+      27.04,
+      28,
+      0,
+      "No, in law.",
+      null,
+      {
+        "tilt": -5.4,
+        "exact": true,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-aa17f91fa3595799",
+      2.77,
+      3.58,
+      0,
+      "That's it, it was fun.",
+      null,
+      {
+        "exact": true,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-aa17f91fa3595799",
+      3.58,
+      9.91,
+      0,
+      "goodbye",
+      null,
+      {
+        "exact": true,
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0,
+      "to": 0.6,
+      "text": "Why did you say yes"
+    },
+    {
+      "beat": "01",
+      "at": 4.09,
+      "to": 4.54,
+      "text": "Why not"
+    },
+    {
+      "beat": "01",
+      "at": 5.15,
+      "to": 5.8,
+      "text": "Honestly I didn't"
+    },
+    {
+      "beat": "01",
+      "at": 5.8,
+      "to": 6.23,
+      "text": "think I'd"
+    },
+    {
+      "beat": "01",
+      "at": 6.23,
+      "to": 6.88,
+      "text": "get a ride"
+    },
+    {
+      "beat": "01",
+      "at": 6.88,
+      "to": 7.53,
+      "text": "to Tel Aviv"
+    },
+    {
+      "beat": "01",
+      "at": 7.53,
+      "to": 8.4,
+      "text": "Everyone told me no"
+    },
+    {
+      "beat": "01",
+      "at": 8.4,
+      "to": 8.83,
+      "text": "and you"
+    },
+    {
+      "beat": "01",
+      "at": 8.83,
+      "to": 9.48,
+      "text": "told me yes"
+    },
+    {
+      "beat": "01",
+      "at": 10.62,
+      "to": 11.07,
+      "text": "Lucky! I was in"
+    },
+    {
+      "beat": "01",
+      "at": 11.38,
+      "to": 12.36,
+      "text": "a good mood"
+    },
+    {
+      "beat": "02",
+      "at": 0.18,
+      "to": 0.4,
+      "text": "Sorry"
+    },
+    {
+      "beat": "02",
+      "at": 0.4,
+      "to": 1.04,
+      "text": "are you going"
+    },
+    {
+      "beat": "02",
+      "at": 1.04,
+      "to": 1.69,
+      "text": "to Tel Aviv"
+    },
+    {
+      "beat": "02",
+      "at": 3.31,
+      "to": 3.55,
+      "text": "No"
+    },
+    {
+      "beat": "02",
+      "at": 3.55,
+      "to": 4.07,
+      "text": "I take the bus"
+    },
+    {
+      "beat": "03",
+      "at": 0.93,
+      "to": 1.66,
+      "text": "No chance"
+    },
+    {
+      "beat": "04",
+      "at": 0.18,
+      "to": 0.81,
+      "text": "Sorry are you going"
+    },
+    {
+      "beat": "04",
+      "at": 0.81,
+      "to": 1.28,
+      "text": "to Tel Aviv"
+    },
+    {
+      "beat": "04",
+      "at": 2.82,
+      "to": 3.27,
+      "text": "I am"
+    },
+    {
+      "beat": "04",
+      "at": 3.58,
+      "to": 4.03,
+      "text": "Really"
+    },
+    {
+      "beat": "04",
+      "at": 5.15,
+      "to": 5.6,
+      "text": "Yalla"
+    },
+    {
+      "beat": "04",
+      "at": 6.05,
+      "to": 6.38,
+      "text": "Easy"
+    },
+    {
+      "beat": "04",
+      "at": 6.38,
+      "to": 7.04,
+      "text": "Let's go"
+    },
+    {
+      "beat": "05",
+      "at": 0.24,
+      "to": 0.99,
+      "text": "I asked 10 people"
+    },
+    {
+      "beat": "05",
+      "at": 0.99,
+      "to": 1.55,
+      "text": "none of them"
+    },
+    {
+      "beat": "05",
+      "at": 1.55,
+      "to": 1.92,
+      "text": "were going"
+    },
+    {
+      "beat": "05",
+      "at": 1.92,
+      "to": 2.48,
+      "text": "to Tel Aviv"
+    },
+    {
+      "beat": "06",
+      "at": 0.11,
+      "to": 0.69,
+      "text": "What's your favorite"
+    },
+    {
+      "beat": "06",
+      "at": 0.69,
+      "to": 1.08,
+      "text": "part about"
+    },
+    {
+      "beat": "06",
+      "at": 1.08,
+      "to": 1.67,
+      "text": "living in Israel"
+    },
+    {
+      "beat": "07",
+      "at": 0.04,
+      "to": 1.21,
+      "text": "I like everything"
+    },
+    {
+      "beat": "08",
+      "at": 0.14,
+      "to": 0.4,
+      "text": "Wow"
+    },
+    {
+      "beat": "08",
+      "at": 0.4,
+      "to": 0.92,
+      "text": "that's crazy"
+    },
+    {
+      "beat": "08",
+      "at": 0.92,
+      "to": 1.37,
+      "text": "You're dropping me"
+    },
+    {
+      "beat": "08",
+      "at": 1.39,
+      "to": 2.17,
+      "text": "off right here"
+    },
+    {
+      "beat": "08",
+      "at": 2.17,
+      "to": 2.69,
+      "text": "and I"
+    },
+    {
+      "beat": "08",
+      "at": 2.69,
+      "to": 3.71,
+      "text": "live right here Yes"
+    },
+    {
+      "beat": "08",
+      "at": 5.98,
+      "to": 6.43,
+      "text": "See what"
+    },
+    {
+      "beat": "08",
+      "at": 6.43,
+      "to": 6.88,
+      "text": "happens when"
+    },
+    {
+      "beat": "08",
+      "at": 7.33,
+      "to": 8.01,
+      "text": "you just ask"
+    },
+    {
+      "beat": "08",
+      "at": 8.01,
+      "to": 8.72,
+      "text": "people for things"
+    },
+    {
+      "beat": "08",
+      "at": 9.62,
+      "to": 10.26,
+      "text": "There are nice people"
+    },
+    {
+      "beat": "08",
+      "at": 10.26,
+      "to": 10.71,
+      "text": "of course"
+    },
+    {
+      "beat": "08",
+      "at": 10.95,
+      "to": 11.53,
+      "text": "Kind people"
+    },
+    {
+      "beat": "08",
+      "at": 11.53,
+      "to": 12.31,
+      "text": "in this world"
+    },
+    {
+      "beat": "08",
+      "at": 12.31,
+      "to": 13,
+      "text": "People only see"
+    },
+    {
+      "beat": "08",
+      "at": 13,
+      "to": 13.69,
+      "text": "things and think"
+    },
+    {
+      "beat": "08",
+      "at": 13.69,
+      "to": 14.15,
+      "text": "everyone only"
+    },
+    {
+      "beat": "08",
+      "at": 14.15,
+      "to": 14.85,
+      "text": "thinks of themselves"
+    },
+    {
+      "beat": "08",
+      "at": 14.85,
+      "to": 15.31,
+      "text": "but there"
+    },
+    {
+      "beat": "08",
+      "at": 15.31,
+      "to": 15.77,
+      "text": "are people"
+    },
+    {
+      "beat": "08",
+      "at": 15.77,
+      "to": 16.22,
+      "text": "like you"
+    },
+    {
+      "beat": "08",
+      "at": 16.46,
+      "to": 16.96,
+      "text": "Like me"
+    },
+    {
+      "beat": "08",
+      "at": 17.09,
+      "to": 18,
+      "text": "Like you"
+    },
+    {
+      "beat": "09",
+      "at": 0,
+      "to": 0.45,
+      "text": "You're teaching"
+    },
+    {
+      "beat": "09",
+      "at": 0.45,
+      "to": 1.12,
+      "text": "me Hebrew too"
+    },
+    {
+      "beat": "09",
+      "at": 1.12,
+      "to": 1.57,
+      "text": "Right"
+    },
+    {
+      "beat": "09",
+      "at": 1.67,
+      "to": 2.08,
+      "text": "Will you give me"
+    },
+    {
+      "beat": "09",
+      "at": 2.08,
+      "to": 2.52,
+      "text": "a Hebrew course? Sure"
+    },
+    {
+      "beat": "09",
+      "at": 3.42,
+      "to": 3.93,
+      "text": "Yalla how much"
+    },
+    {
+      "beat": "09",
+      "at": 3.93,
+      "to": 4.44,
+      "text": "do you charge"
+    },
+    {
+      "beat": "09",
+      "at": 4.7,
+      "to": 5.15,
+      "text": "I just"
+    },
+    {
+      "beat": "09",
+      "at": 5.3,
+      "to": 5.75,
+      "text": "came from giving"
+    },
+    {
+      "beat": "09",
+      "at": 5.82,
+      "to": 6.27,
+      "text": "private lessons"
+    },
+    {
+      "beat": "09",
+      "at": 6.49,
+      "to": 6.99,
+      "text": "In what"
+    },
+    {
+      "beat": "09",
+      "at": 6.99,
+      "to": 7.48,
+      "text": "In Hebrew"
+    },
+    {
+      "beat": "10",
+      "at": 0.02,
+      "to": 0.33,
+      "text": "No"
+    },
+    {
+      "beat": "10",
+      "at": 0.33,
+      "to": 0.96,
+      "text": "in law"
+    },
+    {
+      "beat": "11",
+      "at": 0,
+      "to": 0.7,
+      "text": "That's it it was fun"
+    },
+    {
+      "beat": "12",
+      "at": 0.08,
+      "to": 0.59,
+      "text": "thanks"
+    },
+    {
+      "beat": "12",
+      "at": 0.59,
+      "to": 1.04,
+      "text": "Bye bye"
+    },
+    {
+      "beat": "12",
+      "at": 1.14,
+      "to": 1.59,
+      "text": "see you"
+    },
+    {
+      "beat": "12",
+      "at": 2,
+      "to": 2.7,
+      "text": "have a good day"
+    },
+    {
+      "beat": "12",
+      "at": 2.7,
+      "to": 3.15,
+      "text": "and a wonderful week"
+    },
+    {
+      "beat": "12",
+      "at": 3.56,
+      "to": 4.36,
+      "text": "Thanks for the ride"
+    },
+    {
+      "beat": "12",
+      "at": 5.3,
+      "to": 5.76,
+      "text": "My pleasure Yalla"
+    }
+  ]
+}

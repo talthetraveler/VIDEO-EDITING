@@ -1,0 +1,7 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-from-abroad/beats_3934175/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-from-abroad/beats_3934175/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-from-abroad/beats_3934175/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-from-abroad/beats_3934175/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-from-abroad/beats_3934175/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-from-abroad/beats_3934175/06.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/ib-comp-from-abroad/beats_3934175/07.mp4'

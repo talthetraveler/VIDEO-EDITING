@@ -1,0 +1,170 @@
+{
+ "title": "SAYING SHABBAT SHALOM\nAND SALAM IN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "COMP_SHALOM_SALAM_V1_r7.mp4",
+ "beats": [
+  [
+   "local-1be0e35cfcb66f50",
+   4.12,
+   6.13,
+   0.5,
+   "S18-e hook: worker in hi-vis answers Shabbat shalom with habibi, handshake, face close"
+  ],
+  [
+   "local-99db9ce89e3756de",
+   2.7,
+   4.66,
+   0.5,
+   "S29-g3517 young man, huge grin: yo, Shabbat shalom",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-13063148cd7ea65c",
+   15.92,
+   20.05,
+   0.5,
+   "S42-h STRONGEST: older man on the Temple Mount: thank you so much, we are brothers, Jewish and Muslim are brothers",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-abe69b69503b5224",
+   1.68,
+   4.97,
+   0.5,
+   "S29-g3467 white-haired woman: Shabbat shalom back, have an amazing day / well, you too (the warm laugh)",
+   null,
+   {
+    "exact": true,
+    "manual": true
+   }
+  ],
+  [
+   "local-769eddae1e8fec7e",
+   1.2,
+   4.95,
+   0.5,
+   "S41-a Haredi man at the Wall, seated, shakes hands: shalom, Shabbat shalom"
+  ],
+  [
+   "local-354a11aec52a43d4",
+   31.92,
+   34.8,
+   0.5,
+   "S19-a man celebrating Eid: Eid Mubarak and Shabbat shalom / Shabbat shalom, yes"
+  ],
+  [
+   "local-4e75f814244b5669",
+   1.5,
+   4,
+   0.5,
+   "S42-g elderly man in keffiyeh: Assalamu alaikum (only line captioned; MT after 4s is hallucinated)",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-4e75f814244b5669",
+   4,
+   7.2,
+   0.5,
+   "S42-g the handshake and his smile, no words captioned",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "local-18652d01dbb1c57a",
+   0.42,
+   3.29,
+   0.5,
+   "S29-g3342 man in a cap, face close: Shabbat shalom, have an amazing day"
+  ],
+  [
+   "local-721db28c13bb24da",
+   0.8,
+   4.55,
+   0.5,
+   "S29-g3427 woman in hijab waves and answers: salamu aleikum, Shabbat shalom / Shabbat shalom (UNCAPTIONED: the only translation is one 6s segment, which the builder can only place over the salam half)",
+   null,
+   {
+    "nocap": true
+   }
+  ],
+  [
+   "local-b2353016a2b010e1",
+   2.4,
+   4.73,
+   0.5,
+   "S18-f two men on a bench answer: Shabbat shalom my friend / Shabbat shalom brother, handshake"
+  ],
+  [
+   "local-e57b5322d5c9836c",
+   0.47,
+   5.7,
+   0.5,
+   "S29-g3437 END: a man runs in for a hug (camera sees the plaza during the hug), then his big smile close to camera"
+  ]
+ ],
+ "captionFix": [
+  {
+   "match": "Idmurt Barak",
+   "to": "Eid Mubarak"
+  },
+  {
+   "match": "Shabbat Shalom and?",
+   "to": "Shabbat Shalom"
+  },
+  {
+   "match": "Salam Alaikum",
+   "to": "Assalamu Alaikum"
+  },
+  {
+   "match": "Asalaamu Alaikum",
+   "to": "Assalamu Alaikum"
+  },
+  {
+   "match": "סלאמו עלייקום",
+   "to": "Assalamu Alaikum"
+  },
+  {
+   "match": "Shalom Shabbat Shalom",
+   "to": "Shalom, Shabbat Shalom"
+  },
+  {
+   "match": "SHABBAT SHALOM OKAY",
+   "to": "SHABBAT SHALOM",
+   "exact": true
+  },
+  {
+   "match": "AND SHABBAT SHALOM YES",
+   "to": "AND SHABBAT SHALOM",
+   "exact": true
+  },
+  {
+   "match": "GOOD TO SEE",
+   "to": "GOOD TO SEE YOU TOO",
+   "exact": true
+  },
+  {
+   "match": "YOU TOO",
+   "to": null,
+   "exact": true
+  },
+  {
+   "match": "SHABBAT SHALOM MY FRIEND",
+   "to": null,
+   "exact": true
+  }
+ ]
+}

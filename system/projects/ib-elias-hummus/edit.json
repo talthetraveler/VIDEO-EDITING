@@ -1,0 +1,177 @@
+{
+ "beats": [
+  [
+   "local-06b40a0b0e3b52a7",
+   7.73,
+   12.31,
+   0.5,
+   "open on his face: \"best hummus in Israel\" - \"this is the best place of hummus\"",
+   null
+  ],
+  [
+   "local-06b40a0b0e3b52a7",
+   12.24,
+   19.38,
+   0.5,
+   "identity reveal: are you Muslim? No, I am Christian",
+   null
+  ],
+  [
+   "local-06b40a0b0e3b52a7",
+   20.66,
+   30.55,
+   0.5,
+   "Arabic Christian that live here -> same rights, owns the business",
+   null
+  ],
+  [
+   "local-b9243dd9bee628ee",
+   15.14,
+   20.08,
+   0,
+   "name + legacy: 60 years, I am the third one, Elias (2nd take, only this line). Manual frame: auto-framer locked onto the worker in white",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-f42c8d058a6721fc",
+   0.18,
+   4.65,
+   0.5,
+   "food keeps coming - I only asked for hummus",
+   null
+  ],
+  [
+   "local-f42c8d058a6721fc",
+   9.03,
+   13.3,
+   0.5,
+   "Ayman: also Christian",
+   null
+  ],
+  [
+   "local-11791bbf5e80ce31",
+   0.2,
+   2.28,
+   0.5,
+   "so much food",
+   null
+  ],
+  [
+   "local-11791bbf5e80ce31",
+   5.78,
+   9.07,
+   0.5,
+   "hospitality: our responsibility, you came to our house",
+   null
+  ],
+  [
+   "local-d55a1f5089d2c823",
+   0.18,
+   5.33,
+   0.5,
+   "surprise fact: kosher AND halal",
+   null,
+   {
+    "tilt": 5.71
+   }
+  ],
+  [
+   "local-ae34022744dc9ca0",
+   1.23,
+   6.5,
+   0.5,
+   "PAYOFF a: I would like to pay, how much is it? - my friend, nothing",
+   null,
+   {
+    "tilt": -4.91
+   }
+  ],
+  [
+   "local-ae34022744dc9ca0",
+   6.5,
+   10.65,
+   0.5,
+   "PAYOFF b: what do you mean? - it is okay my friend - no you cannot, our house (one beat: the builder drops a segment from a beat holding <55% of it)",
+   null,
+   {
+    "tilt": -4.91
+   }
+  ],
+  [
+   "local-ae34022744dc9ca0",
+   38.3,
+   43.49,
+   0.5,
+   "legacy: my grandfather, my father and now me",
+   null,
+   {
+    "tilt": -4.91
+   }
+  ],
+  [
+   "local-ae34022744dc9ca0",
+   50.81,
+   55.73,
+   0.5,
+   "thesis: we all want peace, we live all together",
+   null,
+   {
+    "tilt": -4.91
+   }
+  ],
+  [
+   "local-ae34022744dc9ca0",
+   69.16,
+   72.45,
+   0.5,
+   "warmest line: this is your place",
+   null,
+   {
+    "tilt": -4.91
+   }
+  ],
+  [
+   "local-e3b33a795f0f8782",
+   0.73,
+   6.05,
+   0.5,
+   "walk-out, the whole counter waves",
+   null
+  ]
+ ],
+ "title": "POV: MEETING AN ARAB CHRISTIAN\nIN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "ELIAS_HUMMUS_V1.mp4",
+ "captionFix": [
+  {
+   "match": "brother the food was so good I would I would like to pay how much is it oh my",
+   "to": "Brother, the food was so good. I would like to pay. How much is it?"
+  },
+  {
+   "match": "friend nothing what do",
+   "to": "My friend, nothing."
+  },
+  {
+   "match": "do you mean it's okay my friend why no you can't our house",
+   "to": "What do you mean? It's okay my friend. Why? No. You can't. Our house."
+  },
+  {
+   "match": "What, your father used to own it?",
+   "to": "Your father used to own it?"
+  },
+  {
+   "match": "Masalaam",
+   "to": "Ma'a salama"
+  },
+  {
+   "match": "Christian Jews",
+   "exact": true,
+   "to": "Christian, Jews"
+  }
+ ]
+}

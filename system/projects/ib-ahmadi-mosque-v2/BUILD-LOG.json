@@ -1,0 +1,610 @@
+{
+  "built": "2026-09-29T04:57:36.939Z",
+  "total_s": 73.3,
+  "out": "AHMADI_MOSQUE_V2.mp4",
+  "layout": "vertical",
+  "title": "POV: MEETING A MUSLIM\nIN A MOSQUE IN ISRAEL 🇮🇱",
+  "beats": [
+    [
+      "local-564cc7749299dfa1",
+      83.91,
+      87.95,
+      0.5,
+      "HOOK (flash-forward, from 1264 so the builder does not drop the next 1268 beat): we are coming from the same source, same Allah, same God",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-0e4f08e3af77bc51",
+      13.9,
+      15.95,
+      0.5,
+      "his greeting in the mosque (Wa Alaikum Asalaam) as he turns to the camera; distant voice, own sub-beat so the caption reads"
+    ],
+    [
+      "local-0e4f08e3af77bc51",
+      15.95,
+      18,
+      0.5,
+      "nice to meet you, handshake, face close"
+    ],
+    [
+      "local-0e4f08e3af77bc51",
+      37.27,
+      52.78,
+      0.5,
+      "Tal: what is it like being a Muslim here? / his calm answer / Tal: can you pray safely here in Israel?"
+    ],
+    [
+      "local-0e4f08e3af77bc51",
+      52.78,
+      53.86,
+      0.5,
+      "his direct yes - own sub-beat so his quiet reply gets its caption"
+    ],
+    [
+      "local-0e4f08e3af77bc51",
+      67.6,
+      71.19,
+      0.5,
+      "Tal: I am Jewish, you are Muslim, we are cousins (he picks it up next)"
+    ],
+    [
+      "local-0e4f08e3af77bc51",
+      115.21,
+      117,
+      0.5,
+      "Tal: how can we live in peace?"
+    ],
+    [
+      "local-0e4f08e3af77bc51",
+      117,
+      128.01,
+      0.5,
+      "his answer: trust each other, as you said we are cousins, start dialogue"
+    ],
+    [
+      "local-0e4f08e3af77bc51",
+      162.32,
+      165.05,
+      0.5,
+      "Tal: the only way for peace is dialogue"
+    ],
+    [
+      "local-0e4f08e3af77bc51",
+      165.05,
+      177.05,
+      0.5,
+      "the best 15s: how would you know if I love you; love for all, hatred for none"
+    ],
+    [
+      "local-564cc7749299dfa1",
+      52.7,
+      57.1,
+      0.5,
+      "Tal: salam and shalom; his reply is a handshake on camera"
+    ],
+    [
+      "local-564cc7749299dfa1",
+      79.67,
+      83.5,
+      0.5,
+      "Tal: Judaism and Islam have more in common than people think"
+    ],
+    [
+      "local-564cc7749299dfa1",
+      83.5,
+      87.95,
+      0.5,
+      "his reply: same source, same Allah, same God"
+    ],
+    [
+      "local-564cc7749299dfa1",
+      123.39,
+      125.33,
+      0.5,
+      "Tal: thank you for letting me sit with you"
+    ],
+    [
+      "local-564cc7749299dfa1",
+      125.33,
+      128.16,
+      0.5,
+      "his warm ending: anytime, this is your home"
+    ]
+  ],
+  "captions": [
+    {
+      "beat": "01",
+      "at": 0.11,
+      "to": 0.85,
+      "text": "We are coming"
+    },
+    {
+      "beat": "01",
+      "at": 0.85,
+      "to": 1.83,
+      "text": "from the same source"
+    },
+    {
+      "beat": "01",
+      "at": 2.48,
+      "to": 3.13,
+      "text": "Same Allah"
+    },
+    {
+      "beat": "01",
+      "at": 3.13,
+      "to": 3.77,
+      "text": "same God"
+    },
+    {
+      "beat": "02",
+      "at": 0.13,
+      "to": 0.68,
+      "text": "Wa Alaikum"
+    },
+    {
+      "beat": "02",
+      "at": 0.95,
+      "to": 1.97,
+      "text": "Asalaam wa Rahmatullah"
+    },
+    {
+      "beat": "03",
+      "at": 0.13,
+      "to": 1.05,
+      "text": "Nice to meet you too"
+    },
+    {
+      "beat": "04",
+      "at": 0.14,
+      "to": 0.67,
+      "text": "what is it"
+    },
+    {
+      "beat": "04",
+      "at": 0.67,
+      "to": 1.01,
+      "text": "like being"
+    },
+    {
+      "beat": "04",
+      "at": 1.01,
+      "to": 1.54,
+      "text": "a Muslim here"
+    },
+    {
+      "beat": "04",
+      "at": 2.42,
+      "to": 3.03,
+      "text": "It's like"
+    },
+    {
+      "beat": "04",
+      "at": 3.25,
+      "to": 4.24,
+      "text": "being in everywhere"
+    },
+    {
+      "beat": "04",
+      "at": 4.48,
+      "to": 5.09,
+      "text": "Muslims are it's a faith"
+    },
+    {
+      "beat": "04",
+      "at": 7.88,
+      "to": 8.33,
+      "text": "It's everywhere around the world"
+    },
+    {
+      "beat": "04",
+      "at": 10.31,
+      "to": 10.76,
+      "text": "And we are here"
+    },
+    {
+      "beat": "04",
+      "at": 11.44,
+      "to": 11.89,
+      "text": "practicing our prayer"
+    },
+    {
+      "beat": "04",
+      "at": 12.74,
+      "to": 13.31,
+      "text": "Are you"
+    },
+    {
+      "beat": "04",
+      "at": 13.31,
+      "to": 14.18,
+      "text": "able to practice"
+    },
+    {
+      "beat": "04",
+      "at": 14.18,
+      "to": 14.58,
+      "text": "your prayer safely"
+    },
+    {
+      "beat": "04",
+      "at": 14.58,
+      "to": 15.46,
+      "text": "here in Israel"
+    },
+    {
+      "beat": "05",
+      "at": 0,
+      "to": 0.32,
+      "text": "Yes"
+    },
+    {
+      "beat": "05",
+      "at": 0.32,
+      "to": 0.96,
+      "text": "I do"
+    },
+    {
+      "beat": "06",
+      "at": 0.08,
+      "to": 0.59,
+      "text": "You know"
+    },
+    {
+      "beat": "06",
+      "at": 0.59,
+      "to": 1.1,
+      "text": "I am"
+    },
+    {
+      "beat": "06",
+      "at": 1.1,
+      "to": 1.86,
+      "text": "Jewish and you're"
+    },
+    {
+      "beat": "06",
+      "at": 1.86,
+      "to": 2.63,
+      "text": "Muslim and we"
+    },
+    {
+      "beat": "06",
+      "at": 2.63,
+      "to": 3.14,
+      "text": "are cousins"
+    },
+    {
+      "beat": "07",
+      "at": 0.13,
+      "to": 0.77,
+      "text": "How do you think we"
+    },
+    {
+      "beat": "07",
+      "at": 0.77,
+      "to": 1.29,
+      "text": "can live in peace"
+    },
+    {
+      "beat": "08",
+      "at": 0.55,
+      "to": 1.19,
+      "text": "We should"
+    },
+    {
+      "beat": "08",
+      "at": 1.43,
+      "to": 2.12,
+      "text": "start trusting"
+    },
+    {
+      "beat": "08",
+      "at": 2.12,
+      "to": 2.57,
+      "text": "each other because"
+    },
+    {
+      "beat": "08",
+      "at": 3.31,
+      "to": 3.97,
+      "text": "as you said"
+    },
+    {
+      "beat": "08",
+      "at": 3.97,
+      "to": 4.63,
+      "text": "we are cousins"
+    },
+    {
+      "beat": "08",
+      "at": 5.53,
+      "to": 6.03,
+      "text": "And we"
+    },
+    {
+      "beat": "08",
+      "at": 6.03,
+      "to": 6.77,
+      "text": "have to find"
+    },
+    {
+      "beat": "08",
+      "at": 6.77,
+      "to": 7.26,
+      "text": "the path"
+    },
+    {
+      "beat": "08",
+      "at": 7.26,
+      "to": 7.74,
+      "text": "of peace"
+    },
+    {
+      "beat": "08",
+      "at": 7.97,
+      "to": 8.42,
+      "text": "of love"
+    },
+    {
+      "beat": "08",
+      "at": 9.03,
+      "to": 9.48,
+      "text": "and start dialogue"
+    },
+    {
+      "beat": "09",
+      "at": 0.13,
+      "to": 0.65,
+      "text": "The only"
+    },
+    {
+      "beat": "09",
+      "at": 0.65,
+      "to": 1.43,
+      "text": "way for peace"
+    },
+    {
+      "beat": "09",
+      "at": 1.43,
+      "to": 2.2,
+      "text": "is through dialogue"
+    },
+    {
+      "beat": "09",
+      "at": 2.2,
+      "to": 2.72,
+      "text": "through conversation"
+    },
+    {
+      "beat": "10",
+      "at": 0,
+      "to": 0.42,
+      "text": "Yeah"
+    },
+    {
+      "beat": "10",
+      "at": 0.42,
+      "to": 0.79,
+      "text": "If you"
+    },
+    {
+      "beat": "10",
+      "at": 0.79,
+      "to": 1.34,
+      "text": "don't know me"
+    },
+    {
+      "beat": "10",
+      "at": 1.34,
+      "to": 1.89,
+      "text": "if you don't"
+    },
+    {
+      "beat": "10",
+      "at": 1.89,
+      "to": 2.43,
+      "text": "talk to me"
+    },
+    {
+      "beat": "10",
+      "at": 2.43,
+      "to": 2.98,
+      "text": "if you didn't"
+    },
+    {
+      "beat": "10",
+      "at": 2.98,
+      "to": 3.53,
+      "text": "come like that"
+    },
+    {
+      "beat": "10",
+      "at": 4.01,
+      "to": 4.66,
+      "text": "how would you"
+    },
+    {
+      "beat": "10",
+      "at": 4.66,
+      "to": 5.32,
+      "text": "know if I'm"
+    },
+    {
+      "beat": "10",
+      "at": 5.32,
+      "to": 5.75,
+      "text": "a person"
+    },
+    {
+      "beat": "10",
+      "at": 5.75,
+      "to": 6.19,
+      "text": "who loves"
+    },
+    {
+      "beat": "10",
+      "at": 6.19,
+      "to": 6.68,
+      "text": "you or not"
+    },
+    {
+      "beat": "10",
+      "at": 6.68,
+      "to": 7.53,
+      "text": "Because we"
+    },
+    {
+      "beat": "10",
+      "at": 7.53,
+      "to": 8.8,
+      "text": "as Ahmadi Muslims"
+    },
+    {
+      "beat": "10",
+      "at": 9.28,
+      "to": 9.75,
+      "text": "our slogan"
+    },
+    {
+      "beat": "10",
+      "at": 9.75,
+      "to": 10.23,
+      "text": "is love"
+    },
+    {
+      "beat": "10",
+      "at": 10.23,
+      "to": 10.7,
+      "text": "for all"
+    },
+    {
+      "beat": "10",
+      "at": 10.7,
+      "to": 11.18,
+      "text": "and hatred"
+    },
+    {
+      "beat": "10",
+      "at": 11.18,
+      "to": 11.65,
+      "text": "for none"
+    },
+    {
+      "beat": "11",
+      "at": 0.13,
+      "to": 0.93,
+      "text": "We are people"
+    },
+    {
+      "beat": "11",
+      "at": 0.93,
+      "to": 1.46,
+      "text": "who need"
+    },
+    {
+      "beat": "11",
+      "at": 1.46,
+      "to": 1.99,
+      "text": "to sit"
+    },
+    {
+      "beat": "11",
+      "at": 1.99,
+      "to": 2.78,
+      "text": "down and make"
+    },
+    {
+      "beat": "11",
+      "at": 2.78,
+      "to": 3.58,
+      "text": "salam and shalom"
+    },
+    {
+      "beat": "12",
+      "at": 0,
+      "to": 0.74,
+      "text": "Judaism and Islam"
+    },
+    {
+      "beat": "12",
+      "at": 0.74,
+      "to": 1.49,
+      "text": "have a lot"
+    },
+    {
+      "beat": "12",
+      "at": 1.49,
+      "to": 2.23,
+      "text": "more in common"
+    },
+    {
+      "beat": "12",
+      "at": 2.23,
+      "to": 2.68,
+      "text": "than people think"
+    },
+    {
+      "beat": "13",
+      "at": 0.28,
+      "to": 1.12,
+      "text": "We are coming"
+    },
+    {
+      "beat": "13",
+      "at": 1.12,
+      "to": 2.24,
+      "text": "from the same source"
+    },
+    {
+      "beat": "13",
+      "at": 2.89,
+      "to": 3.54,
+      "text": "Same Allah"
+    },
+    {
+      "beat": "13",
+      "at": 3.54,
+      "to": 4.18,
+      "text": "same God"
+    },
+    {
+      "beat": "14",
+      "at": 0,
+      "to": 0.61,
+      "text": "And thank you"
+    },
+    {
+      "beat": "14",
+      "at": 0.61,
+      "to": 1.21,
+      "text": "for letting me"
+    },
+    {
+      "beat": "14",
+      "at": 1.21,
+      "to": 1.82,
+      "text": "sit with you"
+    },
+    {
+      "beat": "15",
+      "at": 0.97,
+      "to": 1.42,
+      "text": "Yeah thank you Anytime"
+    },
+    {
+      "beat": "15",
+      "at": 1.6,
+      "to": 2.37,
+      "text": "This is your home"
+    }
+  ]
+}

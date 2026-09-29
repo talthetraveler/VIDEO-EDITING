@@ -1,0 +1,66 @@
+{
+ "beats": [
+  [
+   "local-8051d05511c72acd",
+   4.96,
+   11.49,
+   0.3,
+   "approach: I saw your cross - in Israel there are Christians? - a lot of them, we are actually Arabs (manual full-height frame so the title clears his face)",
+   null,
+   {
+    "manual": true
+   }
+  ],
+  [
+   "local-8051d05511c72acd",
+   16.38,
+   18.45,
+   0.5,
+   "what is that like? - we are from Nazareth (Tal's wrong Jesus-was-born line cut)"
+  ],
+  [
+   "local-8051d05511c72acd",
+   28.05,
+   32.3,
+   0.5,
+   "friends: Jewish - a lot of them; Muslim - yes"
+  ],
+  [
+   "local-8051d05511c72acd",
+   82.72,
+   85.13,
+   0.5,
+   "favourite part about living here?"
+  ],
+  [
+   "local-8051d05511c72acd",
+   87.15,
+   94.46,
+   0.5,
+   "humour: mostly the weather; they forget you guys"
+  ],
+  [
+   "local-8051d05511c72acd",
+   95.07,
+   101.44,
+   0.5,
+   "ending: no, we don't care, bro - we need to just be human - have an amazing day, Shabbat Shalom"
+  ]
+ ],
+ "title": "POV: MEETING ARAB CHRISTIANS\nIN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 3.5,
+ "capY": 0.69,
+ "out": "NAZARETH_BEACH_V1.mp4",
+ "captionFix": [
+  {
+   "match": "to just be human Yeah",
+   "exact": true,
+   "to": "to just be human"
+  },
+  {
+   "match": "Guys, have an amazing day. Shabbat Shalom.",
+   "to": "Guys have. An amazing day. Shabbat Shalom."
+  }
+ ]
+}
