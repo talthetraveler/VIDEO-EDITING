@@ -75,8 +75,11 @@ edit.beats.forEach((b, i) => {
     const endsClean = /[.!?]$/.test(String(last.word).trim());
     const next = edit.beats[i + 1];
     const continuesInNext = next && next[0] === tag && Math.abs(next[1] - to) < 0.5;
-    if (!endsClean && !continuesInNext) {
-      const after = words.find((w) => w.start >= to - TOL);
+    const after = words.find((w) => w.start >= to - TOL);
+    // nobody speaks again in this clip -> the thought is as finished as it gets.
+    // (Hebrew/Arabic transcripts often carry no punctuation: "shalom" at the
+    // clip's last word was flagged on every greeting beat.)
+    if (!endsClean && !continuesInNext && after) {
       msgs.push(`ends mid-thought on "${last.word}"` + (after ? ` — next spoken word is "${after.word}" at ${after.start.toFixed(2)} (${(after.start - to).toFixed(2)}s later)` : ""));
     }
     // dead air at the tail: >1.2s of silence after the last word

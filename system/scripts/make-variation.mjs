@@ -27,6 +27,21 @@ let beats = src.beats.slice();
 const nums = (s) => s.split(",").map((x) => parseInt(x, 10) - 1);
 if (opt("--order") || opt("--keep")) beats = nums(opt("--order") ?? opt("--keep")).map((i) => { if (!src.beats[i]) throw new Error(`no beat ${i + 1}`); return src.beats[i]; });
 if (opt("--first")) { const i = parseInt(opt("--first"), 10) - 1; beats = [src.beats[i], ...src.beats.filter((_, k) => k !== i)]; }
+if (opt("--hook")) {
+  // tease: copy already-verified beat(s) N or N-M to the front, optionally narrowed
+  // to N:a-b (a,b = source seconds, must sit on word gaps - verify-cut checks it).
+  // The story then plays in full; the builder allows the jump back (LESSONS 61).
+  const [range, span] = opt("--hook").split(":");
+  const [n1, n2 = n1] = range.split("-").map((x) => parseInt(x, 10) - 1);
+  const hook = src.beats.slice(n1, n2 + 1).map((b) => {
+    const c = JSON.parse(JSON.stringify(b));
+    c[4] = `HOOK: ${c[4] ?? ""}`;
+    return c;
+  });
+  if (!hook.length) throw new Error(`no beat ${range}`);
+  if (span) { const [x, y] = span.split("-").map(Number); hook[0][1] = x; hook[hook.length - 1][2] = y; }
+  beats = [...hook, ...beats];
+}
 if (opt("--prepend")) {
   // trim the hook beat to speech with autotrim, in a scratch slug, then take its beat
   const scratch = `${to}__hook`;
