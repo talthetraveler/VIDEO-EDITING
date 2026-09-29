@@ -1103,6 +1103,32 @@ cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
           (white < 1 ? `, white ${white}` : "") + " (black point held)");
       }
     }
+    // COLOUR, MEASURED PER SHOT. Tal, 2026-09-29: "sometimes the color grading
+    // is not perfect." GRADE applies a FIXED +42% saturation and a warm push -
+    // tuned on grey, hazy Damascus Gate footage. On sunny Meta footage that is
+    // already colourful it drove skin and red clothing orange: measured on the
+    // israel-batch renders, SATAVG 36-46 on the Morocco and Cesar cuts against
+    // 13 (median) / 21 (p90) on his OWN posted reels, with a warm tint
+    // (U-128 down to -35, V-128 up to +33) far outside his (U>=-9, V<=+10).
+    // So: measure the shot's own saturation and tint, and cut the saturation
+    // so that AFTER GRADE's x1.42 it lands near SAT_TARGET. Only ever a cut -
+    // a grey shot still gets GRADE's full lift. A shot that is already warm
+    // gets GRADE's warm colorbalance cancelled.
+    const SAT_TARGET = 20;
+    const cst = spawnSync(FF, ["-v", "info", "-i", probePng, "-vf", "signalstats,metadata=print", "-f", "null", "-"],
+      { encoding: "utf8", maxBuffer: 16 * 1024 * 1024 });
+    const ctx = (cst.stdout || "") + (cst.stderr || "");
+    const g = (k) => { const mm = new RegExp(`lavfi\\.signalstats\\.${k}=([\\d.]+)`).exec(ctx); return mm ? parseFloat(mm[1]) : null; };
+    const srcSat = g("SATAVG"), srcU = g("UAVG"), srcV = g("VAVG");
+    if (srcSat != null && srcSat * 1.42 > SAT_TARGET * 1.1) {
+      const f = Math.max(0.55, Math.min(1, SAT_TARGET / (srcSat * 1.42)));
+      lift += `eq=saturation=${f.toFixed(3)},`;
+      console.log(`      colour: source sat ${srcSat.toFixed(0)} -> x${f.toFixed(2)} before GRADE (target ~${SAT_TARGET})`);
+    }
+    if (srcU != null && srcV != null && srcU < 121 && srcV > 136) {
+      lift += "colorbalance=rm=-0.015:bm=0.015,";
+      console.log(`      colour: already warm (U${(srcU - 128).toFixed(0)} V+${(srcV - 128).toFixed(0)}) -> GRADE's warm push cancelled`);
+    }
   } catch {}
   const frames = Math.max(1, Math.round(dur * 30));
   // A landscape proxy inside an otherwise-vertical shoot is portrait content

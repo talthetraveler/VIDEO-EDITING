@@ -62,6 +62,9 @@ for (const r of jobs) {
   const flagged = +(sr.match(/(\d+) rendered captions, (\d+) flagged/) || [])[2] || 0;
   const flaggedLines = sr.split("\n").filter((l) => /<-- CHECK/.test(l) && /^\s+\d/.test(l)).map((l) => l.trim());
   const issues = +(sr.match(/(\d+) issue\(s\)/) || [])[1] || 0;
+  const cov = run("node", ["scripts/caption-coverage.mjs", r.slug]);
+  const covLine = (cov.match(/(\d+)\/(\d+) spoken words on screen/) || []);
+  const covered = covLine[1] ? `${covLine[1]}/${covLine[2]}` : "n/a";
   const full = wh === "1080,1920";
   const dest = join(outDir, r.file);
   if (full) {
@@ -69,8 +72,8 @@ for (const r of jobs) {
     copyFileSync(rendered, dest);
   }
   const rec = { file: r.file, slug: r.slug, ok: full, resolution: wh, duration: +dur.toFixed(1), cut_clean: cutClean,
-    boundary_issues: issues, captions: caps, flagged, flagged_lines: flaggedLines, secs: Math.round((Date.now() - t0) / 1000) };
+    boundary_issues: issues, captions: caps, flagged, flagged_lines: flaggedLines, words_on_screen: covered, secs: Math.round((Date.now() - t0) / 1000) };
   appendFileSync(log, JSON.stringify(rec) + "\n");
-  console.log(`  ${full ? "OK" : "NOT FULL SIZE"} ${wh} ${rec.duration}s  cut ${cutClean ? "clean" : "ISSUES"}  captions ${caps} (${flagged} flagged)  ${rec.secs}s`);
+  console.log(`  ${full ? "OK" : "NOT FULL SIZE"} ${wh} ${rec.duration}s  cut ${cutClean ? "clean" : "ISSUES"}  captions ${caps} (${flagged} flagged)  words ${covered}  ${rec.secs}s`);
 }
 console.log("\nfinalize done");

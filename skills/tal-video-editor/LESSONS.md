@@ -1636,3 +1636,23 @@ holds a short tail after the sentence ends. Nothing is shown for less than a
 readable minimum; lines that would flash are merged with their neighbour
 instead. The screen clears only in a real pause. (THE STANDARD's "pauses leave
 the screen clean" means REAL pauses, not the gap between two words.)
+
+## 63 — the grade boosted every clip the same, and sunny footage went orange
+
+Same review (Tal: *"sometimes the color grading is not perfect"*). Measured
+every beat of 35 renders against 40 frames of his OWN posted reels: his look is
+muted (SATAVG median 13, p90 21; warm tint small, U ≥ -9, V ≤ +10). Ours ran
+SAT 36–46 with U down to -35, V up to +33 on the sunny cuts (Morocco, Cesar,
+Yusuf's close). Root cause: GRADE applies a FIXED `eq=saturation=1.42` plus a
+warm colorbalance, tuned on grey, hazy Damascus Gate footage. Colourful source
+got +42% on top of its own colour.
+
+Fix: each beat's probe frame is now also measured for SATAVG/UAVG/VAVG; the
+saturation is CUT (never boosted beyond GRADE) so that after GRADE it lands near
+20, and a source that is already warm gets GRADE's warm push cancelled. Morocco
+before → after: SAT 45→27, V+30→+16, skin no longer orange (stills compared).
+
+Calibration note (instrument check): "washed-out" and "lifted blacks" flags fired
+on most videos, but his own posted reels sit in the same range (SAT median 13,
+YLOW median 40) - those are his documentary look, not faults. Measure against
+his work, not against a generic "good grade".
