@@ -1696,3 +1696,28 @@ English (THE STANDARD rule 5), not by steering the model.
 **Open, unverified:** `index-footage.mjs`, `retranscribe.mjs` and
 `proj-recaption.mjs` still pass a HOTWORDS `--prompt` to whisper.cpp. Same
 mechanism; not yet A/B-tested for dropped words.
+
+## 66 — a held caption must not run two sentences together (found 2026-09-29)
+
+LESSONS 62's hold merges a line that would flash (< 0.8s) into the next one.
+The merge joined with a SPACE, and every chunk's punctuation had already been
+stripped by `captionLines`, so two sentences became one run-on on screen:
+*"NICE TO MEET YOU WHAT'S YOUR NAME"*, *"YUSUF ARE YOU MUSLIM? YES"*,
+*"THAT ARE JEWISH A LOT OF FRIENDS"* (Yusuf, full-size render).
+
+**First fix was wrong, caught on a preview render (a few full-size files made during that window were re-rendered):** a line
+break at EVERY merge put *"I JUST / LANDED IN ISRAEL"* and *"IT'S MY FIRST /
+TIME AND I'M"* on screen. Most merges are mid-phrase; the chunker splits a
+long clause, the hold glues it back.
+
+**Rule: break only where a sentence ended.** `captionLines` keeps a closing
+full stop on the chunk that ends a sentence (not commas, not an ellipsis);
+`build-edit.mjs` reads that as an `end` flag before stripping punctuation;
+`holdCaptions` puts `\n` after a sentence end, a space otherwise, two lines
+max, full stop dropped at the join; `render-caption.py` honours the `\n` down
+to 68% of base size (`YUSUF ARE YOU MUSLIM? / YES` needs 66px of 94), below
+that the greedy wrap wins. Tested: `test-caption-hold.mjs` rule 5 (six cases,
+including the two failures above) and `test-caption-timing.mjs` 0 0 0.
+
+**Also:** `selfreview.mjs` prints `\n` as ` / ` — a raw newline split the
+caption dump and hid its `<-- CHECK` flag from `batch-finalize`'s parser.

@@ -42,6 +42,16 @@ const cases = [
     texts: ["ARE YOU MUSLIM", "YES I AM"],
   },
   {
+    name: "two sentences said fast break the line where the first one ended",
+    runs: [[0.0, 0.5], [0.6, 1.3], [1.4, 2.4]],
+    texts: ["NICE TO MEET YOU.", "WHAT'S YOUR NAME?", "YUSUF"],
+  },
+  {
+    name: "a question and its one-word answer",
+    runs: [[0.0, 0.9], [1.0, 1.2], [2.8, 3.8]],
+    texts: ["ARE YOU MUSLIM?", "YES.", "I AM JEWISH."],
+  },
+  {
     name: "one short word alone",
     runs: [[0.0, 0.3]],
     texts: ["THANKS"],
@@ -55,8 +65,9 @@ for (const c of cases) {
   console.log(`\n=== ${c.name}`);
   for (const g of got) console.log(`  ${g.a.toFixed(2)}-${g.b.toFixed(2)}  (${(g.b - g.a).toFixed(2)}s)  ${g.text}`);
   const bad = [];
-  const allText = got.map((g) => g.text).join(" ").split(/\s+/).join(" ");
-  if (allText !== c.texts.join(" ").split(/\s+/).join(" ")) bad.push(`words lost or reordered: "${allText}"`);
+  const bare = (t) => t.replace(/[.]/g, "").split(/\s+/).join(" ");
+  const allText = bare(got.map((g) => g.text).join(" "));
+  if (allText !== bare(c.texts.join(" "))) bad.push(`words lost or reordered: "${allText}"`);
   got.forEach((g, i) => {
     if (g.b - g.a < READ_MIN - 1e-6) bad.push(`"${g.text}" on screen ${(g.b - g.a).toFixed(2)}s < ${READ_MIN}`);
     const onVoice = c.runs.some(([s, e]) => g.a >= s - 0.05 && g.a < e);
@@ -70,6 +81,26 @@ for (const c of cases) {
         return endRun && nextRun ? nextRun[0] - endRun[1] : 0;
       })();
       if (gap > 0.001 && gap < BRIDGE && speechGap < 1.2) bad.push(`blank flash ${gap.toFixed(2)}s between "${g.text}" and "${nx.text}"`);
+    }
+    // 5. a MERGED caption breaks the line where a SENTENCE ended - never a
+    //    run-on ("NICE TO MEET YOU WHAT'S YOUR NAME", Yusuf, 2026-09-29) - and
+    //    never mid-phrase ("I JUST / LANDED IN ISRAEL", the first attempt).
+    //    At most two lines; a full stop is never shown mid-caption.
+    const lines = g.text.split("\n");
+    if (lines.length > 2) bad.push(`caption "${g.text.replace(/\n/g, " / ")}" has ${lines.length} lines (max 2)`);
+    if (/\.\s/.test(g.text)) bad.push(`caption "${g.text.replace(/\n/g, " / ")}" shows a full stop mid-caption`);
+    const sentEnds = new Set(c.texts.filter((t) => /[.!?]$/.test(t)).map((t) => t.replace(/[.]$/, "")));
+    const sentWords = new Set(c.texts.filter((t) => /[.!?]$/.test(t)).map((t) => t.replace(/[.!?]$/, "").split(/\s+/).pop()));
+    if (lines.length === 2) {
+      const first = lines[0].replace(/[.]$/, "");
+      if (!sentEnds.has(first) && ![...sentEnds].some((s) => first.endsWith(s)))
+        bad.push(`line break after "${first}", which does not end a sentence`);
+    } else {
+      // no break: then no sentence may end INSIDE this caption
+      const ws = g.text.split(/\s+/);
+      ws.slice(0, -1).forEach((w) => { if (sentWords.has(w.replace(/[.!?]$/, "")) && /[.!?]$/.test(w)) bad.push(`run-on: sentence ends at "${w}" inside "${g.text}" with no line break`); });
+      const joined = c.texts.find((t, ti) => ti < c.texts.length - 1 && /[.!?]$/.test(t) && g.text.replace(/[.!?]/g, "").includes(`${t.replace(/[.!?]$/, "")} ${c.texts[ti + 1].split(/\s+/)[0].replace(/[.!?]$/, "")}`));
+      if (joined) bad.push(`run-on: "${joined}" and the next sentence share a line in "${g.text}"`);
     }
     // a real pause must clear
     const run = c.runs.find(([s, e]) => g.a >= s - 0.05 && g.a < e);

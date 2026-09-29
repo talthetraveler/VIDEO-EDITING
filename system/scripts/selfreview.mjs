@@ -119,7 +119,7 @@ if (existsSync(logP)) {
     let rf = 0;
     for (const c of caps) {
       const hits = NONSENSE.filter(([re]) => re.test(String(c.text)));
-      console.log(`   ${String(c.beat ?? "").padStart(2)} ${(+c.at).toFixed(2).padStart(6)}-${(+c.to).toFixed(2).padEnd(6)} ${c.text}${hits.length ? "  <-- CHECK" : ""}`);
+      console.log(`   ${String(c.beat ?? "").padStart(2)} ${(+c.at).toFixed(2).padStart(6)}-${(+c.to).toFixed(2).padEnd(6)} ${String(c.text).replace(/\n/g, " / ")}${hits.length ? "  <-- CHECK" : ""}`);
       rf += hits.length ? 1 : 0;
     }
     console.log(`\n   ${caps.length} rendered captions, ${rf} flagged.`);

@@ -76,13 +76,36 @@ def layout(words, f, maxw):
     if cur: lines.append(cur)
     return lines if len(lines) <= 2 else None
 
+def forced(parts, f, maxw):
+    """An explicit break ("A\\nB", from a merge of two spoken lines): keep it
+    if both parts fit on their own line, else None (the greedy wrap decides)."""
+    if len(parts) != 2:
+        return None
+    space = wordw(" ", f)
+    for p in parts:
+        if sum(wordw(w, f) for w in p) + space * (len(p) - 1) > maxw:
+            return None
+    return parts
+
 def render(text, key_idx, idx):
     words = [w for w in re.split(r"\s+", text.strip()) if w]
     if not words:
         return None
+    parts = [[w for w in re.split(r"\s+", p.strip()) if w] for p in text.strip().split("\n")]
+    parts = [p for p in parts if p]
     size = BASE
     lines = None
-    while size >= 46:
+    # a break between two spoken lines wins ("YUSUF ARE YOU MUSLIM? / YES", not
+    # "YUSUF ARE YOU / MUSLIM? YES") as long as it fits at >= 68% of the base
+    # size; below that, legibility beats grammar and the greedy wrap decides.
+    while len(parts) == 2 and size >= max(46, round(BASE * 0.68)):
+        lines = forced(parts, font(size), MAXW)
+        if lines:
+            break
+        size -= 4
+    if not lines:
+        size = BASE
+    while not lines and size >= 46:
         f = font(size)
         lines = layout(words, f, MAXW)
         if lines:

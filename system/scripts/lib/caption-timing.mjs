@@ -120,6 +120,8 @@ const HOLD_MERGE_WORDS = 7;      // two short lines - still readable at the auto
  * @param end  hard stop (beat / segment end), seconds
  * @returns    [{a, b, text}] - starts unchanged (still on the voice), ends held
  */
+const endsSentence = (c) => c.end ?? /[.!?]["']?$/.test(String(c.text).trim());
+
 export function holdCaptions(caps, end = Infinity) {
   const cs = caps.map((c) => ({ ...c })).sort((x, y) => x.a - y.a);
   // 1. a line that would be on screen shorter than READ_MIN before the next
@@ -129,7 +131,17 @@ export function holdCaptions(caps, end = Infinity) {
     const prev = merged[merged.length - 1];
     const words = (t) => String(t).split(/\s+/).filter(Boolean).length;
     if (prev && c.a - prev.a < READ_MIN && words(prev.text) + words(c.text) <= HOLD_MERGE_WORDS) {
-      prev.text = `${prev.text} ${c.text}`.replace(/\s+/g, " ").trim();
+      // Where a SENTENCE ended, the parts meet on a LINE BREAK - a space turned
+      // two sentences into a run-on ("NICE TO MEET YOU WHAT'S YOUR NAME",
+      // Yusuf). Mid-phrase they meet on a space - breaking there put
+      // "I JUST / LANDED IN ISRAEL" on screen. Sentence end = the part's own
+      // . ! ? (captionLines keeps a closing full stop for this) or the
+      // builder's `end` flag. Full stops are dropped at the join; two lines max.
+      const clean = (t) => String(t).replace(/[ \t]+/g, " ").trim();
+      const noStop = (t) => clean(t).replace(/[.,;:]+$/, "");
+      if (!prev.text.includes("\n") && endsSentence(prev)) prev.text = `${noStop(prev.text)}\n${clean(c.text)}`;
+      else prev.text = `${noStop(prev.text)} ${clean(c.text)}`;
+      prev.end = c.end;
       prev.b = Math.max(prev.b, c.b);
     } else merged.push(c);
   }

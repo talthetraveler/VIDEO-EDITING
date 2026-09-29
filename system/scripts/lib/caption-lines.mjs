@@ -38,10 +38,14 @@ export function captionLines(text) {
   const clean = String(text ?? "").replace(/\s+/g, " ").trim();
   if (!clean) return [];
 
-  // 1. clauses — keep the punctuation OUT of the caption, it is noise on screen
+  // 1. clauses — keep the punctuation OUT of the caption, it is noise on screen.
+  //    EXCEPT a sentence's closing full stop: holdCaptions reads it to put a
+  //    line break (not a run-on) where two sentences merge into one caption,
+  //    then drops it; the builder strips any that is still trailing. An
+  //    ellipsis ("I'm a...") is a trailing-off, not a sentence end.
   const clauses = clean
     .split(/(?<=[.!?,;:])\s+/)
-    .map((c) => c.replace(/[,.;:]+$/g, "").trim())
+    .map((c) => c.replace(/\.{2,}$|…$/, "").replace(/[,;:]+$/g, "").trim())
     .filter(Boolean);
 
   const out = [];

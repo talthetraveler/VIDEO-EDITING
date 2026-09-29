@@ -46,6 +46,12 @@ outrank a guess.
 
 - **Bold, uppercase, WHITE sans-serif with a dark outline or shadow.**
 - **1-3 words** per caption beat; one word is preferred for emphatic dialogue.
+  **Except a line too quick to read.** Tal, 2026-09-29: *"the caption pops up
+  for like 0.2 seconds and then it goes away … it doesn't hold till I finish
+  my sentence."* A line that would be on screen under 0.8s MERGES with the
+  next (up to 7 words), and the two lines break where a sentence ended —
+  never a run-on, never mid-phrase (LESSONS 62, 66). His later, specific
+  complaint outranks the word count; `holdCaptions` does this, never by hand.
 - **Lower-middle of frame**, clear of faces, hands, and platform controls.
 - Each change matches the spoken word or short phrase tightly.
 - Captions are rhythm: rapid speech -> rapid replacement; **pauses leave the

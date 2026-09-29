@@ -480,7 +480,11 @@ function captionFilters(id, ss, to, n, opts = {}) {
       // are MERGED rather than delayed. Onsets are assigned to lines in order
       // by a small DP, not greedily, because greedy assignment strands a line
       // in a pause while a good onset goes unused.
-      const fitTexts = chunks.map((c, ci) => fit[ci]?.text ?? c);
+      // flattened: fit-caption.py returns a two-line fit as "A\nB", and a "\n"
+      // now MEANS "a sentence ended here" to holdCaptions (LESSONS 66) - its
+      // width wrap put "YOU'RE A / RELIGIOUS JEW YEAH WOW" on screen.
+      // render-caption.py wraps for width on its own.
+      const fitTexts = chunks.map((c, ci) => String(fit[ci]?.text ?? c).replace(/\s+/g, " ").trim());
       // the speech actually inside this segment, clipped to it
       let segRuns = audioRuns
         .map(([a, b]) => [Math.max(a, a0 - 0.25), Math.min(b, b0 + 0.25)])
@@ -526,7 +530,11 @@ function captionFilters(id, ss, to, n, opts = {}) {
         // 0.2s floor dropped it BEFORE holdCaptions could extend it to a
         // readable 0.8s - only a genuinely empty window is dropped now.
         if (b - a < 0.03) return;
-        let shownC = P.text.replace(/[,.;:!?"]+$/g, "").replace(/\s+/g, " ");
+        // `end`: this line closes a sentence - read BEFORE its punctuation is
+        // stripped, so the beat-level holdCaptions can still break the line
+        // there. [ \t] not \s: keep a line break an earlier merge put in.
+        const endsS = /[.!?]["']?$/.test(P.text.trim());
+        let shownC = P.text.replace(/[,.;:!?"]+$/g, "").replace(/[ \t]+/g, " ").replace(/\.(?=\s)/g, "");
         // NEVER SHOW THE SAME LINE TWICE RUNNING. Groq emits overlapping
         // segments when two people talk, so the identical sentence can survive
         // de-duplication inside a segment and still land again in the next one
@@ -567,7 +575,7 @@ function captionFilters(id, ss, to, n, opts = {}) {
         // untrimmed windows, and selfreview then showed overlaps that the
         // render never drew, israel-batch 2026-09-29)
         LAST_WORDS = shownC.split(/\s+/).filter(Boolean);
-        out.push({ text: shownC, a: +a.toFixed(2), b: +b.toFixed(2) });
+        out.push({ text: shownC, a: +a.toFixed(2), b: +b.toFixed(2), end: endsS });
         k++;
       });
     }
