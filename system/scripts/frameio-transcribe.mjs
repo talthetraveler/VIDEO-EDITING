@@ -18,6 +18,7 @@
 //   node scripts/frameio-transcribe.mjs --provider local # local WhisperX
 //   node scripts/frameio-transcribe.mjs --only <id,id>   # re-do specific assets
 //   node scripts/frameio-transcribe.mjs --force          # ignore cache entirely
+//   node scripts/frameio-transcribe.mjs --only <id> --names "Tal, Nazareth"   # spell names right
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, statSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { join } from "node:path";
@@ -114,6 +115,9 @@ const SEVERITY = (why) => {
 // Optional language hint. NOT forced by default: this footage is genuinely
 // mixed Hebrew/Arabic/English and a wrong hint is worse than no hint.
 const LANG = args.includes("--language") ? args[args.indexOf("--language") + 1] : undefined;
+// Optional spelling hint: --names "Tal, Nazareth, knafeh". Names that are
+// really said in these clips only — see groqTranscribe for why it is opt-in.
+const NAMES = args.includes("--names") ? args[args.indexOf("--names") + 1] : undefined;
 const ONLY = args.includes("--only")
   ? new Set(args[args.indexOf("--only") + 1].split(",").map((s) => s.trim()))
   : null;
@@ -209,7 +213,7 @@ async function handle(j) {
       : null;
 
     let r = PROVIDER === "groq"
-      ? await groqTranscribe(wav, { model: MODEL, words: WORDS, language: LANG })
+      ? await groqTranscribe(wav, { model: MODEL, words: WORDS, language: LANG, prompt: NAMES })
       : localTranscribe(wav);
 
     if (PROVIDER === "groq") billedSeconds += probe.duration ?? 0;
@@ -240,7 +244,7 @@ async function handle(j) {
           // the handful of clips that earned them.
           const tries = [];
           const attempt = async (language) => {
-            const rr = await groqTranscribe(wav, { model: GROQ_LARGE, words: WORDS, language });
+            const rr = await groqTranscribe(wav, { model: GROQ_LARGE, words: WORDS, language, prompt: NAMES });
             escalatedSeconds += probe.duration ?? 0;
             const ss = rr.segments ?? [];
             const cc = meanConf(ss);

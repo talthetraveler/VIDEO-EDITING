@@ -217,6 +217,7 @@ that the job actually touches. "I have a toolbox" is not the same as reading it.
 | motion / titles, when a film actually needs them | `toolbox/05-motion-graphics/`, `toolbox/motion-doctrine/`, `toolbox/style-library/` | taste only; they do not know this footage |
 | hook or caption copy | `toolbox/tal-scriptwriting/` | |
 | an INDEPENDENT check on caption timing | `caption-crosscheck.mjs` (AutoSubSync/ffsubsync) | a PASS is real evidence; anything else means **not checked**. It refuses on a montage and loses lock on sparse street speech - `REPOS.md` has the measurements |
+| cutting a person out, a vanish, 3D objects, a split-screen explainer | `formats/talking-to-camera-effects.md` -> `hyperframes-*` skills, `npx hyperframes remove-background` | needs a **clean plate** (2s of the empty room) from the shoot. Not yet built on his footage |
 | a launch video about a PROJECT or a URL | `/brag-slim` (installed skill) | reads a codebase, **not footage**. Never point it at a shoot |
 
 **None of this closes the real gap.** Every failure Tal has flagged was a
@@ -235,6 +236,7 @@ Frame.io, not a local folder.
 node system/scripts/frameio-test.mjs                                  # login works? lists projects
 node system/scripts/frameio-discover.mjs "SHOT IN ISRAEL/WHAT MAKES YOU HAPPY" --fetch   # metadata + 180p proxies
 node system/scripts/frameio-transcribe.mjs --words                     # Groq, cached
+#   add --names "Tal, Nazareth, ..." when a name keeps coming out misspelled (only names really said)
 node system/scripts/fetch-hq.mjs <slug>                                # originals, ONLY the spans used
 ```
 
@@ -281,6 +283,7 @@ Answer three questions first. Do not load a single specialist skill until you ha
 | Script/VO explaining something, facts, numbers | `nas-explainer` |
 | **Tal's own voice over B-roll**: his life story, a mission, a cause, "here's my voice, do the B-roll" | `voiceover-broll` |
 | One person to camera, no script | `talking-head` |
+| **Tal on camera asking for effects** (said on camera or typed): zooms on a word, logo in his hand, cutouts, split-screen explainer | `talking-to-camera-effects` |
 | Asking strangers a question, many answers | `street-interview` |
 | An organisation, a cause, a mission | `nonprofit-story` |
 | A product, a company, technology | `startup-tech` |
@@ -403,8 +406,11 @@ shot only. A caption sitting over someone's mouth is worse than a caption 6%
 higher than usual.
 
 **Always stay inside the Reels/TikTok/Shorts safe zones.** Platform UI eats
-roughly the bottom ~250px and the top ~130px of a 1920-tall frame. A title
-pushed too high or a caption pushed too low disappears behind it.
+the bottom ~400px (about 20%), the top ~220px and the right ~150px (the
+like/comment rail) of a 1080x1920 frame. These numbers come from
+`system/src/lib/safe-area.ts`. This line used to say ~250px bottom and ~130px
+top; corrected 2026-09-29. A title pushed too high or a caption pushed too low
+disappears behind the platform's buttons.
 
 `style consistency > identical pixel coordinates`
 

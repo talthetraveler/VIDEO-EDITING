@@ -122,6 +122,7 @@ these. **[M]**
 | 16 | [Malaysia street love story](https://www.instagram.com/reel/DM2lX3BSdl0/) | STRANGER STORY | STYLE | LISTED |
 | 25 | [Montana Tucker — Muslim/Jewish unity](https://www.instagram.com/reel/C-nbjULPGts/) | UNITY | STYLE | **MEASURED** — n=7: 6 of 7 are ONE unbroken shot, 14–43s, zero on-screen text |
 | 26 | [MD Motivator — Michael](https://www.instagram.com/reel/CcyT0e_lYrb/) | STRANGER STORY | STYLE | **MEASURED** — 9 frames + `assets/analysis/mdmotivator-michael/editing-reference.md` |
+| G-1 | **"Let Claude Edit Your Videos"**, The Creator Stack #113 (@pauloshimas), PDF guide, given by Tal 2026-09-29 | TALKING TO CAMERA + EFFECTS | **METHOD** | **GUIDE, NOT MEASURED** (no video). Local copy in `assets/references/creator-stack-113/`. Absorbed into `formats/talking-to-camera-effects.md`: spoken effect cues, test-shot check, clean plate, `--names`, HyperFrames effects menu, and a table of where it conflicts with his standard |
 
 ---
 

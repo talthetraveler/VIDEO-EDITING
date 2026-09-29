@@ -43,7 +43,8 @@ This is the layout that defines a Tal video on sight.
 > or the object being discussed, reposition it for that shot. A caption over
 > someone's mouth is worse than a caption 6% higher than usual.
 > Always stay inside the Reels/TikTok/Shorts safe zones (platform UI eats
-> roughly the bottom ~250px and top ~130px of a 1920-tall frame).
+> the bottom ~400px / 20%, top ~220px and right ~150px of a 1080x1920 frame,
+> per `system/src/lib/safe-area.ts`; corrected 2026-09-29 from ~250/~130).
 > **`style consistency > identical pixel coordinates`** **[S]**
 
 ```

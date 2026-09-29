@@ -128,8 +128,14 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
  * `language` is optional. Passing it removes the short-clip language-detection
  * failure mode, but we leave it UNSET by default because this footage is
  * genuinely mixed Hebrew/Arabic/English and we want the model's real guess.
+ *
+ * `prompt` is optional too: a comma list of names and places the model should
+ * spell right ("Tal, Nazareth, knafeh"). Whisper spells a name the way it
+ * sounds unless told; the older whisper.cpp scripts already pass HOTWORDS, this
+ * path did not. OFF by default — whisper can echo prompt words into silence, so
+ * pass only names that are actually said in the clips being transcribed.
  */
-export async function groqTranscribe(wav, { model = GROQ_TURBO, language, words = false, maxAttempts = 5 } = {}) {
+export async function groqTranscribe(wav, { model = GROQ_TURBO, language, words = false, prompt, maxAttempts = 5 } = {}) {
   const g = await client();
   const { createReadStream } = await import("node:fs");
 
@@ -142,6 +148,7 @@ export async function groqTranscribe(wav, { model = GROQ_TURBO, language, words 
         response_format: "verbose_json",
         ...(words ? { timestamp_granularities: ["segment", "word"] } : {}),
         ...(language ? { language } : {}),
+        ...(prompt ? { prompt } : {}),
       }).withResponse();
       const { data: r, response: httpRes } = await withResp;
       const rl = {
@@ -165,6 +172,7 @@ export async function groqTranscribe(wav, { model = GROQ_TURBO, language, words 
         })),
         provider: "groq",
         model,
+        ...(prompt ? { prompt } : {}),
         rate_limit: rl,
         elapsed_s: +((Date.now() - t0) / 1000).toFixed(2),
       };
