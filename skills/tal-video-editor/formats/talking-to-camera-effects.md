@@ -49,13 +49,10 @@ before stopping, plus 2s without any object that will "come to life". Without
 it, the vanish and layer effects cannot be built, so ask for it **before** the
 shoot, not after.
 
-**4. Names spelled right.** Whisper spells names the way they sound. Pass the
-names actually said in the clips:
-`node system/scripts/frameio-transcribe.mjs --only <id> --names "Tal, Nazareth, knafeh"`
-(added 2026-09-29; opt-in because whisper can echo prompt words into silence).
-Tested on a Shabbat Shalom clip: same words, no names leaked in where nobody
-said them. It has not yet been tested on a clip where the name was actually
-misspelled.
+**4. Names spelled right — by reading, NOT by prompting.** The guide says to
+give Whisper your names. **Tested here and rejected:** on a real clip the
+prompt fixed "knafeh" but silently dropped 97 of 235 words, the whole payoff
+(LESSONS 65). Names get fixed when every caption is read as English.
 
 **5. Director notes.** Tal's notes are fastest as one change per line with a
 time: *"0:07 logo covers my face - move it next to my hand, 20% smaller."*

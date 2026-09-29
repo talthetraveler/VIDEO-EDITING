@@ -1672,3 +1672,27 @@ pointing-at-the-ground span is rejected no matter how good the words are.
 A kindness story opens on the ask and the yes, goes straight to the giving
 (visible), and spends the rest on the person's most emotional lines. Not
 chronology of everything said; the arc ask → yes → sit together → heart.
+
+## 65 — a spelling hint deleted the story (measured 2026-09-29)
+
+From the Creator Stack #113 guide: *give Whisper your names so it spells them
+right.* Built as `frameio-transcribe.mjs --names` (Groq `prompt`), then
+A/B-tested on three real clips before trusting it.
+
+Spelling did improve: `knafe` -> `knafeh`, `yafos` -> `Yafo`. Not every name
+was fixed: `Mas Salaam` became `Masalam`, still not *ma'a salama*.
+
+But on the 80s knafeh kindness-test clip (6435e4c1) the prompted run returned
+**138 words instead of 235, identically on two runs.** What vanished was the
+whole payoff: *"are you Muslim ... I'm Jewish, we are brothers ... I was
+testing to see if you would help me."* It still covered 0.1–80s and none of
+the `suspect()` checks (language, confidence, looping, empty) fire on it, so
+it would have shipped silently as a clean transcript with the story missing.
+
+**Rule: never prompt the transcriber.** The feature was removed the same day.
+Fix spelling where it is cheap and visible: when reading every caption as
+English (THE STANDARD rule 5), not by steering the model.
+
+**Open, unverified:** `index-footage.mjs`, `retranscribe.mjs` and
+`proj-recaption.mjs` still pass a HOTWORDS `--prompt` to whisper.cpp. Same
+mechanism; not yet A/B-tested for dropped words.

@@ -236,7 +236,7 @@ Frame.io, not a local folder.
 node system/scripts/frameio-test.mjs                                  # login works? lists projects
 node system/scripts/frameio-discover.mjs "SHOT IN ISRAEL/WHAT MAKES YOU HAPPY" --fetch   # metadata + 180p proxies
 node system/scripts/frameio-transcribe.mjs --words                     # Groq, cached
-#   add --names "Tal, Nazareth, ..." when a name keeps coming out misspelled (only names really said)
+#   never prompt it with names - it drops whole lines (LESSONS 65); fix spelling in the captions
 node system/scripts/fetch-hq.mjs <slug>                                # originals, ONLY the spans used
 ```
 
