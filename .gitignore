@@ -108,3 +108,7 @@ system/projects/_frameio/cache/
 **/transcripts/
 **/translate/
 **/diarize/
+
+# Founders' personal photos (pulled from the El Hamaayan Drive for the demo) — local only
+system/public/maayan-demo/founders/
+system/projects/maayan-demo/founders-candidates.jpg

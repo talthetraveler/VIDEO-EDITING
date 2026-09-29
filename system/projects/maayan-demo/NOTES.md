@@ -50,3 +50,27 @@ Rebuild:
 (so gated actions work), 6 saved places, 3 collections (Golan weekend / Easy with kids /
 Jerusalem hills, 9 items, SQL), trip "Golan weekend" 2026-10-02 with 4 stops (app), 7 shared gear
 items (SQL), one "I will bring it" commitment and a few Discover likes/skips (app).
+
+## Founder footage (for the "belonging" beat) — found 2026-09-29
+
+Source: the El Hamaayan Drive, navigated through the media index (`assets.jsonl`, 989 records).
+Originals are downloaded to `public/maayan-demo/founders/` — **gitignored, personal photos**.
+Contact sheet: `founders-candidates.jpg` (also gitignored).
+
+| # | Drive file id | What | Index says |
+|---|---|---|---|
+| 1 | 1vnte4GmzCZO34iDhNznwUwrWxW9RRy8Q | Two founders pointing at camera, 2020 pre-army trip | "Founders", hero |
+| 2 | 10eWM_UOpSpXJEmMn4nOvkWpmFaeY9LgQ | Two founders arm in arm, 2020 | "Founders", hero |
+| 3 | 1R9Ilrnw7tAZdxIN3_EG8TFnWDcarnwDP | Founder laughing in grass, 2020 | "Founder", hero |
+| 4 | 1gsYqXeAO19FV919OMyPOiuagFEVyKCQE | Pre-army group above a valley, 2020 (flag in frame) | hero, friends |
+| 5 | 10se3pwQwRfSb4PwIz0Ue0G6P_OspGc9Q | Handshake on trail, Ramat HaShofet 2023 | "Friends" — identity unconfirmed |
+| 6 | 1FRpLEF1M9NxQlTsx7jXo7Rdv76-j1bfZ | Four friends through SUV roof (drone), 2024 | "Friends" — identity unconfirmed |
+| 7 | 19qfT2hgIb3CY-J-mPqgywGoFmhNlB5IL | Night road-trip crew, Kinneret 2025 | "Friends" — identity unconfirmed |
+| 8 | 18kqr8jx2r5Y3c9CDlnOzeDYhw5trwynE | UTV, watermelon + guitar, 2025 (shirtless) | "Friends" — identity unconfirmed |
+| 9 | 1rh66oK_MGgZyS7vp1tJn3hYx6EChyjZV | Group on Makhtesh Ramon ridge, 2024 (faces tiny) | "Friends" |
+
+Limits hit: the Drive connector downloads ≤10 MB (and dropped the session above ~6 MB), so
+**no founder video could be pulled** — every people-in-frame clip in the index is 19–99 MB.
+The index names "founders" only on the three 2020 photos; the rest need the owner to confirm who's
+in them. Ruled out: the "טרנד תיוג עצמי" raw clips (a friend's desert-camp shoot, no founders) and
+"Young hikers on cliff ledge" (children).
