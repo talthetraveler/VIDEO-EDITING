@@ -120,7 +120,7 @@ POST-RENDER CHECK — re-transcribing the finished audio`);
   try {
     const r = await groqTranscribe(tmp, { words: true });
     words = (r.words ?? []).sort((a, b) => a.start - b.start);
-  } catch (e) { console.log(`  (could not verify: ${scrub(e.message).slice(0, 60)})`); }
+  } catch (e) { console.log(`  (could not verify: ${String(e?.message ?? e).slice(0, 60)})`); }
 
   if (words.length) {
     let acc = 0, bad = 0;
