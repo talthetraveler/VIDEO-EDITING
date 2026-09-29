@@ -101,6 +101,66 @@ export function placeCaptions(onsets, texts, wordsPerChunk, a0, b0) {
 
 const round = (t) => Math.round(t * 1000) / 1000;
 
+// ---------------------------------------------------------------------------
+// HOLD — Tal, 2026-09-29: *"the caption pops up for like 0.2 seconds and then
+// it goes away … it doesn't hold till I finish my sentence … it doesn't hold
+// till the next person says something."* Measured on 35 finished videos:
+// median 0.56s on screen, 40% under 0.5s, 84% under 0.8s, and 479 blank
+// flashes between words. The old rule here was "a caption must not span a
+// gap"; his direction replaces it: a caption holds until the next one
+// replaces it, and only a REAL pause clears the screen.
+export const READ_MIN = 0.8;     // nothing shorter than this is readable
+export const BRIDGE = 1.0;       // a gap shorter than this is inside a sentence - hold across it
+export const TAIL = 0.4;         // after the last word before a real pause
+export const HOLD_LONG = 3.2;    // a single line never stays longer than this
+const HOLD_MERGE_WORDS = 7;      // two short lines - still readable at the auto-shrunk size
+
+/**
+ * @param caps [{a, b, text}] sorted or not; a/b = when the words are SPOKEN
+ * @param end  hard stop (beat / segment end), seconds
+ * @returns    [{a, b, text}] - starts unchanged (still on the voice), ends held
+ */
+export function holdCaptions(caps, end = Infinity) {
+  const cs = caps.map((c) => ({ ...c })).sort((x, y) => x.a - y.a);
+  // 1. a line that would be on screen shorter than READ_MIN before the next
+  //    one arrives is MERGED into it (never delayed - delaying drifts).
+  const merged = [];
+  for (const c of cs) {
+    const prev = merged[merged.length - 1];
+    const words = (t) => String(t).split(/\s+/).filter(Boolean).length;
+    if (prev && c.a - prev.a < READ_MIN && words(prev.text) + words(c.text) <= HOLD_MERGE_WORDS) {
+      prev.text = `${prev.text} ${c.text}`.replace(/\s+/g, " ").trim();
+      prev.b = Math.max(prev.b, c.b);
+    } else merged.push(c);
+  }
+  // 2. hold: until the next caption if it comes within BRIDGE, else a short
+  //    tail into the pause; never under READ_MIN; never past the next start.
+  for (let i = 0; i < merged.length; i++) {
+    const c = merged[i];
+    const next = i + 1 < merged.length ? merged[i + 1].a : Infinity;
+    let b = next - c.b < BRIDGE ? next : c.b + TAIL;
+    b = Math.max(b, c.a + READ_MIN);
+    b = Math.min(b, next, end, c.a + Math.max(HOLD_LONG, c.b - c.a + TAIL));
+    c.b = round(b);
+    c.a = round(c.a);
+  }
+  return merged.filter((c) => c.b - c.a > 0.05);
+}
+
+/**
+ * PLACE BY THE WORDS THEMSELVES. When a clip is WhisperX-aligned, every word
+ * has an exact start and end, so a line starts on its first word and ends on
+ * its last - no share-of-speaking-time estimate. That estimate put lines up to
+ * ~2s EARLY (a line placed in the previous sentence's speech run, Cesar cut
+ * 2026-09-29).
+ * @param lines [{text, words:[{start,end}]}] in speaking order, times in beat seconds
+ */
+export function placeByWords(lines) {
+  return lines
+    .filter((l) => l.words && l.words.length)
+    .map((l) => ({ a: round(l.words[0].start), b: round(l.words[l.words.length - 1].end), text: l.text }));
+}
+
 /**
  * LAY LINES INSIDE MEASURED SPEECH.
  *
@@ -132,6 +192,10 @@ export function placeInSpeech(runs, texts, words) {
   let cursor = spans[0][0];
   for (let i = 0; i < texts.length; i++) {
     const want = (words[i] / totalW) * talk;
+    // DON'T START A LINE IN THE DREGS OF A RUN. With too little of the current
+    // run left for this line, its speech is really in the NEXT run - starting it
+    // here showed "YES I AM" during the previous sentence, ~2s before it was said.
+    if (si + 1 < spans.length && spans[si][1] - cursor < 0.4 * want) { si++; cursor = spans[si][0]; }
     const a = cursor;
     // A CAPTION MUST NOT SPAN A GAP. Give it its share of speaking time, but
     // never let the window run past the end of the run it starts in — a line
@@ -183,7 +247,8 @@ export function placeInSpeech(runs, texts, words) {
     const run = spans.find(([s, e]) => last.a >= s - 1e-6 && last.a < e);
     if (run) last.b = round(Math.min(Math.max(last.b, run[1]), last.a + HOLD_MAX));
   }
-  return merged;
+  // HOLD (Tal, 2026-09-29) - bridge the gaps between words, readable minimum.
+  return holdCaptions(merged, spans[spans.length - 1][1] + READ_MIN);
 }
 
 /**

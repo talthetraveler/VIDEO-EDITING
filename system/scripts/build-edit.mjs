@@ -22,7 +22,7 @@ import { locate, frameFor } from "./lib/framing.mjs";
 
 const FFDIR = "C:/Users/taldo/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.1-full_build/bin";
 const FF = join(FFDIR, "ffmpeg.exe"), FP = join(FFDIR, "ffprobe.exe");
-import { placeInSpeech } from "./lib/caption-timing.mjs";
+import { placeInSpeech, placeByWords, holdCaptions } from "./lib/caption-timing.mjs";
 import { captionLines } from "./lib/caption-lines.mjs";
 // A REGEX LITERAL, not new RegExp("..."): inside a string the backslashes were
 // eaten, the class closed early, and it only matched "<symbol>]" - so a
@@ -497,13 +497,35 @@ function captionFilters(id, ss, to, n, opts = {}) {
           .map((w) => [Math.max(0, w.start - ss), Math.min(to - ss, w.end - ss)])
           .filter(([a, b]) => b - a > 0.05);
       }
-      const placed = segRuns.length
+      // ALIGNED + ENGLISH: place each line on its OWN words (exact WhisperX
+      // times). The share-of-speaking-time estimate below put lines up to ~2s
+      // early (Cesar, 2026-09-29). Used only when the segment's words map 1:1
+      // onto the aligned words; anything else (translation, a captionFix that
+      // changed the word count, de-duplicated overlap) falls back.
+      let placed = null;
+      if (own.aligned && !existsSync(tp)) {
+        const W = srcWords.filter((w) => w.start >= sg.start - 0.06 && w.end <= sg.end + 0.06);
+        const lead = words.length - segText.split(/\s+/).filter(Boolean).length;
+        const need = wordsPerChunk.reduce((t, x) => t + x, 0);
+        if (W.length === words.length && lead >= 0 && need === words.length - lead) {
+          let k = lead;
+          placed = placeByWords(fitTexts.map((t, ci) => {
+            const ws = W.slice(k, k + wordsPerChunk[ci]).map((w) => ({ start: w.start - ss, end: w.end - ss }));
+            k += wordsPerChunk[ci];
+            return { text: t, words: ws };
+          })).filter((P) => P.b > 0 && P.a < to - ss).map((P) => ({ ...P, a: Math.max(0, P.a) }));
+        }
+      }
+      if (!placed) placed = segRuns.length
         ? placeInSpeech(segRuns, fitTexts, wordsPerChunk)
         : [];
       placed.forEach((P) => {
         const a = P.a;
         const b = Math.min(P.b, to - ss);
-        if (b - a < 0.2) return;
+        // A quick line is still speech: "not good" is said in 0.18s. The old
+        // 0.2s floor dropped it BEFORE holdCaptions could extend it to a
+        // readable 0.8s - only a genuinely empty window is dropped now.
+        if (b - a < 0.03) return;
         let shownC = P.text.replace(/[,.;:!?"]+$/g, "").replace(/\s+/g, " ");
         // NEVER SHOW THE SAME LINE TWICE RUNNING. Groq emits overlapping
         // segments when two people talk, so the identical sentence can survive
@@ -568,7 +590,11 @@ function captionFilters(id, ss, to, n, opts = {}) {
     for (let i = 0; i < kept.length - 1; i++) {
       if (kept[i].b > kept[i + 1].a) kept[i].b = +(kept[i + 1].a).toFixed(2);
     }
-    const shown = kept.filter((c) => c.b - c.a >= 0.2);
+    // HOLD ACROSS THE WHOLE BEAT (Tal, 2026-09-29): until the next line -
+    // the next person included - replaces it; readable minimum; only a real
+    // pause clears the screen. lib/caption-timing.mjs holdCaptions, tested by
+    // scripts/test-caption-hold.mjs.
+    const shown = holdCaptions(kept, to - ss).filter((c) => c.b - c.a >= 0.2);
     for (const c of shown) CAPTIONS.push({ beat: n, at: c.a, to: c.b, text: c.text });
     return shown;
   }

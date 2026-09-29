@@ -1621,3 +1621,18 @@ plausible-looking render with nothing in the log:
    screen. A checker that reports the wrong thing trains you to ignore it.
 
 `test-caption-timing.mjs` still prints 0 0 0 after all three.
+
+## 62 — a caption must HOLD until the sentence is finished (Tal, 2026-09-29)
+
+Tal, reviewing the israel-batch: *"When I speak, the caption comes up, but it
+doesn't hold till I finish my sentence … it doesn't hold till the next person
+says something. It should hold that way … the caption pops up for like 0.2
+seconds and then it goes away. The person doesn't have enough time to read it."*
+Also: *"sometimes the color grading is not perfect, so you need to fix that."*
+
+The rule, now in force: a caption stays on screen from its first word until
+the NEXT caption replaces it, bridging the small gaps inside a sentence, and
+holds a short tail after the sentence ends. Nothing is shown for less than a
+readable minimum; lines that would flash are merged with their neighbour
+instead. The screen clears only in a real pause. (THE STANDARD's "pauses leave
+the screen clean" means REAL pauses, not the gap between two words.)
