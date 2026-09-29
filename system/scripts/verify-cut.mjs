@@ -143,7 +143,12 @@ POST-RENDER CHECK — re-transcribing the finished audio`);
   }
 }
 
-process.exit(problems ? 1 : 0);
+// exitCode, NOT process.exit(): the Groq fetch leaves a keep-alive socket
+// closing, and process.exit() during that close aborts Node on Windows
+// ("Assertion failed: !(handle->flags & UV_HANDLE_CLOSING)", exit 127) AFTER
+// every check passed - which failed the selfreview gate on every render
+// (Social Accords batch, 2026-09-29). Letting the loop drain exits cleanly.
+process.exitCode = problems ? 1 : 0;
 
 // ---------------------------------------------------------------------------
 // POST-RENDER CHECK — the one that actually matters.
