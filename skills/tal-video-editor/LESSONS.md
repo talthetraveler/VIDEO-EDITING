@@ -1657,7 +1657,7 @@ on most videos, but his own posted reels sit in the same range (SAT median 13,
 YLOW median 40) - those are his documentary look, not faults. Measure against
 his work, not against a generic "good grade".
 
-## 63 — a covered lens is not a shot; the giving IS the shot (Tal, 2026-09-29)
+## 64 — a covered lens is not a shot; the giving IS the shot (Tal, 2026-09-29)
 
 Tal, on the feed-homeless cut: *"it wasn't so emotional ... they didn't choose
 the best clips ... [the hand was] just covering the camera, so you couldn't
