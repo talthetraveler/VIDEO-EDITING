@@ -1656,3 +1656,19 @@ Calibration note (instrument check): "washed-out" and "lifted blacks" flags fire
 on most videos, but his own posted reels sit in the same range (SAT median 13,
 YLOW median 40) - those are his documentary look, not faults. Measure against
 his work, not against a generic "good grade".
+
+## 63 — a covered lens is not a shot; the giving IS the shot (Tal, 2026-09-29)
+
+Tal, on the feed-homeless cut: *"it wasn't so emotional ... they didn't choose
+the best clips ... [the hand was] just covering the camera, so you couldn't
+see. So choose from the part where I'm actually giving it."* And the story
+shape he wants: *"I say 'are you hungry?', he says 'yes', then I take him ...
+we sit down, and then you choose the most emotional parts of what he said."*
+
+Cause: moments were chosen from the transcript. A line can be perfect while
+the picture under it is a palm over the lens. **Every beat's picture is
+checked on a real frame before it is kept** — a covered, black or
+pointing-at-the-ground span is rejected no matter how good the words are.
+A kindness story opens on the ask and the yes, goes straight to the giving
+(visible), and spends the rest on the person's most emotional lines. Not
+chronology of everything said; the arc ask → yes → sit together → heart.
