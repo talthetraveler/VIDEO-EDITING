@@ -366,7 +366,10 @@ function captionFilters(id, ss, to, n, opts = {}) {
     // cannot see across a beat boundary, so the shared word survives and reads
     // as a stutter. LAST_WORDS carries the previous beat's final caption.
     const stripLead = (arr) => {
-      if (!LAST_WORDS.length || !arr.length) return arr;
+      // same clip only: in a compilation two DIFFERENT people may say the same
+      // words back to back - the sun-hat woman's "this is for you" was dropped
+      // after the man before her said it (ib-comp-flowers, 2026-09-30).
+      if (LAST_ID !== id || !LAST_WORDS.length || !arr.length) return arr;
       const norm = (w) => String(w).toLowerCase().replace(/[^a-z0-9']/g, "");
       for (let nn = Math.min(4, arr.length - 1, LAST_WORDS.length); nn > 0; nn--) {
         if (LAST_WORDS.slice(-nn).map(norm).join(" ") === arr.slice(0, nn).map(norm).join(" "))
@@ -566,8 +569,8 @@ function captionFilters(id, ss, to, n, opts = {}) {
         // join. call-no-one ended beat 1 on "IF THERE'S SOMEONE" and opened
         // beat 2 with it again; a per-beat check cannot see that.
         const key = shownC.trim().toUpperCase();
-        if (key === lastShown || key === LAST_SHOWN) return;
-        lastShown = key; LAST_SHOWN = key;
+        if (key === lastShown || (key === LAST_SHOWN && LAST_ID === id)) return;
+        lastShown = key; LAST_SHOWN = key; LAST_ID = id;
         // log the END too - caption-sync measured a GUESSED window for months
         // because only the start was recorded here.
         // (logged to CAPTIONS only after the one-at-a-time trim below, so the
@@ -972,6 +975,7 @@ let total = 0;
 const CAPTIONS = [];
 let LAST_WORDS = [];   // the previous beat's final caption, for cross-beat de-duplication
 let LAST_SHOWN = "";   // ...and its exact text, so an identical line cannot cross a beat join
+let LAST_ID = "";     // ...and the clip it came from: only the SAME clip can repeat itself across a join
 
 cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
   if (SKIP.has(i)) return;
