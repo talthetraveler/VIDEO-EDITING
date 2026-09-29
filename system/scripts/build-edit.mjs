@@ -478,9 +478,21 @@ function captionFilters(id, ss, to, n, opts = {}) {
       // in a pause while a good onset goes unused.
       const fitTexts = chunks.map((c, ci) => fit[ci]?.text ?? c);
       // the speech actually inside this segment, clipped to it
-      const segRuns = audioRuns
+      let segRuns = audioRuns
         .map(([a, b]) => [Math.max(a, a0 - 0.25), Math.min(b, b0 + 0.25)])
         .filter(([a, b]) => b - a > 0.12);
+      // A QUIET SPEAKER IS STILL SPEAKING. When the energy detector hears no
+      // run inside a segment, `placed` came back empty and the whole line was
+      // dropped - "Thanks.", "Do you hate Muslims? — No, I don't." and "You
+      // know my age" all rendered with no caption on israel-batch. Once the
+      // clip is WhisperX-aligned (tools/align-cache.py) its word times are
+      // exact, so they are the speech runs to place against.
+      if (!segRuns.length && own.aligned) {
+        segRuns = srcWords
+          .filter((w) => w.end > sg.start - 0.05 && w.start < sg.end + 0.05)
+          .map((w) => [Math.max(0, w.start - ss), Math.min(to - ss, w.end - ss)])
+          .filter(([a, b]) => b - a > 0.05);
+      }
       const placed = segRuns.length
         ? placeInSpeech(segRuns, fitTexts, wordsPerChunk)
         : [];
@@ -524,7 +536,10 @@ function captionFilters(id, ss, to, n, opts = {}) {
         lastShown = key; LAST_SHOWN = key;
         // log the END too - caption-sync measured a GUESSED window for months
         // because only the start was recorded here.
-        CAPTIONS.push({ beat: n, at: +a.toFixed(2), to: +b.toFixed(2), text: shownC });
+        // (logged to CAPTIONS only after the one-at-a-time trim below, so the
+        // BUILD-LOG says what is really on screen - it used to record the
+        // untrimmed windows, and selfreview then showed overlaps that the
+        // render never drew, israel-batch 2026-09-29)
         LAST_WORDS = shownC.split(/\s+/).filter(Boolean);
         out.push({ text: shownC, a: +a.toFixed(2), b: +b.toFixed(2) });
         k++;
@@ -549,7 +564,9 @@ function captionFilters(id, ss, to, n, opts = {}) {
     for (let i = 0; i < kept.length - 1; i++) {
       if (kept[i].b > kept[i + 1].a) kept[i].b = +(kept[i + 1].a).toFixed(2);
     }
-    return kept.filter((c) => c.b - c.a >= 0.2);
+    const shown = kept.filter((c) => c.b - c.a >= 0.2);
+    for (const c of shown) CAPTIONS.push({ beat: n, at: c.a, to: c.b, text: c.text });
+    return shown;
   }
 
 }
@@ -826,6 +843,20 @@ for (let i = 1; i < cfg.beats.length; i++) {
   if (prev[0] !== cur[0]) continue;                 // different clips cannot repeat
   const P = SNAP.get(i - 1), C = SNAP.get(i);
   if (!P || !C) continue;
+  // A JUMP BACK IN TIME IS NOT AN OVERLAP. A hook-first cut plays a line from
+  // late in the clip (114-124s) and then the story from its start (3.6s).
+  // "P.to - C.ss" read that as a 120s overlap, decided beat 2 was "entirely
+  // inside" beat 1 and dropped the whole opening - every hook-first V2 of a
+  // single-clip story lost its start (israel-batch, 2026-09-29; the Hindu test
+  // V2 rendered 50.5s of ~56s). Only a beat that STARTS inside the previous
+  // one can repeat its audio; one that starts before it is a deliberate jump.
+  if (C.ss < P.ss - 0.02) {
+    if (C.to > P.ss + 0.02) {
+      console.log(`  !! beat ${i} jumps back but runs into beat ${i - 1}'s audio — ending it at ${P.ss}`);
+      C.to = Math.max(C.ss + 0.4, P.ss);
+    }
+    continue;
+  }
   const ov = +(P.to - C.ss).toFixed(3);
   if (ov > 0.02) {
     // A BEAT CAN BE SWALLOWED WHOLE. Moving the in-point to the previous

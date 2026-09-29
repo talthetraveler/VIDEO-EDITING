@@ -1599,3 +1599,25 @@ out of order (was scrambled), segment boundaries exact, verify-cut went from
 times). It runs ~0.5x realtime on CPU, so align only the clips a catalogue
 marks usable, 3 workers in parallel (`--ids-file … --shard i/3`). **Cut on
 aligned SEGMENT boundaries.**
+
+## 61 — three silent builder faults found by the overnight batch
+
+israel-batch, 2026-09-29, found while cutting ~30 videos. Each one produced a
+plausible-looking render with nothing in the log:
+
+1. **Hook-first V2s lost their opening.** A hook beat from late in a clip
+   (114–124 s) followed by the story from its start (3.6 s) was read as a 120 s
+   overlap ("P.to − C.ss"), judged "entirely inside" and dropped. Every
+   hook-first variant of a single-clip story was 5–10 s short. Now a beat that
+   starts BEFORE the previous one is a deliberate jump, never an overlap.
+   Proof: the Hindu-couple test went from 50.5 s to 56.0 s against 56.1 s of
+   beats, with the missing "what makes you happy?" beat and its 5 captions back.
+2. **Quiet lines had no caption.** When the audio-energy detector heard no
+   speech inside a segment, the caption list for it came back empty and the
+   line vanished ("Thanks.", "No, I don't.", "You know my age"). On a
+   WhisperX-aligned clip the aligned word times are now used as the speech runs.
+3. **The build log recorded captions before the one-at-a-time trim,** so
+   selfreview 2b showed overlaps the render never drew. It now logs what is on
+   screen. A checker that reports the wrong thing trains you to ignore it.
+
+`test-caption-timing.mjs` still prints 0 0 0 after all three.
