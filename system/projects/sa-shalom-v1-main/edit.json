@@ -1,0 +1,179 @@
+{
+ "layout": "vertical",
+ "title": "I SAID SHABBAT SHALOM\nTO EVERYONE IN ISRAEL 🇮🇱",
+ "titleHold": 3,
+ "out": "SA_SHALOM_SALAM_V1_MAIN_r3.mp4",
+ "beats": [
+  [
+   "local-067a2ed0b4696f4d",
+   2.25,
+   7.8,
+   0.6,
+   "HOOK (3004): street sweeper in orange vest answers Tal's 'habibi, Shabbat shalom' with 'habibi habibi habibi', says Shabbat shalom back, thumbs up at 6.6. Arabic and Hebrew in one breath, face from frame 1. Starts after Tal's first line (face not yet visible before 2.2).",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-6c9d775dddefe9b4",
+   1.23,
+   3.35,
+   0.55,
+   "(2480) young East Asian dad with a stroller: Tal 'Shabbat shalom' -> his quiet 'Shabbat shalom' back, handshake, big smile. Visibly different from #1.",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-8bce947a377e03b7",
+   0.35,
+   5.15,
+   0.5,
+   "STRONGEST (4102) older man in a cap on the Temple Mount, laughing through the handshake: 'How are you my brother? You speak good English? - Thank you brother.' Out 5.15: frames show him drifting out of frame 5.0-5.1, 'brother' ends 5.11.",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-45bd31171e58bb7e",
+   1,
+   5.6,
+   0.45,
+   "LAUGH (3452) young guy in navy tee cracks up, hand over mouth, fist bump. r3: in 1.0 (more head before Shabbat@1.28; source silent -38dB). Hold after the words is deliberate: laugh + untranscribed \"no worries\" (confirmed by faster-whisper).",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-736af28bb6805312",
+   3.36,
+   5.05,
+   0.5,
+   "(2999) elderly woman in a hijab: Tal 'Salam aleikum, Shabbat shalom' - her whole face opens up at 4.4-5.0. NOCAP: the only translation is one 'Shabbat Shalom' segment over the whole clip, which would caption the salam half wrongly.",
+   null,
+   {
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-cd9273a764acfab7",
+   2.7,
+   6.2,
+   0.4,
+   "(3477) police officer shakes hands, then a smiling female soldier - uniforms, on the promenade.",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-41c04350d65e00fc",
+   3.3,
+   8.62,
+   0.5,
+   "(3482) two shirtless young guys: 'What's up brother? Shabbat shalom' - the curly-haired one grins into the lens at the end (reaction held).",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-43b4b47e3b2c974d",
+   3.85,
+   6.75,
+   0.5,
+   "(3472) young blonde woman stops, smiles close: Shabbat shalom / have an amazing day. Only young woman in the cut.",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-348bb89910d18463",
+   1.6,
+   6.7,
+   0.5,
+   "(3497) young Eritrean men under the beach shade: Shabbat shalom -> fist bumps and big grins from both. Gate calls 2.4-6.7 silence: faster-whisper hears three more Shabbat shaloms there - a transcript gap, not dead air.",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-0dda27101c4e5ebe",
+   0.33,
+   2.1,
+   0.75,
+   "(3308) man in a wheelchair rolls up waving: Shabbat shalom.",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-8185db2e9660c2d5",
+   3.88,
+   7.7,
+   0.5,
+   "END (2225) young man in a cap walks up: 'Shabbat shalom! Eid Mubarak!' - grins, walks off waving. Both greetings in two seconds: the thesis of the folder, said, not captioned as a claim.",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ]
+ ],
+ "captionFix": [
+  {
+   "match": "Edmar Barak",
+   "to": "Eid Mubarak"
+  },
+  {
+   "match": "Habibi, Habibi, Habibi, Habibi",
+   "to": "Habibi!"
+  },
+  {
+   "match": "Shabbat Shalom guys Shabbat",
+   "to": "Shabbat Shalom guys"
+  }
+ ],
+ "autoFrame": false
+}

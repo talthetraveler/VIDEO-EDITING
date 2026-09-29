@@ -1,0 +1,163 @@
+{
+ "layout": "vertical",
+ "title": "POV: YOU SAY SHABBAT SHALOM\nTO EVERY STRANGER 🇮🇱",
+ "titleHold": 2.5,
+ "snap": false,
+ "out": "SA_SHALOM_SALAM_V2_FAST_r2.mp4",
+ "beats": [
+  [
+   "local-0f3d51c7200cd1c3",
+   1.35,
+   3.8,
+   0.6,
+   "HOOK (3422) guy with dreadlocks and his friend walk in, Shabbat shalom -> huge grin at ~3.1. Cut 3.8 in measured silence (-37dB).",
+   null,
+   {
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-a06df96108975f0d",
+   0.15,
+   1.72,
+   0.65,
+   "(3312) tattooed dad carrying his baby: Shabbat shalom, quick smile. Out before the frame empties (1.89).",
+   null,
+   {
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-10ce5af280df496b",
+   4.32,
+   6.85,
+   0.5,
+   "STRONG (4117) Dome of the Rock: 'Hi, salamu alaikum' -> 'wa alaikum as-salaam', smiling close. The salam answered with salam. Out in the gap before 'Nice to meet you' (6.94).",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-958915f641cc71d7",
+   0.77,
+   2.8,
+   0.6,
+   "(3347) man on a promenade bench raises his hand and smiles.",
+   null,
+   {
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-d0645f131c7da322",
+   1.74,
+   4.2,
+   0.45,
+   "(3365) young woman in a purple top, handshake, smiling. r2: in 1.74 (gate: unaligned Shalom 1.76-2.96; source is silent 1.6-2.3)",
+   null,
+   {
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-f1b73b83b3ac9f12",
+   1.47,
+   4.1,
+   0.5,
+   "(2453) young dad in a cap pushing a stroller - handshake, big smile. Split from #4 (other dad) by two beats.",
+   null,
+   {
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-36da092d3cf7f270",
+   0.26,
+   3.05,
+   0.55,
+   "(3387) bald shirtless guy in sunglasses, handshake and a grin into the lens. Out in silence (2.4-3.3). r2: in 0.26, before the first word (gate flagged 1.35 inside Shabbat)",
+   null,
+   {
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-721db28c13bb24da",
+   0.85,
+   4.4,
+   0.6,
+   "(3427) woman in a hijab: salamu alaikum, Shabbat shalom - she waves back. NOCAP: its only translation segment is 'Shabbat Shalom' over 6s and would mislabel the salam half.",
+   null,
+   {
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-9d54799ce0cd3a53",
+   4.55,
+   7,
+   0.35,
+   "(3512) man in black by the wall: Shabbat shalom -> 'Yom tov' (whisper 'Dayum Tov').",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-1040862e7c558ecb",
+   3.93,
+   9.8,
+   0.5,
+   "END (2263) woman in a sun hat on the boardwalk: 'Excuse me, I just wanted to tell you Shabbat shalom. This is for you.' - a red rose, her smile holds 6.2-9.4. The one beat allowed to breathe.",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ]
+ ],
+ "captionFix": [
+  {
+   "match": "Dayum Tov",
+   "to": "Yom Tov"
+  }
+ ],
+ "autoFrame": false
+}

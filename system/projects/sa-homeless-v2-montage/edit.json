@@ -1,0 +1,156 @@
+{
+ "layout": "vertical",
+ "title": "HE HADN'T EATEN\nIN A DAY AND A HALF",
+ "titleHold": 3.5,
+ "snap": false,
+ "out": "SA_HOMELESS_MONTAGE_V2.mp4",
+ "notes": "Montage in the @erez.v1 style: cut on visible action, natural audio, no music (Tal adds a sound in Instagram). Captions only on the hook and the one key line; every other beat is push.nocap. Chest-cam audio grafted where the chest cam was rolling (C0485 = VID059 - 85.00s, C0484 = VID059 + 2.19s). Rev 3: dropped the counter-wide beat (C0485 77-79.4): motion-blurred camera move on the rendered still.",
+ "beats": [
+  [
+   "local-19018606b6d6b0ee",
+   59.6,
+   63.79,
+   0.5,
+   "HOOK - 'Are you hungry?' 'Yes.' both in frame, chest-cam audio [full frame: the face-aim locked on Tal and cut Roman off]",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "local-ca1bb9b65735004c",
+     "at": 57.41
+    },
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-3b90089c8902a9e6",
+   60,
+   62.8,
+   0.5,
+   "walking him to the stall, side by side",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "audio": {
+     "id": "local-ca1bb9b65735004c",
+     "at": 145
+    }
+   }
+  ],
+  [
+   "local-e0275debb5700e8f",
+   84.3,
+   85.62,
+   0.5,
+   "his face - drinking the cola",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "local-e0275debb5700e8f",
+   87.6,
+   90,
+   0.5,
+   "THE GIVING - the plate lands in front of him [full frame: face-aim cut Roman off]",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-e0275debb5700e8f",
+   90.8,
+   92.3,
+   0.5,
+   "'My brother, cheers!' - food in his hands",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "local-e0275debb5700e8f",
+   100.5,
+   103,
+   0.5,
+   "eating [full frame: face-aim cut Roman off]",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-3b90089c8902a9e6",
+   645.45,
+   647.4,
+   0.5,
+   "THE SECOND GIFT - Tal holds up the new shorts, both smiling (sharp frames 10:45-10:47; the earlier span was blurred) [full frame]",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-da9f3edcbca2e9b2",
+   13.32,
+   17.3,
+   0.5,
+   "the reveal - new clothes, 'Are you happy now? You look good.'",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "local-e538e7e17faec033",
+   295.45,
+   298.55,
+   0.5,
+   "KEY LINE - Roman rubbing his eyes, Tal beside him: \"What doesn't kill us only makes us stronger.\" (the 279s line sits in continuous speech with no clean in-point, and the picture before it is a camera whip)",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-e538e7e17faec033",
+   298.55,
+   300.6,
+   0.5,
+   "the pat on the shoulder and he walks on",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ]
+ ]
+}

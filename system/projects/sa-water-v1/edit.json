@@ -1,0 +1,196 @@
+{
+  "layout": "vertical",
+  "out": "SA_WATER_V1.mp4",
+  "note": "GIVING WATER - fast montage, Erez-style. Minimal captions: hook question + two thank-you lines. No music (Tal adds a sound in IG). Proxy-only review render. Sri Lanka crew: audio from the wide iPhone (IMG_8610) mic; POV clock = wide + 33.10s.",
+  "beats": [
+    [
+      "91c9bf59-60fb-491a-adc4-40cae2b0a0e8",
+      0.66,
+      5.18,
+      0.5,
+      "HOOK: spoken question in the first 0.1s, stranger already in frame; handoff at ~3.4s, hand on his chest at the end",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      33.64,
+      35.25,
+      0.5,
+      "POV: tearing a bottle off the pack - 'I got you guys water' (audio = wide mic from 0.35; picture starts 0.19s later, hands only, no lips)",
+      null,
+      {
+        "exact": true,
+        "nocap": true,
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 0.28
+        }
+      }
+    ],
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      1.96,
+      3.6,
+      0.5,
+      "WIDE of the same moment: Tal arriving at the crew",
+      null,
+      {
+        "exact": true,
+        "nocap": true,
+        "manual": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.45,
+        "y": 0.5
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      37.3,
+      40.45,
+      0.5,
+      "POV: the handoff into a worker's hands, 'Thank you so much' / 'This is for you guys'",
+      null,
+      {
+        "exact": true,
+        "nocap": true,
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 4.15
+        }
+      }
+    ],
+    [
+      "54dffb0d-afd0-42ec-9bd1-615e2fdf9cbf",
+      4.9,
+      10.72,
+      0.5,
+      "MARKET: handoff to Omar, then she thanks HIM by name - 'Toda raba, Omar'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      54.35,
+      56.9,
+      0.5,
+      "KEY LINE over the handshake: 'Thank you guys for all your hard work' (in-point past the wheelbarrow span 52.5-54.3)",
+      null,
+      {
+        "exact": true,
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 21.15
+        }
+      }
+    ],
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      23.8,
+      26.3,
+      0.5,
+      "WIDE: the high five, continuous with the line before",
+      null,
+      {
+        "exact": true,
+        "nocap": true,
+        "manual": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.42,
+        "y": 0.5
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      48.22,
+      51.79,
+      0.5,
+      "FENCE CREW: high five over the fence, then they drink and laugh - 'Thank you, friends'",
+      null,
+      {
+        "exact": true,
+        "nocap": true
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      6.3,
+      14.6,
+      0.5,
+      "ENDING: promenade cleaner - handshake, then the HUG and his kiss on the cheek. Wordless reaction hold, ends before Tal walks to camera",
+      null,
+      {
+        "exact": true,
+        "nocap": true,
+        "manual": true,
+        "z": [
+          1.1,
+          1.3
+        ],
+        "x": 0.58,
+        "y": 0.5
+      }
+    ]
+  ],
+  "captionFix": [
+    {
+      "match": "THANK YOU",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "WE LOVE YOU",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "YEAH",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "I'm in the Kremlin. Omar. Omar.",
+      "to": null
+    },
+    {
+      "match": "I'm in the Kremlin.",
+      "to": null
+    },
+    {
+      "match": "Toda Rabah Omar. Yom Tov.",
+      "to": "Thank you, Omar"
+    },
+    {
+      "match": "Toda Rabah Omar.",
+      "to": "Thank you, Omar"
+    },
+    {
+      "match": "YOM TOV",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "OMAR",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "Hi, Shalom.",
+      "to": "Hi shalom."
+    },
+    {
+      "match": "Thank you guys for all your hard work",
+      "to": "Thank you guys, for all your hard work"
+    }
+  ]
+}

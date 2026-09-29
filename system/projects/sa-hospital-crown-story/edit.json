@@ -1,0 +1,177 @@
+{
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "title": "WE HEARD SHE LOVES BARBIE",
+ "titleHold": 3.5,
+ "titleY": 200,
+ "out": "SA_HOSPITAL_CROWN_STORY_V1r2.mp4",
+ "beats": [
+  [
+   "e6ae7069-1998-465e-8e5d-b2ecd3206b16",
+   46.5,
+   49.6,
+   0.5,
+   "COLD OPEN (face at 0s): the girl hugging the pink bear she chose, mother smiling beside her - flash-forward to her peak before the story starts",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "nocap": true
+   }
+  ],
+  [
+   "e6ae7069-1998-465e-8e5d-b2ecd3206b16",
+   7.25,
+   16.35,
+   0.5,
+   "the start: \"We heard you love Barbie\" -> the box on her lap -> \"Do you love it?\" \"Thank you.\" \"Yes.\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "e6ae7069-1998-465e-8e5d-b2ecd3206b16",
+   35.5,
+   39.9,
+   0.5,
+   "choosing from the bag: \"This one?\" \"Is this the one you want?\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "e6ae7069-1998-465e-8e5d-b2ecd3206b16",
+   40.2,
+   43.4,
+   0.5,
+   "the pink bear is handed over and she pulls it in",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "nocap": true
+   }
+  ],
+  [
+   "e6ae7069-1998-465e-8e5d-b2ecd3206b16",
+   50.4,
+   55,
+   0.5,
+   "Miss Israel comes over: \"What's her name?\" - she answers (name left uncaptioned: not verifiable)",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "e6ae7069-1998-465e-8e5d-b2ecd3206b16",
+   57.3,
+   59.3,
+   0.5,
+   "Miss Israel hugs her, bear and all",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "nocap": true
+   }
+  ],
+  [
+   "e6ae7069-1998-465e-8e5d-b2ecd3206b16",
+   60.7,
+   63.85,
+   0.5,
+   "CLOSE: Miss Israel takes the crown off her own head",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "nocap": true
+   }
+  ],
+  [
+   "97e81ae7-eccb-4a3e-9151-c04cc7ea3542",
+   60.4,
+   63,
+   0.5,
+   "WIDE (synced): she raises it and turns to the girl - angle change on the action",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "nocap": true
+   }
+  ],
+  [
+   "e6ae7069-1998-465e-8e5d-b2ecd3206b16",
+   70.6,
+   78.8,
+   0.5,
+   "ENDING, wordless: crown on; the girl straightens it; her mother laughs behind her hand (76-79) - the payoff held, no caption. (The later footage shows the crown being handed back, so the film ends here.)",
+   null,
+   {
+    "z": [
+     1,
+     1.06
+    ],
+    "nocap": true
+   }
+  ]
+ ],
+ "captionFix": [
+  {
+   "match": "תגיד לחיבור.",
+   "to": null
+  },
+  {
+   "match": "ליל.",
+   "to": null
+  },
+  {
+   "match": "ליל מלאדי.",
+   "to": null
+  },
+  {
+   "match": "נמיד לחיבור.",
+   "to": null
+  },
+  {
+   "match": "אה?",
+   "to": null
+  },
+  {
+   "match": "תגיד לה שלום",
+   "to": null
+  },
+  {
+   "match": "אהי ווא",
+   "to": null
+  },
+  {
+   "match": "תודה רבה",
+   "to": null
+  }
+ ]
+}

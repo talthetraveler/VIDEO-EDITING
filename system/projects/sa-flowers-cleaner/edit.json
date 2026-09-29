@@ -1,0 +1,64 @@
+{
+ "layout": "vertical",
+ "titleY": 260,
+ "titleHold": 4,
+ "capY": 0.69,
+ "maxZoom": 1.25,
+ "title": "POV: I GAVE FLOWERS TO A\nSTREET CLEANER IN JERUSALEM 🇮🇱",
+ "out": "SA_FLOWERS_CLEANER_V1.mp4",
+ "denoise": 14,
+ "beats": [
+  [
+   "local-db2e5fd3621b3654",
+   5.7,
+   21.4,
+   0.5,
+   "THE GIVING, one unbroken POV take: he walks up the market aisle, 'Happy holiday - for you, my dear brother', his face goes from puzzled (9-10.5s) to a full smile (12s) on 'we want to make you happy'; the girls hand him more roses, 'thank you very much', and the hold ends on his grin with the bouquet (20-21s)",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "c957346b-5401-429c-b782-be3d5cd93a23",
+     "at": 5.7
+    }
+   }
+  ],
+  [
+   "local-db2e5fd3621b3654",
+   21.9,
+   37.9,
+   0.5,
+   "WHO HE IS -> THE PAYOFF: name (Shweiki), from Abu Tor, 'do you speak English? - no' (a small laugh), 'are you Muslim? - yes' / 'I'm Jewish' and the HANDSHAKE on screen (33-34.5s), 'yalla bye'. Cut at 37.9 before the camera swings off him. 20.3-21.9 dropped: he looks down at the roses, nothing said",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "c957346b-5401-429c-b782-be3d5cd93a23",
+     "at": 21.9
+    }
+   }
+  ],
+  [
+   "48f10648-d053-4e9b-b4ee-3304767f4551",
+   5.2,
+   7.4,
+   0.5,
+   "ENDING a: observer iPhone, later on the lit street - he stops the cart, turns to camera and smiles holding the red roses. Wordless hold. Proxy only (360p)",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "48f10648-d053-4e9b-b4ee-3304767f4551",
+   7.55,
+   8.95,
+   0.5,
+   "ENDING b: after a jump in the source clip itself (7.5s), he steps forward grinning with the roses - 'thank you'. The face with the flowers is the last image",
+   null,
+   {
+    "exact": true
+   }
+  ]
+ ]
+}

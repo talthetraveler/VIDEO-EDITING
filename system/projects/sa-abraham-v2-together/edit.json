@@ -1,0 +1,130 @@
+{
+ "layout": "vertical",
+ "title": "WHAT WOULD ISRAELIS SAY TO\nMOROCCO, UAE, BAHRAIN & SUDAN?",
+ "titleHold": 3,
+ "out": "SA_ABRAHAM_V2_TOGETHER.mp4",
+ "format": "street-interview (one question, many strangers - the 'send a message' shape)",
+ "autoFrame": false,
+ "capY": 0.8,
+ "strategy": "V2 = a different film from the same folder, not a reshuffle. Different opener (a young shirtless guy, not the older man), different hook line ('we love you ... we love the Muslims'), a question title instead of a statement, Tal's sign-reveal premise instead of the flag flip, different lines from the Dimona couple (their thank-you and invitation) and the cap man, the blonde and dog-walker answers dropped, and a different ending: the whole group of friends shouting 'we're all family, we love you guys, let's go!' and cheering, instead of the one-man thesis. The Arabic grandfather answer stays - it is the strongest in the folder - and still sits 4th. No Bibi/Netanyahu anywhere. r2 (2026-09-30): capY 0.75 -> 0.80 so captions sit below the sign lettering on the wide shots.",
+ "beats": [
+  [
+   "a4f64d9e-b569-403b-9fbe-e19c77e38dec",
+   0.02,
+   9.98,
+   0.5,
+   "HOOK C0515 young shirtless guy, speaking from frame 1: 'I want the message to these countries: we love you. We hope we make peace with other Arab countries. And we love Israel, we love the Muslims.' Out before Tal's 'Yes, thank you' (10.14).",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "756a1bfe-09a1-4e36-8be4-8a7587ae75d0",
+   1.9,
+   6.3,
+   0.5,
+   "PREMISE C0508 Tal lifts the sign then lowers it to chest: 'So we are here in Israel asking people to send a message to the people in these countries.' His face is behind the sign ~2.4-3.1 - it is the sign reveal, kept deliberately. The 'No. No.' before 1.96 is cut.",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "2fc2b697-66a3-4bed-a55e-aacdad8b870d",
+   1.83,
+   12.84,
+   0.5,
+   "C0521 couple from Dimona, their OTHER lines (V1 used their answer to Tal's question): 'Oh, thank you, thank you, thank you. We appreciate you and we hope to see you soon. Peace. Show Israel some love. Come visit Israel and Dimona. Shalom.' Out before Tal's question at 13.58.",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "895975c9-3a8f-4eea-ac58-e72dc55e3d06",
+   0.14,
+   4.95,
+   0.5,
+   "C0510 older bald man: 'It's good that there will be peace in all countries, in all the world.' Bibi praise starts 8.04 - 3.1s clear of the out.",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "543ec9e8-e410-4426-99fa-74769fccf153",
+   0.4,
+   7.95,
+   0.5,
+   "STRONGEST (4th answer) C0525 red-haired woman in ARABIC: 'I love Morocco so much. My grandfather is from Morocco. I want to visit you, I long to visit you, in peace.' Same beat as V1 - it is the best answer in the folder - but here it follows the older man and precedes the cap man. Subtle push.",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1,
+     1.06
+    ],
+    "x": 0.5,
+    "y": 0.34
+   }
+  ],
+  [
+   "e05e01b0-6bf1-4d06-9945-fdd635193462",
+   0.3,
+   6.01,
+   0.5,
+   "C0511 man in a cap, his OTHER line: 'Sure - we just want to live, enjoy life, enjoy the beach, and peace.' Out before Tal's next question (6.69).",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "71dd6b6b-7fa0-4776-aed2-3774731022b2",
+   1.7,
+   15.8,
+   0.5,
+   "END C0523 a whole group of friends round the sign: 'I think all of you guys should come visit Israel, and everyone in Israel should come visit the UAE, Morocco... everyone's neighbours, we're all family, we love you guys - let's go!' and they cheer, arms up (14.5-15.0). Tal's countdown ('...all right, go', ends 1.71) cut; in at 1.70 on 'hi'. Out 15.8 after the cheer.",
+   null,
+   {
+    "exact": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ]
+ ],
+ "captionFix": [
+  {
+   "match": "DROPLINE",
+   "to": null,
+   "exact": true
+  },
+  {
+   "match": "go Hi, yo!",
+   "to": "Hi, yo!"
+  }
+ ]
+}

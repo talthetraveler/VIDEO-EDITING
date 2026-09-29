@@ -1,0 +1,147 @@
+{
+ "layout": "vertical",
+ "title": "I TOOK A HOMELESS MAN\nIN TEL AVIV TO EAT 🇮🇱",
+ "titleHold": 4,
+ "out": "SA_HOMELESS_STORY_V1.mp4",
+ "notes": "Hand translations (unverified) patched into cache/translate for ca1b, e027, 3843, e538; originals kept as .bak-pre-sa-homeless. Audio offsets measured by envelope cross-correlation: C0484 = VID059 + 2.19s, C0485 = VID059 - 85.00s.",
+ "beats": [
+  [
+   "local-19018606b6d6b0ee",
+   59.6,
+   63.79,
+   0.5,
+   "THE ASK - Sony wide, both in frame; chest-cam audio (close mic): 'Are you hungry?' 'Yes. Thirsty.' 'Thirsty and hungry?' [full frame: the face-aim locked on Tal and cut Roman off]",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "local-ca1bb9b65735004c",
+     "at": 57.41
+    },
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-3b90089c8902a9e6",
+   57.33,
+   62.8,
+   0.5,
+   "TAKING HIM - the real walk to the stall (Sony, backs) over its own synced chest-cam audio: \"Let's eat something. Do you like kebab? Pita kebab? Come, come.\"",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "local-ca1bb9b65735004c",
+     "at": 142.36
+    }
+   }
+  ],
+  [
+   "local-e0275debb5700e8f",
+   85.5,
+   92.35,
+   0.5,
+   "THE GIVING, VISIBLE - the plate lands in front of him: 'we brought you some food' - 'My brother, cheers!' [full frame: face-aim cropped Roman out]",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-e0275debb5700e8f",
+   137.25,
+   143.25,
+   0.5,
+   "WHY IT MATTERS - eating: 'You haven't eaten for two days?' 'A day and a half. Not a thing.' (his words, not Tal's assumption - LESSONS 55) [full frame: face-aim cropped Roman out]",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-3843b9158bfb6eb6",
+   0,
+   7.9,
+   0.5,
+   "THE TURN - 'Who do you miss the most?' ... the 3s pause is his face deciding ... 'My father.' Hold it.",
+   null,
+   null
+  ],
+  [
+   "local-3843b9158bfb6eb6",
+   11.1,
+   18.95,
+   0.5,
+   "'As a kid I thought everything he did was against me. I used to rebel.'",
+   null,
+   null
+  ],
+  [
+   "local-3843b9158bfb6eb6",
+   32.8,
+   49.9,
+   0.5,
+   "THE HEART - \"When did I start to understand? Only after he passed away ... he was only trying to guide you ... only after you lose do you start to appreciate.\"",
+   null,
+   null
+  ],
+  [
+   "local-e538e7e17faec033",
+   2.4,
+   17.45,
+   0.5,
+   "'Someone will see this and bring you work' - 'Not even work. Even just someone asking how I'm doing.'",
+   null,
+   null
+  ],
+  [
+   "local-e538e7e17faec033",
+   23.3,
+   32.35,
+   0.5,
+   "\"I've been feeling lonely lately. There was the war and all of that. You don't have anyone to talk to, brother.\" The line the whole film is about.",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "local-e538e7e17faec033",
+   268.45,
+   276.3,
+   0.5,
+   "GOODBYE - 'My brother, we see you. Succeed, be happy, and don't forget that we love you.' [full frame: face-aim cropped Roman out]",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-e538e7e17faec033",
+   291.8,
+   299.45,
+   0.5,
+   "PAYOFF - outside, in his new clothes: 'What you've lived through is really hard. So succeed.' 'What doesn't kill us only makes us stronger.' Ends on the pat on the shoulder.",
+   null,
+   {
+    "exact": true
+   }
+  ]
+ ]
+}

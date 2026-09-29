@@ -1,0 +1,80 @@
+{
+  "layout": "vertical",
+  "capY": 0.58,
+  "title": "CALL SOMEONE YOU LOVE\nDAMASCUS GATE, JERUSALEM",
+  "titleHold": 2.5,
+  "out": "SA_TABLE_SON_MOTHER_V1.mp4",
+  "format": "call-someone-you-love (FULL STORY, one subject)",
+  "strategy": "Different person, register and ending from V1: a young man, smiling the whole call, telling his mother she is the one he loves most. Opens on the pickup, ends on the table's own question answered - 'Who did you call?' 'My mom.' - as he walks out of frame.",
+  "beats": [
+    [
+      "local-aecb67d7801715e0",
+      13.4,
+      17.2,
+      0.5,
+      "HOOK (wide, sign in frame): smiling, red handset already at his ear - Hello at 2.7s. Starts 13.4 (0.8s tighter than before: he was looking down at the phone)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-aecb67d7801715e0",
+      17.2,
+      25.6,
+      0.5,
+      "CLOSE, contiguous with the pickup: 2s of him listening and smiling, then 'Yes, Mom.' ... 'Take care of yourself. Don't worry.' The pause after it kept",
+      null,
+      null
+    ],
+    [
+      "local-aecb67d7801715e0",
+      25.6,
+      31.4,
+      0.5,
+      "THE LINE: 'No, I just really love you.' / 'You're the one I love most.' Contiguous, slow push only here",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "local-aecb67d7801715e0",
+      31.4,
+      38.6,
+      0.5,
+      "ENDING (wide, same take): 'Okay, bye-bye.' He hangs up, sets the phone down smiling and walks off. Off camera: 'Who did you call?' He answers 'My mom' as he leaves frame (out 38.6: the translated 'My mom' segment must hold >=60% of its span inside this beat or the builder drops it as an orphan)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-aecb67d7801715e0",
+      38.6,
+      38.95,
+      0.5,
+      "WORDLESS TAIL, no caption: the empty rig after he leaves. Out before an off-camera voice at 39.04",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "nocap": true
+      }
+    ]
+  ]
+}

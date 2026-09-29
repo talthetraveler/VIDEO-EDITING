@@ -1,0 +1,19 @@
+{
+ "note": "Caption-only English translations of the Hebrew (C0513) and Arabic (C0525) segments, hand-written from the Groq source-language transcript. Audio untouched. WORDING UNVERIFIED by a native speaker. Arabic: 'المقرب' is Groq's spelling of المغرب (Morocco); 'سدي' read as Moroccan 'sidi' = grandfather. Also: punctuation-only fixes on the unpunctuated English segments of C0517/C0523 (same words, same count) so lines break on sentences; C0525 opening 'كان؟ بسلام' captioned as 'Salam!' (only the salam is certain).",
+ "corrections": {
+  "אני רוצה להגיד לכם שאתם חייבים לבוא לישראל,": "I want to tell you, you have to come to Israel,",
+  "לראות מה שיש כאן,": "to see what we have here,",
+  "ואנחנו רוצים לבוא לבקר אתכם.": "and we want to come visit you.",
+  "ושלום זו הדרך.": "And peace is the way.",
+  "أنا بحب المقرب كتير": "I love Morocco so much.",
+  "سدي أصله من المقرب": "My grandfather is from Morocco.",
+  "وبدي أزوركم": "And I want to visit you.",
+  "نفسي أزوركم": "I long to visit you, in peace.",
+  "بسلام": "DROPLINE",
+  "كان؟ بسلام": "Salam!",
+  "we love everyone we love you guys hope to visit soon and eat your food and i hope you can come": "We love everyone. We love you guys. Hope to visit soon and eat your food, and I hope you can come",
+  "count give us all right go hi yo i think all of you guys should come visit israel and everyone in": "count give us all right go Hi, yo! I think all of you guys should come visit Israel, and everyone in",
+  "israel should come visit the uae morocco everywhere's a beautiful place you know beautiful world": "Israel should come visit the UAE, Morocco... Everywhere's a beautiful place, you know, beautiful world.",
+  "everyone's neighbors we're all family we love you guys let's go": "Everyone's neighbours. We're all family. We love you guys. Let's go!"
+ }
+}

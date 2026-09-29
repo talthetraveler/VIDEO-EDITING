@@ -1,0 +1,199 @@
+{
+ "layout": "vertical",
+ "title": "HE FLEW TO ISRAEL 🇮🇱\nTO SAVE HIS HEART",
+ "titleY": 170,
+ "titleHold": 8,
+ "capY": 0.66,
+ "out": "SA_HEART_JULIUS_V1.mp4",
+ "note": "Save a Child's Heart - ONE story, Julius (Zanzibar/Tanzania). Not a compilation. Hook = Tal on camera with Julius beside him: 'doctors were convinced they could not save his life' (question: how is he standing here?). Then Julius in his own words - sick, breathless, isolated, lonely - the Israeli team, his father's faith in Jerusalem, feeling better, back to school, his message to sick children. Coda: Miracle, the 9,000th child (the number beat), then Julius's last line 'everything is possible'. Sony footage is sideways with no rotation tag: Julius/Tal clips heads-left -> auto transpose=1; Miracle C0590 heads-right -> beat rotation 2 (checked on a still). All transcripts WhisperX-aligned 2026-09-29 (tools/align-cache.py). No music (Tal: not needed). Caption segments that straddled in-points (C0644 24.2/43.7, C0645 27.8, C0590 10.3) were split at those word boundaries in the aligned transcript cache (backup <id>.json.pre-split) - the builder drops a segment whose clock mostly lies before a beat. FRAMING: face-aim cropped the speaker OUT on the Sony two-shots (beat 3 aimed at Tal while Julius spoke; hook lost Julius; Miracle half out of frame) - the rotated Sony frame is already 9:16, so two-shots are pinned full-frame and Julius-alone beats get a manual 1.3x on him (x0.3,y0.45, measured off stills).",
+ "captionFix": [
+  {
+   "match": "lonely yeah i was so lonely.",
+   "to": "lonely? Yeah, I was so lonely."
+  },
+  {
+   "match": "isolated yeah",
+   "to": "isolated"
+  },
+  {
+   "match": "when, when, when,",
+   "to": null
+  },
+  {
+   "match": "surgery. Yeah.",
+   "to": "surgery."
+  },
+  {
+   "match": "So I did and we prayed and I thank God it went well.",
+   "to": "So I did, and we prayed, and I thank God it went well."
+  },
+  {
+   "match": "give up. Yeah.",
+   "to": "give up."
+  },
+  {
+   "match": "possible, yeah.",
+   "to": "possible."
+  },
+  {
+   "match": "the 9 000 child",
+   "to": "the 9,000th child"
+  }
+ ],
+ "beats": [
+  [
+   "61ef361d-fdfc-4df2-bf4b-9e9d1b5e377a",
+   7.58,
+   13.15,
+   0.5,
+   "HOOK (C0634): Tal on camera, Julius beside him - 'This guy was born with a severe heart problem that doctors were convinced they could not save his life.' Two faces from frame 1; opens the question.",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "e268c5e3-f21f-4cad-ae40-af4b93aef14f",
+   0,
+   2.7,
+   0.5,
+   "WHO (C0635): 'Hi, I'm Julius and this is my story.' His face, his voice, in the first 7s."
+  ],
+  [
+   "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
+   24.09,
+   35.9,
+   0.5,
+   "THE PROBLEM, his words (C0644 sit-down): 'When I was still growing up, until 10 years old, I felt some challenges, difficulty breathing, I could get tired, sweating at night.' Starts at 'when' (24.09): the first try at 29.40 landed inside 'old' - measured speech energy at 28.75-29.55, where the aligner claimed a gap.",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.3,
+    "y": 0.45
+   }
+  ],
+  [
+   "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
+   43.54,
+   56.44,
+   0.5,
+   "THE HEART OF IT (C0644, one continuous take): 'I was facing such signs. I couldn't play with my friends, having fun' -> Tal: 'you couldn't?' -> 'doing sports... sometimes I could even be isolated' -> 'did you feel lonely?' -> 'yeah, I was so lonely.' Question and answer kept as one unit. (Started at 'I was' 43.54, in silence - 44.86 sat inside 'signs.' and snapped to a fragment.)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "502cf570-5923-4330-8b83-202fcf7548b3",
+   0.06,
+   8.15,
+   0.5,
+   "THE TURN (C0638): Tal - 'But then a medical team from Israel flew all the way to Tanzania on a mission to find children with serious heart conditions.'"
+  ],
+  [
+   "0c79b004-382a-4942-b694-a4b1484ab935",
+   0,
+   4.05,
+   0.5,
+   "JULIUS (C0639): 'I came from Tanzania all the way to Israel for the heart surgery.'"
+  ],
+  [
+   "945a2a16-5ee6-4e9c-98e6-20aef04da986",
+   23.15,
+   37.62,
+   0.5,
+   "FAITH (C0645, one continuous take): 'So my father told me that... when, when, when... once we were in Jerusalem, told me I should believe I'm already healed before the surgery. So I did and we prayed, and I thank God it went well.' The hesitation is KEPT: cutting it split the sentence across a jump (verify-cut: ends mid-thought on 'that'), and it reads as him gathering himself before the line that matters.",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "8d4a882c-3a62-44cd-b584-a3d60bbfaf19",
+   9.66,
+   11.85,
+   0.5,
+   "AFTER (C0642, take 4 - the clean one): 'I finally started feeling better.'"
+  ],
+  [
+   "81c1ade0-f5c9-4365-8d10-4ae7a01bda45",
+   8.05,
+   11.7,
+   0.5,
+   "WHAT IT GAVE BACK (C0641): 'I could finally go back to school and have fun and play sports.' Pays off 'I couldn't play with my friends'."
+  ],
+  [
+   "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
+   200.46,
+   214.95,
+   0.5,
+   "HIS MESSAGE (C0644): Tal - 'what is your message to any child that is having heart conditions right now?' -> 'the message from me to all children with heart disease and difficulties is that they should not give up.' The pause is his, kept.",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "516c6480-8ee0-4aaf-8499-9dd03ce1c108",
+   10.17,
+   14.25,
+   0.5,
+   "THE NUMBER (C0590): Tal with Miracle, both smiling - 'and she is the 9,000th child that Save a Child's Heart has been able to save.' Julius was one of them; this is who comes after him. Heads-right source -> rotation 2.",
+   2,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
+   170.52,
+   176.45,
+   0.5,
+   "PAYOFF / LAST WORD (C0644): 'The world should know everything is possible. And God - everything is possible, everything is possible.' Ends on Julius, not on Tal.",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.3,
+    "y": 0.45
+   }
+  ]
+ ]
+}

@@ -1,0 +1,10 @@
+{
+  "note": "Caption-only corrections of the machine Arabic->English translation (cache/translate/local-aecb67d7801715e0.json). Translated by Claude from the Groq Arabic transcript; UNVERIFIED by a native speaker. 'You're the one I love most' is a reading of a garbled ASR line (machine: 'My mother is the most beautiful woman I love'). 'wallah' rendered as 'really'.",
+  "corrections": {
+    "My mother is the most beautiful woman I love": "You're the one I love most.",
+    "Take care of yourself, don't be afraid.": "Take care of yourself. Don't worry.",
+    "No, but I love you, God.": "No, I just really love you.",
+    "Yes, my mother.": "Yes, Mom.",
+    "God bless her": "Okay bye-bye."
+  }
+}

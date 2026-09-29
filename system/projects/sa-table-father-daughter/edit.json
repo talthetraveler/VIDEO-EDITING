@@ -1,0 +1,105 @@
+{
+  "layout": "vertical",
+  "capY": 0.58,
+  "title": "WHO WOULD YOU CALL?\nDAMASCUS GATE, JERUSALEM",
+  "titleHold": 2.5,
+  "out": "SA_TABLE_FATHER_DAUGHTER_V1.mp4",
+  "format": "call-someone-you-love (FULL STORY, one subject)",
+  "strategy": "The most emotional take in the folder: an old man calling his daughter in America. One take, kept in order. Only two things removed: 3.5s of the 5.5s silence after the first line, and the first of two identical 'Take care and God bless you' lines. Every other pause stays silent. Cuts are shot-size changes (wide <-> close) so the removals read as camera changes, not jump cuts. Project-wide denoise fixed at 14: one take, one location, so one noise floor (LESSONS 41).",
+  "beats": [
+    [
+      "local-0c06a4d937b9b59f",
+      0,
+      6.3,
+      0.5,
+      "HOOK (wide, sign in frame): 'Hello, Shalom Aleichem. How are you, my sweet daughter?' - face + line + the rig in the first second; the question in the title is answered by 0:05",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-0c06a4d937b9b59f",
+      9.9,
+      16.3,
+      0.5,
+      "CLOSE: 'I miss you so much.' then a 2.8s silence before 'I love you.' - the silence is the emotion, kept whole. Cut in 0.9s before the line so the long pause still reads as ~2s",
+      null,
+      null
+    ],
+    [
+      "local-0c06a4d937b9b59f",
+      16.3,
+      20.3,
+      0.5,
+      "THE LINE: 'I hope to see you before I die.' - contiguous with the previous beat (same crop), slow push only here, 1.2s of face after it",
+      null,
+      {
+        "z": [
+          1,
+          1.1
+        ]
+      }
+    ],
+    [
+      "local-0c06a4d937b9b59f",
+      20.3,
+      27.6,
+      0.5,
+      "WIDE reset: 'God bless you and save you, for you and your children. I love you, my sweet daughter.' - the grandchildren are the concrete detail that makes it real",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-0c06a4d937b9b59f",
+      30.6,
+      37.6,
+      0.5,
+      "CLOSE: 'I hope we will meet again. America is not far. Any time we can be close together.' - the distance named; skips the first 'Take care and God bless you' (27.5-29.5) because he says it again at 38s",
+      null,
+      null
+    ],
+    [
+      "local-0c06a4d937b9b59f",
+      37.7,
+      43.45,
+      0.5,
+      "ENDING LINES (wide): Take care and God bless you. Bye-bye, darling. I love you. (in at 37.7, not 37.6: a 0.1s silent gap keeps beat 05 out of the walk-off framing group, which had aimed its crop off his face)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "local-0c06a4d937b9b59f",
+      43.45,
+      47.6,
+      0.5,
+      "WORDLESS CLOSE (wide, same shot, no caption): hangs up, sets the phone down, looks up smiling, turns and gives a thumbs-up. Out at 47.6, before a crew member walks into frame at ~47.75 (checked on 4fps frames). Format rule: no CTA, no final caption.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "nocap": true
+      }
+    ]
+  ],
+  "denoise": 14
+}

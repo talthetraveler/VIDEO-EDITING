@@ -1,0 +1,98 @@
+{
+ "layout": "vertical",
+ "title": "WHAT A HOMELESS MAN\nIN TEL AVIV DREAMS OF 🇮🇱",
+ "titleHold": 4,
+ "out": "SA_HOMELESS_DREAM_V3.mp4",
+ "notes": "V3 = a different film, not a reshuffle of V1: different hook (a home -> 'a place to rest, a metre by a metre'), different lines (what he loves, what happy looks like), different ending (King Solomon: dark and light), no father/loneliness/goodbye. Counter beats are the Sony picture (C0485) over the chest-cam close mic (VID_060, whose own picture points at the floor): C0485 = VID_060 + 173.27s by envelope cross-correlation. Hand translations patched into cache/translate/local-06478f02786ce884.json (unverified). Rev 2: dropped the King Solomon close (no clean out-point: his speech runs straight on) - the film now ends on his picture of coming home, which answers the hook.",
+ "beats": [
+  [
+   "local-3b90089c8902a9e6",
+   333.4,
+   341.05,
+   0.5,
+   "HOOK - 'So you need a home?' 'Not a home. A place to rest ... a metre by a metre, that's enough.'",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "local-06478f02786ce884",
+     "at": 160.13
+    }
+   }
+  ],
+  [
+   "local-19018606b6d6b0ee",
+   59.6,
+   63.79,
+   0.5,
+   "HOW IT STARTED - 'Are you hungry?' 'Yes.' [full frame: the face-aim locked on Tal and cut Roman off]",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "local-ca1bb9b65735004c",
+     "at": 57.41
+    },
+    "manual": true,
+    "z": [
+     1,
+     1
+    ]
+   }
+  ],
+  [
+   "local-3b90089c8902a9e6",
+   57.33,
+   62.8,
+   0.5,
+   "the walk to the stall, synced audio: \"Let's eat something. Do you like kebab?\"",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "local-ca1bb9b65735004c",
+     "at": 142.36
+    }
+   }
+  ],
+  [
+   "local-e0275debb5700e8f",
+   87.6,
+   92.35,
+   0.5,
+   "THE GIVING - the plate lands: 'Here you go' 'My brother, cheers!'",
+   null,
+   null
+  ],
+  [
+   "local-3b90089c8902a9e6",
+   488.45,
+   506.75,
+   0.5,
+   "WHO HE IS - 'What I love is to create: you walk into a wrecked place and walk out and it's beautiful ... a sublime feeling.'",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "local-06478f02786ce884",
+     "at": 315.18
+    }
+   }
+  ],
+  [
+   "local-3b90089c8902a9e6",
+   423.3,
+   443.6,
+   0.5,
+   "ENDING - what happy is: \"the end of the day, you come home, throw down your bag, jump on the couch ... your whole body is tired, but you get joy out of the day.\" Ties back to the hook (a place to rest).",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "local-06478f02786ce884",
+     "at": 250.03
+    }
+   }
+  ]
+ ]
+}
