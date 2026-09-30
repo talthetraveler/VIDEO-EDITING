@@ -67,12 +67,22 @@ export function makeClient() {
 // Same pagination defence as discovery: the SDK ignores {page,page_size} and
 // replays page 1, so dedupe on id and stop when a page adds nothing new.
 async function pagedList(fn, accountId, folderId) {
+  // The V4 SDK pages with a CURSOR (a pager with loadNextPage), not `page` -
+  // `page: 2` returned page 1 again and this stopped at 50: the delivery
+  // folder read "50 files" with 80 in it (israel-batch, 2026-09-30).
   const seen = new Map();
-  for (let page = 1; page <= 40; page++) {
-    const d = arr(await fn(accountId, folderId, { page, page_size: 50 }).catch(() => []));
-    const before = seen.size;
-    for (const x of d) if (x?.id) seen.set(x.id, x);
-    if (d.length < 50 || seen.size === before) break;
+  const add = (r) => { const before = seen.size; for (const x of arr(r)) if (x?.id) seen.set(x.id, x); return seen.size > before; };
+  // The SDK's own loadNextPage() is broken (frameio@4.2.6 URL-encodes the "?"
+  // of the next link -> 404), so the `after` cursor is read from the body's
+  // links.next and passed back explicitly.
+  let after;
+  for (let i = 0; i < 40; i++) {
+    const r = await fn(accountId, folderId, after ? { page_size: 50, after } : { page_size: 50 }).catch(() => []);
+    if (!add(r) && i > 0) break;
+    const next = r?.response?.links?.next ?? r?.links?.next;
+    const m = next && String(next).match(/[?&]after=([^&]+)/);
+    if (!m) break;
+    after = decodeURIComponent(m[1]);
   }
   return [...seen.values()];
 }
