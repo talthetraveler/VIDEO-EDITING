@@ -1,0 +1,201 @@
+{
+ "01": [
+  {
+   "clip": "01",
+   "a": 0.0,
+   "b": 12.4,
+   "dur": 12.4,
+   "caps": 6,
+   "first": "WHAT'S UP?",
+   "last": "HAPPY HOLIDAYS"
+  },
+  {
+   "clip": "01",
+   "a": 12.4,
+   "b": 22.3,
+   "dur": 9.9,
+   "caps": 5,
+   "first": "EXCUSE ME",
+   "last": "HAPPY NEW YEAR"
+  },
+  {
+   "clip": "01",
+   "a": 22.3,
+   "b": 27.4,
+   "dur": 5.1,
+   "caps": 3,
+   "first": "KING THIS IS FOR YOU",
+   "last": "HAPPY HOLIDAYS"
+  }
+ ],
+ "02": [
+  {
+   "clip": "02",
+   "a": 0.0,
+   "b": 10.07,
+   "dur": 10.07,
+   "caps": 8,
+   "first": "GUYS I NEED YOUR HELP",
+   "last": "HAPPY NEW YEAR"
+  },
+  {
+   "clip": "02",
+   "a": 10.07,
+   "b": 19.43,
+   "dur": 9.36,
+   "caps": 5,
+   "first": "GUYS EXCUSE ME I NEED YOUR HELP",
+   "last": "HAPPY NEW YEAR"
+  },
+  {
+   "clip": "02",
+   "a": 19.43,
+   "b": 26.67,
+   "dur": 7.24,
+   "caps": 4,
+   "first": "EXCUSE ME",
+   "last": "HAPPY NEW YEAR"
+  },
+  {
+   "clip": "02",
+   "a": 26.67,
+   "b": 33.4,
+   "dur": 6.73,
+   "caps": 5,
+   "first": "MY BROTHER",
+   "last": "SO HOT TODAY"
+  },
+  {
+   "clip": "02",
+   "a": 33.4,
+   "b": 42.17,
+   "dur": 8.77,
+   "caps": 6,
+   "first": "MAN MAN",
+   "last": "SO HOT TODAY"
+  }
+ ],
+ "03": [
+  {
+   "clip": "03",
+   "a": 0.0,
+   "b": 6.73,
+   "dur": 6.73,
+   "caps": 4,
+   "first": "EXCUSE ME",
+   "last": "HAPPY NEW YEAR"
+  },
+  {
+   "clip": "03",
+   "a": 6.73,
+   "b": 11.43,
+   "dur": 4.7,
+   "caps": 2,
+   "first": "THIS IS FOR YOU",
+   "last": "HAPPY NEW YEAR"
+  },
+  {
+   "clip": "03",
+   "a": 11.43,
+   "b": 17.2,
+   "dur": 5.77,
+   "caps": 5,
+   "first": "CHECK",
+   "last": "HAPPY NEW YEAR"
+  },
+  {
+   "clip": "03",
+   "a": 17.2,
+   "b": 27.1,
+   "dur": 9.9,
+   "caps": 5,
+   "first": "TWO DRINKS",
+   "last": "CHECK HAPPY NEW YEAR"
+  }
+ ],
+ "04": [
+  {
+   "clip": "04",
+   "a": 0.0,
+   "b": 6.37,
+   "dur": 6.37,
+   "caps": 4,
+   "first": "WHAT DO YOU THINK",
+   "last": "GOOD NIGHT"
+  },
+  {
+   "clip": "04",
+   "a": 6.4,
+   "b": 9.77,
+   "dur": 3.37,
+   "caps": 5,
+   "first": "EXCUSE ME?",
+   "last": "THANK YOU VERY MUCH"
+  },
+  {
+   "clip": "04",
+   "a": 9.8,
+   "b": 12.93,
+   "dur": 3.13,
+   "caps": 2,
+   "first": "HAVE A GREAT DAY",
+   "last": "YOU TOO"
+  },
+  {
+   "clip": "04",
+   "a": 12.93,
+   "b": 17.47,
+   "dur": 4.54,
+   "caps": 7,
+   "first": "EXCUSE ME?",
+   "last": "OH THANK YOU"
+  },
+  {
+   "clip": "04",
+   "a": 17.47,
+   "b": 21.07,
+   "dur": 3.6,
+   "caps": 3,
+   "first": "WHAT DO YOU THINK?",
+   "last": "TAKE CARE OF YOURSELF"
+  }
+ ],
+ "05": [
+  {
+   "clip": "05",
+   "a": 0.0,
+   "b": 7.17,
+   "dur": 7.17,
+   "caps": 4,
+   "first": "WHAT'S UP?",
+   "last": "HAVE A NICE DAY"
+  },
+  {
+   "clip": "05",
+   "a": 7.17,
+   "b": 14.8,
+   "dur": 7.63,
+   "caps": 7,
+   "first": "WHAT'S UP?",
+   "last": "I KNOW"
+  },
+  {
+   "clip": "05",
+   "a": 14.8,
+   "b": 20.6,
+   "dur": 5.8,
+   "caps": 6,
+   "first": "WHAT'S UP?",
+   "last": "HAVE A NICE DAY"
+  },
+  {
+   "clip": "05",
+   "a": 20.6,
+   "b": 24.67,
+   "dur": 4.07,
+   "caps": 3,
+   "first": "HEY",
+   "last": "HAVE A NICE DAY"
+  }
+ ]
+}

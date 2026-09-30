@@ -1,0 +1,86 @@
+[
+ {
+  "name": "KINDNESS MIX 1 - SHANA TOVA",
+  "file": "KINDNESS MIX 1 - SHANA TOVA V2.mp4",
+  "order": [
+   "01a",
+   "02b",
+   "03a",
+   "01b",
+   "02d",
+   "03d"
+  ],
+  "seconds": 54.6,
+  "lufs": -14.2
+ },
+ {
+  "name": "KINDNESS MIX 2 - THE COMPLIMENTS",
+  "file": "KINDNESS MIX 2 - THE COMPLIMENTS V2.mp4",
+  "order": [
+   "05a",
+   "04b",
+   "05c",
+   "04d",
+   "05d",
+   "04e"
+  ],
+  "seconds": 28.1,
+  "lufs": -14.0
+ },
+ {
+  "name": "KINDNESS MIX 3 - MIXED",
+  "file": "KINDNESS MIX 3 - MIXED V2.mp4",
+  "order": [
+   "02a",
+   "05a",
+   "01a",
+   "04d",
+   "03d",
+   "05d"
+  ],
+  "seconds": 47.6,
+  "lufs": -14.1
+ },
+ {
+  "name": "KINDNESS MIX 4 - HOT DAY",
+  "file": "KINDNESS MIX 4 - HOT DAY V2.mp4",
+  "order": [
+   "02a",
+   "03a",
+   "02c",
+   "01b",
+   "02e",
+   "03d"
+  ],
+  "seconds": 52.2,
+  "lufs": -14.2
+ },
+ {
+  "name": "KINDNESS MIX 5 - QUICK ONES",
+  "file": "KINDNESS MIX 5 - QUICK ONES V2.mp4",
+  "order": [
+   "04b",
+   "01c",
+   "04c",
+   "05d",
+   "03b",
+   "04e"
+  ],
+  "seconds": 22.9,
+  "lufs": -14.1
+ },
+ {
+  "name": "KINDNESS MIX 6 - THE LONG WAY",
+  "file": "KINDNESS MIX 6 - THE LONG WAY V2.mp4",
+  "order": [
+   "01a",
+   "03d",
+   "02b",
+   "05b",
+   "02e",
+   "04a"
+  ],
+  "seconds": 54.0,
+  "lufs": -14.0
+ }
+]

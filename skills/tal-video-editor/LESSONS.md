@@ -1721,3 +1721,21 @@ including the two failures above) and `test-caption-timing.mjs` 0 0 0.
 
 **Also:** `selfreview.mjs` prints `\n` as ` / ` — a raw newline split the
 caption dump and hid its `<-- CHECK` flag from `batch-finalize`'s parser.
+
+## 67 — a flash-frame scan with a wide window hides the flashes (found 2026-09-30)
+
+Re-cutting Tal's own edits into segments (kindness mixes) leaves a segment
+ending ONE frame into the next shot whenever the scene detection that found
+his cut landed a frame late. In a mix that frame is a blink of a different
+person or place. The first pass found two (04d, 05b); a later pass found
+four more (02a, 02d, 04a, 05a): a car interior, a street and a shop arcade.
+
+**Why the first pass missed them:** it looked for a scene change anywhere in
+the last 0.3s. Tal's own angle cuts sit inside the segments, so that window
+hit almost every segment, and the real flashes were lost in the noise.
+
+**Rule:** a flash is a scene change in the last or first **0.12s (≤3 frames)**
+of a segment, measured with `select='gt(scene,0.3)'` over the WHOLE segment
+and compared with its probed duration. Then **look at the last four frames**
+before trimming — every one of the six was confirmed on a still. Fix: take
+two frames (0.07s) off that edge in `EDGE_FIX`.

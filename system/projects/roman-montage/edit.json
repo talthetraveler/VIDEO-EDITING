@@ -1,8 +1,8 @@
 {
  "layout": "vertical",
  "snap": false,
- "out": "ROMAN_MONTAGE_V7.mp4",
- "note": "Fast montage, Tal's order. Cuts on ACTION (snap:false), natural sound, captions only on the three lines that carry it: 'a day and a half, nothing', 'my father', 'you look good'. Ends on the new clothes as Tal asked - out of strict time order (C0488 precedes the food) but nothing on screen goes backwards: his shorts are never visible at the table. No music on the machine; add a track from Instagram's library at post time.",
+ "out": "ROMAN_MONTAGE_V10.mp4",
+ "note": "Fast montage, Tal's order. Cuts on ACTION (snap:false), natural sound, captions only on the three lines that carry it: 'a day and a half, nothing', 'my father', 'you look good'. Ends on the new clothes as Tal asked - out of strict time order (C0488 precedes the food) but nothing on screen goes backwards: his shorts are never visible at the table. No music on the machine; add a track from Instagram's library at post time. V9: every natural-sound beat now ends in a real pause after a complete phrase - V7/V8 clipped the first syllable of the next word on beats 02, 04, 08, 10 (verify-cut 'ends mid-thought ... -0.04s'); 'My father' holds 0.41s.",
  "beats": [
   [
    "local-ca1bb9b65735004c",
@@ -18,7 +18,7 @@
   [
    "local-19018606b6d6b0ee",
    12.0,
-   14.2,
+   14.9,
    0.5,
    "Sony: holding up the new shirt",
    null,
@@ -40,7 +40,7 @@
   [
    "local-19018606b6d6b0ee",
    21.6,
-   24.0,
+   24.6,
    0.5,
    "Sony: the old shirt comes off",
    null,
@@ -73,9 +73,9 @@
   [
    "local-ca1bb9b65735004c",
    50.0,
-   52.2,
+   51.4,
    0.5,
-   "POV: Roman standing in it",
+   "POV: Roman standing in it (ends in the pause after 'to drink' - 52.2 clipped 'where, is there a...', flagged by the gate)",
    null,
    {
     "nocap": true
@@ -84,7 +84,7 @@
   [
    "local-19018606b6d6b0ee",
    59.6,
-   62.2,
+   61.1,
    0.5,
    "Sony: they walk off together",
    null,
@@ -106,7 +106,7 @@
   [
    "local-e0275debb5700e8f",
    96.4,
-   99.0,
+   99.6,
    0.5,
    "the first bite",
    null,
@@ -151,7 +151,7 @@
   [
    "local-3843b9158bfb6eb6",
    5.6,
-   7.2,
+   7.45,
    0.5,
    "LINE 2b: 'My father.'",
    null,
@@ -167,7 +167,7 @@
   ],
   [
    "local-e538e7e17faec033",
-   150.0,
+   150.2,
    151.8,
    0.5,
    "eating, framed onto Roman",

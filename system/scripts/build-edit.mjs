@@ -1368,6 +1368,7 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
   } else {
     wav = cleanAudio(src, ss, to, n, sharedAtt());
   }
+  if (process.env.BUILD_DEBUG) writeFileSync(join(OUT, `debug_vf_${String(n).padStart(2, "0")}.txt`), vf, "utf8");
   execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-to", String(to), "-i", src, "-i", wav,
     // ONE COLOUR RANGE FOR EVERY BEAT. The chest cam records FULL range
     // (yuvj420p), the Sony LIMITED - and each beat used to be encoded in its
@@ -1380,7 +1381,14 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     // since 09-12 as "not yet root-caused". Convert every beat to limited
     // range here (a no-op for a beat already limited) and tag it as such.
     "-filter_complex", vf + ";[v]scale=out_range=tv,format=yuv420p[vtv]", "-map", "[vtv]", "-map", "1:a",
-    "-color_range", "tv",
+    // WRITE THE TAG, NOT JUST THE PIXELS. x264 omits the whole signal-type
+    // block when every colour field is default, and limited range IS the
+    // default: a Sony beat (no colour tags in the source) came out reading
+    // "unknown" - 7 of 21 on ROMAN V10, and the final inherits its first
+    // beat's tags (2026-09-30). Decoded as limited anyway, but "unknown" is
+    // exactly what hid the range bug before. Naming the matrix forces the
+    // block out. Both cameras here are bt709 SDR.
+    "-color_range", "tv", "-colorspace", "bt709",
     // AUDIO AT THE JOINS. Tal: "when the clips would change, the audio would
     // mess up." Two causes, both here:
     //   1. loudnorm ran PER BEAT, so every beat was normalised to its own
@@ -1457,7 +1465,7 @@ execFileSync(FF, [...args, "-filter_complex", hasMusic ? `${fc};${amix}` : fc,
   "-map", "[v]", "-map", hasMusic ? "[a]" : "0:a",
   ...(hasMusic ? [] : ["-af", `${TIMELINE_AF},loudnorm=I=-16:TP=-1.5:LRA=11`]),
   "-c:v", "libx264", "-preset", "medium", "-crf", FINAL ? "19" : "23", "-pix_fmt", "yuv420p",
-  "-color_range", "tv",
+  "-color_range", "tv", "-colorspace", "bt709",
   "-c:a", "aac", "-b:a", "160k", "-ar", "48000", join(OUT, outName)], { stdio: "pipe" });
 
 // NEVER write "EDIT.json" here. Windows paths are case-insensitive, so that
