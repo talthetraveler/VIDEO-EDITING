@@ -90,7 +90,11 @@ const FAITH_MAX = 2; // per day
 const all = [...byFile.values()];
 // holiday greetings are out of date after the holiday and on Tal's cut list
 const HOLIDAY = /SHANA TOVA|HAPPY NEW YEAR|CHAG SAMEACH|HAPPY HOLIDAYS/i;
-const held = all.filter((v) => v.status === "needs-tal" || HOLIDAY.test(`${v.title} ${v.file}`));
+// Tal can clear held videos: projects/<slug>/schedule-approved.json lists files he
+// approved ("*" = all). 2026-09-30 he chose "All 22" - the boy and Shana Tova too.
+const approvedP = join(ROOT, "projects", slug, "schedule-approved.json");
+const approved = new Set(readJSON(approvedP, []));
+const held = all.filter((v) => (v.status === "needs-tal" || HOLIDAY.test(`${v.title} ${v.file}`)) && !approved.has("*") && !approved.has(v.file));
 const notFull = all.filter((v) => !held.includes(v) && !full(v.file));
 const ready = all.filter((v) => !held.includes(v) && !notFull.includes(v) && !submitted.has(v.file));
 const mains = ready.filter((v) => /^V1\b/i.test(v.variant || "V1"));
@@ -140,7 +144,7 @@ for (let d = 0; (pools.main.length || pools.trial.length) && d < 200; d++) {
       (v) => !today.has(topic(v)) && faithOk(v) && storyOk(v),
       (v) => !today.has(topic(v)) && storyOk(v),
       (v) => storyOk(v),
-      (v) => (storyDays.get(story(v)) ?? []).every((x) => Math.abs(x - d) >= 2), // last resort: no empty tail days
+      (v) => (storyDays.get(story(v)) ?? []).every((x) => Math.abs(x - d) >= 3), // last resort: versions >= 3 days apart, no empty tail days
     ];
     let cands = [];
     for (const [ti, t] of tiers.entries()) { cands = pool.filter(t); if (cands.length) { if (ti) relaxed++; break; } }
