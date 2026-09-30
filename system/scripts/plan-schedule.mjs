@@ -92,7 +92,16 @@ const topic = (v) => (STYLES.find(([, re]) => re.test(txt(v))) ?? ["MEETING"])[0
 const faiths = (v) => ["CHRISTIAN", "MUSLIM", "JEWISH", "HINDU", "BUDDHIST"].filter((f) => txt(v).includes(f));
 const FAITH_MAX = 2; // per day
 
-const all = [...byFile.values()];
+// Tal can keep whole groups off the calendar: projects/<slug>/schedule-excluded.json
+// is { "why": "...", "match": "<regex over title+file>" } or a list of file names.
+// 2026-09-30: "schedule all the videos except the kindness related videos".
+const exP = join(ROOT, "projects", slug, "schedule-excluded.json");
+const exJ = readJSON(exP, null);
+const exRe = exJ && !Array.isArray(exJ) && exJ.match ? new RegExp(exJ.match, "i") : null;
+const exSet = new Set(Array.isArray(exJ) ? exJ : []);
+const isExcluded = (v) => exSet.has(v.file) || (exRe ? exRe.test(`${v.title} ${v.file}`) : false);
+const excluded = [...byFile.values()].filter(isExcluded);
+const all = [...byFile.values()].filter((v) => !isExcluded(v));
 // holiday greetings are out of date after the holiday and on Tal's cut list
 const HOLIDAY = /SHANA TOVA|HAPPY NEW YEAR|CHAG SAMEACH|HAPPY HOLIDAYS/i;
 // Tal can clear held videos: projects/<slug>/schedule-approved.json lists files he
