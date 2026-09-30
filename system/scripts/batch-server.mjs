@@ -59,7 +59,11 @@ function isFull(file) {
   if (!sizeCache.has(k)) {
     let wh = "";
     try { wh = execFileSync("ffprobe", ["-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", p], { encoding: "utf8" }).trim(); } catch {}
-    sizeCache.set(k, wh === "1080,1920");
+    // compare the NUMBERS: a stream with side data (iPhone "ambient viewing
+    // environment") prints "1080,1920," and a string match called three
+    // full-size Social Accords finals "Preview only" (2026-09-30).
+    const [w, h] = wh.split(",").map((x) => parseInt(x, 10));
+    sizeCache.set(k, w === 1080 && h === 1920);
   }
   return sizeCache.get(k);
 }
