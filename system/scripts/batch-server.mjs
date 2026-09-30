@@ -35,7 +35,10 @@ const PORT = Number(process.argv.includes("--port") ? process.argv[process.argv.
 const PUB = join(ROOT, "projects", "_publish");
 const CFG = join(PUB, "shortsync.config.json");
 const STATE = join(ROOT, "projects", slug, "posting.json");
-const SLOTS_H = [7, 16, 22];
+const SLOTS_H = [13, 16, 19]; // Tal, 2026-09-30: trials at 1, 4 and 7 PM
+const PLAN = join(ROOT, "projects", slug, "schedule-plan.json");
+const HELD = join(ROOT, "projects", slug, "schedule-held.json");
+const JOB = { running: false, log: "", started: null, code: null };
 const TZ = "+03:00"; // Israel (IDT until late October)
 
 const readJSON = (p, d) => { try { return JSON.parse(readFileSync(p, "utf8")); } catch { return d; } };
@@ -156,7 +159,7 @@ button.post{background:var(--accent)}button.trial{background:var(--trial)}button
 .log{white-space:pre-wrap;font-size:11px;background:var(--bg);border-radius:6px;padding:6px;margin:0;max-height:160px;overflow:auto}
 </style></head><body>
 <header class="top"><h1>All videos · ${vids.length}</h1>
-<p>Tap a video to watch. <b>Post to all now</b> goes to every connected platform immediately. <b>Schedule trial</b> books the next Instagram trial slot (07:00 / 16:00 / 22:00). ${nPosted} posted · ${nTrial} trials scheduled.</p></header>
+<p>Tap a video to watch. <b>Post to all now</b> goes to every connected platform immediately. <b>Schedule trial</b> books the next trial slot (13:00 / 16:00 / 19:00): Instagram as a Trial Reel, other platforms as normal posts. ${nPosted} posted · ${nTrial} trials scheduled. <a href="/schedule"><b>Open the posting schedule →</b></a></p></header>
 ${connected ? "" : `<div class="setup"><b>Posting isn't connected yet.</b> The ShortSync key was lost when the old projects folder was deleted. Paste your ShortSync API key (it starts with <code>ss_live_</code>) and the buttons switch on. It's saved only on this laptop.
 <input id="key" type="password" autocomplete="off" placeholder="ss_live_..."><button class="post" id="savekey">Save key</button> <span id="keymsg"></span></div>`}
 <main>${sections}</main>
@@ -180,6 +183,47 @@ const sk=$('#savekey'); if(sk) sk.onclick=async()=>{const key=$('#key').value.tr
 </script></body></html>`;
 }
 
+// THE CALENDAR: projects/<slug>/schedule-plan.json (scripts/plan-schedule.mjs),
+// day by day, with one button that submits all of it to ShortSync.
+function schedulePage() {
+  const plan = readJSON(PLAN, []);
+  const held = readJSON(HELD, []);
+  const connected = existsSync(CFG);
+  const days = new Map();
+  for (const r of plan) { const d = r.at ? r.at.slice(0, 10) : "now"; if (!days.has(d)) days.set(d, []); days.get(d).push(r); }
+  const sent = plan.filter((r) => r.post_ids).length;
+  const dayName = (d) => new Date(`${d}T12:00:00Z`).toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
+  const row = (r) => `<tr class="${r.as}${r.post_ids ? " sent" : ""}"><td class="t">${esc(r.at ? r.at.slice(11, 16) : "")}</td>`
+    + `<td><span class="lane ${r.as}">${r.as === "main" ? "Main" : "Trial"}</span></td>`
+    + `<td><a href="/v/${encodeURIComponent(r.file)}" target="_blank">${esc(r.file.replace(/\.mp4$/, ""))}</a><div class="cap">${esc(String(r.caption || "").split("\n")[0])}</div></td>`
+    + `<td class="st">${r.post_ids ? "Sent" : ""}</td></tr>`;
+  const rows = [...days].map(([d, rs]) => `<section class="story"><h2>${esc(dayName(d))}</h2><table>${rs.map(row).join("")}</table></section>`).join("");
+  const remaining = plan.length - sent;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Posting Schedule</title><style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1c1b19;--mute:#6b675f;--line:#e4e1da;--accent:#0b6e4f;--trial:#5b3fb5;--warn:#b25b00}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--card:#1e1e1c;--ink:#f1efe9;--mute:#a19d94;--line:#2f2e2b;--accent:#3fbf8f;--trial:#a58cf0;--warn:#f0a44b}}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:14px 16px;z-index:2}h1{margin:0;font-size:20px}header p{margin:4px 0 0;color:var(--mute);font-size:13px}
+main{max-width:900px;margin:0 auto;padding:8px 16px 60px}.story h2{font-size:15px;margin:22px 0 6px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+td{padding:8px;border-top:1px solid var(--line);vertical-align:top;font-size:14px}td.t{width:52px;font-variant-numeric:tabular-nums;color:var(--mute)}a{color:var(--ink)}
+.cap{color:var(--mute);font-size:12px}.lane{font-size:12px;font-weight:600;border-radius:99px;padding:1px 8px;color:#fff}.lane.main{background:var(--accent)}.lane.trial{background:var(--trial)}
+tr.sent{opacity:.5}td.st{color:var(--accent);font-weight:600;width:44px}
+button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:11px 16px;background:var(--accent);color:#fff;cursor:pointer}button:disabled{opacity:.35;cursor:not-allowed}
+pre{white-space:pre-wrap;font-size:12px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px;max-height:300px;overflow:auto}
+.held{font-size:13px;color:var(--mute)}.held div{margin:4px 0}
+</style></head><body><header><h1>Posting schedule · ${plan.length} posts</h1>
+<p>Main feed 09:00 · 12:00 · 18:00 &nbsp;|&nbsp; Trial reels 13:00 · 16:00 · 19:00 (Israel time). Every platform connected in ShortSync; trials go to Instagram as Trial Reels and to the other platforms as normal posts. ${sent} already sent. <a href="/">Back to videos</a></p>
+<p><button id="go" ${connected && remaining > 0 ? "" : "disabled"}>Submit whole schedule to ShortSync</button> ${connected ? "" : "<b>Paste the ShortSync key on the videos page first.</b>"}</p><pre id="log" hidden></pre></header>
+<main>${rows}<section class="story"><h2>Held back · ${held.length} (your call / holiday)</h2><div class="held">${held.map((h) => `<div><b>${esc(h.file)}</b>: ${esc(String(h.why).slice(0, 160))}</div>`).join("")}</div></section></main>
+<script>
+const log=document.getElementById('log');
+async function poll(){const j=await(await fetch('/api/schedule/job')).json();if(j.started){log.hidden=false;log.textContent=(j.running?'Running...\\n':'Finished (exit '+j.code+')\\n')+j.log;log.scrollTop=1e9}if(j.running)setTimeout(poll,3000)}
+document.getElementById('go').onclick=async()=>{if(!confirm('Schedule all ${remaining} remaining posts on ShortSync now? Each video is uploaded and booked at its time; nothing goes live before its slot.'))return;const r=await(await fetch('/api/schedule/submit',{method:'POST'})).json();alert(r.message);poll()};
+poll();
+</script></body></html>`;
+}
+
 const body = (req) => new Promise((res) => { let s = ""; req.on("data", (d) => (s += d)); req.on("end", () => { try { res(JSON.parse(s || "{}")); } catch { res({}); } }); });
 const json = (res, o, code = 200) => { res.writeHead(code, { "content-type": "application/json" }); res.end(JSON.stringify(o)); };
 
@@ -188,6 +232,17 @@ http.createServer(async (req, res) => {
   try {
     if (u.pathname === "/") { res.writeHead(200, { "content-type": "text/html; charset=utf-8" }); return res.end(page()); }
 
+    if (u.pathname === "/schedule") { res.writeHead(200, { "content-type": "text/html; charset=utf-8" }); return res.end(schedulePage()); }
+    if (u.pathname === "/api/schedule/job") return json(res, JOB);
+    if (u.pathname === "/api/schedule/submit" && req.method === "POST") {
+      if (!existsSync(CFG)) return json(res, { ok: false, message: "ShortSync key missing - paste it on the main page first." });
+      if (JOB.running) return json(res, { ok: false, message: "Already running." });
+      Object.assign(JOB, { running: true, log: "", started: new Date().toISOString(), code: null });
+      const pr = spawn("node", ["scripts/publish.mjs", "schedule", "--plan", PLAN, "--confirm"], { cwd: ROOT });
+      pr.stdout.on("data", (d) => (JOB.log += d)); pr.stderr.on("data", (d) => (JOB.log += d));
+      pr.on("close", (code) => Object.assign(JOB, { running: false, code }));
+      return json(res, { ok: true, message: "Submitting - uploads run one by one; this page shows progress." });
+    }
     if (u.pathname.startsWith("/v/")) {
       const f = basename(decodeURIComponent(u.pathname.slice(3)));
       const p = join(outDir, f);
@@ -208,7 +263,9 @@ http.createServer(async (req, res) => {
       if (!/^ss_(live|test)_[A-Za-z0-9_-]{8,}$/.test(String(key || ""))) return json(res, { ok: false, message: "That doesn't look like a ShortSync key (ss_live_…)." });
       mkdirSync(PUB, { recursive: true });
       const cfg = existsSync(CFG) ? readJSON(CFG, {}) : {};
-      Object.assign(cfg, { api_key: key, default_platforms: cfg.default_platforms ?? ["instagram", "tiktok", "youtube", "facebook"], trial_platform: "instagram", rules: cfg.rules ?? { never_auto_post: true, min_gap_hours_between_posts: 3 } });
+      // every connected platform; 1h min gap - Tal's own slots (12:00 main, 13:00
+      // trial; 18:00 main, 19:00 trial) are an hour apart
+      Object.assign(cfg, { api_key: key, default_platforms: cfg.default_platforms ?? ["all"], trial_platform: "instagram", rules: { never_auto_post: true, ...(cfg.rules ?? {}), min_gap_hours_between_posts: 1 } });
       writeFileSync(CFG, JSON.stringify(cfg, null, 2));
       const r = await runPublish(["status"]);
       return json(res, { ok: r.code === 0, message: r.code === 0 ? "Saved - connected accounts checked." : "Saved, but ShortSync refused it - check the key.", out: r.out.slice(-1500) });
@@ -222,22 +279,25 @@ http.createServer(async (req, res) => {
       if (!isFull(f)) return json(res, { ok: false, message: "Not a full-quality 1080x1920 file - refusing to post a preview." });
       if (!existsSync(CFG)) return json(res, { ok: false, message: "ShortSync key missing - paste it at the top of the page." });
       const st = state();
-      let args, when;
-      if (u.pathname === "/api/post") {
-        args = ["post", p, "--caption", caption, "--confirm"];
-        when = new Date().toISOString();
-      } else {
-        when = nextTrialSlot(st.trialSlots);
-        args = ["trial", p, "--at", when, "--caption", caption, "--confirm"];
-      }
-      const r = await runPublish(args);
+      const isPost = u.pathname === "/api/post";
+      const plan = readJSON(PLAN, []);
+      const taken = [...st.trialSlots, ...plan.filter((x) => x.as === "trial").map((x) => x.at)];
+      const when = isPost ? null : nextTrialSlot(taken);
+      // one-item plan through `publish.mjs schedule`: every connected platform;
+      // a trial is an Instagram Trial Reel + the other platforms as normal posts
+      const one = join(ROOT, "projects", slug, `oneoff-${Date.now()}.json`);
+      writeFileSync(one, JSON.stringify([{ project: p, file: f, as: isPost ? "main" : "trial", platforms: ["all"], ...(when ? { at: when } : {}), caption }], null, 1));
+      const r = await runPublish(["schedule", "--plan", one, "--confirm"]);
       const ok = r.code === 0 && !/✗|Error/.test(r.out.split("\n").slice(-3).join("\n"));
       if (ok) {
-        st.videos[f] = { kind: u.pathname === "/api/post" ? "post" : "trial", when, caption, at: new Date().toISOString() };
-        if (u.pathname === "/api/trial") st.trialSlots.push(when);
+        st.videos[f] = { kind: isPost ? "post" : "trial", when: when ?? new Date().toISOString(), caption, at: new Date().toISOString() };
+        if (!isPost) st.trialSlots.push(when);
         saveState(st);
+        // the big schedule must not post it a second time
+        const i = plan.findIndex((x) => x.file === f && !x.post_ids);
+        if (i >= 0) { plan[i].post_ids = [`sent-by-hand-${st.videos[f].kind}`]; plan[i].submitted_at = new Date().toISOString(); writeFileSync(PLAN, JSON.stringify(plan, null, 1)); }
       }
-      return json(res, { ok, message: ok ? (u.pathname === "/api/post" ? "Posted." : `Trial scheduled for ${when}.`) : "ShortSync didn't accept it - see below.", out: r.out.slice(-2000) });
+      return json(res, { ok, message: ok ? (isPost ? "Posted." : `Trial scheduled for ${when}.`) : "ShortSync didn't accept it - see below.", out: r.out.slice(-2000) });
     }
     res.writeHead(404); res.end();
   } catch (e) { json(res, { ok: false, message: String(e.message || e) }, 500); }

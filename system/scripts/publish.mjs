@@ -28,7 +28,7 @@
  *   node scripts/publish.mjs list [--status scheduled|published|failed]
  *   node scripts/publish.mjs cancel <post_id> --confirm
  */
-import { readFileSync, existsSync, statSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, statSync } from "node:fs";
 import { join, isAbsolute, basename } from "node:path";
 import { randomUUID } from "node:crypto";
 
@@ -161,6 +161,10 @@ const connections = async () => {
 
 const resolveTargets = async (platforms, { trial = false } = {}) => {
   const conns = await connections();
+  // "all" = every account connected in ShortSync (Tal, 2026-09-30: "every
+  // platform that's connected on ShortSync" - Instagram, TikTok, X, Facebook...)
+  if ([].concat(platforms).some((p) => String(p).toLowerCase() === "all"))
+    platforms = [...new Set(conns.map((c) => (c.platform || c.provider || "").toLowerCase()).filter(Boolean))];
   const byPlatform = new Map();
   for (const c of conns) {
     const plat = (c.platform || c.provider || "").toLowerCase();
@@ -370,8 +374,10 @@ const run = async () => {
       console.log(`  ${(r.project || "?").padEnd(24)} ${(r.as || "main").padEnd(6)} ${plats.join("+").padEnd(34)} ${r.at || "immediate"}`);
     }
 
-    if (!gate(`POST /posts ×${plan.length}`)) return;
-    for (const r of plan) {
+    const todo = plan.filter((r) => !r.post_ids);
+    if (todo.length < plan.length) console.log(`  (${plan.length - todo.length} already submitted - skipped; their post ids are in the plan)`);
+    if (!gate(`POST /posts ×${todo.length}`)) return;
+    for (const r of todo) {
       const trial = (r.as || "main") === "trial";
       // trial = Instagram as a Trial Reel + the other platforms as normal posts
       const platforms = r.platforms || cfg.default_platforms;
@@ -388,6 +394,11 @@ const run = async () => {
       const resp = await api("POST", "/posts", body, { "Idempotency-Key": randomUUID() });
       const rows = Array.isArray(resp) ? resp : resp.data ?? [resp];
       console.log(`  ✓ ${r.project} (${r.as || "main"}) → ${r.at || "now"}  ${rows.map((x) => x.id || x.status).join(", ")}`);
+      // RESUMABLE: written back after EVERY item, so a run that dies at item
+      // 40 of 80 continues at 41 instead of re-posting 1-40.
+      r.post_ids = rows.map((x) => x.id).filter(Boolean);
+      r.submitted_at = new Date().toISOString();
+      writeFileSync(planFile, JSON.stringify(plan, null, 1));
     }
     console.log("✓ schedule submitted");
     return;
