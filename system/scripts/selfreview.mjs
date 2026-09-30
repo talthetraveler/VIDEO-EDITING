@@ -139,4 +139,6 @@ try {
 }
 
 console.log(`\nDO NOT SEND until the contact sheet has been LOOKED AT and every flagged caption resolved.`);
-process.exit(flagged || vrc ? 1 : 0);
+// exitCode, not process.exit(): same Windows libuv abort as verify-cut (935a0b8) -
+// "Assertion failed ... async.c" after every check had passed (israel-batch).
+process.exitCode = flagged || vrc ? 1 : 0;
