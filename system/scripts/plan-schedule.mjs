@@ -131,11 +131,10 @@ const STORY_GAP = 5;
 // Facebook to maintain steady growth without fatiguing your audience or
 // triggering spam filters." Facebook skips the 12:00 main -> 2/day (09 + 18).
 // Everything else: 3/day (the 3 mains). Instagram: 3 feed + 3 Trial Reels.
-// Then (same day): "you're posting to Facebook directly and then also to
-// Instagram, which is connected to my Facebook" - Instagram already shares to
-// his Facebook, so a direct Facebook post doubled every video there. Facebook
-// is now left out of every post; it gets the videos through Instagram.
-const PLATFORM_SKIP = { 9: ["facebook"], 12: ["facebook"], 18: ["facebook"] };
+// Facebook is posted DIRECTLY (Tal: "no, post to Facebook directly"); the
+// duplicate route is the "facebook_for_instagram" connection, which
+// publish.mjs always drops when "instagram" is connected.
+const PLATFORM_SKIP = { 12: ["facebook"] };
 let seed = 20261001;
 const rnd = () => { seed |= 0; seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 const SLOTS = [[9, "main"], [12, "main"], [13, "trial"], [16, "trial"], [18, "main"], [19, "trial"]];
