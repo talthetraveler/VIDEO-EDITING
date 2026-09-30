@@ -103,8 +103,20 @@ const KINDNESS = [
   ["Kindness tests: asking strangers for help", /KINDNESS|TESTED|PAY FOR MY TRAIN/i],
   ["They wouldn't let me pay", /WON'T LET ME PAY|WOULDN'T LET ME PAY/i],
   ["Call someone you love", /CALL SOMEONE/i],
+  ["Other kept off the schedule", /./],
 ];
-const kindGroup = (v) => (KINDNESS.find(([, re]) => re.test(`${v.title} ${v.file}`)) ?? [null])[0];
+// Tal then (via the other session): "schedule everything EXCEPT the kindness
+// ones, keep only those on Frame.io" - projects/<slug>/schedule-excluded.json
+// holds that list's regex. When it exists the tab shows exactly that set, so
+// "Kindness" here = what is NOT in the posting schedule.
+const EXCL = (() => { try { const j = JSON.parse(readFileSync(join(ROOT, "projects", slug, "schedule-excluded.json"), "utf8")); return j.match ? new RegExp(j.match, "i") : null; } catch { return null; } })();
+const kindGroup = (v) => {
+  const t = `${v.title} ${v.file}`;
+  if (EXCL && !EXCL.test(t)) return null;
+  // the catch-all "Other" group only exists when the exclusion list does
+  const groups = EXCL ? KINDNESS : KINDNESS.slice(0, -1);
+  return (groups.find(([, re]) => re.test(t)) ?? [null])[0];
+};
 
 function page(filter = "all") {
   const allVids = videos();
