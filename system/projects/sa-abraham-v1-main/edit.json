@@ -1,141 +1,141 @@
 {
- "layout": "vertical",
- "title": "A MESSAGE FROM ISRAEL TO\nMOROCCO, UAE, BAHRAIN & SUDAN",
- "titleHold": 3,
- "out": "SA_ABRAHAM_V1_MAIN.mp4",
- "format": "street-interview (one question, many strangers - the 'send a message' shape)",
- "autoFrame": false,
- "capY": 0.8,
- "strategy": "Emotional V1: a chorus of very different Israelis speaking straight to people in the four Abraham Accords countries. Hook on the older man's peace line (face + words from frame 4), Tal's flag-flip gives the premise, then alternate age/gender/background/language (Hebrew, English, Arabic). The strongest, most personal answer - the Arabic-speaking woman whose grandfather is from Morocco - sits 4th of 7 answers. Ends on the thesis from the most credible voice: a man who lived in Dubai and now lives in Israel, 'we're all brothers, we're family.' No Bibi/Netanyahu anywhere (checked against word timings). Full frame, no zoom: the sign with the four flags IS the context, so captions sit at 0.75, below it. r2 (2026-09-30): capY 0.75 -> 0.80 so captions sit below the sign lettering on the wide shots.",
- "beats": [
-  [
-   "895975c9-3a8f-4eea-ac58-e72dc55e3d06",
-   0.14,
-   4.95,
-   0.5,
-   "HOOK C0510 older bald man, sign in hand: 'It's good that there will be peace in all countries, in all the world.' Speaking from the first frame. Out 4.95: pause after 'countries' (ends 4.50). His Bibi praise starts at 8.04 - 3.1s clear.",
-   null,
-   {
-    "exact": true,
-    "z": [
-     1,
-     1
-    ]
-   }
-  ],
-  [
-   "237f94c4-6d6c-4bd9-845d-aeac8e737907",
-   1.6,
-   8.6,
-   0.5,
-   "PREMISE C0506 Tal on the beach flipping each country's flag as he names it, landing on the Israeli flag: 'Six years ago today, Morocco, the UAE, Bahrain and Sudan signed the Abraham Accords with Israel.' Skips the stray 'Sudan.' at 0.0-0.33.",
-   null,
-   {
-    "exact": true,
-    "z": [
-     1,
-     1
-    ]
-   }
-  ],
-  [
-   "10e1afae-d15d-4f1a-882c-93a8ab66cd48",
-   17.16,
-   28.93,
-   0.5,
-   "C0513 young blonde woman, Hebrew: 'You have to come to Israel, to see what we have here, and we want to come visit you... And peace is the way.' The 2s smile-pause before the last line is kept - her face does the work. Hair/prep chatter before 17.28 cut; 'Bibi' at 30.60 is 1.67s after the out.",
-   null,
-   {
-    "exact": true,
-    "z": [
-     1,
-     1
-    ]
-   }
-  ],
-  [
-   "2fc2b697-66a3-4bed-a55e-aacdad8b870d",
-   13.46,
-   24.38,
-   0.5,
-   "C0521 couple from Dimona - Tal's question kept with the answer (one unit): 'What do you want the world to know about you guys?' -> 'We're all about love, we're all about peace. We love Israel... There's no room for hate or war.' Out before 'There's only room for prosperity' (24.46): an earlier review heard a slip there ('no room for prosperity'), so it stays out.",
-   null,
-   {
-    "exact": true,
-    "z": [
-     1,
-     1
-    ]
-   }
-  ],
-  [
-   "543ec9e8-e410-4426-99fa-74769fccf153",
-   0.4,
-   7.95,
-   0.5,
-   "STRONGEST (4th answer) C0525 red-haired woman speaking ARABIC to Morocco: 'I love Morocco so much. My grandfather is from Morocco. I want to visit you, I long to visit you, in peace.' An Israeli answering in the neighbours' language - the most personal line in the shoot. In at 0.40, before her opening '...salam' (Groq stretches 'ana' over 0.90-2.70 so 1.45 read as mid-word; audio energy shows her speaking from ~0.5); out 7.95, after her speech ends (~7.5) and before she steps off with the sign (8.4). Subtle push, the only one in the cut.",
-   null,
-   {
-    "exact": true,
-    "z": [
-     1,
-     1.06
+  "layout": "vertical",
+  "title": "A MESSAGE FROM ISRAEL TO\nMOROCCO, UAE, BAHRAIN & SUDAN",
+  "titleHold": 3,
+  "out": "SA_ABRAHAM_V1_MAIN_HQ2.mp4",
+  "format": "street-interview (one question, many strangers - the 'send a message' shape)",
+  "autoFrame": false,
+  "capY": 0.8,
+  "strategy": "Emotional V1: a chorus of very different Israelis speaking straight to people in the four Abraham Accords countries. Hook on the older man's peace line (face + words from frame 4), Tal's flag-flip gives the premise, then alternate age/gender/background/language (Hebrew, English, Arabic). The strongest, most personal answer - the Arabic-speaking woman whose grandfather is from Morocco - sits 4th of 7 answers. Ends on the thesis from the most credible voice: a man who lived in Dubai and now lives in Israel, 'we're all brothers, we're family.' No Bibi/Netanyahu anywhere (checked against word timings). Full frame, no zoom: the sign with the four flags IS the context, so captions sit at 0.75, below it. r2 (2026-09-30): capY 0.75 -> 0.80 so captions sit below the sign lettering on the wide shots.",
+  "beats": [
+    [
+      "895975c9-3a8f-4eea-ac58-e72dc55e3d06",
+      0.14,
+      4.95,
+      0.5,
+      "HOOK C0510 older bald man, sign in hand: 'It's good that there will be peace in all countries, in all the world.' Speaking from the first frame. Out 4.95: pause after 'countries' (ends 4.50). His Bibi praise starts at 8.04 - 3.1s clear.",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
     ],
-    "x": 0.5,
-    "y": 0.34
-   }
-  ],
-  [
-   "e05e01b0-6bf1-4d06-9945-fdd635193462",
-   13.88,
-   17.35,
-   0.5,
-   "C0511 man in a cap, older than the women either side: 'We just want to live in peace. That's all we want from the world.' Short and plain - a breath after the Arabic.",
-   null,
-   {
-    "exact": true,
-    "z": [
-     1,
-     1
+    [
+      "237f94c4-6d6c-4bd9-845d-aeac8e737907",
+      1.6,
+      8.6,
+      0.5,
+      "PREMISE C0506 Tal on the beach flipping each country's flag as he names it, landing on the Israeli flag: 'Six years ago today, Morocco, the UAE, Bahrain and Sudan signed the Abraham Accords with Israel.' Skips the stray 'Sudan.' at 0.0-0.33.",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "10e1afae-d15d-4f1a-882c-93a8ab66cd48",
+      17.16,
+      28.93,
+      0.5,
+      "C0513 young blonde woman, Hebrew: 'You have to come to Israel, to see what we have here, and we want to come visit you... And peace is the way.' The 2s smile-pause before the last line is kept - her face does the work. Hair/prep chatter before 17.28 cut; 'Bibi' at 30.60 is 1.67s after the out.",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "2fc2b697-66a3-4bed-a55e-aacdad8b870d",
+      13.46,
+      24.38,
+      0.5,
+      "C0521 couple from Dimona - Tal's question kept with the answer (one unit): 'What do you want the world to know about you guys?' -> 'We're all about love, we're all about peace. We love Israel... There's no room for hate or war.' Out before 'There's only room for prosperity' (24.46): an earlier review heard a slip there ('no room for prosperity'), so it stays out.",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "543ec9e8-e410-4426-99fa-74769fccf153",
+      0.4,
+      7.95,
+      0.5,
+      "STRONGEST (4th answer) C0525 red-haired woman speaking ARABIC to Morocco: 'I love Morocco so much. My grandfather is from Morocco. I want to visit you, I long to visit you, in peace.' An Israeli answering in the neighbours' language - the most personal line in the shoot. In at 0.40, before her opening '...salam' (Groq stretches 'ana' over 0.90-2.70 so 1.45 read as mid-word; audio energy shows her speaking from ~0.5); out 7.95, after her speech ends (~7.5) and before she steps off with the sign (8.4). Subtle push, the only one in the cut.",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1.06
+        ],
+        "x": 0.5,
+        "y": 0.34
+      }
+    ],
+    [
+      "e05e01b0-6bf1-4d06-9945-fdd635193462",
+      13.88,
+      17.35,
+      0.5,
+      "C0511 man in a cap, older than the women either side: 'We just want to live in peace. That's all we want from the world.' Short and plain - a breath after the Arabic.",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "62fcc474-48da-4809-a6aa-1be24f7d8ed9",
+      7.79,
+      15.43,
+      0.5,
+      "C0517 woman with her dog: 'We love everyone, we love you guys, hope to visit soon and eat your food - and I hope you can come here and eat our food.' The warm/light beat before the close.",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "f013500a-dd00-433c-8ba0-f5291ccfa5d9",
+      0,
+      14.1,
+      0.5,
+      "END C0524 young man in a cap: 'This is coming from somebody that used to live in Dubai, now he lives in Israel... They're both beautiful countries... at the end of the day, we're all brothers. We're family. Let's go.' The thesis said by the most credible voice. Out 14.10, before he walks into the lens (14.28).",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
     ]
-   }
   ],
-  [
-   "62fcc474-48da-4809-a6aa-1be24f7d8ed9",
-   7.79,
-   15.43,
-   0.5,
-   "C0517 woman with her dog: 'We love everyone, we love you guys, hope to visit soon and eat your food - and I hope you can come here and eat our food.' The warm/light beat before the close.",
-   null,
-   {
-    "exact": true,
-    "z": [
-     1,
-     1
-    ]
-   }
-  ],
-  [
-   "f013500a-dd00-433c-8ba0-f5291ccfa5d9",
-   0,
-   14.1,
-   0.5,
-   "END C0524 young man in a cap: 'This is coming from somebody that used to live in Dubai, now he lives in Israel... They're both beautiful countries... at the end of the day, we're all brothers. We're family. Let's go.' The thesis said by the most credible voice. Out 14.10, before he walks into the lens (14.28).",
-   null,
-   {
-    "exact": true,
-    "z": [
-     1,
-     1
-    ]
-   }
+  "captionFix": [
+    {
+      "match": "DROPLINE",
+      "to": null,
+      "exact": true
+    }
   ]
- ],
- "captionFix": [
-  {
-   "match": "DROPLINE",
-   "to": null,
-   "exact": true
-  }
- ]
 }

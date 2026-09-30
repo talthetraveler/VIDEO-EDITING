@@ -1,71 +1,71 @@
 {
- "layout": "vertical",
- "titleY": 260,
- "titleHold": 4,
- "capY": 0.69,
- "maxZoom": 1.25,
- "title": "POV: I GAVE FLOWERS TO A\nSTRANGER IN JERUSALEM 🇮🇱",
- "out": "SA_FLOWERS_OLD_LADY_V1_r3.mp4",
- "denoise": 10,
- "beats": [
-  [
-   "local-1f0b76943a391c55",
-   5.35,
-   37.9,
-   0.5,
-   "HOOK + GIFT + JOY, one POV take: opens on her face as the yellow flower arrives ('Happy holiday' - her mouth opens in surprise at 6-7s), 'for health and joy', 'thank you so much'; strangers join in and a girl kneels with a red rose (14-18s); 'what is this? you made me so happy!'; her caregiver beams 'that's how it should be'; then 'where were you born? - Morocco - Casablanca?'. 'Excuse me, this is for you' (4.3s) is left out: the frame before 5.4s is an empty street [framing: manual full-height centre crop - the auto face-aim put the crop top-left on passers-by in V1 r1]",
-   null,
-   {
-    "exact": true,
-    "audio": {
-     "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
-     "at": 5.35
-    },
-    "manual": true,
-    "z": [
-     1,
-     1
+  "layout": "vertical",
+  "titleY": 260,
+  "titleHold": 4,
+  "capY": 0.69,
+  "maxZoom": 1.25,
+  "title": "POV: I GAVE FLOWERS TO A\nSTRANGER IN JERUSALEM 🇮🇱",
+  "out": "SA_FLOWERS_OLD_LADY_V1_HQ2.mp4",
+  "denoise": 10,
+  "beats": [
+    [
+      "local-1f0b76943a391c55",
+      5.35,
+      37.9,
+      0.5,
+      "HOOK + GIFT + JOY, one POV take: opens on her face as the yellow flower arrives ('Happy holiday' - her mouth opens in surprise at 6-7s), 'for health and joy', 'thank you so much'; strangers join in and a girl kneels with a red rose (14-18s); 'what is this? you made me so happy!'; her caregiver beams 'that's how it should be'; then 'where were you born? - Morocco - Casablanca?'. 'Excuse me, this is for you' (4.3s) is left out: the frame before 5.4s is an empty street [framing: manual full-height centre crop - the auto face-aim put the crop top-left on passers-by in V1 r1]",
+      null,
+      {
+        "exact": true,
+        "audio": {
+          "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
+          "at": 5.35
+        },
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
-  ],
-  [
-   "88291fa1-8adf-4b21-b985-83d3d7cd9dbf",
-   0.0,
-   2.8,
-   0.5,
-   "WIDE, observer iPhone: the whole scene - her in the wheelchair holding the bunch of flowers, Tal crouched at her level, caregiver behind. Covers the pause while she thinks (POV there is a whip-pan blur at 40s). POV audio underneath so the sound is continuous. Proxy only (360p). Exact sync of the two cameras NOT measured - this is a cutaway, not a matched moment",
-   null,
-   {
-    "exact": true,
-    "audio": {
-     "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
-     "at": 37.9
-    }
-   }
-  ],
-  [
-   "local-1f0b76943a391c55",
-   40.7,
-   50.95,
-   0.5,
-   "THE BOND + GOODBYE: 'Rabat!' - 'yalla, I'm Iraqi', hands going as she talks, 'nice to meet you', 'be healthy', 'bye, my love' over the caregiver's smile. Ends before the whip at 51s [framing: manual full-height centre crop - the auto face-aim put the crop top-left on passers-by in V1 r1]",
-   null,
-   {
-    "exact": true,
-    "audio": {
-     "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
-     "at": 40.7
-    },
-    "manual": true,
-    "z": [
-     1,
-     1
+    [
+      "88291fa1-8adf-4b21-b985-83d3d7cd9dbf",
+      0,
+      2.8,
+      0.5,
+      "WIDE, observer iPhone: the whole scene - her in the wheelchair holding the bunch of flowers, Tal crouched at her level, caregiver behind. Covers the pause while she thinks (POV there is a whip-pan blur at 40s). POV audio underneath so the sound is continuous. Proxy only (360p). Exact sync of the two cameras NOT measured - this is a cutaway, not a matched moment",
+      null,
+      {
+        "exact": true,
+        "audio": {
+          "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
+          "at": 37.9
+        }
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
+    [
+      "local-1f0b76943a391c55",
+      40.7,
+      50.95,
+      0.5,
+      "THE BOND + GOODBYE: 'Rabat!' - 'yalla, I'm Iraqi', hands going as she talks, 'nice to meet you', 'be healthy', 'bye, my love' over the caregiver's smile. Ends before the whip at 51s [framing: manual full-height centre crop - the auto face-aim put the crop top-left on passers-by in V1 r1]",
+      null,
+      {
+        "exact": true,
+        "audio": {
+          "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
+          "at": 40.7
+        },
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ]
   ]
- ]
 }

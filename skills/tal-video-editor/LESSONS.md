@@ -1758,3 +1758,29 @@ out-point sat in an energy dip.
 that the flag is wrong. Settle every boundary flag by transcribing the 2-3s
 SOURCE window around the cut with a second engine (`lib/stt.mjs`
 `groqTranscribe`), plus the RMS envelope in 50ms steps. Say which was done.
+
+## 69 — at full quality, translated captions vanished without a warning (found 2026-09-30)
+
+Social Accords batch, first `--hq` rebuild: HOSPITAL TOYS went from 15
+captions in review to 5 at full quality, every Hebrew line gone. Abraham V1
+lost Tal's intro captions and Water V1 its fence-crew line - both were already
+uploaded before it was noticed. Nothing errored; the build log just said
+`0 caps`.
+
+Cause: an HQ span file starts `offset` seconds into the original. The picture
+seek was rebased, but the speech-onset measurement that places translated /
+unaligned captions was handed the HQ file with base 0. It measured the wrong
+seconds (or past the end of a 10s span), heard no speech, and dropped the
+line. English captions placed on their own aligned words were unaffected,
+which is why most videos looked fine.
+
+Fix (build-edit.mjs): `capBase = hq` when the source is the HQ span. Verified:
+hospital toys 5 -> 15 captions. **Check: compare the per-beat `caps` counts in
+the HQ build log against the review build before uploading.** A drop is a bug,
+not a style change.
+
+Also new: `scripts/check-boundary.mjs <slug> <beat#> [--tail] [--at s]` does
+the LESSONS 68 check (second engine on the source window + RMS in 50ms steps).
+Validated on a known answer before use: mid-"Excuse" -> REAL, the gap before
+it -> clean. On short noisy Hebrew windows the second engine hallucinates
+other languages; the RMS trace is then the evidence.

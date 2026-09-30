@@ -1,137 +1,137 @@
 {
- "layout": "vertical",
- "titleY": 260,
- "titleHold": 4,
- "capY": 0.69,
- "maxZoom": 1.25,
- "title": "POV: GIVING FLOWERS TO\nSTRANGERS IN JERUSALEM 🇮🇱",
- "out": "SA_FLOWERS_JERUSALEM_V1_r4.mp4",
- "denoise": 12,
- "beats": [
-  [
-   "local-1f0b76943a391c55",
-   5.35,
-   10.15,
-   0.5,
-   "HOOK: her face as the flower arrives - surprise, 'happy holiday', 'for health and joy', 'thank you so much' [framing: manual full-height centre crop - the auto face-aim put the crop top-left on passers-by in V1 r1]",
-   null,
-   {
-    "exact": true,
-    "audio": {
-     "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
-     "at": 5.35
-    },
-    "manual": true,
-    "z": [
-     1,
-     1
+  "layout": "vertical",
+  "titleY": 260,
+  "titleHold": 4,
+  "capY": 0.69,
+  "maxZoom": 1.25,
+  "title": "POV: GIVING FLOWERS TO\nSTRANGERS IN JERUSALEM 🇮🇱",
+  "out": "SA_FLOWERS_JERUSALEM_V1_HQ2.mp4",
+  "denoise": 12,
+  "beats": [
+    [
+      "local-1f0b76943a391c55",
+      5.35,
+      10.15,
+      0.5,
+      "HOOK: her face as the flower arrives - surprise, 'happy holiday', 'for health and joy', 'thank you so much' [framing: manual full-height centre crop - the auto face-aim put the crop top-left on passers-by in V1 r1]",
+      null,
+      {
+        "exact": true,
+        "audio": {
+          "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
+          "at": 5.35
+        },
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
-  ],
-  [
-   "local-db2e5fd3621b3654",
-   12.95,
-   21.4,
-   0.5,
-   "SECOND STRANGER, different world: the street cleaner - 'this is for you, we want to make you happy', his full smile, the girls add roses, 'thank you very much' [in-point moved 11.25->12.95: r1 opened this beat on a whip-pan blur]",
-   null,
-   {
-    "exact": true,
-    "audio": {
-     "id": "c957346b-5401-429c-b782-be3d5cd93a23",
-     "at": 12.95
-    }
-   }
-  ],
-  [
-   "local-1f0b76943a391c55",
-   20.1,
-   24.7,
-   0.5,
-   "BACK TO HER: 'what is this? you made me so happy!' and the caregiver 'that's how it should be' [framing: manual full-height centre crop - the auto face-aim put the crop top-left on passers-by in V1 r1]",
-   null,
-   {
-    "exact": true,
-    "audio": {
-     "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
-     "at": 20.1
-    },
-    "manual": true,
-    "z": [
-     1,
-     1
+    [
+      "local-db2e5fd3621b3654",
+      12.95,
+      21.4,
+      0.5,
+      "SECOND STRANGER, different world: the street cleaner - 'this is for you, we want to make you happy', his full smile, the girls add roses, 'thank you very much' [in-point moved 11.25->12.95: r1 opened this beat on a whip-pan blur]",
+      null,
+      {
+        "exact": true,
+        "audio": {
+          "id": "c957346b-5401-429c-b782-be3d5cd93a23",
+          "at": 12.95
+        }
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
-  ],
-  [
-   "local-db2e5fd3621b3654",
-   30.4,
-   36.33,
-   0.5,
-   "THE TURN: 'are you Muslim? - yes' / 'I'm Jewish' - and the handshake [out 36.25->36.33: r2 post-render check heard a word across the join] [framing: manual full-height centre crop - r3 auto-aim left him half out of frame at 35.5-36.3s]",
-   null,
-   {
-    "exact": true,
-    "audio": {
-     "id": "c957346b-5401-429c-b782-be3d5cd93a23",
-     "at": 30.4
-    },
-    "manual": true,
-    "z": [
-     1,
-     1
+    [
+      "local-1f0b76943a391c55",
+      20.1,
+      24.7,
+      0.5,
+      "BACK TO HER: 'what is this? you made me so happy!' and the caregiver 'that's how it should be' [framing: manual full-height centre crop - the auto face-aim put the crop top-left on passers-by in V1 r1]",
+      null,
+      {
+        "exact": true,
+        "audio": {
+          "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
+          "at": 20.1
+        },
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
-  ],
-  [
-   "local-1f0b76943a391c55",
-   42.95,
-   50.95,
-   0.5,
-   "HER CLOSE: 'yalla, I'm Iraqi' (she is from Morocco - the two of them bond on it), 'nice to meet you', 'be healthy', 'bye, my love' [framing: manual full-height centre crop - the auto face-aim put the crop top-left on passers-by in V1 r1] [in 43.2->42.95, same reason]",
-   null,
-   {
-    "exact": true,
-    "audio": {
-     "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
-     "at": 42.95
-    },
-    "manual": true,
-    "z": [
-     1,
-     1
+    [
+      "local-db2e5fd3621b3654",
+      30.4,
+      36.33,
+      0.5,
+      "THE TURN: 'are you Muslim? - yes' / 'I'm Jewish' - and the handshake [out 36.25->36.33: r2 post-render check heard a word across the join] [framing: manual full-height centre crop - r3 auto-aim left him half out of frame at 35.5-36.3s]",
+      null,
+      {
+        "exact": true,
+        "audio": {
+          "id": "c957346b-5401-429c-b782-be3d5cd93a23",
+          "at": 30.4
+        },
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
-  ],
-  [
-   "48f10648-d053-4e9b-b4ee-3304767f4551",
-   5.2,
-   7.4,
-   0.5,
-   "ENDING a: observer iPhone, later on the lit street - he stops the cart, turns to camera and smiles holding the red roses. Wordless hold. Proxy only (360p)",
-   null,
-   {
-    "exact": true
-   }
-  ],
-  [
-   "48f10648-d053-4e9b-b4ee-3304767f4551",
-   7.55,
-   8.95,
-   0.5,
-   "ENDING b: after a jump in the source clip itself (7.5s), he steps forward grinning with the roses - 'thank you'. The face with the flowers is the last image",
-   null,
-   {
-    "exact": true
-   }
+    [
+      "local-1f0b76943a391c55",
+      42.95,
+      50.95,
+      0.5,
+      "HER CLOSE: 'yalla, I'm Iraqi' (she is from Morocco - the two of them bond on it), 'nice to meet you', 'be healthy', 'bye, my love' [framing: manual full-height centre crop - the auto face-aim put the crop top-left on passers-by in V1 r1] [in 43.2->42.95, same reason]",
+      null,
+      {
+        "exact": true,
+        "audio": {
+          "id": "166c4058-74c1-4e5f-821b-adcb6fcb54d6",
+          "at": 42.95
+        },
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "48f10648-d053-4e9b-b4ee-3304767f4551",
+      5.2,
+      7.4,
+      0.5,
+      "ENDING a: observer iPhone, later on the lit street - he stops the cart, turns to camera and smiles holding the red roses. Wordless hold. Proxy only (360p)",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "48f10648-d053-4e9b-b4ee-3304767f4551",
+      7.55,
+      8.95,
+      0.5,
+      "ENDING b: after a jump in the source clip itself (7.5s), he steps forward grinning with the roses - 'thank you'. The face with the flowers is the last image",
+      null,
+      {
+        "exact": true
+      }
+    ]
   ]
- ]
 }

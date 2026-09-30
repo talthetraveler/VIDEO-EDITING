@@ -1,169 +1,169 @@
 {
- "layout": "vertical",
- "title": "HE WAS BORN WITH A\nSEVERE HEART CONDITION",
- "titleY": 170,
- "titleHold": 6,
- "capY": 0.66,
- "out": "SA_HEART_JULIUS_VOICE_V1.mp4",
- "note": "Save a Child's Heart, version 2 - JULIUS IN HIS OWN VOICE. Deliberately not a reshuffle of sa-heart-julius: that cut is framed by Tal's presenter lines and ends on a Miracle coda. This one is the sit-down only (C0644/C0645) plus his own intro: Julius starts, the hook is Tal's question 'did you feel lonely?' and his answer, no presenter VO, no second child, new lines (seeing the other children, his dream), ~50s, and it ends on his close-up message to the world. Same rotation facts as sa-heart-julius (heads-left Sony -> auto transpose=1). No music. Framing pinned full-frame on Sony two-shots, 1.3x on Julius when he speaks alone (face-aim cropped the speaker out in sa-heart-julius). Straddling caption segments split in the aligned transcript cache (backup <id>.json.pre-split).",
- "beats": [
-  [
-   "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
-   53.64,
-   56.44,
-   0.5,
-   "HOOK (C0644): Tal: 'Did you feel lonely?' - Julius: 'Yeah, I was so lonely.' Two faces, a question and its answer as one unit, in the first 3s.",
-   null,
-   {
-    "manual": true,
-    "z": [
-     1,
-     1
+  "layout": "vertical",
+  "title": "HE WAS BORN WITH A\nSEVERE HEART CONDITION",
+  "titleY": 170,
+  "titleHold": 6,
+  "capY": 0.66,
+  "out": "SA_HEART_JULIUS_VOICE_V1_HQ.mp4",
+  "note": "Save a Child's Heart, version 2 - JULIUS IN HIS OWN VOICE. Deliberately not a reshuffle of sa-heart-julius: that cut is framed by Tal's presenter lines and ends on a Miracle coda. This one is the sit-down only (C0644/C0645) plus his own intro: Julius starts, the hook is Tal's question 'did you feel lonely?' and his answer, no presenter VO, no second child, new lines (seeing the other children, his dream), ~50s, and it ends on his close-up message to the world. Same rotation facts as sa-heart-julius (heads-left Sony -> auto transpose=1). No music. Framing pinned full-frame on Sony two-shots, 1.3x on Julius when he speaks alone (face-aim cropped the speaker out in sa-heart-julius). Straddling caption segments split in the aligned transcript cache (backup <id>.json.pre-split).",
+  "beats": [
+    [
+      "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
+      53.64,
+      56.44,
+      0.5,
+      "HOOK (C0644): Tal: 'Did you feel lonely?' - Julius: 'Yeah, I was so lonely.' Two faces, a question and its answer as one unit, in the first 3s.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
-  ],
-  [
-   "e268c5e3-f21f-4cad-ae40-af4b93aef14f",
-   0,
-   2.7,
-   0.5,
-   "WHO (C0635): 'Hi, I'm Julius and this is my story.'"
-  ],
-  [
-   "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
-   24.09,
-   35.9,
-   0.5,
-   "WHY (C0644): 'When I was still growing up, until 10 years old, I felt some challenges, difficulty breathing, I could get tired, sweating at night.' Starts on 'when' - 29.40 landed inside 'old' (speech energy 28.75-29.55).",
-   null,
-   {
-    "manual": true,
-    "z": [
-     1.3,
-     1.3
+    [
+      "e268c5e3-f21f-4cad-ae40-af4b93aef14f",
+      0,
+      2.7,
+      0.5,
+      "WHO (C0635): 'Hi, I'm Julius and this is my story.'"
     ],
-    "x": 0.3,
-    "y": 0.45
-   }
-  ],
-  [
-   "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
-   43.54,
-   50.45,
-   0.5,
-   "WHAT IT TOOK FROM HIM (C0644): 'I was facing such signs. I couldn't play with my friends, having fun.' - 'You couldn't?' - 'Yeah, doing sports.' This answers the hook.",
-   null,
-   {
-    "manual": true,
-    "z": [
-     1,
-     1
+    [
+      "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
+      24.09,
+      35.9,
+      0.5,
+      "WHY (C0644): 'When I was still growing up, until 10 years old, I felt some challenges, difficulty breathing, I could get tired, sweating at night.' Starts on 'when' - 29.40 landed inside 'old' (speech energy 28.75-29.55).",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.3,
+        "y": 0.45
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
-  ],
-  [
-   "945a2a16-5ee6-4e9c-98e6-20aef04da986",
-   23.15,
-   37.62,
-   0.5,
-   "FAITH (C0645, one continuous take): 'So my father told me that... when, when, when... once we were in Jerusalem, told me I should believe I'm already healed before the surgery. So I did and we prayed, and I thank God it went well.' The hesitation is KEPT: cutting it split the sentence across a jump (verify-cut: ends mid-thought on 'that'), and it reads as him gathering himself before the line that matters.",
-   null,
-   {
-    "manual": true,
-    "z": [
-     1,
-     1
+    [
+      "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
+      43.54,
+      50.45,
+      0.5,
+      "WHAT IT TOOK FROM HIM (C0644): 'I was facing such signs. I couldn't play with my friends, having fun.' - 'You couldn't?' - 'Yeah, doing sports.' This answers the hook.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
-  ],
-  [
-   "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
-   359.78,
-   365.85,
-   0.5,
-   "NOW (C0644): Tal: 'How does it make you feel seeing all these other children getting...' - 'Yeah, I'm really excited. I'm really excited to see them.' He is on the other side of it now; Tal smiles.",
-   null,
-   {
-    "manual": true,
-    "z": [
-     1,
-     1
+    [
+      "945a2a16-5ee6-4e9c-98e6-20aef04da986",
+      23.15,
+      37.62,
+      0.5,
+      "FAITH (C0645, one continuous take): 'So my father told me that... when, when, when... once we were in Jerusalem, told me I should believe I'm already healed before the surgery. So I did and we prayed, and I thank God it went well.' The hesitation is KEPT: cutting it split the sentence across a jump (verify-cut: ends mid-thought on 'that'), and it reads as him gathering himself before the line that matters.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
-  ],
-  [
-   "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
-   217.55,
-   222.25,
-   0.5,
-   "THE FUTURE (C0644): 'And what's your dream?' - 'My dream is to become an IT.' (sic - IT specialist; captioned as said)",
-   null,
-   {
-    "manual": true,
-    "z": [
-     1,
-     1
+    [
+      "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
+      359.78,
+      365.85,
+      0.5,
+      "NOW (C0644): Tal: 'How does it make you feel seeing all these other children getting...' - 'Yeah, I'm really excited. I'm really excited to see them.' He is on the other side of it now; Tal smiles.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
     ],
-    "x": 0.5,
-    "y": 0.5
-   }
+    [
+      "979f08b3-e728-4225-a2d4-04d0c9a2eb81",
+      217.55,
+      222.25,
+      0.5,
+      "THE FUTURE (C0644): 'And what's your dream?' - 'My dream is to become an IT.' (sic - IT specialist; captioned as said)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "945a2a16-5ee6-4e9c-98e6-20aef04da986",
+      82.9,
+      89.4,
+      0.5,
+      "HIS LAST WORD (C0645, close-up): Tal: 'What's your message to the world?' - 'Okay. I can say people should not give up and should believe in God.' Ends on his face."
+    ]
   ],
-  [
-   "945a2a16-5ee6-4e9c-98e6-20aef04da986",
-   82.9,
-   89.4,
-   0.5,
-   "HIS LAST WORD (C0645, close-up): Tal: 'What's your message to the world?' - 'Okay. I can say people should not give up and should believe in God.' Ends on his face."
+  "captionFix": [
+    {
+      "match": "lonely yeah i was so lonely.",
+      "to": "lonely? Yeah, I was so lonely."
+    },
+    {
+      "match": "isolated yeah",
+      "to": "isolated"
+    },
+    {
+      "match": "when, when, when,",
+      "to": null
+    },
+    {
+      "match": "surgery. Yeah.",
+      "to": "surgery."
+    },
+    {
+      "match": "So I did and we prayed and I thank God it went well.",
+      "to": "So I did, and we prayed, and I thank God it went well."
+    },
+    {
+      "match": "Yeah. What's your message",
+      "to": "What's your message"
+    },
+    {
+      "match": "world? Okay.",
+      "to": "world?"
+    },
+    {
+      "match": "Okay. I can say",
+      "to": "I can say"
+    },
+    {
+      "match": "I can say people should not give up and should believe in God.",
+      "to": "I can say, people should not give up, and should believe in God."
+    },
+    {
+      "match": "in God. Yeah.",
+      "to": "in God."
+    }
   ]
- ],
- "captionFix": [
-  {
-   "match": "lonely yeah i was so lonely.",
-   "to": "lonely? Yeah, I was so lonely."
-  },
-  {
-   "match": "isolated yeah",
-   "to": "isolated"
-  },
-  {
-   "match": "when, when, when,",
-   "to": null
-  },
-  {
-   "match": "surgery. Yeah.",
-   "to": "surgery."
-  },
-  {
-   "match": "So I did and we prayed and I thank God it went well.",
-   "to": "So I did, and we prayed, and I thank God it went well."
-  },
-  {
-   "match": "Yeah. What's your message",
-   "to": "What's your message"
-  },
-  {
-   "match": "world? Okay.",
-   "to": "world?"
-  },
-  {
-   "match": "Okay. I can say",
-   "to": "I can say"
-  },
-  {
-   "match": "I can say people should not give up and should believe in God.",
-   "to": "I can say, people should not give up, and should believe in God."
-  },
-  {
-   "match": "in God. Yeah.",
-   "to": "in God."
-  }
- ]
 }

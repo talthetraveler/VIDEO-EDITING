@@ -1,191 +1,191 @@
 {
- "layout": "vertical",
- "snap": false,
- "autoFrame": false,
- "title": "WE SPENT A DAY BRINGING TOYS\nTO KIDS IN AN ISRAELI HOSPITAL",
- "titleHold": 3.5,
- "titleY": 200,
- "out": "SA_HOSPITAL_TOYS_FACES_V1r2.mp4",
- "beats": [
-  [
-   "d9e0c969-cacf-439f-8c80-c87b19bc3150",
-   0,
-   4.15,
-   0.5,
-   "HOOK: girl in the corridor squeezing her new plush with both arms, face at 0.0s. \"Is this the one you want? Feel better\" / \"Thank you so much\"",
-   null,
-   {
-    "z": [
-     1,
-     1
-    ]
-   }
-  ],
-  [
-   "f61ebb9d-166d-475b-998d-ade0c2654b79",
-   31.8,
-   37.95,
-   0.5,
-   "little boy walks off with his dinosaur Lego; Tal calls \"come give me a hug\" and he runs back into it (hug 34.5-37.5)",
-   null,
-   {
-    "z": [
-     1,
-     1
-    ]
-   }
-  ],
-  [
-   "97e81ae7-eccb-4a3e-9151-c04cc7ea3542",
-   60.4,
-   63,
-   0.5,
-   "STRONGEST, slot 3: WIDE - Miss Israel lifts her own crown and turns to put it on the girl",
-   null,
-   {
-    "z": [
-     1,
-     1
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "title": "WE SPENT A DAY BRINGING TOYS\nTO KIDS IN AN ISRAELI HOSPITAL",
+  "titleHold": 3.5,
+  "titleY": 200,
+  "out": "SA_HOSPITAL_TOYS_FACES_V1_HQ2.mp4",
+  "beats": [
+    [
+      "d9e0c969-cacf-439f-8c80-c87b19bc3150",
+      0,
+      4.15,
+      0.5,
+      "HOOK: girl in the corridor squeezing her new plush with both arms, face at 0.0s. \"Is this the one you want? Feel better\" / \"Thank you so much\"",
+      null,
+      {
+        "z": [
+          1,
+          1
+        ]
+      }
     ],
-    "nocap": true
-   }
-  ],
-  [
-   "e6ae7069-1998-465e-8e5d-b2ecd3206b16",
-   70.6,
-   76.45,
-   0.5,
-   "CLOSE (synced, close = wide + 7.60s): crown on, the girl adjusts it, her mother smiling at 76.0 - held, no caption",
-   null,
-   {
-    "z": [
-     1,
-     1.06
+    [
+      "f61ebb9d-166d-475b-998d-ade0c2654b79",
+      31.8,
+      37.95,
+      0.5,
+      "little boy walks off with his dinosaur Lego; Tal calls \"come give me a hug\" and he runs back into it (hug 34.5-37.5)",
+      null,
+      {
+        "z": [
+          1,
+          1
+        ]
+      }
     ],
-    "nocap": true
-   }
-  ],
-  [
-   "4fc5f37e-714b-4c19-9512-979bfce89db4",
-   29.35,
-   35.85,
-   0.5,
-   "the support: boy in bed before ear surgery - \"Are you scared?\" \"A little?\" \"Don't be scared. We love you.\"",
-   null,
-   {
-    "z": [
-     1,
-     1
-    ]
-   }
-  ],
-  [
-   "425e419b-3419-4664-8526-6ad01eee02e6",
-   1.9,
-   6.1,
-   0.5,
-   "girl in pajamas walks into Miss Israel's arms, plush under her arm - wordless hug",
-   null,
-   {
-    "z": [
-     1,
-     1
+    [
+      "97e81ae7-eccb-4a3e-9151-c04cc7ea3542",
+      60.4,
+      63,
+      0.5,
+      "STRONGEST, slot 3: WIDE - Miss Israel lifts her own crown and turns to put it on the girl",
+      null,
+      {
+        "z": [
+          1,
+          1
+        ],
+        "nocap": true
+      }
     ],
-    "nocap": true
-   }
-  ],
-  [
-   "b560e2c4-847a-4877-b040-f55a6193f149",
-   3.5,
-   8.4,
-   0.5,
-   "a religious father hugs Tal at the bedside - \"Feel better\" / \"Well done, all of you\"",
-   null,
-   {
-    "z": [
-     1,
-     1
-    ]
-   }
-  ],
-  [
-   "ae48d089-6958-4af7-9b5c-a00bbc079ea6",
-   0,
-   1.9,
-   0.5,
-   "teenage patient on her bed grinning with a green plush - 1.9s breath, wordless",
-   null,
-   {
-    "z": [
-     1,
-     1
+    [
+      "e6ae7069-1998-465e-8e5d-b2ecd3206b16",
+      70.6,
+      76.45,
+      0.5,
+      "CLOSE (synced, close = wide + 7.60s): crown on, the girl adjusts it, her mother smiling at 76.0 - held, no caption",
+      null,
+      {
+        "z": [
+          1,
+          1.06
+        ],
+        "nocap": true
+      }
     ],
-    "nocap": true
-   }
-  ],
-  [
-   "516dd1ac-0d63-4887-988c-aaf0af774009",
-   21.95,
-   28.5,
-   0.5,
-   "Muslim mother with her baby: \"This is your baby?\" \"Yes\" \"Wow\" \"Thank you\" \"Inshallah she will feel better\" \"Inshallah\"",
-   null,
-   {
-    "z": [
-     1,
-     1
+    [
+      "4fc5f37e-714b-4c19-9512-979bfce89db4",
+      29.35,
+      35.85,
+      0.5,
+      "the support: boy in bed before ear surgery - \"Are you scared?\" \"A little?\" \"Don't be scared. We love you.\"",
+      null,
+      {
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "425e419b-3419-4664-8526-6ad01eee02e6",
+      1.9,
+      6.1,
+      0.5,
+      "girl in pajamas walks into Miss Israel's arms, plush under her arm - wordless hug",
+      null,
+      {
+        "z": [
+          1,
+          1
+        ],
+        "nocap": true
+      }
+    ],
+    [
+      "b560e2c4-847a-4877-b040-f55a6193f149",
+      3.5,
+      8.4,
+      0.5,
+      "a religious father hugs Tal at the bedside - \"Feel better\" / \"Well done, all of you\"",
+      null,
+      {
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "ae48d089-6958-4af7-9b5c-a00bbc079ea6",
+      0,
+      1.9,
+      0.5,
+      "teenage patient on her bed grinning with a green plush - 1.9s breath, wordless",
+      null,
+      {
+        "z": [
+          1,
+          1
+        ],
+        "nocap": true
+      }
+    ],
+    [
+      "516dd1ac-0d63-4887-988c-aaf0af774009",
+      21.95,
+      28.5,
+      0.5,
+      "Muslim mother with her baby: \"This is your baby?\" \"Yes\" \"Wow\" \"Thank you\" \"Inshallah she will feel better\" \"Inshallah\"",
+      null,
+      {
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "0bc33414-6b51-4c7f-8a46-edd666b6a932",
+      80.3,
+      86.9,
+      0.5,
+      "parents laughing while their daughter unwraps: \"We love you. We really love you.\" - their faces are the beat",
+      null,
+      {
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "4fc5f37e-714b-4c19-9512-979bfce89db4",
+      37.9,
+      42.75,
+      0.5,
+      "ENDING: the bed-boy's father, smiling: \"Happy holiday, happy new year. Keep doing good. With love.\" Out on the full stop of \"with love\"",
+      null,
+      {
+        "z": [
+          1,
+          1
+        ]
+      }
     ]
-   }
   ],
-  [
-   "0bc33414-6b51-4c7f-8a46-edd666b6a932",
-   80.3,
-   86.9,
-   0.5,
-   "parents laughing while their daughter unwraps: \"We love you. We really love you.\" - their faces are the beat",
-   null,
-   {
-    "z": [
-     1,
-     1
-    ]
-   }
-  ],
-  [
-   "4fc5f37e-714b-4c19-9512-979bfce89db4",
-   37.9,
-   42.75,
-   0.5,
-   "ENDING: the bed-boy's father, smiling: \"Happy holiday, happy new year. Keep doing good. With love.\" Out on the full stop of \"with love\"",
-   null,
-   {
-    "z": [
-     1,
-     1
-    ]
-   }
+  "captionFix": [
+    {
+      "match": "יש פה שניהם נשים.",
+      "to": null
+    },
+    {
+      "match": "מה?",
+      "to": null
+    },
+    {
+      "match": "I don't know.",
+      "to": null
+    },
+    {
+      "match": "better. Inshallah.",
+      "to": "better."
+    },
+    {
+      "match": "We love you.",
+      "to": null
+    }
   ]
- ],
- "captionFix": [
-  {
-   "match": "יש פה שניהם נשים.",
-   "to": null
-  },
-  {
-   "match": "מה?",
-   "to": null
-  },
-  {
-   "match": "I don't know.",
-   "to": null
-  },
-  {
-   "match": "better. Inshallah.",
-   "to": "better."
-  },
-  {
-   "match": "We love you.",
-   "to": null
-  }
- ]
 }

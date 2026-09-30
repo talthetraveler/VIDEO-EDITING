@@ -1186,7 +1186,12 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
   // Onsets must be measured in the audio that will actually PLAY, so a grafted
   // beat resolves its audio file here and hands that over — passing nothing
   // silently turned the snapping off and made those beats worse.
-  let capSrc = src, capBase = 0;
+  // An HQ span file starts `hq` seconds into the original; speech onsets are
+  // looked up on the ORIGINAL timeline, so they must be rebased by it too.
+  // With base 0 every beat whose span started past ~2s measured the wrong
+  // seconds (or past the end of the file), found no speech, and dropped its
+  // translated captions: hospital-toys-faces went 15 -> 5 captions at --hq.
+  let capSrc = src, capBase = (hq != null && src === join(HQDIR, `${id}.mp4`)) ? hq : 0;
   if (push?.audio) {
     const aL = LOCAL[push.audio.id]?.path;
     const aH = join(HQDIR, `${push.audio.id}.mp4`);
