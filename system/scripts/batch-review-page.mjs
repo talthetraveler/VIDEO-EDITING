@@ -15,8 +15,13 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { join, basename } from "node:path";
 
 const ROOT = "C:/Users/taldo/Downloads/videos to edit/system";
-const [slug, outDir] = process.argv.slice(2);
-if (!slug || !outDir) { console.error('usage: node scripts/batch-review-page.mjs <slug> "<VIDEOS OUT folder>"'); process.exit(2); }
+const argv = process.argv.slice(2);
+const opt = (k, d) => { const i = argv.indexOf(k); return i >= 0 ? argv[i + 1] : d; };
+const [slug, outDir] = argv.filter((a, i) => !a.startsWith("--") && !["--title", "--source"].includes(argv[i - 1]));
+if (!slug || !outDir) { console.error('usage: node scripts/batch-review-page.mjs <slug> "<VIDEOS OUT folder>" [--title "Israel batch"] [--source "cut from 425 clips in FOOTAGE IN"]'); process.exit(2); }
+// defaults reproduce the original israel-batch page exactly
+const PAGE_TITLE = opt("--title", "Israel batch");
+const SOURCE = opt("--source", "cut from 425 clips in FOOTAGE IN");
 const mf = join(ROOT, "projects", slug, "manifest.jsonl");
 const rows = existsSync(mf) ? readFileSync(mf, "utf8").split("\n").filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean) : [];
 
@@ -70,7 +75,7 @@ const cards = ordered.map(([g, list]) => `
 
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Israel Batch Review</title>
+<title>${esc(PAGE_TITLE)} Review</title>
 <style>
 :root{--bg:#f6f5f2;--card:#fff;--ink:#16161a;--mute:#6b6b73;--line:#e4e2dc;--acc:#1f6feb;--warn:#b45309;--warnbg:#fff4e5}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111214;--card:#1b1c20;--ink:#ececf1;--mute:#9a9aa3;--line:#2b2c31;--acc:#6ea8ff;--warn:#f0a44b;--warnbg:#2a2116}}
@@ -98,8 +103,8 @@ h1{font-size:26px;margin:0 0 4px}.sub{color:var(--mute);margin:0 0 18px}
 .dock button[disabled]{background:var(--line);color:var(--mute);cursor:not-allowed}
 .dock small{color:var(--mute);flex-basis:100%}
 </style></head><body><div class="wrap">
-<h1>Israel batch · ${vids.length} videos</h1>
-<p class="sub">${nPerson} one-person · ${nComp} compilations · ${nTal} need your call · cut from 425 clips in FOOTAGE IN · every caption timing-checked; Hebrew/Arabic wording marked where machine-translated</p>
+<h1>${esc(PAGE_TITLE)} · ${vids.length} videos</h1>
+<p class="sub">${nPerson} one-person · ${nComp} compilations · ${nTal} need your call · ${esc(SOURCE)} · every caption timing-checked; Hebrew/Arabic wording marked where machine-translated</p>
 <div class="bar"><button class="on" data-f="all">All</button><button data-f="person">One person</button><button data-f="compilation">Compilations</button><button data-f="tal">Your call</button></div>
 ${cards || "<p>No videos delivered yet.</p>"}
 </div>
