@@ -1,7 +1,7 @@
 {
  "layout": "vertical",
  "snap": false,
- "out": "ROMAN_MONTAGE_V10.mp4",
+ "out": "ROMAN_MONTAGE_V11.mp4",
  "note": "Fast montage, Tal's order. Cuts on ACTION (snap:false), natural sound, captions only on the three lines that carry it: 'a day and a half, nothing', 'my father', 'you look good'. Ends on the new clothes as Tal asked - out of strict time order (C0488 precedes the food) but nothing on screen goes backwards: his shorts are never visible at the table. No music on the machine; add a track from Instagram's library at post time. V9: every natural-sound beat now ends in a real pause after a complete phrase - V7/V8 clipped the first syllable of the next word on beats 02, 04, 08, 10 (verify-cut 'ends mid-thought ... -0.04s'); 'My father' holds 0.41s.",
  "beats": [
   [
@@ -207,10 +207,10 @@
   ],
   [
    "local-da9f3edcbca2e9b2",
-   13.45,
+   13.9,
    16.6,
    0.5,
-   "ENDING: 'Are you happy now? You look good.'",
+   "ENDING: 'Are you happy now? You look good.' (in 13.9: at 13.45 it opened on the tail of 'okay.', which ends 13.66 - Groq on the source; 'Are' starts 14.32)",
    null,
    {
     "z": [

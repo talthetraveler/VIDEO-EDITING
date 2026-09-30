@@ -1,6 +1,6 @@
 {
  "layout": "vertical",
- "out": "ROMAN_STORY_V11.mp4",
+ "out": "ROMAN_STORY_V12.mp4",
  "note": "Two-camera kindness story, chronological. Sync measured by audio correlation: VID059 = C0484 - 2.19s (r 0.89); VID059 = C0485 + 85.00s (r 0.90); VID060 = C0485 - 173.26s (r 0.70). Translations corrected from the Hebrew transcripts - the machine had inverted the father line ('for me' vs 'against me'). The give-food line is the OWNER's (C0491, his mouth moving at 21-22s), not Roman's as V7 assumed. Roman says 'a day and a half', not two days - the two days is Tal's question. New clothes stay in the middle: C0488 (11:42) precedes the food (C0489 11:44). Ends on the real goodbye. V2, after looking at every clip on timeline strips: walk-up now lands on Roman (V059 5s); the name exchange is the POV (his face) not the wide Sony; the hungry exchange is the Sony walk-off with chest-cam sound; new clothes skip C0488's empty toilet doorway (0-3s), camera whip (4.5s) and lens obstruction (9-11s); the ending is the REAL goodbye on the street (C0492 279-299) - Roman in the new clothes, Tal's hand on his shoulder, 'you don't know anything about hard, brother', then 'what doesn't kill us only makes us stronger' over Roman wiping his eye. It starts at 279 because 276-279 is a camera whip past Tal's back, and skips 289.5-291.9 where a passer-by blocks the frame. V3 from the V2 contact sheet: the 'place to rest' beat is cut - C0485 is shot from behind Tal with a scooter helmet filling the lower half, and Tal asked for no shots of his back; C0488 framed by hand, full body, because autoframe cut Roman's head off on the payoff; father and owner framed by hand onto the speaker's face. Exposure: the new TAME branch (LESSONS 54).",
  "beats": [
   [
@@ -121,10 +121,10 @@
   ],
   [
    "local-da9f3edcbca2e9b2",
-   13.45,
+   13.9,
    16.6,
    0.5,
-   "'Are you happy now? You look good.'",
+   "'Are you happy now? You look good.' (in 13.9: at 13.45 it opened on the tail of 'okay.', which ends 13.66 - Groq on the source; 'Are' starts 14.32)",
    null,
    {
     "z": [

@@ -1739,3 +1739,22 @@ of a segment, measured with `select='gt(scene,0.3)'` over the WHOLE segment
 and compared with its probed duration. Then **look at the last four frames**
 before trimming — every one of the six was confirmed on a still. Fix: take
 two frames (0.07s) off that edge in `EDGE_FIX`.
+
+## 68 — a smeared timestamp does not make the flag false (found 2026-09-30)
+
+ROMAN: `verify-cut` flagged the ending beat, *"HEAD cuts into 'okay'
+(13.32-14.46)"*. A 1.1s "okay" is obviously a stretched timestamp, so the
+flag was waved through as an artifact, twice, on two versions. Re-transcribing
+just that source window with a second engine (Groq, 3s of audio) put the real
+"okay." at 13.20-13.66: the beat, starting at 13.45, opened on the back half
+of the word. "Are" began at 14.32. In-point moved to 13.90.
+
+The opposite case happened the same night: the finished-file check flagged
+*"כבר"* across a cut from restaurant noise to street noise, and there was no
+word there. Groq on both source windows heard nothing before 1.96s, and the
+out-point sat in an energy dip.
+
+**Rule:** a smeared word timestamp tells you the timing is unreliable, **not**
+that the flag is wrong. Settle every boundary flag by transcribing the 2-3s
+SOURCE window around the cut with a second engine (`lib/stt.mjs`
+`groqTranscribe`), plus the RMS envelope in 50ms steps. Say which was done.
