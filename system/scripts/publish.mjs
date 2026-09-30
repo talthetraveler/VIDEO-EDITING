@@ -163,6 +163,10 @@ const resolveTargets = async (platforms, { trial = false, title = "" } = {}) => 
   const conns = await connections();
   // "all" = every account connected in ShortSync (Tal, 2026-09-30: "every
   // platform that's connected on ShortSync" - Instagram, TikTok, X, Facebook...)
+  // "-facebook" in the list = leave that platform out (per-platform daily caps,
+  // plan-schedule.mjs: Facebook gets 2 of the 3 daily main posts)
+  const excluded = new Set([].concat(platforms).filter((p) => String(p).startsWith("-")).map((p) => String(p).slice(1).toLowerCase()));
+  platforms = [].concat(platforms).filter((p) => !String(p).startsWith("-"));
   if ([].concat(platforms).some((p) => String(p).toLowerCase() === "all"))
   {
     platforms = [...new Set(conns.map((c) => (c.platform || c.provider || "").toLowerCase()).filter(Boolean))];
@@ -173,6 +177,7 @@ const resolveTargets = async (platforms, { trial = false, title = "" } = {}) => 
     // until one is chosen (config pinterest_board_id), instead of 79 failures
     if (!cfg.pinterest_board_id) platforms = platforms.filter((p) => p !== "pinterest");
   }
+  if (excluded.size) platforms = platforms.filter((p) => !excluded.has(String(p).toLowerCase()));
   const byPlatform = new Map();
   for (const c of conns) {
     const plat = (c.platform || c.provider || "").toLowerCase();

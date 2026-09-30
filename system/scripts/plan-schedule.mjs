@@ -9,8 +9,13 @@
 // them yet, just set it up."*
 //
 //   MAIN   09:00 12:00 18:00  Israel time  -> every connected platform, IG feed
-//   TRIAL  13:00 16:00 19:00  Israel time  -> IG as a Trial Reel + every other
-//                                              connected platform as a normal post
+//   TRIAL  13:00 16:00 19:00  Israel time  -> Instagram ONLY, as a Trial Reel
+//
+// Trials were first also sent to every other platform, which made 6 posts a
+// day on TikTok/YouTube/Facebook/X. Tal then shared the growth advice: "avoid
+// over-posting: more than 3 to 5 videos a day ... hurts overall engagement".
+// Trial Reels only reach non-followers, so on Instagram they don't crowd the
+// feed; everywhere else a trial is just a 4th-6th post. Now: 3/day everywhere.
 //
 // Who goes where: the V1 of each story is the MAIN post; its variations
 // (V2/V3/V4 - different hook, different order) are TRIALS, which is what trial
@@ -122,6 +127,11 @@ const start = startArg ?? tomorrow;
 //   3. two versions of one story >= STORY_GAP days apart
 // Rules relax in reverse order only if nothing passes (logged).
 const STORY_GAP = 5;
+// PER-PLATFORM DAILY CAPS. Tal, 2026-09-30: "Post 1 to 2 videos per day on
+// Facebook to maintain steady growth without fatiguing your audience or
+// triggering spam filters." Facebook skips the 12:00 main -> 2/day (09 + 18).
+// Everything else: 3/day (the 3 mains). Instagram: 3 feed + 3 Trial Reels.
+const PLATFORM_SKIP = { 12: ["facebook"] };
 let seed = 20261001;
 const rnd = () => { seed |= 0; seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 const SLOTS = [[9, "main"], [12, "main"], [13, "trial"], [16, "trial"], [18, "main"], [19, "trial"]];
@@ -154,7 +164,7 @@ for (let d = 0; (pools.main.length || pools.trial.length) && d < 200; d++) {
     today.add(topic(v));
     for (const f of faiths(v)) faithCount.set(f, (faithCount.get(f) ?? 0) + 1);
     storyDays.set(story(v), [...(storyDays.get(story(v)) ?? []), d]);
-    plan.push({ project: join(outDir, v.file), file: v.file, as: kind, platforms: ["all"], at: israelISO(day, h), caption: captions[v.file] ?? "", title: ytTitle(v), slug: v.slug });
+    plan.push({ project: join(outDir, v.file), file: v.file, as: kind, platforms: kind === "trial" ? ["instagram"] : (PLATFORM_SKIP[h] ? ["all", ...PLATFORM_SKIP[h].map((x) => "-" + x)] : ["all"]), at: israelISO(day, h), caption: captions[v.file] ?? "", title: ytTitle(v), slug: v.slug });
   }
   prevTopics = today;
 }

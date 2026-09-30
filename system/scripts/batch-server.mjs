@@ -159,7 +159,7 @@ button.post{background:var(--accent)}button.trial{background:var(--trial)}button
 .log{white-space:pre-wrap;font-size:11px;background:var(--bg);border-radius:6px;padding:6px;margin:0;max-height:160px;overflow:auto}
 </style></head><body>
 <header class="top"><h1>All videos · ${vids.length}</h1>
-<p>Tap a video to watch. <b>Post to all now</b> goes to every connected platform immediately. <b>Schedule trial</b> books the next trial slot (13:00 / 16:00 / 19:00): Instagram as a Trial Reel, other platforms as normal posts. ${nPosted} posted · ${nTrial} trials scheduled. <a href="/schedule"><b>Open the posting schedule →</b></a></p></header>
+<p>Tap a video to watch. <b>Post to all now</b> goes to every connected platform immediately. <b>Schedule trial</b> books the next Instagram Trial Reel slot (13:00 / 16:00 / 19:00). ${nPosted} posted · ${nTrial} trials scheduled. <a href="/schedule"><b>Open the posting schedule →</b></a></p></header>
 ${connected ? "" : `<div class="setup"><b>Posting isn't connected yet.</b> The ShortSync key was lost when the old projects folder was deleted. Paste your ShortSync API key (it starts with <code>ss_live_</code>) and the buttons switch on. It's saved only on this laptop.
 <input id="key" type="password" autocomplete="off" placeholder="ss_live_..."><button class="post" id="savekey">Save key</button> <span id="keymsg"></span></div>`}
 <main>${sections}</main>
@@ -213,7 +213,7 @@ button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:11px 16px
 pre{white-space:pre-wrap;font-size:12px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px;max-height:300px;overflow:auto}
 .held{font-size:13px;color:var(--mute)}.held div{margin:4px 0}
 </style></head><body><header><h1>Posting schedule · ${plan.length} posts</h1>
-<p>Main feed 09:00 · 12:00 · 18:00 &nbsp;|&nbsp; Trial reels 13:00 · 16:00 · 19:00 (Israel time). Every platform connected in ShortSync; trials go to Instagram as Trial Reels and to the other platforms as normal posts. ${sent} already sent. <a href="/">Back to videos</a></p>
+<p>Main feed 09:00 · 12:00 · 18:00 &nbsp;|&nbsp; Trial reels 13:00 · 16:00 · 19:00 (Israel time). Main posts go to every platform connected in ShortSync (3 a day each); trials go only to Instagram as Trial Reels, which reach non-followers. ${sent} already sent. <a href="/">Back to videos</a></p>
 <p><button id="go" ${connected && remaining > 0 ? "" : "disabled"}>Submit whole schedule to ShortSync</button> ${connected ? "" : "<b>Paste the ShortSync key on the videos page first.</b>"}</p><pre id="log" hidden></pre></header>
 <main>${rows}<section class="story"><h2>Held back · ${held.length} (your call / holiday)</h2><div class="held">${held.map((h) => `<div><b>${esc(h.file)}</b>: ${esc(String(h.why).slice(0, 160))}</div>`).join("")}</div></section></main>
 <script>
@@ -284,9 +284,9 @@ http.createServer(async (req, res) => {
       const taken = [...st.trialSlots, ...plan.filter((x) => x.as === "trial").map((x) => x.at)];
       const when = isPost ? null : nextTrialSlot(taken);
       // one-item plan through `publish.mjs schedule`: every connected platform;
-      // a trial is an Instagram Trial Reel + the other platforms as normal posts
+      // a trial is an Instagram Trial Reel only (3/day cap on every other platform)
       const one = join(ROOT, "projects", slug, `oneoff-${Date.now()}.json`);
-      writeFileSync(one, JSON.stringify([{ project: p, file: f, as: isPost ? "main" : "trial", platforms: ["all"], ...(when ? { at: when } : {}), caption }], null, 1));
+      writeFileSync(one, JSON.stringify([{ project: p, file: f, as: isPost ? "main" : "trial", platforms: isPost ? ["all"] : ["instagram"], ...(when ? { at: when } : {}), caption }], null, 1));
       const r = await runPublish(["schedule", "--plan", one, "--confirm"]);
       const ok = r.code === 0 && !/✗|Error/.test(r.out.split("\n").slice(-3).join("\n"));
       if (ok) {
