@@ -64,7 +64,7 @@ const KEY = cfg.api_key;
 const NEVER_AUTO = cfg.rules?.never_auto_post !== false;
 const MIN_GAP_H = Number(cfg.rules?.min_gap_hours_between_posts ?? 3);
 const TRIAL_PLATFORM = cfg.trial_platform || "instagram";
-const TRIAL_KEY = cfg.trial_option_key || "trial_reel"; // TODO: confirm exact field name with ShortSync docs
+const TRIAL_KEY = cfg.trial_option_key || "trial_reel"; // verified: InstagramOptions.trial_reel in https://www.shortsync.app/openapi.yaml (2026-09-30)
 const maskKey = (k) => (k ? k.slice(0, 8) + "…" + k.slice(-4) : "(none)");
 if (!KEY || !KEY.startsWith("ss_")) {
   console.error("✗ config api_key looks wrong (expected ss_live_…).");
@@ -159,12 +159,20 @@ const connections = async () => {
   return _connCache;
 };
 
-const resolveTargets = async (platforms, { trial = false } = {}) => {
+const resolveTargets = async (platforms, { trial = false, title = "" } = {}) => {
   const conns = await connections();
   // "all" = every account connected in ShortSync (Tal, 2026-09-30: "every
   // platform that's connected on ShortSync" - Instagram, TikTok, X, Facebook...)
   if ([].concat(platforms).some((p) => String(p).toLowerCase() === "all"))
+  {
     platforms = [...new Set(conns.map((c) => (c.platform || c.provider || "").toLowerCase()).filter(Boolean))];
+    // "facebook_for_instagram" is the SAME Instagram account connected through
+    // Facebook - posting to both put every video on Instagram twice.
+    if (platforms.includes("instagram")) platforms = platforms.filter((p) => p !== "facebook_for_instagram");
+    // Pinterest REQUIRES a board (openapi PinterestOptions.board_id) - skipped
+    // until one is chosen (config pinterest_board_id), instead of 79 failures
+    if (!cfg.pinterest_board_id) platforms = platforms.filter((p) => p !== "pinterest");
+  }
   const byPlatform = new Map();
   for (const c of conns) {
     const plat = (c.platform || c.provider || "").toLowerCase();
@@ -179,13 +187,21 @@ const resolveTargets = async (platforms, { trial = false } = {}) => {
       continue;
     }
     const t = { connection_id: c.id ?? c.connection_id };
-    if (p.toLowerCase() === "instagram") {
+    const pl = p.toLowerCase();
+    // per-platform options, from https://www.shortsync.app/openapi.yaml (read 2026-09-30)
+    if (pl === "instagram") {
       t.platform_options = {
         instagram: trial
-          ? { share_to_feed: false, [TRIAL_KEY]: true }
+          ? { share_to_feed: false, [TRIAL_KEY]: true }   // trial_reel: InstagramOptions, verified in the spec
           : { share_to_feed: true },
       };
     }
+    if (pl === "youtube") {
+      if (title) t.title = title.slice(0, 100);           // YouTube needs a title per video
+      t.platform_options = { youtube: { privacy_status: "public", made_for_kids: false, notify_subscribers: true } };
+    }
+    if (pl === "tiktok") t.platform_options = { tiktok: { privacy_level: "PUBLIC_TO_EVERYONE" } };
+    if (pl === "pinterest" && cfg.pinterest_board_id) t.platform_options = { pinterest: { board_id: cfg.pinterest_board_id } };
     targets.push(t);
   }
   if (missing.length) console.warn(`  ⚠ no connected account for: ${missing.join(", ")} — skipped`);
@@ -376,12 +392,23 @@ const run = async () => {
 
     const todo = plan.filter((r) => !r.post_ids);
     if (todo.length < plan.length) console.log(`  (${plan.length - todo.length} already submitted - skipped; their post ids are in the plan)`);
-    if (!gate(`POST /posts ×${todo.length}`)) return;
+    if (!gate(`POST /posts ×${todo.length}`)) {
+      // show exactly what the first main and first trial would send (GET /connections only - read-only)
+      for (const kind of ["main", "trial"]) {
+        const r = todo.find((x) => (x.as || "main") === kind);
+        if (!r) continue;
+        const targets = await resolveTargets(r.platforms || cfg.default_platforms, { trial: kind === "trial", title: r.title ?? "" });
+        const names = new Map((await connections()).map((c) => [c.id ?? c.connection_id, (c.platform || c.provider || "?").toLowerCase()]));
+        console.log(`\n  first ${kind} would send to ${targets.length} account(s): ${targets.map((t) => names.get(t.connection_id)).join(", ")}`);
+        show(postBody({ uploadId: "<upload_id>", mode: r.at ? "scheduled" : "immediate", when: r.at, caption: r.caption ?? "", targets: targets.map((t) => ({ ...t, platform: names.get(t.connection_id) })) }));
+      }
+      return;
+    }
     for (const r of todo) {
       const trial = (r.as || "main") === "trial";
       // trial = Instagram as a Trial Reel + the other platforms as normal posts
       const platforms = r.platforms || cfg.default_platforms;
-      const targets = await resolveTargets(platforms, { trial });
+      const targets = await resolveTargets(platforms, { trial, title: r.title ?? "" });
       const uploadId = await uploadMaster(r.project);
       const body = postBody({
         uploadId,

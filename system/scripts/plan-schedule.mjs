@@ -80,6 +80,8 @@ const STYLES = [
   ["CALL", /CALL SOMEONE/],
   ["STORY", /ROMAN|ABRAHAM|PRIDE|ARABIC|BUS DRIVER|PHOTO|RESTAURANT|WHEELCHAIR|KID|BROTHERS/],
 ];
+// YouTube needs a title per video: the on-screen title, one line, <= 100 chars
+const ytTitle = (v) => String(v.title || v.file.replace(/\.mp4$/i, "")).replace(/\s+/g, " ").trim().slice(0, 100);
 const txt = (v) => `${v.title} ${v.file}`.toUpperCase();
 const topic = (v) => (STYLES.find(([, re]) => re.test(txt(v))) ?? ["MEETING"])[0];
 const faiths = (v) => ["CHRISTIAN", "MUSLIM", "JEWISH", "HINDU", "BUDDHIST"].filter((f) => txt(v).includes(f));
@@ -148,7 +150,7 @@ for (let d = 0; (pools.main.length || pools.trial.length) && d < 200; d++) {
     today.add(topic(v));
     for (const f of faiths(v)) faithCount.set(f, (faithCount.get(f) ?? 0) + 1);
     storyDays.set(story(v), [...(storyDays.get(story(v)) ?? []), d]);
-    plan.push({ project: join(outDir, v.file), file: v.file, as: kind, platforms: ["all"], at: israelISO(day, h), caption: captions[v.file] ?? "", slug: v.slug });
+    plan.push({ project: join(outDir, v.file), file: v.file, as: kind, platforms: ["all"], at: israelISO(day, h), caption: captions[v.file] ?? "", title: ytTitle(v), slug: v.slug });
   }
   prevTopics = today;
 }
