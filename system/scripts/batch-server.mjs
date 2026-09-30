@@ -96,8 +96,21 @@ function runPublish(args) {
   });
 }
 
-function page() {
-  const vids = videos();
+// KINDNESS TAB (Tal, 2026-09-30: "show me all the kindness-related videos ...
+// put those in one section"). First matching group wins.
+const KINDNESS = [
+  ["Giving: flowers, water, food, toys", /FLOWER|WATER|HOMELESS|TOYS|HEART|GIVING/i],
+  ["Kindness tests: asking strangers for help", /KINDNESS|TESTED|PAY FOR MY TRAIN/i],
+  ["They wouldn't let me pay", /WON'T LET ME PAY|WOULDN'T LET ME PAY/i],
+  ["Call someone you love", /CALL SOMEONE/i],
+];
+const kindGroup = (v) => (KINDNESS.find(([, re]) => re.test(`${v.title} ${v.file}`)) ?? [null])[0];
+
+function page(filter = "all") {
+  const allVids = videos();
+  const vids = filter === "kindness" ? allVids.filter(kindGroup) : allVids;
+  const nKind = allVids.filter(kindGroup).length;
+  const planBy = new Map(readJSON(PLAN, []).map((r) => [r.file, r]));
   const st = state();
   const connected = existsSync(CFG);
   const groups = new Map();
@@ -107,9 +120,12 @@ function page() {
     groups.get(g).push(v);
   }
   for (const l of groups.values()) l.sort((x, y) => String(x.variant).localeCompare(String(y.variant)));
-  const ordered = [...groups.entries()].sort((x, y) => (x[1][0].type === "compilation") - (y[1][0].type === "compilation") || x[0].localeCompare(y[0]));
+  let ordered = [...groups.entries()].sort((x, y) => (x[1][0].type === "compilation") - (y[1][0].type === "compilation") || x[0].localeCompare(y[0]));
+  if (filter === "kindness")
+    ordered = KINDNESS.map(([name]) => [name, vids.filter((v) => kindGroup(v) === name).sort((a, b) => a.file.localeCompare(b.file))]).filter(([, l]) => l.length);
   const fmt = (d) => (d ? `${Math.floor(d / 60)}:${String(Math.round(d % 60)).padStart(2, "0")}` : "");
-  const caption = (v) => String(v.title || "").replace(/^POV:\s*/i, "POV: ").replace(/\s*\n\s*/g, " ").trim();
+  // the caption the schedule will post (plan-schedule.mjs); the title only if unplanned
+  const caption = (v) => planBy.get(v.file)?.caption ?? String(v.title || "").replace(/^POV:\s*/i, "POV: ").replace(/\s*\n\s*/g, " ").trim();
   const card = (v) => {
     const s = st.videos[v.file];
     const full = isFull(v.file);
@@ -123,6 +139,7 @@ function page() {
         ${v.hook ? `<p class="hook">“${esc(String(v.hook).slice(0, 110))}”</p>` : ""}
         ${v.status === "needs-tal" && v.note ? `<details><summary>Why it's your call</summary><p>${esc(String(v.note).slice(0, 600))}</p></details>` : ""}
         <textarea rows="2" aria-label="Caption">${esc(caption(v))}</textarea>
+        ${planBy.get(v.file) && !s ? `<div class="when">${planBy.get(v.file).as === "main" ? "Main feed" : "Trial reel"} · ${esc(new Date(planBy.get(v.file).at).toLocaleString("en-GB", { timeZone: "Asia/Jerusalem", weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }))}</div>` : ""}
         ${done}
         <div class="btns">
           <button class="post" ${full && connected ? "" : "disabled"}>Post to all now</button>
@@ -131,7 +148,7 @@ function page() {
         <pre class="log" hidden></pre>
       </div></article>`;
   };
-  const sections = ordered.map(([g, list]) => `<section class="story"><h2>${esc(g)} <span>${list[0].type === "compilation" ? "Compilation" : "One person"}</span></h2><div class="grid">${list.map(card).join("")}</div></section>`).join("");
+  const sections = ordered.map(([g, list]) => `<section class="story"><h2>${esc(g)} <span>${filter === "kindness" ? `${list.length} videos` : list[0].type === "compilation" ? "Compilation" : "One person"}</span></h2><div class="grid">${list.map(card).join("")}</div></section>`).join("");
   const nPosted = Object.values(st.videos).filter((x) => x.kind === "post").length;
   const nTrial = Object.values(st.videos).filter((x) => x.kind === "trial").length;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -155,11 +172,14 @@ main{padding:8px 16px 60px;max-width:1400px;margin:0 auto}.story{margin:22px 0}
 textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;font-size:13px;background:var(--bg);color:var(--ink);resize:vertical}
 .btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:11px 6px;cursor:pointer;color:#fff}
 button.post{background:var(--accent)}button.trial{background:var(--trial)}button:disabled{opacity:.35;cursor:not-allowed}
+.when{font-size:12px;color:var(--mute)}
+nav.tabs{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}nav.tabs a{padding:6px 12px;border-radius:99px;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:14px}nav.tabs a.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .done{font-size:13px;font-weight:600}.done.post{color:var(--accent)}.done.trial{color:var(--trial)}
 .log{white-space:pre-wrap;font-size:11px;background:var(--bg);border-radius:6px;padding:6px;margin:0;max-height:160px;overflow:auto}
 </style></head><body>
-<header class="top"><h1>All videos · ${vids.length}</h1>
-<p>Tap a video to watch. <b>Post to all now</b> goes to every connected platform immediately. <b>Schedule trial</b> books the next Instagram Trial Reel slot (13:00 / 16:00 / 19:00). ${nPosted} posted · ${nTrial} trials scheduled. <a href="/schedule"><b>Open the posting schedule →</b></a></p></header>
+<header class="top"><h1>${filter === "kindness" ? "Kindness videos" : "All videos"} · ${vids.length}</h1>
+<p>Tap a video to watch. <b>Post to all now</b> goes to every connected platform immediately. <b>Schedule trial</b> books the next Instagram Trial Reel slot (13:00 / 16:00 / 19:00). ${nPosted} posted · ${nTrial} trials scheduled. </p>
+<nav class="tabs"><a href="/" class="${filter === "all" ? "on" : ""}">All videos · ${allVids.length}</a><a href="/kindness" class="${filter === "kindness" ? "on" : ""}">Kindness · ${nKind}</a><a href="/schedule">Posting schedule</a></nav></header>
 ${connected ? "" : `<div class="setup"><b>Posting isn't connected yet.</b> The ShortSync key was lost when the old projects folder was deleted. Paste your ShortSync API key (it starts with <code>ss_live_</code>) and the buttons switch on. It's saved only on this laptop.
 <input id="key" type="password" autocomplete="off" placeholder="ss_live_..."><button class="post" id="savekey">Save key</button> <span id="keymsg"></span></div>`}
 <main>${sections}</main>
@@ -213,7 +233,7 @@ button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:11px 16px
 pre{white-space:pre-wrap;font-size:12px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px;max-height:300px;overflow:auto}
 .held{font-size:13px;color:var(--mute)}.held div{margin:4px 0}
 </style></head><body><header><h1>Posting schedule · ${plan.length} posts</h1>
-<p>Main feed 09:00 · 12:00 · 18:00 &nbsp;|&nbsp; Trial reels 13:00 · 16:00 · 19:00 (Israel time). Main posts go to every platform connected in ShortSync (3 a day each, Facebook 2); trials go only to Instagram as Trial Reels, which reach non-followers. ${sent} already sent. <a href="/">Back to videos</a></p>
+<p>Main feed 09:00 · 12:00 · 18:00 &nbsp;|&nbsp; Trial reels 13:00 · 16:00 · 19:00 (Israel time). Main posts go to every platform connected in ShortSync (3 a day each, Facebook 2); trials go only to Instagram as Trial Reels, which reach non-followers. ${sent} already sent. <a href="/">All videos</a> · <a href="/kindness">Kindness videos</a></p>
 <p><button id="go" ${connected && remaining > 0 ? "" : "disabled"}>Submit whole schedule to ShortSync</button> ${connected ? "" : "<b>Paste the ShortSync key on the videos page first.</b>"}</p><pre id="log" hidden></pre></header>
 <main>${rows}<section class="story"><h2>Held back · ${held.length} (your call / holiday)</h2><div class="held">${held.map((h) => `<div><b>${esc(h.file)}</b>: ${esc(String(h.why).slice(0, 160))}</div>`).join("")}</div></section></main>
 <script>
@@ -231,6 +251,7 @@ http.createServer(async (req, res) => {
   const u = new URL(req.url, "http://x");
   try {
     if (u.pathname === "/") { res.writeHead(200, { "content-type": "text/html; charset=utf-8" }); return res.end(page()); }
+    if (u.pathname === "/kindness") { res.writeHead(200, { "content-type": "text/html; charset=utf-8" }); return res.end(page("kindness")); }
 
     if (u.pathname === "/schedule") { res.writeHead(200, { "content-type": "text/html; charset=utf-8" }); return res.end(schedulePage()); }
     if (u.pathname === "/api/schedule/job") return json(res, JOB);
