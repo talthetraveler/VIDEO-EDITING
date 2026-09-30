@@ -33,3 +33,17 @@ obstruction; a passer-by through the goodbye at 289.5–291.9s.
 
 **Unverified:** all English is a reading of the Hebrew transcript, not checked
 by a native speaker.
+
+## V17 — delivered 2026-09-30 as "ROMAN - THE STORY V2.mp4" (103.7s, -14.1 LUFS)
+
+Changes from V9, every one found by a check, not by eye alone:
+
+- **Colour:** V9 predates the range fix (Sony shots washed out). V17 is limited range throughout and tagged bt709/tv.
+- **Hook:** the line is said at 126.30-127.30, not from 123.4. V9 opened on "how many?" plus 2.9s of mumble, with the caption 3s early. Re-timed from a Hebrew-forced Groq pass. The hook is now 126.18-127.75.
+- **06:** starts on the whole "אח שלי", ends after "Roman." (32.3 cut Tal's "where are you fr-"). Full frame, because the autoframe zoom cut his head off.
+- **08:** carries Roman's reply "Yes. Thirsty." and is pinned. Snap had stretched it into Tal's next question, leaving "AND HUNGRY" on screen.
+- **10 (ending shot):** starts at 13.9, not 13.45, which opened on the tail of "okay." (LESSONS 68).
+- **16, 19:** no longer start inside the previous word.
+- **20:** split at the sentence end. A caption hold had merged two sentences into nonsense.
+
+Still true: the English is a reading of the Hebrew, not checked by a native speaker.
