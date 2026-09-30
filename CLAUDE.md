@@ -192,10 +192,17 @@ node system/scripts/build-edit.mjs <slug> --final --hq        # full-quality re-
 node system/scripts/finish.mjs <slug> --name "TITLE.mp4"      # QA gate -> Frame.io -> verify
 ```
 
-**Delivery is part of the job, not a follow-up.** Every finished cut goes to
-`FINAL VIDEOS / EDITED BY CLAUDE` via `scripts/finish.mjs`, which refuses to
-upload anything the self-review gate failed. A render on this disk is not
-delivered.
+**Delivery is part of the job, not a follow-up — and it goes to THE INDEX, not
+Frame.io.** Tal, 2026-09-30: *"I don't really need these uploaded to the frame
+IO ... I just need them to my index so then I can just tap view them, and tap a
+button like post to all platforms now ... or post the trial schedule."* The
+index is `VIDEOS OUT/2026-09-29 israel batch/index.html`, built by
+`scripts/batch-review-page.mjs israel-batch "<that folder>"` from
+`projects/israel-batch/manifest.jsonl` (+ `finalize.jsonl` for the Full-quality
+badge). A finished cut that passed the gate: hard-link it into that folder,
+append its manifest + finalize rows, regenerate the page. Do not upload to
+Frame.io unless he asks. The page's post / trial-schedule buttons are disabled
+until the ShortSync key is back — say so, never pretend they post.
 
 ---
 
