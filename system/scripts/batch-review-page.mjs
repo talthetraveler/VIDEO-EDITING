@@ -113,7 +113,7 @@ ${cards || "<p>No videos delivered yet.</p>"}
   <button id="copy">Copy picked list</button>
   <button disabled title="Needs the ShortSync key - ask Claude">Post picked as trials</button>
   <button disabled title="Needs the ShortSync key - ask Claude">Schedule all as trials · 3/day (7:00, 16:00, 22:00)</button>
-  <small>Posting is off until the ShortSync key is back. Tick videos, press "Copy picked list", paste it to Claude.</small>
+  <small><b>To post:</b> double-click <b>OPEN POSTING PAGE</b> in this folder. It opens the same videos with a "Post to all now" and a "Schedule trial" button on each one (scripts/batch-server.mjs).</small>
 </div></div>
 <script>
 const KEY="israel-batch-picks";let picks=[];try{picks=JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){}

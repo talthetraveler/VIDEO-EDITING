@@ -146,3 +146,7 @@ system/projects/*/transcript-backup/
 system/projects/*/translate-backup/
 system/projects/ib-tools-*/
 system/projects/ib-comp-debug/
+
+# ShortSync posting key + posting state - NEVER push (public repo)
+system/projects/_publish/
+system/projects/*/posting.json

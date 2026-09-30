@@ -29,7 +29,7 @@
  *   node scripts/publish.mjs cancel <post_id> --confirm
  */
 import { readFileSync, existsSync, statSync } from "node:fs";
-import { join, isAbsolute } from "node:path";
+import { join, isAbsolute, basename } from "node:path";
 import { randomUUID } from "node:crypto";
 
 const root = process.cwd();
@@ -110,6 +110,9 @@ const api = async (method, path, body, extraHeaders = {}) => {
 
 // ---- helpers --------------------------------------------------------
 const finalMaster = (project) => {
+  // a finished file handed over directly (VIDEOS OUT, scripts/batch-server.mjs)
+  // - still refused unless it is a real 1080x1920 master, checked by the caller
+  if (/\.(mp4|mov)$/i.test(project) && existsSync(project)) return project;
   const dir = join(root, "projects", project, "preview");
   const cands = [join(dir, `${project}_FINAL.mp4`), join(dir, `${project}_FINAL.mov`)];
   const f = cands.find(existsSync);
@@ -136,8 +139,9 @@ const uploadMaster = async (project) => {
   const file = finalMaster(project);
   const bytes = readFileSync(file);
   const size = statSync(file).size;
-  console.log(`  ↑ ${project}_FINAL.mp4  (${(size / 1e6).toFixed(1)} MB)`);
-  const slot = await api("POST", "/uploads", { filename: `${project}_FINAL.mp4` });
+  const upName = /\.(mp4|mov)$/i.test(project) ? basename(project) : `${project}_FINAL.mp4`;
+  console.log(`  ↑ ${upName}  (${(size / 1e6).toFixed(1)} MB)`);
+  const slot = await api("POST", "/uploads", { filename: upName });
   const put = await fetch(slot.presigned_url, {
     method: slot.method || "PUT",
     headers: { "Content-Type": "video/mp4", ...(slot.required_headers || {}) },
