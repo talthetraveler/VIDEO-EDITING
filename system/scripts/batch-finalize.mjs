@@ -65,7 +65,10 @@ for (const r of jobs) {
   const cov = run("node", ["scripts/caption-coverage.mjs", r.slug]);
   const covLine = (cov.match(/(\d+)\/(\d+) spoken words on screen/) || []);
   const covered = covLine[1] ? `${covLine[1]}/${covLine[2]}` : "n/a";
-  const full = wh === "1080,1920";
+  // numbers, not the string: iPhone "Ambient viewing environment" side data makes
+  // ffprobe print "1080,1920," - the exact match called real finals not-full (7da30c9)
+  const [w0, h0] = wh.split(",").map(Number);
+  const full = w0 === 1080 && h0 === 1920;
   const dest = join(outDir, r.file);
   if (full) {
     if (existsSync(dest)) renameSync(dest, join(outDir, "previews", r.file));
