@@ -1836,3 +1836,22 @@ What an Erez-style kindness cut is, for Tal:
 - A pasted chat image is not a file on disk. Recreate it (`make-note.py`) or
   ask for the file; do not go searching Frame.io for it when he says he will
   send it.
+
+## 72 — bright phone footage was "corrected" into a dark, heavy grade (Tal, 2026-10-02)
+
+Same flowers cut, V2. Tal: *"so bad. You just don't need to color grade it."*
+The build log said it in plain words: `exposure: luma 159 TOO BRIGHT -> mid
+0.63->0.44` on beat after beat. The exposure block read a correctly exposed,
+overcast-bright iPhone street as overexposed and pulled the mids down, then
+GRADE added its +42% saturation on top. The result was darker and thicker than
+what he shot, on footage that needed nothing.
+
+`"grade": false` in edit.json now switches ALL colour work off for a film (the
+GRADE curve, the per-beat exposure lift/tame, the saturation trim). Verified on
+frames: graded vs ungraded vs the raw clip - ungraded matches the raw clip.
+
+**For iPhone / phone footage that already looks right, default to
+`"grade": false`.** The grade was tuned on grey, hazy Sony and Meta-glasses
+footage; it is not a look to put on everything. If a "TOO BRIGHT" or "colour:"
+line appears in a build log for footage Tal shot on a phone in daylight, that
+is the builder changing a picture nobody asked it to change.

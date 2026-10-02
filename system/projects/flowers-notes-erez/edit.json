@@ -4,7 +4,8 @@
   "snap": false,
   "autoFrame": false,
   "silent": true,
-  "out": "FLOWERS_NOTES_EREZ_V2.mp4",
+  "grade": false,
+  "out": "FLOWERS_NOTES_EREZ_V3.mp4",
   "beats": [
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
