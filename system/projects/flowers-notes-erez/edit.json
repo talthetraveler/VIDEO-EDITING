@@ -1,178 +1,222 @@
 {
-  "_brief": "Tal 2026-10-02: Frame.io NEEDS TO BE EDITED / FLOWERS FOR STRANGERS / 2. Erez-v1 style A, fast cuts. V4 after his notes: V1 'not so good' (no POV title, no flash-forward hook, need emoji + sticker, show him getting the flowers in his hand, reactions not looking at the lens and not zoomed, add the girl walking by with the note + her reading it + the note picture popping up, not the angle where the girl stands in front); V2 'so bad ... don't color grade it' -> grade:false; V3 'you didn't show any zoom ins of me ... of me giving him the flowers. The slow mo, you didn't do that' -> front-angle shots where Tal is VISIBLE crouching behind the bench and handing the bouquet over, snap zooms onto Tal on the open / run-up / crouch / handoff, slow-mo on the handoff and on her laugh. V5 after V4: \"it repeats as a cut when he holds the flower\" -> the side shot of him holding the bouquet (2357) and the side shot of him giving it to her (2358) are OUT: each showed an action the front shot next to it already shows. \"the emojis are not so good ... dont do the emoji its fine\" -> emoji stickers removed, note card kept. Then: \"the clip of her receiving the flowers and the notes - choose the most emotional parts ... zoom in\" -> snap zooms onto HER face at each emotional peak: hand to mouth taking the flowers (9266 10.5-11.6), reading the note right after the girl leaves (9266 16.8-18.5, continuous with the walk-by), the big smile at him (9262 30.5-31.8), exclaiming with her hand on her chest (9262 32.9-33.7). This supersedes the earlier no-zoom-on-reactions note for these beats.",
+  "_brief": "Tal 2026-10-02: Frame.io NEEDS TO BE EDITED / FLOWERS FOR STRANGERS / 2. Erez-v1 style A, fast cuts. V4 after his notes: V1 'not so good' (no POV title, no flash-forward hook, need emoji + sticker, show him getting the flowers in his hand, reactions not looking at the lens and not zoomed, add the girl walking by with the note + her reading it + the note picture popping up, not the angle where the girl stands in front); V2 'so bad ... don't color grade it' -> grade:false; V3 'you didn't show any zoom ins of me ... of me giving him the flowers. The slow mo, you didn't do that' -> front-angle shots where Tal is VISIBLE crouching behind the bench and handing the bouquet over, snap zooms onto Tal on the open / run-up / crouch / handoff, slow-mo on the handoff and on her laugh. V5 after V4: \"it repeats as a cut when he holds the flower\" -> the side shot of him holding the bouquet (2357) and the side shot of him giving it to her (2358) are OUT: each showed an action the front shot next to it already shows. \"the emojis are not so good ... dont do the emoji its fine\" -> emoji stickers removed, note card kept. Then: \"the clip of her receiving the flowers and the notes - choose the most emotional parts ... zoom in\" -> snap zooms onto HER face at each emotional peak: hand to mouth taking the flowers (9266 10.5-11.6), reading the note right after the girl leaves (9266 16.8-18.5, continuous with the walk-by), the big smile at him (9262 30.5-31.8), exclaiming with her hand on her chest (9262 32.9-33.7). This supersedes the earlier no-zoom-on-reactions note for these beats. V6: Tal - \"we just use his cuts and how they flow as reference ... just look at the zoom ins\". Measured frame by frame on Erez DdynV0UMrtr (two-camera bench surprise, 6.2-7.9s): WIDE -> a fast zoom-in over ~4 frames (0.13s) -> TIGHT hold with a slight continued push -> hard CUT to the other angle; time only moves forward; 0.3-1.0s shots, 2-3.5s holds on the key moments. This cut is built on that flow.",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "silent": true,
   "grade": false,
-  "out": "FLOWERS_NOTES_EREZ_V5.mp4",
+  "out": "FLOWERS_NOTES_EREZ_V6.mp4",
   "beats": [
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
-      2,
-      2.5,
+      1.6,
+      2.2,
       0.5,
-      "OPEN front: Tal with the bouquet raised (audio from 9266 - this clip has the operator's voice)",
+      "WIDE front: the couple on the bench, Tal behind them with the bouquet raised",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
-          1.4,
-          1.55
+          1,
+          1
         ],
         "x": 0.62,
         "y": 0.5,
         "audio": {
           "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 0.4
+          "at": 0.2
         }
       }
     ],
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
-      2.5,
-      2.7,
+      2.2,
+      2.33,
       0.5,
-      "SNAP ZOOM onto Tal",
+      "fast zoom in (4 frames) onto Tal",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
-          1.55,
+          1,
           2.4
         ],
         "x": 0.62,
         "y": 0.5,
         "audio": {
           "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 0.9
+          "at": 0.8
         }
       }
     ],
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
-      2.7,
-      3.4,
+      2.33,
+      3,
       0.5,
-      "hold on Tal and the flowers",
+      "tight hold: Tal and the flowers",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
           2.4,
-          2.4
+          2.5
         ],
         "x": 0.62,
         "y": 0.5,
         "audio": {
           "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 1.1
+          "at": 0.93
         }
       }
     ],
     [
-      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
-      4.5,
-      5,
+      "ec45e00b-5842-4728-b984-7729170ca90a",
+      1.3,
+      1.9,
       0.5,
-      "front: he runs up",
+      "CUT side, tight: the couple, no idea",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
-          1.5,
-          1.5
+          1.7,
+          1.78
+        ],
+        "x": 0.4,
+        "y": 0.46,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 1.6
+        }
+      }
+    ],
+    [
+      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
+      4.6,
+      5.1,
+      0.5,
+      "CUT front: he runs up",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.2,
+          1.2
         ],
         "x": 0.65,
         "y": 0.55,
         "audio": {
           "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 1.8
+          "at": 2.2
         }
       }
     ],
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
-      5,
-      5.2,
+      5.1,
+      5.23,
       0.5,
-      "SNAP ZOOM onto Tal running",
+      "fast zoom in onto Tal running",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
-          1.5,
+          1.2,
           2.2
         ],
         "x": 0.65,
         "y": 0.55,
         "audio": {
           "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 2.3
+          "at": 2.7
         }
       }
     ],
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
-      5.2,
-      5.9,
+      5.23,
+      5.8,
       0.5,
-      "hold: he reaches the bench",
+      "tight hold: he reaches the bench",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
           2.2,
-          2.2
+          2.28
         ],
         "x": 0.65,
         "y": 0.55,
         "audio": {
           "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 2.5
+          "at": 2.83
+        }
+      }
+    ],
+    [
+      "ec45e00b-5842-4728-b984-7729170ca90a",
+      4.3,
+      4.9,
+      0.5,
+      "CUT side, tight: still no idea - his face appears behind them",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.7,
+          1.7
+        ],
+        "x": 0.3,
+        "y": 0.45,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 3.4
         }
       }
     ],
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
-      6.35,
-      7.45,
+      6.4,
+      7.3,
       0.5,
-      "front, zoomed: Tal crouching behind the bench with the bouquet - his face visible, they have no idea",
+      "CUT front, tight: Tal crouching behind the bench with the bouquet",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
           2.2,
-          2.2
+          2.3
         ],
         "x": 0.5,
         "y": 0.53,
         "audio": {
           "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 3
+          "at": 4
         }
       }
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
       4.95,
-      5.15,
+      5.08,
       0.5,
-      "THE HANDOFF front (take 2): snap zoom onto Tal and the man",
+      "THE HANDOFF front: fast zoom in onto Tal and the man",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
-          1.3,
+          1.2,
           2.3
         ],
         "x": 0.24,
@@ -181,10 +225,10 @@
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      5.15,
+      5.08,
       5.6,
       0.5,
-      "SLOW-MO: Tal hands him the flowers, his face beside the man's head",
+      "SLOW-MO: Tal hands him the flowers",
       null,
       {
         "manual": true,
@@ -201,19 +245,41 @@
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
       5.6,
-      6.3,
+      6.2,
       0.5,
-      "hold: the man has the bouquet in his hand",
+      "tight hold: the bouquet in his hand",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
           2.3,
-          2.3
+          2.36
         ],
         "x": 0.24,
         "y": 0.52
+      }
+    ],
+    [
+      "ec45e00b-5842-4728-b984-7729170ca90a",
+      6.9,
+      7.5,
+      0.5,
+      "CUT side, tight on HER face: surprise, hand at her mouth",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.2,
+          2.3
+        ],
+        "x": 0.6,
+        "y": 0.46,
+        "audio": {
+          "id": "99d5d236-9d31-4d42-8ca3-a6cfc2006faf",
+          "at": 6.9
+        }
       }
     ],
     [
@@ -221,14 +287,14 @@
       10,
       10.5,
       0.5,
-      "front: he gives them to her",
+      "CUT front: he gives them to her",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
-          1,
-          1
+          1.2,
+          1.2
         ],
         "x": 0.6,
         "y": 0.47
@@ -237,15 +303,15 @@
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
       10.5,
-      10.7,
+      10.63,
       0.5,
-      "SNAP ZOOM onto her face - hand to her mouth",
+      "fast zoom in onto her face",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
-          1,
+          1.2,
           1.9
         ],
         "x": 0.6,
@@ -254,17 +320,17 @@
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      10.7,
+      10.63,
       11.6,
       0.5,
-      "hold: she is moved, hand at her mouth, the flowers in her arms",
+      "tight hold: moved, hand at her mouth, the flowers in her arms",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
           1.9,
-          1.9
+          1.98
         ],
         "x": 0.6,
         "y": 0.47
@@ -273,7 +339,7 @@
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
       14.15,
-      16.4,
+      15.9,
       0.5,
       "THE NOTE front: the girl walks by and hands her the note",
       null,
@@ -291,7 +357,7 @@
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
       16.8,
-      17.2,
+      17.1,
       0.5,
       "she looks down at the note",
       null,
@@ -308,10 +374,10 @@
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      17.2,
-      17.4,
+      17.1,
+      17.23,
       0.5,
-      "SNAP ZOOM onto her reading it",
+      "fast zoom in onto her reading",
       null,
       {
         "manual": true,
@@ -326,17 +392,17 @@
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      17.4,
+      17.23,
       18.5,
       0.5,
-      "hold: she reads the note - the note card pops up",
+      "tight hold: she reads it - the note card pops up",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
           2.1,
-          2.1
+          2.2
         ],
         "x": 0.53,
         "y": 0.5,
@@ -353,7 +419,7 @@
       1.85,
       2.55,
       0.5,
-      "close-up: looking down at the note, smiling - no zoom",
+      "CUT close-up: smiling down at the note",
       null,
       {
         "manual": true,
@@ -368,7 +434,7 @@
           "image": "note.png",
           "w": 900,
           "x": 0.5,
-          "y": 0.2
+          "y": 0.19
         }
       }
     ],
@@ -377,7 +443,7 @@
       0.5,
       1.4,
       0.5,
-      "THE TURN, SLOW-MO: she laughs, looking off to the side (not at the lens) - no zoom",
+      "THE TURN, SLOW-MO: she laughs, looking off to the side",
       null,
       {
         "manual": true,
@@ -396,7 +462,7 @@
       30.5,
       30.8,
       0.5,
-      "front: she turns to him (audio from 9266: operator voice on this clip)",
+      "CUT front: she turns to him",
       null,
       {
         "manual": true,
@@ -416,9 +482,9 @@
     [
       "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
       30.8,
-      31,
+      30.93,
       0.5,
-      "SNAP ZOOM onto her big smile",
+      "fast zoom in onto her big smile",
       null,
       {
         "manual": true,
@@ -437,23 +503,23 @@
     ],
     [
       "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
-      31,
+      30.93,
       31.8,
       0.5,
-      "hold: the big smile",
+      "tight hold: the big smile",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
           1.9,
-          1.9
+          1.98
         ],
         "x": 0.72,
         "y": 0.45,
         "audio": {
           "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 19.2
+          "at": 19.13
         }
       }
     ],
@@ -462,7 +528,7 @@
       32.9,
       33.7,
       0.5,
-      "zoomed: she exclaims, hand on her chest with the note",
+      "tight: she exclaims, hand on her chest with the note",
       null,
       {
         "manual": true,
@@ -484,7 +550,7 @@
       21,
       21.5,
       0.5,
-      "front: he leans in",
+      "CUT wide front: he leans in",
       null,
       {
         "manual": true,
@@ -500,16 +566,16 @@
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
       21.5,
-      21.7,
+      21.63,
       0.5,
-      "snap zoom onto the kiss",
+      "fast zoom in onto the kiss",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
           1,
-          1.45
+          1.5
         ],
         "x": 0.5,
         "y": 0.36
@@ -517,17 +583,17 @@
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      21.7,
-      22.8,
+      21.63,
+      22.7,
       0.5,
-      "hold: the kiss",
+      "tight hold: the kiss",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
-          1.45,
-          1.45
+          1.5,
+          1.56
         ],
         "x": 0.5,
         "y": 0.36
@@ -535,16 +601,16 @@
     ],
     [
       "99d5d236-9d31-4d42-8ca3-a6cfc2006faf",
-      22.4,
-      24.4,
+      23.4,
+      24.9,
       0.5,
-      "ENDING side: the hug",
+      "CUT side: the hug - ending",
       null,
       {
         "manual": true,
         "nocap": true,
         "z": [
-          1.3,
+          1.24,
           1.3
         ],
         "x": 0.45,

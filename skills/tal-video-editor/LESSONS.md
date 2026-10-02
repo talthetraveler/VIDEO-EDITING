@@ -2030,3 +2030,21 @@ the SAME clip - two takes of one action pass it clean.
   face-level frame strips across every take, not from the wide sheets.
 - Emoji stickers: he judged them *"not so good"* and then said *"dont do the
   emoji its fine"* - they are out of this cut. The note picture pop-up stays.
+
+## 76 — "like erezv1" was built from notes about Erez, not from Erez (Tal, 2026-10-03)
+
+Five previews in, Tal asked: *"DID U USE EREZV1 AS REFERANCE"*. The honest
+answer was: only the written summary. The summary said "hard cuts, no zooms
+measured" because it was made from contact sheets - one frame per shot - and a
+zoom cannot show in one frame. Tal: *"we just use his cuts and how they flow as
+reference ... just look at the zoom ins"*, then *"DONT ASK ME GO"*.
+
+- **When he names a reference, open the reference VIDEO and read the cut
+  points at 30 fps before the first build** - not the notes about it. The file
+  is in `assets/references/instagram-harvest/<account>/`.
+- What a contact sheet cannot show (zoom ramps, speed ramps, drifts) has to be
+  measured frame by frame. The result is now in `erez.v1.md` -> "Cut and zoom
+  grammar": wide -> 4-frame zoom-in -> tight hold drifting in -> hard cut to
+  the other angle, time only forward.
+- Do not offer him a menu ("do you want cards / emoji / a closing card?") when
+  he has asked for the cut. He wants the reference's FLOW; decide and build.

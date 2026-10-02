@@ -91,3 +91,27 @@ Songs replacing dialogue (Tal's formats rate natural audio high; any song needs 
 ## Honest limits
 
 n=9, one filler; views Instagram-rounded. Shots by eye (±10 % on the two-camera reels). Two-camera claim, font and text sizes estimated from 360 px stills. Translations unverified. Can't tell whether ambient sound sits under the songs. Performer identity unverified; the mall reels may show a different person. Per-reel files: `<slug>.shots.md`, `.words.json`, `.sheetN.jpg`, `<id>.audio.txt`.
+
+## Cut and zoom grammar — measured FRAME BY FRAME (2026-10-03)
+
+Added because the contact sheets above hide it: one frame per shot cannot show
+a zoom. Read at 30 fps on DdynV0UMrtr (two-camera bench surprise), 0.85-1.75s,
+6.2-7.1s and 7.4-8.3s. The 0.03-0.07s "slivers" the shot detector counted are
+not duplicate frames - they are these zoom ramps.
+
+1. **WIDE -> fast zoom-in -> TIGHT, inside one shot.** The wide (everyone in
+   frame) snaps to a tight on the faces over **~4 frames (0.13s)**, roughly
+   1.0x -> 2.3-2.6x.
+2. **The tight HOLD keeps drifting in** slightly (a few percent), 0.3-1.0s.
+3. **Then a hard CUT to the other angle** - the giver's hands, the other
+   person's face, or back to the wide. Action shots sometimes drift OUT.
+4. **Time only moves forward.** The two cameras cover one continuous moment;
+   nothing is replayed from the second angle.
+5. Holds of 2-3.6s are kept for the key moments (the gift, the reaction).
+
+For Tal (2026-10-03, flowers + note cut): *"we just use his cuts and how they
+flow as reference ... just look at the zoom ins."* The flow transfers; his text
+cards, emoji and song do not unless Tal asks. In `build-edit.mjs` it is three
+`manual` beats on contiguous footage - `z:[1.0,1.0]` wide, a 0.13s beat
+`z:[1.0,2.3]`, then `z:[2.3,2.38]` - followed by a beat from the other camera.
+First built as `projects/flowers-notes-erez` V6.
