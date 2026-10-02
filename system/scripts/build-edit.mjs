@@ -1074,7 +1074,9 @@ cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
     src = join(PROXY, `${id}.mp4`);
   }
   if (!existsSync(src)) { console.log(`  !! no source for ${id} (checked local, hq, proxy)`); return; }
-  const dur = +(to - ss).toFixed(2);
+  // 4 decimals, not 2: a 4-frame beat is 0.1333s, and .toFixed(2) made it 0.13s
+  // = 3.9 frames = 3 frames plus a frozen one (flowers-notes-erez, 2026-10-03).
+  const dur = +(to - ss).toFixed(4);
   // SLOW MOTION. Tal, 2026-10-02 (hospital crown story): "more zoom-ins on her
   // face and her smile ... maybe some slow-mo." A beat may carry
   // {speed: 0.5} in its options: the PICTURE plays at that speed (in-between
@@ -1087,7 +1089,7 @@ cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
   // captions (their timing would no longer match the picture) - and start the
   // NEXT beat at or after ss + outDur, or the sound is heard twice.
   const speed = push?.speed > 0 && push.speed < 1 ? Math.max(0.25, push.speed) : 1;
-  const outDur = +(dur / speed).toFixed(2);
+  const outDur = +(dur / speed).toFixed(4);
   const n = String(i + 1).padStart(2, "0");
   const dest = join(BEATS, `${n}.mp4`);
   // MEASURE A DECODED FRAME, NOT THE CONTAINER.
@@ -1457,7 +1459,14 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     } else console.log(`  !! slow-mo asked on beat ${n} but this layout's filter chain is not supported - played at normal speed`);
   }
   if (process.env.BUILD_DEBUG) writeFileSync(join(OUT, `debug_vf_${String(n).padStart(2, "0")}.txt`), vf, "utf8");
-  execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-to", String(to), "-i", src, "-i", wav,
+  // FRAME-EXACT BEATS. The picture used to be cut by time and trimmed with
+  // -shortest, so a beat could come out a frame short (and a slow-mo beat 3
+  // short: minterpolate eats its tail). The stitch then held the last frame to
+  // fill the gap - a frozen frame at the join, 10 of them in a 20s cut with
+  // fast zooms (Tal: "ITS SO CHOPPY"). Now: read a little MORE source than the
+  // beat needs and stop the output at exactly `frames` frames, so the last
+  // frame is always a real one.
+  execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-to", String(+(to + (speed < 1 ? 0.3 : 0.12)).toFixed(3)), "-i", src, "-i", wav,
     // ONE COLOUR RANGE FOR EVERY BEAT. The chest cam records FULL range
     // (yuvj420p), the Sony LIMITED - and each beat used to be encoded in its
     // source's range, then joined. The join reads ONE range for the whole
@@ -1491,9 +1500,9 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     "-af", `highpass=f=70,volume=${beatGain(wav)}dB` +
       (CONT.get(i)?.prev ? "" : ",afade=t=in:st=0:d=0.025") +
       (CONT.get(i)?.next ? "" : `,afade=t=out:st=${Math.max(0, outDur - 0.025).toFixed(3)}:d=0.025`) +
-      (speed < 1 ? `,apad=whole_dur=${outDur}` : ""),
+      `,apad=whole_dur=${outDur}`,
     "-c:v", "libx264", "-preset", "veryfast", "-crf", FINAL ? "19" : "21", "-pix_fmt", "yuv420p",
-    "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", ...(speed < 1 ? ["-t", String(outDur)] : ["-shortest"]), dest], { stdio: "pipe" });
+    "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", "-frames:v", String(frames), "-t", String(outDur), dest], { stdio: "pipe" });
 
   console.log(`  ${n}  ${id.slice(0, 8)}  ${ss}->${to} (${speed < 1 ? `${dur}s at x${speed} = ${outDur}s` : `${dur}s`}, ${caps.length} caps)  ${why ?? ""}`);
   list.push(dest); total += outDur;
@@ -1544,8 +1553,13 @@ const hasMusic = musicPath && existsSync(musicPath);
 if (hasMusic) args.push("-stream_loop", "-1", "-i", musicPath);
 const musicIdx = cfg.title ? 2 : 1;
 const amix = hasMusic
-  ? `[0:a]${TIMELINE_AF}[spk];` +
-    `[${musicIdx}:a]volume=${cfg.silent ? 0.85 : 0.14},afade=t=in:st=0:d=1.5[bed];` +
+  // `"bedOnly": true` = the bed is the WHOLE soundtrack and the beats' own
+  // audio is muted. For a fast wordless montage (30 pieces in 20s) the per-beat
+  // sound is 30 snippets with a 25ms fade at each join - Tal: "ITS SO CHOPPY".
+  // One continuous ambience track under hard picture cuts is what an Erez-style
+  // cut does with its song. (flowers-notes-erez, 2026-10-03)
+  ? `[0:a]${TIMELINE_AF}${cfg.bedOnly ? ",volume=0" : ""}[spk];` +
+    `[${musicIdx}:a]volume=${cfg.bedOnly ? 1.0 : cfg.silent ? 0.85 : 0.14},afade=t=in:st=0:d=${cfg.bedOnly ? 0.15 : 1.5}[bed];` +
     `[spk][bed]amix=inputs=2:duration=first:dropout_transition=0:normalize=0,` +
     `loudnorm=I=-16:TP=-1.5:LRA=11[a]`
   : null;

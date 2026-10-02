@@ -286,6 +286,7 @@ Answer three questions first. Do not load a single specialist skill until you ha
 | **Travelling with no money**: hitchhiking, asking strangers for a ride / a meal / a bed, the trip itself is the story (PROVISIONAL, 2026-09-28) | `no-money-travel` |
 | Meta Ray-Ban POV, handheld, first-person | `pov-meta-glasses` |
 | Walking up to strangers, greetings, giving something | `pov-kindness` |
+| **"Like Erez" / "erezv1" / "fast cuts, fast zooms"**: a staged surprise from two cameras with little dialogue, Tal in the picture as the giver | `erez-fast-cut` — read his reel at 30 fps first; wide → 4-frame zoom → tight → cut; preview before anything |
 | One person, real substance, a payoff | `human-story` |
 | Script/VO explaining something, facts, numbers | `nas-explainer` |
 | **Tal's own voice over B-roll**: his life story, a mission, a cause, "here's my voice, do the B-roll" | `voiceover-broll` |

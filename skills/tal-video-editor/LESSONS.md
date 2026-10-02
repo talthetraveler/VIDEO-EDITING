@@ -2048,3 +2048,32 @@ reference ... just look at the zoom ins"*, then *"DONT ASK ME GO"*.
   the other angle, time only forward.
 - Do not offer him a menu ("do you want cards / emoji / a closing card?") when
   he has asked for the cut. He wants the reference's FLOW; decide and build.
+
+## 77 — "it's so choppy" was 10 frozen frames and 30 audio fades, and the first fix was a guess (Tal, 2026-10-03)
+
+Flowers cut V6 (30 beats in 20s, fast zooms). Tal: *"ITS SO CHOPPYU RIGHT"*.
+Measured on the rendered file before touching anything:
+- **583 frames in 19.92s** where 30fps needs 597, and `mpdecimate` found **10
+  frozen frames, one right after every zoom ramp**.
+- a 25ms audio fade out + in at each of the 30 joins.
+
+The first fix was a GUESS - "the cut points are off the frame grid" - and
+snapping them to the grid changed nothing (still 583 frames, same freezes).
+Counting frames PER BEAT FILE found it: every 4-frame zoom beat had 3 frames,
+both slow-mo beats were 3 short. Cause in `build-edit.mjs`: `dur` was rounded
+with `.toFixed(2)` (0.1333s -> 0.13s = 3.9 frames) and the picture was trimmed
+with `-shortest`; `minterpolate` eats a slow-mo beat's tail. The stitch filled
+each gap by holding the last frame.
+
+Fixed: durations to 4 decimals; each beat reads slightly MORE source than it
+needs and stops at exactly `frames` frames (`-frames:v`). After: 597 frames,
+30/1, 0 of 30 beats off, 1 near-duplicate (the first frame of a slow-mo).
+Sound: `"bedOnly": true` + `"music"` = ONE continuous ambience track with the
+beats' own audio muted - no fades at the joins.
+
+- **The check for a fast cut:** `ffprobe -count_frames` must equal
+  duration x 30, and `mpdecimate` must find no frozen frames. Run it on any
+  cut with beats shorter than ~0.5s.
+- **When a fix does not change the measurement, the cause was wrong.** Go one
+  level down (per-beat files) instead of trying a second guess.
+- Every earlier cut with very short beats may carry the same frozen frames.

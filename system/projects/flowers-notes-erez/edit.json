@@ -1,11 +1,13 @@
 {
-  "_brief": "Tal 2026-10-02: Frame.io NEEDS TO BE EDITED / FLOWERS FOR STRANGERS / 2. Erez-v1 style A, fast cuts. V4 after his notes: V1 'not so good' (no POV title, no flash-forward hook, need emoji + sticker, show him getting the flowers in his hand, reactions not looking at the lens and not zoomed, add the girl walking by with the note + her reading it + the note picture popping up, not the angle where the girl stands in front); V2 'so bad ... don't color grade it' -> grade:false; V3 'you didn't show any zoom ins of me ... of me giving him the flowers. The slow mo, you didn't do that' -> front-angle shots where Tal is VISIBLE crouching behind the bench and handing the bouquet over, snap zooms onto Tal on the open / run-up / crouch / handoff, slow-mo on the handoff and on her laugh. V5 after V4: \"it repeats as a cut when he holds the flower\" -> the side shot of him holding the bouquet (2357) and the side shot of him giving it to her (2358) are OUT: each showed an action the front shot next to it already shows. \"the emojis are not so good ... dont do the emoji its fine\" -> emoji stickers removed, note card kept. Then: \"the clip of her receiving the flowers and the notes - choose the most emotional parts ... zoom in\" -> snap zooms onto HER face at each emotional peak: hand to mouth taking the flowers (9266 10.5-11.6), reading the note right after the girl leaves (9266 16.8-18.5, continuous with the walk-by), the big smile at him (9262 30.5-31.8), exclaiming with her hand on her chest (9262 32.9-33.7). This supersedes the earlier no-zoom-on-reactions note for these beats. V6: Tal - \"we just use his cuts and how they flow as reference ... just look at the zoom ins\". Measured frame by frame on Erez DdynV0UMrtr (two-camera bench surprise, 6.2-7.9s): WIDE -> a fast zoom-in over ~4 frames (0.13s) -> TIGHT hold with a slight continued push -> hard CUT to the other angle; time only moves forward; 0.3-1.0s shots, 2-3.5s holds on the key moments. This cut is built on that flow.",
+  "_brief": "Tal 2026-10-02: Frame.io NEEDS TO BE EDITED / FLOWERS FOR STRANGERS / 2. Erez-v1 style A, fast cuts. V4 after his notes: V1 'not so good' (no POV title, no flash-forward hook, need emoji + sticker, show him getting the flowers in his hand, reactions not looking at the lens and not zoomed, add the girl walking by with the note + her reading it + the note picture popping up, not the angle where the girl stands in front); V2 'so bad ... don't color grade it' -> grade:false; V3 'you didn't show any zoom ins of me ... of me giving him the flowers. The slow mo, you didn't do that' -> front-angle shots where Tal is VISIBLE crouching behind the bench and handing the bouquet over, snap zooms onto Tal on the open / run-up / crouch / handoff, slow-mo on the handoff and on her laugh. V5 after V4: \"it repeats as a cut when he holds the flower\" -> the side shot of him holding the bouquet (2357) and the side shot of him giving it to her (2358) are OUT: each showed an action the front shot next to it already shows. \"the emojis are not so good ... dont do the emoji its fine\" -> emoji stickers removed, note card kept. Then: \"the clip of her receiving the flowers and the notes - choose the most emotional parts ... zoom in\" -> snap zooms onto HER face at each emotional peak: hand to mouth taking the flowers (9266 10.5-11.6), reading the note right after the girl leaves (9266 16.8-18.5, continuous with the walk-by), the big smile at him (9262 30.5-31.8), exclaiming with her hand on her chest (9262 32.9-33.7). This supersedes the earlier no-zoom-on-reactions note for these beats. V6: Tal - \"we just use his cuts and how they flow as reference ... just look at the zoom ins\". Measured frame by frame on Erez DdynV0UMrtr (two-camera bench surprise, 6.2-7.9s): WIDE -> a fast zoom-in over ~4 frames (0.13s) -> TIGHT hold with a slight continued push -> hard CUT to the other angle; time only moves forward; 0.3-1.0s shots, 2-3.5s holds on the key moments. This cut is built on that flow. V7: Tal - \"ITS SO CHOPPY\". Measured on V6: 10 frozen frames (one after each zoom ramp, cut points were off the 30fps grid; 583 frames in 19.92s) and a 25ms audio fade at each of 30 joins. Fix: every in/out on the frame grid, ramps exactly 4 frames, one continuous street-ambience bed (bedOnly) instead of 30 audio snippets.",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "silent": true,
   "grade": false,
-  "out": "FLOWERS_NOTES_EREZ_V6.mp4",
+  "music": "flowers-notes-street.wav",
+  "bedOnly": true,
+  "out": "FLOWERS_NOTES_EREZ_V7.mp4",
   "beats": [
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
@@ -22,17 +24,13 @@
           1
         ],
         "x": 0.62,
-        "y": 0.5,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 0.2
-        }
+        "y": 0.5
       }
     ],
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
       2.2,
-      2.33,
+      2.3333,
       0.5,
       "fast zoom in (4 frames) onto Tal",
       null,
@@ -44,16 +42,12 @@
           2.4
         ],
         "x": 0.62,
-        "y": 0.5,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 0.8
-        }
+        "y": 0.5
       }
     ],
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
-      2.33,
+      2.3333,
       3,
       0.5,
       "tight hold: Tal and the flowers",
@@ -66,11 +60,7 @@
           2.5
         ],
         "x": 0.62,
-        "y": 0.5,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 0.93
-        }
+        "y": 0.5
       }
     ],
     [
@@ -88,11 +78,7 @@
           1.78
         ],
         "x": 0.4,
-        "y": 0.46,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 1.6
-        }
+        "y": 0.46
       }
     ],
     [
@@ -110,17 +96,13 @@
           1.2
         ],
         "x": 0.65,
-        "y": 0.55,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 2.2
-        }
+        "y": 0.55
       }
     ],
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
       5.1,
-      5.23,
+      5.2333,
       0.5,
       "fast zoom in onto Tal running",
       null,
@@ -132,16 +114,12 @@
           2.2
         ],
         "x": 0.65,
-        "y": 0.55,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 2.7
-        }
+        "y": 0.55
       }
     ],
     [
       "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
-      5.23,
+      5.2333,
       5.8,
       0.5,
       "tight hold: he reaches the bench",
@@ -154,11 +132,7 @@
           2.28
         ],
         "x": 0.65,
-        "y": 0.55,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 2.83
-        }
+        "y": 0.55
       }
     ],
     [
@@ -176,11 +150,7 @@
           1.7
         ],
         "x": 0.3,
-        "y": 0.45,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 3.4
-        }
+        "y": 0.45
       }
     ],
     [
@@ -198,17 +168,13 @@
           2.3
         ],
         "x": 0.5,
-        "y": 0.53,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 4
-        }
+        "y": 0.53
       }
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      4.95,
-      5.08,
+      4.9667,
+      5.0667,
       0.5,
       "THE HANDOFF front: fast zoom in onto Tal and the man",
       null,
@@ -225,7 +191,7 @@
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      5.08,
+      5.0667,
       5.6,
       0.5,
       "SLOW-MO: Tal hands him the flowers",
@@ -275,11 +241,7 @@
           2.3
         ],
         "x": 0.6,
-        "y": 0.46,
-        "audio": {
-          "id": "99d5d236-9d31-4d42-8ca3-a6cfc2006faf",
-          "at": 6.9
-        }
+        "y": 0.46
       }
     ],
     [
@@ -303,7 +265,7 @@
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
       10.5,
-      10.63,
+      10.6333,
       0.5,
       "fast zoom in onto her face",
       null,
@@ -320,7 +282,7 @@
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      10.63,
+      10.6333,
       11.6,
       0.5,
       "tight hold: moved, hand at her mouth, the flowers in her arms",
@@ -338,7 +300,7 @@
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      14.15,
+      14.1667,
       15.9,
       0.5,
       "THE NOTE front: the girl walks by and hands her the note",
@@ -375,7 +337,7 @@
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
       17.1,
-      17.23,
+      17.2333,
       0.5,
       "fast zoom in onto her reading",
       null,
@@ -392,7 +354,7 @@
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      17.23,
+      17.2333,
       18.5,
       0.5,
       "tight hold: she reads it - the note card pops up",
@@ -416,8 +378,8 @@
     ],
     [
       "810aafa2-4346-453c-b838-ad10768580fc",
-      1.85,
-      2.55,
+      1.8667,
+      2.5667,
       0.5,
       "CUT close-up: smiling down at the note",
       null,
@@ -472,17 +434,13 @@
           1.2
         ],
         "x": 0.72,
-        "y": 0.45,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 18.7
-        }
+        "y": 0.45
       }
     ],
     [
       "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
       30.8,
-      30.93,
+      30.9333,
       0.5,
       "fast zoom in onto her big smile",
       null,
@@ -494,16 +452,12 @@
           1.9
         ],
         "x": 0.72,
-        "y": 0.45,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 19
-        }
+        "y": 0.45
       }
     ],
     [
       "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
-      30.93,
+      30.9333,
       31.8,
       0.5,
       "tight hold: the big smile",
@@ -516,11 +470,7 @@
           1.98
         ],
         "x": 0.72,
-        "y": 0.45,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 19.13
-        }
+        "y": 0.45
       }
     ],
     [
@@ -538,11 +488,7 @@
           1.9
         ],
         "x": 0.62,
-        "y": 0.45,
-        "audio": {
-          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-          "at": 20
-        }
+        "y": 0.45
       }
     ],
     [
@@ -566,7 +512,7 @@
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
       21.5,
-      21.63,
+      21.6333,
       0.5,
       "fast zoom in onto the kiss",
       null,
@@ -583,7 +529,7 @@
     ],
     [
       "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
-      21.63,
+      21.6333,
       22.7,
       0.5,
       "tight hold: the kiss",

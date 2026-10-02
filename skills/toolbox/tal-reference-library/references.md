@@ -203,3 +203,5 @@ says which one to follow and why.
 
 Downloading any new reference: `./bin/yt-dlp.exe -o "projects/_refs/%(id)s.%(ext)s" <url>`
 — Instagram needs no login and no API key.
+
+- **@erez.v1 — cut and zoom grammar, MEASURED frame by frame 2026-10-03.** Wide → ~4-frame zoom-in → tight hold drifting in → hard cut to the other camera; time only forward. Written up in `instagram-2026-09-28/erez.v1.md` ("Cut and zoom grammar") and turned into a routable preset: `tal-video-editor/formats/erez-fast-cut.md`. Worked example: `system/projects/flowers-notes-erez`.
