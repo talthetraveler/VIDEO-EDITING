@@ -40,7 +40,8 @@ import { basename, extname } from "node:path";
 // "SHOT IN ISRAEL" — and resolveFolder will also find it from any depth.
 export const DELIVERY_PATH = ["SHOT IN ISRAEL", "FINAL VIDEOS", "EDITED BY CLAUDE"];
 
-const MIME = { ".mp4": "video/mp4", ".mov": "video/quicktime", ".m4v": "video/x-m4v" };
+const MIME = { ".mp4": "video/mp4", ".mov": "video/quicktime", ".m4v": "video/x-m4v",
+  ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png" };
 
 const arr = (r) => { const d = r?.response?.data ?? r?.data ?? r; return Array.isArray(d) ? d : (d ? [d] : []); };
 const one = (r) => r?.response?.data ?? r?.data ?? r;
@@ -260,7 +261,11 @@ export async function deliver(localFilePath, destinationFolder = DELIVERY_PATH, 
 
   // 2. the destination, resolved from the live tree
   onProgress({ stage: "resolve destination" });
-  const dest = await resolveFolder(client, destinationFolder);
+  // An already-resolved { accountId, folderId } skips the walk - a bulk upload
+  // of hundreds of files would otherwise re-walk the tree for every one.
+  const dest = destinationFolder?.folderId && destinationFolder?.accountId
+    ? destinationFolder
+    : await resolveFolder(client, destinationFolder);
 
   // 3. create the File record -> presigned urls
   onProgress({ stage: "create file record", name, size: st.size });

@@ -215,17 +215,19 @@ node system/scripts/build-edit.mjs <slug> --final --hq        # full-quality re-
 node system/scripts/finish.mjs <slug> --name "TITLE.mp4"      # QA gate -> Frame.io -> verify
 ```
 
-**Delivery is part of the job, not a follow-up — and it goes to THE INDEX, not
-Frame.io.** Tal, 2026-09-30: *"I don't really need these uploaded to the frame
-IO ... I just need them to my index so then I can just tap view them, and tap a
-button like post to all platforms now ... or post the trial schedule."* The
-index is `VIDEOS OUT/2026-09-29 israel batch/index.html`, built by
-`scripts/batch-review-page.mjs israel-batch "<that folder>"` from
-`projects/israel-batch/manifest.jsonl` (+ `finalize.jsonl` for the Full-quality
-badge). A finished cut that passed the gate: hard-link it into that folder,
-append its manifest + finalize rows, regenerate the page. Do not upload to
-Frame.io unless he asks. The page's post / trial-schedule buttons are disabled
-until the ShortSync key is back — say so, never pretend they post.
+**Delivery is part of the job, not a follow-up: PREVIEW IN CHAT → HE APPROVES
+→ FRAME.IO.** Tal, 2026-10-03: *"footage out shouldn't go there. It should
+just go here, show me here, and then I'll approve it and then send it to the
+frame.io. That's how it should work."* Review renders stay in
+`system/projects/<slug>/` and are sent into the chat. After an explicit
+approval, render full quality and upload with `frameio-deliver.mjs` to
+`SHOT IN ISRAEL / FINAL VIDEOS / EDITED BY CLAUDE` (it verifies every upload).
+**Nothing is written to `VIDEOS OUT/`.** This replaces the 2026-09-30 rule
+(deliver to `VIDEOS OUT/2026-09-29 israel batch/index.html`); that folder and
+`FOOTAGE IN/` were cleared on 2026-10-03 after every file in them was verified
+on Frame.io under `SHOT IN ISRAEL / FROM LAPTOP 2026-10-03`
+(`system/scripts/frameio-archive.mjs`, proven by `frameio-inventory.mjs` name +
+exact-byte match).
 
 ---
 

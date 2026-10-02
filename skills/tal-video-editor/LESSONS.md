@@ -2077,3 +2077,23 @@ beats' own audio muted - no fades at the joins.
 - **When a fix does not change the measurement, the cause was wrong.** Go one
   level down (per-beat files) instead of trying a second guess.
 - Every earlier cut with very short beats may carry the same frozen frames.
+
+## 77 — delivery is the chat, then Frame.io; nothing goes to VIDEOS OUT (Tal, 2026-10-03)
+
+The laptop disk reached 2.4 GB free of 476 GB in the middle of a 13-item batch.
+Tal: *"footage out shouldn't go there. It should just go here, show me here,
+and then I'll approve it and then send it to the frame.io."*
+
+- Review renders live in `system/projects/<slug>/` and are sent into the chat.
+  After an explicit approval: full-quality render, `frameio-deliver.mjs` to
+  `SHOT IN ISRAEL / FINAL VIDEOS / EDITED BY CLAUDE`. Never a copy or hard link
+  into `VIDEOS OUT/`. (Supersedes the 2026-09-30 index rule in CLAUDE.md §0b.)
+- **Before anything local is removed, prove it is on Frame.io.** Matching was
+  done by name AND exact byte size against a full listing of all three
+  projects (`frameio-inventory.mjs`, 52,549 files). Of 469 files in FOOTAGE IN,
+  only 24 were already on Frame.io; 445 (the `od_video-*` / `video-*` iCloud
+  exports) were not. Of the finished videos in VIDEOS OUT, ~187 were not. A
+  folder that "came from Frame.io" is not proof that it is on Frame.io.
+- The disk was not mostly this project (55 GB of it). iCloud Photos lists
+  1.6 TB but holds only 15 GB locally - measure the placeholder attribute
+  before blaming a sync folder.
