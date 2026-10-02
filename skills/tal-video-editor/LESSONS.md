@@ -1784,3 +1784,23 @@ the LESSONS 68 check (second engine on the source window + RMS in 50ms steps).
 Validated on a known answer before use: mid-"Excuse" -> REAL, the gap before
 it -> clean. On short noisy Hebrew windows the second engine hallucinates
 other languages; the RMS trace is then the evidence.
+
+## 70 — EDEN HER STORY was rejected after nine versions, and nobody asked why (2026-10-02)
+
+Tal, 2026-10-02: *"the Eden her story wasn't a good edit, so you can just
+delete that unless you want to keep the JSON file and re-edit it better."*
+V1-V9 and the delivered file went to the Recycle Bin. `eden-story/edit.json`,
+`BUILD-LOG.json` and `concat.txt` are kept; the source is still in
+`FOOTAGE IN/2026-09-17 eden`. EDEN HOW STRONG, cut from the same afternoon,
+was not rejected.
+
+**He did not say what was wrong, and the cause is not known.** Do not invent
+one. What the spec itself shows: nine beats in a planned order ("the ask, who
+she is, her mother, how hard it is, why she chooses to live..."), which is an
+outline of topics, and nine versions were spent on framing and captions
+without the shape changing.
+
+**Rule:** a cut that needs a ninth version is not being fixed by a tenth.
+Before any re-edit of this, get the reason in his words, then start from the
+footage again rather than from `edit.json`. A rejection with no reason
+recorded teaches nothing - write the reason here when he gives it.
