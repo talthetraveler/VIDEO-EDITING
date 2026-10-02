@@ -73,6 +73,29 @@ about the software. It cannot cut footage.
 > paragraph above exists to prevent, so it is written down rather than trusted
 > to the loader.
 
+**SECOND EXCEPTION, added 2026-10-02 at Tal's instruction (*"You should
+install everything when I tell you to"*): the 13 `ig-*` skills are loadable**
+(`skills/ig-reel`, `ig-viral`, `ig-caption`, `ig-carousel`, `ig-story`,
+`ig-profile`, `ig-plan`, `ig-human`, `ig-comment`, `ig-reply`, `ig-dm`,
+`ig-repurpose`, `ig-audit` — `Jakeschincariol/instagram-agent-skill`, MIT).
+They WRITE TEXT for Instagram: captions, comments, replies, DMs, scripts, a
+weekly plan. **They post nothing and connect to nothing** — the text appears in
+the chat and Tal pastes it into Instagram himself. A pasted repo link from him
+means install ALL of it, working, not a trimmed selection.
+
+> **Same collision, resolved the same way: FOOTAGE is `tal-video-editor`,
+> always.** `ig-reel` triggers on *"make a reel about X"* and `ig-repurpose` on
+> *"cut this up"* / *"turn this into reels"*. Those skills write a SCRIPT; they
+> cannot cut a clip. If there is footage, a shoot, a file or a finished video
+> in the request, it is an edit. Reach for `ig-*` only when the thing wanted
+> is WORDS.
+>
+> Three machine facts, measured (REPOS.md): run their tools as
+> `PYTHONUTF8=1 python`, never `python3` (they crash on the first emoji, and
+> `python3` is the Store alias); **`hookscore.py` rates 60 of 60 of his real
+> titles WEAK — report its number, never reject a hook of his on it**; and his
+> voice file is `~/.claude/instagram/voice.md`.
+
 ## 0a-2. SUPERPOWERS — kept, and scoped
 
 Tal, 2026-09-27: *"Can I use superpowers? ... I think it makes it better."*

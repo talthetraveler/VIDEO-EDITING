@@ -1,30 +1,36 @@
-# instagram-agent — four tools kept out of thirteen skills
+# instagram-agent — all 13 skills are installed; this file is the measurements
 
 Source: `Jakeschincariol/instagram-agent-skill` (MIT, commit `d03c56b`).
-Trimmed 2026-10-02. Tal: *"maybe u need to just use the best things from there."*
 
-**Nothing here is a loadable skill.** The repo ships 13 `SKILL.md` files; none
-were copied. `ig-reel` triggers on *"make a reel about X"* and `ig-repurpose` on
-*"cut this up"* — both would contest `tal-video-editor` (CLAUDE.md 0a).
+**History, because it changed twice on 2026-10-02.** First trimmed to four
+tools here (Tal: *"just use the best things from there"*), then installed in
+full the same evening (Tal: *"You should install everything when I tell you
+to"*). The full install is the one that stands: `skills/ig-*` (13 folders),
+all loadable. The trimmed copy that lived in this folder was removed - the same
+scripts are inside the skills.
 
-Always `python`, never `python3`, and always with `PYTHONUTF8=1` — without it
-every tool crashes on the first emoji (Windows cp1252).
+What they do: WRITE TEXT. Captions, comments, replies, DMs, reel scripts, a
+weekly plan, a profile score. They post nothing and log into nothing; the text
+appears in the chat and Tal pastes it into Instagram.
 
-| tool | use it for | verdict on his content |
+The collision with `tal-video-editor` is resolved in CLAUDE.md 0a: footage is
+always an edit; `ig-*` only when the thing wanted is words.
+
+| tool | where | verdict on his content |
 |---|---|---|
-| `ig-caption/caption.py` | lint a post caption before it is scheduled: the 125 characters the feed shows, the 5-hashtag cap, one ask | **use.** |
-| `ig-viral/swipe.py` | rank harvested reference reels by views / that account's own median | **use the multiple, ignore its hook-score column** |
-| `ig-reel/beats.py` | time a VOICEOVER script before he records it (`formats/voiceover-broll.md`) | use, pass `--wpm` for his pace |
-| `ig-reel/hookscore.py` | nothing, on its own. `swipe.py` imports it | **never a gate — see below** |
+| `caption.py` | `skills/ig-caption/` | **use** - the 125-character feed window, the 5-hashtag cap, one ask |
+| `swipe.py` | `skills/ig-viral/` | **use the multiple, ignore its hook-score column** |
+| `beats.py` | `skills/ig-reel/` | use for a VOICEOVER script; pass `--wpm` for his pace |
+| `hookscore.py` | `skills/ig-reel/` | **never a gate - see below** |
+| `humanize.py`, `detect.py` | `skills/ig-human/` | cleaning works; the score says *"too short to judge"* on his one-line captions |
 
-```bash
-PYTHONUTF8=1 python skills/toolbox/instagram-agent/ig-caption/caption.py caption.txt
-PYTHONUTF8=1 python skills/toolbox/instagram-agent/ig-viral/swipe.py captured.tsv --out swipe.md
-PYTHONUTF8=1 python skills/toolbox/instagram-agent/ig-reel/beats.py script.txt --target 30
-```
+Always `PYTHONUTF8=1 python`, never `python3` - without it every tool crashes
+on the first emoji (Windows cp1252), and `python3` here is the Store alias.
+The SKILL.md files say `python3`; that is upstream text, left unmodified.
 
-`swipe.py` finds `hooks.json` by relative path (`../ig-reel/`), which is why
-the folder layout is the upstream one. The files are unmodified.
+His voice file is `~/.claude/instagram/voice.md`, written from this repo
+(CLAUDE.md 0, tal-scriptwriting, his real captions). Fields nobody has told
+Claude are marked TAL TO FILL.
 
 ## hookscore.py condemns his house style — measured, 2026-10-02
 
@@ -60,15 +66,3 @@ reject anything on its number.**
 - `beats.py` was not checked against the README's printed numbers — the README
   truncates its example script, so there was no known input to feed it. Its
   arithmetic is right (62 words at 165 wpm = 22.6s).
-
-## Left behind, and why
-
-- **The humanizer** (`humanize.py`, `detect.py`, `slop.json`): on his real
-  captions it returns *"too short to judge"* on three of five checks. The
-  `humanizer` agent already covers long copy.
-- **The 13 SKILL.md files** — carousels, stories, DMs, comments, profile score,
-  weekly plan. Prompt text, no code; `tal-scriptwriting` and `content-engine`
-  already hold his voice. One `git clone` away if wanted.
-- `hooks.json` stays only because `swipe.py` reads it. Its 26 formulas are
-  worth a read when writing a VOICEOVER hook; they do not describe his street
-  openings.

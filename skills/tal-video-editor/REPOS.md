@@ -20,7 +20,7 @@ turn, with a verified status, or it has not been dealt with.**
 | OpenChatCut | cloned, never wired | `system/vendor/OpenChatCut` |
 | `calesthio/OpenMontage` | **installed and working, 42/117 tools, zero keys** | `system/vendor/OpenMontage` |
 | `kamilstanuch/Autocrop-vertical` | **works after a 3-line patch** — horizontal -> 9:16, one fixed crop per scene. See below | `system/vendor/Autocrop-vertical` (own `.venv`) |
-| `Jakeschincariol/instagram-agent-skill` | **4 tools kept of 13 skills, none loadable** — caption linter and outlier ranking work; its hook scorer rates 60/60 of his titles WEAK and must never gate. See below | `toolbox/instagram-agent/` (76 KB), `PYTHONUTF8=1 python` |
+| `Jakeschincariol/instagram-agent-skill` | **installed in full, 13 loadable skills** — they write Instagram text (captions, comments, replies, DMs, scripts); they post nothing. Its hook scorer rates 60/60 of his titles WEAK and must never gate. See below | `/ig-reel`, `/ig-caption`, `/ig-comment` ... (`skills/ig-*`), `PYTHONUTF8=1 python` |
 
 ---
 
@@ -389,3 +389,12 @@ Left out: the humanizer trio (*"too short to judge"* on his captions) and the
 scheduled posts and **5 unique captions**, all one sentence reworded
 (*"the side of Israel they don't show you online"*), none with a call to
 action. Not changed — those posts are already submitted. Worth a decision.
+
+**Reversed the same evening.** Tal: *"You should install everything when I tell
+you to."* All 13 skills now live in `skills/ig-*` and are loadable; the
+trimmed toolbox copy was removed. The measurements above stand - they are why
+`hookscore.py` is reported and never obeyed. The collision with
+`tal-video-editor` (`ig-reel`: *"make a reel about X"*) is resolved in
+CLAUDE.md 0a, the way `brag` was. Smoke-tested from the installed folders:
+`hookscore.py`, `caption.py`, `humanize.py` all run. Not yet exercised on a
+real job: `ig-viral`, `ig-audit`, `ig-carousel`.
