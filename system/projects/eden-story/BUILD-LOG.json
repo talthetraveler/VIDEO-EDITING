@@ -1,485 +1,323 @@
 {
-  "built": "2026-09-24T13:54:53.005Z",
-  "total_s": 91.33,
-  "out": "EDEN_HER_STORY_V9.mp4",
+  "built": "2026-10-02T21:43:21.935Z",
+  "total_s": 63.09,
+  "out": "EDEN_HER_STORY_V10.mp4",
   "layout": "vertical",
   "beats": [
     [
       "local-49f1fbc4b3367b2b",
-      0,
-      10.2,
+      1.39,
+      6.12,
       0.3,
-      "'Hi Eden. I heard about your story - you have cancer and you are not giving up. I wanted to come and hear it.'"
+      "Tal: 'Hi Eden, I heard your story - you have cancer and you are not giving up.' The only line of his that stays.",
+      null,
+      {
+        "exact": true
+      }
     ],
     [
       "local-49f1fbc4b3367b2b",
-      11.6,
-      14.4,
-      0.55,
-      "'Can I sit down and listen?' - 'Of course.'"
-    ],
-    [
-      "local-49f1fbc4b3367b2b",
-      14.4,
-      19.2,
+      14.47,
+      22.57,
       0.85,
-      "'I'm Eden, I'm 30, and I've been fighting leukemia for a year.'"
+      "'I'm Eden, I'm 30, fighting leukemia for a year. I lost my mother a year ago too.' One take; out before his 'What?' at 22.90.",
+      null,
+      {
+        "exact": true
+      }
     ],
     [
       "local-49f1fbc4b3367b2b",
-      19,
-      24.6,
-      0.6,
-      "'I lost my mother a year ago.' - 'You lost your mother a year ago?'"
-    ],
-    [
-      "local-49f1fbc4b3367b2b",
-      33.2,
-      36.6,
+      34.61,
+      36.93,
       0.85,
-      "'How did she pass away?' - 'She passed away from cancer.'"
-    ],
-    [
-      "local-49f1fbc4b3367b2b",
-      39.9,
-      42.6,
-      0.85,
-      "'How long did she have cancer?' - '17 years.'"
+      "'She passed away from cancer.' His question before it and his echo after it are both out.",
+      null,
+      {
+        "exact": true
+      }
     ],
     [
       "local-98627ce0235e3574",
-      58.4,
-      62.8,
+      59.55,
+      61.56,
       0.45,
-      "4K. 'It's hard.' - 'Every day is hard?'"
+      "4K. 'It's hard.' Out before his 'every day is hard?'",
+      null,
+      {
+        "exact": true
+      }
     ],
     [
       "local-98627ce0235e3574",
-      71.4,
-      81.8,
+      65.22,
+      82.98,
       0.45,
-      "4K. THE TURN. 'I'm happy to live my life, because I can't keep on crying. It isn't good and it isn't healthy.'"
+      "4K. THE TURN, whole: 'There are times you fall apart... but I came back to myself, to smiling. I can't keep on crying. It's not good, it's not healthy.' V9 started at 71.4 and cut 'healthy' off at 81.8. Out at 82.98: her next word starts at 83.04.",
+      null,
+      {
+        "exact": true
+      }
     ],
     [
       "local-abb77f2d77313a13",
-      67,
+      71.67,
       77,
       0.45,
-      "4K. 'How do you stay so strong?' - 'It's not easy. But I'm not afraid of anything.'"
-    ],
-    [
-      "local-abb77f2d77313a13",
-      90,
-      96.2,
-      0.45,
-      "4K. 'Do you believe in yourself?' - 'Yes.' - 'Do you know how many people believe in you?' - 'Yes.'"
+      "4K. 'It's not easy. But I'm not afraid of anything.' His 'how do you stay so strong' is out.",
+      null,
+      {
+        "exact": true
+      }
     ],
     [
       "local-49f1fbc4b3367b2b",
-      152.4,
-      162.9,
+      155.33,
+      161.94,
       0.85,
-      "'What is your dream?' - 'Come and visit. I would be very happy.'"
+      "'Pray for me, and come visit. I'd be so happy.' His 'what is your dream' is out.",
+      null,
+      {
+        "exact": true
+      }
     ],
     [
       "local-49f1fbc4b3367b2b",
-      209.5,
-      222.4,
+      209.71,
+      211.92,
       0.85,
-      "THE MESSAGE. 'You can be upset, you can be sad - but don't go straight down. Know how to lift yourself up.'"
+      "THE MESSAGE. 'Don't give up when it's hard.'",
+      null,
+      {
+        "exact": true
+      }
     ],
     [
       "local-49f1fbc4b3367b2b",
-      462.6,
-      465.9,
+      212.84,
+      216.9,
       0.85,
-      "THE LAST WORD. 'I will be stronger.'"
+      "'You can cry a little.' Out at 216.90, the one quiet 50ms before her next word: V10 first cut this at 216.0, in the middle of 'cry' (she hesitates on it, 215.0-216.8).",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      219,
+      227.55,
+      0.85,
+      "'be a little sad, but don't stay down. Know how to lift yourself up.' V9 ended at 222.4, before the last sentence.",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      464.84,
+      466.25,
+      0.85,
+      "THE LAST WORD, in English: 'I'm a strong girl.' V9 captioned this 'I will be stronger'.",
+      null,
+      {
+        "exact": true
+      }
     ]
   ],
   "captions": [
     {
       "beat": "01",
-      "at": 1.51,
+      "at": 0.12,
+      "to": 1.18,
+      "text": "Hi Eden"
+    },
+    {
+      "beat": "01",
+      "at": 1.18,
+      "to": 2.22,
+      "text": "I heard your story"
+    },
+    {
+      "beat": "01",
+      "at": 2.22,
+      "to": 3.08,
+      "text": "You have cancer"
+    },
+    {
+      "beat": "01",
+      "at": 3.08,
+      "to": 4.73,
+      "text": "and you are not giving up"
+    },
+    {
+      "beat": "02",
+      "at": 0,
+      "to": 0.84,
+      "text": "I'm Eden"
+    },
+    {
+      "beat": "02",
+      "at": 0.84,
       "to": 2.13,
-      "text": "Hi Eden I heard"
-    },
-    {
-      "beat": "01",
-      "at": 2.57,
-      "to": 3.23,
-      "text": "about your story"
-    },
-    {
-      "beat": "01",
-      "at": 3.23,
-      "to": 3.67,
-      "text": "that you"
-    },
-    {
-      "beat": "01",
-      "at": 3.67,
-      "to": 4.11,
-      "text": "have cancer"
-    },
-    {
-      "beat": "01",
-      "at": 4.11,
-      "to": 4.55,
-      "text": "and you"
-    },
-    {
-      "beat": "01",
-      "at": 4.55,
-      "to": 5.7,
-      "text": "are not giving up"
-    },
-    {
-      "beat": "01",
-      "at": 6.29,
-      "to": 6.89,
-      "text": "So I"
-    },
-    {
-      "beat": "01",
-      "at": 6.89,
-      "to": 7.47,
-      "text": "wanted to come"
-    },
-    {
-      "beat": "01",
-      "at": 8.17,
-      "to": 8.77,
-      "text": "and hear"
-    },
-    {
-      "beat": "01",
-      "at": 8.77,
-      "to": 9.67,
-      "text": "your story"
+      "text": "I'm 30"
     },
     {
       "beat": "02",
-      "at": 0.47,
-      "to": 1.44,
-      "text": "Can I sit"
+      "at": 2.13,
+      "to": 3.62,
+      "text": "and I've been fighting leukemia"
     },
     {
       "beat": "02",
-      "at": 1.44,
-      "to": 1.89,
-      "text": "down and listen"
+      "at": 3.62,
+      "to": 5.18,
+      "text": "for a year"
+    },
+    {
+      "beat": "02",
+      "at": 5.18,
+      "to": 6.42,
+      "text": "I lost my mother"
+    },
+    {
+      "beat": "02",
+      "at": 6.42,
+      "to": 8.1,
+      "text": "a year ago too"
     },
     {
       "beat": "03",
-      "at": 0.22,
-      "to": 1.09,
-      "text": "So I am Eden"
-    },
-    {
-      "beat": "03",
-      "at": 1.09,
-      "to": 1.76,
-      "text": "I am 30 years"
-    },
-    {
-      "beat": "03",
-      "at": 2.2,
-      "to": 2.85,
-      "text": "old and I"
-    },
-    {
-      "beat": "03",
-      "at": 2.85,
-      "to": 3.5,
-      "text": "have been fighting"
-    },
-    {
-      "beat": "03",
-      "at": 3.5,
-      "to": 4.57,
-      "text": "leukemia for a year"
+      "at": 0.12,
+      "to": 2.32,
+      "text": "She passed away from cancer"
     },
     {
       "beat": "04",
-      "at": 0.61,
-      "to": 1.26,
-      "text": "I lost"
-    },
-    {
-      "beat": "04",
-      "at": 1.26,
-      "to": 1.91,
-      "text": "my mother"
-    },
-    {
-      "beat": "04",
-      "at": 1.91,
-      "to": 2.89,
-      "text": "a year ago"
-    },
-    {
-      "beat": "04",
-      "at": 2.55,
-      "to": 3,
-      "text": "What? You lost"
-    },
-    {
-      "beat": "04",
-      "at": 3.75,
-      "to": 4.32,
-      "text": "your mother"
-    },
-    {
-      "beat": "04",
-      "at": 4.32,
-      "to": 5.7,
-      "text": "a year ago"
-    },
-    {
-      "beat": "05",
-      "at": 0.15,
-      "to": 0.81,
-      "text": "How did she"
-    },
-    {
-      "beat": "05",
-      "at": 0.81,
-      "to": 1.26,
-      "text": "pass away"
-    },
-    {
-      "beat": "05",
-      "at": 1.84,
-      "to": 2.51,
-      "text": "She passed"
-    },
-    {
-      "beat": "05",
-      "at": 2.51,
-      "to": 3.51,
-      "text": "away from cancer"
-    },
-    {
-      "beat": "06",
-      "at": 0.25,
-      "to": 0.79,
-      "text": "How long"
-    },
-    {
-      "beat": "06",
-      "at": 0.79,
-      "to": 1.33,
-      "text": "did she"
-    },
-    {
-      "beat": "06",
-      "at": 1.33,
-      "to": 1.87,
-      "text": "have cancer"
-    },
-    {
-      "beat": "06",
-      "at": 1.87,
-      "to": 2.41,
-      "text": "17 years"
-    },
-    {
-      "beat": "07",
-      "at": 2.02,
-      "to": 2.49,
+      "at": 0.38,
+      "to": 2.01,
       "text": "It's hard"
     },
     {
-      "beat": "07",
-      "at": 2.02,
-      "to": 2.51,
-      "text": "Every day is hard"
+      "beat": "05",
+      "at": 0,
+      "to": 1.47,
+      "text": "There are times"
     },
     {
-      "beat": "08",
-      "at": 0.41,
-      "to": 1.17,
-      "text": "I'm happy"
+      "beat": "05",
+      "at": 1.47,
+      "to": 2.83,
+      "text": "you fall apart"
     },
     {
-      "beat": "08",
-      "at": 1.17,
-      "to": 1.75,
-      "text": "to live"
+      "beat": "05",
+      "at": 2.83,
+      "to": 3.98,
+      "text": "There are times"
     },
     {
-      "beat": "08",
-      "at": 1.98,
-      "to": 2.74,
-      "text": "my life"
+      "beat": "05",
+      "at": 3.98,
+      "to": 5.93,
+      "text": "I fall apart\nBut I came back"
     },
     {
-      "beat": "08",
-      "at": 2.74,
-      "to": 3.89,
-      "text": "because I can't"
+      "beat": "05",
+      "at": 5.93,
+      "to": 7.74,
+      "text": "to myself"
     },
     {
-      "beat": "08",
-      "at": 3.89,
-      "to": 4.34,
-      "text": "keep on crying"
+      "beat": "05",
+      "at": 7.74,
+      "to": 10.6,
+      "text": "to smiling"
     },
     {
-      "beat": "08",
-      "at": 7.41,
-      "to": 9.07,
+      "beat": "05",
+      "at": 10.6,
+      "to": 12.24,
+      "text": "I can't keep on crying"
+    },
+    {
+      "beat": "05",
+      "at": 12.9,
+      "to": 15.93,
       "text": "Because it's not good"
     },
     {
-      "beat": "08",
-      "at": 9.07,
-      "to": 9.52,
+      "beat": "05",
+      "at": 15.93,
+      "to": 17.76,
       "text": "it's not healthy"
     },
     {
-      "beat": "09",
-      "at": 0,
-      "to": 0.61,
-      "text": "How do you"
+      "beat": "06",
+      "at": 0.12,
+      "to": 1.72,
+      "text": "It's not easy"
     },
     {
-      "beat": "09",
-      "at": 2.08,
-      "to": 4.15,
-      "text": "stay so strong"
-    },
-    {
-      "beat": "09",
-      "at": 3.97,
-      "to": 4.42,
-      "text": "Not easy"
-    },
-    {
-      "beat": "09",
-      "at": 5.1,
-      "to": 5.8,
+      "beat": "06",
+      "at": 1.72,
+      "to": 3.48,
       "text": "But I'm not afraid"
     },
     {
-      "beat": "09",
-      "at": 7.11,
-      "to": 8.24,
+      "beat": "06",
+      "at": 3.48,
+      "to": 5.33,
       "text": "of anything"
     },
     {
-      "beat": "10",
-      "at": 1.21,
-      "to": 1.53,
-      "text": "Do you"
+      "beat": "07",
+      "at": 0.51,
+      "to": 3.74,
+      "text": "Pray for me and come visit"
+    },
+    {
+      "beat": "07",
+      "at": 4.57,
+      "to": 6.61,
+      "text": "I'd be so happy"
+    },
+    {
+      "beat": "08",
+      "at": 0.12,
+      "to": 2.21,
+      "text": "Don't give up when it's hard"
+    },
+    {
+      "beat": "09",
+      "at": 0.12,
+      "to": 3.56,
+      "text": "You can cry a little"
     },
     {
       "beat": "10",
-      "at": 1.53,
-      "to": 2.16,
-      "text": "believe in yourself? Yes"
+      "at": 0.32,
+      "to": 1.65,
+      "text": "be a little sad"
     },
     {
       "beat": "10",
-      "at": 3.48,
-      "to": 3.98,
-      "text": "And do you"
+      "at": 1.65,
+      "to": 4.65,
+      "text": "but don't stay down"
     },
     {
       "beat": "10",
-      "at": 3.98,
-      "to": 4.47,
-      "text": "know that many"
-    },
-    {
-      "beat": "10",
-      "at": 4.47,
-      "to": 5.03,
-      "text": "people believe in you? Yes"
+      "at": 5.77,
+      "to": 8.55,
+      "text": "Know how to lift yourself up"
     },
     {
       "beat": "11",
-      "at": 3.05,
-      "to": 5.25,
-      "text": "Come and visit"
-    },
-    {
-      "beat": "11",
-      "at": 5.27,
-      "to": 5.87,
-      "text": "I would"
-    },
-    {
-      "beat": "11",
-      "at": 6.77,
-      "to": 8.97,
-      "text": "be very happy"
-    },
-    {
-      "beat": "12",
-      "at": 0.33,
-      "to": 0.74,
-      "text": "Don't let"
-    },
-    {
-      "beat": "12",
-      "at": 0.74,
-      "to": 1.35,
-      "text": "it show how"
-    },
-    {
-      "beat": "12",
-      "at": 1.35,
-      "to": 1.97,
-      "text": "hard it is"
-    },
-    {
-      "beat": "12",
-      "at": 4.02,
-      "to": 5.78,
-      "text": "You can be upset"
-    },
-    {
-      "beat": "12",
-      "at": 5.78,
-      "to": 6.23,
-      "text": "and not know"
-    },
-    {
-      "beat": "12",
-      "at": 6.62,
-      "to": 8.82,
-      "text": "what to do"
-    },
-    {
-      "beat": "12",
-      "at": 10.02,
-      "to": 11.02,
-      "text": "A little"
-    },
-    {
-      "beat": "12",
-      "at": 11.02,
-      "to": 12.52,
-      "text": "bit of sadness"
-    },
-    {
-      "beat": "12",
-      "at": 12.02,
-      "to": 12.44,
-      "text": "But don't"
-    },
-    {
-      "beat": "12",
-      "at": 12.44,
-      "to": 13.07,
-      "text": "go straight down"
-    },
-    {
-      "beat": "13",
-      "at": 0.44,
-      "to": 1.06,
-      "text": "I will be stronger"
+      "at": 0.01,
+      "to": 1.41,
+      "text": "I'm a strong girl"
     }
   ]
 }
