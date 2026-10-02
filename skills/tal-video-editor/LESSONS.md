@@ -1877,3 +1877,118 @@ were a 1.7->1.85 drift nobody could see. Slow motion had been listed as
   itself; the first attempt started 0.15s late, after he had already ducked.
 - Something he asked for and the tool cannot do yet gets BUILT in that turn,
   not reported as a limitation twice.
+
+## 71 — why EDEN HER STORY was bad, in his words, and what was actually wrong underneath (2026-10-02)
+
+Lesson 70 recorded a rejection with no reason. He gave it the same evening,
+after being shown the cut and a sheet of 20 stills:
+
+> *"take out the part where I say, can I sit down and listen to your story ...
+> there's empty parts ... just cut the questions that I asked. Just say, she
+> passed away. Cancer. And the captions are wrong. They're not correct. It's
+> not when she's speaking ... And you should blur her face."*
+
+Four notes. Each one had a cause that nine versions never looked at.
+
+**1. His questions were in the cut.** V9 kept "Can I sit down and listen?",
+"You lost your mother a year ago?", "How did she pass away?", "How long did she
+have cancer?", "Every day is hard?", "How do you stay so strong?", "Do you
+believe in yourself?", "What is your dream?". Eight of thirteen beats carried
+his voice. In a story about HER, a question stays only when her answer means
+nothing without it. "She passed away from cancer" needs no question. "Yes" does
+- so that beat goes, not the rule. V10 keeps one line of his: the opening.
+
+**2. The captions were wrong because nobody read the Hebrew.** The English came
+from Groq's translation endpoint and was patched with 21 `captionFix` entries
+("milk and honey" -> leukemia). Patching hid how bad it was. Re-reading the
+used spans from the Hebrew transcript, with a second model on each window:
+
+| V9 said | she said |
+|---|---|
+| I WILL BE STRONGER | **"I'm a strong girl"** - in English, twice; three of four transcriptions end in "girl", and Tal answers "you're a strong girl" |
+| COME AND VISIT | "pray for me, and come visit" (שתתפללו) |
+| DON'T LET IT SHOW HOW HARD IT IS | "don't give up when it's hard" (להרים ידיים) |
+| BUT DON'T GO STRAIGHT DOWN | "but don't stay down" (להישאר למטה) |
+| I'M HAPPY TO LIVE MY LIFE | "I came back to myself, to smiling" |
+
+A translated line that needs a `captionFix` is a line that was never
+understood. **For a Hebrew or Arabic story, read the original for every span
+that goes in the cut, with two models, before a single caption is rendered.**
+Tal reads Hebrew; a wrong English caption is visible to him instantly.
+
+**3. "It's not when she's speaking."** The translation segments are rounded to
+whole seconds (`[209.77-211.77]`, `[213.77-218.77]`) and the Groq word times on
+this clip disagree with a second model by up to 2s on the same word. The fix
+was not in the placement code: the used spans' segments were rewritten one
+phrase each, timed to measured speech runs (`cache/translate/<id>.json`, old
+file kept as `.bak-2026-10-02`). `caption-sync.py` on the result: 33 captions,
+0 adrift, 1 over silence, opening error 0.08s.
+
+**4. V9 also cut her off twice, and nobody had noticed.** The turn ended at
+81.8 with "healthy" (בריא) finishing at 82.85, and the message ended at 222.4,
+before "know how to lift yourself up" (224.77-227.13) - the sentence the note
+in `edit.json` said the beat was there for.
+
+**Rules.**
+- In a one-person story, cut the interviewer's questions wherever the answer
+  stands alone. Went to `formats/human-story.md`.
+- Never ship a translated caption that only exists as a `captionFix`.
+- Show him the cut and stills and ask what is wrong BEFORE a re-edit. One
+  message from him replaced nine guesses.
+
+**The blur** (`scripts/blur-face.py`, new). Two things it got wrong on the first
+run, both of which would have shown her face:
+- a face detector finds her in 100% of frames in the close shots and **0-12%
+  in the wide two-shot** (small, in profile). Detection steers; a measured
+  prior per shot is what guarantees cover.
+- **the cut is not where the beat frame counts say.** By beat 6 the real cut
+  was 2-3 frames after the running sum, and for those frames the mask sat on
+  the next shot's position. Cuts are now found in the picture, and both shots'
+  ellipses are drawn for 2 frames each side.
+
+**The grade.** A white hospital room measures luma 151-175 and the builder's
+"TOO BRIGHT" branch pulled it to grey. `"exposure": false` in `edit.json` now
+leaves the level as shot. The midtone belongs to the scene.
+
+## 74 — a small re-edit: slow motion, hand-aimed zooms, and a copied edit that lost its English (Tal, 2026-10-02)
+
+Tal on HOSPITAL KIDS TOYS - CROWN STORY: *"take off the title ... it should
+start with 'we heard you like Barbie' ... some more zoom-ins on her face and
+her smile ... maybe some slow-mo."* Built as a NEW slug
+(`sa-hospital-crown-story-v3`), the V2 untouched. Three things went wrong on
+the way and each has a rule.
+
+**1. A copied edit rendered Hebrew captions.** The English lines of a
+Hebrew/Arabic clip live in the PROJECT's own `CORRECTIONS.json`, which
+`build-edit.mjs` reads from the project folder. Copying only `edit.json` to a
+new slug drops them and the raw Hebrew is drawn (as garbled glyphs). Caught by
+reading the BUILD-LOG captions, not by any gate. **Rule: a variation copies
+`CORRECTIONS.json` too** - `make-variation.mjs` now does it.
+
+**2. A hand-set zoom was aimed by eye at a moving shot and missed.** I read her
+position off a thumbnail strip as x=0.56; she was at 0.72, and the punch-in
+put her at the frame edge behind someone's hair. **Rule: simulate the crop on
+source stills (zoom + focus, at 4-6 times across the beat) BEFORE rendering.**
+A crop of a still costs a second; a render with slow-mo costs twelve minutes.
+
+**3. Dropping a cold open exposes the first frame.** The V2 opened on her face
+because the line "We heard you love Barbie" is said while walking down a
+corridor behind someone's back. Starting on the line (what Tal asked for) made
+frame 0 a back. A slow push toward her over that line (`z:[1.0,1.3]`) brings
+her up by about 1s. It is still not a face at 0s - say so when delivering.
+
+**Slow motion is now a beat option: `{speed: 0.5}`.** The picture is retimed
+(`setpts` + `minterpolate`, the sources are 30fps); the SOUND stays real-time
+from the in-point for the beat's output length, because a room of chatter
+stretched to half speed sounds slurred. Consequences to respect when cutting:
+the beat is `dur/speed` long; it carries no captions; and the NEXT beat must
+start at or after `in + dur/speed` or that sound is heard twice (the crown
+ending starts at 76.0 for exactly that reason). Use it on wordless close-ups.
+Checked on full-size frames: no warping on a waving hand or on hands placing
+a crown.
+
+**The gate exited 1 and the video still shipped - with the reason written
+down.** selfreview's 5 boundary flags were one Hebrew word mis-timed across
+59-85s over wordless beats. That was not taken on faith: the only two NEW
+audio cuts were measured (-34 dB and -40 dB just before the cut, video overall
+-22 dB). A non-zero gate is overridden only with a measurement, never a guess.

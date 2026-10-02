@@ -13,7 +13,7 @@
 // read, so its risk is in the ORDER, not the cuts. It is still rebuilt and
 // re-gated (verify-cut, selfreview, caption-coverage) like any other edit.
 // Every variation records where it came from in edit.json `"variationOf"`.
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { join } from "node:path";
 
@@ -56,4 +56,11 @@ if (opt("--title")) out.title = opt("--title").replace(/\\n/g, "\n");
 out.out = opt("--out") ?? `${to.toUpperCase().replace(/-/g, "_")}.mp4`;
 mkdirSync(join(ROOT, "projects", to), { recursive: true });
 writeFileSync(join(ROOT, "projects", to, "edit.json"), JSON.stringify(out, null, 1));
+// THE TRANSLATIONS TRAVEL WITH THE EDIT. A project's hand-written
+// Hebrew/Arabic -> English map lives in its own CORRECTIONS.json, which
+// build-edit.mjs reads from the PROJECT folder. A copied edit without it
+// renders the raw Hebrew as captions (sa-hospital-crown-story-v3, 2026-10-02:
+// "We heard you love Barbie" came out as garbled Hebrew on the first render).
+const corr = join(ROOT, "projects", from, "CORRECTIONS.json");
+if (existsSync(corr)) { copyFileSync(corr, join(ROOT, "projects", to, "CORRECTIONS.json")); console.log("  copied CORRECTIONS.json (caption translations)"); }
 console.log(`${to}: ${beats.length} beats from ${from} -> projects/${to}/edit.json (out ${out.out})`);

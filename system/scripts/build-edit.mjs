@@ -635,6 +635,49 @@ function nasKey(text) {
   return hit ?? null;
 }
 
+// STICKER LAYER. A beat may carry `sticker: {emoji, x, y, size, from, to}` (or
+// a list of them): an emoji drawn on the finished frame, centred at x/y in
+// 0..1 of the OUTPUT picture (after any zoom), `size` in px of a 1080-wide
+// frame (default 190), optionally only between `from`/`to` seconds of the beat.
+// Tal, 2026-10-02, on the Erez-style flowers cut: "You need emoji and sticker."
+// Erez puts it on the subject's BODY at the reaction beat - never over a face.
+// It rides on top of whatever the caption chain produced.
+function withStickers(capOv, stickers, tmpDir, n) {
+  // `image` instead of `emoji` pops a PICTURE up (Tal: "when she reads the
+  // note, the picture of the note will pop up"): a path relative to the
+  // project folder, drawn `w` px wide (of a 1080-wide frame, default 560).
+  const list = [].concat(stickers || []).filter((s) => s && (s.emoji || s.image));
+  if (!list.length) return capOv;
+  const parts = [];
+  let prev = "[vst]";
+  list.forEach((s, i) => {
+    let png = join(tmpDir, `sticker_${n}_${i}.png`);
+    let scale = "";
+    if (s.image) {
+      png = join(ROOT, "projects", slug, s.image);
+      if (!existsSync(png)) { console.log(`  !! sticker image missing: ${png}`); return; }
+      scale = `,scale=${Math.round(s.w ?? 560)}:-1`;
+    } else {
+      try {
+        execFileSync("python", [join(ROOT, "scripts/render-sticker.py"), png, s.emoji, String(s.size ?? 190)], { stdio: "pipe" });
+      } catch (e) {
+        console.log(`  !! sticker render failed (${s.emoji}): ${String(e.message).slice(0, 90)}`);
+        return;
+      }
+    }
+    const fp = png.split(String.fromCharCode(92)).join("/").replace(/^([A-Za-z]):/, "$1" + String.fromCharCode(92) + ":");
+    const en = (s.from != null || s.to != null) ? `:enable='gte(t\\,${s.from ?? 0})*lt(t\\,${s.to ?? 9999})'` : "";
+    parts.push(`movie='${fp}'${scale}[sk${i}]`);
+    parts.push(`${prev}[sk${i}]overlay=x=W*${s.x ?? 0.5}-w/2:y=H*${s.y ?? 0.6}-h/2:eval=init${en}[vsk${i}]`);
+    prev = `[vsk${i}]`;
+  });
+  if (prev === "[vst]") return capOv;                 // every render failed
+  parts.push(`${prev}null[v]`);
+  // the caption chain ends on [v]; hand its result to the stickers instead
+  if (capOv.label === "[v]") return { label: "[vst]", suffix: ";" + parts.join(";") };
+  return { label: capOv.label, suffix: capOv.suffix.replace(/null\[v\]$/, "null[vst]") + ";" + parts.join(";") };
+}
+
 function captionOverlays(caps, tmpDir) {
   if (!caps.length) return { suffix: "", label: "[v]" };
   let meta = [];
@@ -799,7 +842,12 @@ function buildCard(text, dur, dest) {
 // and saturation is raised enough to actually reach the reference. Re-measure
 // after any change here: `signalstats` YAVG/SATAVG against the reference is
 // the check, not an opinion about whether it "looks graded".
-const GRADE = "curves=all='0/0 0.04/0.01 0.25/0.265 0.55/0.61 0.85/0.92 1/1'," +
+// `"grade": false` in edit.json switches ALL colour work off for that film -
+// this curve, the per-beat exposure lift and the saturation trim - and the
+// footage goes out as shot. Tal, 2026-10-02, on the Erez-style flowers cut
+// (phone footage, already bright): "so bad ... you don't need to color grade it."
+const NO_GRADE = cfg.grade === false;
+const GRADE = NO_GRADE ? "null" : "curves=all='0/0 0.04/0.01 0.25/0.265 0.55/0.61 0.85/0.92 1/1'," +
   "eq=saturation=1.42:gamma=1.01,colorbalance=rm=0.015:bm=-0.015";
 // NO BEAT MAY REPLAY WHAT THE ONE BEFORE IT ALREADY SAID.
 //
@@ -1027,6 +1075,19 @@ cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
   }
   if (!existsSync(src)) { console.log(`  !! no source for ${id} (checked local, hq, proxy)`); return; }
   const dur = +(to - ss).toFixed(2);
+  // SLOW MOTION. Tal, 2026-10-02 (hospital crown story): "more zoom-ins on her
+  // face and her smile ... maybe some slow-mo." A beat may carry
+  // {speed: 0.5} in its options: the PICTURE plays at that speed (in-between
+  // frames are motion-interpolated - the sources are 30fps, so plain
+  // retiming would stutter at 15fps), and the SOUND keeps running at normal
+  // speed from the beat's in-point, because a room full of chatter stretched
+  // to half speed sounds slurred. So a slow beat is `outDur` long on the
+  // timeline, shows `dur` seconds of source, and plays `outDur` seconds of
+  // real-time audio. Use it on wordless close-ups only - it carries no
+  // captions (their timing would no longer match the picture) - and start the
+  // NEXT beat at or after ss + outDur, or the sound is heard twice.
+  const speed = push?.speed > 0 && push.speed < 1 ? Math.max(0.25, push.speed) : 1;
+  const outDur = +(dur / speed).toFixed(2);
   const n = String(i + 1).padStart(2, "0");
   const dest = join(BEATS, `${n}.mp4`);
   // MEASURE A DECODED FRAME, NOT THE CONTAINER.
@@ -1055,7 +1116,13 @@ cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
     const txt = (st.stdout || "") + (st.stderr || "");
     const m = /lavfi\.signalstats\.YAVG=([\d.]+)/.exec(txt);
     const y = m ? parseFloat(m[1]) : null;
-    if (y != null) {
+    // "exposure": false (project) leaves the level alone. A white hospital room
+    // measures luma 151-175 because it IS white, not because it is overexposed;
+    // taming it to mid 0.44 turned EDEN HER STORY V10 grey and dim (2026-10-02).
+    // "The midtone level belongs to the scene" - SKILL.md, the grade.
+    if (y != null && cfg.exposure === false) {
+      console.log(`      exposure: luma ${y.toFixed(0)} left as shot ("exposure": false)`);
+    } else if (y != null) {
       // MILKY. Gamma up to 1.70 plus +0.10 brightness is not an exposure lift,
       // it is a fog machine: it raises the BLACK POINT, so a dim interior came
       // out grey and hazy with no contrast left. Measured on COFFEE KINDNESS
@@ -1142,7 +1209,8 @@ cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
       console.log(`      colour: already warm (U${(srcU - 128).toFixed(0)} V+${(srcV - 128).toFixed(0)}) -> GRADE's warm push cancelled`);
     }
   } catch {}
-  const frames = Math.max(1, Math.round(dur * 30));
+  if (NO_GRADE) lift = "";          // as shot: no exposure lift, no saturation trim
+  const frames = Math.max(1, Math.round(outDur * 30));
   // A landscape proxy inside an otherwise-vertical shoot is portrait content
   // stored sideways. Heads point LEFT, so transpose=1 (90 clockwise) is right.
   // ROTATION. Portrait content stored sideways needs transpose=1. But genuinely
@@ -1200,9 +1268,10 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     else if (aR && existsSync(aH)) { capSrc = aH; capBase = aR.offset; }
     else capSrc = join(PROXY, `${push.audio.id}.mp4`);
   }
-  const caps = cfg.silent ? [] : captionFilters(capId, capA, capB, n,
+  const caps = (cfg.silent || speed < 1) ? [] : captionFilters(capId, capA, capB, n,
     { nocap: !!push?.nocap, src: capSrc, srcBase: capBase });
-  const capOv = captionOverlays(caps, TMP);
+  if (speed < 1 && !push?.nocap) console.log(`      slow-mo beat ${n}: captions are off on a slowed beat`);
+  const capOv = withStickers(captionOverlays(caps, TMP), push?.sticker, TMP, n);
 
   let vf;
   if (cfg.layout === "square") {
@@ -1305,7 +1374,13 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
         `:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1080x1920:fps=30` +
         `,setsar=1${capOv.label}`].join(";") + capOv.suffix;
     } else {
-      vf = [`[0:v]fps=30,${lift}${pre}scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920:x=(iw-out_w)*${xc}:y=0,${GRADE},` +
+      // A HAND-SET ZOOM IS CUT FROM A 2x CANVAS. zoompan used to magnify a
+      // frame already scaled to 1080x1920, so a 1.5x punch-in on a face was a
+      // 720px picture blown back up. With a `manual` push the frame is scaled
+      // to 2160x3840 first and zoompan crops from that (flowers-notes,
+      // 2026-10-02: fast punch-ins on a 4K iPhone source). Other beats unchanged.
+      const SSZ = push?.manual ? 2 : 1;
+      vf = [`[0:v]fps=30,${lift}${pre}scale=${1080 * SSZ}:${1920 * SSZ}:force_original_aspect_ratio=increase,crop=${1080 * SSZ}:${1920 * SSZ}:x=(iw-out_w)*${xc}:y=0,${GRADE},` +
         `zoompan=z='min(${z0}+${(z1 - z0).toFixed(4)}*on/${frames}\\,${z1})':d=1:x='${zx}':y='${zy}':s=1080x1920:fps=30` +
         `,setsar=1${capOv.label}`].join(";") + capOv.suffix;
     }
@@ -1371,7 +1446,15 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
       wav = cleanAudio(src, ss, to, n, sharedAtt());
     }
   } else {
-    wav = cleanAudio(src, ss, to, n, sharedAtt());
+    wav = cleanAudio(src, ss, speed < 1 ? +(ss + outDur).toFixed(3) : to, n, sharedAtt());
+  }
+  if (speed < 1) {
+    // retime the picture: stretch the timestamps, then build the missing frames
+    const head = "[0:v]fps=30,";
+    if (vf.startsWith(head)) {
+      vf = `[0:v]fps=30,setpts=PTS/${speed},minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1,` + vf.slice(head.length);
+      console.log(`      slow-mo x${speed}: ${dur}s of picture over ${outDur}s, sound at normal speed`);
+    } else console.log(`  !! slow-mo asked on beat ${n} but this layout's filter chain is not supported - played at normal speed`);
   }
   if (process.env.BUILD_DEBUG) writeFileSync(join(OUT, `debug_vf_${String(n).padStart(2, "0")}.txt`), vf, "utf8");
   execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-to", String(to), "-i", src, "-i", wav,
@@ -1407,12 +1490,13 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     // of continuous speech every few seconds. Tal: *"it doesn't flow."*
     "-af", `highpass=f=70,volume=${beatGain(wav)}dB` +
       (CONT.get(i)?.prev ? "" : ",afade=t=in:st=0:d=0.025") +
-      (CONT.get(i)?.next ? "" : `,afade=t=out:st=${Math.max(0, dur - 0.025).toFixed(3)}:d=0.025`),
+      (CONT.get(i)?.next ? "" : `,afade=t=out:st=${Math.max(0, outDur - 0.025).toFixed(3)}:d=0.025`) +
+      (speed < 1 ? `,apad=whole_dur=${outDur}` : ""),
     "-c:v", "libx264", "-preset", "veryfast", "-crf", FINAL ? "19" : "21", "-pix_fmt", "yuv420p",
-    "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", "-shortest", dest], { stdio: "pipe" });
+    "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", ...(speed < 1 ? ["-t", String(outDur)] : ["-shortest"]), dest], { stdio: "pipe" });
 
-  console.log(`  ${n}  ${id.slice(0, 8)}  ${ss}->${to} (${dur}s, ${caps.length} caps)  ${why ?? ""}`);
-  list.push(dest); total += dur;
+  console.log(`  ${n}  ${id.slice(0, 8)}  ${ss}->${to} (${speed < 1 ? `${dur}s at x${speed} = ${outDur}s` : `${dur}s`}, ${caps.length} caps)  ${why ?? ""}`);
+  list.push(dest); total += outDur;
 });
 
 writeFileSync(join(OUT, "concat.txt"), list.map((p) => `file '${p.replace(/\\/g, "/")}'`).join("\n"), "utf8");
