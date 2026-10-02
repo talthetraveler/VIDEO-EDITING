@@ -1936,15 +1936,32 @@ in `edit.json` said the beat was there for.
 - Show him the cut and stills and ask what is wrong BEFORE a re-edit. One
   message from him replaced nine guesses.
 
-**The blur** (`scripts/blur-face.py`, new). Two things it got wrong on the first
-run, both of which would have shown her face:
-- a face detector finds her in 100% of frames in the close shots and **0-12%
-  in the wide two-shot** (small, in profile). Detection steers; a measured
-  prior per shot is what guarantees cover.
-- **the cut is not where the beat frame counts say.** By beat 6 the real cut
-  was 2-3 frames after the running sum, and for those frames the mask sat on
-  the next shot's position. Cuts are now found in the picture, and both shots'
-  ellipses are drawn for 2 frames each side.
+**The blur** (`scripts/blur-face.py`, new). Three things it got wrong before it
+was right, and each would have shown her face:
+- a face detector on the full frame finds her in 100% of frames in the close
+  shots and **0-12% in the wide two-shot** (small, in profile). Searching an
+  upscaled crop of the region she is allowed to be in took that to 100%. Where
+  it still misses (61% in the shot where her hands cover her mouth, and the
+  walk-in, where she enters at the edge) a measured prior or hand keyframes
+  carry the shot. Detection steers; it is never the guarantee.
+- **the mask slid off the picture, by timestamp.** ffmpeg's overlay pairs
+  frames by pts, and build-edit's output is not a clean n/30: it starts one
+  frame in and gains a frame at some joins (frame 1408 sat three frames late).
+  A mask clocked N/30 was therefore already on the NEXT shot for the last
+  frames before a cut. The beat frame counts were right all along - my first
+  note blamed them, wrongly. `mask_clock()` now rebuilds the video's real
+  timestamps for the mask.
+- the second fix (a constant one-frame delay) still left frame 1411 in the
+  clear. It was caught only because the check pulls the exact frames either
+  side of every cut. **A blur is verified at the cuts, by frame index, not by
+  sampling every half second.** 85 frames were looked at: 2 each side of all
+  10 cuts, the walk-in every 6 frames, 3 through each shot.
+
+**And V10 itself cut her off once.** Beat 9 ended at 216.0 on the strength of
+a speech run ending at 215.6; she hesitates in the middle of "cry" (לבכות,
+215.0-216.8) and the word was cut in half. `selfreview.mjs` flagged it,
+`check-boundary.mjs --tail` confirmed it on the source audio, and the out-point
+moved to 216.90. A speech RUN ending is not a WORD ending.
 
 **The grade.** A white hospital room measures luma 151-175 and the builder's
 "TOO BRIGHT" branch pulled it to grey. `"exposure": false` in `edit.json` now

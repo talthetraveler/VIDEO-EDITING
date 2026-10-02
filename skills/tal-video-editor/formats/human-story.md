@@ -61,3 +61,19 @@ Main = chronological as he would cut it. Trial = **hook-first on the payoff
 line** — cold-open the most surprising later sentence, then a `HOW IT STARTED`
 card, then the meet. Guard: if the lifted moment sits in the first 25% of the
 cut it is the opening, not a hook. **[M]**
+
+## His questions come out (Tal, 2026-10-02, EDEN HER STORY)
+
+*"Just cut the questions that I asked. Just say, she passed away. Cancer."*
+
+In a story about one person, the interviewer's question stays only when the
+answer means nothing without it. Test each beat by reading the answer alone:
+"She passed away from cancer" stands; "Yes" does not - and a beat whose answer
+is only "yes" is dropped, not rescued by keeping the question. V9 of Eden had
+his voice in eight of thirteen beats; V10 has it in one, the opening line.
+
+This narrows the older rule "a line and its reply are ONE unit", which still
+holds in `street-interview` and `pov-kindness`, where the exchange IS the video.
+
+Also from that cut: no dead air between her phrases, and for a Hebrew or Arabic
+speaker read the original before captioning (LESSONS 71).
