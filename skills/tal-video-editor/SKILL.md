@@ -222,6 +222,7 @@ that the job actually touches. "I have a toolbox" is not the same as reading it.
 | a second opinion on a finished render | `toolbox/vertical-video-editing/` | **steal its quality check, never its pipeline** |
 | motion / titles, when a film actually needs them | `toolbox/05-motion-graphics/`, `toolbox/motion-doctrine/`, `toolbox/style-library/` | taste only; they do not know this footage |
 | hook or caption copy | `toolbox/tal-scriptwriting/` | |
+| linting a post caption; ranking reference reels by outlier multiple; timing a VO script | `toolbox/instagram-agent/` | `PYTHONUTF8=1 python`. **Its `hookscore.py` rates 60/60 of his titles WEAK — never a gate** (REPOS.md) |
 | an INDEPENDENT check on caption timing | `caption-crosscheck.mjs` (AutoSubSync/ffsubsync) | a PASS is real evidence; anything else means **not checked**. It refuses on a montage and loses lock on sparse street speech - `REPOS.md` has the measurements |
 | cutting a person out, a vanish, 3D objects, a split-screen explainer | `formats/talking-to-camera-effects.md` -> `hyperframes-*` skills, `npx hyperframes remove-background` | needs a **clean plate** (2s of the empty room) from the shoot. Not yet built on his footage |
 | a launch video about a PROJECT or a URL | `/brag-slim` (installed skill) | reads a codebase, **not footage**. Never point it at a shoot |

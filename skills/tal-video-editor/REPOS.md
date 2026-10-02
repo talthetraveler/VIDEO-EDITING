@@ -20,6 +20,7 @@ turn, with a verified status, or it has not been dealt with.**
 | OpenChatCut | cloned, never wired | `system/vendor/OpenChatCut` |
 | `calesthio/OpenMontage` | **installed and working, 42/117 tools, zero keys** | `system/vendor/OpenMontage` |
 | `kamilstanuch/Autocrop-vertical` | **works after a 3-line patch** — horizontal -> 9:16, one fixed crop per scene. See below | `system/vendor/Autocrop-vertical` (own `.venv`) |
+| `Jakeschincariol/instagram-agent-skill` | **4 tools kept of 13 skills, none loadable** — caption linter and outlier ranking work; its hook scorer rates 60/60 of his titles WEAK and must never gate. See below | `toolbox/instagram-agent/` (76 KB), `PYTHONUTF8=1 python` |
 
 ---
 
@@ -352,3 +353,39 @@ control's audio was silence).
   bars. For a horizontal conversation his format is the square band +
   punch-ins (ROUTING §1). Run `--plan-only`, take the TRACK scenes, and build
   the LETTERBOX ones as square-band beats instead.
+
+---
+
+## instagram-agent-skill — 2026-10-02, trimmed to four tools on purpose
+
+Tal pasted the repo, then: *"i have so many skills now ... maybe u need to just
+use the best things from there."* So this one was taken apart instead of
+installed whole. It is a COPYWRITING pack (hooks, captions, DMs, profile
+score), not an editing tool, and it ships 13 `SKILL.md` files whose triggers
+(*"make a reel about X"*, *"cut this up"*) would contest `tal-video-editor`.
+**None of the 13 were copied.** Four Python tools were, to
+`toolbox/instagram-agent/` — 76 KB, stdlib only, no network, read before run.
+
+Every one was fed a known answer before it was pointed at his work:
+
+| tool | known answer | got | on his real content |
+|---|---|---|---|
+| `hookscore.py` | README: 85.6 / 81.4 / 54.4 / 9.6 | exact | **60 of 60 titles WEAK** |
+| `swipe.py` | README: 60.0x / 37.5x / 1.3x | exact | not yet run on a harvest |
+| `caption.py` | 81 chars, 2 tags, fits the 125 window | correct | flags no ask, tag in the visible window |
+| `beats.py` | none available (README truncates its input) | arithmetic right | not yet run on a VO script |
+
+**The hook scorer is the fifth instrument here to condemn good work.** It wants
+money, numbers and loss words, treats a greeting as a dealbreaker, and cannot
+read ALL-CAPS proper nouns. Full table in `toolbox/instagram-agent/README.md`.
+It stays only because `swipe.py` imports it.
+
+All four crash on the first emoji without `PYTHONUTF8=1`.
+
+Left out: the humanizer trio (*"too short to judge"* on his captions) and the
+13 prompt files.
+
+**What the caption test surfaced, unasked:** `schedule-plan.json` holds 62
+scheduled posts and **5 unique captions**, all one sentence reworded
+(*"the side of Israel they don't show you online"*), none with a call to
+action. Not changed — those posts are already submitted. Worth a decision.
