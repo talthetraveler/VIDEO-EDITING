@@ -1,46 +1,555 @@
 {
-  "_brief": "Tal 2026-10-02: Frame.io NEEDS TO BE EDITED / FLOWERS FOR STRANGERS / 2. Erez-v1 style A, fast cuts. V4 after his notes: V1 'not so good' (no POV title, no flash-forward hook, need emoji + sticker, show him getting the flowers in his hand, reactions not looking at the lens and not zoomed, add the girl walking by with the note + her reading it + the note picture popping up, not the angle where the girl stands in front); V2 'so bad ... don't color grade it' -> grade:false; V3 'you didn't show any zoom ins of me ... of me giving him the flowers. The slow mo, you didn't do that' -> front-angle shots where Tal is VISIBLE crouching behind the bench and handing the bouquet over, snap zooms onto Tal on the open / run-up / crouch / handoff, slow-mo on the handoff and on her laugh.",
+  "_brief": "Tal 2026-10-02: Frame.io NEEDS TO BE EDITED / FLOWERS FOR STRANGERS / 2. Erez-v1 style A, fast cuts. V4 after his notes: V1 'not so good' (no POV title, no flash-forward hook, need emoji + sticker, show him getting the flowers in his hand, reactions not looking at the lens and not zoomed, add the girl walking by with the note + her reading it + the note picture popping up, not the angle where the girl stands in front); V2 'so bad ... don't color grade it' -> grade:false; V3 'you didn't show any zoom ins of me ... of me giving him the flowers. The slow mo, you didn't do that' -> front-angle shots where Tal is VISIBLE crouching behind the bench and handing the bouquet over, snap zooms onto Tal on the open / run-up / crouch / handoff, slow-mo on the handoff and on her laugh. V5 after V4: \"it repeats as a cut when he holds the flower\" -> the side shot of him holding the bouquet (2357) and the side shot of him giving it to her (2358) are OUT: each showed an action the front shot next to it already shows. \"the emojis are not so good ... dont do the emoji its fine\" -> emoji stickers removed, note card kept. Then: \"the clip of her receiving the flowers and the notes - choose the most emotional parts ... zoom in\" -> snap zooms onto HER face at each emotional peak: hand to mouth taking the flowers (9266 10.5-11.6), reading the note right after the girl leaves (9266 16.8-18.5, continuous with the walk-by), the big smile at him (9262 30.5-31.8), exclaiming with her hand on her chest (9262 32.9-33.7). This supersedes the earlier no-zoom-on-reactions note for these beats.",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "silent": true,
   "grade": false,
-  "out": "FLOWERS_NOTES_EREZ_V4.mp4",
+  "out": "FLOWERS_NOTES_EREZ_V5.mp4",
   "beats": [
-    ["3a6b361b-80ca-43e8-bf0c-c46c4d759ca3", 2.0, 2.5, 0.5, "OPEN front: Tal with the bouquet raised (audio from 9266 - this clip has the operator's voice)", null, {"manual": true, "nocap": true, "z": [1.4, 1.55], "x": 0.62, "y": 0.5, "audio": {"id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5", "at": 0.4}}],
-    ["3a6b361b-80ca-43e8-bf0c-c46c4d759ca3", 2.5, 2.7, 0.5, "SNAP ZOOM onto Tal", null, {"manual": true, "nocap": true, "z": [1.55, 2.4], "x": 0.62, "y": 0.5, "audio": {"id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5", "at": 0.9}}],
-    ["3a6b361b-80ca-43e8-bf0c-c46c4d759ca3", 2.7, 3.4, 0.5, "hold on Tal and the flowers", null, {"manual": true, "nocap": true, "z": [2.4, 2.4], "x": 0.62, "y": 0.5, "audio": {"id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5", "at": 1.1}}],
-
-    ["3a6b361b-80ca-43e8-bf0c-c46c4d759ca3", 4.5, 5.0, 0.5, "front: he runs up", null, {"manual": true, "nocap": true, "z": [1.5, 1.5], "x": 0.65, "y": 0.55, "audio": {"id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5", "at": 1.8}}],
-    ["3a6b361b-80ca-43e8-bf0c-c46c4d759ca3", 5.0, 5.2, 0.5, "SNAP ZOOM onto Tal running", null, {"manual": true, "nocap": true, "z": [1.5, 2.2], "x": 0.65, "y": 0.55, "audio": {"id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5", "at": 2.3}}],
-    ["3a6b361b-80ca-43e8-bf0c-c46c4d759ca3", 5.2, 5.9, 0.5, "hold: he reaches the bench", null, {"manual": true, "nocap": true, "z": [2.2, 2.2], "x": 0.65, "y": 0.55, "audio": {"id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5", "at": 2.5}}],
-
-    ["3a6b361b-80ca-43e8-bf0c-c46c4d759ca3", 6.35, 7.45, 0.5, "front, zoomed: Tal crouching behind the bench with the bouquet - his face visible, they have no idea", null, {"manual": true, "nocap": true, "z": [2.2, 2.2], "x": 0.5, "y": 0.53, "audio": {"id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5", "at": 3.0}, "sticker": {"emoji": "🤫", "x": 0.78, "y": 0.26, "size": 180}}],
-
-    ["f5d63902-81ba-4dab-bf98-b76067bc3cb5", 4.95, 5.15, 0.5, "THE HANDOFF front (take 2): snap zoom onto Tal and the man", null, {"manual": true, "nocap": true, "z": [1.3, 2.3], "x": 0.24, "y": 0.52}],
-    ["f5d63902-81ba-4dab-bf98-b76067bc3cb5", 5.15, 5.6, 0.5, "SLOW-MO: Tal hands him the flowers, his face beside the man's head", null, {"manual": true, "nocap": true, "z": [2.3, 2.3], "x": 0.24, "y": 0.52, "speed": 0.5}],
-    ["f5d63902-81ba-4dab-bf98-b76067bc3cb5", 5.6, 6.5, 0.5, "hold: the man has the bouquet in his hand", null, {"manual": true, "nocap": true, "z": [2.3, 2.3], "x": 0.24, "y": 0.52}],
-
-    ["ec45e00b-5842-4728-b984-7729170ca90a", 7.6, 8.8, 0.5, "side close: he looks at the flowers in his hand (audio from 2358 - operator's voice on this clip)", null, {"manual": true, "nocap": true, "z": [1.6, 1.6], "x": 0.3, "y": 0.5, "audio": {"id": "99d5d236-9d31-4d42-8ca3-a6cfc2006faf", "at": 7.0}, "sticker": {"emoji": "😳", "x": 0.2, "y": 0.72, "size": 170}}],
-
-    ["99d5d236-9d31-4d42-8ca3-a6cfc2006faf", 7.5, 8.9, 0.5, "side: he turns and gives them to her", null, {"manual": true, "nocap": true, "z": [1.5, 1.5], "x": 0.5, "y": 0.46}],
-
-    ["f5d63902-81ba-4dab-bf98-b76067bc3cb5", 10.0, 10.5, 0.5, "front: she takes them", null, {"manual": true, "nocap": true, "z": [1.0, 1.0], "x": 0.6, "y": 0.46}],
-    ["f5d63902-81ba-4dab-bf98-b76067bc3cb5", 10.5, 10.7, 0.5, "snap zoom onto her as she gets the flowers", null, {"manual": true, "nocap": true, "z": [1.0, 1.5], "x": 0.6, "y": 0.46}],
-    ["f5d63902-81ba-4dab-bf98-b76067bc3cb5", 10.7, 11.6, 0.5, "hold on her with the flowers", null, {"manual": true, "nocap": true, "z": [1.5, 1.5], "x": 0.6, "y": 0.46}],
-
-    ["f5d63902-81ba-4dab-bf98-b76067bc3cb5", 14.15, 16.6, 0.5, "THE NOTE front: the girl walks by and hands her the note", null, {"manual": true, "nocap": true, "z": [1.3, 1.3], "x": 0.5, "y": 0.52, "sticker": {"emoji": "💌", "x": 0.22, "y": 0.3, "size": 170}}],
-
-    ["ba76663e-eb70-4d8e-8cab-527d06bc74c5", 25.5, 27.7, 0.5, "front: she opens and reads the note - the note card pops up (audio from 9266: operator's voice on this clip)", null, {"manual": true, "nocap": true, "z": [1.5, 1.5], "x": 0.47, "y": 0.6, "audio": {"id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5", "at": 17.0}, "sticker": {"image": "note.png", "w": 900, "x": 0.5, "y": 0.2, "from": 0.45}}],
-    ["810aafa2-4346-453c-b838-ad10768580fc", 1.85, 2.55, 0.5, "close-up: looking down at the note, smiling - no zoom", null, {"manual": true, "nocap": true, "z": [1.0, 1.0], "x": 0.5, "y": 0.45, "sticker": {"image": "note.png", "w": 900, "x": 0.5, "y": 0.2}}],
-
-    ["810aafa2-4346-453c-b838-ad10768580fc", 0.5, 1.4, 0.5, "THE TURN, SLOW-MO: she laughs, looking off to the side (not at the lens) - no zoom", null, {"manual": true, "nocap": true, "z": [1.0, 1.0], "x": 0.5, "y": 0.45, "speed": 0.5, "sticker": {"emoji": "🥹", "x": 0.2, "y": 0.62, "size": 180}}],
-    ["ba76663e-eb70-4d8e-8cab-527d06bc74c5", 29.3, 30.5, 0.5, "front: she laughs with him - no zoom", null, {"manual": true, "nocap": true, "z": [1.12, 1.12], "x": 0.56, "y": 0.55, "audio": {"id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5", "at": 18.7}}],
-
-    ["f5d63902-81ba-4dab-bf98-b76067bc3cb5", 21.0, 21.5, 0.5, "front: he leans in", null, {"manual": true, "nocap": true, "z": [1.0, 1.0], "x": 0.5, "y": 0.36}],
-    ["f5d63902-81ba-4dab-bf98-b76067bc3cb5", 21.5, 21.7, 0.5, "snap zoom onto the kiss", null, {"manual": true, "nocap": true, "z": [1.0, 1.45], "x": 0.5, "y": 0.36}],
-    ["f5d63902-81ba-4dab-bf98-b76067bc3cb5", 21.7, 22.8, 0.5, "hold: the kiss", null, {"manual": true, "nocap": true, "z": [1.45, 1.45], "x": 0.5, "y": 0.36}],
-
-    ["99d5d236-9d31-4d42-8ca3-a6cfc2006faf", 22.4, 24.4, 0.5, "ENDING side: the hug", null, {"manual": true, "nocap": true, "z": [1.3, 1.3], "x": 0.45, "y": 0.48, "sticker": {"emoji": "❤️", "x": 0.8, "y": 0.34, "size": 190}}]
+    [
+      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
+      2,
+      2.5,
+      0.5,
+      "OPEN front: Tal with the bouquet raised (audio from 9266 - this clip has the operator's voice)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.4,
+          1.55
+        ],
+        "x": 0.62,
+        "y": 0.5,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 0.4
+        }
+      }
+    ],
+    [
+      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
+      2.5,
+      2.7,
+      0.5,
+      "SNAP ZOOM onto Tal",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.55,
+          2.4
+        ],
+        "x": 0.62,
+        "y": 0.5,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 0.9
+        }
+      }
+    ],
+    [
+      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
+      2.7,
+      3.4,
+      0.5,
+      "hold on Tal and the flowers",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.4,
+          2.4
+        ],
+        "x": 0.62,
+        "y": 0.5,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 1.1
+        }
+      }
+    ],
+    [
+      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
+      4.5,
+      5,
+      0.5,
+      "front: he runs up",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.5,
+          1.5
+        ],
+        "x": 0.65,
+        "y": 0.55,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 1.8
+        }
+      }
+    ],
+    [
+      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
+      5,
+      5.2,
+      0.5,
+      "SNAP ZOOM onto Tal running",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.5,
+          2.2
+        ],
+        "x": 0.65,
+        "y": 0.55,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 2.3
+        }
+      }
+    ],
+    [
+      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
+      5.2,
+      5.9,
+      0.5,
+      "hold: he reaches the bench",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.2,
+          2.2
+        ],
+        "x": 0.65,
+        "y": 0.55,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 2.5
+        }
+      }
+    ],
+    [
+      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
+      6.35,
+      7.45,
+      0.5,
+      "front, zoomed: Tal crouching behind the bench with the bouquet - his face visible, they have no idea",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.2,
+          2.2
+        ],
+        "x": 0.5,
+        "y": 0.53,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 3
+        }
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      4.95,
+      5.15,
+      0.5,
+      "THE HANDOFF front (take 2): snap zoom onto Tal and the man",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.3,
+          2.3
+        ],
+        "x": 0.24,
+        "y": 0.52
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      5.15,
+      5.6,
+      0.5,
+      "SLOW-MO: Tal hands him the flowers, his face beside the man's head",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.3,
+          2.3
+        ],
+        "x": 0.24,
+        "y": 0.52,
+        "speed": 0.5
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      5.6,
+      6.3,
+      0.5,
+      "hold: the man has the bouquet in his hand",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.3,
+          2.3
+        ],
+        "x": 0.24,
+        "y": 0.52
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      10,
+      10.5,
+      0.5,
+      "front: he gives them to her",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.6,
+        "y": 0.47
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      10.5,
+      10.7,
+      0.5,
+      "SNAP ZOOM onto her face - hand to her mouth",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1.9
+        ],
+        "x": 0.6,
+        "y": 0.47
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      10.7,
+      11.6,
+      0.5,
+      "hold: she is moved, hand at her mouth, the flowers in her arms",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.9,
+          1.9
+        ],
+        "x": 0.6,
+        "y": 0.47
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      14.15,
+      16.4,
+      0.5,
+      "THE NOTE front: the girl walks by and hands her the note",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.5,
+        "y": 0.52
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      16.8,
+      17.2,
+      0.5,
+      "she looks down at the note",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.53,
+        "y": 0.5
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      17.2,
+      17.4,
+      0.5,
+      "SNAP ZOOM onto her reading it",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.3,
+          2.1
+        ],
+        "x": 0.53,
+        "y": 0.5
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      17.4,
+      18.5,
+      0.5,
+      "hold: she reads the note - the note card pops up",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.1,
+          2.1
+        ],
+        "x": 0.53,
+        "y": 0.5,
+        "sticker": {
+          "image": "note.png",
+          "w": 900,
+          "x": 0.5,
+          "y": 0.19
+        }
+      }
+    ],
+    [
+      "810aafa2-4346-453c-b838-ad10768580fc",
+      1.85,
+      2.55,
+      0.5,
+      "close-up: looking down at the note, smiling - no zoom",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.45,
+        "sticker": {
+          "image": "note.png",
+          "w": 900,
+          "x": 0.5,
+          "y": 0.2
+        }
+      }
+    ],
+    [
+      "810aafa2-4346-453c-b838-ad10768580fc",
+      0.5,
+      1.4,
+      0.5,
+      "THE TURN, SLOW-MO: she laughs, looking off to the side (not at the lens) - no zoom",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.45,
+        "speed": 0.5
+      }
+    ],
+    [
+      "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
+      30.5,
+      30.8,
+      0.5,
+      "front: she turns to him (audio from 9266: operator voice on this clip)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.72,
+        "y": 0.45,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 18.7
+        }
+      }
+    ],
+    [
+      "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
+      30.8,
+      31,
+      0.5,
+      "SNAP ZOOM onto her big smile",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.2,
+          1.9
+        ],
+        "x": 0.72,
+        "y": 0.45,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 19
+        }
+      }
+    ],
+    [
+      "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
+      31,
+      31.8,
+      0.5,
+      "hold: the big smile",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.9,
+          1.9
+        ],
+        "x": 0.72,
+        "y": 0.45,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 19.2
+        }
+      }
+    ],
+    [
+      "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
+      32.9,
+      33.7,
+      0.5,
+      "zoomed: she exclaims, hand on her chest with the note",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.9,
+          1.9
+        ],
+        "x": 0.62,
+        "y": 0.45,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 20
+        }
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      21,
+      21.5,
+      0.5,
+      "front: he leans in",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.36
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      21.5,
+      21.7,
+      0.5,
+      "snap zoom onto the kiss",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1.45
+        ],
+        "x": 0.5,
+        "y": 0.36
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      21.7,
+      22.8,
+      0.5,
+      "hold: the kiss",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.45,
+          1.45
+        ],
+        "x": 0.5,
+        "y": 0.36
+      }
+    ],
+    [
+      "99d5d236-9d31-4d42-8ca3-a6cfc2006faf",
+      22.4,
+      24.4,
+      0.5,
+      "ENDING side: the hug",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.45,
+        "y": 0.48
+      }
+    ]
   ]
 }

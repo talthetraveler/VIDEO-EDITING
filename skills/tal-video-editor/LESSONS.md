@@ -2009,3 +2009,24 @@ down.** selfreview's 5 boundary flags were one Hebrew word mis-timed across
 59-85s over wordless beats. That was not taken on faith: the only two NEW
 audio cuts were measured (-34 dB and -40 dB just before the cut, video overall
 -22 dB). A non-zero gate is overridden only with a measurement, never a guess.
+
+## 75 — the same action from a second angle is a REPEAT, not coverage (Tal, 2026-10-03)
+
+Flowers cut V4. Tal: *"It repeats as a cut when he holds the flower, why did
+you do that."* After the front slow-mo of the man taking the bouquet, the cut
+went to the SIDE angle of him holding the bouquet (a different take), then to
+the side angle of him giving it to her, then to the front angle of him giving
+it to her. Each second angle replayed an action the viewer had just watched.
+The "no beat may replay" check in the builder only compares time windows of
+the SAME clip - two takes of one action pass it clean.
+
+- **One action, one shot.** Two cameras are for alternating between DIFFERENT
+  moments, not for showing one moment twice. Before building, list what
+  HAPPENS in each beat in a few words; if two consecutive beats read the same
+  ("he holds the flowers", "he holds the flowers"), one goes.
+- **Her receiving moments are cut on her emotion, with a zoom onto her face**
+  (*"choose the most emotional parts ... zoom in"*): hand to mouth as she takes
+  the flowers, reading the note, the big smile, the exclamation. Find them on
+  face-level frame strips across every take, not from the wide sheets.
+- Emoji stickers: he judged them *"not so good"* and then said *"dont do the
+  emoji its fine"* - they are out of this cut. The note picture pop-up stays.
