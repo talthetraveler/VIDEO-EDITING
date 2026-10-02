@@ -1855,3 +1855,25 @@ frames: graded vs ungraded vs the raw clip - ungraded matches the raw clip.
 footage; it is not a look to put on everything. If a "TOO BRIGHT" or "colour:"
 line appears in a build log for footage Tal shot on a phone in daylight, that
 is the builder changing a picture nobody asked it to change.
+
+## 73 — "zoom in on me" means the GIVER is the subject too, and the giving must be SEEN (Tal, 2026-10-02)
+
+Flowers cut V3. Tal: *"You didn't show any zoom ins of me ... of me giving him
+the flowers. The slow mo, you didn't do that."* V1-V3 showed the handoff only
+from the side, where the bouquet rises over the man's shoulder and Tal is
+hidden behind him - the gift appears, the giver does not. The "zooms" on Tal
+were a 1.7->1.85 drift nobody could see. Slow motion had been listed as
+"missing" twice instead of being done.
+
+- **In a kindness set-piece Tal is a character, not the camera.** Find the
+  angle where his FACE and the prop are both in frame at the moment of giving
+  (here: the front camera, crouching behind the bench, then leaning in beside
+  the man) and build the handoff from it. A side angle that hides him is a
+  cutaway, not the handoff.
+- **A zoom he asked for must be visible:** a snap from ~1.5x to 2.2-2.4x in
+  0.2s, then a hold. A slow 10% drift is not "a zoom in".
+- **Slow-mo is part of the Erez format** - `{"speed": 0.5}` on the handoff and
+  on the best reaction. Check on frames that the slowed window is the moment
+  itself; the first attempt started 0.15s late, after he had already ducked.
+- Something he asked for and the tool cannot do yet gets BUILT in that turn,
+  not reported as a limitation twice.
