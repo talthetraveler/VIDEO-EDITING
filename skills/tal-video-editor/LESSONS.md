@@ -1804,3 +1804,35 @@ without the shape changing.
 Before any re-edit of this, get the reason in his words, then start from the
 footage again rather than from `edit.json`. A rejection with no reason
 recorded teaches nothing - write the reason here when he gives it.
+
+## 71 — the Erez-style cut: his order, his stickers, and no lens-stare (Tal, 2026-10-02)
+
+FLOWERS + NOTE (Frame.io NEEDS TO BE EDITED / FLOWERS FOR STRANGERS / 2),
+asked for "like erezv1 ... fast zooms ... only the best reactions she is
+smiling, quick cuts". V1 opened on a flash-forward of the flowers arriving,
+carried a "POV:" title pill, snap-zoomed her laughing close-up and had no
+stickers. Tal: *"This is not really so good. You need emoji and sticker. I
+don't need the POV on the top ... you shouldn't start with the hook of the
+flowers. Just start with the person with the flowers ... show him actually
+getting the flowers in his hand ... choose the best shots to show a reaction
+without her looking directly at the camera, like her smiling. But don't zoom
+in."* Then: add the girl walking by and giving the note, her reading it, and
+*"when she looks at [it] the picture of the note will pop up"*. And not the
+angle where the girl stands in front showing the note - the walk-by.
+
+What an Erez-style kindness cut is, for Tal:
+- **No title pill.** Open on the giver HOLDING the prop, a slight zoom in.
+  Chronological: giver -> run-up -> the receiver getting it IN HIS HAND ->
+  passing it on -> the note handed over -> the note read -> reaction -> kiss.
+  No flash-forward hook on this format.
+- **Emoji stickers are part of the format** (on the body / beside the subject,
+  never on a face). `sticker: {emoji, x, y, size}` on a beat; `image` instead
+  of `emoji` pops a picture up (the note). Built 2026-10-02 (`withStickers`,
+  `render-sticker.py`).
+- **Snap zooms belong on the handoff, not on the reaction.** Reactions are
+  held with no zoom move, and only shots where she is NOT looking into the
+  lens - a laugh aimed at the camera reads as posed. Check the gaze on frames.
+- **Show the low-res preview before anything else.** He said so mid-build.
+- A pasted chat image is not a file on disk. Recreate it (`make-note.py`) or
+  ask for the file; do not go searching Frame.io for it when he says he will
+  send it.

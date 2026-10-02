@@ -1,0 +1,405 @@
+{
+  "_brief": "Tal 2026-10-02: Frame.io NEEDS TO BE EDITED / FLOWERS FOR STRANGERS / 2. Erez-v1 style A (two-camera kindness set-piece), fast cuts, fast zooms on the handoff, best SMILING reactions. V2 after his notes on V1: no POV title; open on the person holding the flowers with a slight zoom-in (not a flash-forward hook); then the run-up; then the man actually getting the flowers IN HIS HAND; then him giving them to her; then the girl WALKING BY and giving her the note (not the angle where she stands in front showing it - clips 9260/9261 are out); then her opening and reading the note; reactions = her smiling WITHOUT looking at the camera, NO zoom on reactions (clip 9263 is out - she laughs into the lens); kiss from both angles; emoji stickers.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "silent": true,
+  "out": "FLOWERS_NOTES_EREZ_V2.mp4",
+  "beats": [
+    [
+      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
+      2,
+      3.1,
+      0.5,
+      "OPEN front: Tal with the bouquet raised - slight zoom in (audio from 9266: this clip has the operator's voice)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.7,
+          1.85
+        ],
+        "x": 0.62,
+        "y": 0.5,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 0.4
+        }
+      }
+    ],
+    [
+      "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
+      4.4,
+      5.8,
+      0.5,
+      "front: he runs up behind the bench",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.5,
+          1.5
+        ],
+        "x": 0.63,
+        "y": 0.55,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 1.5
+        },
+        "sticker": {
+          "emoji": "🤫",
+          "x": 0.24,
+          "y": 0.3,
+          "size": 170
+        }
+      }
+    ],
+    [
+      "ec45e00b-5842-4728-b984-7729170ca90a",
+      6.5,
+      7.3,
+      0.5,
+      "side: the flowers appear over the man's shoulder (audio from 2358, same angle, no operator voice)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.3,
+        "y": 0.5,
+        "audio": {
+          "id": "99d5d236-9d31-4d42-8ca3-a6cfc2006faf",
+          "at": 6
+        }
+      }
+    ],
+    [
+      "ec45e00b-5842-4728-b984-7729170ca90a",
+      7.3,
+      7.5,
+      0.5,
+      "snap zoom onto the man and the flowers",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1.6
+        ],
+        "x": 0.3,
+        "y": 0.5,
+        "audio": {
+          "id": "99d5d236-9d31-4d42-8ca3-a6cfc2006faf",
+          "at": 6.8
+        }
+      }
+    ],
+    [
+      "ec45e00b-5842-4728-b984-7729170ca90a",
+      7.5,
+      9.2,
+      0.5,
+      "hold: he takes the flowers IN HIS HAND and looks at them",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.6,
+          1.6
+        ],
+        "x": 0.3,
+        "y": 0.5,
+        "audio": {
+          "id": "99d5d236-9d31-4d42-8ca3-a6cfc2006faf",
+          "at": 7
+        },
+        "sticker": {
+          "emoji": "😳",
+          "x": 0.2,
+          "y": 0.72,
+          "size": 170
+        }
+      }
+    ],
+    [
+      "99d5d236-9d31-4d42-8ca3-a6cfc2006faf",
+      7.5,
+      8.9,
+      0.5,
+      "side: he turns and gives them to her",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.5,
+          1.5
+        ],
+        "x": 0.5,
+        "y": 0.46
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      10,
+      10.5,
+      0.5,
+      "front: she takes them",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.6,
+        "y": 0.46
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      10.5,
+      10.7,
+      0.5,
+      "snap zoom onto her as she gets the flowers",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1.5
+        ],
+        "x": 0.6,
+        "y": 0.46
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      10.7,
+      11.6,
+      0.5,
+      "hold on her with the flowers",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.5,
+          1.5
+        ],
+        "x": 0.6,
+        "y": 0.46
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      14.15,
+      16.6,
+      0.5,
+      "THE NOTE front: the girl walks by and hands her the note",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.5,
+        "y": 0.52,
+        "sticker": {
+          "emoji": "💌",
+          "x": 0.22,
+          "y": 0.3,
+          "size": 170
+        }
+      }
+    ],
+    [
+      "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
+      25.5,
+      27.7,
+      0.5,
+      "front: she opens and reads the note (audio from 9266: operator's voice on this clip)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.5,
+          1.5
+        ],
+        "x": 0.47,
+        "y": 0.6,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 17
+        },
+        "sticker": {
+          "image": "note.png",
+          "w": 900,
+          "x": 0.5,
+          "y": 0.2,
+          "from": 0.45
+        }
+      }
+    ],
+    [
+      "810aafa2-4346-453c-b838-ad10768580fc",
+      1.85,
+      2.55,
+      0.5,
+      "close-up: looking down at the note, smiling - no zoom",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.45,
+        "sticker": {
+          "image": "note.png",
+          "w": 900,
+          "x": 0.5,
+          "y": 0.2
+        }
+      }
+    ],
+    [
+      "810aafa2-4346-453c-b838-ad10768580fc",
+      0.45,
+      1.7,
+      0.5,
+      "THE TURN close-up: she laughs, looking off to the side (not at the lens) - no zoom",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.45,
+        "sticker": {
+          "emoji": "🥹",
+          "x": 0.2,
+          "y": 0.62,
+          "size": 180
+        }
+      }
+    ],
+    [
+      "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
+      29.3,
+      30.5,
+      0.5,
+      "front: she laughs with him - no zoom",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.12,
+          1.12
+        ],
+        "x": 0.56,
+        "y": 0.55,
+        "audio": {
+          "id": "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+          "at": 18.7
+        }
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      21,
+      21.5,
+      0.5,
+      "front: he leans in",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.36
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      21.5,
+      21.7,
+      0.5,
+      "snap zoom onto the kiss",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1,
+          1.45
+        ],
+        "x": 0.5,
+        "y": 0.36
+      }
+    ],
+    [
+      "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+      21.7,
+      22.8,
+      0.5,
+      "hold: the kiss",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.45,
+          1.45
+        ],
+        "x": 0.5,
+        "y": 0.36
+      }
+    ],
+    [
+      "99d5d236-9d31-4d42-8ca3-a6cfc2006faf",
+      22.4,
+      24.4,
+      0.5,
+      "ENDING side: the hug",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.45,
+        "y": 0.48,
+        "sticker": {
+          "emoji": "❤️",
+          "x": 0.8,
+          "y": 0.34,
+          "size": 190
+        }
+      }
+    ]
+  ]
+}
