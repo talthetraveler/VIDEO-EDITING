@@ -2127,3 +2127,20 @@ sound, like just do a compilation all into one video, of all the shots."*
 - Applies to `formats/giving-things.md` where a shoot is many short,
   wordless encounters: default to one compilation, and only split out a single
   person when their moment holds alone (the hug did not need its own video).
+
+## 80 — "stop with all the zooms, it's weird" (Tal, 2026-10-03)
+
+After the first previews of the 2026-10-03 batch (Christian Tel Aviv, hospital,
+water, cleaner, old lady), every one built on the Erez grammar of 4-frame snap
+zooms and punch-ins onto faces, Tal: *"stop with all the zooms its weird"*.
+
+- **Default is now NO zoom movement**: constant framing per shot, hard cuts,
+  slow motion where it earns it. No snap ramps, no punch-ins, no drift, and no
+  wide-then-tight cut on the same take (it reads as a zoom).
+- This reverses LESSONS 73 ("a zoom he asked for must be visible") and the
+  zoom part of 76 / `erez.v1.md` "Cut and zoom grammar" as a house default.
+  Those were right for the one flowers cut where he asked for zooms; as a
+  style on everything, he finds them weird. **Zoom only when he asks for it
+  on a specific video.**
+- His own brief that morning said "punch-ins/zooms on reactions". The later,
+  specific reaction to seeing them outranks the earlier general wish.

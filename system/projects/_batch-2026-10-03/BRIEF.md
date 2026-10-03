@@ -185,3 +185,16 @@ the shape in one line, cuts/min; what you actually inspected (transcripts read, 
 looked at, N rendered frames looked at); the selfreview exit code and anything it flagged; every
 caveat (weak footage, a line you could not verify, a moment you wanted and the footage did not
 have). If the footage does not support a video, say so — do not force one.
+
+---
+
+## UPDATE (Tal, later 2026-10-03) — STOP ALL ZOOMS
+
+> "stop with all the zooms its weird"
+
+This overrides the zoom rules above (and LESSONS 73/76, erez.v1's zoom grammar)
+for this batch: no snap zooms, no ramps, no punch-ins, no drift; constant
+framing per shot; no wide-then-tight on the same take. Slow motion and hard
+cuts stay. Every video already made gets re-rendered without zooms.
+
+## UPDATE — water = one silent compilation (LESSONS 79); consent spans muted + blurred (LESSONS 78)
