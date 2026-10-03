@@ -1434,7 +1434,13 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
   // timeline, so the offset between the two cameras is stated once per beat.
   // The attenuation this beat must use: measured ONCE for the whole
   // continuous shot, on its first beat, then reused by the rest of the run.
+  // push.denoise: THIS beat's attenuation, stated by hand (6-18). For a clip
+  // recorded on a worse microphone than the rest of the film - EDEN V11's two
+  // solo beats sat 12 dB above their own room noise while every other shot had
+  // 23-40 dB (2026-10-03). The adaptive rule only fires above -30 dBFS and
+  // stops at 16; a hand value may go to 18, never past it.
   const sharedAtt = () => {
+    if (push?.denoise != null) return Math.min(18, Math.max(6, +push.denoise));
     const g = GROUP_ATT.get(i);
     if (!g) return undefined;                 // a real cut — measure per beat
     if (g.att == null) {

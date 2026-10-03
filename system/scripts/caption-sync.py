@@ -124,12 +124,31 @@ def check(slug):
     #
     # The beats_* folder holds what was actually concatenated. Use those.
     beat_dirs = sorted(d.glob("beats_*"), key=lambda p: p.stat().st_mtime)
-    if not beat_dirs:
-        return None
-    segs = sorted(beat_dirs[-1].glob("*.mp4"))
-    if not segs:
-        return None
+    segs = sorted(beat_dirs[-1].glob("*.mp4")) if beat_dirs else []
     starts, durs, acc = {}, {}, 0.0
+    if not segs:
+        # NO beats_* FOLDER (2026-10-03): the ek- batch deletes it after every
+        # build to save disk, and this check then skipped 44 of 47 films
+        # without a word. BUILD-LOG's own beats are what was rendered, so use
+        # (out-in)/speed - but ONLY when they add up to the finished file.
+        # A film whose beats were snapped or retimed does not add up, and is
+        # reported as not measurable instead of measured on a wrong timeline.
+        try:
+            beats = json.loads(log.read_text(encoding="utf-8")).get("beats", [])
+            real = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                         "-of", "csv=p=0", str(d / out)], capture_output=True, text=True).stdout.strip())
+        except Exception:
+            return None
+        for i, b in enumerate(beats, 1):
+            push = b[6] if len(b) > 6 and isinstance(b[6], dict) else {}
+            dur = (float(b[2]) - float(b[1])) / float(push.get("speed", 1) or 1)
+            key = f"{i:02d}"
+            starts[key] = acc
+            durs[key] = dur
+            acc += dur
+        if not beats or abs(acc - real) > 0.25:
+            print(f"{slug:28s} NOT MEASURABLE: no beats_* folder, and BUILD-LOG beats sum to {acc:.2f}s against a {real:.2f}s file")
+            return None
     for f in segs:
         dur = subprocess.run(["ffprobe", "-v", "error", "-show_entries",
                               "format=duration", "-of", "csv=p=0", str(f)],
