@@ -2097,3 +2097,19 @@ and then I'll approve it and then send it to the frame.io."*
 - The disk was not mostly this project (55 GB of it). iCloud Photos lists
   1.6 TB but holds only 15 GB locally - measure the placeholder attribute
   before blaming a sync folder.
+
+## 78 — "we won't publish it" on camera: mute it and blur the face, don't drop it (Tal, 2026-10-03)
+
+Two hospital families and one man on a Tel Aviv street were told on camera
+"we're not publishing this" (both models agree on the Hebrew). The editors left
+them out. Tal: *"just blur their face then"*, then *"you can just remove the
+audio and blur his face"*.
+
+- A moment like that is not lost: it goes in with **the audio fully muted over
+  that span** (room tone from a neighbouring shot underneath, never a voice)
+  and **the face blurred** (`blur-face.py`, verified per LESSONS 71: by frame
+  index, 2 frames either side of every cut).
+- When it is unclear whose face he means, blur every face of that family and
+  say so; he can loosen it. Never the other way round.
+- Still report every such span to him before it ships. He decides; the editor
+  does not quietly drop it or quietly use it.
