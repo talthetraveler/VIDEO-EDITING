@@ -1,0 +1,61 @@
+{
+  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS: individual answers, no intro. LESSONS 80: no zooms - each take keeps one constant full frame. This one: the young man in the blue cap who used to live in Dubai (C0524, his solo take). His first sentence IS the hook ('this is coming from somebody that used to live in Dubai. Now he lives in Israel.' - first word at 0.02s), so the answer runs in his order and the strongest line, 'at the end of the day, we're all brothers. We're family', lands as the payoff. One jump cut takes the 0.6s gap out. Then a hard cut to a DIFFERENT take - the same man with his five friends round the sign (C0523) - for 'We love you guys. Let's go!' and all of them cheering, arms up: the ending is the group, not him walking into the lens (C0524 14.3). Captions sit on his shirt (capY 0.47) in the close take, because the sign fills the lower half of that frame, and under the group in the wide take (0.80). grade:false. Sound: LOCATION-SOUND.wav (soundtrack.py, one denoise per run, no per-beat gain).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "capY": 0.47,
+  "music": "../ek-abraham-dubai/LOCATION-SOUND.wav",
+  "bedOnly": true,
+  "out": "EK_ABRAHAM_DUBAI_V1.mp4",
+  "beats": [
+    [
+      "f013500a-dd00-433c-8ba0-f5291ccfa5d9",
+      0,
+      3.8,
+      0.5,
+      "HOOK, his own opening: 'Guys, this is coming from somebody that used to live in Dubai. Now he lives in Israel.'",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "capY": 0.47
+      }
+    ],
+    [
+      "f013500a-dd00-433c-8ba0-f5291ccfa5d9",
+      4.1333,
+      12.8667,
+      0.5,
+      "'I've been around. They're both beautiful, beautiful countries. I think everyone should come visit Israel. You guys should for sure go to Dubai, because at the end of the day, we're all brothers. We're family.' (out before his 'Let's go' 13.08 - the group says it)",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "capY": 0.47
+      }
+    ],
+    [
+      "71dd6b6b-7fa0-4776-aed2-3774731022b2",
+      12.4667,
+      16,
+      0.5,
+      "ENDING, the other take: him and his friends round the sign - 'We love you guys. Let's go!' - everyone cheers, arms up (14.3-16.0)",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "capY": 0.8
+      }
+    ]
+  ]
+}

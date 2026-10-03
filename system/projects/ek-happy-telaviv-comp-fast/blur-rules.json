@@ -1,0 +1,9 @@
+{
+ "note": "ek-happy-telaviv-comp-fast V1 (LESSONS 81, age unclear so blurred). A girl with a ponytail walks left-to-right through the background of edit beat 4 (video frames ~347-370) and disappears behind the speaker. HAND-KEYED on a 0.02 grid from the pre-blur render (540x960). The first pass keyed her only to frame 362 from a grid that stopped at x=0.30 and left her face clear for frames 363-369; caught on the frame-index check and re-keyed on a wider grid. Rule-beats are frame slices: 345 clear, 28 keyed, 612 clear.",
+ "beats": [
+  { "frames": 345, "x": [2, 3], "y": [2, 3], "prior": null, "clear": true },
+  { "frames": 28, "x": [0.0, 0.52], "y": [0.34, 0.43], "prior": [0.2, 0.387, 0.065], "maxr": 0.065,
+    "keys": [[0, 0.0, 0.387], [3, 0.005, 0.387], [7, 0.10, 0.387], [11, 0.19, 0.387], [15, 0.26, 0.387], [18, 0.36, 0.387], [21, 0.45, 0.387], [24, 0.465, 0.387], [27, 0.475, 0.387]] },
+  { "frames": 612, "x": [2, 3], "y": [2, 3], "prior": null, "clear": true }
+ ]
+}

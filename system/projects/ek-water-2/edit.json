@@ -1,0 +1,250 @@
+{
+  "_brief": "Batch 2026-10-03 item 5, GIVING WATER TO WORKERS. Variation 2 of 4: the 'extremely simple' one Tal described - give -> slow-motion drink -> reaction -> end. ONE crew: three construction workers behind a site fence (IMG_8611, Tal with a backpack, iPhone across the street, the operator zooms in at 47.4s). Erez grammar: wide -> 4-frame snap zoom -> tight hold -> hard cut; slow-mo on the hand-to-hand, on the drink and on the laugh. Wordless: the clip's own sound is a lav on Tal (his voice, then near-silence), so a bed of real street ambience from the same shoot (the promenade clip IMG_8613, no speech in it) runs under the whole cut (bedOnly); grade off. Cars cross the lens at ~6.0-7.1 and ~9.0-9.8 (checked on frames) - both outside every beat.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "silent": true,
+  "grade": false,
+  "music": "../ek-water-2/bed.wav",
+  "bedOnly": true,
+  "out": "EK_WATER_FENCE_V1.mp4",
+  "beats": [
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      2.6667,
+      3.4667,
+      0.5,
+      "WIDE: Tal walks up to the site fence with the water, the crew already waving him over",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.0,
+          1.06
+        ],
+        "x": 0.45,
+        "y": 0.45
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      3.4667,
+      3.6,
+      0.5,
+      "4-frame snap zoom onto Tal, the bottle and the two workers",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.06,
+          1.9
+        ],
+        "x": 0.47,
+        "y": 0.31
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      3.6,
+      4.9,
+      0.5,
+      "tight: Tal reaches the bottle up over the fence, the worker smiling at him",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.9,
+          1.95
+        ],
+        "x": 0.47,
+        "y": 0.31
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      4.9,
+      5.8333,
+      0.5,
+      "SLOW-MO: the worker on the right reaches up and his hand meets the bottle - the giving, seen (ends before the car at 6.0)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.95,
+          2.0
+        ],
+        "x": 0.47,
+        "y": 0.31,
+        "speed": 0.5
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      24.9333,
+      25.2,
+      0.5,
+      "CUT wide: Tal lifts his own bottle",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.15,
+          1.15
+        ],
+        "x": 0.4,
+        "y": 0.3
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      25.2,
+      25.3333,
+      0.5,
+      "snap zoom onto the toast",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.15,
+          1.9
+        ],
+        "x": 0.42,
+        "y": 0.25
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      25.3333,
+      26.3333,
+      0.5,
+      "tight: the toast over the fence, bottles touch - the worker under Tal's arm grinning",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.9,
+          1.98
+        ],
+        "x": 0.42,
+        "y": 0.25
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      47.6667,
+      47.8,
+      0.5,
+      "CUT + snap zoom onto the worker in the yellow hard hat",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.3,
+          1.9
+        ],
+        "x": 0.52,
+        "y": 0.3
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      47.8,
+      48.6,
+      0.5,
+      "SLOW-MO close-up: he drinks, eyes up",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.9,
+          1.98
+        ],
+        "x": 0.52,
+        "y": 0.3,
+        "speed": 0.5
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      48.6,
+      49.4,
+      0.5,
+      "punch out, real time: Tal high-fives him while he is still drinking",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.42,
+        "y": 0.35
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      50.4,
+      50.5333,
+      0.5,
+      "snap zoom onto the worker in the middle",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.2,
+          1.9
+        ],
+        "x": 0.5,
+        "y": 0.36
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      50.5333,
+      51.4667,
+      0.5,
+      "SLOW-MO: he laughs out loud, bottle in hand - the reaction",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.9,
+          1.96
+        ],
+        "x": 0.5,
+        "y": 0.36,
+        "speed": 0.5
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      51.8333,
+      52.5,
+      0.5,
+      "END: both of them - one drinking again, one still laughing",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.2,
+          1.24
+        ],
+        "x": 0.42,
+        "y": 0.36
+      }
+    ]
+  ]
+}

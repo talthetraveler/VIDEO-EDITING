@@ -1,0 +1,77 @@
+{
+ "_brief": "Batch 2026-10-03 item 9, Kindness Tests: WOMEN ON FLOOR (an older woman selling vegetables on the ground at Damascus Gate). V1. One camera: VID_..028 = POV, 9:16. Arabic -> English captions. Shape: the ASK in the first second -> \"How many tomatoes?\" -> the bag handed over -> REVEAL + refusal in one take -> \"No, my son\" and she reaches for more tomatoes. NO ZOOMS (LESSONS 80): all four beats share ONE static 1.5 framing (window x .09-.75, y .33-1.0). Reason for the tighter framing: she sits on the ground, so in the full frame her face is at y 0.62 - exactly where captions go - under 55% sky and market; the static crop puts her face in the upper half and the captions on the vegetables. It never changes inside or between shots.",
+ "_not_tal": "The man asking is not Tal (see the translate file). Tal filmed from across the square on his phone (IMG_8311/8312/8313/9114): those four clips are 6-15s of the two of them 20 metres away with passers-by, including children, walking through the frame - not used.",
+ "_honest": "Her face stays serious and squinting into the sun in every frame of the clip; she never smiles. The warmth is in what she does and says. If that reads as unhappy to Tal, this one should not go out.",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "out": "EK_KT_WOMAN_ON_FLOOR_V1.mp4",
+ "beats": [
+  [
+   "1d71010f-f0f0-49b4-88fb-8087c31398d0",
+   7.3667,
+   13.6,
+   0.5,
+   "THE ASK, straight in: \"Can I take half a kilo of tomatoes? But I have no money\" - \"What?\" - \"I have no money\" - THE YES, in her own way: \"How many tomatoes?\"",
+   null,
+   {
+    "z": [
+     1.5,
+     1.5
+    ],
+    "x": 0.42,
+    "y": 0.9
+   }
+  ],
+  [
+   "1d71010f-f0f0-49b4-88fb-8087c31398d0",
+   17.9,
+   22.2,
+   0.5,
+   "THE GIVING SEEN: she fills the bag and hands it over - \"Bless your hands, hajja. Thank you\"",
+   null,
+   {
+    "z": [
+     1.5,
+     1.5
+    ],
+    "x": 0.42,
+    "y": 0.9
+   }
+  ],
+  [
+   "1d71010f-f0f0-49b4-88fb-8087c31398d0",
+   32.8,
+   41.4667,
+   0.5,
+   "REVEAL + REFUSAL, one take (8.7s): \"This was a test. We were testing generosity\" - \"Please, hajja, this is from me\" - \"No, no, no\"",
+   null,
+   {
+    "z": [
+     1.5,
+     1.5
+    ],
+    "x": 0.42,
+    "y": 0.9
+   }
+  ],
+  [
+   "1d71010f-f0f0-49b4-88fb-8087c31398d0",
+   45.7333,
+   49.7333,
+   0.5,
+   "PAYOFF: \"These are for you too\" - \"No, my son\" - and she reaches for MORE tomatoes to give",
+   null,
+   {
+    "z": [
+     1.5,
+     1.5
+    ],
+    "x": 0.42,
+    "y": 0.9
+   }
+  ]
+ ],
+ "capY": 0.74
+}

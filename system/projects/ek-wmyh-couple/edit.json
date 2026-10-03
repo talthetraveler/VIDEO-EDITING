@@ -1,0 +1,96 @@
+{
+  "_brief": "Batch 2026-10-03 item 14, WHAT MAKES YOU HAPPY. Individual video: the Indian couple in the Old City market (clips from Levi video, video-4955, 180s Meta-glasses POV). He says his wife; she says someone who is always with you. Shape: his best line cold (\"Only she is with me, so I am happy\") -> Tal: \"Maybe your wife makes you happy?\" \"Yes\" -> \"I asked your husband and he said you\" (she laughs, hand on heart) -> her answer (\"Someone who loves, who is always with you. That makes me happy.\") -> \"This is a beautiful marriage\" on her smile and his grin. Short on purpose (16s): the rest of the 3 minutes is either Tal explaining or lines too quiet to hear. NO ZOOMS: constant framing per shot.",
+  "_notes": "AUDIO CAVEAT: she speaks softly 2m from a glasses mic in a market - her line measures 5-12 dB over the floor raw, ~15-20 dB after deep-filter. It is in a beat of its own so the per-beat gain can lift it. Her other good line (\"it makes me more happy inside my soul\", 120-124s) is ~3 dB over the floor and NOT used. Captions come from a hand-timed segment file (cache/translate/2e897b8f...json) because the cached Groq segments are rounded to whole seconds. The word before \"only she is with me\" is disputed between models (nothing/not) and is cut out.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_WMYH_COUPLE_V1.mp4",
+  "beats": [
+    [
+      "2e897b8f-840e-423f-a206-7e20ddce5800",
+      108.1333,
+      110.9,
+      0.5,
+      "COLD OPEN - the husband, to the lens: \"Only she is with me, so I am happy.\"",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.5,
+        "y": 0.45
+      }
+    ],
+    [
+      "2e897b8f-840e-423f-a206-7e20ddce5800",
+      33.1667,
+      36.3,
+      0.35,
+      "Tal: \"Maybe your wife makes you happy?\" - he grins: \"Yes\" - she walks over smiling",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "2e897b8f-840e-423f-a206-7e20ddce5800",
+      45.4333,
+      47.7667,
+      0.35,
+      "Tal to her: \"Can I ask you a question? I asked your husband and he said you.\" - she laughs, hand on her heart",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "2e897b8f-840e-423f-a206-7e20ddce5800",
+      58.7,
+      65.2,
+      0,
+      "HER ANSWER: \"Someone who loves, who is always with you. That makes me happy.\" (her 2s of thinking is kept - it is the answer arriving)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.4,
+        "y": 0.62
+      }
+    ],
+    [
+      "2e897b8f-840e-423f-a206-7e20ddce5800",
+      71.3,
+      72.8,
+      0.35,
+      "Tal: \"This is a beautiful marriage.\" - her smile, then his grin. END.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ]
+  ]
+}

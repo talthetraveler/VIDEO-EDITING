@@ -1,0 +1,202 @@
+{
+ "note": "FAST V3. One child left in the cut: the toddler who walks out from behind Tal in shot 1 (head visible from frame ~20). Hand-keyed off a coordinate grid on every 4th frame of the render (detection alone found him in 25% of frames). Every other shot was audited for children on the render and is clear.",
+ "beats": [
+  {
+   "frames": 57,
+   "x": [
+    0.58,
+    0.8
+   ],
+   "y": [
+    0.44,
+    0.62
+   ],
+   "prior": [
+    0.69,
+    0.53,
+    0.065
+   ],
+   "maxr": 0.07,
+   "from": 14,
+   "keys": [
+    [
+     14,
+     0.655,
+     0.51
+    ],
+    [
+     18,
+     0.655,
+     0.51
+    ],
+    [
+     22,
+     0.66,
+     0.51
+    ],
+    [
+     26,
+     0.668,
+     0.508
+    ],
+    [
+     30,
+     0.68,
+     0.529
+    ],
+    [
+     34,
+     0.675,
+     0.529
+    ],
+    [
+     38,
+     0.675,
+     0.532
+    ],
+    [
+     42,
+     0.688,
+     0.538
+    ],
+    [
+     46,
+     0.695,
+     0.537
+    ],
+    [
+     50,
+     0.72,
+     0.537
+    ],
+    [
+     54,
+     0.725,
+     0.546
+    ],
+    [
+     56,
+     0.725,
+     0.546
+    ]
+   ]
+  },
+  {
+   "frames": 45,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 69,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 57,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 68,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 39,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 60,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 69,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 57,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 75,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  }
+ ]
+}

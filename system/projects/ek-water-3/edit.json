@@ -1,0 +1,175 @@
+{
+  "_brief": "Batch 2026-10-03 item 5, GIVING WATER TO WORKERS. Variation 3 of 4: the one that leans on a spoken moment - and keeps it to that line: 'Thank you guys for all your hard work. We love you.' One crew (the Sri Lanka crew on a Tel Aviv building site), TWO cameras: Tal's POV (VID_20260915_153029_061, 48fps) for the hands, the smile and the handshake; the iPhone across the street (IMG_8610, sideways portrait, auto-rotated) for Tal at the crew and the high five. SOUND = the iPhone's track for every beat (it carries a lav: speech -15..-21 dB over a -41..-49 dB floor, measured; the POV mic is only ~10 dB over its own wind) with the POV pictures laid over it at POV = wide + 33.10s - the same clock earlier cuts used, re-checked on 'I got you guys water' (0.44 vs 33.64) and 'Thank you guys...' (21.28 vs 54.38). Every captioned line sits whole inside ONE beat's audio window, because the builder trims a straddling segment proportionally and drops the start of the line. Slow-mo only on the last beat, a WIDE picture over its own audio (a slowed POV beat with a grafted track would pad with silence). snap:false - picture windows are not snapped to the POV clip's words, which are not the words being heard. Grade off. No music (Tal adds it in Instagram).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_WATER_THANK_YOU_V1.mp4",
+  "beats": [
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      33.1333,
+      34.9,
+      0.5,
+      "POV OPEN: his hands tearing a bottle off the pack - 'I got you guys water' (the prop in frame 0; whole line inside this beat's audio window)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.12,
+          1.2
+        ],
+        "x": 0.5,
+        "y": 0.58,
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 0.0333
+        }
+      }
+    ],
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      2.6,
+      2.7333,
+      0.5,
+      "WIDE, 4-frame snap zoom onto Tal at the crew",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.15,
+          1.9
+        ],
+        "x": 0.55,
+        "y": 0.36,
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 3.3
+        }
+      }
+    ],
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      2.7333,
+      4.4,
+      0.5,
+      "WIDE tight: Tal handing the bottles over - 'Thank you so much' (sound 0.9s ahead of picture, Tal's back to camera, no lips visible; audio window 3.63-5.30 holds the whole line + 0.35s after its last energy at 4.95; picture ends before a delivery scooter crosses at 4.45)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.9,
+          1.97
+        ],
+        "x": 0.55,
+        "y": 0.36,
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 3.6333
+        }
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      44.4333,
+      44.5667,
+      0.5,
+      "POV, snap zoom onto the worker",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.0,
+          1.7
+        ],
+        "x": 0.48,
+        "y": 0.36,
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 1.8667
+        }
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      44.5667,
+      45.6,
+      0.5,
+      "POV tight: his smile, bottle in hand (sound = a speech-free stretch of the same track, 1.87-3.03s)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.7,
+          1.76
+        ],
+        "x": 0.48,
+        "y": 0.36,
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 2.0
+        }
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      54.2667,
+      56.1,
+      0.5,
+      "THE LINE, POV: the handshake as Tal says 'Thank you guys for all your hard work' (in sync to 0.17s)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.0,
+          1.06
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "audio": {
+          "id": "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+          "at": 21.0
+        }
+      }
+    ],
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      22.8333,
+      24.0,
+      0.5,
+      "WIDE tight on Tal and the worker: 'We love you' - framed low (y 0.42) so the caption at 0.66 sits on their vests, not their faces",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.8,
+          1.86
+        ],
+        "x": 0.32,
+        "y": 0.42
+      }
+    ],
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      24.0,
+      24.5333,
+      0.5,
+      "END, SLOW-MO, continuous with the beat before: the high five (24.27-24.53); its own sound runs 24.0-25.07, ending before 'Israel' at 25.16",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.86,
+          1.95
+        ],
+        "x": 0.32,
+        "y": 0.42,
+        "speed": 0.5
+      }
+    ]
+  ]
+}

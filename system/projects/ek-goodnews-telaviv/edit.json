@@ -1,0 +1,214 @@
+{
+  "_brief": "Item 13 (batch 2026-10-03) TELL ME UR GOOD NEWS / TAL TEL AVIV - the dedicated Tel Aviv compilation. Tal's premise line once at the top, then 8 strangers: never two similar people in a row, the strongest (the Ghana woman, IMG_9504) 4th, end on the warmest (the everyday-philanthropist). NO ZOOMS (Tal, 'stop with all the zooms its weird', LESSONS 80): every beat has one constant static framing; the same take keeps the same framing across its jump cut. Location sound, no music, grade off (bright iPhone daylight, LESSONS 72). Excluded: IMG_9515 (man says 'can you not record?'), the refusals (9501/9502/9505/9510/9517-9520), and every line about hate/racism/Oct 7 (nothing negative).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_GOODNEWS_TELAVIV_V1.mp4",
+  "beats": [
+    [
+      "3aaabd48-abe9-4fbb-a702-5afa3972e6ca",
+      1.7667,
+      4.4,
+      0.5,
+      "PREMISE: Tal walks in with the sign - 'let's ask people to share their good news with me right now'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.25,
+          1.25
+        ],
+        "x": 0.5,
+        "y": 0.45
+      }
+    ],
+    [
+      "7bfcd7a3-9552-4fc7-8aca-75ab3e2835b5",
+      6.0667,
+      9.0333,
+      0.5,
+      "young mum (Mexico): 'I'm here in Tel Aviv with my son - that's the good news'. Static crop set so her baby in the stroller is OUT of frame (LESSONS 81: a stranger's child is not shown)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.6,
+          1.6
+        ],
+        "x": 0.62,
+        "y": 0.42
+      }
+    ],
+    [
+      "9e9f3737-50bd-48a1-98dd-ba4df3a9af14",
+      1.8,
+      4.4667,
+      0.5,
+      "backpack guy: 'good news? the rain stopped' - a quick laugh, Tal's question cut",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.5,
+        "y": 0.45
+      }
+    ],
+    [
+      "9b991951-20d3-4d6b-9b1c-c6fdde202e27",
+      6.4,
+      9.9333,
+      0.5,
+      "STRONGEST: the Ghana woman - 'the good news is I've met you' + Tal 'oh wow you're so sweet'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.43,
+        "y": 0.42
+      }
+    ],
+    [
+      "9b991951-20d3-4d6b-9b1c-c6fdde202e27",
+      18.9,
+      22.4667,
+      0.5,
+      "...'because you're the first person who's spoken to me since I left the house' (Tal's 'why me' cut; same take, same framing)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.43,
+        "y": 0.42
+      }
+    ],
+    [
+      "49979252-2639-4759-9282-dcff1a0c3e04",
+      0.7333,
+      4.6,
+      0.5,
+      "Yankees fan: 'the Yankees just beat the Red Sox in the wild card - let's go man' - the laugh after the emotional one; Tal's question cut",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.5,
+        "y": 0.45
+      }
+    ],
+    [
+      "e170a3bf-da3a-4dd2-8bd4-b06a493a22d9",
+      13.6667,
+      19.6667,
+      0.5,
+      "Jessica (moved from Paris): 'my dream? I just made it, actually - we made Aliyah this summer, so now I'm very happy' (her 'first of all, I love you' walk-in was dropped: too faint for the speech detector to place a caption)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "9197733d-99e2-46d2-a408-b42a02ff4d54",
+      0,
+      2.1667,
+      0.5,
+      "linen-shirt guy: 'last week I've been living in a hut'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.5,
+        "y": 0.42
+      }
+    ],
+    [
+      "9197733d-99e2-46d2-a408-b42a02ff4d54",
+      18.6,
+      22.4667,
+      0.5,
+      "...'what makes you happy in life is not material things at all' (same take, same framing)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.5,
+        "y": 0.42
+      }
+    ],
+    [
+      "4696114b-69ed-4792-ba76-e5a6ec700540",
+      7.5667,
+      12.3,
+      0.5,
+      "grandmother: 'my good news - to have a granddaughter in Israel, that we're with her for Chag'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "15025ecc-c578-4427-9b33-fdb7ce54713e",
+      38.2,
+      42.7667,
+      0.5,
+      "ENDING, bucket-hat man: 'my personal dream is to be a small, everyday philanthropist'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.5,
+        "y": 0.45
+      }
+    ],
+    [
+      "15025ecc-c578-4427-9b33-fdb7ce54713e",
+      52.5,
+      56.8333,
+      0.5,
+      "...'because it just brings joy - buy a coffee, buy a meal' - kindness as the last word (same take, same framing)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.5,
+        "y": 0.45
+      }
+    ]
+  ]
+}

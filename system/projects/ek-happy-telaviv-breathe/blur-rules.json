@@ -1,0 +1,9 @@
+{
+ "note": "ek-happy-telaviv-breathe V1 (LESSONS 81). A small girl walks in at the left edge during the last frames of edit beat 5 (video frames ~513-522), face in profile. HAND-KEYED on a 0.02 grid from the pre-blur render (540x960). Rule-beats are frame slices: 510 clear, 13 keyed, 257 clear (= edit beat 6).",
+ "beats": [
+  { "frames": 510, "x": [2, 3], "y": [2, 3], "prior": null, "clear": true },
+  { "frames": 13, "x": [0.0, 0.2], "y": [0.48, 0.58], "prior": [0.05, 0.53, 0.06], "maxr": 0.06,
+    "keys": [[0, 0.0, 0.525], [3, 0.01, 0.525], [6, 0.035, 0.527], [9, 0.075, 0.53], [12, 0.115, 0.535]] },
+  { "frames": 257, "x": [2, 3], "y": [2, 3], "prior": null, "clear": true }
+ ]
+}

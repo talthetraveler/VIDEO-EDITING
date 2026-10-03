@@ -1,0 +1,194 @@
+{
+  "_brief": "Batch 2026-10-03 item 8, HUG FOR STRANGER / TEL AVIV TAL, fast montage. V3: no zooms (LESSONS 80), and children out (Tal: 'you need to blur the kids faces'). SWAPPED for adult hugs: kids piling in, the curly-haired girl, the smallest boy (child subjects); the straw-hat tourist (two teenage girls walk past the camera), the young woman with long hair (three children behind her), the guy in the grey tee (age unclear). Bald man starts at 46.5 (a girl with glasses is in frame until 46.4); white cap starts 6.2 (a small boy is at frame right until 5.1). One child remains: the toddler behind Tal in shot 1 - blurred on the render (blur/rules-*.json, blur-face.py). Ends on the white-cap hug and both of them beaming. Location-ambience bed, no speech. grade:false.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "silent": true,
+  "grade": false,
+  "music": "../ek-hugs-telaviv-fast/bed.wav",
+  "bedOnly": true,
+  "out": "EK_HUGS_TELAVIV_FAST_V3_noblur.mp4",
+  "beats": [
+    [
+      "2fd8510c-184d-4e4e-8124-4b33279906e9",
+      0.1,
+      2,
+      0.5,
+      "5671 Tal flips the FREE HUGS sign up - the ask (toddler behind him: BLUR)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true
+      }
+    ],
+    [
+      "1ad8a7c1-ae35-4f6b-9818-05a15cea14ac",
+      41.6,
+      43.1,
+      0.5,
+      "5662 older blonde woman",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true
+      }
+    ],
+    [
+      "827a714f-3015-4c10-9133-249df6739f5e",
+      3.1,
+      5.4,
+      0.5,
+      "5686 young man in a white tee runs in, high five, hug",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      35.6,
+      37.5,
+      0.5,
+      "5682 ARMS WIDE, she runs in",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      37.5,
+      38.6333,
+      0.5,
+      "5682 SLOW-MO the embrace (best hug, 4th)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true,
+        "speed": 0.5
+      }
+    ],
+    [
+      "0d9e1fb6-7a42-4ea6-b8ea-5ceb756b2914",
+      46.5,
+      47.8,
+      0.5,
+      "5678 bald man bear hug (from 46.5: a girl with glasses is in frame until 46.4)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true
+      }
+    ],
+    [
+      "1ad8a7c1-ae35-4f6b-9818-05a15cea14ac",
+      62.9,
+      64.9,
+      0.5,
+      "5662 older man in a cap, kiss on the cheek (from 62.9: two small girls stand in the far background until 62.85)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      150.3,
+      152.6,
+      0.5,
+      "5682 a woman makes a heart with him",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true
+      }
+    ],
+    [
+      "929bc3b8-8be7-4047-9bc4-8b8287a1df27",
+      0.3,
+      2.2,
+      0.5,
+      "5683 man in a beige shirt",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true
+      }
+    ],
+    [
+      "d1c4dee9-9015-449e-8351-0b7ae9f43939",
+      6.2,
+      8.7,
+      0.5,
+      "5676 young man in a white cap - hug, then both beaming - END",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true
+      }
+    ]
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "_brief": "Item 13 TO EDIT, variation 2 - the one that BREATHES (~50s): five different people from variation 1, longer answers. Opens on the question and the tefillin-app answer, the deepest answer (man in the black tank top: pain as an opportunity for growth) 4th, ends on the woman listing her whole family in Israel - 'what is better than that?'. Hebrew line (the artist, Supreme Court) read by two models. NO ZOOMS (LESSONS 80).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_GOODNEWS_2_V1.mp4",
+  "beats": [
+    [
+      "ef6cc318-2c76-40ed-810d-91b0150e273c",
+      0,
+      9.7333,
+      0.5,
+      "HOOK: the question once ('what's your good news?') and the young man with a kippah: 'I made a tefillin app ... 600 people wrapping tefillin now' - host 'congrats brother'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.75,
+        "y": 0.5
+      }
+    ],
+    [
+      "ce3d12fa-8c43-4fee-8258-213f1b4717e5",
+      0.3,
+      7.0667,
+      0.5,
+      "two young women: 'we did our Aliyah this year alone' - 'from France?' - 'Paris'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "ceee1b8a-4cc9-40fb-b282-4f90d41db0d5",
+      14.8333,
+      21.7667,
+      0.5,
+      "older man (Hebrew): 'I'm going to present my artwork at the Supreme Court this Monday' - host 'wow'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "2f2d05da-377a-44b4-a48f-0d4549e5f104",
+      15.3,
+      28.8333,
+      0.5,
+      "STRONGEST: man in the black tank top: 'learning to not see pain as a roadblock but as an opportunity for growth ... showing up to life a lot happier now'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.25,
+          1.25
+        ],
+        "x": 0.5,
+        "y": 0.55
+      }
+    ],
+    [
+      "41b52e2e-7b86-4bbf-ac4f-2e1541cd6d24",
+      0.6667,
+      15.3,
+      0.5,
+      "ENDING, woman in the white cap, arms open: 'I'm in Eretz Yisrael with my beautiful family ... and their three-and-a-half-month-old baby. What is better than that?'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ]
+  ]
+}

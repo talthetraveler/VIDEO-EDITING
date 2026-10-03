@@ -1,0 +1,131 @@
+{
+  "_brief": "Item 12, Tal 2026-10-03: Phone Call Video / Tel Aviv. Compilation (emotional): six different people answer the sign's question on the red phone. Order per COMPILATION-ORDER: a beaming face inside the first second (the Colombian visitor), a visibly different person every slot, the strongest answer 4th (the young woman: 'my mom is the strongest woman I know... Mom, I love you'), then a grandmother, ending on the older man's 'that's how life looks beautiful. Thank you.' No spoken question from Tal - the sign carries it. NO ZOOMS: one static framing per person.",
+  "_framing": "LESSONS 81: the man in the cap is framed head-and-shoulders (static 2.67x) because two boys stand right behind his elbow in both of his beats; the older man is framed at a static 2.0x and starts on 'seeing people happy' because a girl walks past him during 'what makes me happy'.",
+  "_notes": "V1 opened on the mother with her two boys (IMG_5768) and had the father with a toddler on his shoulders (IMG_5728): both OUT in V2 under LESSONS 81 (children who are strangers) - a blurred child in each would have been the beat. Excluded on purpose: IMG_5754 (political: 'IDF soldiers are moral'), the grandmother's 'grandson home safe from the army' and 'Bibi' lines (only her grandkids/health line is used), IMG_5742 (he says 'don't film' - consent), IMG_5715 (getting-married line: the two models disagree on wording and timing), IMG_5737b (a passer-by in front of the lens).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_HAPPY_TELAVIV_COMP_V2.mp4",
+  "beats": [
+    [
+      "c11e783c-50b0-4f17-bcfc-67d3d65fe607",
+      0.6,
+      9.1,
+      0.5,
+      "IMG_5751: HOOK - Colombian visitor, beaming from frame one: 'I just want to let the whole world know that Israel makes me happy. Shalom, shalom Israel, shalom the whole world'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "e4500984-ed4a-46c4-bdfa-48c9361c6a8e",
+      10.3333,
+      15,
+      0.5,
+      "IMG_5763: man in the cap: 'the thing that makes me happiest is doing good for people'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          2.67,
+          2.67
+        ],
+        "x": 0.82,
+        "y": 0.5
+      }
+    ],
+    [
+      "e4500984-ed4a-46c4-bdfa-48c9361c6a8e",
+      19.0667,
+      25.1,
+      0.5,
+      "IMG_5763: same take, jump cut past 'what else?': 'to bring people happiness, joy, good things, to smile all the time'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          2.67,
+          2.67
+        ],
+        "x": 0.82,
+        "y": 0.5
+      }
+    ],
+    [
+      "e0755095-2ea3-4aef-abf9-187153ceb425",
+      3.8333,
+      10.9333,
+      0.5,
+      "IMG_5727: woman in the headwrap: 'a person's happiness... is keeping Shabbat, getting closer to my Father in heaven'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.35,
+          1.35
+        ],
+        "x": 0.42,
+        "y": 0.5
+      }
+    ],
+    [
+      "7bd46818-7460-4b57-b5bc-4adfbe6cdd1b",
+      3.3,
+      11.4,
+      0.5,
+      "IMG_5725: STRONGEST, slot 4 - 'my mom is the strongest woman I know, she's my whole world... Mom, I love you' - held on her smile",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.55,
+        "y": 0.48
+      }
+    ],
+    [
+      "e16385db-75f0-4d14-85b7-3004df3ff7f0",
+      11.9,
+      15.8,
+      0.5,
+      "IMG_5743: grandmother, right after the daughter: 'happiness is being with the grandkids and the kids, that they stay healthy'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "2b4e138d-4194-45f0-962d-3b0ad995d1d5",
+      12.7667,
+      22.9333,
+      0.5,
+      "IMG_5726: ENDING - older man, slow and sure: 'seeing people happy, doing well, helping each other... and that's how life looks beautiful. Thank you.' - his pause before the last line is kept",
+      null,
+      {
+        "manual": true,
+        "z": [
+          2,
+          2
+        ],
+        "x": 0.55,
+        "y": 0.42
+      }
+    ]
+  ]
+}

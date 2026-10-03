@@ -1,0 +1,95 @@
+{
+  "_brief": "Item 13: the Black girl Tal remembered = IMG_9504 (TAL TEL AVIV), a young woman from Ghana, found on frames of every clip in both folders (she is the only one). Her own short video: hook = her best line at 0s ('the good news is I've met you'), then chronological: glad she stepped out -> first person who's spoken to her since she left the house -> people like you keep me positive -> you're the reason I'm out of my house today ... and I met you. NO ZOOMS (LESSONS 80): one static crop for the whole video (it is one locked wide take; the crop only removes empty pavement so faces read). Left out on purpose: her son's illness, the racist assault story, 'what makes you sad' (first words not verifiable by a second model) - nothing negative. Her name: both models hear 'I'm Lebanese' at 236s, which cannot be right for a woman from Ghana, so no name is used.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_GOODNEWS_GHANA_V1.mp4",
+  "beats": [
+    [
+      "9b991951-20d3-4d6b-9b1c-c6fdde202e27",
+      6.4,
+      9.9333,
+      0.5,
+      "HOOK: 'the good news is I've met you' / Tal: 'oh wow you're so sweet'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.43,
+        "y": 0.42
+      }
+    ],
+    [
+      "9b991951-20d3-4d6b-9b1c-c6fdde202e27",
+      11.9333,
+      17.4,
+      0.5,
+      "'I'm happy because I stepped out of home to see what's outside, and I'm glad I saw you' (Tal's question cut)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.43,
+        "y": 0.42
+      }
+    ],
+    [
+      "9b991951-20d3-4d6b-9b1c-c6fdde202e27",
+      18.9,
+      22.4667,
+      0.5,
+      "'because you're the first person who's spoken to me since I left the house'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.43,
+        "y": 0.42
+      }
+    ],
+    [
+      "9b991951-20d3-4d6b-9b1c-c6fdde202e27",
+      103.7667,
+      107.6333,
+      0.5,
+      "'I stay positive because people like you' (Tal's question cut - the answer stands alone)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.4,
+          1.4
+        ],
+        "x": 0.43,
+        "y": 0.42
+      }
+    ],
+    [
+      "9b991951-20d3-4d6b-9b1c-c6fdde202e27",
+      205.1667,
+      217.7667,
+      0.5,
+      "PAYOFF, one unbroken run: 'then I guess you're the reason why I'm out of my house today' ... 'the holidays kept me in ... today I just sat in the bus and decided to come here - and I met you'. The camera operator had stepped closer by this point in the take, so this beat is cropped a little LESS (1.2 not 1.4) to keep the two of them the same size on screen as in the beats before - constant framing, not a punch-in",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.43,
+        "y": 0.5
+      }
+    ]
+  ]
+}

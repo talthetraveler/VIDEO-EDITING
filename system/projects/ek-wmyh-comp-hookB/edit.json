@@ -1,0 +1,147 @@
+{
+  "_brief": "HOOK VARIATION of ek-wmyh-comp: the SAME body, opened cold on a different person's line - the Indian husband to the lens: \"Only she is with me, so I am happy.\" (he is not in the body; his wife is). Everything after the first 2.8s is identical to V1.",
+  "_notes": "See ek-wmyh-comp/edit.json. The word before his line is disputed between models (nothing/not) and is cut out.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_WMYH_COMP_HOOKB_V1.mp4",
+  "beats": [
+    [
+      "2e897b8f-840e-423f-a206-7e20ddce5800",
+      108.1333,
+      110.9,
+      0.5,
+      "HOOK B - the husband, to the lens: \"Only she is with me, so I am happy.\"",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.5,
+        "y": 0.45
+      }
+    ],
+    [
+      "c71f5d96-e40d-4686-a9f6-bf30bb2494ad",
+      2.0667,
+      6.4,
+      0.5,
+      "Tel Aviv pier, older man: Tal's question (the ONLY question in the film) -> \"You.\" -> Tal: \"I love you\" + fist bump",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "c71f5d96-e40d-4686-a9f6-bf30bb2494ad",
+      7.9,
+      9.2667,
+      0.5,
+      "his wife, laughing: \"Him.\" (Tal's second question is cut out; out before the camera whips away at 9.3)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "0cbcfcff-4baa-46f1-acf8-338ac8c5fd87",
+      8.2,
+      12.7333,
+      0.5,
+      "Jerusalem, Yael in the yellow dress: \"Being in the Holy Land, being in Jerusalem. I have the biggest merit of being here.\" (her \"Ummm, honestly\" is cut; out before the next question at 12.80)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.5,
+          1.5
+        ],
+        "x": 0.42,
+        "y": 0.33
+      }
+    ],
+    [
+      "4645f306-f281-46f5-af80-d0a5c12e6d98",
+      7.6667,
+      11.2333,
+      0.5,
+      "Old City, young religious man, HEBREW: \"Seeing a Jew like you smiling makes me happy\" - his grin - Tal: \"So nice to hear\"",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "2e897b8f-840e-423f-a206-7e20ddce5800",
+      58.7,
+      65.2,
+      0,
+      "STRONGEST, 4th person: the Indian wife in the market: \"Someone who loves, who is always with you. That makes me happy.\"",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.4,
+        "y": 0.62
+      }
+    ],
+    [
+      "9a23b172-9778-450f-b830-e965d4dc5a95",
+      10.9,
+      14.9667,
+      0.5,
+      "Old City, the man in glasses: \"When I can make my loved one smile.\" - Tal: \"When you make your loved one smile?\" - \"Yes.\"",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "9a23b172-9778-450f-b830-e965d4dc5a95",
+      19.1,
+      23,
+      0.5,
+      "same man, jump past Tal's follow-up: Tal: \"I have to find a loved one now.\" - \"Ah, I see. Okay. So make them smile.\" - and the biggest grin in the folder. END.",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ]
+  ]
+}

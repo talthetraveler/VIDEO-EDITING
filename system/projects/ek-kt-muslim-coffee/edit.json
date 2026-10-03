@@ -1,0 +1,325 @@
+{
+ "_brief": "Batch 2026-10-03 item 9, Kindness Tests: muslin guy in coffee shop (Tal: the folder is great). V1. Shape (formats/kindness-test.md, his own coffee-cart V4): ASK -> THE YES -> WHY (raised in love) -> IDENTITY (Israeli Muslim Arab / Im Jewish / brothers) -> HIS VALUE (we are all human beings) -> REVEAL -> REFUSAL held on his face -> THE WHY in his words -> PAY IT ON to an Eritrean street cleaner -> slow-mo shoulder pat. NO ZOOMS (Tal later 2026-10-03, LESSONS 80): every beat z [1,1], constant framing, hard cuts only, consecutive beats of one take share one framing. Cameras: VID_..055/057 = chest cam POV (9:16, dark under the awning), C0481/C0482 = Sony long lens (sideways, rotated). Audio: chest-cam throughout the shop and the cleaner exchange (the owners replies are much quieter on the Sony lav - it missed \"Jaffa\" and the whole Muslim Arab line); offsets measured: POV055 = C0481 - 19.45s (align-cameras 0.711, checked on two lines), VID057 = C0482 + 35.10s (0.595, checked on a matching pause). Every boundary checked on a 50ms RMS envelope of the playing audio. Captions from hand-segmented phrase files in cache/translate/<id>.json (Hebrew read with 4 transcriptions).",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "out": "EK_KT_MUSLIM_COFFEE_V1.mp4",
+ "beats": [
+  [
+   "c2417833-df9e-431c-93a1-97ccad1da33d",
+   25.9667,
+   28.0667,
+   0.5,
+   "ASK, Sony: Tal at the stall - \"I ran out of money,\" (chest-cam audio; the long lens shows who is asking and where)",
+   null,
+   {
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.42,
+    "y": 0.7,
+    "audio": {
+     "id": "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+     "at": 6.5167
+    }
+   }
+  ],
+  [
+   "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+   8.6333,
+   12.8,
+   0.5,
+   "POV: the owner listening to the ask - \"...and I dont have money to buy anything to drink, and Im really thirsty\" (cut in the 8.2-9.15 pause; ends before \"On me\")",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2417833-df9e-431c-93a1-97ccad1da33d",
+   33.2667,
+   34.6667,
+   0.5,
+   "Sony: Tal - \"I was wondering if you can help me\" (speaker change = angle change)",
+   null,
+   {
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.42,
+    "y": 0.7,
+    "audio": {
+     "id": "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+     "at": 13.8167
+    }
+   }
+  ],
+  [
+   "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+   15.2333,
+   16.9,
+   0.5,
+   "THE YES, POV on his face: \"Yeah, of course. What do you want? Tell me.\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2417833-df9e-431c-93a1-97ccad1da33d",
+   70,
+   71.9333,
+   0.5,
+   "Sony: Tal listening as the owner says \"We were raised in love, my friend\" - the reason, in his words",
+   null,
+   {
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.42,
+    "y": 0.7,
+    "audio": {
+     "id": "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+     "at": 50.55
+    }
+   }
+  ],
+  [
+   "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+   68.9333,
+   74.5,
+   0.5,
+   "IDENTITY, POV facing him: \"I was raised as an Israeli Muslim Arab guy\" / \"Oh, youre a Muslim?\" \"Yeah\" / \"Wow, bro, amazing\" (Tal put this line BACK in his own V4 - it is what makes brothers mean something)",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2417833-df9e-431c-93a1-97ccad1da33d",
+   93.9667,
+   94.9667,
+   0.5,
+   "Sony: Tal - \"Im Jewish\" (starts after a passer-by has left the left edge at 93.0, and after the operator zoom at 91.2-92.5)",
+   null,
+   {
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.42,
+    "y": 0.7,
+    "audio": {
+     "id": "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+     "at": 74.5167
+    }
+   }
+  ],
+  [
+   "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+   75.5333,
+   77.9667,
+   0.5,
+   "POV: \"Nice\" / \"Were brothers\" / \"Of course\" - Tals fist reaches across the counter",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+   132.8333,
+   136.6333,
+   0.5,
+   "POV, making the drink: \"It doesnt matter, were all human beings. It was never a problem.\" - his value, before the test is revealed",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2417833-df9e-431c-93a1-97ccad1da33d",
+   277.3333,
+   281,
+   0.5,
+   "REVEAL, Sony two-shot (both men in frame): \"And I actually do have money\" \"Wow\" \"And this was a test\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "audio": {
+     "id": "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+     "at": 257.8833
+    }
+   }
+  ],
+  [
+   "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+   267.3667,
+   275.1,
+   0.5,
+   "THE REFUSAL, held on his face (7.7s, one take, money in Tals hand): \"I have 400 shekels for you\" \"I will not take. No, no, thank you very much\" \"Nothing\" \"Why?\" \"Because I decided to give you without money\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2417833-df9e-431c-93a1-97ccad1da33d",
+   294.5667,
+   301.1,
+   0.5,
+   "THE PAYOFF, Sony two-shot: \"But I have 400 shekels for you\" / \"If I decided to give you this when you dont have money, even if you have money, I will not take it\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "audio": {
+     "id": "034890a7-ee5b-4aa0-9c80-d95421fd5948",
+     "at": 275.1167
+    }
+   }
+  ],
+  [
+   "e70e0866-7707-408e-b6bb-0e9d1cb61908",
+   0.5667,
+   2.6,
+   0.5,
+   "PAY IT ON, POV: the owner hands over a second coffee - \"Ill go give this coffee to someone who needs it\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "e70e0866-7707-408e-b6bb-0e9d1cb61908",
+   33.4667,
+   37.6667,
+   0.5,
+   "POV: walking up to the street cleaner - \"My brother, a coffee for you\" \"Why?\" (Hebrew) - he waves",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "7b778e2a-526a-4d56-96a3-13a53f57fb65",
+   2.5667,
+   6.4667,
+   0.5,
+   "Sony C0482: Tal in frame - \"He wanted to bring it to you\" - the handoff SEEN - \"This is for me?\" (Hebrew; chest-cam audio continues from the beat before)",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "audio": {
+     "id": "e70e0866-7707-408e-b6bb-0e9d1cb61908",
+     "at": 37.6667
+    }
+   }
+  ],
+  [
+   "7b778e2a-526a-4d56-96a3-13a53f57fb65",
+   10.8667,
+   16,
+   0.5,
+   "Tal crouched beside him: \"He said he often brings you coffee\" / the cleaner: \"Thank you, thank you. Yes, yes. A good man.\" (starts in a -33 dB pause)",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "audio": {
+     "id": "e70e0866-7707-408e-b6bb-0e9d1cb61908",
+     "at": 45.9667
+    }
+   }
+  ],
+  [
+   "7b778e2a-526a-4d56-96a3-13a53f57fb65",
+   36.3,
+   37,
+   0.5,
+   "ENDING, SLOW-MO x0.5: Tal pats his shoulder and gets up (own audio: the end of the cleaners line and a Hebrew thank-you, uncaptioned on a slowed beat)",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "speed": 0.5
+   }
+  ]
+ ],
+ "capY": 0.72,
+ "_capY": "0.72: in the early Sony shots Tals head sits at y~0.6 (rotated frame); 0.66 put the caption on his neck. POV faces are at y 0.1-0.45, so 0.72 sits on the counter. Check on stills.",
+ "_grade": "grade ON (default): this is Sony + chest-cam footage, not phone footage; Tal on this exact shoot: \"it was way too dark, no light added\". Check stills for colour.",
+ "captionFix": [
+  {
+   "match": "Nothing Why",
+   "to": "Nothing\nWhy?"
+  }
+ ],
+ "_framing": "NO ZOOMS. Every beat is z [a,a]. 13 beats are the full frame (1.0). The four early Sony beats (1,3,5,7 - the operators first framing, Tals head at y 0.6) share ONE static 1.3 crop (x .42 y .70): at 1.0 the caption sat on his chin (seen on the first render). They are never adjacent to each other or to another C0481 beat. Beats 10 and 12 are C0481 after the operator re-framed (heads at y 0.37) and stay at 1.0.",
+ "_captionFix": "layout only: Nothing. (the owner) and Why? (Tal) are 0.04s apart and the builder glues them into one line; the fix puts them on two lines. No wording is changed by a fix."
+}

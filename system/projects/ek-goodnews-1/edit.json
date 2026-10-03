@@ -1,0 +1,112 @@
+{
+  "_brief": "Item 13 TO EDIT, variation 1 - the FAST one (~28s): five short, joyful answers, different people from variation 2. Opens on the young woman whose brother just proposed (Hebrew, read by two models), the strongest (grandmother: another granddaughter, TODAY) 3rd, ends on the older man's 'every day you get up, say thank you. Amen.' NO ZOOMS (LESSONS 80). The host here is the red-haired guy holding the sign, not Tal; his questions are cut wherever the answer stands alone.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_GOODNEWS_1_V1.mp4",
+  "beats": [
+    [
+      "f894522f-f2fc-4463-8134-d363caadb863",
+      0.7333,
+      4.8,
+      0.5,
+      "HOOK: young woman (Hebrew) 'my brother proposed!' - 'really?' - 'yes!' and she laughs",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.25,
+          1.25
+        ],
+        "x": 0.45,
+        "y": 0.45
+      }
+    ],
+    [
+      "6fa3e1a7-8fff-4722-b941-1f9701263640",
+      0,
+      4.8,
+      0.5,
+      "young man: 'I left college to be here. It was not easy. I'm just happy to be here.'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.45,
+        "y": 0.5
+      }
+    ],
+    [
+      "ba62eca0-b5e7-4463-a1f7-b2c5b9646471",
+      10.2,
+      12.3,
+      0.5,
+      "STRONGEST, grandmother in the sun hat: 'my good news for today?'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "ba62eca0-b5e7-4463-a1f7-b2c5b9646471",
+      13.7,
+      21.0667,
+      0.5,
+      "...'I have another granddaughter' - 'wow' - 'TODAY!' (hands up) - 'mazal tov' (1.4s pause trimmed for pace; same take, same framing)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "6d1d8be2-4af0-42c5-a2a2-4e85703d2463",
+      6.7667,
+      11.8,
+      0.5,
+      "man with the kippah, pink shorts: 'I'm so lucky to be alive - I'm in Israel right now, the best place you could possibly be' (replaces the boy in the red cap: LESSONS 81, a stranger's child is not shown; a blurred face would have been the whole beat)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.25,
+          1.25
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "e8b38969-077f-472e-8bde-954cb7f48544",
+      0,
+      4.6,
+      0.5,
+      "ENDING, older man in the pink shirt: '...a good day that you're alive. So every day that you get up, you should say thank you. Amen.'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ]
+  ]
+}

@@ -1,0 +1,270 @@
+{
+ "note": "ek-hospital-smiles-v2 (no-zoom). HAND-KEYED: the first detection pass put the toddler ellipse on a doll beside her (8% detection) and the girl ellipse on Miss Israel (her face is the most detectable). Keys measured on a 0.02 full-frame grid at 8 frames each (toddler) / 6+10 frames (girl); radius fixed with prior=maxr. Beats 2,4,7 not clear so the 2-frame cut-edge ellipses stay (LESSONS 71).",
+ "beats": [
+  {
+   "frames": 118,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 24,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null
+  },
+  {
+   "frames": 72,
+   "x": [
+    0.25,
+    0.6
+   ],
+   "y": [
+    0.45,
+    0.65
+   ],
+   "prior": [
+    0.41,
+    0.54,
+    0.11
+   ],
+   "maxr": 0.11,
+   "keys": [
+    [
+     0,
+     0.42,
+     0.553
+    ],
+    [
+     12,
+     0.42,
+     0.548
+    ],
+    [
+     24,
+     0.395,
+     0.54
+    ],
+    [
+     36,
+     0.4,
+     0.536
+    ],
+    [
+     48,
+     0.41,
+     0.536
+    ],
+    [
+     60,
+     0.41,
+     0.53
+    ],
+    [
+     68,
+     0.42,
+     0.53
+    ],
+    [
+     71,
+     0.42,
+     0.53
+    ]
+   ]
+  },
+  {
+   "frames": 60,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null
+  },
+  {
+   "frames": 28,
+   "x": [
+    0.2,
+    0.7
+   ],
+   "y": [
+    0.45,
+    0.72
+   ],
+   "prior": [
+    0.4,
+    0.58,
+    0.15
+   ],
+   "maxr": 0.15,
+   "keys": [
+    [
+     0,
+     0.38,
+     0.59
+    ],
+    [
+     6,
+     0.39,
+     0.58
+    ],
+    [
+     12,
+     0.41,
+     0.58
+    ],
+    [
+     18,
+     0.45,
+     0.59
+    ],
+    [
+     24,
+     0.52,
+     0.58
+    ],
+    [
+     27,
+     0.55,
+     0.58
+    ]
+   ]
+  },
+  {
+   "frames": 108,
+   "x": [
+    0.3,
+    0.75
+   ],
+   "y": [
+    0.48,
+    0.72
+   ],
+   "prior": [
+    0.55,
+    0.6,
+    0.17
+   ],
+   "maxr": 0.17,
+   "keys": [
+    [
+     0,
+     0.55,
+     0.58
+    ],
+    [
+     6,
+     0.56,
+     0.6
+    ],
+    [
+     18,
+     0.58,
+     0.6
+    ],
+    [
+     33,
+     0.57,
+     0.59
+    ],
+    [
+     48,
+     0.56,
+     0.6
+    ],
+    [
+     63,
+     0.53,
+     0.61
+    ],
+    [
+     78,
+     0.53,
+     0.6
+    ],
+    [
+     93,
+     0.54,
+     0.59
+    ],
+    [
+     103,
+     0.55,
+     0.59
+    ],
+    [
+     107,
+     0.55,
+     0.59
+    ]
+   ]
+  },
+  {
+   "frames": 120,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null
+  },
+  {
+   "frames": 181,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 21,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 82,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  }
+ ]
+}

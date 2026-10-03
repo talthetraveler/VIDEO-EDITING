@@ -1,0 +1,187 @@
+{
+ "_brief": "NO ZOOMS (Tal 2026-10-03, LESSONS 80): every beat one constant framing, no ramps, no punch-ins, no drift, no wide-then-tight on a take; slow motion and hard cuts kept. V4 of the montage = V3 re-cut without zooms. CHANGE vs V3: the girl in pink pajamas (IMG_5655) is now muted + blurred - see her beat note; V3 shows her unblurred.",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "exposure": false,
+ "captionFix": [
+  {
+   "match": "זה את רוצה? תרגיש לי טוב",
+   "to": null
+  },
+  {
+   "match": "I'm so excited.",
+   "to": null
+  }
+ ],
+ "out": "EK_HOSPITAL_SMILES_V4.mp4",
+ "beats": [
+  [
+   "d9e0c969-cacf-439f-8c80-c87b19bc3150",
+   0,
+   3.9333,
+   0.5,
+   "HOOK (girl ~9): she throws her head back laughing with her new plush and squeezes it - \"Thank you so much!\" (2.74-3.46, two models). ONE static framing (z1.3, low) for the whole take: at full frame a \"PRE-OPERATION\" sign and the \"Pediatric surgery & intensive care\" plaque are above her - kept out of frame (care rule), no zoom",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.55,
+    "y": 0.62
+   }
+  ],
+  [
+   "b6651fb1-546a-4c7c-b0f7-219647841803",
+   0.2,
+   4.2,
+   0.5,
+   "baby boy on his Muslim mum's lap: Tal's hand gives him the toy box, he scrunches up laughing, then his mum laughs (IMG_8753, full frame, one shot)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "nocap": true
+   }
+  ],
+  [
+   "425e419b-3419-4664-8526-6ad01eee02e6",
+   1.8667,
+   2.8,
+   0.5,
+   "MUTED + FACE BLURRED in post (LESSONS 78): the girl in pink pajamas walks into Miss Israel's arms (IMG_5655). Treated as a family promised no publication: IMG_9228, 33s earlier in the same corridor, records \"we only send this - not to Facebook - to the people who bring the gifts\" (two models agree) said in front of her. Static framing z1.3 x0.38 keeps the seated blonde woman (relation unknown) out of frame",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.38,
+    "y": 0.45,
+    "nocap": true
+   }
+  ],
+  [
+   "425e419b-3419-4664-8526-6ad01eee02e6",
+   2.8,
+   4.6,
+   0.5,
+   "MUTED + FACE BLURRED in post (LESSONS 78): SLOW-MO: the hug (same take, same framing)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.38,
+    "y": 0.45,
+    "nocap": true,
+    "speed": 0.5
+   }
+  ],
+  [
+   "4fc5f37e-714b-4c19-9512-979bfce89db4",
+   10.8,
+   12.8,
+   0.5,
+   "boy ~9 in bed with his new toy, Tal leans in laughing (IMG_9241 FIRST family only - filming agreed on tape at 13.2-16.2)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "nocap": true
+   }
+  ],
+  [
+   "a39d4938-da04-4f2f-b80c-67c53fa8922a",
+   5.1,
+   7.4,
+   0.5,
+   "baby girl and her delighted mum, the gift bag handed over (IMG_8731, full frame)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "nocap": true
+   }
+  ],
+  [
+   "0bc33414-6b51-4c7f-8a46-edd666b6a932",
+   79.3667,
+   85.4,
+   0.5,
+   "ENDING (girl ~6 and her parents, IMG_5641): \"Look how much we love you - we love you!\" her dad smiling, hand on chin (one shot, full frame)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c286631c-4ec3-482d-9731-14967a2fe442",
+   86.5,
+   87.2,
+   0.5,
+   "CUT other camera (IMG_8713, time forward): she looks up beaming (full frame)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "nocap": true
+   }
+  ],
+  [
+   "c286631c-4ec3-482d-9731-14967a2fe442",
+   87.2,
+   88.5667,
+   0.5,
+   "SLOW-MO END: Tal makes a heart with his hands and she laughs - end on her face (same take, same framing)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "nocap": true,
+    "speed": 0.5
+   }
+  ]
+ ],
+ "post": [
+  "blur: blur-face.py <stage1> <stage2> blur-rules.json (girl in pink pajamas, beats 3-4)",
+  "mute: room tone IMG_5641 31.45-35.45 over 7.8667-12.5333 (mute-log-v4.json)"
+ ]
+}

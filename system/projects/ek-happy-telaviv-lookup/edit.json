@@ -1,0 +1,63 @@
+{
+  "_brief": "Item 12, Tal 2026-10-03: Phone Call Video / Tel Aviv. Single-person video: the woman in the grey dress (IMG_5724, English) - the most complete message in the folder. Cold open on 'if you're having a hard day... just look up, look at the sky, look at the trees', then 'when we're around good, uplifting, positive people and around nature it's very hard to not be happy', then the Tel Aviv line and 'have a great day'. NO ZOOMS: one static 1.8x framing on her for every beat.",
+  "_blur": "EK_HAPPY_TELAVIV_LOOKUP_V2.mp4 = the _PREBLUR render + blur-face.py with blur-rules.json: two boys who walk toward the camera behind her in beat 3.",
+  "_notes": "LESSONS 81 (children): her first sentence (5.8-12.9 'what makes me happy is being around nature and positive people, because we all feed off each other's energies') is NOT used - a boy of about 12 walks right behind her through all of it and a second boy follows; no framing removes them. The static 1.8x framing keeps the left background (families walking away) out of the other beats. Also left out: 25.1-26.8 'they use the trees and the leaves all the time' (both models hear it; it does not read as English) and the second voice after 35.65. 'good upbringing, uplifting' is captioned 'good, uplifting' (false start).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_HAPPY_TELAVIV_LOOKUP_V2_PREBLUR.mp4",
+  "beats": [
+    [
+      "43856887-fa63-403a-b414-326f7bea139a",
+      21,
+      25.0667,
+      0.5,
+      "IMG_5724: COLD OPEN - 'if you're having a hard day or a bad day, just look up, look at the sky, look at the trees'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.8,
+          1.8
+        ],
+        "x": 0.56,
+        "y": 0.52
+      }
+    ],
+    [
+      "43856887-fa63-403a-b414-326f7bea139a",
+      13.3333,
+      20.1,
+      0.5,
+      "IMG_5724: 'and when we're around good, uplifting, positive people and around nature, it's very hard to not be happy'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.8,
+          1.8
+        ],
+        "x": 0.56,
+        "y": 0.52
+      }
+    ],
+    [
+      "43856887-fa63-403a-b414-326f7bea139a",
+      27.1,
+      34.9,
+      0.5,
+      "IMG_5724: 'whether you're in a busy city like Tel Aviv, there's always clouds, blue sky, green... have a great day' - hold on her face",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.8,
+          1.8
+        ],
+        "x": 0.56,
+        "y": 0.52
+      }
+    ]
+  ]
+}

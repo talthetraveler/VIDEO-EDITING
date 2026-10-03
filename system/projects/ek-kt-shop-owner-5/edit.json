@@ -1,0 +1,194 @@
+{
+ "_brief": "Batch 2026-10-03 item 9, Kindness Tests: Shop owner 5 (a juice stand in the Old City, Mohammed). V1. Shape: who they are (I am Jewish / We are brothers, bro. One God) -> the ASK -> THE YES -> the giving seen -> THE WHY (It is not helping. We are brothers) -> REVEAL -> REFUSAL held on his face -> said again in the two-shot -> handshake -> slow-mo: Tal walks off drinking the juice. NO ZOOMS (LESSONS 80): every beat is one constant framing. Cameras: VID_..037 = chest cam POV (his face from 54s on; before that only his torso, so the opening is iPhone), IMG_8325 = iPhone observer, both men in frame. Sound: chest cam throughout (iPhone = POV - 2.68s, align-cameras 0.562, confirmed on \"Actually, I'll be honest\": 67.6 / 70.28).",
+ "_framing": "Every iPhone beat uses ONE static 1.2 framing with the window against the RIGHT edge (x 0.167-1.0). Reason: a boy with a ball stands at the left edge of the iPhone frame from 21.0s to past 24s (LESSONS 81: children who are strangers get blurred - here he is simply outside the frame; checked on 7 crops across 17.1-23.6, he is in none). The last beat uses the same size against the LEFT edge so Tal walking is whole; no child is in frame at 112-114.",
+ "_left_out": "45-53s: he first says the stand is not his (\"It's not for me. He's my cousin\") and Tal asks twice more - left out, the yes is what matters. 119s on is Tal and his crew talking about the test - never used.",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "out": "EK_KT_SHOP_OWNER_5_V1.mp4",
+ "beats": [
+  [
+   "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+   17.0667,
+   23.6,
+   0.5,
+   "WHO THEY ARE, iPhone two-shot (Tal in frame): \"I'm Jewish\" \"We are brothers\" \"We are brothers, bro. Exactly. One God.\" - it happened BEFORE the ask, so it opens the cut (time only moves forward)",
+   null,
+   {
+    "z": [
+     1.2,
+     1.2
+    ],
+    "x": 0.62,
+    "y": 0.5,
+    "audio": {
+     "id": "adc9847a-0a14-488b-8021-2dfc0c954824",
+     "at": 19.7467
+    }
+   }
+  ],
+  [
+   "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+   35.1333,
+   40.6667,
+   0.5,
+   "THE ASK: \"I want to have one juice, but actually I don't have money. Can you help me, please?\"",
+   null,
+   {
+    "z": [
+     1.2,
+     1.2
+    ],
+    "x": 0.62,
+    "y": 0.5,
+    "audio": {
+     "id": "adc9847a-0a14-488b-8021-2dfc0c954824",
+     "at": 37.8133
+    }
+   }
+  ],
+  [
+   "adc9847a-0a14-488b-8021-2dfc0c954824",
+   54.2,
+   55.6,
+   0.5,
+   "THE YES, POV at the counter: he pours - \"I'll give you this one, okay?\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+   56.9333,
+   58.6333,
+   0.5,
+   "THE GIVING SEEN, iPhone: the cup goes across - \"This is free one.\" \"For free?\"",
+   null,
+   {
+    "z": [
+     1.2,
+     1.2
+    ],
+    "x": 0.62,
+    "y": 0.5,
+    "audio": {
+     "id": "adc9847a-0a14-488b-8021-2dfc0c954824",
+     "at": 59.6133
+    }
+   }
+  ],
+  [
+   "adc9847a-0a14-488b-8021-2dfc0c954824",
+   63.1,
+   67.5333,
+   0.5,
+   "THE WHY, POV on his face: \"Really? Why did you help me?\" \"It's not helping. We are brothers.\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+   67.5667,
+   73.9333,
+   0.5,
+   "REVEAL, iPhone two-shot: \"Actually, I'll be honest. I have money. And I wanted to see how kind you are.\" \"No, it's okay.\"",
+   null,
+   {
+    "z": [
+     1.2,
+     1.2
+    ],
+    "x": 0.62,
+    "y": 0.5,
+    "audio": {
+     "id": "adc9847a-0a14-488b-8021-2dfc0c954824",
+     "at": 70.2467
+    }
+   }
+  ],
+  [
+   "adc9847a-0a14-488b-8021-2dfc0c954824",
+   76.6,
+   84.1333,
+   0.5,
+   "THE REFUSAL, HELD on his face (7.5s, one take, arms crossed, the money in Tal's hand): \"This is for you\" \"No, no\" \"It's okay\" \"This is for you?\" \"No, no. Please, I'm okay. Without this one.\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+   87.0333,
+   93.3333,
+   0.5,
+   "iPhone two-shot, the refusal said again: \"This is for you?\" \"No, no\" \"You don't want the money?\" \"No\" \"Why not?\" \"If you buy one, 15 shekel\" (a gift is a gift)",
+   null,
+   {
+    "z": [
+     1.2,
+     1.2
+    ],
+    "x": 0.62,
+    "y": 0.5,
+    "audio": {
+     "id": "adc9847a-0a14-488b-8021-2dfc0c954824",
+     "at": 89.7133
+    }
+   }
+  ],
+  [
+   "adc9847a-0a14-488b-8021-2dfc0c954824",
+   108.6667,
+   113.6,
+   0.5,
+   "the handshake: \"You know, we need to spread positivity\" \"We need to see it again\" \"Inshallah\" (starts in the pause at 108.67; the first version started between two words)",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
+   112.5,
+   113.3,
+   0.5,
+   "ENDING, SLOW-MO x0.5: Tal walks off drinking the juice (own iPhone audio, wordless: the crew does not speak until 116.3)",
+   null,
+   {
+    "z": [
+     1.2,
+     1.2
+    ],
+    "x": 0.42,
+    "y": 0.5,
+    "speed": 0.5
+   }
+  ]
+ ],
+ "capY": 0.66
+}

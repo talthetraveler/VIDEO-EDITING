@@ -1,0 +1,217 @@
+{
+ "_brief": "V4 = V3 WITHOUT ZOOMS (Tal 2026-10-03, LESSONS 80: \"stop with all the zooms its weird\"). Every beat is the full frame as shot (z 1, constant); the 4-frame ramps are deleted and their time folded into the hold that followed; contiguous beats of one take now join invisibly. Slow motion and hard cuts kept.  | V3 brief: Batch 2026-10-03 item 7 (Hospital Kids / Toys), video 2 of 3. ONE-CHILD story, Erez/MD-Motivator grammar: the little girl in pajamas (IMG_8745, one camera). Door -> \"I have a gift for you!\" -> the doll box opened -> snap + slow-mo on her biggest smile -> she hugs the box -> the ball -> a high five with Tal -> end on her face in slow-mo. Only caption: the opening line (read with two models; the cached transcript of this clip is an English hallucination, mapped in CORRECTIONS). Everything else wordless: the 25-54s audio produced no intelligible speech on either model. Location sound, no music (none supplied). grade:false + exposure:false.",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "exposure": false,
+ "out": "EK_HOSPITAL_DOLL_V4.mp4",
+ "beats": [
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   16.0333,
+   16.6667,
+   0.5,
+   "OPEN wide: Tal walks in with the doll box (his arm in frame), the little girl in pajamas at her door with her grandmother",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   16.6667,
+   18,
+   0.5,
+   "she and her grandmother beam at the door - Tal: \"I have a gift for you!\" (16.78-18.18, two models agree). Cut at 18.0, before the box passes in front of her face (V2 held to 18.6 and the box covered her)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   26,
+   27.4,
+   0.5,
+   "CUT in the room: Tal leans in laughing, she smiles behind her hand, mum smiling on the bed",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   32.6,
+   34,
+   0.5,
+   "CUT: the box is opened for her - she grins, mum smiling behind",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   38,
+   38.6,
+   0.5,
+   "medium: she looks into the box",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   38.6,
+   39.6,
+   0.5,
+   "the smile starts",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   39.6,
+   41.2,
+   0.5,
+   "SLOW-MO: the biggest smile of the day (sound real-time to 42.8)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "speed": 0.5
+   }
+  ],
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   43.8,
+   44.8,
+   0.5,
+   "CUT: she hugs the doll box, mum laughing behind her hand",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   55.2,
+   56.6,
+   0.5,
+   "a second gift: the big ball plush comes to her, mum laughing",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   62,
+   65.2,
+   0.5,
+   "Tal leans in for a high five - she laughs with her new ball (Tal in frame)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "c2518756-41d8-4543-971a-8f7d226f7c11",
+   67.6,
+   68.7333,
+   0.5,
+   "ENDING, SLOW-MO: her smile, holding the ball, mum smiling behind - end on her face",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "speed": 0.5
+   }
+  ]
+ ],
+ "captionFix": [
+  {
+   "match": "a gift for you!",
+   "to": "I have a gift for you!",
+   "_why": "the builder trims a segment that starts before the beat in proportion to its clock (16.0->16.8 = 40% = the first two words); this restores the line as both models heard it"
+  }
+ ]
+}

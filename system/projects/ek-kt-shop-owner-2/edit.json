@@ -1,0 +1,67 @@
+{
+ "_brief": "Batch 2026-10-03 item 9, Kindness Tests: Shop Owner 2 (a pita bakery in the Old City souk). V1. One camera: VID_..031 = POV 9:16. Arabic -> English captions. Shape: ASK -> the pita handed down -> reveal, the hand goes up -> the money waved away, both men laughing. Three shots, two cuts. NO ZOOMS: every beat is the full frame. Few captions on purpose: only lines two models agree on are drawn, and the faces carry the rest.",
+ "_left_out": "31.5-40s which bread (white or brown) - slows the ask. Tal's phone clips IMG_8318/8319 are a wide of the stall from across the lane with shoppers walking between camera and subject the whole time - not used.",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "out": "EK_KT_SHOP_OWNER_2_V1.mp4",
+ "beats": [
+  [
+   "cb82ad35-45ae-4657-ae8e-b53112c91a3f",
+   24.8,
+   31.5333,
+   0.5,
+   "THE ASK at the bread stall, the baker leaning over his counter: \"Sorry to bother you, brother. I'm hungry and I have nothing on me. Could I have a piece or something?\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "cb82ad35-45ae-4657-ae8e-b53112c91a3f",
+   40.2333,
+   54.2,
+   0.5,
+   "THE YES SEEN, then REVEAL + REFUSAL in one take (14s): a pita comes down into his hand - \"Honestly, we're doing a test\" - the baker's hand goes up: \"No!\" - \"A test of Arab generosity\" - the man behind him starts laughing",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "cb82ad35-45ae-4657-ae8e-b53112c91a3f",
+   58.3333,
+   64.4333,
+   0.5,
+   "PAYOFF, the money held out and waved away: \"No, no, no\" - both men laughing - \"Bless your heart\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ]
+ ],
+ "capY": 0.66,
+ "captionFix": [
+  {
+   "match": "Honestly I have money No",
+   "to": "Honestly I have money\nNo!"
+  }
+ ],
+ "_captionFix": "layout only: the baker answers No! 0.36s after the line before it and the builder glued the two onto one line (HONESTLY I HAVE MONEY NO). The fix puts his No! on its own line. No wording is changed."
+}

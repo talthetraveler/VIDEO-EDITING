@@ -1,0 +1,62 @@
+{
+  "_brief": "Batch 2026-10-03 item 14, WHAT MAKES YOU HAPPY. Individual-person video: Tzipora (LIELLE interviews, IMG_1221 58.7s), the most emotional answer in the folder. She was asked \"what is one thing you are proud of\" and then \"what message would you give someone going through a hard time\" - both questions are CUT, the answers stand alone (formats/human-story.md, Tal 2026-10-02). Shape: her message cold (\"Don't give up.\") -> \"About two years ago I actually beat cancer...\" told whole, in her order -> the message (\"Looking back in six months it'll be so much easier... you're never alone... everything's gonna be okay\") -> held 0.6s on her face after the last word, before the interviewer speaks. No line is said twice: the cold open is lifted out of the message, which then starts on its second sentence. NO ZOOMS (LESSONS 80): one constant crop (z1.45 on her) for the whole film; three shots, two cuts. The pauses inside her sentences are hers and are kept.",
+  "_notes": "In/out measured on a 50ms RMS envelope of the lav audio + WhisperX-aligned words (tools/align-cache.py, this clip aligned 2026-10-03). English, read by two models (Groq turbo + large-v3): same words. Her name is transcribed Apoora/Tepora by the models - it is not captioned. She says she was a teenager two years ago; she reads as an adult (18-20) on the frames - flagged in the report.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_WMYH_TZIPORA_V1.mp4",
+  "beats": [
+    [
+      "85a72fee-5613-4d46-8983-571090938416",
+      36.4667,
+      37.8,
+      0.5,
+      "COLD OPEN - \"Don't give up.\" (speech 36.60-37.45; silence either side)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.45,
+          1.45
+        ],
+        "x": 0.56,
+        "y": 0.33
+      }
+    ],
+    [
+      "85a72fee-5613-4d46-8983-571090938416",
+      5.4667,
+      29.1,
+      0.5,
+      "her story, whole: \"About two years ago, I actually beat cancer... a very hard process as a teenage girl... I really tried to see God's hand in everything... the hardest six months of my life and beating it, coming on top.\" Out in the 100ms dip before the interviewer's \"Wow\".",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.45,
+          1.45
+        ],
+        "x": 0.56,
+        "y": 0.33
+      }
+    ],
+    [
+      "85a72fee-5613-4d46-8983-571090938416",
+      38.5,
+      55.3,
+      0.5,
+      "her message, from its second sentence: \"Looking back in six months, it'll be so much easier... Everyone loves you (her friend hugs her here)... you're never alone. Hashem's with you, your friends are with you, everything's gonna be okay.\" - then 0.6s on her face; out before \"Beautiful, thank you\" (55.42).",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.45,
+          1.45
+        ],
+        "x": 0.56,
+        "y": 0.33
+      }
+    ]
+  ]
+}

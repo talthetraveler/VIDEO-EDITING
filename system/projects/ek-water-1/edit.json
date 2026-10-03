@@ -1,0 +1,215 @@
+{
+  "_brief": "Batch 2026-10-03 item 5, GIVING WATER TO WORKERS (Frame.io GIVNG WATER TO WORKERS). Variation 1 of 4: ONE worker, wordless, Erez-v1 grammar (wide -> 4-frame snap zoom -> tight hold -> hard cut), slow-mo on the handoff, the drink, the hug and the smile after the kiss. Tal: 'give him the water -> slow-motion shot drinking -> reaction -> end'. Source: IMG_8613, Tel Aviv promenade at golden hour, Tal and the street cleaner. Picture-led: grade off (phone footage that already looks right, LESSONS 72), no captions (nothing intelligible is said - transcript is one hallucinated 'you'), soundtrack = this clip's own street ambience as one continuous bed (bedOnly), so 12 picture cuts do not make 12 audio splices. Passers-by avoided: a cyclist behind the cleaner 1.9-2.5s and a shirtless runner crossing the lens ~4.5-4.7s (checked on frames) are both outside every beat.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "silent": true,
+  "grade": false,
+  "music": "../ek-water-1/bed.wav",
+  "bedOnly": true,
+  "out": "EK_WATER_PROMENADE_V1.mp4",
+  "beats": [
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      1.4333,
+      1.9333,
+      0.5,
+      "WIDE: the cleaner pushing his cart, Tal steps in holding the bottle out - the giver and the gift in the first frame",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.0,
+          1.08
+        ],
+        "x": 0.6,
+        "y": 0.42
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      2.6,
+      2.7333,
+      0.5,
+      "4-frame snap zoom onto the handoff (both faces + hands)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.08,
+          1.8
+        ],
+        "x": 0.56,
+        "y": 0.4
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      2.7333,
+      3.4,
+      0.5,
+      "SLOW-MO: he takes the water with both hands, smiling at Tal",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.8,
+          1.86
+        ],
+        "x": 0.56,
+        "y": 0.4,
+        "speed": 0.5
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      3.4,
+      3.8,
+      0.5,
+      "tight hold, real time: the bottle in his hands (ends before the runner crosses at ~4.5)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.86,
+          1.9
+        ],
+        "x": 0.56,
+        "y": 0.4
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      5.0,
+      5.1333,
+      0.5,
+      "CUT + snap zoom onto his face - he is already drinking",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.2,
+          2.4
+        ],
+        "x": 0.42,
+        "y": 0.34
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      5.1333,
+      6.0,
+      0.5,
+      "SLOW-MO close-up: he drinks (the payoff Tal asked for)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.4,
+          2.48
+        ],
+        "x": 0.42,
+        "y": 0.34,
+        "speed": 0.5
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      8.6667,
+      9.4667,
+      0.5,
+      "CUT: he holds the bottle out to Tal, both hands on it - the two of them connecting (a woman walks behind at ~6.5-7.8, kept out)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.8,
+          1.86
+        ],
+        "x": 0.55,
+        "y": 0.36
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      10.4667,
+      10.6,
+      0.5,
+      "snap zoom as Tal pulls him in (a jogger passes behind at ~10.4 at the left edge, outside this crop - checked on the render)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.4,
+          2.0
+        ],
+        "x": 0.52,
+        "y": 0.35
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      10.6,
+      11.6,
+      0.5,
+      "SLOW-MO: the hug",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.0,
+          2.06
+        ],
+        "x": 0.52,
+        "y": 0.35,
+        "speed": 0.5
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      11.6,
+      12.5,
+      0.5,
+      "the hug holds, real time; he reaches up to kiss Tal's cheek",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.06,
+          2.12
+        ],
+        "x": 0.52,
+        "y": 0.35
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      12.5,
+      13.0,
+      0.5,
+      "SLOW-MO, LAST SHOT: the kiss on the cheek and his biggest smile of the clip (12.7-13.0) - ends on the smile",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.12,
+          2.2
+        ],
+        "x": 0.52,
+        "y": 0.35,
+        "speed": 0.5
+      }
+    ]
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "_brief": "Tal 2026-10-03 (batch item 4, Frame.io FLOWERS FOR STRANGERS / OLD LADY JERUSALEM): \"Keep this one very wholesome and simple. You can use a little bit of what she says, especially anything about how happy she is, but it doesn't need to be dialogue-heavy. I would rather see: her smiling - close-ups of her reaction - a few of her best words/lines - English captions if she's speaking Hebrew - emotional music underneath.\" No music file exists (and none is ripped): the cut holds on location sound; the track is still to be added. Captions from cache/translate/local-1f0b76943a391c55.json, RE-READ 2026-10-03 with two models (see its note). KEY FINDING: 'you made me so happy' in the earlier cut is the CAREGIVER saying 'you made HER so happy' - the old lady's lips are closed when it starts. Observer 8345 = POV - 2.03s, 8346 = POV - 35.13s (envelope xcorr, checked on the handover and the hand-hold).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_OLD_LADY_JERUSALEM_V1_r7_nozoom.mp4",
+  "beats": [
+    [
+      "local-1f0b76943a391c55",
+      6.1333,
+      7.0667,
+      0.5,
+      "HOOK, one shot: she is wheeled up to us, sees the sunflower, mouth opens in surprise - 'THANK YOU!' (6.5-7.0, both models) NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "4310284e-29f3-41a4-87bf-3a41a01d1c4a",
+      5.0333,
+      5.4667,
+      0.5,
+      "observer iPhone: Tal, crouched in, puts the sunflower in her hands - the giving SEEN, Tal in frame. POV sound underneath (graft 7.0667). NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "audio": {
+          "id": "local-1f0b76943a391c55",
+          "at": 7.0667
+        }
+      }
+    ],
+    [
+      "local-1f0b76943a391c55",
+      7.5,
+      8.9333,
+      0.5,
+      "her face, flower in hand - 'HEALTH AND JOY!' (7.62-8.9) NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-1f0b76943a391c55",
+      19.9333,
+      27.0667,
+      0.5,
+      "ONE SHOT, the emotional centre: she looks up at her bouquet ('wow', uncaptioned) - the camera whips to her caregiver, beaming: 'YOU MADE HER SO HAPPY!' ... 'THAT'S HOW IT SHOULD BE.' - whips back to her, fingers at her lips: 'JUST GIVE JOY, BE HEALTHY!'. Out 27.0667 in the -45 dB gap before her own 'toda lachem'. NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "local-1f0b76943a391c55",
+      47.3667,
+      49.2,
+      0.5,
+      "she blesses Tal, hand raised - 'STAY HEALTHY!' (47.4-48.95) - his hand reaches in NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "88291fa1-8adf-4b21-b985-83d3d7cd9dbf",
+      14.0667,
+      15.3333,
+      0.5,
+      "observer wide: Tal holds her hand, goodbye - 'BYE!' (POV sound, graft 49.2) NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "audio": {
+          "id": "local-1f0b76943a391c55",
+          "at": 49.2
+        }
+      }
+    ]
+  ],
+  "denoise": 10,
+  "music": "../ek-old-lady-jerusalem/LOCATION-SOUND.wav",
+  "bedOnly": true,
+  "_sound": "bedOnly: the soundtrack is LOCATION-SOUND.wav in this folder - the SAME source windows the beats play (graft window, or real-time window under a slow-mo beat), extracted as continuous runs, denoised once per run (-a 10, 0.5s pre-roll), no per-beat gain. Built by the ek story-editor soundtrack.py (beat-by-beat denoise + level-matching put 20 dB steps and DeepFilterNet onset dips at 4-frame snap joins where the sound is really continuous: measured -64 dB holes at 4.57s/4.70s in r3). Rebuild it if any beat window changes. No music: Tal asked for emotional music on the old-lady cut; none exists in the repo and none is ripped. The track ends with a 0.35s fade: the observer phone hears market chatter right up to the last frame.",
+  "_nozoom": "r6_nozoom: Tal 'stop with all the zooms its weird'. One constant framing per shot. The caregiver section (19.93-27.07) is now ONE unbroken POV shot - the camera's own whips carry it from her to the caregiver and back. The last slow-mo is uncropped (r5 held a 1.8x crop left to keep a man in black out; uncropped he walks on the right, beside her, not between her and the camera). r7: the O47 slow-mo ending is OUT - uncropped (no zoom allowed) a man in black walks through the frame right beside her for the whole shot (seen on r6 frames 13.0-13.7s). The film now ends on the observer wide of Tal holding her hand, BYE."
+}

@@ -1,0 +1,14 @@
+{
+  "_brief": "Batch 2026-10-03 item 11, MIC ON STREET / PILOT - the one answer in the folder that carries a video alone (IMG_9500, young man in a white tee at the mic stand): 'Captain Smith, you're a true hero. Thank you for what you did saving all those people. And you taught us all a lesson that it doesn't matter what walk of life you are, what religion, where you're from, you went out there and you saved the lives of strangers, and we need more people like you in the world. And we wish you all the best. Thank you so much.' One unbroken take: he never searches for a word, so there is nothing to jump-cut, and his first words (0.56s) already say who and why. LESSONS 80: no zooms, one constant full frame. grade:false. Sound: LOCATION-SOUND.wav (one denoise for the run).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "capY": 0.72,
+  "music": "../ek-pilot-lesson/LOCATION-SOUND.wav",
+  "bedOnly": true,
+  "out": "EK_PILOT_LESSON_V1.mp4",
+  "beats": [
+    ["2a9f19f4-efae-4fa7-bcd9-4954a4ef9b0c", 0.4333, 15.8, 0.5, "THE WHOLE ANSWER, one take: 'Captain Smith, you're a true hero ... we need more people like you in the world. And we wish you all the best. Thank you so much.' (first word 0.56; last word ends 15.63; the clip ends 15.89)", null, {"exact": true, "z": [1, 1]}]
+  ]
+}

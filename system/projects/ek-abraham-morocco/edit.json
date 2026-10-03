@@ -1,0 +1,44 @@
+{
+  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS: individual answers, no intro. LESSONS 80: no zooms - one constant full frame. This one: the red-haired woman who answers IN ARABIC to Morocco (C0525) - the most personal answer in the folder: 'I love Morocco so much. My grandfather is from Morocco. And I want to visit you. I'd love to visit you.' One unbroken take, nothing to jump-cut: she never searches for a word. In 1.7667 = in her laugh, 0.13s before her 'ana' (word onset 1.90 by RMS in 50ms steps: -16 -> -10 dB; large-v3 on 0-3.2s puts 'ah' at 1.92 and 'ana' at 2.14), after an unclear opening ('kam? ...' - four readings, four different words, so it is not used). the cached stamp 'ana 0.90-2.70' was a 1.8s smear over that opening and was corrected in the cache to 1.90 (hand_fixed, original kept); out 8.2 = 0.65s on her smile after her last word (speech ends ~7.55 by RMS), before she steps off with the sign (8.4). The trailing 'bisalam' (in peace) that the turbo model places at 7.6-9.7 is NOT heard by large-v3 and sits after the out - not captioned, not claimed. It is ~6.5s long because that is how long the answer is; a second take (C0526) says the same words and would be a repeat. English captions hand-written from the Arabic (CORRECTIONS.json): timing verified, wording unverified.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "capY": 0.79,
+  "music": "../ek-abraham-morocco/LOCATION-SOUND.wav",
+  "bedOnly": true,
+  "out": "EK_ABRAHAM_MOROCCO_V1.mp4",
+  "captionFix": [
+    {
+      "match": "DROPLINE",
+      "to": null
+    },
+    {
+      "match": "I love",
+      "to": "I love Morocco",
+      "exact": true
+    },
+    {
+      "match": "Morocco so much",
+      "to": "so much",
+      "exact": true
+    }
+  ],
+  "beats": [
+    [
+      "543ec9e8-e410-4426-99fa-74769fccf153",
+      1.7667,
+      8.2,
+      0.5,
+      "THE WHOLE ANSWER, one take, in Arabic: she is mid-laugh, then 'I love Morocco so much. My grandfather is from Morocco. And I want to visit you. I'd love to visit you.' - ends on her smile",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ]
+  ]
+}

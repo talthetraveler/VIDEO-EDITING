@@ -1,0 +1,174 @@
+{
+  "_brief": "Tal 2026-10-03 (batch item 2, Frame.io FLOWERS FOR STRANGERS / CLEANER JERUSLAEM): \"The strongest hook should be me giving him the flowers and immediately seeing him smile/react. I don't think we need much dialogue here. Make it mostly: Giving flowers -> reaction -> smile -> close-ups -> a few fast emotional cuts. Keep it short and visual.\" Erez grammar (wide -> 4-frame snap -> tight hold -> hard cut), slow-mo on the smile and the laugh, grade:false. POV = local 968x1280 Meta file; captions come from the c957346b hand translation via an audio graft at the same second (local = c957 + 0.04s, corr 0.99) - every captioned span re-read 2026-10-03 with Groq large-v3 + turbo (he): bishvilcha 8.06, bishvilcha ach sheli ha-yakar 9.5-11.0, anachnu rotzim lesameach otcha 13.0-14.6, toda (8349) 8.28. Observer 8342 sits at POV - 5.54s (envelope xcorr 0.35, twice; the handshake lines up at 8342 28.0 = POV 33.5). The first rose is handed over HIDDEN behind his back in 8342, so the handover is the POV shot and 8342 is used for Tal beside him, grinning, right after it.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_CLEANER_JERUSALEM_V1_r5_nozoom.mp4",
+  "beats": [
+    [
+      "local-db2e5fd3621b3654",
+      7.6667,
+      10.7667,
+      0.5,
+      "HOOK + HANDOVER, one shot: Tal's white rose held out, he takes it - 'FOR YOU' - then looks at Tal, puzzled - 'MY DEAR BROTHER' (9.22-11.07). Out 10.7667, the last frame before the whip pan. NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "audio": {
+          "id": "c957346b-5401-429c-b782-be3d5cd93a23",
+          "at": 7.6267
+        }
+      }
+    ],
+    [
+      "30882e1a-19d0-40a5-a782-48c15407d64f",
+      5.2333,
+      6.5333,
+      0.5,
+      "observer iPhone: Tal steps out beside him, grinning, the girls behind laughing. POV sound underneath (graft = POV 10.7733). NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "audio": {
+          "id": "c957346b-5401-429c-b782-be3d5cd93a23",
+          "at": 10.7333
+        }
+      }
+    ],
+    [
+      "local-db2e5fd3621b3654",
+      12.0667,
+      12.6,
+      0.5,
+      "SLOW-MO x0.5: THE SMILE as a girl hands him a red rose. Sound real-time 12.07-13.13 (the girl's 'ze bishvilcha' uncaptioned), ends before 'anachnu' at 13.32. NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "speed": 0.5
+      }
+    ],
+    [
+      "local-db2e5fd3621b3654",
+      13.1333,
+      14.8333,
+      0.5,
+      "soft smile at the roses, then at us - 'WE WANT TO MAKE YOU HAPPY' (13.32-14.63). Starts at the slow beat's sound out-point. NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "audio": {
+          "id": "c957346b-5401-429c-b782-be3d5cd93a23",
+          "at": 13.0933
+        }
+      }
+    ],
+    [
+      "local-db2e5fd3621b3654",
+      17.3667,
+      18.2333,
+      0.5,
+      "SLOW-MO x0.5: THE BIGGEST LAUGH, roses in hand. Sound real-time 17.37-19.10 ('toda' + laughter, uncaptioned on a slowed beat). NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "speed": 0.5
+      }
+    ],
+    [
+      "local-db2e5fd3621b3654",
+      19.9667,
+      20.8333,
+      0.5,
+      "still grinning, he holds the roses out NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true
+      }
+    ],
+    [
+      "48f10648-d053-4e9b-b4ee-3304767f4551",
+      5,
+      7.2333,
+      0.5,
+      "LATER, the lit street (observer iPhone, proxy): he pushes his cart toward the camera, smiling, and grins - out before the jump in the source at 7.5 NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "48f10648-d053-4e9b-b4ee-3304767f4551",
+      7.5667,
+      8.9333,
+      0.5,
+      "ENDING (after the source's own jump): he lifts the red roses to us - 'THANK YOU' (toda 8.28-8.68, both models) NO-ZOOM (LESSONS 80): z:[1,1] for the whole shot.",
+      null,
+      {
+        "manual": true,
+        "exact": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ]
+  ],
+  "denoise": 10,
+  "music": "../ek-cleaner-jerusalem/LOCATION-SOUND.wav",
+  "bedOnly": true,
+  "_sound": "bedOnly: the soundtrack is LOCATION-SOUND.wav in this folder - the SAME source windows the beats play (graft window, or real-time window under a slow-mo beat), extracted as continuous runs, denoised once per run (-a 10, 0.5s pre-roll), no per-beat gain. Built by the ek story-editor soundtrack.py (beat-by-beat denoise + level-matching put 20 dB steps and DeepFilterNet onset dips at 4-frame snap joins where the sound is really continuous: measured -64 dB holes at 4.57s/4.70s in r3). Rebuild it if any beat window changes. No music: Tal asked for emotional music on the old-lady cut; none exists in the repo and none is ripped.",
+  "_nozoom": "r5_nozoom: Tal 'stop with all the zooms its weird'. One constant framing per shot, the 4-frame ramps and punch-ins removed, the handover / smile / laugh kept as hard cuts and slow-mo. The smile slow-mo now starts at 12.0667 (its old normal-speed lead-in was the 'wide' half of a wide-then-tight)."
+}

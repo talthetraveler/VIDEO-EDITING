@@ -1,0 +1,523 @@
+{
+  "_brief": "Batch 2026-10-03 item 5, GIVING WATER TO WORKERS. Variation 4 of 4: the fast MONTAGE - every worker in the folder, one give -> one reaction each, wordless. Opener and closer differ from the singles: OPENS on Tal on the curb holding the pack (IMG_8609, the false start of the Sri Lanka take - LESSONS 71: open on the giver holding the prop), CLOSES on the Old City man's hand on his heart in slow motion (IMG_1215 - he is in no other cut). Order by COMPILATION-ORDER: a smile inside 2s; never two similar people back to back (fence crew -> market cleaner -> promenade cleaner -> Sri Lanka crew -> Old City man; the two construction crews and the two older bald men are kept apart); the strongest moment (the promenade hug) 4th of 6. Two of the six encounters (Old City man, Omar in the market) are given by a woman from Tal's team, not by Tal - the rest are Tal. Aram (IMG_1239) is left out: his back is to the camera for all 39s and the operator's hand and a can sit in the frame. Bed = the promenade clip's own street ambience, looped once with a 1.5s crossfade (31.8s; forward only, so nothing in it can play backwards), under the whole cut (bedOnly). Grade off.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "silent": true,
+  "grade": false,
+  "music": "../ek-water-4/bed.wav",
+  "bedOnly": true,
+  "out": "EK_WATER_MONTAGE_V1.mp4",
+  "beats": [
+    [
+      "14f9937c-8e4a-4689-b937-bf4a3917d3b6",
+      0.8667,
+      1.0,
+      0.5,
+      "OPEN: Tal on the curb turning, the pack of water under his arm (the giver holding the gift, frame 0)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.4,
+          1.45
+        ],
+        "x": 0.42,
+        "y": 0.43
+      }
+    ],
+    [
+      "14f9937c-8e4a-4689-b937-bf4a3917d3b6",
+      1.0,
+      1.1333,
+      0.5,
+      "4-frame snap zoom onto Tal and the pack",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.45,
+          1.95
+        ],
+        "x": 0.4,
+        "y": 0.42
+      }
+    ],
+    [
+      "14f9937c-8e4a-4689-b937-bf4a3917d3b6",
+      1.1333,
+      1.3,
+      0.5,
+      "tight: Tal in profile with the pack (cut before he turns to the lens at 1.33)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.95,
+          2.0
+        ],
+        "x": 0.4,
+        "y": 0.42
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      3.0,
+      3.4667,
+      0.5,
+      "FENCE CREW: Tal at the site fence, two workers already smiling up at him (first smile at ~0.8s)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.06,
+          1.08
+        ],
+        "x": 0.47,
+        "y": 0.36
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      3.4667,
+      3.6,
+      0.5,
+      "snap zoom onto Tal, the bottle and the two workers",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.08,
+          1.9
+        ],
+        "x": 0.47,
+        "y": 0.31
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      3.6,
+      4.6,
+      0.5,
+      "tight: the bottle goes up over the fence",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.9,
+          1.95
+        ],
+        "x": 0.47,
+        "y": 0.31
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      4.9,
+      5.5,
+      0.5,
+      "SLOW-MO: the worker's hand meets the bottle - the giving, seen",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.95,
+          2.0
+        ],
+        "x": 0.47,
+        "y": 0.31,
+        "speed": 0.5
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      47.6667,
+      48.3333,
+      0.5,
+      "close-up: the worker in the yellow hard hat drinks",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.85,
+          1.93
+        ],
+        "x": 0.52,
+        "y": 0.3
+      }
+    ],
+    [
+      "51fca699-92a6-4551-8d1d-294281c7fac5",
+      50.5333,
+      51.4,
+      0.5,
+      "his friend laughing, bottle in hand",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.9,
+          1.96
+        ],
+        "x": 0.5,
+        "y": 0.36
+      }
+    ],
+    [
+      "54dffb0d-afd0-42ec-9bd1-615e2fdf9cbf",
+      4.2,
+      5.0,
+      0.5,
+      "MARKET (Mahane Yehuda): a woman from Tal's team reaches Omar at his cart",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.5,
+        "y": 0.35
+      }
+    ],
+    [
+      "54dffb0d-afd0-42ec-9bd1-615e2fdf9cbf",
+      5.0,
+      5.1333,
+      0.5,
+      "snap zoom onto the two of them",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.2,
+          1.7
+        ],
+        "x": 0.45,
+        "y": 0.3
+      }
+    ],
+    [
+      "54dffb0d-afd0-42ec-9bd1-615e2fdf9cbf",
+      5.1333,
+      5.8,
+      0.5,
+      "tight: he takes the water",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.7,
+          1.73
+        ],
+        "x": 0.45,
+        "y": 0.3
+      }
+    ],
+    [
+      "54dffb0d-afd0-42ec-9bd1-615e2fdf9cbf",
+      5.8,
+      6.5,
+      0.5,
+      "SLOW-MO: they both laugh",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.73,
+          1.8
+        ],
+        "x": 0.45,
+        "y": 0.3,
+        "speed": 0.5
+      }
+    ],
+    [
+      "54dffb0d-afd0-42ec-9bd1-615e2fdf9cbf",
+      12.0,
+      12.5333,
+      0.5,
+      "Omar still smiling, bottle in hand, as she says goodbye",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.6,
+          1.64
+        ],
+        "x": 0.42,
+        "y": 0.3
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      1.4333,
+      1.9333,
+      0.5,
+      "PROMENADE (Tel Aviv, golden hour): Tal steps in front of the cleaner's cart with the bottle",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.0,
+          1.08
+        ],
+        "x": 0.6,
+        "y": 0.42
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      2.6,
+      3.4,
+      0.5,
+      "the cleaner takes it with both hands, smiling",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.8,
+          1.85
+        ],
+        "x": 0.56,
+        "y": 0.4
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      5.1333,
+      5.9,
+      0.5,
+      "close-up: he drinks",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.3,
+          2.38
+        ],
+        "x": 0.42,
+        "y": 0.34
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      10.6,
+      11.4,
+      0.5,
+      "SLOW-MO: the hug (the strongest moment in the folder, 4th of 6 encounters)",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.0,
+          2.06
+        ],
+        "x": 0.52,
+        "y": 0.35,
+        "speed": 0.5
+      }
+    ],
+    [
+      "5f56e11f-d9f7-4227-93fb-9b8a2027e3b2",
+      12.5,
+      13.0,
+      0.5,
+      "SLOW-MO: the kiss on the cheek, his biggest smile",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.12,
+          2.2
+        ],
+        "x": 0.52,
+        "y": 0.35,
+        "speed": 0.5
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      33.4,
+      34.2,
+      0.5,
+      "SRI LANKA CREW, Tal's POV: his hands tearing a bottle off the pack",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.15,
+          1.2
+        ],
+        "x": 0.5,
+        "y": 0.58
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      44.4333,
+      44.5667,
+      0.5,
+      "snap zoom onto the worker",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.0,
+          1.7
+        ],
+        "x": 0.48,
+        "y": 0.36
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      44.5667,
+      45.5,
+      0.5,
+      "the worker's smile, bottle in hand",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.7,
+          1.76
+        ],
+        "x": 0.48,
+        "y": 0.36
+      }
+    ],
+    [
+      "7c856ad1-35ca-4bbf-b067-73b5e66c03a7",
+      24.1,
+      24.6,
+      0.5,
+      "the other camera, SLOW-MO: the high five",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.8,
+          1.86
+        ],
+        "x": 0.32,
+        "y": 0.36,
+        "speed": 0.5
+      }
+    ],
+    [
+      "5dbd6722-4c46-43b5-8fa8-2a2e61ab8bc9",
+      63.6,
+      64.4,
+      0.5,
+      "POV: the worker stands, hands on hips, bottle in hand, smiling",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.5,
+          1.54
+        ],
+        "x": 0.32,
+        "y": 0.4
+      }
+    ],
+    [
+      "91c9bf59-60fb-491a-adc4-40cae2b0a0e8",
+      2.4,
+      3.4,
+      0.5,
+      "OLD CITY (Jerusalem): the same woman walks up to a man in a neon work shirt",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.55,
+        "y": 0.35
+      }
+    ],
+    [
+      "91c9bf59-60fb-491a-adc4-40cae2b0a0e8",
+      3.4,
+      3.5333,
+      0.5,
+      "snap zoom onto him",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          1.2,
+          2.0
+        ],
+        "x": 0.57,
+        "y": 0.3
+      }
+    ],
+    [
+      "91c9bf59-60fb-491a-adc4-40cae2b0a0e8",
+      3.5333,
+      4.4,
+      0.5,
+      "tight: he takes the water, beaming",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.0,
+          2.06
+        ],
+        "x": 0.57,
+        "y": 0.3
+      }
+    ],
+    [
+      "91c9bf59-60fb-491a-adc4-40cae2b0a0e8",
+      4.4,
+      5.1,
+      0.5,
+      "END, SLOW-MO: his hand goes to his heart",
+      null,
+      {
+        "manual": true,
+        "nocap": true,
+        "z": [
+          2.06,
+          2.16
+        ],
+        "x": 0.57,
+        "y": 0.3,
+        "speed": 0.5
+      }
+    ]
+  ]
+}

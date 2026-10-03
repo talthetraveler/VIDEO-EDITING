@@ -1,0 +1,303 @@
+{
+ "note": "VOICES V3. One child left in the cut: a boy in a black tee who walks in behind the man in the pink shirt ('keep spreading positivity'), from frame-in-beat ~27, crosses behind the speaker's head (hidden for 4 frames) and comes out on the left. The beat is split in three so the blur stops while he is hidden. Hand-keyed off a coordinate grid, every frame looked at through the crossing.",
+ "beats": [
+  {
+   "frames": 28,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 87,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 73,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 37,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 88,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 57,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 68,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 83,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 63,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 128,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 60,
+   "x": [
+    0.2,
+    0.42
+   ],
+   "y": [
+    0.27,
+    0.4
+   ],
+   "prior": [
+    0.31,
+    0.335,
+    0.05
+   ],
+   "maxr": 0.05,
+   "from": 25,
+   "keys": [
+    [
+     26,
+     0.287,
+     0.338
+    ],
+    [
+     28,
+     0.29,
+     0.338
+    ],
+    [
+     32,
+     0.285,
+     0.338
+    ],
+    [
+     35,
+     0.276,
+     0.333
+    ],
+    [
+     40,
+     0.294,
+     0.336
+    ],
+    [
+     45,
+     0.336,
+     0.341
+    ],
+    [
+     50,
+     0.335,
+     0.333
+    ],
+    [
+     52,
+     0.338,
+     0.335
+    ],
+    [
+     56,
+     0.338,
+     0.332
+    ],
+    [
+     57,
+     0.35,
+     0.33
+    ],
+    [
+     59,
+     0.352,
+     0.33
+    ]
+   ]
+  },
+  {
+   "frames": 4,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 17,
+   "x": [
+    0.12,
+    0.3
+   ],
+   "y": [
+    0.27,
+    0.4
+   ],
+   "prior": [
+    0.215,
+    0.328,
+    0.05
+   ],
+   "maxr": 0.05,
+   "keys": [
+    [
+     0,
+     0.225,
+     0.322
+    ],
+    [
+     1,
+     0.235,
+     0.325
+    ],
+    [
+     3,
+     0.226,
+     0.33
+    ],
+    [
+     6,
+     0.215,
+     0.328
+    ],
+    [
+     8,
+     0.21,
+     0.329
+    ],
+    [
+     11,
+     0.208,
+     0.33
+    ],
+    [
+     16,
+     0.197,
+     0.33
+    ]
+   ]
+  },
+  {
+   "frames": 64,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 41,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  }
+ ]
+}

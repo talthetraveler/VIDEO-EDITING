@@ -1,0 +1,173 @@
+{
+ "_brief": "Tal 2026-10-03, item 6 Homeless Videos / Homeless 2, Option 1: \"more story/dialogue driven. Use the strongest parts of him speaking and our interaction ... MAKE SURE people are NOT passing by ... filmed in Hebrew, translate them and use English subtitles.\" Different man from Roman (feed homeless): older, grey shirt, white/blue cap, born in Ukraine. Source IMG_9279 (iPhone, 650s, one locked-ish wide from across the arcade until ~495s, then a reverse angle from beside the table). The street is very busy: every beat window was checked on frames for passers-by (see _checks) and several strong lines were dropped for that reason (his dream, his father, \"of course\" after giving his food away, Tal s \"it could have been me\").",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "out": "EK_HOMELESS2_STORY_V2.mp4",
+ "beats": [
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   9.6667,
+   15.9333,
+   0.5,
+   "OPEN, full frame: Tal lays food out on a folding table in front of the man sitting on the pavement; he smiles up at Tal - \"Come on. It s all good.\" \"Come on, I mean it.\" \"Come here, look.\" (in at 9.6667: a passer-by is on the left edge until 9.6)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   34.1667,
+   37.1333,
+   0.5,
+   "the chairs are set for him - \"You re with us. Sit, join us. We ll eat together.\" (starts after the passer-by at 33.0-33.6)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   388.2,
+   393.9333,
+   0.5,
+   "at the table: \"What do you need?\" \"You ve given so much. First of all, I can t finish this.\" (clean 386-394.5)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   397.9667,
+   401.7,
+   0.5,
+   "\"Maybe I ll give it to my friends. To someone hungry.\" (out at 401.70: \"hungry\" has decayed by 401.6 and a cyclist s wheel enters the frame at 401.73)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   441.8333,
+   446.3333,
+   0.5,
+   "\"I don t know you, and you invite me, like this, and bring a table...\" (in at 441.8333, 0.1s before his first word; the couple passes 439.5-441.4, and one man s arm is still on the extreme left edge for the first 4 frames - 441.93 was tried and sat on the word onset)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   446.3333,
+   448.8667,
+   0.5,
+   "same shot, continuous (split only so his quiet voice and Tal s loud one get their own speech-run measurement): Tal: \"Why not? We re human beings.\" (out before the man who walks in at 449.9)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   506.7,
+   514.9333,
+   0.5,
+   "reverse angle: \"...not used to things like this.\" \"Why?\" \"Just because.\" - a pause, Tal smiles - \"So don t be embarrassed. Come, we ll eat with you.\" (in after the passer-by 505.3-506.6)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   558.7,
+   560.9333,
+   0.5,
+   "his message: \"Don t give up.\" (the question is cut - the answer stands alone; out before the arm that crosses at 562.0)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   572.7667,
+   585.8,
+   0.5,
+   "ENDING: \"Were there times you wanted to give up?\" - he thinks - \"No.\" ... \"Maybe in words, yes. But inside, no.\" - hold",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ]
+ ],
+ "capY": 0.72,
+ "_v2": "V2 (Tal, later 2026-10-03: \"stop with all the zooms its weird\", LESSONS 80): every zoom, snap and punch-in removed; every beat is the full frame at a constant z=1; contiguous pieces of one take merged into one shot so no wide-then-tight cut on the same take. The \"Understand me, I m embarrassed\" graft over Tal s face is gone (at full frame the man would be visible not speaking his own line); the embarrassed exchange is now one real-time shot 506.7-514.93. capY 0.72 so captions sit below faces in the full frame. V1 (with zooms) kept as EK_HOMELESS2_STORY_V1.mp4.",
+ "_checks": {
+  "passers_by": "IMG_9279 is a locked wide across a busy arcade pavement until ~495s, then a reverse angle from beside the table. Method: (1) a frame-difference trace against the +-3s temporal median, 10 fps over all 650s, to find where to look; (2) full-frame strips at 0.33-0.5s steps over every candidate window; (3) a 0.5s strip of the RENDERED file. Clean windows used: 9.67-15.93, 34.17-37.13, 388.2-393.93, 397.97-401.70, 441.83-448.87, 506.7-514.93, 558.7-560.93, 572.77-585.8. Known residue: a passer s arm on the extreme left edge for the first 4 frames of the 441.83 shot; a soldier walks far behind the group at 507.2-508.7 (background, not between camera and subject).",
+  "dropped_for_passers": "the dream exchange (140.7-147.9: a man pushes a cardboard cart through frame, then a woman), \"Of course, why not?\" after he says he would give his food away (402-411: cyclist, then four people), Tal s \"it could have been me\" (451-461: five people), \"Do you want to be in touch with your father?\" (243.5-246.5), \"We re here to be with you and hear your story\" (people behind 519.5-526.5), \"Fight. Be a fighter.\" (562-564 an arm crosses the lens; 564.3-565.8 a woman walks right behind his head).",
+  "hebrew": "Every used span was transcribed twice in Hebrew (Groq whisper-large-v3 and whisper-large-v3-turbo, language forced he, on 20-60s windows) and the English written by hand from the two readings: cache/translate/ab2e1c39-...json. The cached transcript had auto-detected English and was an invented paraphrase; replaced with the large-v3 Hebrew pass (original kept as .bak-pre-ek-homeless-2026-10-03). Least certain: \"Come on, for real\" (one model only), \"and bring a table\" (two of four readings), \"Don t give up\" (both models hear hands/yadayim = the idiom leharim yadayim; an English speaker in the clip at 623s says \"he said that he d never give up\"). TIMING verified, WORDING unverified by a Hebrew speaker.",
+  "boundaries": "verify-cut HEAD flags at 397.97, 441.83 and 506.70 come from smeared word timestamps; each was settled with check-boundary.mjs: the RMS trace is -44 dB / -44 dB / -53 dB at the cut with the speech onset 0.1-0.5s later. Post-render re-transcription: no cut chops a word.",
+  "not_captioned": "his soft \"No.\" at 578.7 (0.15s, under the speech-run detector s 0.18s minimum) and the interviewer s echo \"No?\" at 579.9.",
+  "caption_sync": "caption-sync.py on V2: 25 captions, median coverage 0.85, opening error 0.05s, 0 adrift; 3 captions under 50% speech (\"Come on for real\", \"Come here look\", \"Don t give up\") - each is a short quiet phrase whose caption is held into the pause after it (LESSONS 62), not a caption on the wrong moment."
+ }
+}

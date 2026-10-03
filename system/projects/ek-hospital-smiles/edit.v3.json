@@ -1,0 +1,272 @@
+{
+ "_brief": "Batch 2026-10-03 item 7 (Hospital Kids / Toys), video 3 of 3. Fast REACTIONS MONTAGE, five different children, none of them the subject of ek-hospital-hug, ek-hospital-doll or the crown story. COMPILATION-ORDER: 1 warmest/shortest face (girl laughing with her plush) -> 2 visibly different (baby boy and his Muslim mum laughing) -> 3 the strongest (pajama girl walks into Miss Israel's hug, slow-mo) -> 4 a boy in bed with Tal laughing -> 5 a baby girl and her delighted mum -> END the warmest: a girl's parents \"we love you\" -> Tal's heart hands and her laugh. Erez grammar: wide -> 4-frame snap -> tight -> cut. Captions only on the two lines that matter, both read with two models. Location sound, no music. grade:false + exposure:false.",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "exposure": false,
+ "out": "EK_HOSPITAL_SMILES_V3.mp4",
+ "beats": [
+  [
+   "d9e0c969-cacf-439f-8c80-c87b19bc3150",
+   0,
+   1.2,
+   0.5,
+   "1 HOOK (girl, ~9): she throws her head back laughing with her new green plush (IMG_8755). Crop keeps the floor-name plaque above her out of frame (V1 showed it)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.6,
+     1.64
+    ],
+    "x": 0.62,
+    "y": 0.5
+   }
+  ],
+  [
+   "d9e0c969-cacf-439f-8c80-c87b19bc3150",
+   1.2,
+   3.9333,
+   0.5,
+   "PUNCH-IN cut (same take, time continuous): she squeezes it - \"Thank you so much!\" (2.74-3.46, two models agree) Out-point 3.93: \"toda raba\" ends 3.44-3.46 on two models, a third engine heard a word to 3.68 - out after both.",
+   null,
+   {
+    "manual": true,
+    "z": [
+     2.05,
+     2.1
+    ],
+    "x": 0.52,
+    "y": 0.5
+   }
+  ],
+  [
+   "b6651fb1-546a-4c7c-b0f7-219647841803",
+   0.2,
+   1.5333,
+   0.5,
+   "2 (baby boy, Muslim mum): Tal's hand gives him the toy box (IMG_8753, POV - the giving seen)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.2,
+     1.22
+    ],
+    "x": 0.45,
+    "y": 0.4
+   }
+  ],
+  [
+   "b6651fb1-546a-4c7c-b0f7-219647841803",
+   1.5333,
+   1.6667,
+   0.5,
+   "snap zoom",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.22,
+     1.7
+    ],
+    "x": 0.45,
+    "y": 0.4
+   }
+  ],
+  [
+   "b6651fb1-546a-4c7c-b0f7-219647841803",
+   1.6667,
+   4.2,
+   0.5,
+   "tight: he scrunches up laughing, then his mum laughs",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.7,
+     1.76
+    ],
+    "x": 0.45,
+    "y": 0.4
+   }
+  ],
+  [
+   "425e419b-3419-4664-8526-6ad01eee02e6",
+   1.8667,
+   2.8,
+   0.5,
+   "3 STRONGEST (girl ~11, pajamas, plush under her arm): she walks into Miss Israel's arms (IMG_5655)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.3,
+     1.32
+    ],
+    "x": 0.45,
+    "y": 0.45
+   }
+  ],
+  [
+   "425e419b-3419-4664-8526-6ad01eee02e6",
+   2.8,
+   4.6,
+   0.5,
+   "SLOW-MO: the hug (picture 2.8-4.6; sound real-time to 6.4, ending before a \"thank you\" that a second engine places at 6.72)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.32,
+     1.4
+    ],
+    "x": 0.45,
+    "y": 0.45,
+    "speed": 0.5
+   }
+  ],
+  [
+   "4fc5f37e-714b-4c19-9512-979bfce89db4",
+   10.8,
+   12.8,
+   0.5,
+   "4 (boy ~9, in bed with his new toy): Tal leans in laughing (IMG_9241 first family - filming consent asked and given on tape at 14.1-17.1; the second family in this clip declined publication and is NOT used)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.4,
+     1.44
+    ],
+    "x": 0.55,
+    "y": 0.38
+   }
+  ],
+  [
+   "a39d4938-da04-4f2f-b80c-67c53fa8922a",
+   5.1,
+   7.4,
+   0.5,
+   "5 (baby girl, mum): the gift bag is handed over, mum delighted (IMG_8731; this window avoids the IV stand that is in frame at 12-15s; a wall monitor stays in the background) In-point 5.1 = the RMS dip (-42 dB) before mum's \"wow\".",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.2,
+     1.24
+    ],
+    "x": 0.55,
+    "y": 0.42
+   }
+  ],
+  [
+   "0bc33414-6b51-4c7f-8a46-edd666b6a932",
+   79.3667,
+   81,
+   0.5,
+   "6 ENDING (girl ~6 and her parents, IMG_5641): her parents watching her unwrap - \"Look how much we really love you\"",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.58,
+    "y": 0.4
+   }
+  ],
+  [
+   "0bc33414-6b51-4c7f-8a46-edd666b6a932",
+   81,
+   81.1333,
+   0.5,
+   "snap zoom onto her dad",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.3,
+     1.8
+    ],
+    "x": 0.58,
+    "y": 0.4
+   }
+  ],
+  [
+   "0bc33414-6b51-4c7f-8a46-edd666b6a932",
+   81.1333,
+   85.4,
+   0.5,
+   "tight: her dad smiling, hand on his chin - \"We love you! We love you!\"",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.8,
+     1.86
+    ],
+    "x": 0.58,
+    "y": 0.4
+   }
+  ],
+  [
+   "c286631c-4ec3-482d-9731-14967a2fe442",
+   86.5,
+   87.2,
+   0.5,
+   "CUT other camera (IMG_8713, synced +0.71s, time forward): she looks up beaming In-point 86.5 (RMS -32) - V2 started at 86.6 on the onset of a voice (verify-cut flag).",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.8,
+     1.84
+    ],
+    "x": 0.4,
+    "y": 0.45
+   }
+  ],
+  [
+   "c286631c-4ec3-482d-9731-14967a2fe442",
+   87.2,
+   88.5667,
+   0.5,
+   "SLOW-MO END: Tal makes a heart with his hands and she laughs - end on her face. Picture to 88.57 so the real-time sound ends at 89.93, in a -36 dB dip (at 89.6 a voice was mid-phrase)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.84,
+     1.9
+    ],
+    "x": 0.4,
+    "y": 0.45,
+    "speed": 0.5
+   }
+  ]
+ ],
+ "captionFix": [
+  {
+   "match": "זה את רוצה? תרגיש לי טוב",
+   "to": null
+  },
+  {
+   "match": "I'm so excited.",
+   "to": null
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "note": "ek-happy-telaviv-lookup V2 (LESSONS 81). Two background boys who walk TOWARD the camera behind her in the last beat: a small boy in a red football shirt (video frames 325-457) and a boy in a black tee and cap (frames 458-558). HAND-KEYED on a 0.02 grid from the pre-blur render (540x960), keys every 8 frames (red) / 6-14 frames (black). Rule-beats here are frame slices, not edit beats: beats 1+2 of the edit (325 frames) are clear - the children in them are far off or seen from behind.",
+ "beats": [
+  { "frames": 325, "x": [2, 3], "y": [2, 3], "prior": null, "clear": true },
+  { "frames": 133, "x": [0.0, 0.45], "y": [0.40, 0.55], "prior": [0.2, 0.465, 0.04], "maxr": 0.04,
+    "keys": [[0, 0.063, 0.463], [8, 0.118, 0.477], [16, 0.16, 0.482], [24, 0.168, 0.48], [32, 0.214, 0.465],
+             [40, 0.223, 0.465], [48, 0.227, 0.462], [56, 0.244, 0.462], [64, 0.26, 0.467], [72, 0.286, 0.462],
+             [80, 0.307, 0.474], [88, 0.319, 0.478], [96, 0.352, 0.463], [104, 0.348, 0.46], [112, 0.352, 0.46],
+             [122, 0.36, 0.458], [132, 0.365, 0.456]] },
+  { "frames": 101, "x": [0.55, 0.9], "y": [0.36, 0.48], "prior": [0.72, 0.415, 0.05], "maxr": 0.05,
+    "keys": [[0, 0.67, 0.418], [14, 0.685, 0.416], [24, 0.721, 0.414], [34, 0.739, 0.412], [40, 0.743, 0.412],
+             [44, 0.734, 0.414], [50, 0.73, 0.414], [56, 0.743, 0.414], [64, 0.748, 0.412], [72, 0.734, 0.418],
+             [80, 0.703, 0.421], [88, 0.676, 0.421], [96, 0.676, 0.423], [100, 0.672, 0.42]] }
+ ]
+}

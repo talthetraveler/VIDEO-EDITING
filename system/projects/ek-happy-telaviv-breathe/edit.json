@@ -1,0 +1,115 @@
+{
+  "_brief": "Item 12, Tal 2026-10-03: Phone Call Video / Tel Aviv - 'What makes you happy?' Single-person video: the woman in the brown cardigan, two takes (IMG_5738 then IMG_5741). Hebrew -> English captions. Cold open = her best line, then take 1, then the rest of take 2, ending on her face after 'love you'. NO ZOOMS (LESSONS 80): constant framing per take; 5741 is a wider take so it gets one static 1.3x for both of its beats.",
+  "_blur": "LESSONS 81: a small girl walks in at the left edge for the last 9 frames of beat 5 (her face in profile). EK_HAPPY_TELAVIV_BREATHE_V1.mp4 = the _PREBLUR render + blur-face.py with blur-rules.json.",
+  "_notes": "Cut from her list: 'good sex' (5738 11.35-11.85) - brand call, easy to restore by joining beats 4 and 5. Not used: 5741 2.2-3.3 (unclear fragment, two models disagree), 5738 17.8-19.5 'love you all, ciao' (her second take ends on 'love you'). Boundaries checked on word timings of two models + RMS in 50 ms steps.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "capY": 0.6,
+  "out": "EK_HAPPY_TELAVIV_BREATHE_V1_PREBLUR.mp4",
+  "beats": [
+    [
+      "e4d3ebf7-f474-47dd-a745-f48a9cf5fdce",
+      3.4,
+      6.7,
+      0.5,
+      "IMG_5741: COLD OPEN - 'every morning that we wake up and breathe, that makes us happy' - her best line",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.4,
+        "y": 0.55
+      }
+    ],
+    [
+      "775a6071-ad59-4866-b625-af7857216f2d",
+      0,
+      3.4,
+      0.5,
+      "IMG_5738: she picks up: 'this is stressful!' ... 'hello?' - the funny, nervous start",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "775a6071-ad59-4866-b625-af7857216f2d",
+      5,
+      9.1333,
+      0.5,
+      "IMG_5738: 'okay so what makes me happy? let's think about it. first of all, being rich at heart'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "775a6071-ad59-4866-b625-af7857216f2d",
+      9.8,
+      10.9333,
+      0.5,
+      "IMG_5738: 'good food'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "775a6071-ad59-4866-b625-af7857216f2d",
+      12.1667,
+      17.6333,
+      0.5,
+      "IMG_5738: 'good shopping. that's life, cuties, that's life. wake up in the morning and say thank you God'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "e4d3ebf7-f474-47dd-a745-f48a9cf5fdce",
+      6.8333,
+      15.4,
+      0.5,
+      "IMG_5741: take 2 continues: 'so be good, smile, listen to music, scream at the top of your lungs ... you'll be happy. love you' - ends on her smile",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.4,
+        "y": 0.55
+      }
+    ]
+  ]
+}

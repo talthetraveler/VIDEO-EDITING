@@ -1,0 +1,287 @@
+{
+  "_brief": "Batch 2026-10-03 item 8, HUG FOR STRANGER / TEL AVIV TAL. Tal: 'one with people speaking'. V2 = no zooms (LESSONS 80). V3 = children out (Tal: 'you need to blur the kids faces'): kids piling in -> the older man's kiss; Tal's answer ('I saw the world...') is now HEARD over three adult hugs because his own shot has five children standing round him; Mexico starts after the hug (a teenage girl passes at left before 97.1); 'Fine, fine, thank you. How are you?' dropped (a teenage boy and a boy in a kippah come into frame); the opening shot is framed x0-0.70 so the four children at frame right are out, and ends at 0.93 ('I would love a hug' lost: the camera pans and no static framing keeps Tal in and the children out); the boy behind the pink-shirt man is blurred on the render (blur-face.py, blur/rules-*.json). Shape: the ask ('Come give me a hug') -> the hug -> 'I love you, bro' / 'the world needs more love right now' -> the stranger asks why -> Tal: 'I saw the world right now is so divided. There's so much hate right now.' over hugs -> arms wide ('Come'), a woman runs in, slow-mo hug, 'You are so beautiful. Keep smiling.' -> the older man's kiss -> a tourist: 'Where are you from?' 'Mexico!' 'Viva Mexico!' -> a second stranger, unprompted: 'The world needs more love, bro. Keep spreading positivity.' -> the man in the beige shirt: 'How are you, my brother?' ... 'I love you.' 'Me too.' END. Natural sound, English speech; captions from the WhisperX-aligned transcript (tools/align-cache.py on 5676/5682/5683/5667), every used span read with a second engine (Groq large-v3 on the window) + RMS. 5682 30-43 alignment was wrong (Groq whole-second segments) and was re-timed by hand from two engines + RMS; see hand_fixed in that transcript. Cut out: 'my boy, chag sameach' x2 (holiday greeting), 'Never forget, we love you' (ambiguous), 'Yo soy de Miami'.",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_HUGS_TELAVIV_VOICES_V3_noblur.mp4",
+  "captionFix": [
+    {
+      "match": "My boy, hugs a man.",
+      "to": null
+    },
+    {
+      "match": "Hugs a man.",
+      "to": null
+    },
+    {
+      "match": "What made you like do this concept",
+      "to": "What made you do this concept"
+    },
+    {
+      "match": "Bro, I don't know. Just,",
+      "to": "I don't know."
+    },
+    {
+      "match": "I'm from Miami.",
+      "to": null
+    },
+    {
+      "match": "I'M FROM MIAMI",
+      "to": null
+    },
+    {
+      "match": "I'M FROM",
+      "to": null
+    },
+    {
+      "match": "I'm",
+      "to": null
+    },
+    {
+      "match": "Fine, fine, thank you.",
+      "to": null
+    }
+  ],
+  "beats": [
+    [
+      "d1c4dee9-9015-449e-8351-0b7ae9f43939",
+      0,
+      0.9333,
+      0.5,
+      "5676 the ask: 'Come give me a hug' - ONE static framing (x0-0.70): four children stand at frame right; out at 0.93 because the camera pans and Tal leaves that framing ('I would love a hug' is lost with it)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.43,
+          1.43
+        ],
+        "x": 0.35,
+        "y": 0.35
+      }
+    ],
+    [
+      "d1c4dee9-9015-449e-8351-0b7ae9f43939",
+      5.2,
+      8.1,
+      0.5,
+      "5676 the hug: 'I love you, bro' 'the world needs more love right now' (from 5.2: a small boy is at frame right until 5.1; 'my boy, chag sameach' x2 out)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "1ad8a7c1-ae35-4f6b-9818-05a15cea14ac",
+      41.6,
+      44.0333,
+      0.5,
+      "5662 PICTURE older woman's hug / SOUND 5676: 'I love that you're doing this. What made you do this concept?' (Tal's own shot has five children around him)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "audio": {
+          "id": "d1c4dee9-9015-449e-8351-0b7ae9f43939",
+          "at": 10.1
+        }
+      }
+    ],
+    [
+      "0d9e1fb6-7a42-4ea6-b8ea-5ceb756b2914",
+      46.5,
+      47.7333,
+      0.5,
+      "5678 PICTURE bald man's hug / SOUND 5676: 'I don't know'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "audio": {
+          "id": "d1c4dee9-9015-449e-8351-0b7ae9f43939",
+          "at": 12.5333
+        }
+      }
+    ],
+    [
+      "827a714f-3015-4c10-9133-249df6739f5e",
+      3,
+      5.9333,
+      0.5,
+      "5686 PICTURE young man in white runs in and hugs / SOUND 5676: 'I saw the world right now is so divided. Like there's so much hate right now.'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "audio": {
+          "id": "d1c4dee9-9015-449e-8351-0b7ae9f43939",
+          "at": 13.7667
+        }
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      35.6,
+      37.5,
+      0.5,
+      "5682 ARMS WIDE ('Come'), she runs in",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      37.5,
+      38.6333,
+      0.5,
+      "5682 SLOW-MO the hug (sound real-time 37.5-39.77)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "speed": 0.5
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      39.7667,
+      42.5333,
+      0.5,
+      "5682 'You are so beautiful. Keep smiling.' (out before the cyclist at 42.6)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "1ad8a7c1-ae35-4f6b-9818-05a15cea14ac",
+      62.9,
+      65,
+      0.5,
+      "5662 older man in a cap, kiss on the cheek (from 62.9: two small girls in the far background until 62.85). SOUND: crowd ambience from 5682 62.0 - his own sound is 'chag sameach' x3 (no holiday greetings)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "nocap": true,
+        "audio": {
+          "id": "63e42d06-d6d7-4adb-988b-099bb9c42428",
+          "at": 62
+        }
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      97.5333,
+      101.8,
+      0.5,
+      "5682 'Where are you from?' 'Mexico!' 'Viva Mexico!' - ONE static framing (x0-0.625) for the take: two teenage girls walk past the camera, left until 97.1 and right from 100.2",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.6,
+          1.6
+        ],
+        "x": 0.3,
+        "y": 0.46
+      }
+    ],
+    [
+      "a9cd5c35-29d9-4b34-9375-9fdadcefcd74",
+      7.0333,
+      9.7333,
+      0.5,
+      "5667 'The world needs more love, bro. Keep spreading positivity.' (a boy in black walks in behind from ~8.3: BLUR)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "929bc3b8-8be7-4047-9bc4-8b8287a1df27",
+      0,
+      2.1333,
+      0.5,
+      "5683 beige shirt: 'How are you, my brother?' (out at 2.13: a teenage boy comes in at left from 2.6, a boy in a kippah in profile from 3.3)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "929bc3b8-8be7-4047-9bc4-8b8287a1df27",
+      7.2,
+      8.5667,
+      0.5,
+      "5683 'I love you.' 'Me too.' END (the boy in a kippah at the bottom of frame is seen from behind only)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ]
+  ]
+}

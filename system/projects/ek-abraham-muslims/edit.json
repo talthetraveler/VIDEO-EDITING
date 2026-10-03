@@ -1,0 +1,73 @@
+{
+  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS: individual answers, no intro. LESSONS 80: no zooms - one constant full frame, hard jump cuts only. This one: the young shirtless man with the sign (C0515 + his second take C0516, same spot, same frame). Shape: his strongest line cold - 'And we love Israel, we love the Muslims.' - then the message from its start ('I want the message to these countries: we love you. We hope we make peace with other Arab countries.'), then from his second take the one line the first take does not have ('hopefully there will be peace in the whole Middle East') 'and yes, have a great night!' with the big smile he holds for a second after it. No line is said twice: C0516's own 'we love you' and 'we're having fun to have peace' are cut. Tal's 'Yes, thank you' (C0515 10.14) and the Hebrew crew talk after it (12.4-17.7: 'again, do it again' - two models) are out. grade:false. Sound: LOCATION-SOUND.wav (soundtrack.py, one denoise per run, no per-beat gain).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "capY": 0.79,
+  "music": "../ek-abraham-muslims/LOCATION-SOUND.wav",
+  "bedOnly": true,
+  "out": "EK_ABRAHAM_MUSLIMS_V1.mp4",
+  "beats": [
+    [
+      "a4f64d9e-b569-403b-9fbe-e19c77e38dec",
+      6.3667,
+      9.8333,
+      0.5,
+      "COLD OPEN, his strongest line: 'And we love Israel, we love the Muslims.' (first word 6.50 = 0.13s in; speech ends 9.45 by RMS; out before Tal's 'Yes' 10.14)",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "a4f64d9e-b569-403b-9fbe-e19c77e38dec",
+      0.0333,
+      2.5,
+      0.5,
+      "the message from its start: 'I want the message to these countries. We love you.'",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "a4f64d9e-b569-403b-9fbe-e19c77e38dec",
+      3.1,
+      6.1,
+      0.5,
+      "'We hope we make peace with other Arab countries.' (jump cut: the 0.9s gap before it is out; out before 'And' 6.50)",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      "ec5536e9-b004-487b-a39a-a28409cd8691",
+      5.8333,
+      11.9,
+      0.5,
+      "ENDING, second take, same frame, one unbroken run: 'hopefully there will be peace in the whole Middle East, and yes, have a great night!' - and the big smile he holds after it (10.8-11.8); out before he lowers the sign (12.3). ('and yes,' stays: cutting it ended the line mid-thought.)",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ]
+  ]
+}

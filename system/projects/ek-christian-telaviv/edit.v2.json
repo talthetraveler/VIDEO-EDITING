@@ -1,0 +1,522 @@
+{
+ "_brief": "Batch 2026-10-03 item 9 (Tal: PRIORITISE). Frame.io NEEDS TO BE EDITED / KIDNESS TEST / CHRISTAIN HUY TEL ABJV. V1_MAIN. Shape (formats/kindness-test.md, his own cuts + MD Motivator): ASK -> THE YES -> IDENTITY (Christian / Jewish / almost the same) -> two pitas -> REVEAL -> REFUSAL held on his face -> PAY IT ON. Erez grammar: wide -> 4-frame snap -> tight hold; every in/out on the 30fps grid; grade off (bright phone + glasses footage, LESSONS 72). Cameras: 53xx = Meta POV 3:4 (Johnny's face), IMG_92xx = iPhone observer 9:16 (Tal as a character). iPhone beats carry the POV audio (push.audio) so the sound never changes character at an angle change; offsets measured by align-cameras.py (IMG_9236 = 5356 + 35.48s, score 0.58; IMG_9238 = 5370 - 4.60s, score 0.54). Captions come from hand-segmented, two-model-checked phrase files in cache/translate/<id>.json. PAY IT ON: the man on the street told Tal on camera he did not want it published (5377 22-34s, Hebrew, two models); Tal answered he was not publishing it. So his FACE IS NOT IN THIS CUT: approach from behind, then tight crops on the hands and the pitas only (crops simulated on source stills at 4 times per beat before rendering).",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "out": "EK_CHRISTIAN_TELAVIV_V2.mp4",
+ "beats": [
+  [
+   "df8920ed-54a6-403d-a2e0-80265cbd3b3a",
+   38.4333,
+   41.5333,
+   0.5,
+   "ASK, iPhone: Tal at the counter - 'I'm really hungry and I just don't have any money' (POV audio)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.5,
+     1.56
+    ],
+    "x": 0.64,
+    "y": 0.45,
+    "audio": {
+     "id": "af02d93f-9183-4733-8c6e-4976869e41d6",
+     "at": 2.9533
+    }
+   }
+  ],
+  [
+   "af02d93f-9183-4733-8c6e-4976869e41d6",
+   6.0667,
+   10.2333,
+   0.5,
+   "POV: Johnny listening - 'I lost my wallet... a piece of bread'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1.06
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "af02d93f-9183-4733-8c6e-4976869e41d6",
+   10.2333,
+   10.3667,
+   0.5,
+   "4-frame snap onto his face (in the pause before he answers)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.06,
+     1.5
+    ],
+    "x": 0.5,
+    "y": 0.48
+   }
+  ],
+  [
+   "af02d93f-9183-4733-8c6e-4976869e41d6",
+   10.3667,
+   13.0333,
+   0.5,
+   "THE YES: 'Why a piece of bread? I can make a pita with kebab, my friend'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.5,
+     1.56
+    ],
+    "x": 0.5,
+    "y": 0.48
+   }
+  ],
+  [
+   "df8920ed-54a6-403d-a2e0-80265cbd3b3a",
+   48.5,
+   49.9333,
+   0.5,
+   "iPhone: Tal - 'But I don't have any money' (speaker change = angle change)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.5,
+     1.55
+    ],
+    "x": 0.64,
+    "y": 0.45,
+    "audio": {
+     "id": "af02d93f-9183-4733-8c6e-4976869e41d6",
+     "at": 13.0333
+    }
+   }
+  ],
+  [
+   "af02d93f-9183-4733-8c6e-4976869e41d6",
+   14.4667,
+   18.7333,
+   0.5,
+   "THE DECISION: 'That's okay. If you need to eat, I'll feed you'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.25,
+     1.35
+    ],
+    "x": 0.5,
+    "y": 0.48
+   }
+  ],
+  [
+   "af02d93f-9183-4733-8c6e-4976869e41d6",
+   20.8,
+   20.9333,
+   0.5,
+   "cut + 4-frame snap onto face and cross",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1.3
+    ],
+    "x": 0.5,
+    "y": 0.52
+   }
+  ],
+  [
+   "af02d93f-9183-4733-8c6e-4976869e41d6",
+   20.9333,
+   24.4667,
+   0.5,
+   "IDENTITY: 'We're Christians. We feed anyone that's in need' - the cross on his chest in frame",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.3,
+     1.36
+    ],
+    "x": 0.5,
+    "y": 0.52
+   }
+  ],
+  [
+   "df8920ed-54a6-403d-a2e0-80265cbd3b3a",
+   60.4333,
+   63.2,
+   0.5,
+   "iPhone: Tal - 'You know, I'm Jewish, and in my religion we're also taught to help...' (ends before the operator's zoom at 63.3)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.5,
+     1.55
+    ],
+    "x": 0.64,
+    "y": 0.45,
+    "audio": {
+     "id": "af02d93f-9183-4733-8c6e-4976869e41d6",
+     "at": 24.9667
+    }
+   }
+  ],
+  [
+   "af02d93f-9183-4733-8c6e-4976869e41d6",
+   27.7333,
+   29.6667,
+   0.5,
+   "POV reaction under '...anyone in need' -> 'I know'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.15,
+     1.2
+    ],
+    "x": 0.5,
+    "y": 0.48
+   }
+  ],
+  [
+   "af02d93f-9183-4733-8c6e-4976869e41d6",
+   29.6667,
+   29.8,
+   0.5,
+   "4-frame snap in (pause before 'We're almost the same')",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.2,
+     1.5
+    ],
+    "x": 0.5,
+    "y": 0.47
+   }
+  ],
+  [
+   "af02d93f-9183-4733-8c6e-4976869e41d6",
+   29.8,
+   34.4,
+   0.5,
+   "THE HEART: 'We're almost the same. It goes, love your neighbor as yourself (Hebrew), with you. It goes the same with us'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.5,
+     1.55
+    ],
+    "x": 0.5,
+    "y": 0.45
+   }
+  ],
+  [
+   "7e8894c7-af41-4599-bf90-5b065ed664da",
+   21.3333,
+   24.9333,
+   0.5,
+   "MAKING: pita in his hands - 'Whenever you need food, just come over, I got you'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.2,
+     1.26
+    ],
+    "x": 0.5,
+    "y": 0.48
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   2.2667,
+   5.6667,
+   0.5,
+   "TWO PITAS: he turns with both - 'That's for you my friend' / 'Why did you make me two?'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1.04
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   5.6667,
+   5.8,
+   0.5,
+   "4-frame snap onto his face",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.04,
+     1.5
+    ],
+    "x": 0.5,
+    "y": 0.47
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   5.8,
+   8.4667,
+   0.5,
+   "'That's one for you, one for someone who needs it as well' - sets up the ending",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.5,
+     1.55
+    ],
+    "x": 0.5,
+    "y": 0.47
+   }
+  ],
+  [
+   "2040e7f4-aa7d-4162-b9b3-b845b894ac6f",
+   6.8667,
+   10.5,
+   0.5,
+   "REVEAL, iPhone: Tal - 'Actually, I want to be honest, and I do have money' (POV audio)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.3,
+     1.36
+    ],
+    "x": 0.45,
+    "y": 0.45,
+    "audio": {
+     "id": "55181e74-44e1-445c-984f-80d17e452307",
+     "at": 11.4667
+    }
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   19.3,
+   21.4667,
+   0.5,
+   "the money SEEN, counted out, camera rises to him - This is 500 shekels for you",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   21.4667,
+   21.6,
+   0.5,
+   "4-frame snap onto his face AS he says No",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1.4
+    ],
+    "x": 0.45,
+    "y": 0.4
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   21.6,
+   37.2,
+   0.5,
+   "THE REFUSAL, HELD (15.6s, one take, slow push): No, my friend. We don't do that... No money involved / I'm very sure / It's from my heart / Just give this to someone who needs it",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.4,
+     1.7
+    ],
+    "x": 0.45,
+    "y": 0.4
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   43.0333,
+   43.6333,
+   0.5,
+   "SLOW-MO x0.5: his smile, wordless (audio 43.03-44.23 measured at the noise floor; the tail of 'people will love it' ends 42.7, 'Thank' starts 44.27)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.3,
+     1.34
+    ],
+    "x": 0.5,
+    "y": 0.47,
+    "speed": 0.5
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   44.2333,
+   46.8667,
+   0.5,
+   "NAME + handshake: 'Thank you so much. What's your name?' 'I'm Johnny, my friend'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1.1,
+     1.15
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "39017a54-a2a6-47e4-9a79-ab04cc08cb46",
+   1,
+   2.1,
+   0.5,
+   "PAY IT ON: the second pita carried into the market (the man is tiny, in profile, far)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1.05
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ce81dec3-322e-4cca-95d9-df97079443fd",
+   2.9333,
+   4.1333,
+   0.5,
+   "approach FROM BEHIND - no face (market ambience continued from 5272)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1.04
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "audio": {
+     "id": "39017a54-a2a6-47e4-9a79-ab04cc08cb46",
+     "at": 2.1
+    }
+   }
+  ],
+  [
+   "ce81dec3-322e-4cca-95d9-df97079443fd",
+   15.9333,
+   17.2333,
+   0.7,
+   "HANDOVER, hands only: Tal - This is for you, my brother (his own voice only, ends 17.19)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     2,
+     2.0433
+    ],
+    "x": 0.5,
+    "y": 0.75
+   }
+  ],
+  [
+   "ce81dec3-322e-4cca-95d9-df97079443fd",
+   17.2333,
+   17.7333,
+   0.7,
+   "handover tail - the man is faintly audible here (17.25-17.53): MUTED, room tone from the same shot (5377 57.4)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     2.0433,
+     2.06
+    ],
+    "x": 0.5,
+    "y": 0.75,
+    "nocap": true,
+    "audio": {
+     "id": "ce81dec3-322e-4cca-95d9-df97079443fd",
+     "at": 57.4
+    }
+   }
+  ],
+  [
+   "ce81dec3-322e-4cca-95d9-df97079443fd",
+   35.1667,
+   36.3667,
+   0.5,
+   "ENDING, pitas only: Tal - Bon appetit, brother (his voice only)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     2,
+     2.0309
+    ],
+    "x": 0.62,
+    "y": 0.66
+   }
+  ],
+  [
+   "ce81dec3-322e-4cca-95d9-df97079443fd",
+   36.3667,
+   37.5,
+   0.5,
+   "the pitas touch - the L'CHAIM is MUTED (speaker not attributable with confidence), room tone from the same shot (5377 43.3), no caption",
+   null,
+   {
+    "manual": true,
+    "z": [
+     2.0309,
+     2.06
+    ],
+    "x": 0.62,
+    "y": 0.66,
+    "nocap": true,
+    "audio": {
+     "id": "ce81dec3-322e-4cca-95d9-df97079443fd",
+     "at": 43.3
+    }
+   }
+  ]
+ ],
+ "capY": 0.62,
+ "_capY": "0.62, not the 0.66 default: in the POV shots Johnny's face sits mid-frame and 0.66 put the caption over his mouth (seen on the first render). Every POV beat is now aimed so his face is in the top ~45% and the caption sits on his chest; in the Christians beat the cross stays visible below it.",
+ "_v2": "V2 (coordinator, Tal rule LESSONS 78 for the man who said not to publish: remove his audio, blur his face). Cut identical to V1 (spec kept as edit.v1.json) except the two street beats are split so his voice is gone: (1) handover 5377 17.2333-17.7333 muted - faint voice at 17.25-17.53 at his pitch (163-180 Hz) - replaced by room tone from the same shot, 5377 57.4-57.9 (no voiced frames, -36..-41 dB); (2) toast 5377 36.3667-37.5 muted - the L'CHAIM at 36.43-36.88 cannot be attributed to Tal with confidence (pitch 145-160 rising to 267; his mouth is not visible enough on the frames) and there is a faint voiced frame at 37.35 - replaced by room tone from 5377 43.3-44.43 (no voiced frames, -34..-39 dB, same level as the gap at 35.95-36.40). Caption CHEERS dropped. Tal's own lines kept: THIS IS FOR YOU MY BROTHER (16.51-17.19, 98-142 Hz, one voice) and BON APPETIT BROTHER (35.38-35.92, 110-150 Hz, one voice). His face: never in frame (crops y>0.5 / from behind), so no blur."
+}

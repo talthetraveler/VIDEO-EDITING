@@ -1,0 +1,165 @@
+{
+  "_brief": "Item 12, Tal 2026-10-03: Phone Call Video / Tel Aviv. Compilation 2 (fast, light): a completely different cast from the emotional one - short, funny-to-warm one-liners, opening on a different face (the bagel guy), the strongest answer 4th ('smile at people in the street or just be kind to them'), ending on the joyful 'people I love - my family, my dog, my co-workers'. Pauses inside an answer are jump-cut out (same framing, no zoom). NO ZOOMS.",
+  "_blur": "EK_HAPPY_TELAVIV_COMP_FAST_V1.mp4 = the _PREBLUR render + blur-face.py with blur-rules.json: a girl with a ponytail walks through the background of beat 4 for 0.5s (age unclear, so blurred - LESSONS 78/81). The child with the pink bag in beat 5 is seen only from behind - not blurred.",
+  "_notes": "Not one person repeats from the emotional comp. The teenager's 'I love to eat' (IMG_5723) is OUT: he looks under 18 (LESSONS 81). Excluded: IMG_5708 (too far and small in a crowd), IMG_5746 (a third young woman in a row).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "out": "EK_HAPPY_TELAVIV_COMP_FAST_V1_PREBLUR.mp4",
+  "beats": [
+    [
+      "efab6475-ce3c-4e6e-a2a1-f13c230b1ae3",
+      11.2667,
+      13.9,
+      0.5,
+      "IMG_5736: HOOK - 'a good lox bagel with cream cheese' - surprising, a laugh (his first 'a good...' is out: a passer-by walks through the lens there)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.6,
+          1.6
+        ],
+        "x": 0.42,
+        "y": 0.5
+      }
+    ],
+    [
+      "492a0497-c13c-47d9-ac2f-e257368d0aa6",
+      7.4333,
+      8.3,
+      0.5,
+      "IMG_5753: girl in the sun hat: 'cold beer,'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.3,
+        "y": 0.5
+      }
+    ],
+    [
+      "492a0497-c13c-47d9-ac2f-e257368d0aa6",
+      9.8,
+      12.5,
+      0.5,
+      "IMG_5753: same take, pause cut: 'salty air and the beach'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.3,
+        "y": 0.5
+      }
+    ],
+    [
+      "eda96a97-cf05-43ce-bc21-d26c071e186d",
+      2.8667,
+      9.6,
+      0.5,
+      "IMG_5713: 'Shabbat with my family, with my friends, and here in Israel'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          2.2,
+          2.2
+        ],
+        "x": 0.4,
+        "y": 0.62
+      }
+    ],
+    [
+      "993313ed-ab53-4bd8-93f6-c52609c945b3",
+      6.9,
+      12.6,
+      0.5,
+      "IMG_5721: STRONGEST, slot 4 - 'what makes me happy is to smile at people in the street, or just be kind to them'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          2.2,
+          2.2
+        ],
+        "x": 0.61,
+        "y": 0.5
+      }
+    ],
+    [
+      "11c1f446-cbb8-4866-b66d-08430590e554",
+      1.2667,
+      4.8,
+      0.5,
+      "IMG_5732: 'reconnecting with my Jewish side in Israel'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "1554a717-0df0-41f9-82a1-a2f59915aed6",
+      8.4,
+      12,
+      0.5,
+      "IMG_5757: woman in the black dress: 'what makes me happy is to fly, to see the world'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5
+      }
+    ],
+    [
+      "0bf65073-d74b-4136-acc6-20542e1b5205",
+      3.7333,
+      4.6,
+      0.5,
+      "IMG_5762: ENDING - 'people I love.'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.62,
+        "y": 0.48
+      }
+    ],
+    [
+      "0bf65073-d74b-4136-acc6-20542e1b5205",
+      6.4,
+      12.6,
+      0.5,
+      "IMG_5762: same take, pause cut: 'my family, my dog, my co-workers' - she dances",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.62,
+        "y": 0.48
+      }
+    ]
+  ]
+}

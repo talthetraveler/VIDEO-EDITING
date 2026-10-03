@@ -1,0 +1,130 @@
+{
+ "_brief": "Batch 2026-10-03 item 9, Kindness Tests: SHOP OWNER 4 (a sweets shop, Jafar Sweets sign, Old City). V1. One camera: video-4929 = Meta glasses POV, 3:4. Shape: near-instant ASK -> THE YES -> the giving seen under the identity exchange -> REVEAL and REFUSAL held in one take -> slow-mo on his wordless hands-up refusal -> THE WHY (A gift. We are all humans) -> his last word. NO ZOOMS (LESSONS 80): every beat z [1,1]; the only framing choice is WHERE the 9:16 window sits across the 3:4 frame (4th element, constant per beat) so he stays in it. Passing it on is promised but NOT filmed in this folder, so the cut ends on his line, not on a handover.",
+ "_beat1": "Picture and sound of beat 1 are 0.63s apart on purpose (same clip, same sentence). Said plainly so nobody mistakes it for sync drift.",
+ "_iphone": "IMG_9127/9128/9129 (iPhone, from outside through the shop window) are NOT used: 9128 is 35s of passers-by standing between the camera and Tal; 9129 has the handshake with Tal in frame but carries an in-camera zoom at 2.2-2.6s and its sound could not be aligned (align-cameras score -1 / 0.27).",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "out": "EK_KT_SHOP_OWNER_4_V1.mp4",
+ "beats": [
+  [
+   "e16295d9-f8af-4e33-a94b-1b2ec9cde534",
+   12.3,
+   14.9667,
+   0.5,
+   "ASK, on his face: \"I am really hungry and I do not have any money\" (the SOUND is 11.67-14.33; the picture runs 0.63s later because at 11.67-12.2 the glasses are pointed at the trays and he is out of frame - Tal is off-screen so there is no lip to sync, see _beat1)",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "audio": {
+     "id": "e16295d9-f8af-4e33-a94b-1b2ec9cde534",
+     "at": 11.6667
+    }
+   }
+  ],
+  [
+   "e16295d9-f8af-4e33-a94b-1b2ec9cde534",
+   21.2,
+   23.3,
+   0.5,
+   "THE YES, near-instant: \"Can you help me, please?\" \"Yes, why not?\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "e16295d9-f8af-4e33-a94b-1b2ec9cde534",
+   33.1667,
+   39.3,
+   0.15,
+   "THE GIVING SEEN + IDENTITY: he cuts and plates the sweet while \"Thank you so much. What's your name?\" \"Rami\" \"Are you Muslim?\" \"Mashallah. I'm Jewish. We are brothers\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "e16295d9-f8af-4e33-a94b-1b2ec9cde534",
+   43.3,
+   55.6,
+   0.4,
+   "REVEAL + REFUSAL, HELD (12.3s, one take): he hands over the plate - \"Actually, I want to tell you that I have money, and I was testing to see if you would help me. This is for you\" - \"Yeah, thank you, thank you. It's okay\" \"This is for you\" \"No, thank you\" \"For you\" \"It's okay\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "e16295d9-f8af-4e33-a94b-1b2ec9cde534",
+   61.8,
+   62.3667,
+   0.45,
+   "SLOW-MO x0.5: both hands up, laughing, the money in Tals hand - the refusal with no words (audio 61.8-62.93 measured -32..-43 dB: silent; Tals next \"Why\" starts 62.95)",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "speed": 0.5
+   }
+  ],
+  [
+   "e16295d9-f8af-4e33-a94b-1b2ec9cde534",
+   64.5,
+   70.8667,
+   0.5,
+   "THE WHY, in his words: \"Why did you help me?\" \"A gift. We're all humans.\" \"Thank you for reminding me. You're the best\" - the handshake",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "e16295d9-f8af-4e33-a94b-1b2ec9cde534",
+   72.8667,
+   76.7,
+   0.5,
+   "ENDING: the plate in Tals hands - \"I will give it now to someone who needs it\" - and his last word: \"No, you can taste it. It's good.\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ]
+ ],
+ "capY": 0.66
+}

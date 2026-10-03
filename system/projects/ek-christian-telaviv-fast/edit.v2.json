@@ -1,0 +1,149 @@
+{
+ "_brief": "Batch 2026-10-03 item 9, the SHORT variation of ek-christian-telaviv (not a trim of it). Glasses POV only - the viewer is Tal the whole time. Different OPENING: the other, shorter take of the ask (video-5321) jump-cut to 'I don't have any money... I was wondering if you could help me with a piece of bread' -> 'Of course. Why bread? I can give you a pita'. Then 'We're Christians, we feed anyone that's in need' -> 'That's for you, my friend' -> Tal's confession heard on JOHNNY's face (V1 shows Tal) -> the 500 shekels -> snap onto his face on 'No' -> the refusal held ~11s -> 'You're more than welcome, my friend' -> slow-mo smile. Different ENDING: on his face, no pay-it-forward - so the 'one for someone who needs it' / 'give it to someone who needs it' lines are deliberately OUT (a promise this cut would not pay off). No Jewish/'almost the same' exchange, no making shot, no street. Same caption files, framing rules and capY as V1.",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "capY": 0.62,
+ "out": "EK_CHRISTIAN_TELAVIV_FAST_V2.mp4",
+ "beats": [
+  [
+   "8163eef1-cd89-4975-bd28-009cfd001548",
+   3.7333,
+   5.7667,
+   0.5,
+   "OPEN (other take): Johnny comes to the counter - 'I don't have any money' (out in the 50ms dip before 'and')",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "8163eef1-cd89-4975-bd28-009cfd001548",
+   6.9333,
+   12.4667,
+   0.5,
+   "THE ASK + THE YES on his face: 'I was wondering if you could help me with a piece of bread' / 'Of course... Why bread? I can give you a pita'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "af02d93f-9183-4733-8c6e-4976869e41d6",
+   20.8,
+   24.4667,
+   0.5,
+   "WHO HE IS: 'We're Christians. We feed anyone that's in need'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   2.2667,
+   3.7333,
+   0.5,
+   "the food: he turns with the pitas - 'That's for you, my friend'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   11.4667,
+   15.1,
+   0.5,
+   "THE REVEAL heard on HIS face, pitas still in his hands: 'Actually I want to be honest, I do have money'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   19.3,
+   32.5667,
+   0.5,
+   "the money counted out, camera rises to him: 'This is 500 shekels for you' + THE REFUSAL, HELD (~11s, one take): 'No, my friend. We don't do that. You ask for food, that's your food, my friend. No money involved' / 'Are you sure?' 'I'm very sure, my friend'",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   48.9667,
+   51.1667,
+   0.5,
+   "'Thank you so much' / 'You're more than welcome, my friend' - big smile",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "55181e74-44e1-445c-984f-80d17e452307",
+   51.1667,
+   51.5667,
+   0.5,
+   "END on his face, SLOW-MO x0.5 (audio 51.17-51.97 has no words; 'Enjoy' starts 51.97)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "speed": 0.5
+   }
+  ]
+ ],
+ "_nozoom": "Tal 2026-10-03: 'stop with all the zooms its weird' (LESSONS 80). Every beat constant framing z:[a,a]; the 4-frame ramp beats are deleted and their frames folded into the hold that followed; wide-then-tight on one take merged into one shot at z1.0 (the 3:4 POV and 9:16 iPhone both fill 9:16 at z1, and at z1 the caption at capY 0.62 sits on the chest, clear of the mouth). Only exception: the two street shots keep a STATIC z2.0 crop, because that crop is what keeps the man's face out (LESSONS 78). Slow motion and hard cuts unchanged; no in/out moved except where a ramp was folded (all on the 30fps grid)."
+}
