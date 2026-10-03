@@ -313,7 +313,31 @@ function captionFilters(id, ss, to, n, opts = {}) {
       // previous beat.
       const span = Math.max(0.01, sg.end - sg.start);
       const straddles = sg.start < ss - 0.05 || sg.end > to + 0.05;
-      if (straddles) {
+      let segA = sg.start, segB = sg.end;
+      // ALIGNED ENGLISH: TRIM BY THE WORDS' OWN TIMES, NOT A SHARE OF THE CLOCK.
+      // A jump cut inside one aligned sentence ("hopefully there will be peace in
+      // the whole Middle East | and yes, | have a great night!") was trimmed
+      // proportionally: the first beat lost "MIDDLE EAST" and the second was
+      // skipped as "mostly before this beat" (ek-abraham-muslims, 2026-10-03).
+      // When the clip is WhisperX-aligned and the segment's words map 1:1 onto
+      // the aligned words, a word belongs to the beat that holds its midpoint -
+      // exact, and never in two beats - and the fragment carries its own times.
+      let exactKept = null;
+      if (straddles && own.aligned && !existsSync(tp)) {
+        const W = srcWords.filter((w) => w.start >= sg.start - 0.06 && w.end <= sg.end + 0.06);
+        if (W.length === words.length) {
+          const inBeat = W.map((w, k) => k).filter((k) => {
+            const mid = (W[k].start + W[k].end) / 2;
+            return mid >= ss && mid <= to;
+          });
+          exactKept = inBeat.length ? words.slice(inBeat[0], inBeat[inBeat.length - 1] + 1) : [];
+          if (inBeat.length) { segA = W[inBeat[0]].start; segB = W[inBeat[inBeat.length - 1]].end; }
+        }
+      }
+      if (exactKept) {
+        if (!exactKept.length) continue;
+        words = exactKept;
+      } else if (straddles) {
         const from = Math.max(0, (ss - sg.start) / span);
         const upto = Math.min(1, (to - sg.start) / span);
         const a = Math.floor(from * words.length), b = Math.ceil(upto * words.length);
@@ -336,7 +360,7 @@ function captionFilters(id, ss, to, n, opts = {}) {
         if (drop) words.splice(0, drop);
         if (!words.length) continue;
       }
-      tidy.push({ start: sg.start, end: sg.end, words });
+      tidy.push({ start: segA, end: segB, words });
     }
     // glue a fragment onto the next segment when it cannot stand on its own
     const merged = [];
@@ -678,8 +702,12 @@ function withStickers(capOv, stickers, tmpDir, n) {
   return { label: capOv.label, suffix: capOv.suffix.replace(/null\[v\]$/, "null[vst]") + ";" + parts.join(";") };
 }
 
-function captionOverlays(caps, tmpDir) {
+// `beatCapY` (0..1): a beat's own caption height, for a film that mixes a close
+// shot (sign across the lower half) with a wide one (2026-10-03, ek-abraham-dubai).
+// Absent = the project's capY, exactly as before.
+function captionOverlays(caps, tmpDir, beatCapY) {
   if (!caps.length) return { suffix: "", label: "[v]" };
+  const capYpx = Number.isFinite(beatCapY) ? Math.round(1920 * beatCapY) : CAP_Y;
   let meta = [];
   try {
     meta = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-caption.py"),
@@ -700,7 +728,7 @@ function captionOverlays(caps, tmpDir) {
       .replace(/^([A-Za-z]):/, "$1" + String.fromCharCode(92) + ":");
     parts.push(`movie='${fp}'[cm${i}]`);
     const next = `[vc${i}]`;
-    parts.push(`${prev}[cm${i}]overlay=x=(W-w)/2:y=${CAP_Y}-h/2:eval=init:` +
+    parts.push(`${prev}[cm${i}]overlay=x=(W-w)/2:y=${capYpx}-h/2:eval=init:` +
       // half-open [a, b): between() includes BOTH ends, so where one caption
       // ends on the exact frame the next begins, both drew for ~33ms.
       `enable='gte(t\\,${c.a})*lt(t\\,${c.b})'${next}`);
@@ -797,6 +825,9 @@ function beatGain(wav) {
 
 // A "CARD" beat is a full-screen text card, e.g. ["CARD", 0, 2.2, 0, "5 MINUTES LATER"].
 // Tal asked for one between Eden's interview and the singing.
+// EVERY LINE IS CENTRED ON ITS OWN. One drawtext over a multi-line textfile
+// centres the BLOCK and left-aligns the lines inside it - the EDEN V11 closing
+// note came out ragged-left (2026-10-03). A blank line is a paragraph gap.
 function buildCard(text, dur, dest) {
   const lines = String(text).split("\n");
   const size = lines.length > 2 ? 64 : 72, step = Math.round(size * 1.35);
@@ -832,9 +863,6 @@ function buildCard(text, dur, dest) {
 // Replaced with a proper filmic S-curve: the black point is PLANTED (0.06 in
 // maps to 0.0 out, so haze is crushed back to real black), the shadows are
 // pulled slightly under the line, the highlights are rolled off just below
-// EVERY LINE IS CENTRED ON ITS OWN. One drawtext over a multi-line textfile
-// centres the BLOCK and left-aligns the lines inside it - the EDEN V11 closing
-// note came out ragged-left (2026-10-03). A blank line is a paragraph gap.
 // clipping so a white shirt in direct sun keeps its texture instead of
 // blowing to paper, and saturation is raised gently AFTER the curve where it
 // costs less. `curves` holds the endpoints; `eq` never did.
@@ -1283,7 +1311,7 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
   const caps = (cfg.silent || speed < 1) ? [] : captionFilters(capId, capA, capB, n,
     { nocap: !!push?.nocap, src: capSrc, srcBase: capBase });
   if (speed < 1 && !push?.nocap) console.log(`      slow-mo beat ${n}: captions are off on a slowed beat`);
-  const capOv = withStickers(captionOverlays(caps, TMP), push?.sticker, TMP, n);
+  const capOv = withStickers(captionOverlays(caps, TMP, push?.capY), push?.sticker, TMP, n);
 
   let vf;
   if (cfg.layout === "square") {
