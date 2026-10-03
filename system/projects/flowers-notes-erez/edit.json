@@ -7,7 +7,7 @@
  "grade": false,
  "music": "flowers-notes-street-34.wav",
  "bedOnly": true,
- "out": "FLOWERS_NOTES_EREZ_V14.mp4",
+ "out": "FLOWERS_NOTES_EREZ_V15.mp4",
  "beats": [
   [
    "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
@@ -430,11 +430,11 @@
     "manual": true,
     "nocap": true,
     "z": [
-     1,
-     1
+     1.25,
+     1.4
     ],
-    "x": 0.5,
-    "y": 0.45,
+    "x": 0.46,
+    "y": 0.42,
     "speed": 0.5
    }
   ],
@@ -452,8 +452,8 @@
      1,
      1
     ],
-    "x": 0.5,
-    "y": 0.39
+    "x": 0.44,
+    "y": 0.6
    }
   ],
   [
@@ -468,10 +468,10 @@
     "nocap": true,
     "z": [
      1,
-     1.6
+     1.9
     ],
-    "x": 0.5,
-    "y": 0.39
+    "x": 0.44,
+    "y": 0.6
    }
   ],
   [
@@ -479,17 +479,18 @@
    0.8333,
    1.6,
    0.5,
-   "tight hold: her biggest laugh",
+   "SLOW-MO tight on her FACE: her biggest laugh",
    null,
    {
     "manual": true,
     "nocap": true,
     "z": [
-     1.6,
-     1.68
+     1.9,
+     2
     ],
-    "x": 0.5,
-    "y": 0.39
+    "x": 0.44,
+    "y": 0.6,
+    "speed": 0.5
    }
   ],
   [
@@ -544,61 +545,6 @@
     ],
     "x": 0.74,
     "y": 0.45
-   }
-  ],
-  [
-   "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
-   32.9,
-   33.7,
-   0.5,
-   "tight: she exclaims, hand on her chest with the note",
-   null,
-   {
-    "manual": true,
-    "nocap": true,
-    "z": [
-     1.9,
-     1.9
-    ],
-    "x": 0.62,
-    "y": 0.45
-   }
-  ],
-  [
-   "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
-   45.9667,
-   46.1,
-   0.5,
-   "she reaches out to him: fast zoom in",
-   null,
-   {
-    "manual": true,
-    "nocap": true,
-    "z": [
-     1.2,
-     2
-    ],
-    "x": 0.62,
-    "y": 0.5
-   }
-  ],
-  [
-   "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
-   46.1,
-   46.7,
-   0.5,
-   "SLOW-MO: smiling as she reaches for him",
-   null,
-   {
-    "manual": true,
-    "nocap": true,
-    "z": [
-     2,
-     2.08
-    ],
-    "x": 0.62,
-    "y": 0.5,
-    "speed": 0.5
    }
   ],
   [

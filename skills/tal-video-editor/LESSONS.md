@@ -2275,3 +2275,17 @@ show me video one you did then I'll approve or tell you what to fix."*
   kid"); a one-line answer is a compilation beat, not a video.
 - **Music is expected** on the wordless/emotional cuts: *"it doesn't look so
   good without music."* Ask for tracks at the START of a batch, not the end.
+
+## 85 — a zoom aimed above her head, and two reactions too many (Tal, 2026-10-03, flowers V14)
+
+*"You just zoom in on top, not zooming in on her face. Zoom down a little bit
+lower to her face and keep it in slow-mo, so it's her smiling."* The 9263
+zoom was aimed at y 0.39; her face sits at y 0.57, so the tight frame showed
+the scooters behind her with her head at the bottom edge.
+- **Aim every zoom from a gridded still of THAT clip** (`drawgrid` at tenths),
+  then look at a frame of the zoomed result. V14's check sheet covered the
+  ending and skipped this shot.
+- *"You don't need the 18 seconds and 19 seconds ... then just them kissing ...
+  you don't need to zoom in on her when they're giving a hug, just get the
+  other angle."* After her best laugh, go straight to the kiss and the second
+  angle. The hand-on-chest exclaim and the zoom on her reaching were padding.
