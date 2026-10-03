@@ -2243,3 +2243,35 @@ show me video one you did then I'll approve or tell you what to fix."*
 - No burned-in ids, no numbered review copies, no table of 22.
 - Approved -> full-quality render -> Frame.io (`EDITED BY CLAUDE`). A fix ->
   redo that one and show it again before moving on.
+
+## 85 — first full review of the 2026-10-03 batch: what he approved and what he sent back (Tal, 2026-10-03)
+
+38 previews, his notes dictated in one pass (verbatim table:
+`system/projects/_batch-2026-10-03/TAL-NOTES-ROUND-1.md`). The patterns:
+
+- **The hook is the FACT, not the advice.** A cancer survivor's video opened on
+  "Don't give up" — *"the hook shouldn't be 'Don't give up' ... the hook should
+  be 'I actually beat cancer'"*, and he expects the ig-reel hook formulas to
+  have been consulted. Advice is the payoff; the surprising fact opens.
+- **A kindness test runs in the order it happened, opening on WHO HE IS.**
+  Shop Owner 5 opened on Tal's "I'm Jewish"; he wants the owner's "I am
+  Muslim" first, then ask -> yes -> why -> names/identity -> "we are
+  brothers, one God" -> reveal -> refusal -> "life is about giving back".
+- **A premise video must SHOW the premise.** Phone-call cuts framed tight on
+  the speaker lost the "what makes you happy" sign and the phone: *"you don't
+  see the thing ... get them picking up the phone."* Cropping to dodge
+  passers-by is not worth losing the sign.
+- **Picture and voice must be the same person.** A crop that stayed on one man
+  while the next person's audio played was called out at once.
+- **Don't lay someone's answer over other people's pictures** (hugs "voices"):
+  he wants people running up and hugging, their own words in their own shots.
+- **"Zoom in" = closer framing on whoever is speaking** when a wide phone shot
+  reads small. He asked for it by number on four videos; this refines LESSONS
+  80, it does not undo it (no zoom as a blanket style; closer framing where
+  the subject is tiny).
+- **Arabic videos get a smaller Arabic line under the English.**
+- **Names get checked with him** ("Captain Smit, S-M-I-T").
+- **No single-child videos** ("it's a little kid, we don't want to do little
+  kid"); a one-line answer is a compilation beat, not a video.
+- **Music is expected** on the wordless/emotional cuts: *"it doesn't look so
+  good without music."* Ask for tracks at the START of a batch, not the end.
