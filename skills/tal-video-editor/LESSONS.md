@@ -2159,3 +2159,16 @@ zoom showed nothing.
   that is happening is in frame.
 - Aim from a 5 fps strip of the source with timestamps, not a guess. The face
   sat at y≈0.5, but V10 aimed at 0.40.
+
+## 81 — blur the kids' faces (Tal, 2026-10-03)
+
+Hug for Stranger / Tel Aviv: three cuts shipped with children hugging Tal in
+a public market, faces clear. Tal: *"you need to blur the kids faces"*.
+
+- **Children who are strangers in public get their faces blurred**, every
+  shot they are recognisable in (`blur-face.py`, verified per LESSONS 71 by
+  frame index). Adults stay clear.
+- If the blur kills a shot whose whole point is the child's face, replace it
+  with an adult moment rather than keep a blurred blob as the beat.
+- Hospital footage (children receiving toys, filmed with the families) is the
+  open question - asked, not assumed. Record his answer here.
