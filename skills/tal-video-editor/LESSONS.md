@@ -2113,3 +2113,17 @@ audio and blur his face"*.
   say so; he can loosen it. Never the other way round.
 - Still report every such span to him before it ships. He decides; the editor
   does not quietly drop it or quietly use it.
+
+## 79 — giving water: ONE silent compilation of every shot, not several short cuts with sound (Tal, 2026-10-03)
+
+Four water cuts were made from 8 clips (9-20s each, location sound or a
+street bed, one carried by "thank you"). Tal: *"all the water videos, just no
+sound, like just do a compilation all into one video, of all the shots."*
+
+- Water footage has 3-5s of real action per worker. Split into singles, each
+  video is over before it starts. Together, they are one strong montage.
+- **No sound at all** on this one: a silent track (music goes on in
+  Instagram), so no captions either. Pace it on the picture.
+- Applies to `formats/giving-things.md` where a shoot is many short,
+  wordless encounters: default to one compilation, and only split out a single
+  person when their moment holds alone (the hug did not need its own video).
