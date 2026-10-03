@@ -7,7 +7,7 @@
  "grade": false,
  "music": "flowers-notes-street.wav",
  "bedOnly": true,
- "out": "FLOWERS_NOTES_EREZ_V11.mp4",
+ "out": "FLOWERS_NOTES_EREZ_V12.mp4",
  "beats": [
   [
    "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
@@ -133,42 +133,6 @@
     ],
     "x": 0.65,
     "y": 0.55
-   }
-  ],
-  [
-   "ec45e00b-5842-4728-b984-7729170ca90a",
-   4.3,
-   4.9,
-   0.5,
-   "CUT side, tight: still no idea - his face appears behind them",
-   null,
-   {
-    "manual": true,
-    "nocap": true,
-    "z": [
-     1.7,
-     1.7
-    ],
-    "x": 0.3,
-    "y": 0.45
-   }
-  ],
-  [
-   "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
-   6.4,
-   7.3,
-   0.5,
-   "CUT front, tight: Tal crouching behind the bench with the bouquet",
-   null,
-   {
-    "manual": true,
-    "nocap": true,
-    "z": [
-     2.2,
-     2.3
-    ],
-    "x": 0.5,
-    "y": 0.53
    }
   ],
   [

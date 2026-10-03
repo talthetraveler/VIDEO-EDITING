@@ -2172,3 +2172,14 @@ a public market, faces clear. Tal: *"you need to blur the kids faces"*.
   with an adult moment rather than keep a blurred blob as the beat.
 - Hospital footage (children receiving toys, filmed with the families) is the
   open question - asked, not assumed. Record his answer here.
+
+## 82 — the run-up showed him arriving behind them three times (Tal, 2026-10-03, flowers V11)
+
+*"Between four or five seconds, I'm walking to give him the flowers and the
+cut shows like a repeat of that."* V11 went: side, he appears behind them →
+front, he stands behind her → side, the shhh, also behind them. That is three
+shots of the same arrival. V12 cut the two middle shots, so it goes front
+run-up → side shhh zoom → handoff.
+- LESSONS 75 applies to the build-up too, not just the gift: **he arrives
+  ONCE.** On the strip, ask of each shot whether it shows something the
+  previous shot didn't.

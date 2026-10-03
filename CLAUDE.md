@@ -227,7 +227,10 @@ approval, render full quality and upload with `frameio-deliver.mjs` to
 `FOOTAGE IN/` were cleared on 2026-10-03 after every file in them was verified
 on Frame.io under `SHOT IN ISRAEL / FROM LAPTOP 2026-10-03`
 (`system/scripts/frameio-archive.mjs`, proven by `frameio-inventory.mjs` name +
-exact-byte match).
+exact-byte match). **Later the same day Tal had that archive folder deleted**
+(*"the only things you should put there are the ones I approve"*). Frame.io
+holds APPROVED finals only, never backups or review renders, and
+`frameio-archive.mjs` is not run unless he asks.
 
 ---
 
