@@ -2183,3 +2183,15 @@ run-up → side shhh zoom → handoff.
 - LESSONS 75 applies to the build-up too, not just the gift: **he arrives
   ONCE.** On the strip, ask of each shot whether it shows something the
   previous shot didn't.
+
+## 83 — "more of how happy she is": shocked and happy beats a smile at the lens (Tal, 2026-10-03, flowers V12)
+
+*"Show more shots of the woman smiling and how happy she is ... slow-mo on
+her smiling."* Then: *"not even her smiling, like shocked, like happy, not
+looking directly at the camera is better."*
+- The payoff section needs SEVERAL different reactions from her, not one:
+  the gasp, the big smile, reaching for him, the quiet smile into the flowers.
+  Go through every clip in the folder for them, not just the ones already cut.
+- Rank them: shocked or overjoyed and looking at him or the gift comes first.
+  A posed smile toward the lens comes last.
+- Slow-mo goes on the peak of a reaction, after a normal-speed build.

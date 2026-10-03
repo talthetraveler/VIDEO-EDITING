@@ -5,9 +5,9 @@
  "autoFrame": false,
  "silent": true,
  "grade": false,
- "music": "flowers-notes-street.wav",
+ "music": "flowers-notes-street-34.wav",
  "bedOnly": true,
- "out": "FLOWERS_NOTES_EREZ_V12.mp4",
+ "out": "FLOWERS_NOTES_EREZ_V13.mp4",
  "beats": [
   [
    "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
@@ -494,10 +494,10 @@
   ],
   [
    "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
-   30.5,
-   30.8,
+   29.3,
+   29.5,
    0.5,
-   "CUT front: she turns to him",
+   "CUT front: she looks up from the note",
    null,
    {
     "manual": true,
@@ -506,16 +506,16 @@
      1.2,
      1.2
     ],
-    "x": 0.72,
+    "x": 0.74,
     "y": 0.45
    }
   ],
   [
    "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
-   30.8,
-   30.9333,
+   29.5,
+   29.6333,
    0.5,
-   "fast zoom in onto her big smile",
+   "fast zoom in onto her gasp",
    null,
    {
     "manual": true,
@@ -524,26 +524,45 @@
      1.2,
      1.9
     ],
-    "x": 0.72,
+    "x": 0.74,
     "y": 0.45
    }
   ],
   [
    "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
-   30.9333,
-   31.8,
+   29.6333,
+   30.9,
    0.5,
-   "tight hold: the big smile",
+   "tight hold: open-mouth joy, then the smile builds",
    null,
    {
     "manual": true,
     "nocap": true,
     "z": [
      1.9,
-     1.98
+     1.95
     ],
-    "x": 0.72,
+    "x": 0.74,
     "y": 0.45
+   }
+  ],
+  [
+   "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
+   30.9,
+   31.6,
+   0.5,
+   "SLOW-MO: her biggest smile",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.95,
+     2.05
+    ],
+    "x": 0.74,
+    "y": 0.45,
+    "speed": 0.5
    }
   ],
   [
@@ -562,6 +581,43 @@
     ],
     "x": 0.62,
     "y": 0.45
+   }
+  ],
+  [
+   "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
+   45.9667,
+   46.1,
+   0.5,
+   "she reaches out to him: fast zoom in",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.2,
+     2
+    ],
+    "x": 0.62,
+    "y": 0.5
+   }
+  ],
+  [
+   "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
+   46.1,
+   46.7,
+   0.5,
+   "SLOW-MO: smiling as she reaches for him",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     2,
+     2.08
+    ],
+    "x": 0.62,
+    "y": 0.5,
+    "speed": 0.5
    }
   ],
   [
@@ -634,6 +690,61 @@
     ],
     "x": 0.45,
     "y": 0.48
+   }
+  ],
+  [
+   "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+   31.4,
+   31.6,
+   0.5,
+   "FINAL: she holds the bouquet up to her face",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.3,
+     1.3
+    ],
+    "x": 0.72,
+    "y": 0.42
+   }
+  ],
+  [
+   "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+   31.6,
+   31.7333,
+   0.5,
+   "fast zoom in onto her",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1.3,
+     2
+    ],
+    "x": 0.72,
+    "y": 0.42
+   }
+  ],
+  [
+   "f5d63902-81ba-4dab-bf98-b76067bc3cb5",
+   31.7333,
+   32.3667,
+   0.5,
+   "SLOW-MO: soft smile into the flowers - end",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     2,
+     2.08
+    ],
+    "x": 0.72,
+    "y": 0.42,
+    "speed": 0.5
    }
   ]
  ]
