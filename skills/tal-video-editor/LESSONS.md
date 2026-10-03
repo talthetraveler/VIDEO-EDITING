@@ -2144,3 +2144,18 @@ zooms and punch-ins onto faces, Tal: *"stop with all the zooms its weird"*.
   on a specific video.**
 - His own brief that morning said "punch-ins/zooms on reactions". The later,
   specific reaction to seeing them outranks the earlier general wish.
+
+## 81 — a face zoom needs the face to DO something (Tal, 2026-10-03, flowers V10)
+
+*"At eight seconds you zoom in, but you don't see anything. You just see her
+face looking down."* V10 snapped to 3.0x on her face, in slow-mo, aimed by
+her position, not by what she was doing. Her expression was neutral, so the
+zoom showed nothing.
+
+- **Zoom onto the ACTION, not the person.** V11 holds the bouquet passing
+  into her hands with her face in frame (2358 7.4–8.67, 1.15 → 1.8x, slow-mo).
+- **Before you zoom past 2x on a face, look at the zoomed frames.** If the
+  face isn't smiling, crying, laughing, or reading, pull wider so the thing
+  that is happening is in frame.
+- Aim from a 5 fps strip of the source with timestamps, not a guess. The face
+  sat at y≈0.5, but V10 aimed at 0.40.
