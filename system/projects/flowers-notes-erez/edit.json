@@ -7,7 +7,7 @@
  "grade": false,
  "music": "flowers-notes-street-34.wav",
  "bedOnly": true,
- "out": "FLOWERS_NOTES_EREZ_V13.mp4",
+ "out": "FLOWERS_NOTES_EREZ_V14.mp4",
  "beats": [
   [
    "3a6b361b-80ca-43e8-bf0c-c46c4d759ca3",
@@ -531,9 +531,9 @@
   [
    "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
    29.6333,
-   30.9,
+   30.5,
    0.5,
-   "tight hold: open-mouth joy, then the smile builds",
+   "tight hold: open-mouth joy (short - she faces the lens here)",
    null,
    {
     "manual": true,
@@ -544,25 +544,6 @@
     ],
     "x": 0.74,
     "y": 0.45
-   }
-  ],
-  [
-   "ba76663e-eb70-4d8e-8cab-527d06bc74c5",
-   30.9,
-   31.6,
-   0.5,
-   "SLOW-MO: her biggest smile",
-   null,
-   {
-    "manual": true,
-    "nocap": true,
-    "z": [
-     1.95,
-     2.05
-    ],
-    "x": 0.74,
-    "y": 0.45,
-    "speed": 0.5
    }
   ],
   [
