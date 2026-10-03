@@ -2230,3 +2230,16 @@ Also from this cut: a helper script took the newest `beats_*` folder by NAME;
 the run id is the last 7 digits of the clock and wraps, so it read a stale
 build and blurred the wrong frame counts. Newest by mtime, always
 (`caption-sync.py` already does).
+
+## 84 — reviewing a batch: ONE video at a time in chat, its number in the message, nothing burned in (Tal, 2026-10-03)
+
+33 previews were sent in groups, then all 22 at once with a numbered table,
+then a job was started to burn a number into the corner of each. Tal: *"you
+don't need to burn a number in the corner, just write it over on the chat, or
+show me video one you did then I'll approve or tell you what to fix."*
+
+- **One video per message, captioned with its number and name** (`#12 —
+  Hospital, Smiles montage (0:27)`). He answers approve / fix; then the next.
+- No burned-in ids, no numbered review copies, no table of 22.
+- Approved -> full-quality render -> Frame.io (`EDITED BY CLAUDE`). A fix ->
+  redo that one and show it again before moving on.
