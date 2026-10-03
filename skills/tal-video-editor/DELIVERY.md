@@ -90,3 +90,25 @@ retry — the signature is wrong and retrying only burns the upload window.
 
 `scripts/lib/frameio-deliver.mjs` exposes no delete, rename, move or overwrite.
 It can only create a new file in the delivery folder.
+
+## MANY CUTS WAITING — THE APPROVE PAGE (2026-10-03)
+
+Tal: *"show me everything so I can just decide what to move to the frame io."*
+One video goes into the chat. When several sessions have left dozens waiting,
+open the page instead:
+
+```bash
+node system/scripts/approve-server.mjs        # http://localhost:4300 (.claude/launch.json: approve-page)
+```
+
+It scans `system/projects/` on every load and shows the NEWEST render of each
+project, marks what is already on Frame.io (`delivered.json`, plus the batch
+manifests for uploads made under a display name), and has one tick box per
+video. His ticks land in `system/projects/_frameio/approve-picks.json`. **A
+tick is the approval; the page uploads nothing.** After he says "send my
+picks": read that file, render each pick full quality, deliver with
+`frameio-deliver.mjs`, verify.
+
+A project with a `blur-rules.json` never shows an unblurred render: `X_BLUR.mp4`
+wins where it exists (eden-story), `_PREBLUR` / `_noblur` files are never
+listed, and a render older than the rules file is hidden.
