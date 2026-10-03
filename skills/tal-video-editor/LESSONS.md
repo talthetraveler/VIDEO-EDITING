@@ -2195,3 +2195,38 @@ looking directly at the camera is better."*
 - Rank them: shocked or overjoyed and looking at him or the gift comes first.
   A posed smile toward the lens comes last.
 - Slow-mo goes on the peak of a reaction, after a normal-speed build.
+
+## 82 — a blur that passed 188 stills still showed her face for 20 frames (EDEN V11, 2026-10-03)
+
+V11 was cut to a line-by-line script Tal pasted after reading the numbered
+transcript (`EDEN-TRANSCRIPT.md` - showing him every line with a number is what
+got a usable brief out of him; do that first next time).
+
+**The leak.** In one two-shot beat the tracker "found her" in 64% of frames at
+x 0.91 - but what it had found was a wall-mounted pump beside her head, which
+the detector scores as a face at 0.78. Her real face sat below it in the clear
+for 20 frames. The cut sheets (2 frames each side of every cut) and the shot
+sheets (4 per shot) were all clean: the drift was in the MIDDLE of a shot.
+
+**What caught it:** zooming the right-hand third of that one shot every 6
+frames, because its detection rate and centre looked different from its
+neighbours. **A detection rate under 100% next to shots at 100%, or a centre
+that sits at the frame edge, is the signal - zoom that shot before anything
+else.**
+
+**The fix:** that beat's allowed region now starts at x 0.86, which excludes
+the pump. Detection went 64% -> 99% and the centre moved onto her.
+
+**`scripts/blur-check.py` (new) - and its limit.** It scans every frame of the
+finished file for a face outside every blur ellipse. Known-answer test: on the
+leaking render it flagged the leak (beat 08, f1052-f1071, score 0.82), and on
+the fixed render beat 08 is clean. But it also flags ~230 frames that are not
+her: the same pump, the cartoon on the blanket, and the lower edge of the blur
+where her shoulder is. **It cannot return a clean PASS on this footage, so it
+is a list of places to LOOK, not a gate.** Every cluster it flagged was zoomed
+and looked at (24 spots) before V11 went out.
+
+Also from this cut: a helper script took the newest `beats_*` folder by NAME;
+the run id is the last 7 digits of the clock and wraps, so it read a stale
+build and blurred the wrong frame counts. Newest by mtime, always
+(`caption-sync.py` already does).
