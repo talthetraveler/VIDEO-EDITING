@@ -80,7 +80,9 @@ def find_cuts(path, rules):
         acc += beat["frames"]
         lo, hi = max(1, acc - SEARCH), min(n - 1, acc + SEARCH)
         k = lo + int(np.argmax(diff[lo:hi + 1]))
-        starts.append(k)
+        # a jump cut inside one framing barely moves the picture: only believe a peak that stands out,
+        # otherwise the beat frame count (exact on every build so far) stands
+        starts.append(k if diff[k] > 4 * (np.median(diff[lo:hi + 1]) + 1e-6) else acc)
     return starts, n
 
 
@@ -179,6 +181,12 @@ def track(dets, rules, starts, W, H):
                 out[f0 + n - 1 + j].append(lastE)
         report.append((bi + 1, f0, n, hit, f"centre {np.median(c[:,0]):.2f},{np.median(c[:,1]):.2f}  radius {rx:.3f}x{ry:.3f} of width"
                        + ("  [hand-keyed]" if keys else "")))
+    # a "clear" beat (a shot she is not in, a text card) is wiped last, so a neighbour's
+    # cut-edge ellipse never smears a doorway or the words of a card (EDEN V11, 2026-10-03)
+    for bi, beat in enumerate(rules["beats"]):
+        if beat.get("clear"):
+            for f in range(starts[bi], ends[bi]):
+                out[f] = []
     return out, report
 
 
@@ -234,8 +242,13 @@ def mask_clock(src):
 
 
 def merge(src, mask_path, dst, W, H):
+    # --fade-out <seconds>: fade the picture to black at the very end (the audio fade is the mixer's job)
+    fade = ""
+    if "--fade-out" in sys.argv:
+        d = float(sys.argv[sys.argv.index("--fade-out") + 1]); c = cv2.VideoCapture(src)
+        n = int(c.get(cv2.CAP_PROP_FRAME_COUNT)); fade = f",fade=t=out:s={max(0, n - int(d * 30))}:n={int(d * 30)}"
     fc = (f"[0:v]split[base][b];[b]scale={W//36}:{H//36}:flags=area,scale={W}:{H}:flags=bilinear,gblur=sigma=14[bl];"
-          f"[1:v]setpts='{mask_clock(src)}',format=gray[m];[bl][m]alphamerge[fg];[base][fg]overlay=format=auto,format=yuv420p[v]")
+          f"[1:v]setpts='{mask_clock(src)}',format=gray[m];[bl][m]alphamerge[fg];[base][fg]overlay=format=auto,format=yuv420p{fade}[v]")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-i", mask_path, "-filter_complex", fc, "-map", "[v]", "-map", "0:a?",
                     "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-pix_fmt", "yuv420p", "-color_range", "tv",
                     "-c:a", "copy", "-movflags", "+faststart", dst], check=True)

@@ -798,11 +798,18 @@ function beatGain(wav) {
 // A "CARD" beat is a full-screen text card, e.g. ["CARD", 0, 2.2, 0, "5 MINUTES LATER"].
 // Tal asked for one between Eden's interview and the singing.
 function buildCard(text, dur, dest) {
-  const tf = join(TMP, `card_${Math.random().toString(36).slice(2)}.txt`);
-  writeFileSync(tf, text, "utf8");
+  const lines = String(text).split("\n");
+  const size = lines.length > 2 ? 64 : 72, step = Math.round(size * 1.35);
+  const top = Math.round((1920 - lines.length * step) / 2);
+  const draws = lines.map((ln, k) => {
+    if (!ln.trim()) return null;
+    const tf = join(TMP, `card_${Math.random().toString(36).slice(2)}.txt`);
+    writeFileSync(tf, ln, "utf8");
+    return `drawtext=fontfile='${FONT}':textfile='${ffPath(tf)}':fontcolor=white:fontsize=${size}:x=(w-text_w)/2:y=${top + k * step}`;
+  }).filter(Boolean);
   execFileSync(FF, ["-v", "error", "-y", "-f", "lavfi", "-i", `color=c=black:s=1080x1920:d=${dur}:r=30`,
     "-f", "lavfi", "-i", `anullsrc=channel_layout=stereo:sample_rate=48000`,
-    "-vf", `drawtext=fontfile='${FONT}':textfile='${ffPath(tf)}':fontcolor=white:fontsize=72:x=(w-text_w)/2:y=(h-text_h)/2,setsar=1`,
+    "-vf", `${draws.join(",")},setsar=1`,
     "-t", String(dur), "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
     "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", "-shortest", dest], { stdio: "pipe" });
 }
@@ -825,6 +832,9 @@ function buildCard(text, dur, dest) {
 // Replaced with a proper filmic S-curve: the black point is PLANTED (0.06 in
 // maps to 0.0 out, so haze is crushed back to real black), the shadows are
 // pulled slightly under the line, the highlights are rolled off just below
+// EVERY LINE IS CENTRED ON ITS OWN. One drawtext over a multi-line textfile
+// centres the BLOCK and left-aligns the lines inside it - the EDEN V11 closing
+// note came out ragged-left (2026-10-03). A blank line is a paragraph gap.
 // clipping so a white shirt in direct sun keeps its texture instead of
 // blowing to paper, and saturation is raised gently AFTER the curve where it
 // costs less. `curves` holds the endpoints; `eq` never did.

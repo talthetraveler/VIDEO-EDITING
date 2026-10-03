@@ -3,26 +3,41 @@
   "capY": 0.73,
   "exposure": false,
   "autoFrame": false,
-  "out": "EDEN_HER_STORY_V10.mp4",
-  "note": "V10, 2026-10-02, after Tal rejected V9. His notes: cut 'can I sit down and listen', cut the questions he asked, no dead air, captions were wrong and not on her speech, BLUR HER FACE. Every beat is Eden speaking except the first line. In/out points are measured speech runs, exact (the Groq word times on this clip drift by up to 2s, so snapping is off per beat). English wording was re-read from the Hebrew and lives in cache/translate/<id>.json. Her face is blurred by a post-pass (scripts/blur-face.py) - build-edit does not blur. 06 is the two-shot (Tal left, Eden right); 04 and 01 are Eden alone.",
+  "out": "EDEN_HER_STORY_V11.mp4",
+  "note": "V11, 2026-10-03, cut to the line-by-line script Tal pasted after reading EDEN-TRANSCRIPT.md. Opens on Eden, then his walk-in (clip 5's doorway picture under clip 6's line), the mother section WITH his questions (his script puts them back - it outranks the 2026-10-02 note that took them out), strength, falling apart, the message, his own moment, believe/smile/always, 'I'm a strong girl', a wordless beat, the note card. Every in/out is a measured speech run, exact. Her face is blurred by scripts/blur-face.py (his choice, 2026-10-02). No music: there is no music file on this machine (projects/_music/README.md).",
   "beats": [
-    [
-      "local-49f1fbc4b3367b2b",
-      1.39,
-      6.12,
-      0.3,
-      "Tal: 'Hi Eden, I heard your story - you have cancer and you are not giving up.' The only line of his that stays.",
-      null,
-      {
-        "exact": true
-      }
-    ],
     [
       "local-49f1fbc4b3367b2b",
       14.47,
       22.57,
       0.85,
-      "'I'm Eden, I'm 30, fighting leukemia for a year. I lost my mother a year ago too.' One take; out before his 'What?' at 22.90.",
+      "COLD OPEN. 6-5, 6-6: 'I'm Eden, I'm 30, fighting leukemia for a year. I lost my mother a year ago too.'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-ed0e6219e5ae25b2",
+      2.9,
+      7.63,
+      0.5,
+      "TAL WALKS IN. Picture: clip 5, the doorway. Sound: 6-1 from clip 6 ('Hi Eden, I heard your story. You have cancer and you are not giving up.'), aligned so 'Hi Eden' lands where he says it in clip 5.",
+      null,
+      {
+        "exact": true,
+        "audio": {
+          "id": "local-49f1fbc4b3367b2b",
+          "at": 1.39
+        }
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      6.17,
+      10.1,
+      0.3,
+      "6-2: 'So I wanted to come hear your story.' He reaches the bed.",
       null,
       {
         "exact": true
@@ -30,10 +45,54 @@
     ],
     [
       "local-49f1fbc4b3367b2b",
-      34.61,
+      22.83,
+      25.1,
+      0.85,
+      "HER MOM. 6-7: 'What? You lost your mother a year ago?' Cut before her 'yes'.",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      33.28,
       36.93,
       0.85,
-      "'She passed away from cancer.' His question before it and his echo after it are both out.",
+      "6-10, 6-11: 'How did she pass away?' - 'She passed away from cancer.' In after his false start ('how long did she have...').",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      39.8,
+      42.72,
+      0.85,
+      "6-14, 6-15: 'How long did she have cancer?' - '17 years.' Held to 42.72; she speaks again at 42.74.",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-abb77f2d77313a13",
+      68.74,
+      73.25,
+      0.45,
+      "STRONG. 1-27, 1-28: 'And how do you stay so strong?' - 'It's not easy.'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      77.95,
+      83.82,
+      0.85,
+      "6-27, from 'I need' - her 'because I...' and the 2.5s she searches for the words before it are out: 'I need to be strong for everyone, for myself, and for my family.' Out before his 'and what...'.",
       null,
       {
         "exact": true
@@ -44,7 +103,7 @@
       59.55,
       61.56,
       0.45,
-      "4K. 'It's hard.' Out before his 'every day is hard?'",
+      "FALLS APART. 4-25: 'It's hard.'",
       null,
       {
         "exact": true
@@ -53,31 +112,9 @@
     [
       "local-98627ce0235e3574",
       65.22,
-      82.98,
+      78,
       0.45,
-      "4K. THE TURN, whole: 'There are times you fall apart... but I came back to myself, to smiling. I can't keep on crying. It's not good, it's not healthy.' V9 started at 71.4 and cut 'healthy' off at 81.8. Out at 82.98: her next word starts at 83.04.",
-      null,
-      {
-        "exact": true
-      }
-    ],
-    [
-      "local-abb77f2d77313a13",
-      71.67,
-      77,
-      0.45,
-      "4K. 'It's not easy. But I'm not afraid of anything.' His 'how do you stay so strong' is out.",
-      null,
-      {
-        "exact": true
-      }
-    ],
-    [
-      "local-49f1fbc4b3367b2b",
-      155.33,
-      161.94,
-      0.85,
-      "'Pray for me, and come visit. I'd be so happy.' His 'what is your dream' is out.",
+      "4-28..4-31: 'There are times you fall apart... but I came back to myself, to smiling. I can't keep on crying.' One take, not cut up.",
       null,
       {
         "exact": true
@@ -88,7 +125,7 @@
       209.71,
       211.92,
       0.85,
-      "THE MESSAGE. 'Don't give up when it's hard.'",
+      "THE MESSAGE. 6-64: 'Don't give up when it's hard.'",
       null,
       {
         "exact": true
@@ -99,7 +136,7 @@
       212.84,
       216.9,
       0.85,
-      "'You can cry a little.' Out at 216.90, the one quiet 50ms before her next word: V10 first cut this at 216.0, in the middle of 'cry' (she hesitates on it, 215.0-216.8).",
+      "6-65/66: 'You can cry a little.'",
       null,
       {
         "exact": true
@@ -110,7 +147,7 @@
       219,
       227.55,
       0.85,
-      "'be a little sad, but don't stay down. Know how to lift yourself up.' V9 ended at 222.4, before the last sentence.",
+      "6-68..6-70: 'Be a little sad, but don't stay down. Know how to lift yourself up.'",
       null,
       {
         "exact": true
@@ -118,14 +155,121 @@
     ],
     [
       "local-49f1fbc4b3367b2b",
-      464.84,
-      466.25,
+      356.16,
+      367.75,
       0.85,
-      "THE LAST WORD, in English: 'I'm a strong girl.' V9 captioned this 'I will be stronger'.",
+      "TAL'S MOMENT. 6-120, 6-121: 'It touches my heart because... a few years ago you were like me, healthy, and one day everything changed, and you don't give up.'",
       null,
       {
         "exact": true
       }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      369.5,
+      373.3,
+      0.85,
+      "6-122, first half: 'Eden... do you understand how strong you are?'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      378.62,
+      382.86,
+      0.85,
+      "6-122, the end: 'You are surviving a disease and you don't give up.'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      407.42,
+      410.42,
+      0.85,
+      "BELIEVE + SMILE, fast. 6-136, 6-137: 'You always have to...' - 'go up.'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      411.88,
+      412.86,
+      0.85,
+      "6-139: 'believe.'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      413.65,
+      415.08,
+      0.85,
+      "6-141: 'smile.'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      415.16,
+      416.25,
+      0.85,
+      "6-143: 'always.'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      464.78,
+      470.26,
+      0.85,
+      "I'M A STRONG GIRL. 6-163..6-166, in English. Out before 'you speak English'.",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      472.6,
+      474.76,
+      0.85,
+      "6-169, 6-170: 'You're so amazing.' - 'Thank you.'",
+      null,
+      {
+        "exact": true
+      }
+    ],
+    [
+      "local-49f1fbc4b3367b2b",
+      476.72,
+      478.45,
+      0.85,
+      "No dialogue: 1.7s of the two of them holding hands, the only silent stretch after 'thank you'.",
+      null,
+      {
+        "exact": true,
+        "nocap": true
+      }
+    ],
+    [
+      "CARD",
+      0,
+      2.6,
+      0,
+      "YOU ARE BEAUTIFUL\nINSIDE AND OUT.\n\nYOUR SMILE IS PRECIOUS.\n\nNEVER STOP BEING HAPPY ♥"
     ]
   ],
   "captionFix": []
