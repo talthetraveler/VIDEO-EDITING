@@ -112,6 +112,10 @@ const BEAT_W = 1080, BEAT_H = 1920;   // beats ALWAYS full size; scale once at t
 // It sits lower - white line measured at y~0.70, gold beneath at ~0.77 - so
 // its block centre defaults to 0.72 instead of 0.66.
 const NAS = cfg.captionStyle === "nas";
+// "captionStyle": "gothic" = caption option 5 (Tal, 2026-10-05): Century
+// Gothic Bold, white caps, dark outline, about two words a line. Same height
+// and timing as the street look; only the face and the line breaks change.
+const GOTHIC = cfg.captionStyle === "gothic";
 const CAP_Y = Math.round(1920 * (cfg.capY ?? (NAS ? 0.72 : 0.66)));
 
 // caption-only corrections; audio is never altered
@@ -719,8 +723,9 @@ function captionOverlays(caps, tmpDir, beatCapY) {
   let meta = [];
   try {
     meta = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-caption.py"),
-      tmpDir, String(CAP_MAXW), String(NAS ? 100 : CAP_SIZE)],
+      tmpDir, String(CAP_MAXW), String(NAS ? 100 : GOTHIC ? 104 : CAP_SIZE)],
       { input: JSON.stringify(caps.map((c) => (NAS ? { text: c.text, style: "nas", key: nasKey(c.text) }
+                                             : GOTHIC ? { text: c.text, style: "gothic" }
                                                    : { text: c.text }))), encoding: "utf8" }).trim());
   } catch (e) {
     console.log(`  !! caption render failed: ${String(e.message).slice(0, 90)}`);

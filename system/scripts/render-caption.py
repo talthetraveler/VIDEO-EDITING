@@ -30,6 +30,11 @@ MAXW  = int(sys.argv[2]) if len(sys.argv) > 2 else 980
 BASE  = int(sys.argv[3]) if len(sys.argv) > 3 else 96
 
 FONT_PATH = "C:/Windows/Fonts/ariblk.ttf"      # Arial Black — the heaviest stock face
+# STYLE "gothic" - Tal, 2026-10-05, shown six looks on one still: "caption 5".
+# Century Gothic Bold (rounded geometric), still WHITE uppercase with a dark
+# outline, and broken about TWO WORDS A LINE ("I ACTUALLY / BEAT CANCER").
+# Opt-in per project: edit.json "captionStyle": "gothic".
+GOTHIC_PATH = "C:/Windows/Fonts/GOTHICB.TTF"
 WHITE  = (255, 255, 255, 255)
 GOLD   = (245, 197, 66, 255)
 STROKE = (0, 0, 0, 255)
@@ -42,10 +47,37 @@ STOP = set(("A AN THE AND OR BUT TO OF IN ON AT FOR FROM WITH IS ARE WAS WERE BE
             "IF AS BY UP OUT NO YES OK OKAY").split())
 
 _cache = {}
+_FACE = [FONT_PATH]          # the face in force for the caption being drawn
 def font(sz):
-    if sz not in _cache:
-        _cache[sz] = ImageFont.truetype(FONT_PATH, sz)
-    return _cache[sz]
+    k = (_FACE[0], sz)
+    if k not in _cache:
+        _cache[k] = ImageFont.truetype(_FACE[0], sz)
+    return _cache[k]
+
+def two_per_line(words, f, maxw):
+    """Style "gothic": break a short caption two words a line.
+    2 words -> one line; 3 -> 2+1, or 1+2 when the second word points forward
+    ("TO", "THE", "MY" must not end a line); 4 -> 2+2. Longer captions, or a
+    line that does not fit, return None and the greedy wrap decides."""
+    n = len(words)
+    if n <= 2:
+        cand = [words]
+    elif n == 3:
+        # three short words read better whole ("WE ARE BROTHERS") than as 1+2
+        sp = wordw(" ", f)
+        if sum(wordw(w, f) for w in words) + sp * 2 <= maxw * 0.78:
+            return [words]
+        bare = re.sub(r"[^A-Z0-9']", "", words[1].upper())
+        cand = [words[:1], words[1:]] if bare in STOP else [words[:2], words[2:]]
+    elif n == 4:
+        cand = [words[:2], words[2:]]
+    else:
+        return None
+    space = wordw(" ", f)
+    for ln in cand:
+        if sum(wordw(w, f) for w in ln) + space * (len(ln) - 1) > maxw:
+            return None
+    return cand
 
 def wordw(w, f):
     return f.getbbox(w)[2] - f.getbbox(w)[0]
@@ -87,7 +119,8 @@ def forced(parts, f, maxw):
             return None
     return parts
 
-def render(text, key_idx, idx):
+def render(text, key_idx, idx, style=None):
+    _FACE[0] = GOTHIC_PATH if style == "gothic" else FONT_PATH
     words = [w for w in re.split(r"\s+", text.strip()) if w]
     if not words:
         return None
@@ -105,6 +138,8 @@ def render(text, key_idx, idx):
         size -= 4
     if not lines:
         size = BASE
+    if not lines and style == "gothic" and len(parts) < 2:
+        lines = two_per_line(words, font(size), MAXW)
     while not lines and size >= 46:
         f = font(size)
         lines = layout(words, f, MAXW)
@@ -283,7 +318,7 @@ def main():
         if key is None:
             key = pick_key(words) if (isinstance(it, dict)
                                       and it.get("emphasis")) else -1
-        res.append(render(text, key, i))
+        res.append(render(text, key, i, it.get("style") if isinstance(it, dict) else None))
     print(json.dumps(res))
 
 if __name__ == "__main__":
