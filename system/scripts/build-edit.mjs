@@ -1120,9 +1120,52 @@ let LAST_WORDS = [];   // the previous beat's final caption, for cross-beat de-d
 let LAST_SHOWN = "";   // ...and its exact text, so an identical line cannot cross a beat join
 let LAST_ID = "";     // ...and the clip it came from: only the SAME clip can repeat itself across a join
 
+// REUSE UNCHANGED BEATS.  node build-edit.mjs <slug> --reuse
+// Every build used to re-render every beat, and an HDR beat costs about a
+// minute: changing two shots of a 36-beat film meant 35 minutes (heli-balloon,
+// 2026-10-04, five full rebuilds in one day). With --reuse a beat whose spec is
+// IDENTICAL to a beat of the previous build (same clip, in, out, options) is
+// copied from that build's beats folder with its captions; only new or changed
+// beats render. The final stitch (title, beds, loudness) always runs in full.
+// Only safe when the project-level settings (grade, captions, layout...) have
+// not changed since that build - it refuses if the recorded signature differs.
+const cfgSig = JSON.stringify([cfg.layout, cfg.autoFrame, cfg.grade, cfg.exposure, cfg.captionWords, cfg.captionStyle,
+  cfg.capY, cfg.captionFix, cfg.denoise, cfg.snap, cfg.maxZoom, cfg.tilts, cfg.faceMinY, cfg.captionKeys, cfg.silent]);
+const REUSE = (() => {
+  if (!process.argv.includes("--reuse")) return null;
+  const lp = join(OUT, "BUILD-LOG.json");
+  if (!existsSync(lp)) { console.log("  --reuse: no previous BUILD-LOG.json - rendering everything"); return null; }
+  const prev = JSON.parse(readFileSync(lp, "utf8"));
+  if (prev.sig && prev.sig !== cfgSig) { console.log("  --reuse: project settings changed since the last build - rendering everything"); return null; }
+  const dirs = readdirSync(OUT).filter((d) => /^beats_\d+$/.test(d) && !d.endsWith(RUN))
+    .map((d) => ({ d: join(OUT, d), n: readdirSync(join(OUT, d)).filter((f) => /^\d+\.mp4$/.test(f)).length, m: statSync(join(OUT, d)).mtimeMs }))
+    .filter((x) => x.n === (prev.beats ?? []).length).sort((a, b) => b.m - a.m);
+  if (!dirs.length) { console.log("  --reuse: the previous build's beats folder is gone - rendering everything"); return null; }
+  const map = new Map();
+  (prev.beats ?? []).forEach((b, k) => map.set(JSON.stringify(b), k + 1));
+  console.log(`  --reuse: previous build has ${map.size} beats in ${dirs[0].d.split(/[\/]/).pop()}`);
+  return { dir: dirs[0].d, map, caps: prev.captions ?? [] };
+})();
+
 cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
   if (SKIP.has(i)) return;
   const n0 = String(i + 1).padStart(2, "0");
+  if (REUSE && id !== "CARD") {
+    const k = REUSE.map.get(JSON.stringify(cfg.beats[i]));
+    const old = k ? join(REUSE.dir, `${String(k).padStart(2, "0")}.mp4`) : null;
+    if (old && existsSync(old)) {
+      const dest = join(BEATS, `${n0}.mp4`);
+      writeFileSync(dest, readFileSync(old));
+      const fr = parseInt(execFileSync(FP, ["-v", "error", "-count_frames", "-select_streams", "v:0", "-show_entries",
+        "stream=nb_read_frames", "-of", "csv=p=0", dest], { encoding: "utf8" }).trim(), 10);
+      const d = +(fr / 30).toFixed(4);
+      for (const c of REUSE.caps) if (String(c.beat) === String(k).padStart(2, "0")) CAPTIONS.push({ ...c, beat: n0 });
+      OFFS.set(i, total); DURS.set(i, d);
+      console.log(`  ${n0}  ${String(id).slice(0, 8)}  reused (${d}s)  ${why ?? ""}`);
+      list.push(dest); total += d;
+      return;
+    }
+  }
   if (id === "CARD") {
     const d = +(to - ss).toFixed(2);
     const dest = join(BEATS, `${n0}.mp4`);
@@ -1768,7 +1811,7 @@ execFileSync(FF, [...args, "-filter_complex", hasMusic ? `${fc};${amix}` : bedMi
 // HOSPITAL-RAMALLAH_V1. The record goes in its own file.
 writeFileSync(join(OUT, "BUILD-LOG.json"), JSON.stringify({
   built: new Date().toISOString(), total_s: +total.toFixed(2),
-  out: outName, layout: cfg.layout ?? "vertical", title: cfg.title, beats: cfg.beats,
+  out: outName, layout: cfg.layout ?? "vertical", title: cfg.title, beats: cfg.beats, sig: cfgSig,
   captions: CAPTIONS,
 }, null, 2), "utf8");
 // NEVER destroy an earlier version. This used to delete every other _V*.mp4

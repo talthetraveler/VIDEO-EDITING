@@ -1,5 +1,5 @@
 {
- "_brief": "Tal 2026-10-04: TAL STUDIOS / STRANGER HELI BALLOON. In order: I convince her, she says yes -> taxi -> high five with the guy -> on the balloon, we laugh -> the guy plays; HIS playing is the background music under shots of that, her speaking, the light -> we get off -> 'next surprise, drag queen' -> restaurant shots. One-word captions. Under 1:30, fast, best parts only. Every cut point is on WhisperX-aligned word times (exact beats, snap off); IMG_7565's 'Are you scared?' was mis-aligned to 0.18s and hand-moved to the measured 4.24s. | V3 (Tal on V2, 2026-10-04): (1) 10 years was never said on screen before I celebrate it - put back Is it your first time / it has been 10 years ago; (2) it was amazing cut off - her whole answer now; (3) more drag-queen interaction, her meeting the drag queen sitting down; up to 1:45. | V4 (Tal on V3, 2026-10-04): was perfect; show me getting in the taxi with her, everything with me and the taxi driver, we open the taxi; end after the 10-years toast with the goodbye (that was so nice, thank you); may run 2:10-2:20; then put it in TAL STUDIOS / FINAL VIDEOS.",
+ "_brief": "Tal 2026-10-04: TAL STUDIOS / STRANGER HELI BALLOON. In order: I convince her, she says yes -> taxi -> high five with the guy -> on the balloon, we laugh -> the guy plays; HIS playing is the background music under shots of that, her speaking, the light -> we get off -> 'next surprise, drag queen' -> restaurant shots. One-word captions. Under 1:30, fast, best parts only. Every cut point is on WhisperX-aligned word times (exact beats, snap off); IMG_7565's 'Are you scared?' was mis-aligned to 0.18s and hand-moved to the measured 4.24s. | V3 (Tal on V2, 2026-10-04): (1) 10 years was never said on screen before I celebrate it - put back Is it your first time / it has been 10 years ago; (2) it was amazing cut off - her whole answer now; (3) more drag-queen interaction, her meeting the drag queen sitting down; up to 1:45. | V4 (Tal on V3, 2026-10-04): was perfect; show me getting in the taxi with her, everything with me and the taxi driver, we open the taxi; end after the 10-years toast with the goodbye (that was so nice, thank you); may run 2:10-2:20; then put it in TAL STUDIOS / FINAL VIDEOS. | V5 (Tal on V4, 2026-10-04): the taxi-driver part is way too long - just getting in the taxi, then Are you Muslim? - Yeah - Nice to meet you, bro. Salam alaykum. Name / town / Mashallah exchange removed.",
  "layout": "vertical",
  "autoFrame": false,
  "grade": false,
@@ -20,7 +20,7 @@
    "fade": 0.5
   }
  ],
- "out": "HELI_BALLOON_V4.mp4",
+ "out": "HELI_BALLOON_V5.mp4",
  "beats": [
   [
    "018af1e2-c8a1-46d4-9c0e-7a74c7fdf468",
@@ -370,26 +370,15 @@
    }
   ],
   [
-   "29752f29-78a2-43e9-88c0-8efca8e1e329",
-   13.85,
-   23.4,
+   "4ad01d0b-8a4e-448d-acdb-450c3d8bc1c9",
+   6.9,
+   10.2,
    0.5,
-   "THE TAXI DRIVER, on the way to the drag show: Excuse me, brother. Whats your name? - Fadi - Nice to meet you. Where are you from? - From Taybeh - Mashallah",
+   "SECOND TAXI (Tal on V4: the taxi part was way too long): she gets in",
    null,
    {
     "exact": true,
-    "boost": [
-     [
-      16.66,
-      17,
-      8
-     ],
-     [
-      20.8,
-      21.3,
-      8
-     ]
-    ]
+    "nocap": true
    }
   ],
   [

@@ -2561,3 +2561,30 @@ for what the trims to hit a length had taken out:
   the driver's town as "Taipei"; captioned TAYBEH, flagged to him.
 - Delivery for a Tal Studios shoot: Frame.io `TAL STUDIOS / FINAL VIDEOS!`
   (not the Social Accords folders).
+
+## 97 — "the taxi part is way too long" - a side character gets ONE exchange (Tal on balloon V4, 2026-10-04)
+
+V4 answered *"make sure everything with me and the taxi driver"* with 13
+seconds of it: his name, his town, "Mashallah", "Are you Muslim?", "Salam
+alaykum". Tal: the taxi part is *"way too long … maybe I just get in the taxi,
+open the door for the taxi, you get in, and then I say Salam alaykum, are you
+Muslim? … yes. Mashallah."* V5: she gets in the taxi (3.3s), then *"Are you
+Muslim?" - "Yeah" - "Nice to meet you, bro. Salam alaykum"* (3.5s).
+
+- "Everything with the driver" meant **the driver is IN the film**, not that
+  every line is. A person met on the way gets the one exchange that carries
+  the point (here: Jewish creator, Muslim driver, a warm greeting) and the
+  film moves on. Name-and-hometown small talk is the first thing to go.
+- He remembered the lines in a different order ("Are you Muslim? Yes.
+  Mashallah") from the footage ("Mashallah" was said about the town, earlier).
+  The cut keeps what was actually said after the question; he was told.
+- **`node system/scripts/build-edit.mjs <slug> --reuse`** (new today): beats
+  whose spec is unchanged since the last build are copied from its beats
+  folder, only changed beats render, the stitch runs in full. This change took
+  about three minutes instead of thirty-five. The previous beats folder is
+  swept one hour after it was written - a quick revision has to start inside
+  that hour, or it is a full render again.
+- Five rounds on this video (V2-V5 after the first cut). Every round after V3
+  was him putting BACK a beat of the day or trimming one I over-filled. Next
+  time: send the first cut with the whole chronology in, at the longer length,
+  and let him take out.
