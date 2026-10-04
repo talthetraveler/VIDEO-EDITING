@@ -1,0 +1,24 @@
+{
+ "layout": "vertical",
+ "autoFrame": false,
+ "grade": false,
+ "exposure": false,
+ "snap": false,
+ "out": "TAIL.mp4",
+ "_brief": "1.1s tail for heli-balloon V4: the high five after 'good celebration' (same clip, contiguous), picture only matters",
+ "beats": [
+  [
+   "3e62e54a-f4fb-4e3b-ba80-2f8e7f5e7600",
+   11.03,
+   12.15,
+   0.5,
+   "the high five lands",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0
+   }
+  ]
+ ]
+}

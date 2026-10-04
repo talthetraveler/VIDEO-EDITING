@@ -1,5 +1,5 @@
 {
- "_brief": "Tal 2026-10-04: TAL STUDIOS / STRANGER HELI BALLOON. In order: I convince her, she says yes -> taxi -> high five with the guy -> on the balloon, we laugh -> the guy plays; HIS playing is the background music under shots of that, her speaking, the light -> we get off -> 'next surprise, drag queen' -> restaurant shots. One-word captions. Under 1:30, fast, best parts only. Every cut point is on WhisperX-aligned word times (exact beats, snap off); IMG_7565's 'Are you scared?' was mis-aligned to 0.18s and hand-moved to the measured 4.24s. | V3 (Tal on V2, 2026-10-04): (1) 10 years was never said on screen before I celebrate it - put back Is it your first time / it has been 10 years ago; (2) it was amazing cut off - her whole answer now; (3) more drag-queen interaction, her meeting the drag queen sitting down; up to 1:45.",
+ "_brief": "Tal 2026-10-04: TAL STUDIOS / STRANGER HELI BALLOON. In order: I convince her, she says yes -> taxi -> high five with the guy -> on the balloon, we laugh -> the guy plays; HIS playing is the background music under shots of that, her speaking, the light -> we get off -> 'next surprise, drag queen' -> restaurant shots. One-word captions. Under 1:30, fast, best parts only. Every cut point is on WhisperX-aligned word times (exact beats, snap off); IMG_7565's 'Are you scared?' was mis-aligned to 0.18s and hand-moved to the measured 4.24s. | V3 (Tal on V2, 2026-10-04): (1) 10 years was never said on screen before I celebrate it - put back Is it your first time / it has been 10 years ago; (2) it was amazing cut off - her whole answer now; (3) more drag-queen interaction, her meeting the drag queen sitting down; up to 1:45. | V4 (Tal on V3, 2026-10-04): was perfect; show me getting in the taxi with her, everything with me and the taxi driver, we open the taxi; end after the 10-years toast with the goodbye (that was so nice, thank you); may run 2:10-2:20; then put it in TAL STUDIOS / FINAL VIDEOS.",
  "layout": "vertical",
  "autoFrame": false,
  "grade": false,
@@ -13,14 +13,14 @@
   {
    "id": "045bca6c-b7ed-4137-96c7-90a1308e515e",
    "at": 2.6,
-   "from": 11,
-   "to": 19,
+   "from": 13,
+   "to": 21,
    "vol": 1,
    "under": 0.3,
    "fade": 0.5
   }
  ],
- "out": "HELI_BALLOON_V3.mp4",
+ "out": "HELI_BALLOON_V4.mp4",
  "beats": [
   [
    "018af1e2-c8a1-46d4-9c0e-7a74c7fdf468",
@@ -92,6 +92,28 @@
       10
      ]
     ]
+   }
+  ],
+  [
+   "810a6eb6-8e96-4adb-b6c4-6c444628b6ee",
+   2.55,
+   6.5,
+   0.5,
+   "GETTING IN THE TAXI (Tal on V3): All right, come on. We are going on a hot air balloon. Let me get the door for you - Thank you",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "810a6eb6-8e96-4adb-b6c4-6c444628b6ee",
+   7.38,
+   9.75,
+   0.5,
+   "Tal getting in: All right, here we go, guys. Lets go",
+   null,
+   {
+    "exact": true
    }
   ],
   [
@@ -327,7 +349,7 @@
   [
    "86d778df-d7f0-4e5e-9ad9-3259e70f9241",
    0.36,
-   7.08,
+   7.05,
    0.5,
    "NEXT SURPRISE: a restaurant that has a drag show - Oh, okay - Are you down to go with me? - Of course",
    null,
@@ -343,6 +365,47 @@
       6.26,
       6.92,
       5
+     ]
+    ]
+   }
+  ],
+  [
+   "29752f29-78a2-43e9-88c0-8efca8e1e329",
+   13.85,
+   23.4,
+   0.5,
+   "THE TAXI DRIVER, on the way to the drag show: Excuse me, brother. Whats your name? - Fadi - Nice to meet you. Where are you from? - From Taybeh - Mashallah",
+   null,
+   {
+    "exact": true,
+    "boost": [
+     [
+      16.66,
+      17,
+      8
+     ],
+     [
+      20.8,
+      21.3,
+      8
+     ]
+    ]
+   }
+  ],
+  [
+   "29752f29-78a2-43e9-88c0-8efca8e1e329",
+   27.15,
+   30.6,
+   0.5,
+   "Are you Muslim? - Yeah - Nice to meet you, bro. Salam alaykum",
+   null,
+   {
+    "exact": true,
+    "boost": [
+     [
+      27.66,
+      27.9,
+      8
      ]
     ]
    }
@@ -457,6 +520,34 @@
    {
     "exact": true
    }
+  ],
+  [
+   "df78efb2-8532-40e8-b74f-91f205df590d",
+   5.4,
+   12.75,
+   0.5,
+   "ENDING (Tal on V3): her - Thank you though, you really took me out of my comfort zone and gave me a great day - Tal: you got to see the side of Israel that most people dont see",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "3e62e54a-f4fb-4e3b-ba80-2f8e7f5e7600",
+   1.28,
+   11.03,
+   0.5,
+   "GOODBYE: You are actually so amazing. Welcome to Israel, this is your home - Thank you very much - After 10 years - Yes. Good celebration",
+   null,
+   {
+    "exact": true
+   }
   ]
+ ],
+ "captionFix": [
+  {
+   "match": "Taipei",
+   "to": "Taybeh"
+  }
  ]
 }

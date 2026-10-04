@@ -2533,3 +2533,31 @@ not a promise without a payoff, a payoff without its setup.
   has to be shown landing on her.
 - His verdict otherwise: *"you did a really good job … I was pretty
   impressed"*; length may go to ~1:45.
+
+## 96 — "was perfect, you just need to show me getting in the taxi with her" (Tal on balloon V3, 2026-10-04)
+
+V3 fixed the three things from LESSONS 95 and he called it perfect, then asked
+for what the trims to hit a length had taken out:
+
+- *"Show me getting in the taxi with her … we open the taxi."* The shot of
+  him opening the door for her had been dropped in V3 to make room. In a
+  "taking a stranger somewhere" film **the getting-there is a beat he wants
+  SEEN**: the door, him getting in, the two of them inside.
+- *"Make sure everything with me and the taxi driver."* The chat with the
+  driver on the way to the second surprise (name, where he is from, "Are you
+  Muslim?", "Salam alaykum") had never been in any version. A third person he
+  speaks to on the way is part of the story, and on this account it is the
+  point of it.
+- *"End with the ending shot, like for 10 years, and then that was so nice,
+  thank you, have a good night, bye bye."* After the toast, the goodbye in
+  the street: her thanks, his "welcome to Israel", "after 10 years - good
+  celebration". **End on the goodbye, not on the last activity.**
+- Length is not the constraint he cares about: the brief said under 1:30, V3
+  was allowed 1:45, and now *"two minutes and twenty seconds"*. **When a cut
+  is working, he would rather it ran longer than lost a beat of the day.** Do
+  not drop a whole scene of the chronology to hit the number in the brief;
+  offer the longer cut.
+- Place names from a transcript get checked with him (LESSONS 85): Groq wrote
+  the driver's town as "Taipei"; captioned TAYBEH, flagged to him.
+- Delivery for a Tal Studios shoot: Frame.io `TAL STUDIOS / FINAL VIDEOS!`
+  (not the Social Accords folders).
