@@ -36,6 +36,15 @@ console.log(`\nVERIFYING ${editPath}  (${edit.beats.length} beats, ${edit.total_
 
 edit.beats.forEach((b, i) => {
   const [tag, ss, to, , why] = b;
+  // PICTURE-ONLY BEATS. A beat that is muted under a sound bed, or plays
+  // another clip's audio (push.audio), does not play its OWN words - so a cut
+  // "into a word" of its own transcript is not something anyone hears. These
+  // were reported as 6 defects on a dance montage laid over one clip's music
+  // (pov-church, 2026-10-04). Say NOT CHECKED rather than pass or fail it.
+  if (b[6]?.mute || b[6]?.audio) {
+    console.log(`  ${String(i + 1).padStart(2, "0")}  ${String(tag).slice(0, 8)}  picture only (${b[6]?.mute ? "muted under a bed" : "sound from " + String(b[6].audio.id).slice(0, 8)}) - word boundaries NOT CHECKED`);
+    return;
+  }
   // a beat may carry a full frame.io uuid directly (generic builder) or a
   // short DJI tag (jamaica). Accept both.
   // LOCAL clips (transcribe-local ids, "local-<hash>") were matched by neither

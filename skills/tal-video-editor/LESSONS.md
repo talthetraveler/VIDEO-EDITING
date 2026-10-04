@@ -2358,3 +2358,104 @@ makes the mistake total.
   timestamps. A crop is aimed AFTER that, never before.
 - If a child-avoiding crop forces the frame onto the non-speaker, the beat is
   cut, not shipped.
+
+## 87 — iPhone originals are HDR, and every tool here was reading them as SDR (found 2026-10-04, pov-church)
+
+`ffprobe` on the fetched originals: `color_transfer=arib-std-b67, color_primaries=bt2020`
+(HLG). Nothing in the pipeline converted it. Measured on one frame of IMG_9661:
+as-is YAVG 138 / SATAVG 9 and a red dress that reads **orange**; tone-mapped
+SATAVG 15 and the dress is red (`system/projects/pov-church/_look/hdr/compare.jpg`).
+
+- **The Frame.io proxy is the same unconverted picture** (identical YAVG / U / V
+  to the HQ span as-is), so comparing a render against the proxy can never show
+  this. The known answer is the object itself: a red dress, skin, foliage.
+- `build-edit.mjs` now detects an HLG source per beat (`isHdr`) and tone-maps it
+  (`zscale ... tonemap=hable`, npl=100) before anything measures or grades it.
+  npl=203 came out a stop too dark; a bare `zscale` transfer change blew out.
+- **Every earlier cut from iPhone footage (IMG_xxxx.mov) is suspect** for flat,
+  orange-shifted colour. Part of LESSONS 72 ("bright phone footage … heavy
+  grade") may have been this, graded on top of.
+- Cost: the float tone-map runs at 4K, about one minute per beat. Budget it.
+
+## 88 — one-word captions exist now, and forced alignment can put a line in the wrong place (2026-10-04, heli-balloon)
+
+Tal: *"Use one word captions."* `"captionWords": 1` in edit.json ->
+`oneWordCaptions()` in `lib/caption-timing.mjs`, tested by
+`node system/scripts/test-caption-oneword.mjs`. A word shows from its own start
+to the next word's start, lingers at most 0.35s into a pause, belongs to the
+beat holding its midpoint, and a flash word (<0.1s) rides with the next.
+It needs a WhisperX-aligned English clip; anything else keeps phrase captions.
+
+- **Align only the shortlist.** `align-cache.py` on all 112 clips of two
+  folders took 55 minutes on this CPU while renders waited. Choose the clips
+  from the Groq transcripts first, then align those.
+- **An aligned word is not a verified word.** IMG_7565's *"Are you scared?"*
+  was aligned to 0.18s; the audio (`speech-runs.py`: 4.24-4.79) and Groq (4.22)
+  both put it at 4.2s. The segment was 4.7s long with laughter in it, and the
+  aligner took the first sound. Before trusting one-word captions on a beat,
+  compare its words against the speech runs of that beat.
+- The phrase path lost a word the same day: *"…the style today?" / "Today is
+  Thanksgiving Day"* rendered as "IS THANKSGIVING DAY" - the cross-caption
+  de-duplicator read the second speaker's "Today" as a stutter. One-word mode
+  does not go through it.
+
+## 89 — the music performed on camera, as a real bed (2026-10-04, heli-balloon + pov-church)
+
+Tal: *"the guy plays music, add the background music of the guy playing. Then
+there's shots of that, her speaking, the light"* and, for the church, *"it's
+dancing in the video with the real audio."* LESSONS 9 said to use it; there was
+no way to. Now:
+
+- `"beds": [{id, at, from, to, vol, under, fade}]` - one clip's real sound from
+  the start of beat `from` to the end of beat `to` (0-based). Beats with
+  `"mute": true` are picture only; under a beat that keeps its own sound the bed
+  drops to `under` (0.3). Start the bed on the performer's own picture at the
+  same instant and that first shot is in sync.
+- Or `push.audio` on each beat with `at` picking up where the last ended: beats
+  whose AUDIO is contiguous now share one gain and get no fade at the join.
+- `"denoise": 0` on those beats. DeepFilterNet is a speech enhancer; on a room
+  of people singing it treats the music as the noise.
+- `fetch-hq.mjs` now fetches the graft and bed windows too. **A beat that runs
+  past its HQ span is clamped short and every later graft offset is then
+  wrong** (the church walk-in shot was moved 0.4s -> 3.0s and came out 0.85s
+  instead of 1.5s; the music would have skipped). After moving a beat, run
+  fetch-hq again before building.
+- `verify-cut.mjs` prints NOT CHECKED for a muted or grafted beat instead of
+  failing it on words nobody hears.
+
+## 90 — clips stored sideways AND upside-down in one folder (2026-10-04, pov-church)
+
+Of 36 clips, 7 were sideways and 2 (IMG_9640, IMG_9667) upside-down. The
+builder's rotation slot only took `transpose` values. `180` in the rotation slot
+now flips both ways. Sideways is still automatic (decoded W > H). Tal: *"we'll
+just make the clip straight because right now we're rotated."* Find them on the
+first contact sheet of every clip, before choosing anything.
+
+## 91 — what the self-review caught before he saw the church cut (2026-10-04)
+
+A toddler in the walk-in shot (LESSONS 81: strangers' children are blurred or
+not used - the shot was replaced with an adults-only window of the same clip),
+merged caption lines ("YES WE ARE / AND YOU GUYS"), and a stray "Wow" after
+the last answer. All three were visible on the contact sheet and the caption
+dump of the RENDER; none were visible in the plan.
+
+## 92 — he holds the phone, so the other person is 20 dB quieter - and the checks said the captions were on silence (2026-10-04)
+
+Church V2 passed the gate, and `caption-sync.py` listed "NO / I'M / FROM /
+UGANDA" as *0% speech under it*. The captions were right. The VOICE was too
+quiet for the detector: measured in the render, Tal's question sat at -17 dBFS
+and the women's answers at -35 to -45. In the raw clip the gap is already
+18-25 dB (he holds the phone, they stand two metres away), and DeepFilterNet
+pushed "Yes, we are" down a further 9 dB.
+
+- `push.boost = [[from, to, dB], ...]` (clip timeline, 60 ms ramps) raises only
+  the other person's lines. After: every captioned word between -12 and -27.
+- `python system/scripts/word-levels.py <render.mp4> <slug>` prints the level
+  under every captioned word of the RENDER and stars anything under -30 dBFS.
+  **Run it on every POV / phone-in-hand cut.** A "silent caption" from
+  caption-sync on a line that is clearly spoken means a quiet speaker, not a
+  wrong caption.
+- On a quiet location (floor -46 dBFS) set `"denoise": 0` for the dialogue
+  beats: there is nothing to remove and it costs the far voice.
+- Balloon V1 had the same thing, milder: "I'm from Berlin", "You're kidding",
+  "Wow. Okay.", "I'm scared" in the taxi - 23 of 187 words under -30.

@@ -1,0 +1,464 @@
+{
+ "_brief": "Tal 2026-10-04: TAL STUDIOS / STRANGER HELI BALLOON. In order: I convince her, she says yes -> taxi -> high five with the guy -> on the balloon, we laugh -> the guy plays; HIS playing is the background music under shots of that, her speaking, the light -> we get off -> 'next surprise, drag queen' -> restaurant shots. One-word captions. Under 1:30, fast, best parts only. Every cut point is on WhisperX-aligned word times (exact beats, snap off); IMG_7565's 'Are you scared?' was mis-aligned to 0.18s and hand-moved to the measured 4.24s.",
+ "layout": "vertical",
+ "autoFrame": false,
+ "grade": false,
+ "exposure": false,
+ "captionWords": 1,
+ "snap": false,
+ "title": "TAKING A STRANGER\nON A HOT AIR BALLOON 🇮🇱",
+ "titleY": 260,
+ "titleHold": 4.5,
+ "beds": [
+  {
+   "id": "045bca6c-b7ed-4137-96c7-90a1308e515e",
+   "at": 2.6,
+   "from": 15,
+   "to": 24,
+   "vol": 1,
+   "under": 0.3,
+   "fade": 0.5
+  }
+ ],
+ "out": "HELI_BALLOON_V2.mp4",
+ "beats": [
+  [
+   "018af1e2-c8a1-46d4-9c0e-7a74c7fdf468",
+   2.89,
+   7.06,
+   0.5,
+   "HOOK: 'Hey, excuse me, sorry. Are you from Israel?' - 'Hi, no, I'm from Berlin'",
+   null,
+   {
+    "exact": true,
+    "boost": [
+     [
+      5.03,
+      7.02,
+      12
+     ]
+    ]
+   }
+  ],
+  [
+   "018af1e2-c8a1-46d4-9c0e-7a74c7fdf468",
+   24.24,
+   31.3,
+   0.5,
+   "THE OFFER: 'to celebrate you coming back to Israel after 10 years I'm going to rent a hot air balloon' - 'What?' - 'and I'm going to take you on it' + her reaction",
+   null,
+   {
+    "exact": true,
+    "boost": [
+     [
+      28.78,
+      29.22,
+      8
+     ]
+    ]
+   }
+  ],
+  [
+   "018af1e2-c8a1-46d4-9c0e-7a74c7fdf468",
+   33.25,
+   35.5,
+   0.5,
+   "'You're kidding' - 'I'm super serious'",
+   null,
+   {
+    "exact": true,
+    "boost": [
+     [
+      33.28,
+      33.9,
+      10
+     ]
+    ]
+   }
+  ],
+  [
+   "018af1e2-c8a1-46d4-9c0e-7a74c7fdf468",
+   42.82,
+   47.45,
+   0.5,
+   "'Right now?' 'Yeah, right now' 'Wow. Okay. I'm afraid of heights'",
+   null,
+   {
+    "exact": true,
+    "boost": [
+     [
+      44.9,
+      45.92,
+      12
+     ],
+     [
+      46.07,
+      47.08,
+      4
+     ]
+    ]
+   }
+  ],
+  [
+   "018af1e2-c8a1-46d4-9c0e-7a74c7fdf468",
+   54.46,
+   56.88,
+   0.5,
+   "SHE SAYS YES: 'Okay, if not now, when then? Okay, let's do it'",
+   null,
+   {
+    "exact": true,
+    "boost": [
+     [
+      54.52,
+      56.82,
+      5
+     ]
+    ]
+   }
+  ],
+  [
+   "810a6eb6-8e96-4adb-b6c4-6c444628b6ee",
+   2.55,
+   5.6,
+   0.5,
+   "TAXI: 'All right, come on. We're going on a hot air balloon. Let me get the door for you'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "605b3c9a-458c-4b28-add4-a5db6385d6e6",
+   0.4,
+   3.5,
+   0.5,
+   "in the taxi: 'are you ready?' 'I'm scared' 'Let's go'",
+   null,
+   {
+    "exact": true,
+    "boost": [
+     [
+      2.02,
+      2.9,
+      14
+     ]
+    ]
+   }
+  ],
+  [
+   "1d3e22a2-6169-46e3-97b5-859380377408",
+   3,
+   4.65,
+   0.5,
+   "arriving: pointing at the balloon - 'we're going to go on that thing' 'Yeah, I know'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "41f7e57e-305e-4f65-a2bc-7efbbbc3f31e",
+   0.5,
+   2,
+   0.5,
+   "the balloon coming down",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "be1aa6e9-5e40-40a0-b243-872657ca5996",
+   6.3,
+   8.2,
+   0.5,
+   "the high five with the guy",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "78dc5730-03ad-4439-aa4a-f34e092eaa67",
+   0.4,
+   2.4,
+   0.5,
+   "on board, lifting off - her face",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "5eeeb3b4-1628-4737-a057-446060011781",
+   4.1,
+   7.3,
+   0.5,
+   "WE LAUGH: 'Are you scared?' 'What, me? No' - Tal laughing with her",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "f3d9a3f8-d968-4340-aab3-c9a7cea09dca",
+   0.42,
+   4.45,
+   0.5,
+   "'You ever thought you would be doing this today?' 'I would never. I would never.'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "63ed03a0-a8f1-48c2-9e06-f7541b5ae762",
+   5.6,
+   7.7,
+   0.5,
+   "the view (b-roll, action cam on the stick) under her 'Look at the view'",
+   null,
+   {
+    "exact": true,
+    "audio": {
+     "id": "f3d9a3f8-d968-4340-aab3-c9a7cea09dca",
+     "at": 4.45
+    }
+   }
+  ],
+  [
+   "b7894901-bc96-45ad-858b-fe9e2e038492",
+   1.1,
+   4.45,
+   0.5,
+   "THE GUY: 'I'm the only person in Israel playing guitar on the balloon'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "045bca6c-b7ed-4137-96c7-90a1308e515e",
+   2.6,
+   4.75,
+   0.5,
+   "MUSIC STARTS (bed = his real playing, in sync here): 'the song's for you, Patricia' - whip to her",
+   null,
+   {
+    "exact": true,
+    "mute": true
+   }
+  ],
+  [
+   "045bca6c-b7ed-4137-96c7-90a1308e515e",
+   4.75,
+   5.7,
+   0.5,
+   "...her delighted, clapping (same shot)",
+   null,
+   {
+    "exact": true,
+    "mute": true,
+    "nocap": true
+   }
+  ],
+  [
+   "4ed958bb-f269-46be-8a9f-ddd4fa7c62bf",
+   20.5,
+   22.3,
+   0.5,
+   "b-roll: both in the gondola, balloon above, sunset",
+   1,
+   {
+    "exact": true,
+    "mute": true,
+    "nocap": true
+   }
+  ],
+  [
+   "71c63d78-507f-4813-b74e-58e8f7ab3977",
+   5.4,
+   7.2,
+   0.5,
+   "Tal and Patricia laughing together",
+   null,
+   {
+    "exact": true,
+    "mute": true,
+    "nocap": true
+   }
+  ],
+  [
+   "f75834ec-44e9-44a5-9431-bac2c4e2658a",
+   6.5,
+   8.3,
+   0.5,
+   "b-roll: wide, dusk",
+   1,
+   {
+    "exact": true,
+    "mute": true,
+    "nocap": true
+   }
+  ],
+  [
+   "51900ff3-e821-4879-b2dc-76f39554d5a4",
+   1.55,
+   3.75,
+   0.5,
+   "HER SPEAKING (music ducks): 'I was so scared and it's so wonderful'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "51900ff3-e821-4879-b2dc-76f39554d5a4",
+   10.48,
+   11.85,
+   0.5,
+   "'I'm happy I said yes'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "28df5b57-5889-42a9-8bb3-d6dc70979a5e",
+   5.4,
+   6.8,
+   0.5,
+   "THE LIGHT: her at night, the lamps on",
+   null,
+   {
+    "exact": true,
+    "mute": true,
+    "nocap": true
+   }
+  ],
+  [
+   "99c98a38-d9b6-4f1e-9516-765e89782252",
+   6.6,
+   8.6,
+   0.5,
+   "the lit balloon above them, waving",
+   null,
+   {
+    "exact": true,
+    "mute": true,
+    "nocap": true
+   }
+  ],
+  [
+   "b3ffebda-afab-4e1a-b229-e54800803847",
+   11.4,
+   13.2,
+   0.5,
+   "night, city lights, both smiling",
+   null,
+   {
+    "exact": true,
+    "mute": true,
+    "nocap": true
+   }
+  ],
+  [
+   "8adba34d-fc72-475a-89f3-a2f4c58fad38",
+   1.5,
+   5.05,
+   0.5,
+   "GET OFF: 'Wow, that was so cool. How was it?' 'It was amazing'",
+   null,
+   {
+    "exact": true,
+    "boost": [
+     [
+      4.2,
+      4.6,
+      8
+     ]
+    ]
+   }
+  ],
+  [
+   "86d778df-d7f0-4e5e-9ad9-3259e70f9241",
+   0.36,
+   4.95,
+   0.5,
+   "NEXT SURPRISE: 'there's a restaurant that has a drag show' 'Oh, okay'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "d5c6557a-9e76-41c3-9311-0e6bae613be8",
+   0.3,
+   1.8,
+   0.5,
+   "walking into the restaurant",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "de412bfb-07c7-4faf-8b6a-c5af1c9e22f4",
+   7.18,
+   11.2,
+   0.5,
+   "the drag queen: 'Patricia! We had a drag queen named Patricia'",
+   null,
+   {
+    "exact": true,
+    "boost": [
+     [
+      8.55,
+      11.04,
+      8
+     ]
+    ]
+   }
+  ],
+  [
+   "0314bbea-84be-4fb6-a65f-2562608c80eb",
+   8.35,
+   10.85,
+   0.5,
+   "the show",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "866d1f6d-694d-4688-a05e-f2a8a59ed1bb",
+   2,
+   3.8,
+   0.5,
+   "Patricia clapping",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "7986e329-497b-4696-b98d-21f8a615b39d",
+   2,
+   6.3,
+   0.5,
+   "LAST SHOT: 'cheers for welcome back to Israel after 10 years. Let's go'",
+   null,
+   {
+    "exact": true
+   }
+  ]
+ ]
+}

@@ -1578,6 +1578,23 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
       console.log(`      slow-mo x${speed}: ${dur}s of picture over ${outDur}s, sound at normal speed`);
     } else console.log(`  !! slow-mo asked on beat ${n} but this layout's filter chain is not supported - played at normal speed`);
   }
+  // LIFT THE FAR VOICE. push.boost = [[from, to, dB], ...] on the CLIP's own
+  // timeline. A phone held by Tal hears him at -14 dBFS and the person two
+  // metres away at -35: measured on pov-church (2026-10-04), "No, I'm from
+  // Uganda" sat 21 dB under his question and "Yes, we are" 25 dB under, and
+  // the denoiser pushed them further down. A static gain per beat cannot fix a
+  // difference INSIDE the beat, and a level rider lifts the street between
+  // sentences. So the edit names the other person's lines (their aligned word
+  // times) and only those windows are raised, with 60 ms ramps.
+  let boostF = "";
+  if (Array.isArray(push?.boost) && push.boost.length && speed === 1) {
+    const R = 0.06;
+    const terms = push.boost
+      .map(([a, b, db]) => [a - capSs, b - capSs, Math.pow(10, db / 20) - 1])
+      .filter(([a, b]) => b > 0 && a < outDur)
+      .map(([a, b, g]) => `${g.toFixed(3)}*clip((t-${(a - R).toFixed(3)})/${R},0,1)*clip((${(b + R).toFixed(3)}-t)/${R},0,1)`);
+    if (terms.length) { boostF = `,volume='1+${terms.join("+")}':eval=frame`; console.log(`      boost: ${terms.length} window(s) of the far voice raised`); }
+  }
   if (process.env.BUILD_DEBUG) writeFileSync(join(OUT, `debug_vf_${String(n).padStart(2, "0")}.txt`), vf, "utf8");
   // FRAME-EXACT BEATS. The picture used to be cut by time and trimmed with
   // -shortest, so a beat could come out a frame short (and a slow-mo beat 3
@@ -1617,7 +1634,7 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     // a non-zero sample — but on a run of contiguous beats from ONE clip there
     // is no splice to hide, and fading every join put a small dip in the middle
     // of continuous speech every few seconds. Tal: *"it doesn't flow."*
-    "-af", `highpass=f=70,volume=${push?.mute ? "0" : runGain(i, wav) + "dB"}` +
+    "-af", `highpass=f=70,volume=${push?.mute ? "0" : runGain(i, wav) + "dB"}` + boostF +
       (CONT.get(i)?.prev || ACONT.get(i)?.prev ? "" : ",afade=t=in:st=0:d=0.025") +
       (CONT.get(i)?.next || ACONT.get(i)?.next ? "" : `,afade=t=out:st=${Math.max(0, outDur - 0.025).toFixed(3)}:d=0.025`) +
       `,apad=whole_dur=${outDur}`,

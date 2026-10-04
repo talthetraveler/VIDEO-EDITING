@@ -312,3 +312,50 @@ function assignInOrder(est, onsets) {
   // that line's onset — keep the estimate rather than teleport the caption.
   return out.map((v, k) => (Math.abs(v - est[k]) > SNAP_WINDOW * 2 ? est[k] : v));
 }
+
+/**
+ * ONE WORD AT A TIME. Tal, 2026-10-04 (stranger heli balloon): "Use one word
+ * captions." Project opt-in: `"captionWords": 1`. Only for WhisperX-aligned
+ * clips - Groq's own word times overlap and are not in speaking order.
+ *
+ * A word belongs to the beat holding its MIDPOINT (never two beats). It shows
+ * from its own start until the next word starts; before a pause it lingers at
+ * most ONE_LINGER past its end, so silence leaves the screen clean. A word
+ * that would be up for less than ONE_MIN rides with the next one.
+ * This is deliberately NOT passed through holdCaptions: merging quick lines
+ * into phrases is exactly what one-word mode opts out of.
+ *
+ * @param words [{word,start,end}] on the CLIP's timeline (any order)
+ * @param ss,to the beat's window on that timeline
+ * @param opts.fix [{match, to|null}] whole-word corrections (null drops it)
+ * @returns [{text,a,b}] in beat seconds
+ */
+export const ONE_LINGER = 0.35;
+export const ONE_MIN = 0.1;
+export function oneWordCaptions(words, ss, to, opts = {}) {
+  const fix = (opts.fix ?? []).map((r) => [String(r.match ?? "").toUpperCase().trim(), r.to]);
+  const clean = (w) => String(w ?? "").toUpperCase().replace(/[^\p{L}\p{N}'’%$-]+/gu, "").replace(/^[-']+|[-']+$/g, "");
+  const mine = (words ?? [])
+    .filter((w) => Number.isFinite(w?.start) && Number.isFinite(w?.end) && w.end >= w.start)
+    .slice().sort((x, y) => x.start - y.start)
+    .filter((w) => { const mid = (w.start + w.end) / 2; return mid >= ss && mid < to; })
+    .map((w) => {
+      let text = clean(w.word);
+      for (const [m, t] of fix) if (m && text === m) text = t == null ? "" : clean(t);
+      return { text, s: Math.max(0, w.start - ss), e: Math.min(to - ss, w.end - ss) };
+    })
+    .filter((w) => w.text);
+  const out = [];
+  for (let i = 0; i < mine.length; i++) {
+    let { text, s, e } = mine[i];
+    // a flash word rides with the next one
+    while (i + 1 < mine.length && mine[i + 1].s - s < ONE_MIN) { i++; text += " " + mine[i].text; e = mine[i].e; }
+    const next = mine[i + 1];
+    let b = Math.min(to - ss, e + ONE_LINGER);
+    if (next) b = Math.min(b, next.s);
+    if (b - s < ONE_MIN) b = Math.min(to - ss, next ? Math.max(b, Math.min(next.s, s + ONE_MIN)) : s + ONE_MIN);
+    if (b - s < ONE_MIN) continue;
+    out.push({ text, a: round(s), b: round(b) });
+  }
+  return out;
+}

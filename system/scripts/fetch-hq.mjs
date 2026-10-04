@@ -83,6 +83,32 @@ for (const b of edit.beats) {
   cur.from = Math.min(cur.from, ss);
   cur.to = Math.max(cur.to, to);
   spans.set(id, cur);
+  // A beat may take its SOUND from another clip (push.audio = {id, at}). That
+  // window has to be inside the other clip's span too, or the builder reads
+  // the graft from before the span starts (pov-church, 2026-10-04: a dance
+  // montage laid over one clip's real audio).
+  const graft = b[6]?.audio;
+  if (graft?.id != null && Number.isFinite(graft.at)) {
+    const aid = resolveId(String(graft.id));
+    if (aid) {
+      const a = spans.get(aid) ?? { tag: graft.id, from: Infinity, to: -Infinity };
+      a.from = Math.min(a.from, graft.at);
+      a.to = Math.max(a.to, graft.at + (to - ss));
+      spans.set(aid, a);
+    } else console.error(`  ! cannot resolve audio graft "${graft.id}" — skipping`);
+  }
+}
+
+// a sound bed ("beds" in edit.json) plays one clip's audio under a run of beats
+for (const bd of (edit.beds ?? [])) {
+  const bid = resolveId(String(bd.id));
+  if (!bid) { console.error(`  ! cannot resolve bed clip "${bd.id}" — skipping`); continue; }
+  let len = 0;
+  for (let j = bd.from; j <= bd.to; j++) { const x = edit.beats[j]; if (x && x[0] !== "CARD") len += (x[2] - x[1]) / (x[6]?.speed > 0 && x[6].speed < 1 ? x[6].speed : 1); }
+  const a = spans.get(bid) ?? { tag: bd.id, from: Infinity, to: -Infinity };
+  a.from = Math.min(a.from, bd.at);
+  a.to = Math.max(a.to, bd.at + len + 3);     // room for a re-timed montage
+  spans.set(bid, a);
 }
 
 mkdirSync(HQ, { recursive: true });

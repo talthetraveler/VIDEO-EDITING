@@ -1,0 +1,109 @@
+{
+ "_brief": "TEST of the sound-bed feature: a slice of heli-balloon",
+ "layout": "vertical",
+ "autoFrame": false,
+ "grade": false,
+ "exposure": false,
+ "captionWords": 1,
+ "snap": false,
+ "titleY": 260,
+ "titleHold": 4.5,
+ "beds": [
+  {
+   "id": "045bca6c-b7ed-4137-96c7-90a1308e515e",
+   "at": 2.6,
+   "from": 1,
+   "to": 6,
+   "vol": 1,
+   "under": 0.3,
+   "fade": 0.5
+  }
+ ],
+ "out": "BEDTEST.mp4",
+ "beats": [
+  [
+   "b7894901-bc96-45ad-858b-fe9e2e038492",
+   1.1,
+   4.45,
+   0.5,
+   "THE GUY: 'I'm the only person in Israel playing guitar on the balloon'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "045bca6c-b7ed-4137-96c7-90a1308e515e",
+   2.6,
+   4.75,
+   0.5,
+   "MUSIC STARTS (bed = his real playing, in sync here): 'the song's for you, Patricia' - whip to her",
+   null,
+   {
+    "exact": true,
+    "mute": true
+   }
+  ],
+  [
+   "045bca6c-b7ed-4137-96c7-90a1308e515e",
+   4.75,
+   5.7,
+   0.5,
+   "...her delighted, clapping (same shot)",
+   null,
+   {
+    "exact": true,
+    "mute": true,
+    "nocap": true
+   }
+  ],
+  [
+   "f75834ec-44e9-44a5-9431-bac2c4e2658a",
+   6.5,
+   8.3,
+   0.5,
+   "b-roll: wide, dusk",
+   1,
+   {
+    "exact": true,
+    "mute": true,
+    "nocap": true
+   }
+  ],
+  [
+   "51900ff3-e821-4879-b2dc-76f39554d5a4",
+   1.55,
+   3.75,
+   0.5,
+   "HER SPEAKING (music ducks): 'I was so scared and it's so wonderful'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "51900ff3-e821-4879-b2dc-76f39554d5a4",
+   10.48,
+   11.85,
+   0.5,
+   "'I'm happy I said yes'",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "28df5b57-5889-42a9-8bb3-d6dc70979a5e",
+   5.4,
+   6.8,
+   0.5,
+   "THE LIGHT: her at night, the lamps on",
+   null,
+   {
+    "exact": true,
+    "mute": true,
+    "nocap": true
+   }
+  ]
+ ]
+}

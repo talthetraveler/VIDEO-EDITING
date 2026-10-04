@@ -1,0 +1,236 @@
+{
+ "_brief": "Tal 2026-10-04: SOCIAL ACCORDS / NEEDS TO BE EDITED / POV. 'very simple': stop the two women -> can I come to church -> yes -> elevator -> I get in -> everyone dancing, with the real audio; straighten the rotated clips. Format: pov-meta-glasses.md section 5 (POV meeting a <religion>), phrase captions (THE STANDARD). Bright iPhone ultrawide: grade off (LESSONS 72). Dance section = ONE continuous real sound (IMG_9643 0-14.95s) under hard picture cuts, ending on 9643's own picture in sync.",
+ "layout": "vertical",
+ "autoFrame": false,
+ "grade": false,
+ "exposure": false,
+ "title": "POV: GOING TO CHURCH\nWITH STRANGERS IN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 5,
+ "out": "POV_CHURCH_V3.mp4",
+ "beats": [
+  [
+   "f14dda54-d593-4b8d-8509-531bf6770ab1",
+   2.44,
+   8.52,
+   0.5,
+   "HOOK: 'Hi, excuse me, sorry. Are you guys from Israel?' - Uganda / Nigeria",
+   null,
+   {
+    "denoise": 0,
+    "boost": [
+     [
+      5.36,
+      6.42,
+      14
+     ],
+     [
+      7.62,
+      8.36,
+      12
+     ]
+    ]
+   }
+  ],
+  [
+   "f14dda54-d593-4b8d-8509-531bf6770ab1",
+   10.17,
+   15.62,
+   0.5,
+   "'I love your style. Why are you guys wearing the style today?' - 'Today is Thanksgiving Day'",
+   null,
+   {
+    "denoise": 0,
+    "boost": [
+     [
+      13.94,
+      15.34,
+      12
+     ]
+    ]
+   }
+  ],
+  [
+   "f14dda54-d593-4b8d-8509-531bf6770ab1",
+   20.42,
+   24.05,
+   0.5,
+   "IDENTITY: 'Are you guys Christians?' 'Yes we are' 'And you live in Israel?' 'Yes'",
+   null,
+   {
+    "denoise": 0,
+    "boost": [
+     [
+      21.68,
+      22.24,
+      16
+     ],
+     [
+      23.66,
+      23.94,
+      12
+     ]
+    ]
+   }
+  ],
+  [
+   "93538716-f57b-4a08-b315-6f1a83179641",
+   1.76,
+   10.38,
+   0.5,
+   "THE ASK: 'we need to go to the church now, we are late' - 'crazy question... can I come with you guys to church?' 'Sure' 'Are you sure?' 'Sure' 'Okay let's go'",
+   null,
+   {
+    "denoise": 0,
+    "boost": [
+     [
+      1.84,
+      4.06,
+      9
+     ],
+     [
+      7.56,
+      7.98,
+      6
+     ],
+     [
+      9.22,
+      9.56,
+      12
+     ]
+    ]
+   }
+  ],
+  [
+   "2c30d0fc-5444-4fb1-8a3c-30209a89c739",
+   0.15,
+   1.12,
+   0.5,
+   "to the elevator ('all right, amazing, perfect')",
+   null,
+   {
+    "exact": true
+   }
+  ],
+  [
+   "4843a040-bc36-4659-9325-ffbe8612cebb",
+   0.3,
+   1.25,
+   0.5,
+   "in the elevator, Tal in the mirror with them (wordless)",
+   null,
+   {
+    "exact": true,
+    "nocap": true
+   }
+  ],
+  [
+   "56aaab67-2c7c-46c0-aff1-389aa93ceae2",
+   63.72,
+   65.75,
+   0.5,
+   "the church door opens: 'Wow, amazing. Can I enter?'",
+   null,
+   {}
+  ],
+  [
+   "2309d62a-899c-4fd0-875b-f3156b2c16e7",
+   3,
+   4.5,
+   0.5,
+   "CHURCH (real sound of 9643 from 2.4s, after the song's half-second gap): walking in",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0,
+    "audio": {
+     "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
+     "at": 2.4
+    }
+   }
+  ],
+  [
+   "9081a230-2934-4156-91d8-0f76303bf92f",
+   0.3,
+   2.3,
+   0.5,
+   "the singer jumping (sideways -> rotated)",
+   1,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0,
+    "audio": {
+     "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
+     "at": 3.9
+    }
+   }
+  ],
+  [
+   "b7d0d2cb-96f8-4ed8-be32-1c5ab6dfc4fa",
+   5.3,
+   7.3,
+   0.5,
+   "the whole room dancing toward the camera",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0,
+    "audio": {
+     "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
+     "at": 5.9
+    }
+   }
+  ],
+  [
+   "839adebe-867e-42c5-ac0d-15b3f29312f7",
+   1.6,
+   3.3,
+   0.5,
+   "the man in the green suit dancing",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0,
+    "audio": {
+     "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
+     "at": 7.9
+    }
+   }
+  ],
+  [
+   "e11d8372-ae8e-455c-8f80-54f0b25f055c",
+   2.3,
+   5.1,
+   0.5,
+   "the elder takes Tal's hand and dances (upside-down -> flipped)",
+   180,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0,
+    "audio": {
+     "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
+     "at": 9.6
+    }
+   }
+  ],
+  [
+   "1c2dc670-556c-4e36-abe2-d958f196f153",
+   12.4,
+   14.95,
+   0.5,
+   "PAYOFF, in sync with its own sound: Tal dancing and laughing with the same elder",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0
+   }
+  ]
+ ],
+ "captionWords": 1
+}
