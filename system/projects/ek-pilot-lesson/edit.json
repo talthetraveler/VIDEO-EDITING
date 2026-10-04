@@ -9,6 +9,20 @@
   "bedOnly": true,
   "out": "EK_PILOT_LESSON_V1.mp4",
   "beats": [
-    ["2a9f19f4-efae-4fa7-bcd9-4954a4ef9b0c", 0.4333, 15.8, 0.5, "THE WHOLE ANSWER, one take: 'Captain Smith, you're a true hero ... we need more people like you in the world. And we wish you all the best. Thank you so much.' (first word 0.56; last word ends 15.63; the clip ends 15.89)", null, {"exact": true, "z": [1, 1]}]
+    [
+      "2a9f19f4-efae-4fa7-bcd9-4954a4ef9b0c",
+      0.4333,
+      15.8,
+      0.5,
+      "THE WHOLE ANSWER, one take: 'Captain Smith, you're a true hero ... we need more people like you in the world. And we wish you all the best. Thank you so much.' (first word 0.56; last word ends 15.63; the clip ends 15.89)",
+      null,
+      {
+        "exact": true,
+        "z": [
+          1,
+          1
+        ]
+      }
+    ]
   ]
 }

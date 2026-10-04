@@ -1,62 +1,65 @@
 {
-  "_brief": "Item 12, Tal 2026-10-03: Phone Call Video / Tel Aviv. Compilation 2 (fast, light): a completely different cast from the emotional one - short, funny-to-warm one-liners, opening on a different face (the bagel guy), the strongest answer 4th ('smile at people in the street or just be kind to them'), ending on the joyful 'people I love - my family, my dog, my co-workers'. Pauses inside an answer are jump-cut out (same framing, no zoom). NO ZOOMS.",
-  "_blur": "EK_HAPPY_TELAVIV_COMP_FAST_V1.mp4 = the _PREBLUR render + blur-face.py with blur-rules.json: a girl with a ponytail walks through the background of beat 4 for 0.5s (age unclear, so blurred - LESSONS 78/81). The child with the pink bag in beat 5 is seen only from behind - not blurred.",
-  "_notes": "Not one person repeats from the emotional comp. The teenager's 'I love to eat' (IMG_5723) is OUT: he looks under 18 (LESSONS 81). Excluded: IMG_5708 (too far and small in a crowd), IMG_5746 (a third young woman in a row).",
+  "_brief": "Item 12, Phone Call Video / Tel Aviv. Compilation 2 (light), seven people. V2 after Tal's note on V1 (2026-10-03): 'you don't see the what makes you happy thing. You should get them picking up the phone.' It now OPENS on the sign standing in the street, readable, and a woman walking up and picking up the red phone ('People I love.'), and every person is framed wide enough that the sign and the phone are in shot (static 1.0-1.6x, were 1.0-2.2x); captions sit above the sign. The woman from the opening comes back at the end to finish her answer ('my family, my dog, my co-workers'). NO ZOOMS.",
+  "_blur": "EK_HAPPY_TELAVIV_COMP_FAST_V2.mp4 = the _BUILD render + blur-face.py with blur-rules.json: a girl with a ponytail walks through the background behind the Shabbat man (age unclear, so blurred). The child with the pink bag behind the 'be kind' woman is seen only from behind - not blurred.",
+  "_notes": "Same cast as V1. Order: opening woman, bagel, 'be kind' (strongest, 3rd), Shabbat, cold beer, Jewish side, to fly, opening woman again. Four women and three men, so one woman-woman join is unavoidable; it is the last one (the 'to fly' woman into the returning opener). The teenager's 'I love to eat' stays out (minor).",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_HAPPY_TELAVIV_COMP_FAST_V1_PREBLUR.mp4",
+  "out": "EK_HAPPY_TELAVIV_COMP_FAST_V2_BUILD.mp4",
   "beats": [
+    [
+      "0bf65073-d74b-4136-acc6-20542e1b5205",
+      1.6667,
+      4.7333,
+      0.5,
+      "IMG_5762: OPEN - the sign alone in the street, she walks up, picks up the red phone: 'People I love.'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.2,
+          1.2
+        ],
+        "x": 0.55,
+        "y": 0.55,
+        "capY": 0.5
+      }
+    ],
     [
       "efab6475-ce3c-4e6e-a2a1-f13c230b1ae3",
       11.2667,
       13.9,
       0.5,
-      "IMG_5736: HOOK - 'a good lox bagel with cream cheese' - surprising, a laugh (his first 'a good...' is out: a passer-by walks through the lens there)",
+      "IMG_5736: 'a good lox bagel with cream cheese' - a laugh",
       null,
       {
         "manual": true,
         "z": [
-          1.6,
-          1.6
+          1,
+          1
         ],
-        "x": 0.42,
-        "y": 0.5
+        "x": 0.5,
+        "y": 0.5,
+        "capY": 0.56
       }
     ],
     [
-      "492a0497-c13c-47d9-ac2f-e257368d0aa6",
-      7.4333,
-      8.3,
+      "993313ed-ab53-4bd8-93f6-c52609c945b3",
+      6.9,
+      12.6,
       0.5,
-      "IMG_5753: girl in the sun hat: 'cold beer,'",
+      "IMG_5721: STRONGEST, 3rd - 'what makes me happy is to smile at people in the street, or just be kind to them'",
       null,
       {
         "manual": true,
         "z": [
-          1.2,
-          1.2
+          1.4,
+          1.4
         ],
-        "x": 0.3,
-        "y": 0.5
-      }
-    ],
-    [
-      "492a0497-c13c-47d9-ac2f-e257368d0aa6",
-      9.8,
-      12.5,
-      0.5,
-      "IMG_5753: same take, pause cut: 'salty air and the beach'",
-      null,
-      {
-        "manual": true,
-        "z": [
-          1.2,
-          1.2
-        ],
-        "x": 0.3,
-        "y": 0.5
+        "x": 0.6,
+        "y": 0.56,
+        "capY": 0.52
       }
     ],
     [
@@ -69,28 +72,48 @@
       {
         "manual": true,
         "z": [
-          2.2,
-          2.2
+          1.6,
+          1.6
         ],
-        "x": 0.4,
-        "y": 0.62
+        "x": 0.42,
+        "y": 0.62,
+        "capY": 0.55
       }
     ],
     [
-      "993313ed-ab53-4bd8-93f6-c52609c945b3",
-      6.9,
-      12.6,
+      "492a0497-c13c-47d9-ac2f-e257368d0aa6",
+      7.4333,
+      8.3,
       0.5,
-      "IMG_5721: STRONGEST, slot 4 - 'what makes me happy is to smile at people in the street, or just be kind to them'",
+      "IMG_5753: girl in the sun hat: 'cold beer,'",
       null,
       {
         "manual": true,
         "z": [
-          2.2,
-          2.2
+          1,
+          1
         ],
-        "x": 0.61,
-        "y": 0.5
+        "x": 0.5,
+        "y": 0.5,
+        "capY": 0.58
+      }
+    ],
+    [
+      "492a0497-c13c-47d9-ac2f-e257368d0aa6",
+      9.8,
+      12.9333,
+      0.5,
+      "IMG_5753: same take, pause cut: 'salty air and the beach'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1,
+          1
+        ],
+        "x": 0.5,
+        "y": 0.5,
+        "capY": 0.58
       }
     ],
     [
@@ -107,7 +130,8 @@
           1
         ],
         "x": 0.5,
-        "y": 0.5
+        "y": 0.5,
+        "capY": 0.6
       }
     ],
     [
@@ -124,24 +148,8 @@
           1
         ],
         "x": 0.5,
-        "y": 0.5
-      }
-    ],
-    [
-      "0bf65073-d74b-4136-acc6-20542e1b5205",
-      3.7333,
-      4.6,
-      0.5,
-      "IMG_5762: ENDING - 'people I love.'",
-      null,
-      {
-        "manual": true,
-        "z": [
-          1.2,
-          1.2
-        ],
-        "x": 0.62,
-        "y": 0.48
+        "y": 0.5,
+        "capY": 0.6
       }
     ],
     [
@@ -149,7 +157,7 @@
       6.4,
       12.6,
       0.5,
-      "IMG_5762: same take, pause cut: 'my family, my dog, my co-workers' - she dances",
+      "IMG_5762: ENDING - the opening woman again: 'my family, my dog, my co-workers' - she dances",
       null,
       {
         "manual": true,
@@ -157,8 +165,9 @@
           1.2,
           1.2
         ],
-        "x": 0.62,
-        "y": 0.48
+        "x": 0.55,
+        "y": 0.55,
+        "capY": 0.5
       }
     ]
   ]

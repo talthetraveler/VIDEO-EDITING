@@ -5,25 +5,8 @@
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_WMYH_TZIPORA_V3.mp4",
+  "out": "EK_WMYH_TZIPORA_V2.mp4",
   "beats": [
-    [
-      "85a72fee-5613-4d46-8983-571090938416",
-      2.9333,
-      5.2,
-      0.5,
-      "OPENING: the interviewer asks, both in frame: \"And what is one thing that you're proud of?\" (speech 3.05-4.90; silence either side)",
-      null,
-      {
-        "manual": true,
-        "z": [
-          1.75,
-          1.75
-        ],
-        "x": 0.4,
-        "y": 0.3
-      }
-    ],
     [
       "85a72fee-5613-4d46-8983-571090938416",
       6.6667,
@@ -59,6 +42,5 @@
       }
     ]
   ],
-  "_round1": "Tal, 2026-10-03: \"the hook shouldn't be 'Don't give up' ... Hook = 'I actually beat cancer'. Good otherwise. Zoom in a bit.\" V2: opens at 0.0s on the words \"I actually beat cancer\" (skills/ig-reel/hooks.json rules: no setup, the thing only she can say) - her lead-in \"About two years ago,\" is cut (the cut at 6.6667 was read back by two models as \"I actually beat cancer\"). Then the story in her order, and the advice is the PAYOFF: \"Don't give up. Looking back in six months... you're never alone... everything's gonna be okay\". One constant crop, closer (z1.75, was 1.45). Caption line breaks come from a hand-timed phrase file (cache/translate/85a72fee...json): no more \"AND I / REALLY TRIED TO SEE GOD'S / HAND IN EVERYTHING\".",
-  "_round2": "Tal, 2026-10-04 (voice note): likes V2; wants an opening in front - \"her walking up there and saying Hey, excuse me, like the girl, and asking her a question. Then it is like an interview.\" WHAT EXISTS: IMG_1221 starts with the three already standing together, mid-interview (\"That was really good. Okay, what's your name?\") - no walk-up and no \"excuse me\" was filmed with Tzipora, and the other clip of the same girls (IMG_1221 15s) also starts on \"Okay, what's your name?\". The only walk-up + \"Hey, excuse me\" by this interviewer in the folder is with a DIFFERENT woman (Yael, IMG_1213, daytime, another place) and is not used: it would stage two takes as one moment. V3 opens on the closest real thing: the interviewer, mic in hand, both in frame, asking \"And what is one thing that you're proud of?\" (2.27s) -> hard cut to V2 unchanged (\"I actually beat cancer\" at 2.27s). Same zoom as the rest (1.75), the window moved left to hold both of them - a cut from two-shot to single, not a zoom."
+  "_round1": "Tal, 2026-10-03: \"the hook shouldn't be 'Don't give up' ... Hook = 'I actually beat cancer'. Good otherwise. Zoom in a bit.\" V2: opens at 0.0s on the words \"I actually beat cancer\" (skills/ig-reel/hooks.json rules: no setup, the thing only she can say) - her lead-in \"About two years ago,\" is cut (the cut at 6.6667 was read back by two models as \"I actually beat cancer\"). Then the story in her order, and the advice is the PAYOFF: \"Don't give up. Looking back in six months... you're never alone... everything's gonna be okay\". One constant crop, closer (z1.75, was 1.45). Caption line breaks come from a hand-timed phrase file (cache/translate/85a72fee...json): no more \"AND I / REALLY TRIED TO SEE GOD'S / HAND IN EVERYTHING\"."
 }

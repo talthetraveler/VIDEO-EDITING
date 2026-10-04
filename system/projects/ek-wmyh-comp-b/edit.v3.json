@@ -8,7 +8,7 @@
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_WMYH_COMP_B_FULL.mp4",
+  "out": "EK_WMYH_COMP_B_V3.mp4",
   "captionFix": [
     {
       "match": "DROPLINE",
@@ -137,6 +137,5 @@
     ]
   ],
   "_round1": "Tal, 2026-10-03: \"not so good. The cousin/boyfriend [out]. I like 'my dog', 'music, cats'. Start with the beautiful woman, the second one.\" V2: the cousins are OUT. Opens on V1's second shot - the two friends (blonde in pink, dark-haired in white; one shot, both in it) - now with Tal's question at 0.0s. Kept: \"Me.\", the skater, the dog man, the busker as the ending. Filled with the two next-best promenade answers, both from the earlier cuts' cast: the blonde woman (\"Mango. I love mango.\") and the older man at sunset (\"To be here in Israel.\"). \"Love, baby\" was tried and left out: 0.7s of usable picture before the camera whips away.",
-  "_round2": "Tal, 2026-10-04 (voice note): \"it is good. What makes you happy? - put a title card.\" V3 = V2 with the title pill WHAT MAKES YOU HAPPY? at the top for the opening shot only (3.3s, gone on the first cut), top edge at 250px so it sits under the ~220px of platform UI. Nothing else changed.",
-  "_final": "Full-quality final of V3 (Tal approved the cut, 2026-10-04): same spec, cut from the originals (fetch-hq spans), built with the project-local builder copy _final-build-edit.mjs (DeepFilterNet -D, as ek-kt-shop-owner-5), then one whole-timeline gain to -14 LUFS with a limiter (ek-wmyh-comp/_scratch/qa-finish.mjs, picture stream copied). NOT uploaded."
+  "_round2": "Tal, 2026-10-04 (voice note): \"it is good. What makes you happy? - put a title card.\" V3 = V2 with the title pill WHAT MAKES YOU HAPPY? at the top for the opening shot only (3.3s, gone on the first cut), top edge at 250px so it sits under the ~220px of platform UI. Nothing else changed."
 }

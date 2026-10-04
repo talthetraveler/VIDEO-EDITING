@@ -359,5 +359,6 @@
         "speed": 0.5
       }
     ]
-  ]
+  ],
+  "_v2": "QA pass 2026-10-03, no creative change: EK_WATER_ALL_V2.mp4 = V1's picture stream copied bit-for-bit (video md5 identical), timestamps shifted to start at 0 (the build starts one frame in), plus a fresh digitally silent AAC track cut to the picture's exact length (both streams 0 -> 21.066667s). Made with: ffmpeg -itsoffset -0.033333 -i EK_WATER_ALL_V1.mp4 -f lavfi -i anullsrc=r=48000:cl=stereo -map 0:v -map 1:a -c:v copy -c:a aac -t 21.066667 EK_WATER_ALL_V2.mp4. A rebuild with build-edit.mjs writes V1 again (audio ~0.1s long) and needs this step repeated."
 }

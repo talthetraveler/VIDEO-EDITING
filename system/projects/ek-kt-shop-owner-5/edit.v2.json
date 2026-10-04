@@ -6,7 +6,7 @@
  "snap": false,
  "autoFrame": false,
  "grade": false,
- "out": "EK_KT_SHOP_OWNER_5_V2_FULL.mp4",
+ "out": "EK_KT_SHOP_OWNER_5_V2.mp4",
  "beats": [
   [
    "34ece6ea-a4ba-455a-9beb-ccaf2cc7c2e5",
@@ -247,8 +247,5 @@
    "to": null
   }
  ],
- "_captionFix": "Layout only, no wording changed: (1) the builder dropped THE SAME off the end of 'we are all the same'; (2) it stripped LIFE from 'Life is about giving back' because the line before ends on 'life'; (3) 'half a juice please' was a 0.43s flash, now one card with 'Can you give me'.",
- "denoise": 16,
- "_final": "2026-10-04: Tal approved the V2 preview ('number 5 is good') and added '[reduce] background noise, maybe'. This is the SAME cut built --final --hq at 1080x1920 with the project-local _final-build-edit.mjs (the shared builder plus DeepFilterNet -D). Denoise is ONE strength for the whole film, -a 16: the preview let the builder pick per beat and it ranged from 10 to 16 inside this one location. The approved preview EK_KT_SHOP_OWNER_5_V2.mp4 is kept; its recipe is edit.v2.json.",
- "_final_checks": "EK_KT_SHOP_OWNER_5_V2_FULL.mp4, measured 2026-10-04: 1080x1920 yuv420p tv bt709, 2021 frames (= the preview), 0 true duplicate frames; -14.1 LUFS, true peak -1.4 dBTP (whole timeline, video stream copied); 44 captions, same text as the preview, two starts in beat 7 moved 0.15-0.3s earlier onto the words; no audio hole at any cut (the preview had 20-35 ms at each), one 30 ms at the very start of the file; noise floor in two speech gaps: source -31.9 / -33.0 dB, preview -39.0 / -38.4, final -42.9 / -42.6, i.e. speech-to-floor 16.5 / 17.6 -> 23.2 / 24.6 -> 29.5 / 30.7 dB; selfreview exit 1 on the same six smeared word-timestamp flags as the preview, each boundary measured in a pause; 16 stills side by side with the preview: same framing, captions in place. Not listened to."
+ "_captionFix": "Layout only, no wording changed: (1) the builder dropped THE SAME off the end of 'we are all the same'; (2) it stripped LIFE from 'Life is about giving back' because the line before ends on 'life'; (3) 'half a juice please' was a 0.43s flash, now one card with 'Can you give me'."
 }

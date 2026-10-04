@@ -5,7 +5,7 @@
  "snap": false,
  "autoFrame": false,
  "grade": false,
- "out": "EK_KT_SHOP_OWNER_2_V1_FULL.mp4",
+ "out": "EK_KT_SHOP_OWNER_2_V1.mp4",
  "beats": [
   [
    "cb82ad35-45ae-4657-ae8e-b53112c91a3f",
@@ -63,6 +63,5 @@
    "to": "Honestly I have money\nNo!"
   }
  ],
- "_captionFix": "layout only: the baker answers No! 0.36s after the line before it and the builder glued the two onto one line (HONESTLY I HAVE MONEY NO). The fix puts his No! on its own line. No wording is changed.",
- "_final": "2026-10-03: Tal approved the V1 preview (good, you can move that). This is the SAME cut built --final --hq at 1080x1920 from full-quality spans; the approved preview EK_KT_SHOP_OWNER_2_V1.mp4 is kept, its recipe is edit.v1.json."
+ "_captionFix": "layout only: the baker answers No! 0.36s after the line before it and the builder glued the two onto one line (HONESTLY I HAVE MONEY NO). The fix puts his No! on its own line. No wording is changed."
 }

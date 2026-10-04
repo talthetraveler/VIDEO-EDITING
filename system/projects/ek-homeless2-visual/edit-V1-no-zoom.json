@@ -1,0 +1,221 @@
+{
+ "_brief": "Tal 2026-10-03, item 6 Homeless 2, Option 2: \"very visual/emotional. Fast cuts of the interaction, punch-ins on his face, him receiving/eating the food, then slower emotional moments. (erez V1 - MAKE SURE people are NOT passing by)\". Then, later the same day: \"stop with all the zooms its weird\" (LESSONS 80) - so NO punch-ins, no snap zooms, no drift: every beat is the full frame at constant z=1, hard cuts and slow motion only. Time only moves forward. Sound: one continuous location-ambience bed (bedOnly) built from quiet stretches of the same clip (476-489.5, 526.5-536.5), with his real voice laid in for the one captioned line (makebed.py in this folder; rebuild the bed whenever a beat length changes). Every span was checked on full frames for passers-by.",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "music": "homeless2-visual-bed.wav",
+ "bedOnly": true,
+ "out": "EK_HOMELESS2_VISUAL_V1.mp4",
+ "beats": [
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   5.5,
+   7.8,
+   0.5,
+   "OPEN: Tal at the folding table, the man on the pavement reaches for the food (out before the blue shirt that crosses at 7.9)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   9.6667,
+   10.8667,
+   0.5,
+   "SLOW-MO x0.5: Tal lays the food out in front of him (in after the passer-by on the left edge until 9.6)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "speed": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   13.6,
+   16.6,
+   0.5,
+   "he watches the table fill up, then smiles up at Tal (16.5)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   64.2,
+   67,
+   0.5,
+   "CUT, at the table with Tal: his big smile, Tal raises his water (between passers-by at 62-64.0 and 67.5)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   77.8,
+   79.4,
+   0.5,
+   "SLOW-MO x0.5: the two of them drink water together (clean 77-87)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "speed": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   509.2,
+   511.4,
+   0.5,
+   "CUT, reverse angle: Tal laughing with him (after the soldier behind at 507-509.1)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   558.7,
+   560.9333,
+   0.5,
+   "the one line, his real voice: \"Don t give up.\" (clean 558.25-561.9; an arm crosses at 562.0)",
+   null,
+   {
+    "manual": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "bedVoice": true
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   640.1,
+   641.3,
+   0.5,
+   "he takes a bite",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
+   644.9,
+   646.1,
+   0.5,
+   "SLOW-MO x0.5: he drinks, head back",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "speed": 0.5
+   }
+  ],
+  [
+   "0311794c-0962-4704-9e0a-736a78ed063e",
+   1.6,
+   4.6,
+   0.5,
+   "CUT, close two-shot (IMG_9280, later the same afternoon): talking with Tal (after the woman behind them at 0-1.0)",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "0311794c-0962-4704-9e0a-736a78ed063e",
+   7.3,
+   8.8,
+   0.5,
+   "ENDING, SLOW-MO x0.5: he turns to Tal - the slow hold",
+   null,
+   {
+    "manual": true,
+    "nocap": true,
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5,
+    "speed": 0.5
+   }
+  ]
+ ],
+ "_checks": {
+  "passers_by": "Same method as ek-homeless2-story: frame-difference trace over the whole clip to find where to look, full-frame strips at 0.25-0.5s over each window, then a 0.4s strip of the rendered file (70 frames). Windows: 5.5-7.8 (cyclist until 5.4, blue shirt from 7.9), 9.67-10.87, 13.6-16.6, 64.2-67.0 (women pass 62-64.0 and from 67.5), 77.8-79.4, 509.2-511.4, 558.7-560.93, 640.1-641.3, 644.9-646.1, IMG_9280 1.6-4.6 and 7.3-8.8 (a woman walks behind them 0-1.0).",
+  "no_zoom": "LESSONS 80: every beat z=[1,1], full frame. The punch-ins Tal first asked for are not in this cut; in the wide shots his face is small.",
+  "sound": "bedOnly. Bed = 9279 476.0-489.5 + 526.5-536.5 (nobody speaking, street only), looped with 0.5s crossfades, with the real audio of 558.70-560.93 laid in at 15.900s. Measured on the render: voice sits at 15.9-17.0s, 10-13 dB over the bed; whole file -16.9 LUFS. selfreview/verify-cut flags on the other beats refer to their own muted audio.",
+  "frames": "832 frames = 27.733s x 30, avg 30/1, mpdecimate finds no frozen frame.",
+  "hebrew": "one caption, \"Don t give up\" - see ek-homeless2-story _checks.hebrew. Timing verified, wording unverified."
+ }
+}

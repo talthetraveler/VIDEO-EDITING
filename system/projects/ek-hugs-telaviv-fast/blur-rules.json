@@ -1,5 +1,5 @@
 {
- "note": "FAST V3. One child left in the cut: the toddler who walks out from behind Tal in shot 1 (head visible from frame ~20). Hand-keyed off a coordinate grid on every 4th frame of the render (detection alone found him in 25% of frames). Every other shot was audited for children on the render and is clear.",
+ "note": "FAST V4. One child left in the cut: the toddler who walks out from behind Tal in shot 1 (head visible from frame ~20). Shot 1 keeps its V3 framing (z1), so the hand keys are unchanged. Every other shot is framed closer than in V3 and was re-audited on the render.",
  "beats": [
   {
    "frames": 57,
@@ -95,7 +95,7 @@
    "clear": true
   },
   {
-   "frames": 69,
+   "frames": 54,
    "x": [
     2,
     3
@@ -108,7 +108,33 @@
    "clear": true
   },
   {
-   "frames": 57,
+   "frames": 34,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 53,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 4,
    "x": [
     2,
     3
@@ -147,7 +173,33 @@
    "clear": true
   },
   {
-   "frames": 60,
+   "frames": 26,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 4,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 42,
    "x": [
     2,
     3
@@ -173,7 +225,33 @@
    "clear": true
   },
   {
-   "frames": 57,
+   "frames": 18,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 4,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 35,
    "x": [
     2,
     3

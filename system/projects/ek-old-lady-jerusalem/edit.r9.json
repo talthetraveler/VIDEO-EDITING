@@ -4,7 +4,7 @@
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_OLD_LADY_JERUSALEM_FULL.mp4",
+  "out": "EK_OLD_LADY_JERUSALEM_V1_r9_walkup_bye_slowmo.mp4",
   "beats": [
     [
       "4310284e-29f3-41a4-87bf-3a41a01d1c4a",
@@ -166,10 +166,9 @@
     ]
   ],
   "denoise": 10,
-  "music": "../ek-old-lady-jerusalem/LOCATION-SOUND-FULL.wav",
+  "music": "../ek-old-lady-jerusalem/LOCATION-SOUND-r9.wav",
   "bedOnly": true,
   "_sound": "bedOnly: the soundtrack is LOCATION-SOUND.wav in this folder - the SAME source windows the beats play (graft window, or real-time window under a slow-mo beat), extracted as continuous runs, denoised once per run (-a 10, 0.5s pre-roll), no per-beat gain. Built by the ek story-editor soundtrack.py (beat-by-beat denoise + level-matching put 20 dB steps and DeepFilterNet onset dips at 4-frame snap joins where the sound is really continuous: measured -64 dB holes at 4.57s/4.70s in r3). Rebuild it if any beat window changes. No music: Tal asked for emotional music on the old-lady cut; none exists in the repo and none is ripped. The track ends with a 0.35s fade: the observer phone hears market chatter right up to the last frame.",
   "_nozoom": "r6_nozoom: Tal 'stop with all the zooms its weird'. One constant framing per shot. The caregiver section (19.93-27.07) is now ONE unbroken POV shot - the camera's own whips carry it from her to the caregiver and back. The last slow-mo is uncropped (r5 held a 1.8x crop left to keep a man in black out; uncropped he walks on the right, beside her, not between her and the camera). r7: the O47 slow-mo ending is OUT - uncropped (no zoom allowed) a man in black walks through the frame right beside her for the whole shot (seen on r6 frames 13.0-13.7s). The film now ends on the observer wide of Tal holding her hand, BYE.",
-  "_talnote": "r9: Tal on r7_nozoom - you should get me walking up to her. Zoom in at me walking up to her. Then bye, and then did you get her zooming off in slow-mo, on her face, the flowers. Opening and ending added; the middle is r7. The opening walk-up (iPhone 3.83-5.03) and her surprise right after it (POV 6.13-7.07) are the same second seen from both sides - a reverse shot, not a replayed action.",
-  "_full": "FULL-QUALITY FINAL of the cut Tal approved (EK_OLD_LADY_JERUSALEM_V1_r9_walkup_bye_slowmo.mp4): same beats, same windows, same framing. Observer iPhone shots from fetched 2160p spans (HLG, tone-mapped by the builder), POV from the local Meta originals, built 1080x1920 with projects/ek-old-lady-jerusalem/_final-build-edit.mjs (DeepFilterNet -D, timeline loudnorm -14 LUFS). Sound: LOCATION-SOUND-FULL.wav - the same windows rebuilt from full-quality audio with soundtrack.py --hq --D."
+  "_talnote": "r9: Tal on r7_nozoom - you should get me walking up to her. Zoom in at me walking up to her. Then bye, and then did you get her zooming off in slow-mo, on her face, the flowers. Opening and ending added; the middle is r7. The opening walk-up (iPhone 3.83-5.03) and her surprise right after it (POV 6.13-7.07) are the same second seen from both sides - a reverse shot, not a replayed action."
 }

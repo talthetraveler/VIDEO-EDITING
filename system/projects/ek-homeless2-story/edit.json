@@ -4,7 +4,7 @@
  "snap": false,
  "autoFrame": false,
  "grade": false,
- "out": "EK_HOMELESS2_STORY_V2.mp4",
+ "out": "EK_HOMELESS2_STORY_V3.mp4",
  "beats": [
   [
    "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
@@ -169,5 +169,7 @@
   "boundaries": "verify-cut HEAD flags at 397.97, 441.83 and 506.70 come from smeared word timestamps; each was settled with check-boundary.mjs: the RMS trace is -44 dB / -44 dB / -53 dB at the cut with the speech onset 0.1-0.5s later. Post-render re-transcription: no cut chops a word.",
   "not_captioned": "his soft \"No.\" at 578.7 (0.15s, under the speech-run detector s 0.18s minimum) and the interviewer s echo \"No?\" at 579.9.",
   "caption_sync": "caption-sync.py on V2: 25 captions, median coverage 0.85, opening error 0.05s, 0 adrift; 3 captions under 50% speech (\"Come on for real\", \"Come here look\", \"Don t give up\") - each is a short quiet phrase whose caption is held into the pause after it (LESSONS 62), not a caption on the wrong moment."
- }
+ },
+ "denoise": 10,
+ "_v3": "V3 = the QA pass, STOPPED PART-WAY (coordinator, 2026-10-04: skip the QA pass, make the project consistent). Same shots, order and words as V2. Done: caption windows retimed to measured speech (caption-sync: 0 over silence, 0 adrift, opening error 0.05s; the unverifiable 0.35s line \"Come on, for real\" removed), denoise pinned to DeepFilterNet -a 10. NOT done: loudness is still about -17.6 LUFS (target -14), noise-floor before/after not measured, join-hole scan not run."
 }

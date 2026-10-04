@@ -1,6 +1,6 @@
 {
   "_brief": "Item 12, Tal 2026-10-03: Phone Call Video / Tel Aviv - 'What makes you happy?' Single-person video: the woman in the brown cardigan, two takes (IMG_5738 then IMG_5741). Hebrew -> English captions. Cold open = her best line, then take 1, then the rest of take 2, ending on her face after 'love you'. NO ZOOMS (LESSONS 80): constant framing per take; 5741 is a wider take so it gets one static 1.3x for both of its beats.",
-  "_blur": "LESSONS 81: a small girl walks in at the left edge for the last 9 frames of beat 5 (her face in profile). EK_HAPPY_TELAVIV_BREATHE_V1.mp4 = the _PREBLUR render + blur-face.py with blur-rules.json.",
+  "_blur": "LESSONS 81: a small girl walks in at the left edge for the last 9 frames of beat 5 (her face in profile). EK_HAPPY_TELAVIV_BREATHE_V1.mp4 = the _PREBLUR render + blur-face.py with blur-rules.json. Tal reviewed V1 and gave it no note - left as is.",
   "_notes": "Cut from her list: 'good sex' (5738 11.35-11.85) - brand call, easy to restore by joining beats 4 and 5. Not used: 5741 2.2-3.3 (unclear fragment, two models disagree), 5738 17.8-19.5 'love you all, ciao' (her second take ends on 'love you'). Boundaries checked on word timings of two models + RMS in 50 ms steps.",
   "layout": "vertical",
   "snap": false,

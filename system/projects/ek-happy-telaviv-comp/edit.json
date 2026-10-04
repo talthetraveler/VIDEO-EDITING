@@ -1,70 +1,74 @@
 {
-  "_brief": "Item 12, Tal 2026-10-03: Phone Call Video / Tel Aviv. Compilation (emotional): six different people answer the sign's question on the red phone. Order per COMPILATION-ORDER: a beaming face inside the first second (the Colombian visitor), a visibly different person every slot, the strongest answer 4th (the young woman: 'my mom is the strongest woman I know... Mom, I love you'), then a grandmother, ending on the older man's 'that's how life looks beautiful. Thank you.' No spoken question from Tal - the sign carries it. NO ZOOMS: one static framing per person.",
-  "_framing": "LESSONS 81: the man in the cap is framed head-and-shoulders (static 2.67x) because two boys stand right behind his elbow in both of his beats; the older man is framed at a static 2.0x and starts on 'seeing people happy' because a girl walks past him during 'what makes me happy'.",
-  "_notes": "V1 opened on the mother with her two boys (IMG_5768) and had the father with a toddler on his shoulders (IMG_5728): both OUT in V2 under LESSONS 81 (children who are strangers) - a blurred child in each would have been the beat. Excluded on purpose: IMG_5754 (political: 'IDF soldiers are moral'), the grandmother's 'grandson home safe from the army' and 'Bibi' lines (only her grandkids/health line is used), IMG_5742 (he says 'don't film' - consent), IMG_5715 (getting-married line: the two models disagree on wording and timing), IMG_5737b (a passer-by in front of the lens).",
+  "_brief": "Item 12, Phone Call Video / Tel Aviv. Compilation of the MOST INSPIRING answers. V4 after Tal on V3 (2026-10-04): 'I'd like maybe more inspiring answers... you can choose different answers' (he pointed at the cancer survivor's story as the kind of thing he means). Nine people, no light answers: opens on the phone being picked up with the sign readable, then 'if you're having a hard day... just look up'; the older man 2nd; 'my mom is the strongest woman I know' 4th; ends on 'every morning that we wake up and breathe, that makes us happy... love you'. Out: the Colombian visitor's 'Israel makes me happy' (V3's hook). In, new: 'look up', 'be kind', 'every morning we wake up and breathe', and the woman in the black cap's 'doing good for people' - on HER, because it is her voice (V2 showed her partner over it). NO ZOOMS: one static framing per shot.",
+  "_blur": "EK_HAPPY_TELAVIV_COMP_V4.mp4 = the _BUILD render + blur-face.py with blur-rules.json: the small child with the pink bag who walks in behind the 'be kind' woman (profile for a few frames).",
+  "_framing": "The couple are two separate static framings of one take: her line framed on her (3.0x, so a child passing behind them stays out), then his own line framed on him (2.67x, two boys stand at his elbow). The older man is at 2.0x and starts on 'seeing people happy' (a girl walks past during 'what makes me happy'). The woman in the headwrap starts on 'the best in the world' (a passer-by's back fills the frame under 'a person's happiness'). The opening pick-up starts once a man carrying a child has left the frame, so the handset is already in her hand, rising to her ear.",
+  "_notes": "Re-read for this version and left out: IMG_5714 ('the little things... being proud of myself' - she is small in a crowd with children around her), IMG_5749 ('to be alive' - said by a boy, a minor, seen from behind), IMG_5737 ('be content with little' - a passer-by blocks the lens), IMG_5715 (two models disagree), IMG_5743's 'my grandson home safe from the army' and 'Bibi' lines (her grandkids/health line is used), IMG_5754 (political), IMG_5742 (he says 'don't film'), IMG_5768 and IMG_5728 (children).",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_HAPPY_TELAVIV_COMP_V2.mp4",
+  "out": "EK_HAPPY_TELAVIV_COMP_V4_BUILD.mp4",
   "beats": [
     [
-      "c11e783c-50b0-4f17-bcfc-67d3d65fe607",
-      0.6,
-      9.1,
+      "43856887-fa63-403a-b414-326f7bea139a",
+      3.9333,
+      5.4,
       0.5,
-      "IMG_5751: HOOK - Colombian visitor, beaming from frame one: 'I just want to let the whole world know that Israel makes me happy. Shalom, shalom Israel, shalom the whole world'",
+      "IMG_5724: OPEN - she lifts the red phone to her ear, the sign readable under her",
       null,
       {
         "manual": true,
         "z": [
-          1,
-          1
+          1.3,
+          1.3
         ],
-        "x": 0.5,
-        "y": 0.5
+        "x": 0.62,
+        "y": 0.62,
+        "capY": 0.53,
+        "nocap": true
       }
     ],
     [
-      "e4500984-ed4a-46c4-bdfa-48c9361c6a8e",
-      10.3333,
-      15,
+      "43856887-fa63-403a-b414-326f7bea139a",
+      20.9667,
+      25.0667,
       0.5,
-      "IMG_5763: man in the cap: 'the thing that makes me happiest is doing good for people'",
+      "IMG_5724: same woman: 'if you're having a hard day or a bad day, just look up, look at the sky, look at the trees'",
       null,
       {
         "manual": true,
         "z": [
-          2.67,
-          2.67
+          1.3,
+          1.3
         ],
-        "x": 0.82,
-        "y": 0.5
+        "x": 0.62,
+        "y": 0.62,
+        "capY": 0.53
       }
     ],
     [
-      "e4500984-ed4a-46c4-bdfa-48c9361c6a8e",
-      19.0667,
-      25.1,
+      "2b4e138d-4194-45f0-962d-3b0ad995d1d5",
+      12.7667,
+      23.2,
       0.5,
-      "IMG_5763: same take, jump cut past 'what else?': 'to bring people happiness, joy, good things, to smile all the time'",
+      "IMG_5726: older man, 2nd (Tal): 'seeing people happy, doing well, helping each other... and that's how life looks beautiful. Thank you.'",
       null,
       {
         "manual": true,
         "z": [
-          2.67,
-          2.67
+          2,
+          2
         ],
-        "x": 0.82,
-        "y": 0.5
+        "x": 0.55,
+        "y": 0.42
       }
     ],
     [
       "e0755095-2ea3-4aef-abf9-187153ceb425",
-      3.8333,
-      10.9333,
+      5.6667,
+      11,
       0.5,
-      "IMG_5727: woman in the headwrap: 'a person's happiness... is keeping Shabbat, getting closer to my Father in heaven'",
+      "IMG_5727: woman in the headwrap: 'the best in the world is keeping Shabbat, getting closer to my Father in heaven'",
       null,
       {
         "manual": true,
@@ -90,7 +94,42 @@
           1.3
         ],
         "x": 0.55,
-        "y": 0.48
+        "y": 0.48,
+        "capY": 0.58
+      }
+    ],
+    [
+      "e4500984-ed4a-46c4-bdfa-48c9361c6a8e",
+      10.3333,
+      15,
+      0.5,
+      "IMG_5763: woman in the black cap, HER voice, framed on her: 'the thing that makes me happiest is doing good for people'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          3,
+          3
+        ],
+        "x": 0.33,
+        "y": 0.44
+      }
+    ],
+    [
+      "e4500984-ed4a-46c4-bdfa-48c9361c6a8e",
+      19.0667,
+      25.1,
+      0.5,
+      "IMG_5763: her partner, now holding the phone: 'to bring people happiness, joy, good things, to smile all the time'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          2.67,
+          2.67
+        ],
+        "x": 0.82,
+        "y": 0.5
       }
     ],
     [
@@ -98,7 +137,7 @@
       11.9,
       15.8,
       0.5,
-      "IMG_5743: grandmother, right after the daughter: 'happiness is being with the grandkids and the kids, that they stay healthy'",
+      "IMG_5743: grandmother: 'happiness is being with the grandkids and the kids, that they stay healthy'",
       null,
       {
         "manual": true,
@@ -107,24 +146,62 @@
           1
         ],
         "x": 0.5,
-        "y": 0.5
+        "y": 0.5,
+        "capY": 0.6
       }
     ],
     [
-      "2b4e138d-4194-45f0-962d-3b0ad995d1d5",
-      12.7667,
-      22.9333,
+      "993313ed-ab53-4bd8-93f6-c52609c945b3",
+      6.9,
+      12.6,
       0.5,
-      "IMG_5726: ENDING - older man, slow and sure: 'seeing people happy, doing well, helping each other... and that's how life looks beautiful. Thank you.' - his pause before the last line is kept",
+      "IMG_5721: 'what makes me happy is to smile at people in the street, or just be kind to them'",
       null,
       {
         "manual": true,
         "z": [
-          2,
-          2
+          1.4,
+          1.4
         ],
-        "x": 0.55,
-        "y": 0.42
+        "x": 0.6,
+        "y": 0.56,
+        "capY": 0.47
+      }
+    ],
+    [
+      "e4d3ebf7-f474-47dd-a745-f48a9cf5fdce",
+      3.4,
+      6.7,
+      0.5,
+      "IMG_5741: ENDING - woman in the cardigan: 'every morning that we wake up and breathe, that makes us happy'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.4,
+        "y": 0.55,
+        "capY": 0.6
+      }
+    ],
+    [
+      "e4d3ebf7-f474-47dd-a745-f48a9cf5fdce",
+      6.8333,
+      15.4,
+      0.5,
+      "IMG_5741: same take, continues: 'so be good, smile, listen to music, scream at the top of your lungs... and you'll be happy. Love you' - ends on her smile",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.4,
+        "y": 0.55,
+        "capY": 0.6
       }
     ]
   ]

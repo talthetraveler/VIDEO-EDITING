@@ -1,9 +1,13 @@
 {
- "note": "ek-happy-telaviv-comp-fast V1 (LESSONS 81, age unclear so blurred). A girl with a ponytail walks left-to-right through the background of edit beat 4 (video frames ~347-370) and disappears behind the speaker. HAND-KEYED on a 0.02 grid from the pre-blur render (540x960). The first pass keyed her only to frame 362 from a grid that stopped at x=0.30 and left her face clear for frames 363-369; caught on the frame-index check and re-keyed on a wider grid. Rule-beats are frame slices: 345 clear, 28 keyed, 612 clear.",
+ "note": "ek-happy-telaviv-comp-fast V2 (LESSONS 81; age unclear so blurred). HAND-KEYED on a 0.02 grid from the V2 build (540x960). (a) frames 268-301: a small child with a pink bag walks in at the left edge behind the 'be kind' woman - her face is in profile for a few frames around 283 before she is seen only from behind. (b) frames 492-531: a girl with a ponytail walks left-to-right behind the Shabbat man and disappears behind him. Rule-beats are frame slices, not edit beats.",
  "beats": [
-  { "frames": 345, "x": [2, 3], "y": [2, 3], "prior": null, "clear": true },
-  { "frames": 28, "x": [0.0, 0.52], "y": [0.34, 0.43], "prior": [0.2, 0.387, 0.065], "maxr": 0.065,
-    "keys": [[0, 0.0, 0.387], [3, 0.005, 0.387], [7, 0.10, 0.387], [11, 0.19, 0.387], [15, 0.26, 0.387], [18, 0.36, 0.387], [21, 0.45, 0.387], [24, 0.465, 0.387], [27, 0.475, 0.387]] },
-  { "frames": 612, "x": [2, 3], "y": [2, 3], "prior": null, "clear": true }
+  { "frames": 268, "x": [2, 3], "y": [2, 3], "prior": null, "clear": true },
+  { "frames": 34, "x": [0.0, 0.2], "y": [0.3, 0.42], "prior": [0.03, 0.35, 0.07], "maxr": 0.07,
+    "keys": [[0, 0.0, 0.37], [8, 0.02, 0.367], [15, 0.025, 0.342], [22, 0.045, 0.34], [29, 0.084, 0.345], [33, 0.1, 0.345]] },
+  { "frames": 190, "x": [2, 3], "y": [2, 3], "prior": null, "clear": true },
+  { "frames": 40, "x": [0.0, 0.5], "y": [0.37, 0.46], "prior": [0.2, 0.415, 0.05], "maxr": 0.05,
+    "keys": [[0, 0.0, 0.415], [3, 0.0, 0.415], [6, 0.015, 0.414], [9, 0.04, 0.412], [12, 0.07, 0.418], [15, 0.15, 0.412],
+             [18, 0.2, 0.413], [21, 0.25, 0.415], [24, 0.31, 0.416], [27, 0.36, 0.418], [30, 0.415, 0.418], [33, 0.43, 0.418], [39, 0.44, 0.418]] },
+  { "frames": 532, "x": [2, 3], "y": [2, 3], "prior": null, "clear": true }
  ]
 }

@@ -5,7 +5,7 @@
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_GOODNEWS_GHANA_V2_FULL.mp4",
+  "out": "EK_GOODNEWS_GHANA_V2.mp4",
   "beats": [
     [
       "9b991951-20d3-4d6b-9b1c-c6fdde202e27",
@@ -143,6 +143,5 @@
         "y": 0.47
       }
     ]
-  ],
-  "_final": "2026-10-04: Tal approved V2 (\"23 is good\"). Full-quality final of exactly that cut: same beats, crops and caption segments as edit.v2-preview.json; built with the project-local _final-build-edit.mjs (scoped HQ span of the 2160x3840 original, DeepFilterNet -D), then brought to -14 LUFS on the whole timeline (_loudness-14.py). The approved preview stays as EK_GOODNEWS_GHANA_V2.mp4."
+  ]
 }

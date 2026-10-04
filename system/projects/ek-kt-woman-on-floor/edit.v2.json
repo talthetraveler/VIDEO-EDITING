@@ -6,12 +6,12 @@
  "snap": false,
  "autoFrame": false,
  "grade": false,
- "out": "EK_KT_WOMAN_ON_FLOOR_V2_FULL.mp4",
+ "out": "EK_KT_WOMAN_ON_FLOOR_V2.mp4",
  "beats": [
   [
    "1d71010f-f0f0-49b4-88fb-8087c31398d0",
-   7.3675,
-   13.6008,
+   7.3667,
+   13.6,
    0.5,
    "THE ASK, straight in: \"Can I take half a kilo of tomatoes? But I have no money\" - \"What?\" - \"I have no money\" - THE YES, in her own way: \"How many tomatoes?\"",
    null,
@@ -26,8 +26,8 @@
   ],
   [
    "1d71010f-f0f0-49b4-88fb-8087c31398d0",
-   17.9114,
-   22.4114,
+   17.9,
+   22.4,
    0.5,
    "THE GIVING SEEN: she fills the bag and hands it over - \"Bless your hands, hajja. Thank you\"",
    null,
@@ -42,8 +42,8 @@
   ],
   [
    "1d71010f-f0f0-49b4-88fb-8087c31398d0",
-   32.7929,
-   41.4596,
+   32.8,
+   41.4667,
    0.5,
    "REVEAL + REFUSAL, one take (8.7s): \"This was a test. We were testing generosity\" - \"Please, hajja, this is from me\" - \"No, no, no\"",
    null,
@@ -58,8 +58,8 @@
   ],
   [
    "1d71010f-f0f0-49b4-88fb-8087c31398d0",
-   45.7392,
-   49.7392,
+   45.7333,
+   49.7333,
    0.5,
    "PAYOFF: \"These are for you too\" - \"No, my son\" - and she reaches for MORE tomatoes to give",
    null,
@@ -76,8 +76,5 @@
  "capY": 0.66,
  "_capY": "0.66 (V1 was 0.74): the English card moves up so the smaller Arabic line fits underneath and its bottom still clears the lowest 400px, where the platform buttons sit (checked: lowest Arabic pixel printed by arabic-line.py).",
  "captionFix": [],
- "_v2": "2026-10-04, Tal on V1: 'add Arabic subtitles as well, make the captions a bit better. Not for all the videos, just for that with Arabic.' Same four shots, same order, same framing. English cards re-cut (see the translate file). The Arabic line is NOT a builder feature - build-edit.mjs and render-caption.py have no secondary-line option (checked) - so it is added after the build by this folder's arabic-line.py, which reads BUILD-LOG.json for every card's exact on/off time and draws the matching line from arabic-lines.json under it (shaped and right-to-left with arabic-reshaper + python-bidi; PIL here has no raqm). Rebuild order: build-edit.mjs, then `python arabic-line.py`.",
- "_final": "2026-10-04: Tal approved the V2 preview ('number 8 is good'). This is the SAME cut built --final --hq at 1080x1920 with the project-local _final-build-edit.mjs (the shared builder plus DeepFilterNet -D), then arabic-line.py at full size. Denoise strength is left as the approved preview had it. The preview EK_KT_WOMAN_ON_FLOOR_V2.mp4 is kept; its recipe is edit.v2.json.",
- "_frame_aligned": "In/out points were nudged by at most 17 ms (same lengths) onto the 29.97 fps source frame grid so the 29.97->30 conversion cannot repeat a frame inside a beat. See ek-kt-shop-owner-5/_align-to-source-frames.mjs.",
- "_final_checks": "EK_KT_WOMAN_ON_FLOOR_V2_FULL.mp4, measured 2026-10-04: 1080x1920 yuv420p tv bt709, 702 frames (= the preview), 0 true duplicate frames (the first full-size build had one at 10.07s; fixed by aligning the in-points to the source frame grid, shifts 0.8-11.4 ms); Arabic line drawn under all 15 cards at full size, shaped and right-to-left on two full-size stills, lowest pixel 1487/1920; -14.0 LUFS, true peak -1.5 dBTP; captions same text as the preview, starts within 0.08s; no audio hole at any cut, one 35 ms at the very start of the file; selfreview exit 1 on the same three smeared Arabic word-timestamp flags as the preview; 15 stills side by side with the preview: same framing, captions in place. Not listened to. Arabic wording still unverified by a speaker."
+ "_v2": "2026-10-04, Tal on V1: 'add Arabic subtitles as well, make the captions a bit better. Not for all the videos, just for that with Arabic.' Same four shots, same order, same framing. English cards re-cut (see the translate file). The Arabic line is NOT a builder feature - build-edit.mjs and render-caption.py have no secondary-line option (checked) - so it is added after the build by this folder's arabic-line.py, which reads BUILD-LOG.json for every card's exact on/off time and draws the matching line from arabic-lines.json under it (shaped and right-to-left with arabic-reshaper + python-bidi; PIL here has no raqm). Rebuild order: build-edit.mjs, then `python arabic-line.py`."
 }

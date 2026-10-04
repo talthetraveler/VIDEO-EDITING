@@ -5,7 +5,7 @@
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_WMYH_COMP_V1.mp4",
+  "out": "EK_WMYH_COMP_V2.mp4",
   "beats": [
     [
       "c71f5d96-e40d-4686-a9f6-bf30bb2494ad",
@@ -126,5 +126,6 @@
         "y": 0.5
       }
     ]
-  ]
+  ],
+  "_round1": "Tal, 2026-10-03: no objection. V2 is the V1 render with ONE audio change: the Indian wife's beat (58.7-65.2) is +7 dB after the builder's denoise (qa-finish.mjs, picture stream copied, overall loudness kept at the V1 level). Not rebuilt: BUILD-LOG.json is the V1 build."
 }

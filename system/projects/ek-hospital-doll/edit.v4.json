@@ -5,7 +5,7 @@
  "autoFrame": false,
  "grade": false,
  "exposure": false,
- "out": "EK_HOSPITAL_DOLL_V4_HQ.mp4",
+ "out": "EK_HOSPITAL_DOLL_V4.mp4",
  "beats": [
   [
    "c2518756-41d8-4543-971a-8f7d226f7c11",
@@ -213,9 +213,5 @@
    "to": "I have a gift for you!",
    "_why": "the builder trims a segment that starts before the beat in proportion to its clock (16.0->16.8 = 40% = the first two words); this restores the line as both models heard it"
   }
- ],
- "post": [
-  "full quality: fetch-hq.mjs + build-edit.mjs --final --hq (span c2518756 14.0-70.7s)",
-  "loudness: one gain (+2.1 dB) + true-peak limiter over the whole timeline to -14 LUFS, video stream-copied"
  ]
 }

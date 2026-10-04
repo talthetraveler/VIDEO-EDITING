@@ -4,7 +4,7 @@
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_CLEANER_JERUSALEM_FULL.mp4",
+  "out": "EK_CLEANER_JERUSALEM_V1_r7_muslim_jewish.mp4",
   "beats": [
     [
       "local-db2e5fd3621b3654",
@@ -132,9 +132,9 @@
     [
       "local-db2e5fd3621b3654",
       30.5667,
-      31.7,
+      33.9,
       0.5,
-      "TAL NOTE: Tal asks ARE YOU MUSLIM? (ata muslim 30.62-31.56). In 30.5667 (second engine: no word straddles it). Split from the next beat at 31.7 only so YES is drawn when he says it - in the first render the builder glued it onto the question and showed the answer 1.3s early. NO-ZOOM z:[1,1].",
+      "TAL NOTE 2026-10-04: Tal asks ARE YOU MUSLIM? (ata muslim 30.62-31.56) - the cleaner: YES (ken 31.86-32.16) - Tal holds his open hand out. One beat: the builder glues YES onto the question, so the answer is on screen 1.3s before he says it (fixed in edit.r8-not-rendered.json by splitting this beat at 31.7; that build was stopped by the machine load). NO-ZOOM z:[1,1].",
       null,
       {
         "manual": true,
@@ -148,28 +148,6 @@
         "audio": {
           "id": "c957346b-5401-429c-b782-be3d5cd93a23",
           "at": 30.5267
-        }
-      }
-    ],
-    [
-      "local-db2e5fd3621b3654",
-      31.7,
-      33.9,
-      0.5,
-      "same shot: the cleaner - YES (ken 31.86-32.16) - Tal holds his open hand out. The question stays in: YES means nothing without it. Tal then says one more word (32.46-33.02, probably tishma = listen; 2 of 6 readings) - uncaptioned. NO-ZOOM.",
-      null,
-      {
-        "manual": true,
-        "exact": true,
-        "z": [
-          1,
-          1
-        ],
-        "x": 0.5,
-        "y": 0.5,
-        "audio": {
-          "id": "c957346b-5401-429c-b782-be3d5cd93a23",
-          "at": 31.66
         }
       }
     ],
@@ -252,10 +230,9 @@
     ]
   ],
   "denoise": 10,
-  "music": "../ek-cleaner-jerusalem/LOCATION-SOUND-FULL.wav",
+  "music": "../ek-cleaner-jerusalem/LOCATION-SOUND-r7.wav",
   "bedOnly": true,
   "_sound": "bedOnly: the soundtrack is LOCATION-SOUND.wav in this folder - the SAME source windows the beats play (graft window, or real-time window under a slow-mo beat), extracted as continuous runs, denoised once per run (-a 10, 0.5s pre-roll), no per-beat gain. Built by the ek story-editor soundtrack.py (beat-by-beat denoise + level-matching put 20 dB steps and DeepFilterNet onset dips at 4-frame snap joins where the sound is really continuous: measured -64 dB holes at 4.57s/4.70s in r3). Rebuild it if any beat window changes. No music: Tal asked for emotional music on the old-lady cut; none exists in the repo and none is ripped.",
   "_nozoom": "r5_nozoom: Tal 'stop with all the zooms its weird'. One constant framing per shot, the 4-frame ramps and punch-ins removed, the handover / smile / laugh kept as hard cuts and slow-mo. The smile slow-mo now starts at 12.0667 (its old normal-speed lead-in was the 'wide' half of a wide-then-tight).",
-  "_talnote": "r7: Tal on r5_nozoom - I think this is good, but ... he says yes, yes, and then I say I am Jewish, and then I put it there, and then the slow-mo. I love you. Something like that. Added after the grin (time forward, same POV take): ARE YOU MUSLIM? / YES / IM JEWISH + handshake / slow-mo on his smile. I LOVE YOU IS NOT IN THE FOOTAGE: read 28.5-39.2 of the POV and the three iPhone clips with large-v3 + turbo in Hebrew, Arabic and auto. What follows the handshake is toda raba (twice), a word no model resolves at 36.4-37.2 (aribi / yabi / avri - possibly habibi, unconfirmed), then yalla bye. Nothing was invented.",
-  "_full": "FULL-QUALITY FINAL of the cut Tal approved (EK_CLEANER_JERUSALEM_V1_r8_muslim_jewish.mp4): same beats, same windows, same framing. Observer iPhone shots from fetched 2160p spans (HLG, tone-mapped by the builder), POV from the local Meta originals, built 1080x1920 with projects/ek-cleaner-jerusalem/_final-build-edit.mjs (DeepFilterNet -D, timeline loudnorm -14 LUFS). Sound: LOCATION-SOUND-FULL.wav - the same windows rebuilt from full-quality audio with soundtrack.py --hq --D."
+  "_talnote": "r7: Tal on r5_nozoom - I think this is good, but ... he says yes, yes, and then I say I am Jewish, and then I put it there, and then the slow-mo. I love you. Something like that. Added after the grin (time forward, same POV take): ARE YOU MUSLIM? / YES / IM JEWISH + handshake / slow-mo on his smile. I LOVE YOU IS NOT IN THE FOOTAGE: read 28.5-39.2 of the POV and the three iPhone clips with large-v3 + turbo in Hebrew, Arabic and auto. What follows the handshake is toda raba (twice), a word no model resolves at 36.4-37.2 (aribi / yabi / avri - possibly habibi, unconfirmed), then yalla bye. Nothing was invented."
 }

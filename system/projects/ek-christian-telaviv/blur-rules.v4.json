@@ -1,0 +1,90 @@
+{
+ "note": "The street man's face in EK_CHRISTIAN_TELAVIV_V4. Frame indices are 0-based frames of the 30fps render (beat frame counts: 93,209,43,128,110,83,200,108,186,109,470,51,33,36,40,8,8,23,15,24,36,34 = 2047). He is in frame in beats 14-22; his FACE is in frame only in beats 15 (iPhone wide), 16 (POV handover at z1), the first 6 frames of 17 (the push) and 20 (iPhone two-shot). Beat 14 is from behind; 18, 19, 21, 22 are the z2 crops that never contain his face. Positions are fractions of the frame (rx of width, ry of height).",
+ "shots": [
+  {
+   "name": "beat 15 iPhone wide (IMG_9239 0.07-1.40)",
+   "kind": "iphone",
+   "frames": [
+    1859,
+    1898
+   ],
+   "region": [
+    0.36,
+    0.64,
+    0.26,
+    0.54
+   ],
+   "prior": [
+    0.5,
+    0.39
+   ],
+   "max_face_w": 0.2,
+   "dy": -0.006,
+   "rx": 0.085,
+   "ry": 0.055
+  },
+  {
+   "name": "beat 16 POV handover z1 (5377 15.93-16.20)",
+   "kind": "fixed",
+   "frames": [
+    1899,
+    1906
+   ],
+   "ellipse": [
+    0.38,
+    0.21,
+    0.36,
+    0.25
+   ],
+   "edge": [
+    0,
+    2
+   ],
+   "_edge": "no guard ellipse on the 2 iPhone frames before this cut: it is 36% of the frame wide and read as a 2-frame smear; frame 1899 (the first of this shot) was checked blurred by index instead"
+  },
+  {
+   "name": "beat 17 the push z1->z2 (5377 16.20-16.47)",
+   "kind": "push",
+   "frames": [
+    1907,
+    1914
+   ],
+   "head": [
+    0.38,
+    0.21,
+    0.36,
+    0.25
+   ],
+   "z": [
+    1,
+    2
+   ],
+   "focus": [
+    0.5667,
+    0.75
+   ]
+  },
+  {
+   "name": "beat 20 iPhone two-shot (IMG_9239 12.23-13.03)",
+   "kind": "iphone",
+   "frames": [
+    1953,
+    1976
+   ],
+   "region": [
+    0.58,
+    0.88,
+    0.22,
+    0.48
+   ],
+   "prior": [
+    0.72,
+    0.37
+   ],
+   "max_face_w": 0.2,
+   "dy": -0.006,
+   "rx": 0.11,
+   "ry": 0.075
+  }
+ ]
+}

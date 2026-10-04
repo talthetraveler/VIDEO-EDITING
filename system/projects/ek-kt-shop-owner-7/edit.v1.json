@@ -1,0 +1,92 @@
+{
+ "_brief": "Batch 2026-10-03 item 9, Kindness Tests: Shop owner 7 (Muhammad, a bread cart in the Old City). V1. One camera (chest cam POV, 9:16). The shortest of the set: ASK -> THE YES -> reveal, refused twice, then he takes it -> why Tal insists (give bread for free to other people) -> Muslim / Jewish / brothers on his face. NO ZOOMS: every beat is the full frame. No slow motion: there is no wordless reaction in the clip to put it on (he talks or Tal talks throughout).",
+ "_left_out": "71-91s a passer-by vouches for him (\"He's the best guy in the world ... not only you, anybody ... he's number one\"). The words are good; the picture is Tal's phone held up in the middle of the frame and the man 8 metres away, so it is not in the cut. 66-68s \"kulo wahad\": large-v3 hears \"All together\", turbo \"Kula wahad\", cached \"All of a one\" - not agreed, so the beat ends before it.",
+ "layout": "vertical",
+ "snap": false,
+ "autoFrame": false,
+ "grade": false,
+ "out": "EK_KT_SHOP_OWNER_7_V1.mp4",
+ "beats": [
+  [
+   "521a3333-5e55-4c43-b951-337e4e264a85",
+   20.8,
+   24.9333,
+   0.5,
+   "THE ASK, already at the bread cart: \"I'm sorry, but I don't have money. Can you help me, please, with one piece of bread?\" - his hand is already holding one out",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "521a3333-5e55-4c43-b951-337e4e264a85",
+   27.3333,
+   30.9,
+   0.5,
+   "THE YES: \"Please, I don't have money\" \"You want one?\" \"Yeah, please. I'm just hungry\" - the bread goes into the bag",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "521a3333-5e55-4c43-b951-337e4e264a85",
+   32.8,
+   42.9,
+   0.5,
+   "REVEAL + REFUSAL, one take (10.1s): \"Actually, this is for you\" \"No, it's okay\" \"For you?\" \"No, for you\" \"No, thanks\" ... \"For you\" \"Take it\" - he refuses twice, smiling, the note in Tal's hand",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "521a3333-5e55-4c43-b951-337e4e264a85",
+   47.2667,
+   50.5,
+   0.5,
+   "WHY TAL INSISTS: \"I want you to give bread for free to other people\" - the kindness is passed on through him",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ],
+  [
+   "521a3333-5e55-4c43-b951-337e4e264a85",
+   58.7,
+   65.9333,
+   0.5,
+   "WHO THEY ARE, on his face, the handshake: \"You are Muslim?\" \"Yes\" \"I'm Jewish. We are brothers\" ... \"Muslims and Jews, we are all the same\"",
+   null,
+   {
+    "z": [
+     1,
+     1
+    ],
+    "x": 0.5,
+    "y": 0.5
+   }
+  ]
+ ],
+ "capY": 0.66
+}

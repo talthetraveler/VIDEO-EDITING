@@ -1,13 +1,13 @@
 {
-  "_brief": "Batch 2026-10-03 item 11, MIC ON STREET / PILOT. Tal: \"Please edit the Pilot video as well.\" WHAT IT IS (38 transcripts read, frames looked at): not a pilot episode - a mic stand on the Tel Aviv promenade where passers-by record a message for 'Captain Smith', an Indian airline pilot who was hurt protecting Israeli passengers on a flight the day before and is in hospital. The folder also holds FINAL VIDEOO.mov, a 141.8s string-out of 17 messages end to end. SHAPE DECIDED: a street-interview chorus (formats/street-interview.md), 9 beats / 8 people, no intro and no title: cold open on the mother ('Smith, we can't thank you enough. You're a hero.') -> who and why, in a stranger's words ('thank you for saving my Israeli brothers on the plane') -> Uganda -> the couple ('you are welcome to Israel at any time') -> the thesis 5th ('it doesn't matter what walk of life, what religion, where you're from ... we need more people like you in the world') -> two women ('Thank you so much!') -> 'the Israeli people are forever in debt to you' -> the mother again ('We'll have you for Shabbat dinner') -> END 'From the people of Israel to the people of India, we love you, we stand with you ...' with his arms wide. Never two similar people in a row. LESSONS 80: no zooms; every shot is the full frame except the mother, who gets ONE constant tighter frame (1.5x) because her baby is in the stroller at the bottom of the full frame (LESSONS 81: a child's face is not shown; checked on 11 stills that the baby is outside the crop). Tal's premise ('a great hero ... injured badly', 'the Indian pilot that got stabbed') is left out: the answers explain it and it keeps the film on gratitude. grade:false (iPhone daylight, LESSONS 72). Sound: LOCATION-SOUND.wav (soundtrack.py: one denoise per run, one static gain per run).",
+  "_brief": "Batch 2026-10-03 item 11, MIC ON STREET / PILOT. Tal: \"Please edit the Pilot video as well.\" WHAT IT IS (38 transcripts read, frames looked at): not a pilot episode - a mic stand on the Tel Aviv promenade where passers-by record a message for 'Captain Smit', an Indian airline pilot who was hurt protecting Israeli passengers on a flight the day before and is in hospital. The folder also holds FINAL VIDEOO.mov, a 141.8s string-out of 17 messages end to end. SHAPE DECIDED: a street-interview chorus (formats/street-interview.md), 9 beats / 8 people, no intro and no title: cold open on the mother ('Smit, we can't thank you enough. You're a hero.') -> who and why, in a stranger's words ('thank you for saving my Israeli brothers on the plane') -> Uganda -> the couple ('you are welcome to Israel at any time') -> the thesis 5th ('it doesn't matter what walk of life, what religion, where you're from ... we need more people like you in the world') -> two women ('Thank you so much!') -> 'the Israeli people are forever in debt to you' -> the mother again ('We'll have you for Shabbat dinner') -> END 'From the people of Israel to the people of India, we love you, we stand with you ...' with his arms wide. Never two similar people in a row. LESSONS 80: no zooms; every shot is the full frame except the mother, who gets ONE constant tighter frame (1.5x) because her baby is in the stroller at the bottom of the full frame (LESSONS 81: a child's face is not shown; checked on 11 stills that the baby is outside the crop). Tal's premise ('a great hero ... injured badly', 'the Indian pilot that got stabbed') is left out: the answers explain it and it keeps the film on gratitude. grade:false (iPhone daylight, LESSONS 72). Sound: LOCATION-SOUND.wav (soundtrack.py: one denoise per run, one static gain per run). || V2 = QA PASS 2026-10-03 (no creative change: same shots, order, words). Every in/out re-measured on a voice-only envelope (DeepFilterNet full attenuation, 50ms steps, diagnostic only) because the word stamps were off on some edges; denoise per source clip by the builder rule (-a 10, up to 16 on a floor above -30 dB); whole-timeline loudness to -14 LUFS. Edges: beat 1 out 2.4667->2.7667 (hero is voiced until 2.60 - V1 clipped its tail); beat 2 in 16.9->16.6 (Yo is at 16.72-17.05, the stamp said 17.02 - V1 started inside it; stamp corrected in the cache) and out 24.4333->24.5333; beat 3 out 8.3333->8.7667 (Cheers is voiced to 8.30; the tail is his heart-hands and smile, and the CHEERS caption gets a readable 0.8s); beat 4 in 8.3333->8.2667, out 13.0333->13.1667 (hero voiced to 13.05); beat 8 out 8.9667->9.1333 (dinner voiced to 8.95). Tal approved the V1 preview (2026-10-03, \"good - post that to trials\") with one fix: the name is SMIT. FINAL (2026-10-04): out EK_PILOT_V2_HQ.mp4, built --final --hq from the full-quality spans (cache/hq, 1216x2160 iPhone). Sound = LOCATION-SOUND-HQ.wav, the same windows read from those spans (soundtrack.py in this folder: --hq --fadeout=0.25 --maxgain=18); the V2 preview (EK_PILOT_V2.mp4) used LOCATION-SOUND.wav from the proxies. Rebuild the wav if any beat window changes. After the build the whole timeline is brought to -14 LUFS with one static gain + limiter (the builder stops at -16).",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
   "capY": 0.72,
-  "music": "../ek-pilot/LOCATION-SOUND.wav",
+  "music": "../ek-pilot/LOCATION-SOUND-HQ.wav",
   "bedOnly": true,
-  "out": "EK_PILOT_V1.mp4",
+  "out": "EK_PILOT_V2_HQ.mp4",
   "captionFix": [
     {
       "match": "DROPLINE",
@@ -37,9 +37,9 @@
     [
       "5cfbc243-f7b7-4a90-9ed8-17c9a8fe6ece",
       0,
-      2.4667,
+      2.7667,
       0.5,
-      "COLD OPEN 9553 mother with a stroller: 'Smith, we can't thank you enough. You're a hero.' Constant 1.5x frame that keeps the baby out of picture.",
+      "COLD OPEN 9553 mother with a stroller: 'Smit, we can't thank you enough. You're a hero.' Constant 1.5x frame that keeps the baby out of picture.",
       null,
       {
         "exact": true,
@@ -55,8 +55,8 @@
     ],
     [
       "72377b3e-f339-4702-88da-3630bd4ceb41",
-      16.9,
-      24.4333,
+      16.6,
+      24.5333,
       0.5,
       "9502 young man, striped shirt - who and why: 'Yo, thank you for saving my Israeli brothers on the plane. Really appreciate it. Kudos to you, my friend.' (out before Tal's 'Perfect' 24.58)",
       null,
@@ -71,7 +71,7 @@
     [
       "ea8661d8-69da-435d-9939-73641a14eec9",
       0.9667,
-      8.3333,
+      8.7667,
       0.5,
       "9556 man from Uganda: 'Hey buddy, we love you so much. I'm from Uganda. Thank you very much for saving people, and we will be with you. Thank you very much. Cheers.'",
       null,
@@ -85,8 +85,8 @@
     ],
     [
       "bbfc86a8-d055-4b3f-9aaf-ce1d4eef6810",
-      8.3333,
-      13.0333,
+      8.2667,
+      13.1667,
       0.5,
       "9549 couple: 'You are welcome to Israel at any time. We love you. You are our hero.' (in after the prompt 'you are speaking to him...'; out before 'Wish you' 13.22)",
       null,
@@ -146,7 +146,7 @@
     [
       "5cfbc243-f7b7-4a90-9ed8-17c9a8fe6ece",
       5.9667,
-      8.9667,
+      9.1333,
       0.5,
       "9553 the mother again, same constant frame: 'We love you. We'll have you for Shabbat dinner.'",
       null,

@@ -5,12 +5,12 @@
  "snap": false,
  "autoFrame": false,
  "grade": false,
- "out": "EK_KT_SHOP_OWNER_7_V2_FULL.mp4",
+ "out": "EK_KT_SHOP_OWNER_7_V2.mp4",
  "beats": [
   [
    "521a3333-5e55-4c43-b951-337e4e264a85",
-   6.9675,
-   12.9675,
+   6.9667,
+   12.9667,
    0.5,
    "THE WALK-UP (Tal: \"you should get me walking up to him\"): down the souk lane to the bread cart - \"Hi, salaam alaikum\" \"Hello, salaam\" - the handshake - \"Nice to meet you. Do you speak English?\" \"Not good\"",
    null,
@@ -25,8 +25,8 @@
   ],
   [
    "521a3333-5e55-4c43-b951-337e4e264a85",
-   20.8147,
-   24.948,
+   20.8,
+   24.9333,
    0.5,
    "THE ASK, already at the bread cart: \"I'm sorry, but I don't have money. Can you help me, please, with one piece of bread?\" - his hand is already holding one out",
    null,
@@ -41,8 +41,8 @@
   ],
   [
    "521a3333-5e55-4c43-b951-337e4e264a85",
-   27.3212,
-   30.8879,
+   27.3333,
+   30.9,
    0.5,
    "THE YES: \"Please, I don't have money\" \"You want one?\" \"Yeah, please. I'm just hungry\" - the bread goes into the bag",
    null,
@@ -57,8 +57,8 @@
   ],
   [
    "521a3333-5e55-4c43-b951-337e4e264a85",
-   32.7933,
-   42.8933,
+   32.8,
+   42.9,
    0.5,
    "REVEAL + REFUSAL, one take (10.1s): \"Actually, this is for you\" \"No, it's okay\" \"For you?\" \"No, for you\" \"No, thanks\" ... \"For you\" \"Take it\" - he refuses twice, smiling, the note in Tal's hand",
    null,
@@ -73,8 +73,8 @@
   ],
   [
    "521a3333-5e55-4c43-b951-337e4e264a85",
-   47.2744,
-   50.5077,
+   47.2667,
+   50.5,
    0.5,
    "WHY TAL INSISTS: \"I want you to give bread for free to other people\" - the kindness is passed on through him",
    null,
@@ -89,8 +89,8 @@
   ],
   [
    "521a3333-5e55-4c43-b951-337e4e264a85",
-   58.6858,
-   65.9191,
+   58.7,
+   65.9333,
    0.5,
    "WHO THEY ARE, on his face, the handshake: \"You are Muslim?\" \"Yes\" \"I'm Jewish. We are brothers\" ... \"Muslims and Jews, we are all the same\"",
    null,
@@ -105,8 +105,5 @@
   ]
  ],
  "capY": 0.66,
- "_v2": "2026-10-04, Tal on V1: 'you should get me walking up to him'. One beat added at the front (6.97-12.97 of the same clip): two seconds of the walk down the lane with the cart coming up, the greeting, the handshake on his face, and 'Do you speak English?' 'Not good'. Everything after it is V1 unchanged. The folder has ONE clip (the POV); there is no phone clip of Tal from outside, so the walk-up is what Tal saw, not Tal seen. It starts at 6.97 because before that Tal is talking to his crew ('I'm gonna test this guy' ... 'I got it').",
- "_final": "2026-10-04: Tal approved the V2 preview ('number 6 is good'). This is the SAME cut built --final --hq at 1080x1920 with the project-local _final-build-edit.mjs (the shared builder plus DeepFilterNet -D, so the denoised sound is not 30 ms late with a hole at the head of each beat). Denoise strength is left as the approved preview had it. The preview EK_KT_SHOP_OWNER_7_V2.mp4 is kept; its recipe is edit.v2.json.",
- "_frame_aligned": "In/out points were nudged by at most 17 ms (same lengths) onto the 29.97 fps source frame grid so the 29.97->30 conversion cannot repeat a frame inside a beat. See ek-kt-shop-owner-5/_align-to-source-frames.mjs.",
- "_final_checks": "EK_KT_SHOP_OWNER_7_V2_FULL.mp4, measured 2026-10-04: 1080x1920 yuv420p tv bt709, 1028 frames (= the preview), 0 true duplicate frames (the first full-size build had one at 6.53s; fixed by aligning the in-points to the source frame grid, shifts 0.8-14.7 ms); -14.1 LUFS, true peak -1.4 dBTP; 25 captions, same text as the preview, starts within 0.02s (Take it now clears 0.4s earlier); no audio hole at any cut, one 25 ms at the very start of the file; selfreview exit 1: the three smeared-timestamp flags of the preview plus one finished-file flag at the first cut (6.00s) where the measured level is -36/-44 dB at the cut and the next word starts 100 ms later; the lead before 'I want you to give' is ~30 ms, as in the preview; 16 stills side by side with the preview: same framing, captions in place. Not listened to."
+ "_v2": "2026-10-04, Tal on V1: 'you should get me walking up to him'. One beat added at the front (6.97-12.97 of the same clip): two seconds of the walk down the lane with the cart coming up, the greeting, the handshake on his face, and 'Do you speak English?' 'Not good'. Everything after it is V1 unchanged. The folder has ONE clip (the POV); there is no phone clip of Tal from outside, so the walk-up is what Tal saw, not Tal seen. It starts at 6.97 because before that Tal is talking to his crew ('I'm gonna test this guy' ... 'I got it')."
 }

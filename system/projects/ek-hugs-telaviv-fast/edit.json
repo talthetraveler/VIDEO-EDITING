@@ -1,5 +1,5 @@
 {
-  "_brief": "Batch 2026-10-03 item 8, HUG FOR STRANGER / TEL AVIV TAL, fast montage. V3: no zooms (LESSONS 80), and children out (Tal: 'you need to blur the kids faces'). SWAPPED for adult hugs: kids piling in, the curly-haired girl, the smallest boy (child subjects); the straw-hat tourist (two teenage girls walk past the camera), the young woman with long hair (three children behind her), the guy in the grey tee (age unclear). Bald man starts at 46.5 (a girl with glasses is in frame until 46.4); white cap starts 6.2 (a small boy is at frame right until 5.1). One child remains: the toddler behind Tal in shot 1 - blurred on the render (blur/rules-*.json, blur-face.py). Ends on the white-cap hug and both of them beaming. Location-ambience bed, no speech. grade:false.",
+  "_brief": "Batch 2026-10-03 item 8, HUG FOR STRANGER / TEL AVIV TAL, fast montage. V4 = V3 + Tal's note (TAL-NOTES-ROUND-1 row 31: 'picking up the poster, it's good, nice job. Zoom in and slow-mo maybe a bit more. It's kind of perfect.'): same shots, same order; every hug framed closer with one constant crop per shot (aimed on stills), a 4-frame snap-in on three hugs (the red-haired woman, the older man's kiss, the beige-shirt hug), slow motion on three (was one: + the white-tee hug landing and the kiss). He asked for zoom on THIS video; LESSONS 80 still holds elsewhere. Children: none as a subject; the toddler behind Tal in shot 1 is blurred on the render (blur-rules.json, blur-face.py) - shot 1 keeps its V3 framing so the rules are unchanged. Location-ambience bed, no speech. grade:false. Final file = EK_HUGS_TELAVIV_FAST_V4.mp4 (blurred); _noblur is the builder's output and must not be delivered.",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
@@ -7,7 +7,7 @@
   "grade": false,
   "music": "../ek-hugs-telaviv-fast/bed.wav",
   "bedOnly": true,
-  "out": "EK_HUGS_TELAVIV_FAST_V3_noblur.mp4",
+  "out": "EK_HUGS_TELAVIV_FAST_V4_noblur.mp4",
   "beats": [
     [
       "2fd8510c-184d-4e4e-8124-4b33279906e9",
@@ -37,10 +37,10 @@
       {
         "manual": true,
         "z": [
-          1,
-          1
+          1.9,
+          1.9
         ],
-        "x": 0.5,
+        "x": 0.42,
         "y": 0.5,
         "nocap": true
       }
@@ -48,36 +48,73 @@
     [
       "827a714f-3015-4c10-9133-249df6739f5e",
       3.1,
-      5.4,
+      4.9,
       0.5,
-      "5686 young man in a white tee runs in, high five, hug",
+      "5686 young man in a white tee runs in, high five, arms go round",
       null,
       {
         "manual": true,
         "z": [
-          1,
-          1
+          1.5,
+          1.5
         ],
-        "x": 0.5,
-        "y": 0.5,
+        "x": 0.45,
+        "y": 0.52,
         "nocap": true
+      }
+    ],
+    [
+      "827a714f-3015-4c10-9133-249df6739f5e",
+      4.9,
+      5.4667,
+      0.5,
+      "5686 SLOW-MO the embrace (from 4.9: slowing the arms in flight smeared them)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.5,
+          1.5
+        ],
+        "x": 0.45,
+        "y": 0.52,
+        "nocap": true,
+        "speed": 0.5
       }
     ],
     [
       "63e42d06-d6d7-4adb-988b-099bb9c42428",
       35.6,
-      37.5,
+      37.3667,
       0.5,
       "5682 ARMS WIDE, she runs in",
       null,
       {
         "manual": true,
         "z": [
-          1,
-          1
+          1.25,
+          1.25
         ],
-        "x": 0.5,
-        "y": 0.5,
+        "x": 0.45,
+        "y": 0.44,
+        "nocap": true
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      37.3667,
+      37.5,
+      0.5,
+      "5682 snap-in onto the embrace",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.25,
+          2
+        ],
+        "x": 0.45,
+        "y": 0.44,
         "nocap": true
       }
     ],
@@ -91,11 +128,11 @@
       {
         "manual": true,
         "z": [
-          1,
-          1
+          2,
+          2
         ],
-        "x": 0.5,
-        "y": 0.5,
+        "x": 0.45,
+        "y": 0.44,
         "nocap": true,
         "speed": 0.5
       }
@@ -105,35 +142,72 @@
       46.5,
       47.8,
       0.5,
-      "5678 bald man bear hug (from 46.5: a girl with glasses is in frame until 46.4)",
+      "5678 bald man bear hug",
       null,
       {
         "manual": true,
         "z": [
-          1,
-          1
+          1.3,
+          1.3
         ],
-        "x": 0.5,
-        "y": 0.5,
+        "x": 0.4,
+        "y": 0.3,
         "nocap": true
       }
     ],
     [
       "1ad8a7c1-ae35-4f6b-9818-05a15cea14ac",
       62.9,
-      64.9,
+      63.7667,
       0.5,
-      "5662 older man in a cap, kiss on the cheek (from 62.9: two small girls stand in the far background until 62.85)",
+      "5662 older man in a cap walks up",
       null,
       {
         "manual": true,
         "z": [
-          1,
-          1
+          1.6,
+          1.6
         ],
-        "x": 0.5,
+        "x": 0.36,
         "y": 0.5,
         "nocap": true
+      }
+    ],
+    [
+      "1ad8a7c1-ae35-4f6b-9818-05a15cea14ac",
+      63.7667,
+      63.9,
+      0.5,
+      "5662 snap-in onto the kiss",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.6,
+          2.3
+        ],
+        "x": 0.36,
+        "y": 0.5,
+        "nocap": true
+      }
+    ],
+    [
+      "1ad8a7c1-ae35-4f6b-9818-05a15cea14ac",
+      63.9,
+      64.6,
+      0.5,
+      "5662 SLOW-MO the kiss on the cheek",
+      null,
+      {
+        "manual": true,
+        "z": [
+          2.3,
+          2.3
+        ],
+        "x": 0.36,
+        "y": 0.5,
+        "nocap": true,
+        "speed": 0.5
       }
     ],
     [
@@ -146,29 +220,65 @@
       {
         "manual": true,
         "z": [
-          1,
-          1
+          1.4,
+          1.4
         ],
-        "x": 0.5,
-        "y": 0.5,
+        "x": 0.38,
+        "y": 0.4,
         "nocap": true
       }
     ],
     [
       "929bc3b8-8be7-4047-9bc4-8b8287a1df27",
       0.3,
-      2.2,
+      0.9,
       0.5,
-      "5683 man in a beige shirt",
+      "5683 man in a beige shirt comes in",
       null,
       {
         "manual": true,
         "z": [
-          1,
-          1
+          1.3,
+          1.3
         ],
         "x": 0.5,
-        "y": 0.5,
+        "y": 0.36,
+        "nocap": true
+      }
+    ],
+    [
+      "929bc3b8-8be7-4047-9bc4-8b8287a1df27",
+      0.9,
+      1.0333,
+      0.5,
+      "5683 snap-in onto Tal's face over his shoulder",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.9
+        ],
+        "x": 0.5,
+        "y": 0.36,
+        "nocap": true
+      }
+    ],
+    [
+      "929bc3b8-8be7-4047-9bc4-8b8287a1df27",
+      1.0333,
+      2.2,
+      0.5,
+      "5683 the hug, Tal's eyes closed",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.9,
+          1.9
+        ],
+        "x": 0.5,
+        "y": 0.36,
         "nocap": true
       }
     ],
@@ -182,11 +292,11 @@
       {
         "manual": true,
         "z": [
-          1,
-          1
+          1.3,
+          1.3
         ],
-        "x": 0.5,
-        "y": 0.5,
+        "x": 0.4,
+        "y": 0.4,
         "nocap": true
       }
     ]

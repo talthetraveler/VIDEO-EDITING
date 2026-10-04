@@ -1,19 +1,19 @@
 {
-  "_brief": "Item 12, Tal 2026-10-03: Phone Call Video / Tel Aviv. Single-person video: the woman in the grey dress (IMG_5724, English) - the most complete message in the folder. Cold open on 'if you're having a hard day... just look up, look at the sky, look at the trees', then 'when we're around good, uplifting, positive people and around nature it's very hard to not be happy', then the Tel Aviv line and 'have a great day'. NO ZOOMS: one static 1.8x framing on her for every beat.",
-  "_blur": "EK_HAPPY_TELAVIV_LOOKUP_V2.mp4 = the _PREBLUR render + blur-face.py with blur-rules.json: two boys who walk toward the camera behind her in beat 3.",
-  "_notes": "LESSONS 81 (children): her first sentence (5.8-12.9 'what makes me happy is being around nature and positive people, because we all feed off each other's energies') is NOT used - a boy of about 12 walks right behind her through all of it and a second boy follows; no framing removes them. The static 1.8x framing keeps the left background (families walking away) out of the other beats. Also left out: 25.1-26.8 'they use the trees and the leaves all the time' (both models hear it; it does not read as English) and the second voice after 35.65. 'good upbringing, uplifting' is captioned 'good, uplifting' (false start).",
+  "_brief": "Item 12, Phone Call Video / Tel Aviv. Single-person video: the woman in the grey dress (IMG_5724, English). V3 after Tal's note on V2 (2026-10-03): 'zoom out a bit so you can see the sign what makes you happy. Or put the video of me dropping the thing and then her speaking.' Both done: it opens on Tal setting the stand with the sign and the red phone down in the street (IMG_5688), then her lines, and she is framed at a static 1.3x (was 1.8x) so the whole sign is readable under her. Captions sit above the sign (capY 0.53). NO ZOOMS: constant framing per take.",
+  "_blur": "V4 after Tal on V3 (2026-10-04): 'you see me drop the table but you can't see what it says' - the opening shot now runs 2.33s (was 1.13s) and is framed on the sign (static 1.8x: the whole sign with all three lines is in frame for the full shot; only his hands and legs are seen, and the two children standing left of the stand are out of frame). EK_HAPPY_TELAVIV_LOOKUP_V4.mp4 = the _BUILD render + blur-face.py with blur-rules.json: two boys who walk toward the camera behind her in the last beat. The opening shot is framed (static 1.5x) to keep two boys who stand left of the stand out of frame.",
+  "_notes": "LESSONS 81 (children): her first sentence (5.8-12.9) is NOT used - a boy of about 12 walks right behind her through all of it. 1.3x is as wide as the take goes without bringing in families with small children at the left edge of the full frame (32-35s). Also left out: 25.1-26.8 'they use the trees and the leaves all the time' and the second voice after 35.65. 'good upbringing, uplifting' is captioned 'good, uplifting' (false start).",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_HAPPY_TELAVIV_LOOKUP_V2_PREBLUR.mp4",
+  "out": "EK_HAPPY_TELAVIV_LOOKUP_V4_BUILD.mp4",
   "beats": [
     [
-      "43856887-fa63-403a-b414-326f7bea139a",
-      21,
-      25.0667,
+      "cde1d2fd-724d-4fff-94db-15cde1d90979",
+      2.0667,
+      4.4,
       0.5,
-      "IMG_5724: COLD OPEN - 'if you're having a hard day or a bad day, just look up, look at the sky, look at the trees'",
+      "IMG_5688: OPEN - the stand is set down and the shot HOLDS on it: the sign is whole in frame and still from 0.4s to the end (2.0s) - 'WHAT MAKES YOU HAPPY?' readable; he walks out of frame",
       null,
       {
         "manual": true,
@@ -21,8 +21,27 @@
           1.8,
           1.8
         ],
-        "x": 0.56,
-        "y": 0.52
+        "x": 0.468,
+        "y": 0.69,
+        "nocap": true
+      }
+    ],
+    [
+      "43856887-fa63-403a-b414-326f7bea139a",
+      20.9667,
+      25.0667,
+      0.5,
+      "IMG_5724: 'if you're having a hard day or a bad day, just look up, look at the sky, look at the trees'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.62,
+        "y": 0.62,
+        "capY": 0.53
       }
     ],
     [
@@ -35,11 +54,12 @@
       {
         "manual": true,
         "z": [
-          1.8,
-          1.8
+          1.3,
+          1.3
         ],
-        "x": 0.56,
-        "y": 0.52
+        "x": 0.62,
+        "y": 0.62,
+        "capY": 0.53
       }
     ],
     [
@@ -52,11 +72,12 @@
       {
         "manual": true,
         "z": [
-          1.8,
-          1.8
+          1.3,
+          1.3
         ],
-        "x": 0.56,
-        "y": 0.52
+        "x": 0.62,
+        "y": 0.62,
+        "capY": 0.53
       }
     ]
   ]

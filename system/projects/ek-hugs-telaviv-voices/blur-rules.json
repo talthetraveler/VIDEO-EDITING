@@ -1,5 +1,5 @@
 {
- "note": "VOICES V3. One child left in the cut: a boy in a black tee who walks in behind the man in the pink shirt ('keep spreading positivity'), from frame-in-beat ~27, crosses behind the speaker's head (hidden for 4 frames) and comes out on the left. The beat is split in three so the blur stops while he is hidden. Hand-keyed off a coordinate grid, every frame looked at through the crossing.",
+ "note": "VOICES V4. One child left in the cut: a boy in a black tee who walks in behind the man in the pink shirt ('keep spreading positivity'), crosses behind the speaker's head (hidden for 4 frames) and comes out on the left. The beat is split in three so the blur stops while he is hidden. Keys measured on the full frame (V3) and mapped into this shot's z1.5 framing.",
  "beats": [
   {
    "frames": 28,
@@ -28,7 +28,7 @@
    "clear": true
   },
   {
-   "frames": 73,
+   "frames": 69,
    "x": [
     2,
     3
@@ -41,7 +41,7 @@
    "clear": true
   },
   {
-   "frames": 37,
+   "frames": 127,
    "x": [
     2,
     3
@@ -54,7 +54,7 @@
    "clear": true
   },
   {
-   "frames": 88,
+   "frames": 53,
    "x": [
     2,
     3
@@ -67,7 +67,7 @@
    "clear": true
   },
   {
-   "frames": 57,
+   "frames": 4,
    "x": [
     2,
     3
@@ -106,103 +106,77 @@
    "clear": true
   },
   {
-   "frames": 63,
-   "x": [
-    2,
-    3
-   ],
-   "y": [
-    2,
-    3
-   ],
-   "prior": null,
-   "clear": true
-  },
-  {
-   "frames": 128,
-   "x": [
-    2,
-    3
-   ],
-   "y": [
-    2,
-    3
-   ],
-   "prior": null,
-   "clear": true
-  },
-  {
    "frames": 60,
    "x": [
     0.2,
-    0.42
+    0.6
    ],
    "y": [
-    0.27,
-    0.4
+    0.25,
+    0.5
    ],
    "prior": [
-    0.31,
-    0.335,
-    0.05
+    0.395,
+    0.373,
+    0.075
    ],
-   "maxr": 0.05,
+   "maxr": 0.075,
    "from": 25,
    "keys": [
     [
      26,
-     0.287,
-     0.338
+     0.36,
+     0.377
     ],
     [
      28,
-     0.29,
-     0.338
+     0.365,
+     0.377
     ],
     [
      32,
-     0.285,
-     0.338
+     0.357,
+     0.377
     ],
     [
      35,
-     0.276,
-     0.333
+     0.344,
+     0.369
     ],
     [
      40,
-     0.294,
-     0.336
+     0.371,
+     0.374
     ],
     [
      45,
-     0.336,
-     0.341
+     0.434,
+     0.381
     ],
     [
      50,
-     0.335,
-     0.333
+     0.432,
+     0.369
     ],
     [
      52,
-     0.338,
-     0.335
+     0.437,
+     0.372
     ],
     [
      56,
-     0.338,
-     0.332
+     0.437,
+     0.368
     ],
     [
      57,
-     0.35,
-     0.33
+     0.455,
+     0.365
     ],
     [
      59,
-     0.352,
-     0.33
+     0.458,
+     0.365
     ]
    ]
   },
@@ -222,54 +196,54 @@
   {
    "frames": 17,
    "x": [
-    0.12,
-    0.3
+    0.08,
+    0.45
    ],
    "y": [
-    0.27,
-    0.4
+    0.25,
+    0.5
    ],
    "prior": [
-    0.215,
-    0.328,
-    0.05
+    0.25,
+    0.362,
+    0.075
    ],
-   "maxr": 0.05,
+   "maxr": 0.075,
    "keys": [
     [
      0,
-     0.225,
-     0.322
+     0.267,
+     0.353
     ],
     [
      1,
-     0.235,
-     0.325
+     0.282,
+     0.357
     ],
     [
      3,
-     0.226,
-     0.33
+     0.269,
+     0.365
     ],
     [
      6,
-     0.215,
-     0.328
+     0.252,
+     0.362
     ],
     [
      8,
-     0.21,
-     0.329
+     0.245,
+     0.363
     ],
     [
      11,
-     0.208,
-     0.33
+     0.242,
+     0.365
     ],
     [
      16,
-     0.197,
-     0.33
+     0.225,
+     0.365
     ]
    ]
   },

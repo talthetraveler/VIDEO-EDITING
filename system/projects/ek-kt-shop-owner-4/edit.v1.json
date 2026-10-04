@@ -6,7 +6,7 @@
  "snap": false,
  "autoFrame": false,
  "grade": false,
- "out": "EK_KT_SHOP_OWNER_4_V1_FULL.mp4",
+ "out": "EK_KT_SHOP_OWNER_4_V1.mp4",
  "beats": [
   [
    "e16295d9-f8af-4e33-a94b-1b2ec9cde534",
@@ -126,6 +126,5 @@
    }
   ]
  ],
- "capY": 0.66,
- "_final": "2026-10-03: Tal approved the V1 preview (good, move that to approved trials). This is the SAME cut built --final --hq at 1080x1920 from full-quality spans; the approved preview EK_KT_SHOP_OWNER_4_V1.mp4 is kept, its recipe is edit.v1.json."
+ "capY": 0.66
 }
