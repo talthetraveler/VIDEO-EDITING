@@ -2341,3 +2341,20 @@ this one."*
 - Same round: he asks for a walk-up at the START of giving videos ("get me
   walking up to her / to him") and a slow-motion exit at the END. The approach
   and the leaving are part of the story, not dead space.
+
+## 87 — in a two-person take, check WHO IS HOLDING THE PHONE against whose voice it is (2026-10-04)
+
+Phone Call Tel Aviv, emotional compilation V2. Tal: *"you're zoomed in on the
+guy ... and then it's not him speaking."* The crop sat on the man in the cap
+for 4.5s while the woman beside him was the one talking into the phone. The
+transcript does not say who speaks, and a tight crop on the wrong person
+makes the mistake total.
+
+- Measured afterwards: median pitch 208 Hz in that span, against 163 Hz when
+  he holds the phone. **Pitch separates two speakers when a transcript
+  cannot.**
+- Before captioning a line in any take with two people in frame, look at who
+  holds the phone / mic / whose mouth moves on frames at the line's own
+  timestamps. A crop is aimed AFTER that, never before.
+- If a child-avoiding crop forces the frame onto the non-speaker, the beat is
+  cut, not shipped.
