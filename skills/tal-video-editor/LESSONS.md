@@ -2289,3 +2289,55 @@ the scooters behind her with her head at the bottom edge.
   you don't need to zoom in on her when they're giving a hug, just get the
   other angle."* After her best laugh, go straight to the kiss and the second
   angle. The hand-on-chest exclaim and the zoom on her reaching were padding.
+
+## 86 — a line plays over the shot it was SPOKEN in; and the vertical branch was drifting every beat (Tal, 2026-10-04, EDEN V11)
+
+Tal on V11: *"keep the camera steady and zoom in a bit ... It doesn't make
+sense that I say, hi, I heard about your story ... They don't see me actually
+sitting down and saying those words. It's just a different shot of me walking
+in. So whatever I'm speaking, you should be [showing]."*
+
+**1. His words over a different shot of him read as wrong.** V11 laid clip 6's
+"Hi Eden, I heard your story…" under clip 5's doorway walk-in, because his own
+script said "Tal walks in (clip 5 visual)". Seen on screen, his mouth is not
+saying it and he is not where the words are said. Clip 6 itself has the whole
+thing in one take: he stands at the bed saying it, then crouches beside her.
+**When he is talking, show the take he is talking in.** A graft of one clip's
+sound under another clip's picture of the SAME speaker is for a cutaway where
+his mouth is not readable - never for the shot that introduces him.
+A script line that names a visual is his idea of the shot before he has seen
+it; if the sync shot exists, offer that, and say which one was used.
+
+**2. "Keep the camera steady" was the builder, not the camera.** With
+`autoFrame: false` and no `z` on a beat, `build-edit.mjs` (vertical layout,
+hand-framed branch) ran every beat from 1.00 to 1.05. Twenty-four beats each
+crept in 5% and snapped back at the cut. The aimed branch lost its automatic
+push on 2026-09-23 ("you don't need to zoom in just because I gave you that
+skill"); this branch had been missed. Fixed: no `z` now means no move.
+**A locked-off interview holds ONE constant frame per shot** -
+`{"z": [1.1, 1.1], "x": …, "y": …}` when he wants it tighter.
+
+**3. A zoom moves everything the blur rules point at.** `blur-rules.json`
+regions are fractions of the RENDERED frame. Changing a beat's zoom or focus
+means transforming its region and prior with the same window
+(`(v - left) / width`, radius times zoom) and looking at the result again -
+the tracker will otherwise search where her face used to be.
+
+## 86 — a wordless "visual" cut with no zooms is not the Erez style he asked for (Tal, 2026-10-04)
+
+Homeless 2 "Visual" was his Option 2 in the brief: *"very visual/emotional ...
+(erez V1)"*. It was first built with snap zooms, then flattened to constant
+framing when he said "stop with all the zooms" (LESSONS 80). Shown the flat
+version: *"use the Erez V1 skill for this video, it's so bad the way you did
+this one."*
+
+- **"Stop the zooms" was about zooms sprayed over dialogue videos.** A video
+  he briefed as Erez-style keeps the Erez grammar (`formats/erez-fast-cut.md`):
+  wide -> 4-frame zoom -> tight -> cut. Applying a blanket rule to a cut whose
+  brief named a zoom-based reference removed the style he had asked for.
+- When a later general note collides with an earlier specific brief for one
+  video, **ask which wins for that video, or keep both versions** - do not
+  silently flatten it.
+- Same round: he asks for a walk-up at the START of giving videos ("get me
+  walking up to her / to him") and a slow-motion exit at the END. The approach
+  and the leaving are part of the story, not dead space.

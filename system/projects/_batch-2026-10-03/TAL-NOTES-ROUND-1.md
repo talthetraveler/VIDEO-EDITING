@@ -33,3 +33,16 @@
 Music: "I think I should give you music... you should put, depending on the vibe, some sad music, some happy music, more upbeat music." Waiting on tracks (or his OK for free-licence ones).
 
 Zoom: "zoom in" in these notes = a closer framing on whoever is speaking / the subject (the wide phone shots read too small). He asked for it by number; LESSONS 80 (no zoom as a blanket style) still holds elsewhere.
+
+## Round 2 (2026-10-04, one at a time in chat)
+
+| # | video | his note | action |
+|---|---|---|---|
+| 5 | KT Shop Owner 5 V2 | "good" (+ "[reduce] background noise, maybe") | final, noise a step lower |
+| 6 | KT Shop Owner 7 V2 | "good" | final |
+| 8 | KT Woman on Floor V2 | "good" | final |
+| 9 | Cleaner | "good, but ... he says 'yes, yes', then I say 'I'm Jewish', then I put it there, then the slow-mo. 'I love you.' Something like that" | recut with that exchange |
+| 10 | Old Lady | "get me walking up to her. Zoom in at me walking up. Then 'bye', then her zooming off in slow-mo, on her face, the flowers" | add walk-up + slow-mo exit |
+| 16 | Homeless 2 visual | "use the Erez V1 skill for this video, it's so bad the way you did this one" | recut as formats/erez-fast-cut.md (zooms allowed here) |
+
+Delivered to Frame.io APPROVED FOR TRIALS so far: Christians main (V5), Christians fast (V3), Shop Owner 4, Shop Owner 2, Pilot (Captain Smit), Hospital Doll.
