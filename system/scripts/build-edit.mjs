@@ -22,7 +22,7 @@ import { locate, frameFor } from "./lib/framing.mjs";
 
 const FFDIR = "C:/Users/taldo/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.1-full_build/bin";
 const FF = join(FFDIR, "ffmpeg.exe"), FP = join(FFDIR, "ffprobe.exe");
-import { placeInSpeech, placeByWords, holdCaptions } from "./lib/caption-timing.mjs";
+import { placeInSpeech, placeByWords, holdCaptions, oneWordCaptions } from "./lib/caption-timing.mjs";
 import { captionLines } from "./lib/caption-lines.mjs";
 // A REGEX LITERAL, not new RegExp("..."): inside a string the backslashes were
 // eaten, the class closed early, and it only matched "<symbol>]" - so a
@@ -272,6 +272,14 @@ function captionFilters(id, ss, to, n, opts = {}) {
   const segs = existsSync(tp)
     ? (JSON.parse(readFileSync(tp, "utf8")).segments ?? [])      // translated to English
     : (own.segments ?? []);                                      // already English
+  // ONE WORD AT A TIME ("captionWords": 1). Tal, 2026-10-04, stranger heli
+  // balloon: "Use one word captions." Exact per-word times only exist on a
+  // WhisperX-aligned English clip; anything else keeps the phrase path below.
+  if (cfg.captionWords === 1 && !opts.nocap && own.aligned && !existsSync(tp)) {
+    const one = oneWordCaptions(own.words ?? [], ss, to, { fix: cfg.captionFix ?? [] });
+    for (const c of one) CAPTIONS.push({ beat: n, at: c.a, to: c.b, text: c.text });
+    return one;
+  }
   {
     // the ORIGINAL-language word timings, used only to snap caption onsets
     const srcWords = (own.words ?? []).slice().sort((a, b) => a.start - b.start);
@@ -773,7 +781,9 @@ function cleanAudio(src, ss, to, n, attOverride) {
       console.log(`      noisy location (floor ${floor.toFixed(0)}dB) -> denoise -a ${att}`);
     }
   }
-  try { execFileSync(DF, ["-a", String(att), "-o", TMP, raw], { stdio: "pipe" }); } catch {}
+  // att 0 = LEAVE IT ALONE. DeepFilterNet is a speech enhancer: on a room of
+  // people singing it treats the music as the noise (pov-church, 2026-10-04).
+  if (att > 0) { try { execFileSync(DF, ["-a", String(att), "-o", TMP, raw], { stdio: "pipe" }); } catch {} }
   return raw;
 }
 
@@ -805,6 +815,13 @@ function noiseFloor(wav) {
   } catch { return null; }
 }
 
+// one gain for a whole run of contiguous audio (see ACONT), measured on its first beat
+function runGain(i, wav) {
+  const g = ACONT.get(i)?.group;
+  if (!g) return beatGain(wav);
+  if (g.gain == null) g.gain = beatGain(wav);
+  return g.gain;
+}
 const BEAT_TARGET_LUFS = -18;      // beats land here; the timeline pass takes it to -16
 function beatGain(wav) {
   try {
@@ -1051,8 +1068,48 @@ const GROUP_ATT = new Map();   // beat -> denoise attenuation shared by its shot
   }
 }
 
+// ONE CONTINUOUS SOUND UNDER SEVERAL PICTURES.
+// A dance montage laid over one clip's real audio (push.audio on each beat,
+// each `at` picking up where the last ended) is ONE piece of sound. Fading and
+// level-matching it per beat put a dip and a level step at every picture cut.
+// Beats whose AUDIO is contiguous share one gain and get no fade at the join.
+const ACONT = new Map();   // beat -> {prev,next,group}
+{
+  const aud = (i) => {
+    const b = cfg.beats[i];
+    if (!b || b[0] === "CARD" || SKIP.has(i) || !SNAP.get(i)) return null;
+    if (b[6]?.speed > 0 && b[6].speed < 1) return null;
+    const S = SNAP.get(i), a0 = b[6]?.audio ? b[6].audio.at : S.ss;
+    return { id: b[6]?.audio?.id ?? b[0], a0, a1: a0 + (S.to - S.ss) };
+  };
+  let group = null;
+  for (let i = 1; i < cfg.beats.length; i++) {
+    const P = aud(i - 1), C = aud(i);
+    if (P && C && P.id === C.id && Math.abs(C.a0 - P.a1) <= 0.02) {
+      if (!ACONT.get(i - 1)?.group) group = { gain: null };
+      ACONT.set(i - 1, { ...(ACONT.get(i - 1) ?? { prev: false }), next: true, group });
+      ACONT.set(i, { prev: true, next: false, group });
+    }
+  }
+}
+
+const HDR_TO_SDR = "zscale=tin=arib-std-b67:min=bt2020nc:pin=bt2020:rin=tv:t=linear:npl=100,format=gbrpf32le," +
+  "zscale=p=bt709,tonemap=tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p,";
+const HDR_SEEN = new Map();
+function isHdr(src) {
+  if (HDR_SEEN.has(src)) return HDR_SEEN.get(src);
+  let v = false;
+  try {
+    v = /arib-std-b67/.test(execFileSync(FP, ["-v", "error", "-select_streams", "v:0", "-show_entries",
+      "stream=color_transfer", "-of", "csv=p=0", src], { encoding: "utf8" }));
+  } catch {}
+  HDR_SEEN.set(src, v);
+  return v;
+}
+
 const list = [];
 let total = 0;
+const OFFS = new Map(), DURS = new Map();   // beat index -> where it starts on the timeline / how long it runs
 // EVERY CAPTION THE BUILD EMITS, so it can be READ as English instead of
 // squinted at in a frame. CLAUDE.md: "Read every caption as English" - that
 // check was being done by eye on a contact sheet, which is how
@@ -1139,7 +1196,15 @@ cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
   // The Sony files in the same folder have NO rotation metadata and genuinely
   // do need transposing, so one rule cannot be hardcoded per shoot — measure.
   const probePng = join(TMP, `probe_${n}.png`);
-  execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-i", src, "-frames:v", "1", probePng], { stdio: "pipe" });
+  // HDR SOURCE -> SDR, BEFORE ANYTHING MEASURES OR GRADES IT.
+  // The iPhone originals on Frame.io are HLG (arib-std-b67, bt2020). Read as
+  // if they were SDR they come out flat and the reds go orange - a red dress
+  // measured SATAVG 9 as-is and 15 converted, and the Frame.io proxy is the
+  // same unconverted picture, so the proxy cannot show the fault (pov-church,
+  // 2026-10-04; compare sheet in its _look/hdr). Tone-map every such beat.
+  const hdrF = isHdr(src) ? HDR_TO_SDR : "";
+  execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-i", src, "-frames:v", "1",
+    ...(hdrF ? ["-vf", hdrF.replace(/,$/, "")] : []), probePng], { stdio: "pipe" });
   const [W, H] = execFileSync(FP, ["-v", "error", "-select_streams", "v:0", "-show_entries",
     "stream=width,height", "-of", "csv=p=0:nk=1", probePng], { encoding: "utf8" }).trim().split(/[,\r\n]+/).map(Number);
 
@@ -1273,12 +1338,14 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     // Crop back to the EXACT pre-rotation size: the face-aim crop that follows
     // is computed on those dimensions, and a frame 2px short (rounding in an
     // iw/s expression) makes that crop fail outright.
-    const w0 = rot ? H : W, h0 = rot ? W : H;
+    const w0 = rot && rot !== 180 ? H : W, h0 = rot && rot !== 180 ? W : H;
     const sw = Math.ceil(w0 * s / 2) * 2, sh = Math.ceil(h0 * s / 2) * 2;
     lvl = `rotate=${(tiltDeg * Math.PI / 180).toFixed(5)}:ow=iw:oh=ih:c=black,` +
       `scale=${sw}:${sh},crop=${w0}:${h0},`;
   }
-  const pre = (rot ? `transpose=${rot},` : "") + lvl;
+  // rot 180 = recorded upside-down (IMG_9640 / IMG_9667, pov-church 2026-10-04):
+  // flip both ways; the frame keeps its dimensions, unlike transpose.
+  const pre = (rot === 180 ? "hflip,vflip," : rot ? `transpose=${rot},` : "") + lvl;
   // MUSIC CUT: no captions at all. Tal wants two shapes per story - one with
   // the conversation, one carried by picture and music only.
   // CAPTIONS FOLLOW THE AUDIO, NOT THE PICTURE.
@@ -1331,7 +1398,11 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     // on ONE locked wide shot where her face is a tenth of the frame.
     // Tal: "zoom in slowly on her face." x/y are the focus point in 0..1 of
     // the frame; the window is clamped so the crop can never leave the image.
-    const z0 = push?.z?.[0] ?? 1.00, z1 = push?.z?.[1] ?? 1.05;
+    // NO DEFAULT DRIFT (2026-10-04). This used to end at 1.05 when a beat asked
+    // for nothing, so every beat of EDEN V11 crept in 5% and snapped back at
+    // the next cut. Tal: "keep the camera steady". The aimed branch below lost
+    // its automatic push on 2026-09-23; this one had been missed.
+    const z0 = push?.z?.[0] ?? 1.00, z1 = push?.z?.[1] ?? z0;
     const fx = push?.x ?? 0.5, fy = push?.y ?? 0.5;
     const zx = `max(0\\,min(iw-iw/zoom\\,iw*${fx}-(iw/zoom/2)))`;
     const zy = `max(0\\,min(ih-ih/zoom\\,ih*${fy}-(ih/zoom/2)))`;
@@ -1352,7 +1423,7 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     // when nothing is found. `"autoFrame": false` opts a project out entirely.
     let aim = null;
     if (cfg.autoFrame !== false && !push?.manual) {
-      const rw = rot ? H : W, rh = rot ? W : H;      // dimensions AFTER rotation
+      const rw = rot && rot !== 180 ? H : W, rh = rot && rot !== 180 ? W : H;      // dimensions AFTER rotation
       // SAMPLE THE WHOLE BEAT, not its first six seconds. A 17s beat was
       // being framed on what happened in the first third of it.
       // Frame across the whole continuous shot when this beat is part of one,
@@ -1426,6 +1497,11 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     }
   }
 
+  if (hdrF && vf.startsWith("[0:v]fps=30,")) {
+    vf = "[0:v]fps=30," + hdrF + vf.slice("[0:v]fps=30,".length);
+    console.log("      hdr: HLG source tone-mapped to SDR bt709");
+  }
+
   // AUDIO FROM A SECOND CAMERA. Tal: "the VID ones — you can just use the
   // audio from those, the camera videos." On the feed-homeless shoot the Sony
   // has the picture and the chest camera has the close mic; the chest cam is
@@ -1440,7 +1516,7 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
   // 23-40 dB (2026-10-03). The adaptive rule only fires above -30 dBFS and
   // stops at 16; a hand value may go to 18, never past it.
   const sharedAtt = () => {
-    if (push?.denoise != null) return Math.min(18, Math.max(6, +push.denoise));
+    if (push?.denoise != null) return +push.denoise === 0 ? 0 : Math.min(18, Math.max(6, +push.denoise));
     const g = GROUP_ATT.get(i);
     if (!g) return undefined;                 // a real cut — measure per beat
     if (g.att == null) {
@@ -1486,7 +1562,7 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
       const aSs = +(push.audio.at - aBase).toFixed(3);
       const aTo = +(aSs + (to - ss)).toFixed(3);
       if (aSs < -0.01) console.log(`  !! audio graft at ${push.audio.at}s is before its HQ span (starts ${aBase}s)`);
-      wav = cleanAudio(aSrc, aSs, aTo, n);
+      wav = cleanAudio(aSrc, aSs, aTo, n, push?.denoise != null ? sharedAtt() : undefined);
     } else {
       console.log(`  !! audio source ${push.audio.id} not found — using this clip's own audio`);
       wav = cleanAudio(src, ss, to, n, sharedAtt());
@@ -1541,14 +1617,15 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     // a non-zero sample — but on a run of contiguous beats from ONE clip there
     // is no splice to hide, and fading every join put a small dip in the middle
     // of continuous speech every few seconds. Tal: *"it doesn't flow."*
-    "-af", `highpass=f=70,volume=${beatGain(wav)}dB` +
-      (CONT.get(i)?.prev ? "" : ",afade=t=in:st=0:d=0.025") +
-      (CONT.get(i)?.next ? "" : `,afade=t=out:st=${Math.max(0, outDur - 0.025).toFixed(3)}:d=0.025`) +
+    "-af", `highpass=f=70,volume=${push?.mute ? "0" : runGain(i, wav) + "dB"}` +
+      (CONT.get(i)?.prev || ACONT.get(i)?.prev ? "" : ",afade=t=in:st=0:d=0.025") +
+      (CONT.get(i)?.next || ACONT.get(i)?.next ? "" : `,afade=t=out:st=${Math.max(0, outDur - 0.025).toFixed(3)}:d=0.025`) +
       `,apad=whole_dur=${outDur}`,
     "-c:v", "libx264", "-preset", "veryfast", "-crf", FINAL ? "19" : "21", "-pix_fmt", "yuv420p",
     "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2", "-frames:v", String(frames), "-t", String(outDur), dest], { stdio: "pipe" });
 
   console.log(`  ${n}  ${id.slice(0, 8)}  ${ss}->${to} (${speed < 1 ? `${dur}s at x${speed} = ${outDur}s` : `${dur}s`}, ${caps.length} caps)  ${why ?? ""}`);
+  OFFS.set(i, total); DURS.set(i, outDur);
   list.push(dest); total += outDur;
 });
 
@@ -1608,9 +1685,60 @@ const amix = hasMusic
     `loudnorm=I=-16:TP=-1.5:LRA=11[a]`
   : null;
 
-execFileSync(FF, [...args, "-filter_complex", hasMusic ? `${fc};${amix}` : fc,
-  "-map", "[v]", "-map", hasMusic ? "[a]" : "0:a",
-  ...(hasMusic ? [] : ["-af", `${TIMELINE_AF},loudnorm=I=-16:TP=-1.5:LRA=11`]),
+// SOUND BEDS FROM THE FOOTAGE. Tal, 2026-10-04 (stranger heli balloon): "the
+// guy plays music, add the background music of the guy playing. Then there's
+// shots of that, her speaking..." A bed is a stretch of one clip's REAL sound
+// laid under a run of beats:
+//   "beds": [{ "id": <clip>, "at": <sec in that clip>, "from": <beat>, "to": <beat>,
+//              "vol": 1, "under": 0.3, "fade": 0.5 }]     (beats are 0-based)
+// It runs from the start of beat `from` to the end of beat `to`. Beats marked
+// {"mute": true} are picture only, so the bed is their whole sound; under a
+// beat that keeps its own sound (someone speaking) the bed drops to `under`.
+// LESSONS 9: the music performed on camera IS the music.
+const bedParts = [], bedLabels = [];
+let nextIn = (cfg.title ? 2 : 1) + (hasMusic ? 1 : 0);
+(cfg.beds ?? []).forEach((bd, k) => {
+  const a = OFFS.get(bd.from), zOff = OFFS.get(bd.to);
+  if (a == null || zOff == null) { console.log(`  !! bed ${k}: beat ${bd.from} or ${bd.to} is not in the film - skipped`); return; }
+  const len = +(zOff + DURS.get(bd.to) - a).toFixed(3);
+  let bSrc, bBase = 0;
+  const bL = LOCAL[bd.id]?.path, bH = join(HQDIR, `${bd.id}.mp4`), bR = HQ_OFFSET[bd.id];
+  if (bL && existsSync(bL)) bSrc = bL;
+  else if (bR && existsSync(bH) && bd.at >= bR.offset - 0.01 && bd.at + len <= bR.offset + bR.length + 0.01) { bSrc = bH; bBase = bR.offset; }
+  else bSrc = join(PROXY, `${bd.id}.mp4`);
+  if (!existsSync(bSrc)) { console.log(`  !! bed ${k}: no source for ${bd.id} - skipped`); return; }
+  const have = sourceDuration(bd.id);
+  if (Number.isFinite(have) && bd.at + len > have + 0.05) console.log(`  !! bed ${k} needs ${bd.at}-${(bd.at + len).toFixed(1)}s but the clip ends at ${have.toFixed(1)}s - it will run out early`);
+  const wav = join(TMP, `bed_${k}.wav`);
+  execFileSync(FF, ["-v", "error", "-y", "-ss", String(+(bd.at - bBase).toFixed(3)), "-t", String(len), "-i", bSrc,
+    "-vn", "-ar", "48000", "-ac", "2", "-c:a", "pcm_s16le", wav], { stdio: "pipe" });
+  const vol = bd.vol ?? 1, under = bd.under ?? 0.3, fd = bd.fade ?? 0.5, R = 0.25;
+  // duck under every beat in the run that keeps its own sound
+  const ducks = [];
+  for (let j = bd.from; j <= bd.to; j++) {
+    if (!OFFS.has(j) || cfg.beats[j]?.[6]?.mute) continue;
+    ducks.push([+(OFFS.get(j) - a).toFixed(3), +(OFFS.get(j) + DURS.get(j) - a).toFixed(3)]);
+  }
+  // plain commas: the whole envelope sits inside '...' in the filtergraph, where a backslash is literal
+  const dip = ducks.map(([x, y]) => `clip((t-${(x - R).toFixed(3)})/${R},0,1)*clip((${(y + R).toFixed(3)}-t)/${R},0,1)`);
+  const env = dip.length ? `${vol}-${(vol - under).toFixed(3)}*min(1,${dip.join("+")})` : `${vol}`;
+  args.push("-i", wav);
+  bedParts.push(`[${nextIn}:a]volume=${beatGain(wav)}dB,volume='${env}':eval=frame,` +
+    `afade=t=in:st=0:d=${fd},afade=t=out:st=${Math.max(0, len - fd).toFixed(3)}:d=${fd},` +
+    `adelay=${Math.round(a * 1000)}:all=1[bed${k}]`);
+  bedLabels.push(`[bed${k}]`);
+  console.log(`  bed ${k}: ${String(bd.id).slice(0, 8)} ${bd.at}s+${len}s under beats ${bd.from}-${bd.to} (timeline ${a.toFixed(2)}-${(a + len).toFixed(2)}s), ducked under ${ducks.length} speaking beat(s)`);
+  nextIn++;
+});
+const bedMix = bedLabels.length && !hasMusic
+  ? `[0:a]${TIMELINE_AF}[spk];${bedParts.join(";")};[spk]${bedLabels.join("")}amix=inputs=${bedLabels.length + 1}:duration=first:dropout_transition=0:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11[a]`
+  : null;
+if (bedLabels.length && hasMusic) console.log("  !! beds and a music file together are not supported - beds skipped");
+const mixed = hasMusic || !!bedMix;
+
+execFileSync(FF, [...args, "-filter_complex", hasMusic ? `${fc};${amix}` : bedMix ? `${fc};${bedMix}` : fc,
+  "-map", "[v]", "-map", mixed ? "[a]" : "0:a",
+  ...(mixed ? [] : ["-af", `${TIMELINE_AF},loudnorm=I=-16:TP=-1.5:LRA=11`]),
   "-c:v", "libx264", "-preset", "medium", "-crf", FINAL ? "19" : "23", "-pix_fmt", "yuv420p",
   "-color_range", "tv", "-colorspace", "bt709",
   "-c:a", "aac", "-b:a", "160k", "-ar", "48000", join(OUT, outName)], { stdio: "pipe" });
