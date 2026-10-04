@@ -112,3 +112,20 @@ picks": read that file, render each pick full quality, deliver with
 A project with a `blur-rules.json` never shows an unblurred render: `X_BLUR.mp4`
 wins where it exists (eden-story), `_PREBLUR` / `_noblur` files are never
 listed, and a render older than the rules file is hidden.
+
+## 2026-10-04 — "EDITED BY CLAUDE" NO LONGER EXISTS ON FRAME.IO
+
+`frameio-deliver.mjs` with no `--folder` now fails ("Could not resolve folder
+path"). FINAL VIDEOS holds: FOR TAL TO REVIEW, FOR MONTANA TO REVIEW, TO
+REVIEW, APPROVED FOR TRIALS, FINAL VIDEOS TO POST, TO POST ON OTHER PLATFORMS,
+POSTED (Posted to trials / main / TikTok). Tal names the folder when he
+approves; pass it explicitly:
+
+```bash
+node system/scripts/frameio-deliver.mjs <file> --name "TITLE.mp4" \
+  --folder "SHOT IN ISRAEL/FINAL VIDEOS/APPROVED FOR TRIALS" --allow-any-folder
+```
+
+"Move it to Frame final videos … trial reels" (EDEN V12) went to APPROVED FOR
+TRIALS. A project with a face blur uploads its `_BLUR` file by path — never
+through `finish.mjs`, which reads `edit.json`'s `out`, the UNBLURRED build.
