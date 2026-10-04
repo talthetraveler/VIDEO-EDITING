@@ -1,5 +1,5 @@
 {
- "_brief": "Tal 2026-10-04: SOCIAL ACCORDS / NEEDS TO BE EDITED / POV. 'very simple': stop the two women -> can I come to church -> yes -> elevator -> I get in -> everyone dancing, with the real audio; straighten the rotated clips. Format: pov-meta-glasses.md section 5 (POV meeting a <religion>), phrase captions (THE STANDARD). Bright iPhone ultrawide: grade off (LESSONS 72). Dance section = ONE continuous real sound (IMG_9643 0-14.95s) under hard picture cuts, ending on 9643's own picture in sync.",
+ "_brief": "Tal 2026-10-04: SOCIAL ACCORDS / NEEDS TO BE EDITED / POV. 'very simple': stop the two women -> can I come to church -> yes -> elevator -> I get in -> everyone dancing, with the real audio; straighten the rotated clips. Format: pov-meta-glasses.md section 5 (POV meeting a <religion>), phrase captions (THE STANDARD). Bright iPhone ultrawide: grade off (LESSONS 72). Dance section = ONE continuous real sound (IMG_9643 0-14.95s) under hard picture cuts, ending on 9643's own picture in sync. | V4 (Tal on V3, 2026-10-04): likes the captions; put back 'what makes you happy' and 'what's your dream', the shots of going to the church, then a little dancing and the different shots from inside. | V5 (Tal on V4, 2026-10-04): 'at 24 seconds why did you restart it' = the steps shot (9660) came AFTER they had gone in the door; removed. 'Add more b-roll if you want' = two more inside shots. 'Besides that it's perfect, move to Frame trials.'",
  "layout": "vertical",
  "autoFrame": false,
  "grade": false,
@@ -7,7 +7,7 @@
  "title": "POV: GOING TO CHURCH\nWITH STRANGERS IN ISRAEL 🇮🇱",
  "titleY": 260,
  "titleHold": 5,
- "out": "POV_CHURCH_V3.mp4",
+ "out": "POV_CHURCH_V5.mp4",
  "beats": [
   [
    "f14dda54-d593-4b8d-8509-531bf6770ab1",
@@ -113,15 +113,65 @@
    }
   ],
   [
-   "4843a040-bc36-4659-9325-ffbe8612cebb",
-   0.3,
-   1.25,
+   "56aaab67-2c7c-46c0-aff1-389aa93ceae2",
+   1.53,
+   11.18,
    0.5,
-   "in the elevator, Tal in the mirror with them (wordless)",
+   "IN THE ELEVATOR: 'I have a question. What makes you guys happy?' - 'What makes me happy is that I'm free. Jesus set me free'",
    null,
    {
     "exact": true,
-    "nocap": true
+    "denoise": 0,
+    "boost": [
+     [
+      5.9,
+      9.06,
+      7
+     ],
+     [
+      9.78,
+      11.13,
+      7
+     ]
+    ]
+   }
+  ],
+  [
+   "56aaab67-2c7c-46c0-aff1-389aa93ceae2",
+   18.32,
+   21.5,
+   0.5,
+   "the second woman: 'What makes me happy? I have peace. Peace of mind'",
+   null,
+   {
+    "exact": true,
+    "denoise": 0,
+    "boost": [
+     [
+      19.56,
+      21.38,
+      6
+     ]
+    ]
+   }
+  ],
+  [
+   "56aaab67-2c7c-46c0-aff1-389aa93ceae2",
+   49.55,
+   56.95,
+   0.5,
+   "WALKING TO THE CHURCH: 'And what's your dream?' - 'to see this world peaceful and happy' - 'Really? That's my dream also' (Tal on camera)",
+   null,
+   {
+    "exact": true,
+    "denoise": 0,
+    "boost": [
+     [
+      51.02,
+      54.64,
+      11
+     ]
+    ]
    }
   ],
   [
@@ -134,12 +184,12 @@
    {}
   ],
   [
-   "2309d62a-899c-4fd0-875b-f3156b2c16e7",
-   3,
-   4.5,
+   "9081a230-2934-4156-91d8-0f76303bf92f",
+   0.3,
+   1.5,
    0.5,
-   "CHURCH (real sound of 9643 from 2.4s, after the song's half-second gap): walking in",
-   null,
+   "CHURCH (real sound of 9643 from 2.4s): the singer jumping (sideways -> rotated)",
+   1,
    {
     "exact": true,
     "nocap": true,
@@ -151,26 +201,9 @@
    }
   ],
   [
-   "9081a230-2934-4156-91d8-0f76303bf92f",
-   0.3,
-   2.3,
-   0.5,
-   "the singer jumping (sideways -> rotated)",
-   1,
-   {
-    "exact": true,
-    "nocap": true,
-    "denoise": 0,
-    "audio": {
-     "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
-     "at": 3.9
-    }
-   }
-  ],
-  [
    "b7d0d2cb-96f8-4ed8-be32-1c5ab6dfc4fa",
-   5.3,
-   7.3,
+   5.5,
+   6.8,
    0.5,
    "the whole room dancing toward the camera",
    null,
@@ -180,14 +213,31 @@
     "denoise": 0,
     "audio": {
      "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
-     "at": 5.9
+     "at": 3.6
+    }
+   }
+  ],
+  [
+   "5d67ab34-657b-48e9-b01d-5178abf95410",
+   1.6,
+   2.7,
+   0.5,
+   "the drummer",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0,
+    "audio": {
+     "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
+     "at": 4.9
     }
    }
   ],
   [
    "839adebe-867e-42c5-ac0d-15b3f29312f7",
-   1.6,
-   3.3,
+   1.8,
+   3,
    0.5,
    "the man in the green suit dancing",
    null,
@@ -197,14 +247,65 @@
     "denoise": 0,
     "audio": {
      "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
-     "at": 7.9
+     "at": 6
+    }
+   }
+  ],
+  [
+   "4886f34d-69ff-46ba-b08b-d0dd37c92b5b",
+   13.3,
+   14.3,
+   0.5,
+   "women clapping, hands up (sideways -> rotated)",
+   1,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0,
+    "audio": {
+     "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
+     "at": 7.2
+    }
+   }
+  ],
+  [
+   "bc1fe6f6-e4b2-48fe-86a1-d9149c183ef3",
+   0.8,
+   1.9,
+   0.5,
+   "MORE B-ROLL (Tal on V4): the whole room, wide",
+   null,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0,
+    "audio": {
+     "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
+     "at": 8.2
+    }
+   }
+  ],
+  [
+   "f5bf125e-aac1-4344-a687-ab6154e52f32",
+   3.6,
+   4.6,
+   0.5,
+   "MORE B-ROLL: the circle clapping (sideways -> rotated)",
+   1,
+   {
+    "exact": true,
+    "nocap": true,
+    "denoise": 0,
+    "audio": {
+     "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
+     "at": 9.3
     }
    }
   ],
   [
    "e11d8372-ae8e-455c-8f80-54f0b25f055c",
-   2.3,
-   5.1,
+   2.7,
+   4.6,
    0.5,
    "the elder takes Tal's hand and dances (upside-down -> flipped)",
    180,
@@ -214,13 +315,13 @@
     "denoise": 0,
     "audio": {
      "id": "1c2dc670-556c-4e36-abe2-d958f196f153",
-     "at": 9.6
+     "at": 10.3
     }
    }
   ],
   [
    "1c2dc670-556c-4e36-abe2-d958f196f153",
-   12.4,
+   12.2,
    14.95,
    0.5,
    "PAYOFF, in sync with its own sound: Tal dancing and laughing with the same elder",

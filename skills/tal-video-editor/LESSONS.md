@@ -2459,3 +2459,77 @@ pushed "Yes, we are" down a further 9 dB.
   beats: there is nothing to remove and it costs the far voice.
 - Balloon V1 had the same thing, milder: "I'm from Berlin", "You're kidding",
   "Wow. Okay.", "I'm scared" in the taxi - 23 of 187 words under -30.
+
+## 93 — "very simple" did not mean "drop the conversation" (Tal on church V3, 2026-10-04)
+
+His brief: *"should be very simple … I stopped the Nigerians … we got in the
+elevator, then we go, boom, I get in, and then everyone starts dancing."* V3
+was cut to exactly that list (40s): the stop, the ask, the elevator, the door,
+dancing. His note: it is really good and he **likes the captions** (one-word,
+`"captionWords": 1` - the first time he has asked for them and kept them), but
+*"you didn't include any parts where I asked them what makes them happy, what's
+their dream … and the shots of going to the church … then a little bit of
+dancing, and then showing the different shots that I got there."*
+
+- A spoken brief lists the BEATS OF THE STORY, not the complete contents. The
+  questions he asks on the way are the substance of a POV "meeting a
+  <religion>" video (`formats/pov-meta-glasses.md` section 5: *the stranger
+  says the thesis*); leaving them out to keep it "simple" removed the reason
+  to watch the middle.
+- **Before cutting a POV conversation short, list every question he ASKED on
+  camera. Each one he asked, he expects to see** - with its best answer, not
+  all of them (V4 keeps "what makes you happy" x2 and one "what's your dream").
+- The walk there is a beat of its own: the steps, the elevator, the corridor.
+- Inside: a little dancing, then VARIETY - one shot each of the different
+  things he filmed (singer, room, drummer, a dancer, clapping, the elder), not
+  three angles of the same dance.
+
+## 94 — "why did you restart it" - a shot from BEFORE the door, cut in after it (Tal on church V4, 2026-10-04)
+
+V4 answered "the shots of going to the church" with IMG_9660: the two women
+walking up the outside steps. It was placed after the ask - whose last frames
+show them already going IN the glass door. On screen the film jumps back to
+the plaza where it began; he read it as the video starting over (*"on 24
+seconds why did you restart it"*). Removed in V5.
+
+- **A "going there" shot must continue the geography, not rewind it.** Read the
+  last frame of the beat before and the first frame of the travel shot: if the
+  travel shot is somewhere the story has already left, it is a restart, however
+  good it looks. Time only moves forward (LESSONS 75/82 said it for repeated
+  actions; this is the same rule for places).
+- The clip number is not the order of events: 9660 was shot BEFORE 9661/9662
+  (the approach was filmed in several takes on the same steps).
+- His verdict on V4 otherwise: *"besides that I think it's perfect"*, *"add
+  more b-roll if you want"*, *"move to Frame trials"* -> final to Frame.io
+  `SHOT IN ISRAEL / FINAL VIDEOS / APPROVED FOR TRIALS`.
+- Corrections to approval on this video: 2 (missing questions + walk; the
+  restart). Review rounds: 2 (V3, V4).
+
+## 95 — "she didn't say that to me … why did you just say that randomly" (Tal on balloon V2, 2026-10-04)
+
+V2's intro went *"Are you from Israel?" - "No, I'm from Berlin"* straight to
+*"to celebrate you coming back to Israel after 10 years, I'm going to rent a
+hot air balloon"*. The exchange where she SAYS it has been ten years
+(*"Is it your first time?" - "No … it's been 10 years ago"*) had been cut to
+save 4.6 seconds. Tal: *"she didn't say that to me that she hasn't been here
+ten years. I don't understand why did you just say that randomly. You've got
+to make sure the story kind of flows."* It is CLAUDE.md rule 2 run backwards:
+not a promise without a payoff, a payoff without its setup.
+
+- **After any trim, read the kept captions top to bottom as a stranger.** For
+  every line that refers to something ("after 10 years", "the next surprise",
+  "I said yes"), the thing it refers to must be on screen BEFORE it. The
+  caption dump from BUILD-LOG.json is the place to do it; it takes a minute.
+- **"it was amazing" then a cut** (*"that was amazing, and then it cut out.
+  That's not good"*): the beat ended 0.15s after the word, in the middle of
+  her answer - she goes on *"It was so much fun. And so happy I left my
+  comfort zone."* `exact` beats skip the builder's snapping, so the 0.45s of
+  air is the editor's job on every one of them: check `next word start - out`
+  and `out - last word end` for each exact beat, and never end a beat while
+  the same person is still answering.
+- **More of the second act.** He wanted the drag queen as a PERSON, not a
+  cutaway: Patricia meeting her sitting at the table, the exchange between
+  them, then the show. A surprise that the film announces ("next surprise")
+  has to be shown landing on her.
+- His verdict otherwise: *"you did a really good job … I was pretty
+  impressed"*; length may go to ~1:45.
