@@ -129,3 +129,13 @@ node system/scripts/frameio-deliver.mjs <file> --name "TITLE.mp4" \
 "Move it to Frame final videos … trial reels" (EDEN V12) went to APPROVED FOR
 TRIALS. A project with a face blur uploads its `_BLUR` file by path — never
 through `finish.mjs`, which reads `edit.json`'s `out`, the UNBLURRED build.
+
+## Moving a file between Frame.io folders (measured 2026-10-04)
+
+`client.files.move(accountId, fileId, { data: { parent_id: <folderId> } })`.
+`{ body: { parent_id } }` is a **422 "Unexpected field: body"** and moves
+nothing. Verify with `files.show(...).parent_id` afterwards. Tal asked for the
+finished balloon video to be moved from `TAL STUDIOS / FINAL VIDEOS!` into the
+shoot's own folder, `TAL STUDIOS / STRANGER HELI BALLOON`: a finished cut may
+live next to its footage when he says so. Adding a file there is fine; the
+source clips in that folder are still never renamed, moved or deleted.
