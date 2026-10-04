@@ -2588,3 +2588,27 @@ Muslim?" - "Yeah" - "Nice to meet you, bro. Salam alaykum"* (3.5s).
   was him putting BACK a beat of the day or trimming one I over-filled. Next
   time: send the first cut with the whole chronology in, at the longer length,
   and let him take out.
+
+## 88 — caption style 5 ("gothic"), and "upload everything, good night" (Tal, 2026-10-05)
+
+Shown six caption looks on one still, Tal: *"caption 5, fix the rest, and
+upload to frame trials ... upload everything there and that's it, good night."*
+
+- **Caption option 5 = `"captionStyle": "gothic"`** in edit.json: Century
+  Gothic Bold, white caps, dark outline, about two words a line
+  (`render-caption.py` `two_per_line`, `build-edit.mjs` GOTHIC). It is opt-in
+  per project; the 15 videos delivered before this keep the Arial Black look
+  unless he asks for them to be redone. THE STANDARD's rules (white, caps,
+  outline, lower-middle, timed to speech) are unchanged - only the face and
+  the line breaks differ.
+- He had asked for "more aesthetic" captions and "font options". A sheet of
+  the same line in six looks got an answer in one message. **Show type
+  choices as pictures, never describe them.**
+- "Upload everything" at the end of a review day is a standing approval for
+  what is left: finish each to full quality, check it myself, upload to the
+  folder he named (APPROVED FOR TRIALS), no further round. It does not cover
+  the cuts he dropped by name (Hospital Hug, the couple single) or one he
+  called "not so good" without a fix (the light phone compilation).
+- Recipe the final wave used: `system/projects/_batch-2026-10-03/FINAL-WAVE.md`
+  (native-resolution scoped fetch, `-D` on the denoise, blur re-derived at
+  full size, -14 LUFS on the whole timeline).
