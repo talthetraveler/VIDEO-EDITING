@@ -7,6 +7,10 @@
     "obsidian-vault": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:/Users/taldo/Downloads/OBSEDIAN"]
+    },
+    "audacity": {
+      "type": "stdio",
+      "command": "C:/Users/taldo/Downloads/videos to edit/system/vendor/Audacity-MCP/.venv/Scripts/audacity-mcp.exe"
     }
   }
 }

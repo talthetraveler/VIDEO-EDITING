@@ -398,3 +398,23 @@ trimmed toolbox copy was removed. The measurements above stand - they are why
 CLAUDE.md 0a, the way `brag` was. Smoke-tested from the installed folders:
 `hookscore.py`, `caption.py`, `humanize.py` all run. Not yet exercised on a
 real job: `ig-viral`, `ig-audit`, `ig-carousel`.
+
+---
+
+## xDarkzx/Audacity-MCP — installed 2026-10-04, NOT usable yet (Audacity itself is missing)
+
+Tal pasted the link on 2026-10-04 while asking about music and background noise.
+
+| | |
+|---|---|
+| What it is | An MCP server that drives the **Audacity desktop app** over its `mod-script-pipe`: 144 tools (effects, noise reduction, compressor, limiter, labels, transcription via faster-whisper) and 9 cleanup/mastering pipelines. Apache-2.0, v0.1.24, commit `ef7612e`. |
+| Where | `system/vendor/Audacity-MCP/` (git-ignored), own venv at `.venv/`; registered in `.mcp.json` as `audacity`. |
+| Code read before install | 29 Python files. No network calls. `subprocess` only in `setup_transcription.py` (`nvidia-smi`, optional `pip install` of NVIDIA libs). `os.remove` only on its own temp WAVs. |
+| Verified | `pip install .` into the venv succeeded on the second run (the first timed out mid-download); the server imports and lists **144 tools**. |
+| NOT verified | Anything that touches audio. **Audacity is not installed on this laptop** (checked Program Files and winget), and the server only talks to a running Audacity **3.x** with `mod-script-pipe` enabled. Audacity 4 removed that interface. |
+| What it does not do | It does not supply music. It cannot run headless: Audacity must be open on screen. |
+| vs what we have | Noise: the pipeline already runs DeepFilterNet `-a 10` per shot inside `build-edit.mjs`, in batch, with no GUI. Loudness: one `loudnorm`/gain pass. Audacity adds hand-tunable effects (EQ, de-click, spectral noise profile) for a single stubborn clip; it is slower for everything else. |
+
+To make it work: install Audacity 3.7.x, open it once, enable
+Edit > Preferences > Modules > `mod-script-pipe`, restart Audacity, then restart
+Claude Code so the `audacity` server connects.
