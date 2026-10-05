@@ -15,7 +15,7 @@ import { spawnSync } from "node:child_process";
 import { join } from "node:path";
 
 export const ROOT = "C:/Users/taldo/Downloads/videos to edit/system";
-export const FF = "C:/Users/taldo/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.1-full_build/bin/ffmpeg.exe";
+export const FF = join(ROOT, "vendor/OpenChatCut/node_modules/ffmpeg-static/ffmpeg.exe");
 
 export const GROQ_TURBO = "whisper-large-v3-turbo";
 export const GROQ_LARGE = "whisper-large-v3";

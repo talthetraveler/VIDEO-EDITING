@@ -31,6 +31,7 @@
 import { readFileSync, writeFileSync, existsSync, statSync } from "node:fs";
 import { join, isAbsolute, basename } from "node:path";
 import { randomUUID } from "node:crypto";
+import { recordSubmission } from "./lib/post-ledger.mjs";
 
 const root = process.cwd();
 const args = process.argv.slice(2);
@@ -341,6 +342,26 @@ const run = async () => {
     const r = await api("POST", "/posts", body, { "Idempotency-Key": randomUUID() });
     const rows = Array.isArray(r) ? r : r.data ?? [r];
     for (const p of rows) console.log(`  ${p.status === "failed" ? "✗" : "✓"} ${p.platform || p.id} ${p.status || ""} ${p.error?.message || ""}`);
+    recordSubmission({
+      source: "post",
+      project,
+      track: "main",
+      status: mode === "scheduled" ? "scheduled" : "submitted",
+      mode,
+      scheduled_for: when || null,
+      caption,
+      platforms,
+      post_ids: rows.map((x) => x.id).filter(Boolean),
+      posts: rows.map((x) => ({
+        id: x.id,
+        platform: x.platform || x.provider || null,
+        status: x.status || null,
+        scheduled_for: x.scheduled_for || when || null,
+        published_at: x.published_at || null,
+        url: x.platform_url || x.url || null,
+      })),
+      shortsync: { response: rows },
+    });
     console.log("✓ MAIN post submitted");
     return;
   }
@@ -368,6 +389,26 @@ const run = async () => {
       const r = await api("POST", "/posts", body, { "Idempotency-Key": randomUUID() });
       const rows = Array.isArray(r) ? r : r.data ?? [r];
       console.log(`  ✓ ${row.project} → ${row.at}  (${rows.map((x) => x.id || x.status).join(", ")})`);
+      recordSubmission({
+        source: "trial",
+        project: row.project,
+        track: "trial",
+        status: "scheduled",
+        mode: "scheduled",
+        scheduled_for: row.at,
+        caption: caption || projectMeta(row.project).publish_caption || "",
+        platforms: [TRIAL_PLATFORM],
+        post_ids: rows.map((x) => x.id).filter(Boolean),
+        posts: rows.map((x) => ({
+          id: x.id,
+          platform: x.platform || x.provider || TRIAL_PLATFORM,
+          status: x.status || null,
+          scheduled_for: x.scheduled_for || row.at,
+          published_at: x.published_at || null,
+          url: x.platform_url || x.url || null,
+        })),
+        shortsync: { response: rows },
+      });
     }
     console.log("✓ trial reels scheduled");
     return;
@@ -426,6 +467,26 @@ const run = async () => {
       const resp = await api("POST", "/posts", body, { "Idempotency-Key": randomUUID() });
       const rows = Array.isArray(resp) ? resp : resp.data ?? [resp];
       console.log(`  ✓ ${r.project} (${r.as || "main"}) → ${r.at || "now"}  ${rows.map((x) => x.id || x.status).join(", ")}`);
+      recordSubmission({
+        source: "schedule",
+        project: r.project,
+        track: trial ? "trial" : "main",
+        status: r.at ? "scheduled" : "submitted",
+        mode: r.at ? "scheduled" : "immediate",
+        scheduled_for: r.at || null,
+        caption: r.caption ?? projectMeta(r.project).publish_caption ?? "",
+        platforms,
+        post_ids: rows.map((x) => x.id).filter(Boolean),
+        posts: rows.map((x) => ({
+          id: x.id,
+          platform: x.platform || x.provider || null,
+          status: x.status || null,
+          scheduled_for: x.scheduled_for || r.at || null,
+          published_at: x.published_at || null,
+          url: x.platform_url || x.url || null,
+        })),
+        shortsync: { response: rows },
+      });
       // RESUMABLE: written back after EVERY item, so a run that dies at item
       // 40 of 80 continues at 41 instead of re-posting 1-40.
       r.post_ids = rows.map((x) => x.id).filter(Boolean);

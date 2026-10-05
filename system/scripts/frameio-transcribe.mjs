@@ -27,6 +27,7 @@ import {
 } from "./lib/stt.mjs";
 
 const ROOT = "C:/Users/taldo/Downloads/videos to edit/system";
+const PY = process.env.PYTHON ?? "python";
 const CACHE = join(ROOT, "projects/_frameio/cache");
 const PROXY = join(CACHE, "proxies");
 const OUT = join(CACHE, "transcripts");
@@ -136,7 +137,7 @@ segs = [{"start": round(s["start"],2), "end": round(s["end"],2), "text": s["text
 print("@@@" + json.dumps({"language": r.get("language"), "segments": segs}, ensure_ascii=False))
 `;
   const t0 = Date.now();
-  const out = execFileSync("python", ["-c", py], {
+  const out = execFileSync(PY, ["-c", py], {
     encoding: "utf8", maxBuffer: 64 * 1024 * 1024, stdio: ["ignore", "pipe", "ignore"],
   });
   const p = JSON.parse(out.slice(out.indexOf("@@@") + 3));

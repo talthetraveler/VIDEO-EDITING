@@ -119,6 +119,113 @@ sentences read like a case study.
 **Length.** Comma 108-111s and about 315 words. Venture 63-68s, about 220
 words. JBR 28-40s, 100-140 words. Pick the length first; it sets the word count.
 
+### 1a. How the sentences are built (measured on the timed transcripts)
+
+Tal, 2026-10-05: *"just understand how the scripts are in the references."*
+
+| | sentences | words per sentence | hook | name lands at | numbers | first number at |
+|---|---|---|---|---|---|---|
+| Comma Item7Go | 15 | 21 | 22 words, 6.3s | 6.7s | 11 | 13.4s |
+| Comma Dantata | 16 | 20 | 24 words, 7.7s | 8.3s | 8 | 6.7s |
+| Comma Mane | 16 | 20 | 32 words, 12.5s | 12.7s | 4 | 17.5s |
+| Venture Brabus | 15 | 14 | 10 words, 3.4s | 3.6s | 12 | 1.5s |
+| Venture HSN | 20 | 12 | 15 words, 4.5s | 4.1s | 11 | 2.4s |
+| Venture Socher | 15 | 14 | 12 words, 4.7s | 4.4s | 6 | 0.3s |
+| TNG Dacombe | 27 | 8 | 9 words, 2.8s | in the hook | 19 | 3.0s |
+| TNG On | 18 | 15 | 14 + 14 words, 8.4s | 8.4s | 13 | 4.3s |
+| JBR Sivan | 4 | 25 | 24 words, 6.2s | no "Meet" | 3 | 1.2s |
+| JBR Mid-Day | 10 | 14 | 19 words, 6.4s | 10.8s, mid-sentence | 8 | 0.1s |
+| Deploy Waze | 17 | 10 | 9 words, 2.7s | 6.8s, with the year | 4 | 6.8s |
+
+(TNG's "hair" reel is a different thing: a host interviewing two founders, 42
+short spoken lines of question and answer. It is not this format.)
+
+**Three ways to write the same story:**
+
+- **Comma = 15 long sentences.** 20 words each, past tense, one full idea with
+  two clauses. The hook alone is 22-32 words and takes 6-12 seconds. Reads like
+  a business case study.
+- **Venture = 15-20 medium sentences, present tense.** 12-14 words. The hook is
+  10-15 words and done in under 5 seconds, with the number inside the first 2.5
+  seconds. This is the tightest writing of the five and the one to copy.
+- **TNG = 27 fragments.** 8 words each. "He's 25, worth over $1 billion, and
+  you've probably never heard of him." "Lasted two days, then dropped out."
+
+**The words that start the sentences are the whole engine.** Nearly every
+sentence after the hook opens with one of these, and each one has a job:
+
+| opener | job | example |
+|---|---|---|
+| **Meet [Name]** | the reveal, always sentence 2 | "Meet Bud Paxson." |
+| **In [year], [Name] is [age] and...** | the origin, present tense | "In 1977, Bud is 42 and owns a small radio station in Florida." |
+| **So...** | consequence: he acts | "So he goes to collect a $1,000 ad bill." (3 times in one Venture script) |
+| **But...** | the obstacle or the turn | "But Bodo sees what everyone else misses." |
+| **Then... / Next...** | escalation | "Then Roger Federer invested." |
+| **When [bad thing]...** | pivot under pressure (Comma) | "When university strikes threatened his business, he pivoted off campus." |
+| **Instead of [the normal move], he...** | the contrarian decision (Comma, in all three) | "Instead of just donating money, he decided to build a real business." |
+| **By [year]...** | scale jump | "By 1984, rental giant Sixt orders 200 cars in a single deal." |
+| **Today...** | the payoff | "Today, Brabus operates in over 100 countries." |
+
+**Things every script does:**
+
+- **A ticking clock or a small stake early.** "Payroll is due tomorrow and he's
+  about to use his own savings." "So he needs to drive a Benz to keep his job."
+- **One odd concrete object carries the story.** 112 avocado-green can
+  openers. A garden hose glued to a shoe. A cake page with 200 followers. Party
+  jollof for 250 naira. The hook names it and the last line comes back to it.
+- **A two- or three-word sentence at the turn.** "It worked." "They said no."
+  "And it works." "He took it." "The newsman laughs."
+- **Numbers are specific and odd**, never rounded for comfort: $9.95, 112,
+  78,000 trees, 330 km/h, 13 times, $86,000 in debt. 8-19 of them per script.
+- **A borrowed famous name** where one exists: Nike, Mbappe, Federer, Google,
+  Facebook, Peter Thiel, Dangote, Nvidia. It is usually in the hook.
+- **Three in a row at the proof**: "100 countries, employs 500 people, and
+  generates $250 million a year." "No drilling, no incisions, just light."
+- **The last line closes a loop.** It repeats the hook's number (Brabus), goes
+  back to the hook's object ("the channel that started with 112 can openers is
+  valued at more than $2 billion"), turns the hook upside down ("the brand Nike
+  rejected just took their most famous athlete"), or states the lesson ("...
+  proving that you don't need luxury sit-down restaurants to conquer the fast
+  food industry"). Nobody ends on "follow for more".
+- **No opinion words about the subject.** No "amazing", "incredible",
+  "inspiring". The numbers do it.
+- **No questions to the viewer, no "you"**, apart from one TNG line ("you've
+  probably never heard of him").
+
+**Where the beats fall, as a share of the runtime** (Venture HSN, 64s, the
+cleanest example):
+
+| share | time | beat |
+|---|---|---|
+| 0-6% | 0-4.1s | hook: object + number |
+| 6-8% | 4.1-5.0s | "Meet Bud Paxson." |
+| 8-33% | 5-21s | origin: year, age, place, the clock, the odd object arrives |
+| 33-47% | 21-30s | the turn: he tries it, someone laughs, "and it works" |
+| 47-61% | 30-39s | the realisation: what this means, the new decision |
+| 61-90% | 39-58s | scale, one time-jump per sentence |
+| 90-100% | 58-64s | last line: back to the can openers, the final number |
+
+Comma stretches the same shape to 110s by adding two or three "moves" in the
+middle, each its own "When..." or "Instead of..." sentence.
+
+**Fill-in template (Venture voice, about 65 seconds, 220 words):**
+
+```
+This [guy / woman / nationality + job] [did odd thing with OBJECT] and turned it into [NUMBER].
+Meet [Name][, the founder of X].
+In [year], [Name] is [age] and [small starting situation, a place].
+[The stake or clock.]
+So [first action].
+[The obstacle: someone says no / it fails.]
+So instead of [expected], [he does the odd thing with OBJECT].
+[A sceptic.] [Two-word sentence.]
+But [he does it anyway], and it works.
+[What he realises.]
+So [the bigger decision].
+[Year / "three years later"], [scale 1]. [Scale 2]. [Scale 3].
+And in [year], the [thing] that started with [OBJECT] is [FINAL NUMBER].
+```
+
 ## 2. THE COMMA EFFECT LOOK — the default to build
 
 Everything here was seen on its frames.

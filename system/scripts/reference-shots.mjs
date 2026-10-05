@@ -31,7 +31,9 @@ if (!args[0] || !existsSync(src) || !args.includes("--out")) {
   console.error("usage: node system/scripts/reference-shots.mjs <video> --out <dir> [--min 0.15]");
   process.exit(1);
 }
-const FP = FF.replace(/ffmpeg\.exe$/, "ffprobe.exe");
+// ffmpeg-static ships no ffprobe beside it; fall back to the one on PATH
+const FPsib = FF.replace(/ffmpeg\.exe$/, "ffprobe.exe");
+const FP = existsSync(FPsib) ? FPsib : "ffprobe";
 mkdirSync(out, { recursive: true });
 const slug = basename(src).replace(/\.[^.]+$/, "").replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "").toLowerCase();
 const P = (ext) => join(out, `${slug}.${ext}`);
