@@ -284,6 +284,58 @@ TNG is the fastest thing here (69-85 shots a minute, a new picture every 2
 words). Venture is the slowest (20-31) and has the most designed graphics.
 Comma sits in the middle and is the most repeatable.
 
+## 3a. VOICE, MUSIC, SFX — measured, not listened to
+
+I cannot hear. Everything here is a measurement of the audio file, and each
+instrument's limit is stated.
+
+**Voice.** Every narrator is a man. Pitch by autocorrelation, with the music
+still underneath, so read it as "deeper / lighter", not as an exact figure:
+Comma 94-102 Hz (the deepest, slow and weighty), JBR 100-106, Deploy 116, TNG
+and Venture 127-133 (lighter, younger, faster). Speed is in the table at the
+top. No voice pauses over 0.5s.
+
+**Music.** There is a bed under the voice in every reel, and it is not quiet.
+Control test: a voice-only file's quietest tenth sits 53 dB below its typical
+level. The references' quietest tenth sits only 7-11 dB below (Comma -8.6, TNG
+-9.3, Venture -10.7, JBR -7.2), so something is always playing. Waze is the
+calmest at -14. TNG leaves about 1 second of music after the last word; Comma
+and Venture cut dead on it. What the music IS (genre, track) cannot be read
+this way. Tal adds music himself.
+
+**SFX: not established yet.** With voice and music mixed together I could not
+separate effects from the bed:
+- Comma's five light-leak transitions are 1.2-1.8x louder than a random moment
+  at four of the five, in the mid band and not in the high "whoosh" band. That
+  fits a soft swell or riser on each leak. It is a hint, not a finding.
+- JBR Mid-Day has twice the high-band energy on its cuts as elsewhere, which
+  fits a short airy whoosh on its white flashes.
+- No reel shows bass hits landing on ordinary cuts.
+- To settle it the voice has to be split from the rest (demucs) and the
+  remainder checked at every cut. Not done.
+
+**What we have to make them with:**
+- **Voice, free and local:** `npx hyperframes tts` (Kokoro). Installed and
+  working on this machine as of 2026-10-05 (`pip install kokoro-onnx soundfile`
+  was the missing piece). Male voices: `am_adam` (116 Hz, 199 wpm at speed 1.1,
+  the closest to Venture/TNG), `am_michael` (117 Hz, 170 wpm), `bm_george`
+  (British, 134 Hz, 181 wpm). Kokoro leaves 15-17 pauses of 0.3-0.6s per 45s;
+  close them with ffmpeg `silenceremove` to match the references.
+- **Voice, Groq:** the key already in `system/.env` lists
+  `canopylabs/orpheus-v1-english` (an open-source model), but it answers
+  "requires terms acceptance". Tal has to accept that himself at
+  console.groq.com; it is not something to click for him.
+- **Voice, paid:** ElevenLabs (`system/scripts/generate-voiceover.ts`), no key
+  set.
+- **SFX:** 19 sounds in `skills/tal-video-editor/assets/sfx/` (three whooshes,
+  riser, two bass impacts, pop, click, typing, chime, sparkle, glitches).
+  Starting map until the references' own SFX are measured: `riser` or
+  `whoosh-cinematic` on a light-leak, `whoosh-short` on a card sliding in,
+  `typing` under a typed name, `click-soft` per digit on a year roller, `pop`
+  on a cut-out appearing, `impact-bass-1` once on the biggest number. Under the
+  voice, never over it.
+- **Mix:** voice on top; the references run a bed about 8-10 dB under it.
+
 ## 4. THE ULTIMATE — one recipe that takes the best of each
 
 - **Script:** the Comma skeleton, written in Venture's short present-tense
