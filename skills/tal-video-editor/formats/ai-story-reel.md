@@ -100,6 +100,30 @@ claim to know them.
 - **Positive only** applies here too (rule 7): a story about a person is told
   so that person would share it.
 
+## 0. "Download this video and recreate it" — the loop
+
+Tal, 2026-10-05: *"if I ask you to download a video and recreate it ... generate
+any shots you need, use open sources and GitHub repos and yt-dlp to download
+the footage from online. The videos I want you to study, you need to download
+them that way I can review them, and then add this to the style we're
+building."*
+
+1. **Download** the link with `system/bin/yt-dlp.exe` into
+   `assets/references/<name>/`, so he can open and watch it himself. Tell him
+   the path.
+2. **Study** it: every shot on a contact sheet, transcript with word timings,
+   cut rate, captions, sound. Write what is new into this file.
+3. **Recreate the edit, not the content**: same structure, pacing, caption
+   look and sound design, with a new script on a new subject (or the subject
+   he names).
+4. **Pictures for the new video**, in this order: his own footage and photos;
+   public-domain and openly licensed sources (Wikimedia Commons, Pexels,
+   Pixabay, archive.org); generated shots (`npm run generate`); a real news
+   article shown as proof. A clip pulled off someone else's reel or YouTube
+   video is for studying only. It goes in the final cut only if Tal says he
+   has the right to use it (CLAUDE.md 1 Rights).
+5. **Preview in chat**, he approves, then Frame.io, as with every other cut.
+
 ## 6. How it gets built
 
 HyperFrames, not `build-edit.mjs`: there is no footage to trim. Load
