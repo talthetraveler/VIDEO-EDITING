@@ -6,7 +6,7 @@
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_HAPPY_TELAVIV_LOOKUP_FULL_BUILD.mp4",
+  "out": "EK_HAPPY_TELAVIV_LOOKUP_V4_BUILD.mp4",
   "beats": [
     [
       "cde1d2fd-724d-4fff-94db-15cde1d90979",
@@ -80,6 +80,5 @@
         "capY": 0.53
       }
     ]
-  ],
-  "_final": "FULL-QUALITY FINAL of the cut Tal approved as V4 (2026-10-04, \"E and F are good\"): identical beats, framings and captions to edit.v4-preview.json; only the out name differs. Built with _final-build-edit.mjs from native-resolution spans in cache/hq-ek-happy-telaviv-lookup/; the delivered file is the _FULL.mp4 = this build + _final-blur.py (blur-rules.json) + _loudness-14.py."
+  ]
 }

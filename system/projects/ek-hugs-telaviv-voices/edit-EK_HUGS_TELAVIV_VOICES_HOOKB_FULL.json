@@ -4,8 +4,8 @@
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "music": "../ek-hugs-telaviv-voices/roomtone.wav",
-  "out": "EK_HUGS_TELAVIV_VOICES_V5B_noblur.mp4",
+  "music": "../ek-hugs-telaviv-voices/bed-hq.wav",
+  "out": "EK_HUGS_TELAVIV_VOICES_HOOKB_FULL_noblur.mp4",
   "captionFix": [
     {
       "match": "needs more love",
@@ -23,6 +23,8 @@
       "to": null
     }
   ],
+  "captionStyle": "gothic",
+  "_final": "FINAL WAVE 2026-10-05 (FINAL-WAVE.md): same cut at 1080x1920 from native-resolution spans (cache/hq-ek-hugs-telaviv), captionStyle gothic, DeepFilterNet -D, bed rebuilt from the original's audio, -14 LUFS on the whole timeline. Built with this folder's _final-build-edit.mjs.",
   "beats": [
     [
       "63e42d06-d6d7-4adb-988b-099bb9c42428",

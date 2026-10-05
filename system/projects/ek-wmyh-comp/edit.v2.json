@@ -1,31 +1,12 @@
 {
-  "_brief": "HOOK VARIATION of ek-wmyh-comp: the SAME body, opened cold on a different person's line - the Indian husband to the lens: \"Only she is with me, so I am happy.\" (he is not in the body; his wife is). Everything after the first 2.8s is identical to V1.",
-  "_notes": "See ek-wmyh-comp/edit.json. The word before his line is disputed between models (nothing/not) and is cut out.",
-  "captionStyle": "gothic",
+  "_brief": "Batch 2026-10-03 item 14, WHAT MAKES YOU HAPPY. Compilation A - the answers that are about SOMEONE (a wife, a husband, a loved one, a people, a place): five encounters, none of them in the two earlier cuts (what-makes-you-happy, wmyh-v2-fast). Order per COMPILATION-ORDER: short warm surprising hook with the question spoken at 0.0s (an older man on the Tel Aviv pier: \"You.\" - and his wife: \"Him.\"), then a visibly different person every slot (woman in Jerusalem / young religious man, Hebrew / Indian woman in the market / Black man in the Old City), the strongest answer 4th, end on the warmest face: \"So make them smile\" and his grin. Tal's question is heard ONCE (the opening). NO ZOOMS: one constant framing per shot. No title pill.",
+  "_notes": "Excluded on purpose - see the report: the cancer answer (own video, different question), the Fabian interviews (new-year wishes; one is about soldiers/Oct 7, the other girl reads as a teenager), Leah's group and Yoav (read as minors), IMG_7710 \"Her?\" (models disagree: Her?/Huh?), video-4841 (Hebrew last word disputed), \"Nothing\"/\"I don't know\"/\"money\" (flat or negative), every clip with no answer. Hebrew line read by two models, both identical; English wording is a translation - unverified by a native reviewer.",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "denoise": 10,
-  "out": "EK_WMYH_COMP_HOOKB_FULL.mp4",
+  "out": "EK_WMYH_COMP_V2.mp4",
   "beats": [
-    [
-      "2e897b8f-840e-423f-a206-7e20ddce5800",
-      108.1333,
-      110.9,
-      0.5,
-      "HOOK B - the husband, to the lens: \"Only she is with me, so I am happy.\"",
-      null,
-      {
-        "manual": true,
-        "z": [
-          1.3,
-          1.3
-        ],
-        "x": 0.5,
-        "y": 0.45
-      }
-    ],
     [
       "c71f5d96-e40d-4686-a9f6-bf30bb2494ad",
       2.0667,
@@ -146,6 +127,5 @@
       }
     ]
   ],
-  "_round1": "Tal, 2026-10-03: no objection - V1 stays as it is (coordinator). EK_WMYH_COMP_HOOKB_V2.mp4 in this folder is the same picture with only the Indian wife's beat +7 dB (made in an interrupted run, same change as ek-wmyh-comp V2); it is NOT the current version unless asked for.",
-  "_final": "FINAL WAVE 2026-10-05 (Tal: caption 5, finish and deliver): the same cut, caption style gothic, from the HLG originals at native resolution (cache/hq-ek-wmyh-comp, tone-mapped by the builder), project-local builder (DeepFilterNet -D, -a 10 on every beat), the Indian wife's beat +7 dB after denoise, then one whole-timeline gain to -14 LUFS with a limiter (ek-wmyh-comp/_scratch/qa-finish.mjs). Caption parts re-cut for two-words-a-line (cache/translate files)."
+  "_round1": "Tal, 2026-10-03: no objection. V2 is the V1 render with ONE audio change: the Indian wife's beat (58.7-65.2) is +7 dB after the builder's denoise (qa-finish.mjs, picture stream copied, overall loudness kept at the V1 level). Not rebuilt: BUILD-LOG.json is the V1 build."
 }

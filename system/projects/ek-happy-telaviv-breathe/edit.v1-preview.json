@@ -7,7 +7,7 @@
   "autoFrame": false,
   "grade": false,
   "capY": 0.6,
-  "out": "EK_HAPPY_TELAVIV_BREATHE_FULL_BUILD.mp4",
+  "out": "EK_HAPPY_TELAVIV_BREATHE_V1_PREBLUR.mp4",
   "beats": [
     [
       "e4d3ebf7-f474-47dd-a745-f48a9cf5fdce",
@@ -111,7 +111,5 @@
         "y": 0.55
       }
     ]
-  ],
-  "captionStyle": "gothic",
-  "_final": "FULL-QUALITY FINAL (final wave 2026-10-05): same cut as EK_HAPPY_TELAVIV_BREATHE_V1.mp4 (edit.v1-preview.json); only caption style 5 (gothic) and the out name differ."
+  ]
 }

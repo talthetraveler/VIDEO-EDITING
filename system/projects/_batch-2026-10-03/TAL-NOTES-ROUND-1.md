@@ -46,3 +46,12 @@ Zoom: "zoom in" in these notes = a closer framing on whoever is speaking / the s
 | 16 | Homeless 2 visual | "use the Erez V1 skill for this video, it's so bad the way you did this one" | recut as formats/erez-fast-cut.md (zooms allowed here) |
 
 Delivered to Frame.io APPROVED FOR TRIALS so far: Christians main (V5), Christians fast (V3), Shop Owner 4, Shop Owner 2, Pilot (Captain Smit), Hospital Doll.
+
+## Round 3 (2026-10-05, after the final wave was uploaded)
+
+| video | his note | action |
+|---|---|---|
+| WMYH "I actually beat cancer" | "good, but you put it on Frame.io with people blurred in the background. We don't need that. Fix that up" | rebuild with no background blur, replace on Frame.io |
+| Phone, inspiring compilation | "she picks it up and then someone says a word, not good; pick up and cut to her line. 'Look at the trees' then it cuts wrong. 'What makes you happy': you should see my face when I drop the thing" | recut those three points, replace on Frame.io |
+| trials folder | "make sure there's no duplicates ... delete the bad ones" | superseded copies moved out of APPROVED FOR TRIALS |
+| the three unfinished (Breathe, Hospital Smiles, Water) | "make sure everything's finished and put into Frame.io for trials" | finals in progress |

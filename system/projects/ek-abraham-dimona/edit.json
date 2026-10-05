@@ -1,13 +1,13 @@
 {
-  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS. Tal: \"You DON'T need the existing intro. Just pull out the strongest moments of individual people speaking. Each interesting answer can potentially become its own short video.\" + LESSONS 80 (\"stop with all the zooms\"): ONE constant full frame for the whole short, hard jump cuts only, no punch-in, no drift. This one: the couple from Dimona (C0521), the strongest English answer in the folder. Shape: their strongest line cold (\"There's no room for hate or war...\") -> where they're from (\"Come visit Israel and Dimona\") -> their values -> \"we want everybody to be in harmony\" -> Tal's \"Wow\" -> \"It's enough room for everyone / everybody\" and both of them smiling. Tal's question (\"What do you want the world to know about you guys?\") is cut: the answer stands alone with the sign in frame. Cut: \"We love the people that love Israel\" (reads as conditional), \"We want to know that this is,\" (false start). \"There's only room for prosperity\": a September note heard a slip ('no room for prosperity'); four transcriptions now (Groq turbo + large-v3, whole clip and a 22-28s window) all hear 'only room' - kept, flagged in the report. Sony C0521 is portrait stored sideways (auto transpose). grade:false (as shot, his documentary look; LESSONS 72). Sound: LOCATION-SOUND.wav = the same source windows, denoised once per run, no per-beat gain (soundtrack.py).",
+  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS. Tal: \"You DON'T need the existing intro. Just pull out the strongest moments of individual people speaking. Each interesting answer can potentially become its own short video.\" + LESSONS 80 (\"stop with all the zooms\"): ONE constant full frame for the whole short, hard jump cuts only, no punch-in, no drift. This one: the couple from Dimona (C0521), the strongest English answer in the folder. Shape: their strongest line cold (\"There's no room for hate or war...\") -> where they're from (\"Come visit Israel and Dimona\") -> their values -> \"we want everybody to be in harmony\" -> Tal's \"Wow\" -> \"It's enough room for everyone / everybody\" and both of them smiling. Tal's question (\"What do you want the world to know about you guys?\") is cut: the answer stands alone with the sign in frame. Cut: \"We love the people that love Israel\" (reads as conditional), \"We want to know that this is,\" (false start). \"There's only room for prosperity\": a September note heard a slip ('no room for prosperity'); four transcriptions now (Groq turbo + large-v3, whole clip and a 22-28s window) all hear 'only room' - kept, flagged in the report. Sony C0521 is portrait stored sideways (auto transpose). grade:false (as shot, his documentary look; LESSONS 72). Sound: LOCATION-SOUND.wav = the same source windows, denoised once per run, no per-beat gain (soundtrack.py). FINAL WAVE 2026-10-05: full quality, caption style 5 (gothic). Built with _final-build-edit.mjs from cache/hq-ek-abraham-dimona (native 4K spans); sound = LOCATION-SOUND-HQ.wav (soundtrack.py --hq --hqdir=hq-ek-abraham-dimona --dfD --nogain --fadeout=0.25; denoise per clip by the builder rule, -a 10 up to 16 on a floor above -30 dB); then -14 LUFS on the whole timeline. Edges re-measured on a voice-only envelope (DeepFilterNet at full attenuation, 50 ms steps, diagnostic only) - same shots, same words: beat 2 in 8.4333->8.3333 (voice starts 8.50; 0.07 of air was too tight); beat 3 out 19.9333->19.8333 (the next word We starts 19.85 - V1 let 0.08s of it in); beat 4 out 35.4->35.3667 (All right starts 35.40).",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
   "capY": 0.79,
-  "music": "../ek-abraham-dimona/LOCATION-SOUND.wav",
+  "music": "../ek-abraham-dimona/LOCATION-SOUND-HQ.wav",
   "bedOnly": true,
-  "out": "EK_ABRAHAM_DIMONA_V1.mp4",
+  "out": "EK_ABRAHAM_DIMONA_V1_FULL.mp4",
   "beats": [
     [
       "2fc2b697-66a3-4bed-a55e-aacdad8b870d",
@@ -26,7 +26,7 @@
     ],
     [
       "2fc2b697-66a3-4bed-a55e-aacdad8b870d",
-      8.4333,
+      8.3333,
       11.7,
       0.5,
       "who they are: 'Show Israel some love. Come visit Israel and Dimona.' (out before 'Shalom' 12.02)",
@@ -42,7 +42,7 @@
     [
       "2fc2b697-66a3-4bed-a55e-aacdad8b870d",
       17.9667,
-      19.9333,
+      19.8333,
       0.5,
       "their values: 'We're all about love, we're all about peace.' (the false start 'We want to know that this is,' cut; out before 'We love Israel, we love the people that love Israel')",
       null,
@@ -57,7 +57,7 @@
     [
       "2fc2b697-66a3-4bed-a55e-aacdad8b870d",
       27.1333,
-      35.4,
+      35.3667,
       0.5,
       "PAYOFF, one unbroken take: 'And we want everybody to be in harmony with each other.' - Tal: 'Wow.' - 'It's enough room for everyone.' 'It's enough room for everybody.' - both smiling, the woman laughing; out before 'All right' 35.67. (The 0.85s breath before 'with each other' is kept: cutting it made verify-cut read the beat as ending mid-thought, and the pause is his, not dead air.)",
       null,
@@ -79,5 +79,6 @@
       "match": "Mm-hmm.",
       "to": null
     }
-  ]
+  ],
+  "captionStyle": "gothic"
 }

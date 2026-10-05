@@ -1,13 +1,11 @@
 {
   "_brief": "HOOK VARIATION of ek-wmyh-comp: the SAME body, opened cold on a different person's line - the Indian husband to the lens: \"Only she is with me, so I am happy.\" (he is not in the body; his wife is). Everything after the first 2.8s is identical to V1.",
   "_notes": "See ek-wmyh-comp/edit.json. The word before his line is disputed between models (nothing/not) and is cut out.",
-  "captionStyle": "gothic",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "denoise": 10,
-  "out": "EK_WMYH_COMP_HOOKB_FULL.mp4",
+  "out": "EK_WMYH_COMP_HOOKB_V1.mp4",
   "beats": [
     [
       "2e897b8f-840e-423f-a206-7e20ddce5800",
@@ -146,6 +144,5 @@
       }
     ]
   ],
-  "_round1": "Tal, 2026-10-03: no objection - V1 stays as it is (coordinator). EK_WMYH_COMP_HOOKB_V2.mp4 in this folder is the same picture with only the Indian wife's beat +7 dB (made in an interrupted run, same change as ek-wmyh-comp V2); it is NOT the current version unless asked for.",
-  "_final": "FINAL WAVE 2026-10-05 (Tal: caption 5, finish and deliver): the same cut, caption style gothic, from the HLG originals at native resolution (cache/hq-ek-wmyh-comp, tone-mapped by the builder), project-local builder (DeepFilterNet -D, -a 10 on every beat), the Indian wife's beat +7 dB after denoise, then one whole-timeline gain to -14 LUFS with a limiter (ek-wmyh-comp/_scratch/qa-finish.mjs). Caption parts re-cut for two-words-a-line (cache/translate files)."
+  "_round1": "Tal, 2026-10-03: no objection - V1 stays as it is (coordinator). EK_WMYH_COMP_HOOKB_V2.mp4 in this folder is the same picture with only the Indian wife's beat +7 dB (made in an interrupted run, same change as ek-wmyh-comp V2); it is NOT the current version unless asked for."
 }

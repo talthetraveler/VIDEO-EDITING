@@ -1,17 +1,17 @@
 {
-  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS: individual answers, no intro. LESSONS 80: no zooms - one constant full frame, hard jump cuts only. This one: the young shirtless man with the sign (C0515 + his second take C0516, same spot, same frame). Shape: his strongest line cold - 'And we love Israel, we love the Muslims.' - then the message from its start ('I want the message to these countries: we love you. We hope we make peace with other Arab countries.'), then from his second take the one line the first take does not have ('hopefully there will be peace in the whole Middle East') 'and yes, have a great night!' with the big smile he holds for a second after it. No line is said twice: C0516's own 'we love you' and 'we're having fun to have peace' are cut. Tal's 'Yes, thank you' (C0515 10.14) and the Hebrew crew talk after it (12.4-17.7: 'again, do it again' - two models) are out. grade:false. Sound: LOCATION-SOUND.wav (soundtrack.py, one denoise per run, no per-beat gain).",
+  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS: individual answers, no intro. LESSONS 80: no zooms - one constant full frame, hard jump cuts only. This one: the young shirtless man with the sign (C0515 + his second take C0516, same spot, same frame). Shape: his strongest line cold - 'And we love Israel, we love the Muslims.' - then the message from its start ('I want the message to these countries: we love you. We hope we make peace with other Arab countries.'), then from his second take the one line the first take does not have ('hopefully there will be peace in the whole Middle East') 'and yes, have a great night!' with the big smile he holds for a second after it. No line is said twice: C0516's own 'we love you' and 'we're having fun to have peace' are cut. Tal's 'Yes, thank you' (C0515 10.14) and the Hebrew crew talk after it (12.4-17.7: 'again, do it again' - two models) are out. grade:false. Sound: LOCATION-SOUND.wav (soundtrack.py, one denoise per run, no per-beat gain). FINAL WAVE 2026-10-05: full quality, caption style 5 (gothic). Built with _final-build-edit.mjs from cache/hq-ek-abraham-muslims (native 4K spans); sound = LOCATION-SOUND-HQ.wav (soundtrack.py --hq --hqdir=hq-ek-abraham-muslims --dfD --maxgain=6 --fadeout=0.2; denoise per clip by the builder rule, -a 10 up to 16 on a floor above -30 dB); then -14 LUFS on the whole timeline. Edges re-measured on a voice-only envelope (DeepFilterNet at full attenuation, 50 ms steps, diagnostic only) - same shots, same words: beat 1 in 6.3667->6.3 (voice starts 6.42). V1 beats 2 and 3 are now ONE beat 0-6.1: the V1 jump cut (2.5 -> 3.1) removed a 0.6s gap that is not a gap - he is voicing from 2.92 (a lead-in to We hope; the aligned stamp has We at 3.23), so V1 cut into it. Nothing is removed there now. Last beat in 5.8333->5.8667 (the previous word ends 5.85).",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
   "capY": 0.79,
-  "music": "../ek-abraham-muslims/LOCATION-SOUND.wav",
+  "music": "../ek-abraham-muslims/LOCATION-SOUND-HQ.wav",
   "bedOnly": true,
-  "out": "EK_ABRAHAM_MUSLIMS_V1.mp4",
+  "out": "EK_ABRAHAM_MUSLIMS_V1_FULL.mp4",
   "beats": [
     [
       "a4f64d9e-b569-403b-9fbe-e19c77e38dec",
-      6.3667,
+      6.3,
       9.8333,
       0.5,
       "COLD OPEN, his strongest line: 'And we love Israel, we love the Muslims.' (first word 6.50 = 0.13s in; speech ends 9.45 by RMS; out before Tal's 'Yes' 10.14)",
@@ -26,25 +26,10 @@
     ],
     [
       "a4f64d9e-b569-403b-9fbe-e19c77e38dec",
-      0.0333,
-      2.5,
-      0.5,
-      "the message from its start: 'I want the message to these countries. We love you.'",
-      null,
-      {
-        "exact": true,
-        "z": [
-          1,
-          1
-        ]
-      }
-    ],
-    [
-      "a4f64d9e-b569-403b-9fbe-e19c77e38dec",
-      3.1,
+      0,
       6.1,
       0.5,
-      "'We hope we make peace with other Arab countries.' (jump cut: the 0.9s gap before it is out; out before 'And' 6.50)",
+      "the message from its start, one unbroken run: 'I want the message to these countries. We love you. We hope we make peace with other Arab countries.' (out before 'And' 6.42)",
       null,
       {
         "exact": true,
@@ -56,7 +41,7 @@
     ],
     [
       "ec5536e9-b004-487b-a39a-a28409cd8691",
-      5.8333,
+      5.8667,
       11.9,
       0.5,
       "ENDING, second take, same frame, one unbroken run: 'hopefully there will be peace in the whole Middle East, and yes, have a great night!' - and the big smile he holds after it (10.8-11.8); out before he lowers the sign (12.3). ('and yes,' stays: cutting it ended the line mid-thought.)",
@@ -69,5 +54,34 @@
         ]
       }
     ]
-  ]
+  ],
+  "captionStyle": "gothic",
+  "captionFix": [
+    {
+      "match": "hopefully there",
+      "to": "hopefully there\nwill be peace",
+      "exact": true
+    },
+    {
+      "match": "will be peace",
+      "to": "hopefully there\nwill be  peace",
+      "exact": true
+    },
+    {
+      "match": "in the whole",
+      "to": "in the whole\nMiddle East",
+      "exact": true
+    },
+    {
+      "match": "Middle East",
+      "to": "in the whole\nMiddle  East",
+      "exact": true
+    },
+    {
+      "match": "have a great night",
+      "to": "have\na great night",
+      "exact": true
+    }
+  ],
+  "_captionFix_note": "Line breaks only; the words are unchanged. Style 5 breaks about two words a line and left a word like A / IN / THE / TO / WILL at a line end, or split MIDDLE EAST, on these captions. The builder makes each of them from two short pieces joined with a space; here both pieces carry the same two-line text (the second with a doubled space so it is not dropped as a repeat - it renders identically), so the caption shows once, unbroken, for the whole time both pieces are spoken."
 }

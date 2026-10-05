@@ -7,32 +7,14 @@
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_HAPPY_TELAVIV_COMP_FULL_V2_BUILD.mp4",
+  "out": "EK_HAPPY_TELAVIV_COMP_V4_BUILD.mp4",
   "beats": [
-    [
-      "cde1d2fd-724d-4fff-94db-15cde1d90979",
-      1.4,
-      3.7,
-      0.5,
-      "IMG_5688: OPEN (Tal 2026-10-05: \"you should see my face when I drop the thing\") - Tal walks the stand in, FACE in frame, sets it down, looks up and steps away; the sign readable",
-      null,
-      {
-        "manual": true,
-        "z": [
-          1.25,
-          1.25
-        ],
-        "x": 0.62,
-        "y": 0.45,
-        "nocap": true
-      }
-    ],
     [
       "43856887-fa63-403a-b414-326f7bea139a",
       3.9333,
-      4.7333,
+      5.4,
       0.5,
-      "IMG_5724: she lifts the red phone to her ear - ends BEFORE the stray voice at 4.80-5.05 (Tal: \"someone says a word\")",
+      "IMG_5724: OPEN - she lifts the red phone to her ear, the sign readable under her",
       null,
       {
         "manual": true,
@@ -52,24 +34,6 @@
       25.0667,
       0.5,
       "IMG_5724: same woman: 'if you're having a hard day or a bad day, just look up, look at the sky, look at the trees'",
-      null,
-      {
-        "manual": true,
-        "z": [
-          1.3,
-          1.3
-        ],
-        "x": 0.62,
-        "y": 0.62,
-        "capY": 0.53
-      }
-    ],
-    [
-      "43856887-fa63-403a-b414-326f7bea139a",
-      32.0333,
-      33.9333,
-      0.5,
-      "IMG_5724: same take, jump cut: \"So just look for whatever's around you.\" - her answer now ENDS on a real pause (0.38 s). After \"trees\" she goes straight on (50 ms gap), so cutting to the next person there had no tail (Tal: \"it cuts wrong\")",
       null,
       {
         "manual": true,
@@ -240,8 +204,5 @@
         "capY": 0.6
       }
     ]
-  ],
-  "_final": "FULL-QUALITY FINAL of the cut Tal approved as V4 (2026-10-04, \"E and F are good\"): identical beats, framings and captions to edit.v4-preview.json; only the out name differs. Built with _final-build-edit.mjs from native-resolution spans in cache/hq-ek-happy-telaviv-comp/; the delivered file is the _FULL.mp4 = this build + _final-blur.py (blur-rules.json) + _loudness-14.py.",
-  "captionStyle": "gothic",
-  "_v2": "FULL V2 after Tal 2026-10-05: (a) pick-up trimmed to 3.93-4.73 so the stray voice is gone; (b) her answer continues past \"look at the trees\" to \"whatever's around you\" and ends on a pause; (c) new opening: Tal sets the stand down with his face in frame (IMG_5688 1.4-3.7); caption style 5 (gothic). Everything else as edit.full-v1.json."
+  ]
 }

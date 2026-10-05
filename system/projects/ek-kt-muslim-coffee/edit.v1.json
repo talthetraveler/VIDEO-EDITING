@@ -3,7 +3,7 @@
  "layout": "vertical",
  "snap": false,
  "autoFrame": false,
- "out": "EK_KT_MUSLIM_COFFEE_FULL.mp4",
+ "out": "EK_KT_MUSLIM_COFFEE_V1.mp4",
  "beats": [
   [
    "c2417833-df9e-431c-93a1-97ccad1da33d",
@@ -64,7 +64,7 @@
   [
    "034890a7-ee5b-4aa0-9c80-d95421fd5948",
    15.2333,
-   17,
+   16.9,
    0.5,
    "THE YES, POV on his face: \"Yeah, of course. What do you want? Tell me.\"",
    null,
@@ -318,113 +318,8 @@
   {
    "match": "Nothing Why",
    "to": "Nothing\nWhy?"
-  },
-  {
-   "match": "I ran out of money",
-   "exact": true,
-   "to": "I ran out\nof money"
-  },
-  {
-   "match": "and I don't have money",
-   "exact": true,
-   "to": "and I don't\nhave money"
-  },
-  {
-   "match": "I was wondering if you",
-   "exact": true,
-   "to": "I was wondering\nif you can help me"
-  },
-  {
-   "match": "can help me",
-   "exact": true,
-   "to": null
-  },
-  {
-   "match": "What do you want? Tell me",
-   "exact": true,
-   "to": "What do you want?\nTell me"
-  },
-  {
-   "match": "We were raised in love",
-   "exact": true,
-   "to": "We were raised\nin love"
-  },
-  {
-   "match": "Oh you're a Muslim? Yeah",
-   "exact": true,
-   "to": "Oh you're\na Muslim? Yeah"
-  },
-  {
-   "match": "you're a Muslim? Yeah",
-   "exact": true,
-   "to": "you're\na Muslim? Yeah"
-  },
-  {
-   "match": "And I actually",
-   "exact": true,
-   "to": "And I\nactually"
-  },
-  {
-   "match": "do have money",
-   "exact": true,
-   "to": "do have\nmoney"
-  },
-  {
-   "match": "And this was a test",
-   "exact": true,
-   "to": "And this\nwas a test"
-  },
-  {
-   "match": "If I decided to give",
-   "exact": true,
-   "to": "If I decided\nto give"
-  },
-  {
-   "match": "even if you have money",
-   "exact": true,
-   "to": "even if you\nhave money"
-  },
-  {
-   "match": "It was never a problem",
-   "exact": true,
-   "to": "It was never\na problem"
-  },
-  {
-   "match": "I'll go give this coffee",
-   "exact": true,
-   "to": "I'll go give\nthis coffee"
-  },
-  {
-   "match": "as an Israeli",
-   "exact": true,
-   "to": "as an Israeli\nMuslim Arab guy"
-  },
-  {
-   "match": "Muslim Arab guy",
-   "exact": true,
-   "to": null
-  },
-  {
-   "match": "I have 400",
-   "exact": true,
-   "to": "I have 400\nshekels for you"
-  },
-  {
-   "match": "But I have 400",
-   "exact": true,
-   "to": "But I have 400\nshekels for you"
-  },
-  {
-   "match": "shekels for you",
-   "exact": true,
-   "to": null
   }
  ],
  "_framing": "NO ZOOMS. Every beat is z [a,a]. 13 beats are the full frame (1.0). The four early Sony beats (1,3,5,7 - the operators first framing, Tals head at y 0.6) share ONE static 1.3 crop (x .42 y .70): at 1.0 the caption sat on his chin (seen on the first render). They are never adjacent to each other or to another C0481 beat. Beats 10 and 12 are C0481 after the operator re-framed (heads at y 0.37) and stay at 1.0.",
- "_captionFix": "Line breaks only (see _caption-breaks.mjs). No wording is changed by a fix.",
- "captionStyle": "gothic",
- "denoise": 16,
- "_final": "2026-10-05, final wave (Tal: 'caption 5, fix the rest, and upload'): the V1 cut built --final --hq at 1080x1920 from native-resolution spans (cache/hq-ek-kt-muslim-coffee, fetched by _final-fetch-spans.mjs) with the project-local _final-build-edit.mjs (see _make-final-tools.mjs). Caption style 5 (gothic). Denoise is ONE strength for the whole film, -a 16 with -D: the V1 preview let the builder choose per beat and it ranged from 10 to 16 inside one continuous conversation. The V1 preview EK_KT_MUSLIM_COFFEE_V1.mp4 is kept; its recipe is edit.v1.json.",
- "_flag_210": "The standing flag 'CUT 01->02 at 2.10s cuts through and (1.58-2.84)' is a smeared timestamp, not a clipped word. Measured on the chest-cam audio in 40 ms steps: 'money' is voiced until 8.16s, then 1.0s unvoiced at the room floor (-26..-30 dB, autocorrelation under 0.4), and 'and' starts voiced at 9.20s (both models, narrow window). The cut is at 8.62s, in the middle of that pause, and the sound runs on across it from the same recording. The cut was not moved.",
- "_final_checks": "EK_KT_MUSLIM_COFFEE_FULL.mp4, measured 2026-10-05: 1080x1920 yuv420p tv bt709, 1763 frames = 58.767s x 30 (V1 + 3 frames: beat 4 ends 0.1s later, in a pause, so its last card is readable); -14.0 LUFS, true peak -1.5 dBTP (whole timeline, video stream copied); caption style 5 (gothic), 44 cards, line breaks checked on stills, no card under 0.8s except 'THIS IS FOR ME' (0.69s: the cleaner's whole three-word line up to the cut); caption-sync 0 adrift, opening error 0.04s, 2 cards with under 50% speech beneath them by its mask ('YOU THIS' 34%, 'YEAH OF COURSE' 46% - each is on its words and then held to the next card); words-chopped check exit 1 on smeared timestamps only (see _flag_210; every cut measured: no audio hole at a cut, one 30 ms at the file start); denoise -a 16 with -D on every beat: speech gap -30.1 dB in the source, -38.0 in the V1 preview, -41.5 in the final before the loudness gain; 25->30 fps: the Sony shots repeat one frame in six, evenly, never two in a row (61-frame opening shot: 10 repeats, spacing 6), the 48 fps chest-cam shots have none, the slow-motion ending has none (interpolated from the 25 fps frames); 26 stills side by side with the V1 preview: same framing. Not listened to, not played."
+ "_captionFix": "layout only: Nothing. (the owner) and Why? (Tal) are 0.04s apart and the builder glues them into one line; the fix puts them on two lines. No wording is changed by a fix."
 }

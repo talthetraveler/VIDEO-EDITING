@@ -1,0 +1,233 @@
+{
+  "_brief": "VOICES V5-A - batch 2026-10-03 item 8, HUG FOR STRANGER / TEL AVIV TAL. Tal on V4: \"I don't like the hook, maybe it's not so good\" (the open was an ask - 'Come give me a hug' - not a moment). Two hooks on the same body; the ask is gone from both. HOOK A = a stranger says the theme: opens mid-hug on the young man in the white cap, Tal's face over his shoulder: 'Bro, the world needs more love right now' (first word at 0.1s). 'I love you, bro' just before it is NOT used: a bystander and a woman walk between the camera and the two of them while it is said. ORDER: white cap -> older woman's hug (no words) -> man with a backpack -> red-haired woman (arms wide 'Come', run-in, snap-in, slow-mo, 'You are so beautiful. Keep smiling.') -> pink shirt ('The world needs more love, bro. Keep spreading positivity.') -> beige shirt hug ('How are you, my brother?') -> 'I love you.' 'Me too.' END. Every line is said in its own shot; one constant closer framing per shot, one snap-in (the embrace). Holiday greetings: shot starts moved past 'chag sameach' on the white cap and the beige shirt; the greetings under the first half of the slow-mo and under the older woman's hug are replaced by crowd ambience from 5682. FULL-RESOLUTION CHILD AUDIT (2026-10-05): the tourist's hug is out (boys' faces readable behind her), replaced by the older woman's hug; the 'Keep smiling' shot is framed tighter to keep a baby out; the boy behind the pink-shirt man is blurred from the first frame his eye shows. Children: the boy who walks in behind the pink-shirt man is blurred on the render (blur-rules.json); final file = ..._V5A.mp4, the _noblur file must not be delivered. Room tone from this shoot under the dialogue; music comes from Tal. Captions from the transcripts (see hand_fixed in each).",
+  "layout": "vertical",
+  "snap": false,
+  "autoFrame": false,
+  "grade": false,
+  "music": "../ek-hugs-telaviv-voices/bed-hq.wav",
+  "out": "EK_HUGS_TELAVIV_VOICES_HOOKA_FULL_noblur.mp4",
+  "captionFix": [
+    {
+      "match": "needs more love",
+      "exact": true,
+      "to": "needs more love right now"
+    },
+    {
+      "match": "right now",
+      "exact": true,
+      "to": null
+    },
+    {
+      "match": "Bro",
+      "exact": true,
+      "to": null
+    }
+  ],
+  "captionStyle": "gothic",
+  "_final": "FINAL WAVE 2026-10-05 (FINAL-WAVE.md): same cut at 1080x1920 from native-resolution spans (cache/hq-ek-hugs-telaviv), captionStyle gothic, DeepFilterNet -D, bed rebuilt from the original's audio, -14 LUFS on the whole timeline. Built with this folder's _final-build-edit.mjs.",
+  "beats": [
+    [
+      "d1c4dee9-9015-449e-8351-0b7ae9f43939",
+      6.4667,
+      8.1,
+      0.5,
+      "5676 white cap, MID-HUG from frame 0: 'Bro, the world needs more love right now' (from 6.47: before that a bystander and a passer-by cross between the camera and the hug, so 'I love you, bro' at 5.5-6.4 is not used)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.3,
+          1.3
+        ],
+        "x": 0.4,
+        "y": 0.4
+      }
+    ],
+    [
+      "1ad8a7c1-ae35-4f6b-9818-05a15cea14ac",
+      41.6,
+      43.1,
+      0.5,
+      "5662 older woman runs in and hugs him - SOUND: crowd ambience 5682 63.3 (her own shot's sound is a holiday greeting)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.9,
+          1.9
+        ],
+        "x": 0.42,
+        "y": 0.5,
+        "nocap": true,
+        "audio": {
+          "id": "63e42d06-d6d7-4adb-988b-099bb9c42428",
+          "at": 63.3
+        }
+      }
+    ],
+    [
+      "a3e99244-15c8-412e-a624-bd531444aa47",
+      6.6,
+      10.8333,
+      0.5,
+      "5685 man with a backpack walks up: 'What's up, my brother? How are you?' hug 'Thank you so much, man'",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.8,
+          1.8
+        ],
+        "x": 0.38,
+        "y": 0.55
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      35.6,
+      37.3667,
+      0.5,
+      "5682 ARMS WIDE ('Come'), she runs in",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.25,
+          1.25
+        ],
+        "x": 0.45,
+        "y": 0.44
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      37.3667,
+      37.5,
+      0.5,
+      "5682 snap-in onto the embrace",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.25,
+          2
+        ],
+        "x": 0.45,
+        "y": 0.44,
+        "nocap": true
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      37.5,
+      38,
+      0.5,
+      "5682 SLOW-MO the embrace, first half - SOUND: crowd ambience 5682 62.0 (its own sound here is a holiday greeting, 37.7-38.5)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          2,
+          2
+        ],
+        "x": 0.45,
+        "y": 0.44,
+        "speed": 0.5,
+        "audio": {
+          "id": "63e42d06-d6d7-4adb-988b-099bb9c42428",
+          "at": 62
+        }
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      38,
+      38.6333,
+      0.5,
+      "5682 SLOW-MO the embrace, second half - SOUND: its own, 38.5-39.77 ('How are you?')",
+      null,
+      {
+        "manual": true,
+        "z": [
+          2,
+          2
+        ],
+        "x": 0.45,
+        "y": 0.44,
+        "speed": 0.5,
+        "audio": {
+          "id": "63e42d06-d6d7-4adb-988b-099bb9c42428",
+          "at": 38.5
+        }
+      }
+    ],
+    [
+      "63e42d06-d6d7-4adb-988b-099bb9c42428",
+      39.7667,
+      42.5333,
+      0.5,
+      "5682 'You are so beautiful. Keep smiling.' (out before the cyclist at 42.6; framed x0.12-0.62: a baby in a woman's arms comes in at source x 0.65 from 41.2)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          2,
+          2
+        ],
+        "x": 0.37,
+        "y": 0.42
+      }
+    ],
+    [
+      "a9cd5c35-29d9-4b34-9375-9fdadcefcd74",
+      7.0333,
+      9.7333,
+      0.5,
+      "5667 'The world needs more love, bro. Keep spreading positivity.' (the boy who walks in behind: BLUR)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.5,
+          1.5
+        ],
+        "x": 0.38,
+        "y": 0.42
+      }
+    ],
+    [
+      "929bc3b8-8be7-4047-9bc4-8b8287a1df27",
+      1.0667,
+      2.1333,
+      0.5,
+      "5683 beige shirt, the hug: 'How are you, my brother?' (from 1.07: a Hebrew greeting, heard as 'chag sameach', fills 0-1.0)",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.7,
+          1.7
+        ],
+        "x": 0.5,
+        "y": 0.36
+      }
+    ],
+    [
+      "929bc3b8-8be7-4047-9bc4-8b8287a1df27",
+      7.2,
+      8.5667,
+      0.5,
+      "5683 'I love you.' 'Me too.' END",
+      null,
+      {
+        "manual": true,
+        "z": [
+          1.5,
+          1.5
+        ],
+        "x": 0.4,
+        "y": 0.52
+      }
+    ]
+  ]
+}

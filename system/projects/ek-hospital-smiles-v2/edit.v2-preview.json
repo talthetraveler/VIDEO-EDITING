@@ -15,7 +15,7 @@
    "to": null
   }
  ],
- "out": "EK_HOSPITAL_SMILES_V2_FULL.mp4",
+ "out": "EK_HOSPITAL_SMILES_V2.mp4",
  "beats": [
   [
    "d9e0c969-cacf-439f-8c80-c87b19bc3150",
@@ -200,11 +200,7 @@
   ]
  ],
  "post": [
-  "fetch: _final-fetch-spans.mjs -> cache/hq-ek-hospital-smiles-v2",
-  "build: _final-build-edit.mjs ek-hospital-smiles-v2 --final --hq (DeepFilterNet -D)",
-  "blur: blur-face.py --mask-only + ek-christian-telaviv/blur-merge.py, blur-rules.json",
-  "mute: mute-span.py, room tone IMG_5641 31.45-35.45 over 3.8667-7.2 and 9.0667-13.7333",
-  "loudness: one gain +3.4 dB + limiter to -14 LUFS"
- ],
- "captionStyle": "gothic"
+  "blur: vendor/OpenMontage/.venv/Scripts/python.exe scripts/blur-face.py <stage1> <stage2> blur-rules.json",
+  "mute: room tone IMG_5641 31.45-35.45 over 3.8667-7.2 and 9.0667-13.7333 (mute-log.json)"
+ ]
 }

@@ -1,13 +1,13 @@
 {
-  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS: individual answers, no intro. LESSONS 80: no zooms - one constant full frame. This one: the red-haired woman who answers IN ARABIC to Morocco (C0525) - the most personal answer in the folder: 'I love Morocco so much. My grandfather is from Morocco. And I want to visit you. I'd love to visit you.' One unbroken take, nothing to jump-cut: she never searches for a word. In 1.7667 = in her laugh, 0.13s before her 'ana' (word onset 1.90 by RMS in 50ms steps: -16 -> -10 dB; large-v3 on 0-3.2s puts 'ah' at 1.92 and 'ana' at 2.14), after an unclear opening ('kam? ...' - four readings, four different words, so it is not used). the cached stamp 'ana 0.90-2.70' was a 1.8s smear over that opening and was corrected in the cache to 1.90 (hand_fixed, original kept); out 8.2 = 0.65s on her smile after her last word (speech ends ~7.55 by RMS), before she steps off with the sign (8.4). The trailing 'bisalam' (in peace) that the turbo model places at 7.6-9.7 is NOT heard by large-v3 and sits after the out - not captioned, not claimed. It is ~6.5s long because that is how long the answer is; a second take (C0526) says the same words and would be a repeat. English captions hand-written from the Arabic (CORRECTIONS.json): timing verified, wording unverified.",
+  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS: individual answers, no intro. LESSONS 80: no zooms - one constant full frame. This one: the red-haired woman who answers IN ARABIC to Morocco (C0525) - the most personal answer in the folder: 'I love Morocco so much. My grandfather is from Morocco. And I want to visit you. I'd love to visit you.' One unbroken take, nothing to jump-cut: she never searches for a word. In 1.7667 = in her laugh, 0.13s before her 'ana' (word onset 1.90 by RMS in 50ms steps: -16 -> -10 dB; large-v3 on 0-3.2s puts 'ah' at 1.92 and 'ana' at 2.14), after an unclear opening ('kam? ...' - four readings, four different words, so it is not used). the cached stamp 'ana 0.90-2.70' was a 1.8s smear over that opening and was corrected in the cache to 1.90 (hand_fixed, original kept); out 8.2 = 0.65s on her smile after her last word (speech ends ~7.55 by RMS), before she steps off with the sign (8.4). The trailing 'bisalam' (in peace) that the turbo model places at 7.6-9.7 is NOT heard by large-v3 and sits after the out - not captioned, not claimed. It is ~6.5s long because that is how long the answer is; a second take (C0526) says the same words and would be a repeat. English captions hand-written from the Arabic (CORRECTIONS.json): timing verified, wording unverified. FINAL WAVE 2026-10-05: full quality, caption style 5 (gothic). Built with _final-build-edit.mjs from cache/hq-ek-abraham-morocco (native 4K spans); sound = LOCATION-SOUND-HQ.wav (soundtrack.py --hq --hqdir=hq-ek-abraham-morocco --dfD --nogain --fadeout=0.25; denoise per clip by the builder rule, -a 10 up to 16 on a floor above -30 dB); then -14 LUFS on the whole timeline. Edges re-measured on a voice-only envelope (DeepFilterNet at full attenuation, 50 ms steps, diagnostic only) - same shots, same words: none needed (voice starts 1.95, 0.18 of air; ends before 7.8).",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
   "capY": 0.79,
-  "music": "../ek-abraham-morocco/LOCATION-SOUND.wav",
+  "music": "../ek-abraham-morocco/LOCATION-SOUND-HQ.wav",
   "bedOnly": true,
-  "out": "EK_ABRAHAM_MOROCCO_V1.mp4",
+  "out": "EK_ABRAHAM_MOROCCO_V1_FULL.mp4",
   "captionFix": [
     {
       "match": "DROPLINE",
@@ -21,6 +21,21 @@
     {
       "match": "Morocco so much",
       "to": "so much",
+      "exact": true
+    },
+    {
+      "match": "My grandfather is from Morocco",
+      "to": "My grandfather\nis from Morocco",
+      "exact": true
+    },
+    {
+      "match": "And I want to visit you",
+      "to": "And I want\nto visit you",
+      "exact": true
+    },
+    {
+      "match": "I'd love to visit you",
+      "to": "I'd love\nto visit you",
       "exact": true
     }
   ],
@@ -40,5 +55,7 @@
         ]
       }
     ]
-  ]
+  ],
+  "captionStyle": "gothic",
+  "_captionFix_note": "Line breaks only; the words are unchanged. Style 5 would leave IS / TO at a line end on the last three captions, so each carries its own break. (The first two rules are from the preview: I LOVE MOROCCO / SO MUCH instead of I LOVE / MOROCCO SO MUCH.)"
 }

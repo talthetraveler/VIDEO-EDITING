@@ -1,60 +1,8 @@
 {
- "note": "VOICES V4. One child left in the cut: a boy in a black tee who walks in behind the man in the pink shirt ('keep spreading positivity'), crosses behind the speaker's head (hidden for 4 frames) and comes out on the left. The beat is split in three so the blur stops while he is hidden. Keys measured on the full frame (V3) and mapped into this shot's z1.5 framing.",
+ "note": "VOICES V4. One child left in the cut: a boy in a black tee who walks in behind the man in the pink shirt ('keep spreading positivity'), crosses behind the speaker's head (hidden for 2 frames) and comes out on the left. The beat is split in three so the blur stops while he is hidden. Keys measured on the full frame (V3) and mapped into this shot's z1.5 framing.",
  "beats": [
   {
-   "frames": 28,
-   "x": [
-    2,
-    3
-   ],
-   "y": [
-    2,
-    3
-   ],
-   "prior": null,
-   "clear": true
-  },
-  {
-   "frames": 87,
-   "x": [
-    2,
-    3
-   ],
-   "y": [
-    2,
-    3
-   ],
-   "prior": null,
-   "clear": true
-  },
-  {
-   "frames": 69,
-   "x": [
-    2,
-    3
-   ],
-   "y": [
-    2,
-    3
-   ],
-   "prior": null,
-   "clear": true
-  },
-  {
-   "frames": 127,
-   "x": [
-    2,
-    3
-   ],
-   "y": [
-    2,
-    3
-   ],
-   "prior": null,
-   "clear": true
-  },
-  {
-   "frames": 53,
+   "frames": 33,
    "x": [
     2,
     3
@@ -80,7 +28,20 @@
    "clear": true
   },
   {
-   "frames": 68,
+   "frames": 30,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 38,
    "x": [
     2,
     3
@@ -106,7 +67,46 @@
    "clear": true
   },
   {
-   "frames": 60,
+   "frames": 49,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 45,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 127,
+   "x": [
+    2,
+    3
+   ],
+   "y": [
+    2,
+    3
+   ],
+   "prior": null,
+   "clear": true
+  },
+  {
+   "frames": 61,
    "x": [
     0.2,
     0.6
@@ -121,8 +121,23 @@
     0.075
    ],
    "maxr": 0.075,
-   "from": 25,
+   "from": 20,
    "keys": [
+    [
+     20,
+     0.33,
+     0.39
+    ],
+    [
+     22,
+     0.33,
+     0.39
+    ],
+    [
+     24,
+     0.33,
+     0.39
+    ],
     [
      26,
      0.36,
@@ -177,11 +192,16 @@
      59,
      0.458,
      0.365
+    ],
+    [
+     60,
+     0.45,
+     0.365
     ]
    ]
   },
   {
-   "frames": 4,
+   "frames": 2,
    "x": [
     2,
     3
@@ -194,7 +214,7 @@
    "clear": true
   },
   {
-   "frames": 17,
+   "frames": 18,
    "x": [
     0.08,
     0.45
@@ -212,43 +232,48 @@
    "keys": [
     [
      0,
+     0.245,
+     0.355
+    ],
+    [
+     1,
      0.267,
      0.353
     ],
     [
-     1,
+     2,
      0.282,
      0.357
     ],
     [
-     3,
+     4,
      0.269,
      0.365
     ],
     [
-     6,
+     7,
      0.252,
      0.362
     ],
     [
-     8,
+     9,
      0.245,
      0.363
     ],
     [
-     11,
+     12,
      0.242,
      0.365
     ],
     [
-     16,
+     17,
      0.225,
      0.365
     ]
    ]
   },
   {
-   "frames": 64,
+   "frames": 32,
    "x": [
     2,
     3

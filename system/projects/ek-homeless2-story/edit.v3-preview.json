@@ -4,7 +4,7 @@
  "snap": false,
  "autoFrame": false,
  "grade": false,
- "out": "EK_HOMELESS2_STORY_FULL.mp4",
+ "out": "EK_HOMELESS2_STORY_V3.mp4",
  "beats": [
   [
    "ab2e1c39-ebc1-44f2-a8fb-f94993e5334b",
@@ -20,13 +20,7 @@
      1
     ],
     "x": 0.5,
-    "y": 0.5,
-    "blur": [
-     0.54,
-     0.385,
-     0.15,
-     0.075
-    ]
+    "y": 0.5
    }
   ],
   [
@@ -43,13 +37,7 @@
      1
     ],
     "x": 0.5,
-    "y": 0.5,
-    "blur": [
-     0.575,
-     0.438,
-     0.215,
-     0.078
-    ]
+    "y": 0.5
    }
   ],
   [
@@ -66,13 +54,7 @@
      1
     ],
     "x": 0.5,
-    "y": 0.5,
-    "blur": [
-     0.583,
-     0.4,
-     0.134,
-     0.061
-    ]
+    "y": 0.5
    }
   ],
   [
@@ -89,13 +71,7 @@
      1
     ],
     "x": 0.5,
-    "y": 0.5,
-    "blur": [
-     0.555,
-     0.4,
-     0.132,
-     0.057
-    ]
+    "y": 0.5
    }
   ],
   [
@@ -112,13 +88,7 @@
      1
     ],
     "x": 0.5,
-    "y": 0.5,
-    "blur": [
-     0.445,
-     0.398,
-     0.17,
-     0.064
-    ]
+    "y": 0.5
    }
   ],
   [
@@ -135,13 +105,7 @@
      1
     ],
     "x": 0.5,
-    "y": 0.5,
-    "blur": [
-     0.445,
-     0.398,
-     0.17,
-     0.064
-    ]
+    "y": 0.5
    }
   ],
   [
@@ -207,9 +171,5 @@
   "caption_sync": "caption-sync.py on V2: 25 captions, median coverage 0.85, opening error 0.05s, 0 adrift; 3 captions under 50% speech (\"Come on for real\", \"Come here look\", \"Don t give up\") - each is a short quiet phrase whose caption is held into the pause after it (LESSONS 62), not a caption on the wrong moment."
  },
  "denoise": 10,
- "_v3": "V3 = the QA pass, STOPPED PART-WAY (coordinator, 2026-10-04: skip the QA pass, make the project consistent). Same shots, order and words as V2. Done: caption windows retimed to measured speech (caption-sync: 0 over silence, 0 adrift, opening error 0.05s; the unverifiable 0.35s line \"Come on, for real\" removed), denoise pinned to DeepFilterNet -a 10. NOT done: loudness is still about -17.6 LUFS (target -14), noise-floor before/after not measured, join-hole scan not run.",
- "captionStyle": "gothic",
- "_full": "FULL (FINAL-WAVE.md, Tal 2026-10-05: caption style 5, finish and deliver): same cut as the last preview (V3), captionStyle gothic, 1080x1920 from native 2160x3840 spans in cache/hq-ek-homeless2-story/ (_final-fetch-spans.mjs in ek-homeless2-visual), built with the project-local _final-build-edit.mjs (DeepFilterNet -D), then _loudness-14.py.",
- "_blur": "FULL only: at 1080x1920 the graffiti on the wall behind him is readable (an English insult ending in \"looser\" + a drawn middle finger). Softened in the six beats from the arcade angle with a feathered blur fixed to the wall in source coordinates; each box read off gridded native frames at 4-6 times across the beat. In the four table beats his cap sits 0.01-0.03 of the frame below the writing, so those boxes are cut tight (first pass was too tall and blurred his forehead in beats 5-6 - caught on full-size frames, rebuilt). The reverse-angle beats do not show that wall.",
- "_full_alt": "A second full-quality file exists: EK_HOMELESS2_STORY_FULL_NOPASSERS.mp4 (43.3s, spec in edit.full-nopassers.json). It is this cut with beat 7 starting at 512.63 instead of 506.7, because at 1080x1920 a young woman and then a uniformed officer walk right behind the table in the first 2.6s of that shot with readable faces. It loses the lines \"Not used to things like this / Why? / Just because\"."
+ "_v3": "V3 = the QA pass, STOPPED PART-WAY (coordinator, 2026-10-04: skip the QA pass, make the project consistent). Same shots, order and words as V2. Done: caption windows retimed to measured speech (caption-sync: 0 over silence, 0 adrift, opening error 0.05s; the unverifiable 0.35s line \"Come on, for real\" removed), denoise pinned to DeepFilterNet -a 10. NOT done: loudness is still about -17.6 LUFS (target -14), noise-floor before/after not measured, join-hole scan not run."
 }

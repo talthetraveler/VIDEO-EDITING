@@ -2639,3 +2639,15 @@ trials."*
 - **A new version replaces the old one on Frame.io.** Upload, then take the
   superseded file out of the folder in the same step. Variations are fine;
   two copies of the same cut are not.
+
+## 99 — "why did you move stuff to OLD - DELETE, stop doing that" (Tal, 2026-10-05)
+
+He asked for "no duplicates" in APPROVED FOR TRIALS and said "just move the old
+ones". I made an `OLD - DELETE` subfolder and moved seven older cuts and two
+replaced files into it. He moved them back and was angry.
+
+- **Never move, rename or reorganise files on Frame.io.** Upload the new file;
+  name the old one in chat; he removes it himself. Lesson 98's "take the
+  superseded file out in the same step" is withdrawn.
+- "No duplicates" means: do not upload a second copy of a cut. It is not a
+  licence to tidy his folder.

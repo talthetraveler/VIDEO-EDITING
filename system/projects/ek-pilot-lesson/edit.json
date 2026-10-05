@@ -1,20 +1,20 @@
 {
-  "_brief": "Batch 2026-10-03 item 11, MIC ON STREET / PILOT - the one answer in the folder that carries a video alone (IMG_9500, young man in a white tee at the mic stand): 'Captain Smith, you're a true hero. Thank you for what you did saving all those people. And you taught us all a lesson that it doesn't matter what walk of life you are, what religion, where you're from, you went out there and you saved the lives of strangers, and we need more people like you in the world. And we wish you all the best. Thank you so much.' One unbroken take: he never searches for a word, so there is nothing to jump-cut, and his first words (0.56s) already say who and why. LESSONS 80: no zooms, one constant full frame. grade:false. Sound: LOCATION-SOUND.wav (one denoise for the run).",
+  "_brief": "Batch 2026-10-03 item 11, MIC ON STREET / PILOT - the one answer in the folder that carries a video alone (IMG_9500, young man in a white tee at the mic stand): 'Captain Smit, you're a true hero. Thank you for what you did saving all those people. And you taught us all a lesson that it doesn't matter what walk of life you are, what religion, where you're from, you went out there and you saved the lives of strangers, and we need more people like you in the world. And we wish you all the best. Thank you so much.' One unbroken take: he never searches for a word, so there is nothing to jump-cut, and his first words (0.56s) already say who and why. LESSONS 80: no zooms, one constant full frame. grade:false. Sound: LOCATION-SOUND.wav (one denoise for the run). FINAL WAVE 2026-10-05: full quality, caption style 5 (gothic), the name reads SMIT (CORRECTIONS.json). Same cut as the approved V1 preview. Built with _final-build-edit.mjs from cache/hq-ek-pilot-lesson (native 4K span); sound = LOCATION-SOUND-HQ.wav (soundtrack.py --hq --hqdir=hq-ek-pilot-lesson --dfD --nogain --fadeout=0.15); then -14 LUFS on the whole timeline.",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
   "capY": 0.72,
-  "music": "../ek-pilot-lesson/LOCATION-SOUND.wav",
+  "music": "../ek-pilot-lesson/LOCATION-SOUND-HQ.wav",
   "bedOnly": true,
-  "out": "EK_PILOT_LESSON_V1.mp4",
+  "out": "EK_PILOT_LESSON_V1_FULL.mp4",
   "beats": [
     [
       "2a9f19f4-efae-4fa7-bcd9-4954a4ef9b0c",
       0.4333,
       15.8,
       0.5,
-      "THE WHOLE ANSWER, one take: 'Captain Smith, you're a true hero ... we need more people like you in the world. And we wish you all the best. Thank you so much.' (first word 0.56; last word ends 15.63; the clip ends 15.89)",
+      "THE WHOLE ANSWER, one take: 'Captain Smit, you're a true hero ... we need more people like you in the world. And we wish you all the best. Thank you so much.' (first word 0.56; last word ends 15.63; the clip ends 15.89)",
       null,
       {
         "exact": true,
@@ -24,5 +24,34 @@
         ]
       }
     ]
-  ]
+  ],
+  "captionStyle": "gothic",
+  "captionFix": [
+    {
+      "match": "you're a true hero",
+      "to": "You're\na true hero",
+      "exact": true
+    },
+    {
+      "match": "saved the lives",
+      "to": "saved the lives\nof strangers",
+      "exact": true
+    },
+    {
+      "match": "of strangers",
+      "to": null,
+      "exact": true
+    },
+    {
+      "match": "like you",
+      "to": "like you\nin the world",
+      "exact": true
+    },
+    {
+      "match": "in the world",
+      "to": null,
+      "exact": true
+    }
+  ],
+  "_captionFix_note": "Line breaks only (style 5 left A / OF / THE at a line end on three captions). Where the builder had merged two short lines with a space, the first line now carries both with the break and the second is dropped, so the caption is the same words over the same time. The words are unchanged."
 }

@@ -4,8 +4,7 @@
   "snap": false,
   "autoFrame": false,
   "grade": false,
-  "out": "EK_GOODNEWS_TELAVIV_FULL.mp4",
-  "captionStyle": "gothic",
+  "out": "EK_GOODNEWS_TELAVIV_V1.mp4",
   "beats": [
     [
       "3aaabd48-abe9-4fbb-a702-5afa3972e6ca",
@@ -112,7 +111,7 @@
     [
       "e170a3bf-da3a-4dd2-8bd4-b06a493a22d9",
       13.6667,
-      19.0667,
+      19.6667,
       0.5,
       "Jessica (moved from Paris): 'my dream? I just made it, actually - we made Aliyah this summer, so now I'm very happy' (her 'first of all, I love you' walk-in was dropped: too faint for the speech detector to place a caption)",
       null,
@@ -211,6 +210,5 @@
         "y": 0.45
       }
     ]
-  ],
-  "_final": "Final wave 2026-10-05: the V1 cut at full quality, caption style 5 (gothic), project-local builder (scoped native-resolution spans, DeepFilterNet -D), -14 LUFS. ONE cut point moved: Jessica (IMG_9508) now ends at 19.0667 instead of 19.6667 - the old out-point let her start the next sentence (\"And that's-\", 19.15-19.45s) and cut it off. V1 preview kept (edit.v1-preview.json)."
+  ]
 }

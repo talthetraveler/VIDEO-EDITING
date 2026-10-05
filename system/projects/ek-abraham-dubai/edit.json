@@ -1,13 +1,13 @@
 {
-  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS: individual answers, no intro. LESSONS 80: no zooms - each take keeps one constant full frame. This one: the young man in the blue cap who used to live in Dubai (C0524, his solo take). His first sentence IS the hook ('this is coming from somebody that used to live in Dubai. Now he lives in Israel.' - first word at 0.02s), so the answer runs in his order and the strongest line, 'at the end of the day, we're all brothers. We're family', lands as the payoff. One jump cut takes the 0.6s gap out. Then a hard cut to a DIFFERENT take - the same man with his five friends round the sign (C0523) - for 'We love you guys. Let's go!' and all of them cheering, arms up: the ending is the group, not him walking into the lens (C0524 14.3). Captions sit on his shirt (capY 0.47) in the close take, because the sign fills the lower half of that frame, and under the group in the wide take (0.80). grade:false. Sound: LOCATION-SOUND.wav (soundtrack.py, one denoise per run, no per-beat gain).",
+  "_brief": "Batch 2026-10-03 item 10, MIC ON STREET / ABRAHM ACCORDS: individual answers, no intro. LESSONS 80: no zooms - each take keeps one constant full frame. This one: the young man in the blue cap who used to live in Dubai (C0524, his solo take). His first sentence IS the hook ('this is coming from somebody that used to live in Dubai. Now he lives in Israel.' - first word at 0.02s), so the answer runs in his order and the strongest line, 'at the end of the day, we're all brothers. We're family', lands as the payoff. One jump cut takes the 0.6s gap out. Then a hard cut to a DIFFERENT take - the same man with his five friends round the sign (C0523) - for 'We love you guys. Let's go!' and all of them cheering, arms up: the ending is the group, not him walking into the lens (C0524 14.3). Captions sit on his shirt (capY 0.47) in the close take, because the sign fills the lower half of that frame, and under the group in the wide take (0.80). grade:false. Sound: LOCATION-SOUND.wav (soundtrack.py, one denoise per run, no per-beat gain). FINAL WAVE 2026-10-05: full quality, caption style 5 (gothic). Built with _final-build-edit.mjs from cache/hq-ek-abraham-dubai (native 4K spans); sound = LOCATION-SOUND-HQ.wav (soundtrack.py --hq --hqdir=hq-ek-abraham-dubai --dfD --maxgain=6 --fadeout=0.2; denoise per clip by the builder rule, -a 10 up to 16 on a floor above -30 dB); then -14 LUFS on the whole timeline. Edges re-measured on a voice-only envelope (DeepFilterNet at full attenuation, 50 ms steps, diagnostic only) - same shots, same words: beat 2 in 4.1333->4.0667 (voice starts 4.22); beat 3 in 12.4667->12.5 (V1 started on the tail of family; 12.5 is the level minimum between family and we).",
   "layout": "vertical",
   "snap": false,
   "autoFrame": false,
   "grade": false,
   "capY": 0.47,
-  "music": "../ek-abraham-dubai/LOCATION-SOUND.wav",
+  "music": "../ek-abraham-dubai/LOCATION-SOUND-HQ.wav",
   "bedOnly": true,
-  "out": "EK_ABRAHAM_DUBAI_V1.mp4",
+  "out": "EK_ABRAHAM_DUBAI_V1_FULL.mp4",
   "beats": [
     [
       "f013500a-dd00-433c-8ba0-f5291ccfa5d9",
@@ -27,7 +27,7 @@
     ],
     [
       "f013500a-dd00-433c-8ba0-f5291ccfa5d9",
-      4.1333,
+      4.0667,
       12.8667,
       0.5,
       "'I've been around. They're both beautiful, beautiful countries. I think everyone should come visit Israel. You guys should for sure go to Dubai, because at the end of the day, we're all brothers. We're family.' (out before his 'Let's go' 13.08 - the group says it)",
@@ -43,7 +43,7 @@
     ],
     [
       "71dd6b6b-7fa0-4776-aed2-3774731022b2",
-      12.4667,
+      12.5,
       16,
       0.5,
       "ENDING, the other take: him and his friends round the sign - 'We love you guys. Let's go!' - everyone cheers, arms up (14.3-16.0)",
@@ -57,5 +57,44 @@
         "capY": 0.8
       }
     ]
-  ]
+  ],
+  "captionStyle": "gothic",
+  "captionFix": [
+    {
+      "match": "You guys",
+      "to": "You guys should\nfor sure go to Dubai",
+      "exact": true
+    },
+    {
+      "match": "should for sure",
+      "to": null,
+      "exact": true
+    },
+    {
+      "match": "go to Dubai",
+      "to": "You guys should\nfor sure go to  Dubai",
+      "exact": true
+    },
+    {
+      "match": "Now he",
+      "to": "Now he lives\nin Israel",
+      "exact": true
+    },
+    {
+      "match": "lives in Israel",
+      "to": "Now he lives\nin  Israel",
+      "exact": true
+    },
+    {
+      "match": "because at the end",
+      "to": "because at the end\nof the day",
+      "exact": true
+    },
+    {
+      "match": "of the day",
+      "to": "because at the end\nof the  day",
+      "exact": true
+    }
+  ],
+  "_captionFix_note": "Line breaks only; the words are unchanged. Style 5 breaks about two words a line and left a word like A / IN / THE / TO / WILL at a line end, or split MIDDLE EAST, on these captions. The builder makes each of them from two short pieces joined with a space; here both pieces carry the same two-line text (the second with a doubled space so it is not dropped as a repeat - it renders identically), so the caption shows once, unbroken, for the whole time both pieces are spoken. YOU GUYS SHOULD FOR SURE was also on screen only 0.59s in the preview (he says eight words in 1.2s); it now shows with GO TO DUBAI for the whole phrase."
 }
