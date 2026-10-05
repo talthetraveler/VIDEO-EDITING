@@ -2612,3 +2612,30 @@ upload to frame trials ... upload everything there and that's it, good night."*
 - Recipe the final wave used: `system/projects/_batch-2026-10-03/FINAL-WAVE.md`
   (native-resolution scoped fetch, `-D` on the denoise, blur re-derived at
   full size, -14 LUFS on the whole timeline).
+
+## 98 — "people blurred in the background, we don't need that" (Tal on the delivered finals, 2026-10-05)
+
+His words, after the final wave went to Frame.io: *"H, her story, cancer. That
+was good, but then you put it to the Frame.io with people blurred in the
+background. We don't need that."* And on the phone compilation: *"she picks it
+up and then someone says a word, so that's not good. She should just pick it up
+and cut until she says [her line]"*, *"they said 'look at the trees' and then
+it cuts wrong"*, *"'what makes you happy', you should see my face when I drop
+the thing."* And: *"make sure there's no duplicates in the Frame.io for
+trials."*
+
+- **Blur is for the person he names (a child he pointed at, someone told "we
+  won't publish"), not for every passer-by.** The final wave re-derived blur at
+  full resolution and added blurs the approved preview never had. He approved
+  the preview; the final must look like it. A blur he did not see in the
+  preview is a change he did not approve. Background adults are never blurred.
+- **Between a pick-up/approach and the person's line there is nothing.** A
+  stray word from someone else in that gap reads as a mistake. Action -> first
+  word of the line.
+- **An answer's out-point is checked on the picture and the sound of the
+  finished file**, not only the word timing ("it cuts wrong").
+- **When the title is his question, show his face asking it / setting the prop
+  down.**
+- **A new version replaces the old one on Frame.io.** Upload, then take the
+  superseded file out of the folder in the same step. Variations are fine;
+  two copies of the same cut are not.

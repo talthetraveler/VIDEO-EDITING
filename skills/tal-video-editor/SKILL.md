@@ -290,6 +290,7 @@ Answer three questions first. Do not load a single specialist skill until you ha
 | One person, real substance, a payoff | `human-story` |
 | Script/VO explaining something, facts, numbers | `nas-explainer` |
 | **Tal's own voice over B-roll**: his life story, a mission, a cause, "here's my voice, do the B-roll" | `voiceover-broll` |
+| **No footage at all**: "a cool story", "an AI video", "like Jewish Business Report / the Waze one", a person or company to tell the story of (2026-10-05) | `ai-story-reel` — narrated true story over found photos and real articles, serif captions, built in HyperFrames |
 | One person to camera, no script | `talking-head` |
 | **Tal on camera asking for effects** (said on camera or typed): zooms on a word, logo in his hand, cutouts, split-screen explainer | `talking-to-camera-effects` |
 | Asking strangers a question, many answers | `street-interview` |
