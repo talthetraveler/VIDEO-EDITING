@@ -286,8 +286,9 @@ Comma sits in the middle and is the most repeatable.
 
 ## 3a. VOICE, MUSIC, SFX — measured, not listened to
 
-I cannot hear. Everything here is a measurement of the audio file, and each
-instrument's limit is stated.
+The model reads text and pictures; it cannot play sound. So audio is studied
+by tools: Whisper for the words, demucs to split voice from music, ffmpeg and
+numpy to measure. Each instrument's limit is stated.
 
 **Voice.** Every narrator is a man. Pitch by autocorrelation, with the music
 still underneath, so read it as "deeper / lighter", not as an exact figure:
@@ -295,7 +296,7 @@ Comma 94-102 Hz (the deepest, slow and weighty), JBR 100-106, Deploy 116, TNG
 and Venture 127-133 (lighter, younger, faster). Speed is in the table at the
 top. No voice pauses over 0.5s.
 
-**Music.** There is a bed under the voice in every reel, and it is not quiet.
+**Music.** There is a bed under the voice in every reel.
 Control test: a voice-only file's quietest tenth sits 53 dB below its typical
 level. The references' quietest tenth sits only 7-11 dB below (Comma -8.6, TNG
 -9.3, Venture -10.7, JBR -7.2), so something is always playing. Waze is the
@@ -303,16 +304,30 @@ calmest at -14. TNG leaves about 1 second of music after the last word; Comma
 and Venture cut dead on it. What the music IS (genre, track) cannot be read
 this way. Tal adds music himself.
 
-**SFX: not established yet.** With voice and music mixed together I could not
-separate effects from the bed:
-- Comma's five light-leak transitions are 1.2-1.8x louder than a random moment
-  at four of the five, in the mid band and not in the high "whoosh" band. That
-  fits a soft swell or riser on each leak. It is a hint, not a finding.
-- JBR Mid-Day has twice the high-band energy on its cuts as elsewhere, which
-  fits a short airy whoosh on its white flashes.
-- No reel shows bass hits landing on ordinary cuts.
-- To settle it the voice has to be split from the rest (demucs) and the
-  remainder checked at every cut. Not done.
+**SFX and music, with the voice removed.** Four reels were split into voice
+and everything-else with demucs (`python -m demucs --two-stems vocals`, free,
+local, installed 2026-10-05), then the everything-else track was checked at
+every cut. Each figure has a chance control: the same test with the cut times
+shifted at random.
+
+| reel | music under the voice | a high "whoosh" on the cuts | chance | reading |
+|---|---|---|---|---|
+| Venture Brabus | -14.4 dB | **74% of cuts** | 27% | **whoosh on nearly every cut** |
+| JBR Mid-Day | -9.3 dB | **73% of cuts** | 36% | **whoosh on the cuts** (its white flashes) |
+| Comma Item7Go | -14.2 dB | 41% | 43% | **no SFX on ordinary cuts**; the music carries it |
+| TNG Dacombe | -9.6 dB | 33% | 32% | **no SFX tied to cuts**; a loud beat-driven track |
+
+- **Two mixes.** Comma and Venture keep the music 14 dB under the voice. TNG
+  and JBR run it louder, about 9.5 dB under.
+- **Two SFX habits.** Venture and JBR put an airy whoosh on almost every cut.
+  Comma and TNG do not; their cuts are silent and the track does the work.
+- **Comma's music has a slow, regular pulse**: a low hit every 4.0 seconds for
+  the whole reel (1.0, 5.0, 9.0, 13.0 ...). Its cuts do not land on it.
+- **TNG's track has a kick about every 0.65s** (roughly 92-99 BPM).
+- Bass hits on cuts: no better than chance in any of the four.
+- Limits: the split is not perfect, hi-hats in the music count as "airy"
+  events (which is why the chance column matters), and this says where sounds
+  are, not what they are. The other ten reels were not split.
 
 **What we have to make them with:**
 - **Voice, free and local:** `npx hyperframes tts` (Kokoro). Installed and
@@ -334,7 +349,9 @@ separate effects from the bed:
   `typing` under a typed name, `click-soft` per digit on a year roller, `pop`
   on a cut-out appearing, `impact-bass-1` once on the biggest number. Under the
   voice, never over it.
-- **Mix:** voice on top; the references run a bed about 8-10 dB under it.
+- **Mix:** voice on top, music 14 dB under it (the Comma / Venture mix).
+- **SFX rule for our build:** a short whoosh on designed transitions and
+  cards (the Venture habit), nothing on plain cuts (the Comma habit).
 
 ## 4. THE ULTIMATE — one recipe that takes the best of each
 
