@@ -3289,3 +3289,92 @@ Two mistakes in the Metricool scheduling run, both caught by Tal asking "what is
 
 - **I captioned a video "meeting a Muslim police officer". Its own title card says "MEETING A CHRISTIAN IN ISRAEL"**: he is a Christian Arab officer from Nazareth. I had read one caption word ("MUSLIM") off a six-frame contact sheet and built four platform captions on it. **A caption states who someone is only from the video's own title card or a transcript of the whole clip, never from a few frames.** Religion, nationality and names are the facts this account exists to get right. When the full transcript has not been read, the caption stays general ("a police officer in Jerusalem").
 - **I filled October 7 with ordinary upbeat posts.** Tal: "today probably should put any posts that have to do with October seventh". **Before scheduling, check the dates against the Israeli/Jewish calendar** (Oct 7, Yom HaZikaron, Yom HaShoah, Yom Kippur, Tisha B'Av, and days of national mourning). Those days get remembrance content he approves, or nothing; regular posts move.
+
+## 128. After the hook, get in fast: a 73-second first cut of a one-person story was "too long" (Samira, 2026-10-07)
+
+Tal on Samira V1 (73 s): *"it's too long, 'that teaches peace' then too long."* The hook promised a book that teaches
+children peace, and the next thing was an 11-second self-introduction (mother of four, teacher, artist...). V2 kept only
+"Hello, I am Samira, from Gaza" (2.7 s) and went straight to her question; two whole sections went, 73 s -> 43 s.
+**Rule:** in an ai-story-reel built on one person's interview, the line after the hook is under 3 seconds and pays the
+hook off; a single interview carries about 40-45 s, not 70. Cut her lines at real pauses (`silencedetect`), never at
+Whisper word boundaries.
+
+## 129. Every story reel is checked against the house model BEFORE the first preview (Rami & Bassam, 2026-10-07)
+
+Tal, after Rami & Bassam V1: *"please use all my skills and references for best one"* and *"when I ask you to make a
+video you need to use all my skills and GitHub repos to make it the best script and editing ever, use motion graphics,
+use sound effects."* V1 went out at 19 cuts a minute with plain captions on the hook; the house model
+(`formats/ai-story-reel.md`, Elie Wiesel) is 29-37 cuts a minute with the hook as BIG words landing one at a time.
+V2 fixed it (28 a minute, four hook titles, a red number card, a dark "ENEMIES" card, punch-ins inside every quote).
+**Rule: before rendering a first preview, print the build's cuts per minute and compare with the table in the format
+file; the hook is big title words, never ordinary captions; every number gets a card; every quote of more than 3 s gets
+a punch-in cut.** A first preview that misses these is not a first preview.
+
+Same video, a fact check Tal asked for (*"was it a mistake?"*): a death is described with the wording a court or the
+person themselves used, not a blunt summary. "Israeli border police shot her" became "a rubber bullet fired by Israeli
+border police hit her" after checking the 2010 Jerusalem court ruling (negligence, no indictment). Check before the
+voice is recorded, not after he asks.
+
+Also: all story reels so far share ONE music bed (`sfx/music.wav`). A small library of licensed tracks by mood is the
+missing piece; ask Tal for it or attach Instagram's own music through Metricool on auto-published posts.
+
+## 130. The big hook words are the SPOKEN words, one voice segment per title (Rami & Bassam V3, 2026-10-07)
+
+Tal on V2: *"an Israeli father, not 'this'. Make sure it aligns and is correct, and a better hook, better images, more
+b-rolls, switches fast."* V2's titles said "this ISRAELI FATHER" while the voice said "An Israeli father", and four
+titles were spread evenly over one 7-second voice file, so they drifted from the words.
+**Rule: a hook title shows exactly the words being spoken, and each title is its own voice segment in SEQ (h1, h2...),
+so the cut and the title land on the phrase by construction.** The hook itself is a contrast in two beats plus a turn
+("An Israeli father lost his daughter to a Hamas bomb. A Palestinian father lost his daughter to an Israeli bullet.
+Today, they call each other family."), each beat with its own picture (his face, the place). A narrated beat gets
+three or four pictures, not two: V3 is 26 shots in 50 s (31 a minute, inside the house range).
+
+## 131. A quoted line is cut on the speaker's first WORD, found with silencedetect (Rami & Bassam V4, 2026-10-07)
+
+Tal on V3: *"when he speaks 'we are family, we are very connected', it's not so good."* The line was cut from the
+transcript SEGMENT time (242.5 s); the first word is at 244.47 s. Two seconds of dead air sat in front of it, with a
+one-second pause in the middle, and the captions ran ahead of the voice. Whisper's segment start is where the previous
+speech ended, not where this speaker begins.
+**Rule: every interview line is cut from `silencedetect` (first word minus ~0.07 s, last word plus ~0.12 s), a pause
+of more than 0.6 s inside a short line is cut out, and after the build the caption start times for that line are
+printed and compared with the word times.** Same rule as LESSONS 128 for Samira; it applies to English lines too.
+
+## 132. The hook names the people in its first line, and the story then runs in order (Indo-Pak Express V1, 2026-10-08)
+
+Tal on V1: *"the story doesn't flow ... doesn't make sense to start 'one is Indian'. Start it with the hook: this Indian
+and Pakistani players."* V1 opened on a riddle ("One is Indian. / One is Pakistani.") and then jumped: quote, how they
+met, the final, the speech. He also caught a shot of a website: the clip I cut for "One is Pakistani" began on the
+last frames of the film's previous shot (a scrolling web page).
+**Rule: line one says who this is about, both people together ("An Indian and a Pakistani / were supposed to be
+enemies"). After the hook the story is chronological: who they are, how they met, what happened, what was said. And
+the FIRST and LAST frame of every cut clip is looked at before the build, not only a frame from the middle.**
+
+## 133. Every spoken line gets a picture of that exact thing; where no real one exists, a faceless illustration (Rawan Osman V1, 2026-10-08)
+
+Tal on V1: *"doesn't really make sense ... a picture of a small shop ... someone dropping her shopping, running
+upstairs, locking the door."* V1 put Strasbourg street photos and a synagogue under "walked into a small shop",
+"dropped her shopping", "locked her door". True places, wrong pictures. Then, on my first illustrations: *"don't show
+an Asian man, he was a Jewish shop owner. Just don't show her face then."* The generator had drawn faces I had not
+asked for.
+**Rule: for an action nobody photographed, make an illustration (Agnes AI, `system/projects/ai-story-kit/gen.py`,
+his free key) of exactly that action: hands, backs, objects, places. NEVER a face for a real person, and no
+ethnicity guessed. Look at every generated picture; regenerate any that shows a face. Each one carries the credit
+"ILLUSTRATION · AI IMAGE". Real photos and real footage stay first for the people themselves.**
+
+## 134. A death is described the way the family says it (Rami & Bassam V5, 2026-10-08)
+
+Tal: *"'An Israeli father lost his daughter to a Hamas bomb' doesn't make sense. 'To a suicide bombing', that's
+good. And you should use part of him speaking."* Rami's own sentence in the interview is "I've lost my 14-year-old
+daughter, Smadar, in a Hamas suicide bombing in Jerusalem". V5 uses his wording in the hook and lets him say it.
+**Rule: when the person tells the fact on camera, that line is in the video in their voice, and the narrator's
+wording matches theirs.**
+
+## 135. One story file, one engine; each story gets its own voice and its own music (2026-10-08)
+
+Five stories in one night were only possible after the per-video `build.py` became `ai-story-kit/engine.py` reading a
+small `story.py` (lines, quote ranges, clips, plan, credits). Helpers: `new.sh` (folder), `voice.py` (ElevenLabs),
+`prep.py` (quotes and clips; optional crop to remove burned-in text), `gen.py` (illustrations), `music.py`
+(ElevenLabs Music, levelled to the old bed). Tal allowed his ElevenLabs for music and SFX the same night.
+His Drive music folder (`assets/music-library`, 42 files) is commercial instrumentals (Kanye, Kendrick, Drake, MF
+DOOM): Instagram can mute or block a reel for those, so they are not used under these reels unless he says so.
+Captions: Montserrat 900, 72 px, key words gold, upper case and 16% larger, popping in.

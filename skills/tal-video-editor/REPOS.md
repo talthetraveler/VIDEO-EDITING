@@ -21,6 +21,8 @@ turn, with a verified status, or it has not been dealt with.**
 | `calesthio/OpenMontage` | **installed and working, 42/117 tools, zero keys** | `system/vendor/OpenMontage` |
 | `kamilstanuch/Autocrop-vertical` | **works after a 3-line patch** — horizontal -> 9:16, one fixed crop per scene. See below | `system/vendor/Autocrop-vertical` (own `.venv`) |
 | `Jakeschincariol/instagram-agent-skill` | **installed in full, 13 loadable skills** — they write Instagram text (captions, comments, replies, DMs, scripts); they post nothing. Its hook scorer rates 60/60 of his titles WEAK and must never gate. See below | `/ig-reel`, `/ig-caption`, `/ig-comment` ... (`skills/ig-*`), `PYTHONUTF8=1 python` |
+| `harry0703/MoneyPrinterTurbo` | **installed 2026-10-08, works with ZERO keys on local clips** (script in, voice + subtitles + 9:16 cut out). Stock footage and AI script need a key. `litellm` did not install (Windows path limit). See below | `system/vendor/MoneyPrinterTurbo` (own `.venv`), `cli.py` |
+| `Alisa0808/vox-director` | **registered 2026-10-08, NOTHING RUN: needs a paid Atlas Cloud key that is not here.** Only the ffmpeg/Pillow stages are local. See below | `toolbox/vox-director/` (not loadable, on purpose) |
 
 ---
 
@@ -418,3 +420,181 @@ Tal pasted the link on 2026-10-04 while asking about music and background noise.
 To make it work: install Audacity 3.7.x, open it once, enable
 Edit > Preferences > Modules > `mod-script-pipe`, restart Audacity, then restart
 Claude Code so the `audacity` server connects.
+
+---
+
+## nurimator/paperima — installed 2026-10-06, WORKING (free, local, no key)
+
+Tal pasted it for the paper cut-out look of the Elie Wiesel Foundation reference: *"I didn't want to do anything paid ...
+just make sure this works and fix it up."*
+
+| | |
+|---|---|
+| What it is | A browser app (plain JS + Vite, AGPL-3.0) that turns an image into a torn-paper cut-out: white torn edge, shadow, paper-fold texture, hand-made wiggle. |
+| Where | `system/repos/paperima/` (`npm install`, `npm run build` -> `dist/`). |
+| Code read before install | All of `src/modules`. No network calls (no fetch / XHR / WebSocket); everything runs in the page. |
+| Fixed up (local changes) | `src/modules/automation-bridge.js` (new): `window.__paperima.setup()` / `renderFrame(ms)` so it can be driven with no UI at an exact time. `renderer.js`: the background fill is skipped when the bridge asks for transparency, so frames come out on alpha. |
+| How I run it | `node system/repos/paperima/paper-cutout.mjs <image> <out dir> [seconds] [fps] [aspect] [res]` (headless Chrome via puppeteer-core) -> transparent PNG frames. |
+| Verified | Three objects end to end on 2026-10-06: local SD image -> `hyperframes remove-background` -> Paperima -> 19 RGBA frames each (alpha 0-255) -> composited in `system/projects/style-test-wiesel/` and rendered. |
+| Limits | The first frames before the torn-edge cache is built have no torn edge (the script primes three renders first). HyperFrames stretches an `<img class="clip">` that has `inset:0`: wrap each cut-out in a `<div class="clip">`. Licence is AGPL: fine for making videos; do not ship the app itself as part of a hosted product. |
+
+Not installed, by his instruction ("I didn't want to do anything paid"): `Anil-matcha/vox-ai-motion-graphics-generator`
+(every image, video, voice and music call goes through paid muapi.ai + OpenAI) and `vfx-creator0/VFXCreator` (code not
+released, needs a large video model). Their clones were deleted.
+
+## awesome-claude-video-skills (zhuyansen), triaged 2026-10-07
+
+Tal pasted the list (252 repos). It is an INDEX, not a tool: installing all of it would fill the disk (97% full) and
+put dozens of "make a video" triggers in competition. Many need paid services (HeyGen, Veo, Premiere, TTS). Taken
+from it, into `skills/toolbox/` (reached on purpose, not loadable):
+
+| Skill | From | Needs | Use for |
+|---|---|---|---|
+| `map-animation` | iart-ai/map-animation-skills | nothing paid | Vox-style route / zoom / highlight maps (our `system/tools/mapgen.py` is the working renderer; this is the craft guide) |
+| `kinetic-typography` | iart-ai/kinetic-typography-skills | nothing paid | split-text reveals, staggered titles, type on a path |
+| `paper-cut` | aijiduonadegou/Paper-Cut | an image model for the hero stills (use local SD, `system/tools/sdbatch.py`) + HyperFrames | paper-collage explainer shots |
+| `collage-broll-explainers` | MegaTroll222/VOX-COLLAGE-BROLL | its README mentions an API key for image/voice: read before use | 5-second halftone collage b-roll for one spoken line |
+
+Read, NOT kept: `gbro-collage-broll` (needs a paid Gemini key). Not yet run end to end here: files copied and read,
+no render made with them. Also looked at the same day: `lcy362/agnes-video-generator` (MIT, free, but video is made
+on Agnes AI's cloud and needs Tal's own free key `AGNES_API_KEY`: waiting on him) and `flaqai/awesome-qwen-image-3`
+(a prompt library for a hosted paid service: prompts only, nothing to install).
+
+---
+
+## harry0703/MoneyPrinterTurbo — installed 2026-10-08, WORKS WITH NO KEY on local clips; the rest needs keys
+
+Tal pasted it: *"this is very good, you can use this for generating videos or images, I think it's free."*
+Half right, measured. The tool itself is free (MIT). What it does by default is ASSEMBLE: a script, a voice,
+stock clips, subtitles, optional music, joined into one video. It does not draw anything on this laptop.
+
+| | |
+|---|---|
+| What it is | v1.3.8, commit `f20e0d6` (2026-10-07). FastAPI server (`main.py`), Streamlit web page (`webui/`), and a headless `cli.py`. Pipeline stages, in order: `script -> terms -> audio -> subtitle -> materials -> video`. |
+| Where | `system/vendor/MoneyPrinterTurbo/` (git-ignored), own venv at `.venv/`. 1,038 MB on disk, 691 MB of it the venv. No model was downloaded. |
+| Code read before install | `cli.py`, `config.example.toml`, and the relevant parts of `app/services/task.py`, `llm.py`, `material.py`, `voice.py`, `subtitle.py`, `upload_post.py` (not all 23,500 lines). The hosts in the code are the providers you configure plus a GitHub release check. |
+| Does it generate images or video? | **Not by itself. Correction to "it only assembles": it can ORDER them from paid services.** `video_source` accepts `pexels`, `pixabay`, `coverr` (stock search), `local` (your own files), and `wavespeed`, `volcengine_seedance`, `ofox`, `muapi`, `metaso_minimax`, `loomloom` (text-to-video, all paid; the CLI refuses without a `--confirm-...-charge` flag), and `openai_image` (any OpenAI-style `/images/generations` endpoint; each still gets a slow zoom of about 3% a second). No image or video model runs locally. |
+
+**Install, as run** (`uv` is the project's own route and is not on this machine; the legacy pip file was used):
+
+```bash
+cd system/vendor/MoneyPrinterTurbo
+python -m venv .venv
+PYTHONUTF8=1 ./.venv/Scripts/python.exe -m pip install -r requirements.txt     # FAILED on litellm, see below
+grep -v '^litellm\|^#' requirements.txt > req.txt
+PYTHONUTF8=1 ./.venv/Scripts/python.exe -m pip install -r req.txt              # exit 0
+cp config.example.toml config.toml      # every key blank; listen_host changed 0.0.0.0 -> 127.0.0.1
+```
+
+**What failed, real text:** `ERROR: Could not install packages due to an OSError: [Errno 2] No such file or
+directory: '...\.venv\Lib\site-packages\litellm\proxy\guardrails\guardrail_hooks\litellm_content_filter\guardrail_benchmarks\results\block_age_discrimination_-_contentfilter_(age_discrimination.yaml).json'`.
+That path is exactly 260 characters and Windows long paths are off (`LongPathsEnabled = 0`, a system setting,
+not changed). pip stopped there and left the packages queued after it uninstalled, so everything except
+`litellm` was installed in a second pass. `litellm` is imported only when `llm_provider = "litellm"`, so one
+LLM route of about 30 is missing and nothing else. A later `pip download litellm` hung for over 3 minutes and
+was killed.
+
+**Verified on 2026-10-08, no key anywhere:**
+
+| check | result |
+|---|---|
+| API starts | `python main.py` -> `GET /docs` 200, `GET /ping` -> `"pong"`, 16 routes in `/openapi.json` (`/api/v1/videos`, `/audio`, `/subtitle`, `/scripts`, `/terms` ...). Stopped afterwards; port 8080 confirmed closed. It logs `API key authentication is disabled`: keep it on 127.0.0.1. |
+| End to end | 3 ffmpeg test clips (two 1280x720, one 1080x1920, 6 s each) + a fixed 3-sentence script -> `storage/tasks/<id>/final-1.mp4`: 1080x1920, 30 fps, h264 `yuv420p` `tv` range, AAC, 8.5 s, plus `audio.mp3` and `subtitle.srt` (3 cues, 0.11-8.13 s). Exit 0. |
+| Looked at | 3 frames on one contact sheet. Subtitles are burned in and match the script. The horizontal clip was centre-cropped to fill 9:16 (`cover` is the default fit; `--video-fit-mode contain` gives black bars). |
+| Time | **2 min 54 s for an 8.5 s video**, 112 s of that the final MoviePy render. Slow. |
+| Web page (`webui/`) | **not started.** Only the API and the CLI were run. |
+
+```bash
+PYTHONUTF8=1 ./.venv/Scripts/python.exe cli.py --video-script "..." --video-source local \
+  --video-materials "C:/a.mp4,C:/b.mp4" --video-concat-mode sequential \
+  --voice-name en-US-AndrewNeural-Male --bgm-type none --subtitle-enabled --video-language en-US
+```
+
+**Four things the test showed that the README does not:**
+
+- **The voice is free but not offline.** `edge-tts` calls Microsoft's online voices. No account, no key; no internet, no voice.
+- **It used 2 of the 3 clips.** It fills the narration length in 5 s pieces (`--video-clip-duration`) and stops; the third clip never appeared. It does not place a picture on the sentence it belongs to, and the default order is `random`.
+- **Its subtitles are not his.** One whole sentence per cue in a thin font (`STHeitiMedium`), low on the frame, timed by the TTS. His are bold white caps, 1-3 words. Take its SRT timing if useful; burn captions with our own renderer.
+- **Loudness came out at -20.3 LUFS** (true peak -6.9 dB), voice only. Not at his level.
+
+**Keys, by name only** (`system/.env` holds `GROQ_API_KEY`, `ELEVENLABS_API_KEY`, `HF_TOKEN`; none were used or copied):
+
+| part | free with no key | needs |
+|---|---|---|
+| Script | pass `--video-script` (what was tested) | an LLM key for `--video-subject`. **Groq is a built-in provider** (`llm_provider = "groq"`, `https://api.groq.com/openai/v1`, default model `openai/gpt-oss-120b`), so his existing key fits. It is read from `config.toml` (`groq_api_key`), not from the environment: **not placed there, so not exercised.** Also listed: `ollama` (not installed here) and `claude_code` (calls a logged-in `claude` CLI; none on PATH). |
+| Search terms | not needed with `local` | the same LLM key |
+| Voice | Edge TTS | nothing. `ELEVENLABS_API_KEY` IS read from the environment for ElevenLabs voice and music, and that spends his credits; it only fires on an ElevenLabs voice name or `--bgm-type elevenlabs`. |
+| Subtitles | `subtitle_provider = "edge"` (default) | `whisper` mode pulls faster-whisper **`large-v3`, about 3 GB, on first use. Not downloaded.** |
+| Stock footage | none | `pexels_api_keys` and/or `pixabay_api_keys`: **free, each needs an account** (pexels.com/api, pixabay.com/api/docs). Not created. Coverr also needs a key. |
+| Music | `--bgm-type none` | `random` plays one of 29 unlabelled mp3s in `resource/songs/`: **no licence listed, do not post with them.** He adds his own music anyway. |
+| `HF_TOKEN` | | satisfies nothing here |
+
+**Leave OFF:** `upload_post_enabled` / `upload_post_auto_upload` post the finished file to TikTok and Instagram
+through upload-post.com. Both are `false` in `config.toml`. Posting goes through Metricool, on his approval.
+
+**Where it may be used, and where it must not:**
+
+- **Honest uses:** a quick rough draft to hear a script against pictures; generic scenery b-roll with no
+  identifiable person (a coastline, a market, a skyline) once a Pexels or Pixabay key exists; the free Edge
+  voice as a scratch narration; `--stop-at audio` or `--stop-at subtitle` to get just the voice and its SRT.
+- **Never on a true story about a real person.** His rules: real images first, no AI or stock face standing in
+  for a real person, every picture must make sense. This tool searches stock by keyword and joins the results
+  to cover the narration length; it will put a stranger's face over a real name and has no way to know. Its
+  text-to-video and `openai_image` sources are the same problem with an invoice attached.
+- **Not for his own footage either.** It cannot keep a line and its reply together, and it crops horizontal
+  clips blind. That is `tal-video-editor`.
+
+---
+
+## Alisa0808/vox-director — registered 2026-10-08, NOTHING GENERATED (paid key missing)
+
+| | |
+|---|---|
+| What it is | An agent skill (MIT, v1.0.0, commit `6a85a7c`, 2026-10-06): one topic -> a narrated Vox-style paper-collage video. 22 Python scripts driven by one `beats.json` per project. Every picture, clip, voice and song is bought from **Atlas Cloud** (`api.atlascloud.ai`); ffmpeg and Pillow do the joining. |
+| Where | `skills/toolbox/vox-director/` (59.8 MB, most of it four showcase mp4s). In the toolbox on purpose: its `SKILL.md` triggers on *"turn this topic into a collage video"* and would contest `tal-video-editor`. |
+| Key | `ATLASCLOUD_API_KEY`, read from the environment. **Paid, not on this machine, not created.** No free tier is mentioned anywhere in the repo. |
+| What was actually done | `SKILL.md`, `provider.py`, the cost and host notes read, `atlas_cloud.py` and the other scripts grepped for imports and endpoints; all 22 scripts pass `python -m py_compile`; Pillow 12.3 and numpy are present. **No script was run. No picture, clip or sound exists from it.** |
+
+**What each stage calls:**
+
+| stage | script | calls | key? |
+|---|---|---|---|
+| Beat map | none (the assistant writes `beats.json`) | nothing | no |
+| Style bake-off | `style_bakeoff.py` | image model | yes |
+| Collage posters | `keyframes.py` | `google/nano-banana-2/text-to-image` (or `openai/gpt-image-2`) | yes |
+| Motion | `clips.py` | `google/gemini-omni-flash/image-to-video`; `kwaivgi/kling-video-o3-pro` for real people and logos | yes |
+| Voice + music | `audio.py` | `xai/tts-v1`, `minimax/music-2.6` | yes |
+| Join, captions, watermark | `assemble.py` + `text_overlay.py` | ffmpeg + Pillow | **no** |
+| Talking head -> collage (A-roll) | `asr_beats.py`, `aroll_clips.py` | `xai/stt-v1`, Omni video-edit, Seedance | yes; `aroll_assemble.py` is local |
+| One photo -> collage (C-roll) | `croll_keyframes.py` | `google/nano-banana-2/edit` | yes |
+| Presenter on screen (host) | `host_plates.py`, `host_clips.py` | Seedance + Omni | yes; `host.py` keying is local |
+| Cut-out pieces | `extract_elements.py` | `youchuan/v8.1/remove-background` | yes |
+| Fly-in assembly, confetti, slow zoom on a still, scrapbook | `motion.py`, `confetti.py`, `kenburns.py`, `mg_scrapbook.py` | Pillow + ffmpeg | **no** |
+
+So with no key the look cannot be made at all: the collage is born in the image step. What could run is the
+back half, on pictures made elsewhere (local SD via `system/tools/sdbatch.py`, cut out with
+`hyperframes remove-background`): `kenburns.py`, `motion.py`, `assemble.py`. **Read from the imports, not
+run.** We already have that half working with Paperima + HyperFrames (entry above), so the real value here
+today is the writing: `references/prompt-guide.md` (how to prompt a collage poster) and
+`references/beat-layer.md` (story arcs, shot sizes, never the same camera move twice in a row).
+
+**Cost, as the repo states it (its prices are dated 2026-07-30; not checked by me):** poster $0.08, music
+$0.11, voice $0.015. `models-and-gotchas.md` says *a ~30 s film is about $0.8-1.0*, about $1.5 on the cut-out
+path. **The same file contradicts that:** it says Omni is billed $0.13 per SECOND with a 3 s minimum, and
+`host-mode.md` puts B-roll at about $0.16 per second and a host clip at about $0.36 per second. By its own
+per-second numbers a 30 s film is closer to $4-5 and a 60 s one to $9-10, before re-rolls (my arithmetic).
+Budget on the higher figure.
+
+**Three things to know before a key ever goes in:**
+
+- **It will likely not run on Windows as written.** `atlas_cloud.py` uploads and downloads through a
+  hard-coded `/usr/bin/curl`, a path Windows Python does not have. A two-line patch (use `curl` from PATH).
+  Not made, because it could not be tested without the key.
+- **It stamps `"Made with Atlas Cloud"` on the film** unless `"watermark"` is cleared in `beats.json`, and it
+  uploads any photo or talking-head clip you give it to Atlas Cloud's servers (A-roll, C-roll, host mode).
+- **For Tal's true stories it breaks the first rule.** B-roll mode invents every picture; C-roll and A-roll
+  redraw the world around a real person, and its own notes record the video stage re-lettering a label and
+  re-timing a face. Fine for an idea or a place explained as a collage. Not for a real person's face.
+
+The clone carries its own `.git` folder: add it to our repo as plain files, or git records an empty submodule
+pointer instead of the skill.
