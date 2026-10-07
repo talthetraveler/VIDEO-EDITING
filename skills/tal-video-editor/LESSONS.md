@@ -2651,3 +2651,641 @@ replaced files into it. He moved them back and was angry.
   superseded file out in the same step" is withdrawn.
 - "No duplicates" means: do not upload a second copy of a cut. It is not a
   licence to tidy his folder.
+
+## 100 — "This isn't so good ... Kung Klaus Cloud ... the script should be better, 'this guy was a ... and convinced ... so ...' ... some videos get cut out ... make the animations better" (Tal on the first AI story reel, Daryl Davis V1, 2026-10-05)
+
+His words on V1: *"This isn't so good. Like, Kung Klaus Cloud, right? ... you
+should use like my NAS Daily script writing ... this man was a ... and
+convinced ... why, so ... and then tell the story ... some videos get cut out
+... make the animations better."*
+
+- **A generated voice is never trusted on a hard name.** Kokoro said "Ku Klux
+  Klan" wrong, and Whisper transcribed it back correctly anyway, so the
+  transcription check passed a line a listener heard as nonsense. **Hearing
+  the right words back from Whisper does not prove the pronunciation.** Write
+  around hard words ("the Klan", "K K K") and tell Tal which names to listen
+  for.
+- **Hook = "This man is a [who]. And he [did the impossible thing]. So how?"**
+  then the name, then the story with but / so. Load
+  `toolbox/tal-scriptwriting` for every AI story script; the reference formula
+  alone read flat to him.
+- **"Videos get cut out" was frozen picture.** Shots slowed with
+  `data-playback-rate` under 1 froze for 0.3-1.2s in the render (`freezedetect`
+  found ten). Never slow footage to stretch a shot; pick a longer take or cut.
+  Run `ffmpeg -vf freezedetect=n=0.003:d=0.4` on every HyperFrames render with
+  footage.
+- **Static cards and hard cuts are not "animation".** Every shot gets a
+  push-in, captions pop in, the year counts up, the quote lands word by word,
+  small 4:3 archive sits in a window instead of being blown up.
+- **A contact sheet made with `fps=1/N` had wrong timestamps** (the label said
+  86s, the frame was from 59s) and half of V1's first shot list was wrong
+  because of it. Stamp the time before selecting frames:
+  `select='gte(t-prev_selected_t,N)'` with `drawtext=%{eif:t:d}`. And look at
+  the first AND last frame of every shot in the render: most misses were a
+  shot running into the next picture.
+- **Windows file names are not case-sensitive.** `DARYL-DAVIS-V1.mp4` and
+  `daryl-davis-v1.mp4` are one file; ffmpeg read and overwrote its own input.
+
+## 101 — "make it better with animations based off the references ... they have people speaking ... more zooms, cuts ... no still cards ... use sound effects" (Tal on Daryl Davis V2 and V3, 2026-10-05)
+
+His words: *"you should make it better with animations based off the references
+I've given you, you haven't done that ... you said 1983 wrong ... there's also
+some parts that are frozen ... you should use sound effects"*, then *"there
+should be more zooms, cuts ... moving, no still cards ... I give you the
+references, but they have people speaking. It includes the people speaking. So
+make it like that."*
+
+- **Studying the references is not using them.** V2 had pop-in captions and a
+  push-in; none of the effects written down in `formats/ai-story-reel.md`
+  section 3. Every designed beat in an AI story reel names the reference it
+  copies (drawn arrow, name blocks, year roller, flurry, viewfinder, article
+  highlight, polaroids) before it is built.
+- **The people in the story speak in their own voices.** Transcribe every
+  source first and pull the subject's real lines: his name, his question, the
+  other side's answer, his last word. The narrator only connects them. V4 used
+  four; the Kelly line is shown on Kelly saying it (same source, same time, so
+  the lips match).
+- **A flat card that sits still reads as a freeze.** Solid colour cards went
+  out; a designed beat sits over moving footage or moves itself. `freezedetect`
+  at `d=0.3` must return nothing.
+- **Cuts: 60 a minute was what satisfied "more".** Every shot of 1.5s or more
+  gets a punch-in jump cut at its midpoint; the big beats get a 6-cut flurry.
+- **Check how the voice engine will READ a word, not how Whisper hears it.**
+  `kokoro_onnx.tokenizer.Tokenizer().phonemize(text)` showed "1983" read as
+  "nineteen hundred eighty three" and "Daryl" as "DAH-rril". Spell years as
+  words ("nineteen eighty-three") and names the way they sound ("Darrel").
+- **Sound effects go on every designed beat**: whoosh into a card, click per
+  roller digit and per flurry cut, pop on a highlight and each polaroid, a low
+  hit on the two biggest moments, a short riser into the quote.
+
+## 102 — "why is this shot like this, this is horrible" and "this article is empty, find a real article" (Tal on Daryl Davis V4, 2026-10-05)
+
+- **A wide shot of two people was centre-cropped to vertical and showed the
+  wall between them.** I had approved it from a thumbnail 150 pixels wide.
+  Before any landscape clip goes into a vertical frame: pull its full 16:9
+  frame, find where each person sits, and either crop ON a person
+  (`object-position` at their x) or, when the shot needs both people, show the
+  whole picture as a band across the frame. Check framing at 300px or wider
+  per shot, never on a 4-row contact sheet.
+- **Grey placeholder bars are not an article.** A proof card uses the real
+  page: fetch it, and use its real headline, byline, date and opening lines.
+  The search-result title I had used was not even the published headline.
+  If the real text cannot be fetched, do not show a body at all.
+- **How the references use people speaking** (six more reels read the same
+  day: @founded x5, @seeitai): one to three real lines per reel, 1-3 seconds
+  each, always set up by the narrator's sentence before it ("...took the stage
+  and said five words"), the speaker ON SCREEN while the line plays, captions
+  carrying on in the same style, then straight back to the narrator. Wide
+  footage is shown either tightly cropped on the one speaker or as a 16:9 band
+  on black.
+
+## 103 — "you don't do enough animations or movements like the references, copy that exactly ... combine all the references into one ultimate style" (Tal on Daryl Davis V5, 2026-10-05)
+
+He liked V5 (*"it's really good actually, I really like it"*) and asked for
+more: arrows like The Comma Effect, more movement, real pictures found online,
+sound effects, all references combined. What V6 added, and what each came from:
+
+- **Read the reference at 8-10 frames a second before copying its motion.** A
+  contact sheet shows what is in a shot, never how it moves. The Founded
+  strips showed things no sheet had: captions that build one word at a time
+  dead centre, punch-in cuts of 1.0 -> 1.35 -> 1.8 on the words, half-second
+  colour cards, a five-picture flurry for the hook.
+- **Real photos first.** Wikimedia Commons had seven freely licensed photos of
+  the subject (search the API, keep `LEDGER.json` with licence and author,
+  credit on screen). Check there before using anyone's video.
+- **Generated stills are available with what is installed**: the Hugging Face
+  key reaches FLUX schnell through `router.huggingface.co/fal-ai/...`. Places,
+  objects and backs only, labelled as illustration. No real person's face.
+- **Arrows** (Comma): a dashed line drawn from a bottom corner to the subject,
+  head landing last, a short whoosh under it. Used three times, not on
+  every shot.
+- **A caption box must not appear before its words**: a boxed phrase shows
+  whole; only unboxed phrases build word by word.
+- **Punch-in cuts need the subject's position**, in both axes. A head near the
+  top of frame was zoomed out of the picture until the origin was set to it.
+- Working template: `system/projects/ai-story-daryl-davis/v6/build.py`.
+
+## 104 — "there's a picture of a beer, that doesn't make sense ... you kind of need to watch this video before you give it to me ... don't use the footage of other people, just use the Commons photos and videos" (Tal on Daryl Davis V6, 2026-10-05)
+
+His words: *"Do we even say his age? ... 'Then he says something else.' There's
+a picture of a beer. That doesn't make sense. You kind of need to watch this
+video before you give it to me. But it's pretty good on the edit side. You
+don't need to do the footage clip of other people. Don't use that. Just use
+the Commons photos and videos. That was just as a reference."* And the ending
+he wants: *"This is what happens when you meet someone you're taught to hate,
+and then you actually end up understanding them ... put a big thing at the
+end."*
+
+- **Third-party footage is for studying only, even in a draft.** An AI story
+  reel is built from Wikimedia Commons media, generated illustrations and
+  designed cards. Search Commons for audio and video of the subject too: it
+  had a public-domain 5-minute recording of Daryl telling the story himself,
+  which gave real voice lines with no rights problem.
+- **Watching means reading every picture against the words spoken over it.**
+  `look/watch.jpg`: one frame a second with the words under each frame. That
+  sheet caught what frame checks missed: a beer under a line about something
+  else (and he does not drink; it was cranberry juice), "great friends" over a
+  group of strangers, "two enemies" over smiling students, the same students
+  behind "TAUGHT TO HATE". Ask of every frame: what does this picture claim
+  about the people in it?
+- **Tell the story from the subject's own account first.** His recording
+  corrected two things the articles had blurred.
+- **The ending is a line plus a card**: the narrator says the meaning in one
+  sentence, then a big typographic card lands it.
+- **Do not put a card or caption on screen for a fact nobody asked for** (the
+  "25," card).
+- Free image generation on the Hugging Face key ran out after six images in a
+  month. Plan the stills before spending them.
+
+## 105 — "when Daryl is speaking, you should use actually the clips of him speaking ... I don't need the illustration of a bar ... use real shots" (Tal on Daryl Davis V7, 2026-10-05)
+
+This corrects lesson 104's first bullet, which I had read too strictly.
+
+- **When the subject's voice is heard, the subject is on screen saying it.** A
+  photo under a real voice is not enough. Find the VIDEO the audio came from:
+  the public-domain recording on Commons was the audio of a town-hall video,
+  gone from YouTube but saved on the Internet Archive
+  (`yt-dlp "https://web.archive.org/web/2/https://www.youtube.com/watch?v=<id>"`).
+  Line the video up with the audio already cut (transcribe ten seconds of
+  each, compare one word's time: the offset was 231.24s) and crop to the
+  speaker.
+- **Real footage of him is wanted** (documentary, his Instagram, news): for
+  him speaking and for the places in the story. What he rejected in V6 was
+  other people's footage standing in for things it did not show.
+- **No AI illustration where a real shot exists.** The generated bar looked
+  fake to him next to real photos. Generated stills are a last resort.
+- **Captions go under the speaker's mouth**, never across it, while he is on
+  camera.
+- **Do not put a narrator's line over footage of someone visibly talking.**
+- **Review renders are shown low-res in the chat**; the full file is for
+  after approval.
+
+## 106 — "put the Social Accords logo on top, just write it ... over every video" + "it got cut out ... moved way too fast ... doesn't repeat itself ... 'before' and 'And' overlap" (Tal on Daryl Davis V8, 2026-10-05)
+
+- **Every AI story reel carries the wordmark at the top, written as text**, to
+  his picture: three stacked centred lines, wide letter-spacing: `THE` small
+  and light, `SOCIAL` larger and light, both white; `ACCORDS` bold in warm
+  cream-gold `#E9C98F`. CSS is `.wordmark` in
+  `system/projects/ai-story-daryl-davis/v9/build.py`. Source credits move down
+  to clear it.
+- **A real spoken line gets room on both sides.** "It's called conversation"
+  was cut 0.06s before the first word and faded on the last one, and he heard
+  it as cut off. Leave 0.15s before and 0.25s after a real line.
+- **72 cuts a minute was too fast** ("moved way too fast"). V9 is 52: one
+  punch-in per long shot at most, a zoom-whip only on a change of chapter or
+  speaker, four cuts in a flurry, not six.
+- **Read the script aloud for repeated words** before recording it: "a bar in
+  Maryland. A bar where..." became "a Maryland bar where...".
+- **Time captions one voice segment at a time.** Transcribing the whole mixed
+  track let a word from the next speaker land early ("And" over "before?").
+  Transcribe each narration or bite file on its own and add its start time.
+  A caption ends within 0.8s of its last word so it never hangs into the next
+  shot.
+- A year followed by a designed animation needs a pause in the voice for the
+  animation to play: "In 1983." then 0.9s, then the sentence.
+
+## 107 — Susan Retik: show the attacks and make the review actually playable (Tal, 2026-10-05)
+
+Tal: "There needs to be shots of the attacks happening" and "it needs to be viewable."
+
+- An interview shot over a named historical attack does not satisfy literal event coverage. Use verified archival visuals on those words. Do not substitute aftermath footage from another date or another attack site.
+- Historical specificity matters: Susan's husband David was on Flight 11. A South Tower impact shot is Flight 175, so label it as general September 11 context, not the attack that killed David.
+- Distinguish archival photographs from moving footage in the handoff. A deleted Commons video page or a search-result licence snippet is not a verified reuse licence.
+- A localhost URL returning HTTP 200 can still be the Studio HTML fallback, not the MP4. Verify video/mp4, byte-range seeking, decoded dimensions, duration, and actual playback time advancing before saying the review is playable. Keep a native-controls player open for review.
+
+## 107 — "too much space between the speaking ... a quote of Daryl actually saying the question ... more pictures like the references ... stop overlapping ... the captions aren't so good ... 13 seconds there's a little cut" (Tal on Daryl Davis V10, 2026-10-05)
+
+- **Build the timeline from the sound, not the other way round.** V10 fitted a
+  new voice into old slots and left pauses of up to a second. V11's `build.py`
+  gives every voice segment a slot (its length plus a breath of 0.2-0.3s) and
+  writes each shot as a share of that slot, so a pause can be closed without
+  re-timing anything by hand. Longest pause is now 0.6s, and that one is the
+  year animation.
+- **A shot may not run past the footage that exists.** `MAXLEN` in the build
+  holds how long each clip really lasts before it cuts to something else, and
+  the build stops if a shot asks for more. It caught two overruns that would
+  have shown a blur or the wrong picture.
+- **The subject asks his own question.** Search the WHOLE long recording for
+  the line before letting the narrator say it: he says "How can you hate me
+  when you don't even know me?" on camera 11 minutes into the town hall.
+- **Cut the picture and the sound of a real line from the same in and out
+  points.** Then they cannot drift.
+- **A cutaway for every named thing**, the way the references do it, and from
+  free sources: Jerry Lee Lewis when he is named (public-domain photo), a
+  street in Frederick for "Maryland", a red drink for "buys him a drink".
+  Commons search by the thing's name finds them.
+- **Captions: back to the white pill, one at a time, whole phrases written by
+  hand** (`TEXT` in the build), gold on the turn. The word-building centre
+  captions overlapped faces and each other and he did not like them. Under the
+  face when someone is on camera, low on the article card.
+- **No shot under 0.75s outside a deliberate flurry, and no move on a short
+  shot.** The 0.7s handshake insert and the zoom on the walk-up were the
+  "little cut" and the "it moves" he pointed at.
+
+## 108 — "in 1983, there is too much time between speaking" + "make our own style with our own arrows and sound effects, more fast paced, more viral, combining all the references so it doesn't look like we copied them" (Tal on Daryl Davis V11, 2026-10-05/06)
+
+- **No pause is left open for an animation.** I had held 0.6s after "In 1983"
+  so the year could roll; he heard it as dead air. A designed beat plays UNDER
+  the next words. Breath between narration lines is 0.14-0.2s, 0.2-0.24s
+  around a real spoken line, and nothing longer.
+- **One tense.** "In 1983, he's playing" next to "he kept talking" read wrong
+  to him ("he was playing"). A story in the past is told in the past.
+- **Trim a generated line by the model's own character timings**, with 0.06s
+  before and 0.12s after. A silence threshold can eat a soft first sound.
+- **Our own style, not a copy of any one reference.** From V12 on: our own
+  arrow (one solid gold marker stroke, not The Comma Effect's dashed white
+  one), our own caption (white pill, gold on the turn), our own end card
+  (struck-through line, gold word lands), the written wordmark on top. The
+  references are where the IDEAS came from; the look is ours. Next: our own
+  sound-effect set instead of the stock whoosh/pop.
+
+## 109. AI story reel V12 -> V13: know what is in every frame, and let the story explain it (2026-10-06)
+
+Tal on Daryl Davis V12: *"on 47 seconds you used a picture of him with a little
+Nazi thing, for 0.1 seconds ... Why does he have a Nazi thing? Is that his
+story? You should understand that. Include this in the script."*
+
+- **A media-start that lands a few frames early shows the END of the shot
+  before.** `A 114.2` opened on 0.2s of the previous shot: Daryl at the White
+  House holding a "White Power" swastika sticker. I had never looked at it.
+  Find a shot's real first and last frame (stamped frames every 0.15s) before
+  writing its start, and start 2-3 frames inside it.
+- **A strong picture nobody explains is a hole in the script.** The answer was
+  in his own town-hall recording: "over 200 white supremacists have given up
+  that ideology ... the Ku Klux Klan or some neo-Nazi movement". So the script
+  now says "Then others quit. Klansmen. Even neo-Nazis." over that shot (held
+  1.2s, arrow on the sticker), and he says "And over 200 have left that
+  ideology" on camera, with the real headline behind it. Search the subject's
+  own words for the thing in the picture before inventing a line.
+- **Hook: the fact first, the twist second.** "This man convinced members of
+  the KKK to quit. And he's a Black musician." beat "This Black musician
+  convinced ...". Say "KKK", not "Klan members".
+- **Cut a place name that pays nothing off** ("in a Maryland bar" -> "in a
+  bar"), and then cut the picture that only existed for it (the Frederick
+  houses stayed one render too long).
+- **When the subject says the small word himself, use it.** "I said, why?" is
+  1.4s of him, then the Klan line. The reveal is the one CINEMATIC beat:
+  picture drains to grey, slow push, riser under the line before, heartbeat,
+  low boom + low piano note on "Ku Klux Klan". One per video.
+- **Arrows come from the top**, down onto the thing, so they never cross the
+  caption. A caption drops lower (`caplow`) when the thing pointed at sits
+  where the caption would be.
+- **Our own sound set** (ElevenLabs sound-generation, free tier works, ~1-2.5s
+  each): marker stroke (arrows), camera shutter (every plain photo cut), paper
+  slap (article), glass clink, riser, heartbeat, deep boom, low piano note,
+  bright piano chord (name + end card: piano is HIS instrument, pick the
+  signature sound from the subject). Trim the silence in front and set each
+  peak by hand; `alimiter` re-levels a file unless told not to, so set gain
+  with `volume` only.
+
+## 110. AI story reel #2 (Tim Zaal + Matthew Boger): a line must explain itself, and every claim gets its picture (2026-10-06)
+
+Tal on V1: *"skipping school because he was gay ... How does that make sense?
+... She threw him out. Then you need to show someone throwing someone out ...
+you need a video of skinheads ... Tim, you gotta explain that better ... you
+need more SFX."*
+
+- **Never keep a quote that only makes sense with the question that was cut.**
+  "I told her it was because I was gay" answered "why are you skipping
+  school?". Without the question it reads as nonsense. Read each real line
+  COLD, alone, as a stranger would. If it needs set-up, say the plain fact in
+  the narration ("At thirteen, he told his mother he was gay") and pick the
+  line that carries the event itself ("she dragged me across the floor and
+  threw me out the door").
+- **Every event in the script gets a picture OF THAT EVENT.** "Threw him out"
+  over boots walking in a park and "fourteen skinheads" over a man by a car
+  were both wrong. If no real footage exists, generate a still (boy with a bag
+  at a closed front door; shaved-head silhouettes under streetlights), credit
+  it "ILLUSTRATION - AI-GENERATED", and keep faces out of it. Never use a
+  photo of real, identifiable strangers to stand in for attackers.
+- **Introduce the second person with what he DID**, before his line: "One of
+  them was Tim Zaal. He was seventeen. And he threw the last kick." Then his
+  own "when I kicked him in the head, he was out" lands.
+- **Sound follows the picture**: door slam on the door, boots on the gang,
+  running on the alley, a dull thud on the kick, a low drone into the reveal,
+  a warm shimmer on "friends" and on the end card. One sound per event.
+- **Sources, in order:** low-res everything -> transcribe -> pick lines ->
+  download ONLY the chosen videos at 1080p into `hq/` and build from those.
+  A talking head filmed 16:9 goes in a TALL window (1080x1216, blurred copy
+  behind), never full-bleed: full-bleed cuts the forehead off. A two-shot goes
+  in a full-width band so the channel's watermark is whole, not half.
+- **Image generation that works here:** Hugging Face -> fal FLUX schnell (a
+  couple of images, then 402 until the credits reset) and pollinations.ai (one
+  or two, then 402; crop its corner watermark). Plan for 2-3 stills a video.
+- **ElevenLabs is on the Creator plan from 2026-10-06**: `/v1/music` works
+  (70s instrumental bed, loudnorm to -29 LUFS under the voice) and
+  `/v1/sound-generation` for the per-event sounds.
+
+## 111. AI story reel: "the most engaging video ever made", the PUNCH LAYER (2026-10-06)
+
+Tal on Zaal/Boger V2, in three messages: *"you need a shot of him saying [it],
+with VFX zoom in a little bit on his face ... make the captions more engaging,
+popping up on the screen ... better animations and more B-rolls and faster
+paced"*; *"imagine you're making the most engaging video ever made ... I should
+watch it and not lose interest, every millisecond should be fast paced"*;
+*"clicks, boom, boom, boom, things flashing in, flashing out ... fast cards,
+good SFX ... like the references"*. 35 cuts a minute with a caption pill was
+too calm. What V4 does, and what every video in this style now starts with:
+
+- **~55-60 cuts a minute.** No narration shot longer than about a second. A
+  4-second sentence is 4-6 pictures, not 2.
+- **A spoken line is never one static shot.** Enter the same clip part-way
+  (`"file.mp4@1.2"`) and raise the zoom each time (`z1.25`, `z1.5`): one line
+  becomes two or three punch-ins on the face. Cut the pauses OUT of the line
+  (silencedetect, keep ~0.15s) and hide each cut under a punch-in.
+- **Captions pop word by word** as each word is spoken (bold white caps, heavy
+  dark stroke, 72px, key words gold from the starred word to the end of the
+  phrase), and the phrase kicks when the gold word lands.
+- **Sound on everything:** a click or swish on every cut, a whoosh + a white
+  flash on every whip, a short boom under every gold word, a stamp on every
+  label card, a thud + full flash on the hit, plus the event sounds (door,
+  boots, running) and the music bed.
+- **Big numbers** (`num:14`) slam in over the picture when a number is said;
+  **label cards** (`tag:HOLLYWOOD`) stamp in for places and dates.
+- **Put the speaker ON CAMERA for the key line**, even if a better-worded
+  version exists as voice-over somewhere else. If the exact sentence was
+  recorded over B-roll, find the same moment told on camera in another
+  interview and say so.
+- Build order that saved time: change the ENGINE once (a `patch.py` per
+  version), then port the same replacements to the other videos.
+
+## 112. Write these scripts the way Tal writes his own (SCRIPT VIDEOOS PDFs, 2026-10-06)
+
+Tal sent two PDFs of his real shooting scripts (Hisham + Aya; Aryeh Lurie) as
+the model for the AI story scripts. What they do, measured on the page:
+
+- **Hook = two identities and one act, as stacked short lines:** "This Muslim
+  man / saved this Jewish woman / from being murdered by terrorists." Then the
+  people introduce THEMSELVES: "Hi, I'm Hisham." "And I'm Aya. And this is our
+  story." If a recording of the subject saying their name exists, use it.
+- **3-6 words a line, one fact a line.** Never a sentence with two commas.
+- **One concrete object carries the feeling:** "Aya still had her bike helmet
+  on." "The old cucumbers that sellers were about to throw away." "The first
+  plate out of the pot went to the neighbors." Find the object in the
+  subject's own telling (Montana: her grandfather's pin) and build a beat on it.
+- **Named beats, in order:** BEFORE -> THE [thing] -> ... -> WHAT IT COST ->
+  TODAY. The narrator gives facts; the subject says every line that has a
+  feeling in it. His scripts mark the question to ask to get each line.
+- **The turn is its own tiny line:** "But they had never met." "For seven
+  hours."
+- **Ending:** "Today, ..." then the subject's payoff ("he's one of my best
+  friends"), then his sign-off: "That's another story from Israel the
+  headlines don't show you. Follow for more!" For a non-Israel story: "That's
+  another story the headlines don't show you."
+- **Check his premise before writing it.** He said Montana Tucker is "the
+  daughter of Holocaust survivors"; every source, and her own words, say
+  GRANDdaughter. The script says granddaughter.
+- **His own voice exists in ElevenLabs** ("TAL VOICE", instant clone
+  `UDM1kXWtXWhebxKvVVVw`; the professional clone was not fine-tuned yet on
+  2026-10-06). Use it when he asks for his voice. ElevenLabs has no pictures.
+
+## 113. A free, unlimited image generator now runs on the laptop; and never show a picture twice (2026-10-06)
+
+- **`system/tools/sdgen.py`** (own venv: `system/tools/sd-venv`, torch 2.5.1
+  + CUDA 12.1, diffusers 0.40). Stable Diffusion 1.5 "DreamShaper 8" + LCM
+  LoRA, sized for the RTX 3050 Ti's 4 GB. `sd-venv/Scripts/python.exe sdgen.py
+  out.jpg "prompt" [seed]` -> 576x1024 in 7 steps (~6s; ~45s with model load),
+  upscaled to 1080x1920. Good for moody, faceless stills (boots on wet
+  pavement, a market street, a door at night). Weak at faces and hands: keep
+  people small, from behind or in silhouette. Label every generated shot
+  "ILLUSTRATION - AI-GENERATED". Generate several in ONE process when a video
+  needs many (the load is 40s of each call).
+- **What does NOT run here:** LTX-2 (wants 32 GB of video memory; ~9-12 GB
+  even compressed; 66 GB of models), Wan, Stable Video Diffusion. No local
+  image-to-video on 4 GB. "Open Higgsfield AI" in Downloads is only an
+  interface to the paid muapi.ai service and has no key configured.
+- **The disk is 98% full (14 GB left on 2026-10-06).** Every 1080p source
+  download and every render eats it. Check `df -h /c` before a batch; a render
+  that fails with no clear error is often this (or a transient browser crash:
+  the Zaal V5 render failed once and passed unchanged on the re-run).
+- **No picture twice in one video.** Tal on Zaal V4: the two-shot used for
+  "Today, they're friends" came back as the payoff at the end. The payoff must
+  be a picture the viewer has not seen. Keep the strongest image of the pair
+  for the ending and never spend it earlier; the hook flurry gets its own
+  shots, not previews of later ones.
+- **A creator's own clips often carry burned-in app text** ("Walking with your
+  bestie like"): it collides with our captions. Look at every clip before
+  using it and skip the ones with text.
+- **A studio interview cuts to the host mid-answer.** Check the last second of
+  every on-camera line; cut away to B-roll before the host appears.
+
+## 114. Pexels is in the flow for ILLUSTRATIVE b-roll (2026-10-06)
+
+Tal: *"Pexels is a library of free stock photos and videos ... useful for
+general B-roll: pregnancy, hugs, letters, working hands. It isn't evidence of
+the actual person's life ... use this if you want in your flow."*
+
+- **`system/tools/pexels.py`**: `python pexels.py find "query" portrait` reads
+  the public search page (no key needed, verified 2026-10-06), downloads the
+  smallest file of the first 18 results and writes a contact sheet to
+  `system/tools/pexels-cache/sheet.jpg`; `python pexels.py get <id> out.mp4`
+  fetches the chosen one at 1080 on the short side. Most results are vertical
+  4K and MOVING, which a generated still is not: try Pexels first, generate
+  only when nothing fits.
+- **Licence:** free to use and edit, credit not required. Do not imply the
+  people shown endorse anything, never show an identifiable person in an
+  offensive role (a stock face must never stand in for an attacker, a victim
+  or the subject), never resell the file unchanged.
+- **Label it** in the corner credit: "ILLUSTRATIVE STOCK". It is atmosphere
+  (a door, a street at night, hands, a crowd from behind), never evidence.
+  Prefer shots with no recognisable face.
+- Order of preference for any beat: real footage of the real person -> real
+  archive of the real event -> Pexels (illustrative, moving) -> local
+  generated still (illustrative) -> nothing (rewrite the line).
+
+## 115. Narration speed: natural, not rushed (2026-10-06)
+
+Tal on Montana V1 (his own cloned voice at ElevenLabs speed 1.12): *"don't
+speak so fast also."* The references run 180-200 words a minute, but HIS voice
+at that speed sounds rushed. **Record narration at speed 1.0** (about 145-180
+wpm) and get the pace from the PICTURE (cuts, pops, sounds) and from having no
+gaps, not from a sped-up voice. `system/tools/revoice.py <build dir> 1.0`
+re-records only the narration lines of a build; the timeline rebuilds itself
+from the new lengths.
+
+## 116. AI story reel corrections on Arno + Pardeep V2 (2026-10-06)
+
+Tal: *"why do you say he took the lives of six people and the six is over
+him?"*; *"use the original scripts ... from the reference videos I gave you.
+Those are better"* (not his Beyond-the-Headlines shooting scripts); *"you
+should do the arrow ... more"*; *"you added music [for Montana], why not the
+other videos"*; *"now you have a new voice, a Tal voice."*
+
+- **Never put a big number, tag or arrow over the face of the person who is
+  speaking.** A "6" over Pardeep while he says "six people" reads as a label
+  ON HIM, next to the word "killed". Numbers go on b-roll of the thing
+  counted, or stay in the caption.
+- **Script model = the REFERENCE reels, not his own shooting scripts.** Hook
+  -> "So how did that happen?" -> "This is [name]." -> story -> "This is what
+  happens when ...". His PDFs (LESSONS 112) are for videos he shoots; do not
+  end these with "the headlines don't show you" unless he asks.
+- **Arrows are part of the style: at least two a video,** on a face when the
+  narration points at a person ("this man's father", "Arno Michaelis"), never
+  on the current speaker.
+- **Music must be HEARD.** A bed at -28 LUFS under a -17 mix read to him as
+  "no music". Mix the ElevenLabs bed at about -23 LUFS and check every video
+  has one (Daryl V14 has none).
+- **Narrator = "TAL VOICE"** (his ElevenLabs clone) for all of these from now
+  on, at speed 1.0.
+
+## 117. Free only; the paper cut-out pipeline; brag for graphics (2026-10-06)
+
+- **Tal does not want paid generation services** ("I didn't want to do anything paid ... my friends do it for free").
+  Do not propose muapi / paid video models again unless he raises it. ElevenLabs (his own plan) is the exception.
+- **Cut-out collage, all free and local:** `sdbatch.py` (object "isolated on a plain pure white background") ->
+  `npx hyperframes remove-background x.jpg -o x.png` -> `node system/repos/paperima/paper-cutout.mjs` -> three frames
+  taking turns at 6 a second = the hand-made wiggle. SD often draws the object twice: look at it and crop one.
+- **Style test that proves the Elie Wiesel blocks:** `system/projects/style-test-wiesel/build.py` (two-weight title,
+  paper list with cut-outs, framed inset on white). Colour cards and the host shot are not in the test yet.
+- **Tal: "brag is really good to use for some aspects of the video edit."** The `brag` skill's motion-graphics craft
+  may be borrowed for title / graphic segments inside a story video. Footage edits still belong to tal-video-editor.
+- A session restart kills background renders silently: after any restart, check that the expected output files exist.
+
+## 118. The Elie Wiesel Foundation model: host lines, map, stacking words (2026-10-06)
+
+Tal on the Yeonmi Park reel: *"you should be able to do exactly these types of videos ... there's obviously parts that
+will be my face speaking. So for those lines you tell me what I need to say, and then I'll send that footage to you ...
+make the script and just make me the video, and the only line that's missing is there ... build everything that you
+need. Test the quality ... I'll be the host."*
+
+- **The workflow from now on:** write the script -> mark which lines are HOST lines (the connective ones: the question
+  after the hook, each turn, the ending) -> build the whole video with his cloned voice on every line -> send it WITH
+  the list of host lines to film -> when his clips arrive, swap them in at those slots (picture + his real voice).
+  Host lines are short (2-9 words), 5-7 a video, about a third of the running time.
+- **How to film a host line (tell him every time):** phone vertical, eye level, face filling the top half, plain wall
+  or the location behind, one line per take, a half-second of silence before and after, look at the lens.
+- **New blocks, built and tested (free):** `system/tools/mapgen.py` -> `route_map()` (NASA Blue Marble, public domain,
+  `system/tools/maps/`; lon/lat points, camera pans along a dotted red route, labels stamp in) and `stack_words()`
+  (lines stacking over footage). Test: `system/projects/style-test-map/`.
+- **Blocks now in the story engine** (`ai-story-retik-quigley/v1/build.py`): `title:lead|BIG`, `card:#hex|lead|BIG`,
+  `cuts:a,b,c` (Paperima cut-outs), mode `inset`.
+- Not built: the restyled "wanted" portrait (image-to-image; untested on the 4 GB card).
+- Running a test render while a final render is going roughly doubles both: queue them.
+
+## 119. A title IS the caption: never both; Elie Wiesel captions measured (2026-10-06)
+
+Tal on Susan + Patti V1: *"when you're speaking, $150,000, you're putting it on the screen with the text. So you don't
+need the captions. Save that as a skill."* Also: the Flight 11 card *"wasn't good"*, the cut-outs *"were cut off a
+bit"*, and *"did you do the captions like Elie Wiesel? Look at their page."*
+
+- **When a title, card, number or date tag already shows the spoken words, there is NO caption under it.** The
+  reference does exactly this (third reel, DeKSZLztRqk, 118 s: "is still a SUBJECT", "I'm defined as a JEW because
+  we are all", "That defines ME not the enemy" all play with no small caption). In the engine: captions that start
+  inside a `title:` / `card:` shot are dropped automatically; a phrase prefixed `~` in `TEXT` is timed but not shown
+  (use it when a `tag:` chip says the same words, or when Whisper merged the words so the split has to be set by hand).
+- **Their caption, measured on three reels** (Dd1Zme0NLJD, DdbjUfvt5T2, DeKSZLztRqk): heavy grotesk, sentence case,
+  white, NO stroke and NO box, soft shadow; DARK text on a light page; 2-4 words, the whole phrase at once; vertical
+  centre 0.69-0.71 of the height; text height 16 px of 640 (= Inter 800 at 62 px on 1080x1920, tracking -0.035em).
+  No colour on key words. A fourth reel on the page (Dd4HHMSgKrd) is a plain speech clip with ordinary subtitles: not
+  the model.
+- **Their title** sits in the same lower-centre zone as the caption (not at the top): italic serif lead, heavy caps
+  word, optional italic tail. A title goes over a PICTURE; a flat colour card is the weak version.
+- **A flat colour card for a real event reads cheap** (Flight 11 on navy). Put the two-weight title over a picture.
+- **Cut-outs: lay them out so none overlaps another, the credit chip or the caption line**, and look at one frame per
+  cut-out. A white object on white fails background removal: draw it (PIL) and send that to Paperima.
+- **Render bug found:** an `<img>` inside a clip that starts mid-shot can render as a broken-image icon for the first
+  second (not loaded yet). Start the clip with the shot and hold the image at `opacity:0` until its cue.
+- When Tal asks "did you study that?", say exactly how many reels were measured and which were not.
+
+## 120. "Go to their Instagram" means study it, not lift it; music a bit lower (2026-10-07)
+
+Tal asked for a Younes Alkarnawi video and pointed at the Jews of NY reel for "nice shots of him". I started cutting
+THEIR reel into clips. Tal: *"I don't think we should use the actual picture of the Jews of New York because that's
+their video. Just look at their framework... the script. Make it a bit similar."*
+
+- **Another creator's finished reel is a REFERENCE (structure, script, shot ideas), never a footage source.** News,
+  talks and documentaries were used as labelled sources in earlier story reels; a peer creator's own edit is different:
+  it is their video. Ask what footage of ours exists before building. He has filmed Younes himself.
+- When he names an account, find the reel, measure it into `formats/` and the reference library in the same turn, and
+  say plainly that the build waits on his own footage.
+- **Music: he asked to "lower the music a bit" after -23 LUFS. New default bed: 3 dB under that (about -26 LUFS).**
+  `system/tools/wieselcaps.py <build dir>` puts the Elie Wiesel captions, the no-caption-under-a-title rule and the
+  quieter bed into an existing story build in one step.
+
+## 121. Previews are LOW-RES renders; full quality only after he approves (2026-10-07)
+
+Tal: *"why are you re-rendering... you should show me just low res here, and then move to high res if I approve."*
+I had been rendering every story video at full quality and then shrinking a copy for the chat.
+- **Review render = `hyperframes render -q draft`** (or the smallest setting that shows the cut), sent in chat.
+- **The full-quality render and the HD/original footage fetch happen ONCE, after an explicit approval.**
+- A background job that deletes or rebuilds a project's `src/` or `vo/` must never be left running when it times out:
+  a late one wiped the Younes clips mid-build. Kill it, or do not chain `rm` behind a slow command.
+
+## 122. Ayesha V1: "it doesn't really make sense" (2026-10-07)
+
+Tal: *"Why did you say back home in Karachi? At second 12... a picture of, I don't even know what that picture is...
+this is kind of good, but it doesn't really make sense."* and *"the thing at the end should say: Follow The Social
+Accords for stories that unite people."* and *"look at the Obsession page, look how they do their videos."*
+- **A sentence may not lean on something the viewer was never told.** "Back home in Karachi" came before the video had
+  said she lived in Karachi or had gone anywhere. Tell it in order: where she is from, where she went, what happened.
+- **Never show an object the viewer cannot name** (a close-up of a heart-pump bag under a KARACHI tag). If a thing is on
+  screen, the words at that second say what it is.
+- **Every story reel ends on the line "Follow The Social Accords for stories that unite people."**
+- Script and picture model for narrated story reels: the Obsession recipe in `formats/ai-story-reel.md`.
+
+## 123. One picture per phrase; the Elie Wiesel page is the house model (2026-10-07)
+
+Tal on Ayesha V2: *"it doesn't come good, did you study references to do this? This girl is from Pakistan (Pakistan
+flag), switch, the heart (diagram / heart VFX) is from India (flag cut)."* Then: *"study Elie Wiesel, all of the
+videos... the soup video... it should just make sense. Boom, fast."*
+- I had studied the references and still put ONE face under a whole two-sentence hook. **The hook is cut phrase by
+  phrase and each phrase shows its own noun** (person -> flag -> heart -> flag). Check the hook frame by frame.
+- Measured the whole page (8 reels): the table and the rules are in `formats/ai-story-reel.md` under THE HOUSE MODEL.
+  Their pace is 29-37 cuts a minute, so ours was not too slow; what was missing was the picture matching the word.
+- Captions in their newest reels put the key words in YELLOW on the second line. Our Elie Wiesel caption keeps the
+  gold key word (`.capx .k`).
+- A cut-out or graphic must be on screen from the first frame of its shot: an empty page for a quarter second reads
+  as a mistake.
+
+## 124. A cutaway from his raw clip is watched end to end before it is used (2026-10-07)
+
+Tal on Younes V2: *"it gets cut off like 'three years ago today' and it's just a picture. You didn't watch that actual
+scene."* Under the title I had put the seconds AFTER his hook take: he drops the pose, pulls out his phone, both look
+down. An outtake, used as b-roll because the first frame looked fine.
+- **The seconds before "go" and after the last word of a take are outtakes.** Lay every cutaway out at 2 frames a second
+  and look at all of it before it goes in the plan; note the usable in/out, not the clip.
+- Found the same way: `c_two1` and `c_two3` are good for about 2.2-2.8 s, then he walks out of frame.
+
+## 125. The references' sound, measured: light SFX, a woman's voice, music 6-10 dB under (2026-10-07)
+
+Tal: *"study their audio, their music... understand sound design and effects, whooshes"* and *"try a voice more similar
+to theirs... some with ElevenLabs, some free open source... switch them up and see which works best."*
+- Table and rules: `formats/ai-story-reel.md`, "SOUND OF THE HOUSE MODEL". Short version: no SFX on every cut; whoosh
+  on whips, hit on titles; bed 6.5-10.5 dB under the voice; narrator there is a young woman.
+- **Voice tests are made as copies of ONE finished video with only the narration swapped** (`ai-story-ayesha/voices.py`:
+  `kokoro` = open source on this laptop, `edge` = free Microsoft neural voice online; ElevenLabs ids in `el.py`).
+  hyperframes tts could not see kokoro-onnx on this machine: call `kokoro_onnx.Kokoro` on the cached model directly.
+- `pip` and `python` were different interpreters here: always `python -m pip install`.
+- A Windows junction made in a bash loop with `..\v2\$j` wrote the literal `v2$j`: make junctions from Python.
+
+## 126. Rotate the narrator voice across DIFFERENT videos (2026-10-07)
+
+I made the same Ayesha video four times with four voices. Tal: *"I wanted you to choose the most interesting stories
+and make them... you don't make the same thing four times... you can mix it up. You don't need every time to use
+ElevenLabs. Sometimes Michael and Andrew... ElevenLabs Brian or whatever you want, ElevenLabs TAL VOICE... keep rotating."*
+- **One voice per video, a different one each time:** Kokoro "Michael" (`voices.py kokoro`, free, local), Microsoft
+  "Andrew" (`voices.py edge`, free, online), ElevenLabs Brian / Sarah / any stock voice, ElevenLabs TAL VOICE (his clone).
+- Say which voice a video used in the message that delivers it.
+- Never render the same cut several times to compare something unless he asks for a side-by-side.
+
+## 127. Real pictures of the real person first; an unexplained picture is a mistake (2026-10-07)
+
+Tal on Hardaga V1: *"the first shot, 'this Muslim woman', you have to use a real image... you have access to Google
+Images or Pexels or whatever you need... make it look real and feel like the story is real"* and *"you said in 1984,
+Zejneba Hardaga, and then there's just a picture of a tree. How does that make sense? ... try not to use any AI images."*
+- **Look for the real photographs BEFORE generating anything.** They were one page away: Yad Vashem's own story page
+  has four photos of Zejneba (the 1941 street photo with Rifka Kabiljo, her with her children, the 1985 ceremony).
+  I had searched only Wikimedia Commons, found none of her, and fell back to AI silhouettes.
+- **Order of sources for a story about a real person:** the institution or family page about them -> news photos ->
+  free archives -> stock for places only -> AI as the last resort, and never for the opening shot.
+- **A picture needs its reason on screen or in the words at that second.** Her memorial tree is meaningful only if the
+  viewer is told it is her tree; shown bare for five seconds it is "just a tree".
+- These photos belong to Yad Vashem: credited on screen, and flagged to Tal as NOT cleared (same as news footage).
+- WebFetch got 403 from yadvashem.org; the built-in browser read the page and its image URLs.
+
+## 100 — a caption that named the wrong religion, and a calendar that ignored October 7 (2026-10-07)
+
+Two mistakes in the Metricool scheduling run, both caught by Tal asking "what is that?":
+
+- **I captioned a video "meeting a Muslim police officer". Its own title card says "MEETING A CHRISTIAN IN ISRAEL"**: he is a Christian Arab officer from Nazareth. I had read one caption word ("MUSLIM") off a six-frame contact sheet and built four platform captions on it. **A caption states who someone is only from the video's own title card or a transcript of the whole clip, never from a few frames.** Religion, nationality and names are the facts this account exists to get right. When the full transcript has not been read, the caption stays general ("a police officer in Jerusalem").
+- **I filled October 7 with ordinary upbeat posts.** Tal: "today probably should put any posts that have to do with October seventh". **Before scheduling, check the dates against the Israeli/Jewish calendar** (Oct 7, Yom HaZikaron, Yom HaShoah, Yom Kippur, Tisha B'Av, and days of national mourning). Those days get remembrance content he approves, or nothing; regular posts move.
