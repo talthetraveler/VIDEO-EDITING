@@ -128,6 +128,22 @@ for i, (st, en, k, ref, x, flags, seg) in enumerate(shots):
         tl.append(f'tl.fromTo("#bnt{i}", {{scale:2.4, opacity:0}}, {{scale:1, opacity:1, duration:0.16, ease:"back.out(2.2)"}}, {st + 0.10:.2f}); tl.to("#bnt{i}", {{scale:1.08, duration:{max(0.1, d - 0.4):.2f}, ease:"none"}}, {st + 0.26:.2f}); tl.to("#bnt{i}", {{opacity:0, duration:0.10}}, {en - 0.12:.2f});')
         sfx.append((st + 0.08, "impact2", 1.2))
     for f_ in fl:
+        if f_.startswith("count:"):          # count:#hex|lead|NUMBER|suffix  -> a number that rolls up (Motion Graphics starter kit: "count-up")
+            col_, lead_, num_, *suf_ = f_.split(":", 1)[1].replace("_", " ").split("|")
+            suf_ = suf_[0] if suf_ else ""
+            cd_ = min(1.05, d * 0.5)
+            h.append(f'      <div id="cn{i}" class="clip" data-start="{st:.2f}" data-duration="{d:.2f}" data-track-index="4"><div class="solid" style="background:{col_}"></div><div class="tw" style="top:600px"><span class="lead" id="cnl{i}">{lead_}</span><span class="big" id="cnb{i}" style="font-size:300px">0</span><span class="cnsuf" id="cns{i}">{suf_}</span></div></div>')
+            tl.append(f'tl.fromTo("#cnl{i}", {{opacity:0, y:18}}, {{opacity:1, y:0, duration:0.16}}, {st + 0.05:.2f}); (function(){{var o={{v:0}}, el=document.querySelector("#cnb{i}"); tl.to(o, {{v:{int(num_)}, duration:{cd_:.2f}, ease:"power2.out", onUpdate:function(){{el.textContent=Math.round(o.v);}}}}, {st + 0.12:.2f});}})(); tl.fromTo("#cns{i}", {{opacity:0, y:24}}, {{opacity:1, y:0, duration:0.2, ease:"back.out(2)"}}, {st + 0.12 + cd_:.2f}); tl.fromTo("#cnb{i}", {{scale:1}}, {{scale:1.1, duration:0.12, yoyo:true, repeat:1}}, {st + 0.12 + cd_:.2f});')
+            sfx += [(st + 0.12, "mg_counter", 1.05), (st + 0.12 + cd_, "mg_chime", 0.95)]
+        if f_.startswith("check:"):          # check:#hex|title|item|item|item  -> a list that ticks itself ("checklist tick"), editorial paper look
+            col_, ttl_, *items_ = f_.split(":", 1)[1].replace("_", " ").split("|")
+            rows_ = "".join(f'<div class="ckrow" id="ck{i}_{q}"><span class="ckdot" id="ckd{i}_{q}">&#10003;</span><span class="cktxt">{it_}</span></div>' for q, it_ in enumerate(items_))
+            h.append(f'      <div id="ckw{i}" class="clip" data-start="{st:.2f}" data-duration="{d:.2f}" data-track-index="4"><div class="solid" style="background:{col_}"></div><div class="ckwrap"><div class="ckrule"></div><div class="cktitle" id="ckt{i}">{ttl_}</div>{rows_}</div></div>')
+            tl.append(f'tl.fromTo("#ckt{i}", {{opacity:0, y:20}}, {{opacity:1, y:0, duration:0.2}}, {st + 0.05:.2f});')
+            for q in range(len(items_)):
+                t_ = st + 0.35 + q * (d - 0.9) / len(items_)
+                tl.append(f'tl.fromTo("#ck{i}_{q}", {{opacity:0, x:-40}}, {{opacity:1, x:0, duration:0.22, ease:"power3.out"}}, {t_:.2f}); tl.fromTo("#ckd{i}_{q}", {{scale:0}}, {{scale:1, duration:0.2, ease:"back.out(3)"}}, {t_ + 0.14:.2f});')
+                sfx.append((t_ + 0.14, "mg_success" if q == len(items_) - 1 else "mg_tick", 0.75 if q == len(items_) - 1 else 0.09))
         if f_.startswith("title:") or f_.startswith("card:"):
             parts_ = f_.split(":", 1)[1].replace("_", " ").split("|")
             card = f_.startswith("card:")
@@ -158,7 +174,7 @@ for i, (st, en, k, ref, x, flags, seg) in enumerate(shots):
     if i > 0 and seg != "end":
         if "whip" in fl:                                   # a whip already has its whoosh: add a quick flash
             h.append(f'      <div id="wf{i}" class="clip" data-start="{st:.2f}" data-duration="0.20" data-track-index="7"><div class="solid" id="wfs{i}" style="background:#fff"></div></div>')
-            tl.append(f'tl.fromTo("#wfs{i}", {{opacity:0.42}}, {{opacity:0, duration:0.16, ease:"power2.out"}}, {st:.2f});')
+            tl.append(f'tl.fromTo("#wfs{i}", {{opacity:0.10}}, {{opacity:0, duration:0.16, ease:"power2.out"}}, {st:.2f});')
         elif "tint" not in fl and "cine" not in fl:        # every other cut clicks
             pass                                           # house model: no click on an ordinary cut (LESSONS 125)
     if "bigflash" in fl:
@@ -177,10 +193,10 @@ for i, (st, en, k, ref, x, flags, seg) in enumerate(shots):
     drift = 0 if (isvid or "still" in flags) else (-1) ** i * 18
     t0 = st
     if "whip" in flags:
-        tl.append(f'tl.fromTo("#v{i}", {{scale:{round(k0 * (1.35 if small else 1.6), 3)}}}, {{scale:{k0}, duration:0.14, ease:"power4.out"}}, {st:.2f});')
+        tl.append(f'tl.fromTo("#v{i}", {{scale:{round(k0 * (1.10 if small else 1.16), 3)}}}, {{scale:{k0}, duration:0.26, ease:"power3.out"}}, {st:.2f});')
         sfx.append((st - 0.05, "whoosh-short", 0.57))
-        t0 = st + 0.14
-    if d >= 2.6 and "still" not in flags:
+        t0 = st + 0.26
+    if d >= 99 and "still" not in flags:          # the mid-shot punch-in read as a cut: off
         mid = t0 + (en - t0) / 2
         tl.append(f'tl.fromTo("#v{i}", {{scale:{k0}, x:{drift}}}, {{scale:{k1}, x:0, duration:{mid - t0:.2f}, ease:"none"}}, {t0:.2f});')
         tl.append(f'tl.fromTo("#v{i}", {{scale:{k1 + 0.14:.2f}, x:0}}, {{scale:{k1 + 0.2:.2f}, x:{-drift}, duration:{en - mid:.2f}, ease:"none"}}, {mid:.2f});')
@@ -233,7 +249,7 @@ def tall_at(t):
     return bool(s) and isinstance(s[4], str) and s[4].startswith("tall")
 
 
-HIDE = [(s_[0], s_[1]) for s_ in shots if "title:" in s_[5] or "card:" in s_[5]]      # the words are already on screen as a title
+HIDE = [(s_[0], s_[1]) for s_ in shots if "title:" in s_[5] or "card:" in s_[5] or "count:" in s_[5] or "check:" in s_[5]]      # the words are already on screen as a title
 caps = []
 for seg, g in SEQ:
     if not TEXT[seg]:
@@ -301,6 +317,13 @@ css += '''
       video.footage.bandbg { filter: blur(26px) brightness(0.62) saturate(1.15); }
       .tw { position: absolute; left: 0; width: 1080px; display: flex; flex-direction: column; align-items: center; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,.6); }
       .tw.dark { color: #1b1712; text-shadow: none; }
+      .cnsuf { font: 900 96px/1 "Montserrat", Arial, sans-serif; letter-spacing: -0.02em; color: #FACC27; margin-top: 14px; }
+      .ckwrap { position: absolute; left: 100px; top: 600px; width: 880px; color: #1a1a1a; }
+      .ckrule { width: 120px; height: 8px; background: #c2412d; margin-bottom: 34px; }
+      .cktitle { font: italic 500 100px/1.05 "EB Garamond", Georgia, serif; margin-bottom: 54px; }
+      .ckrow { display: flex; align-items: center; gap: 36px; margin-bottom: 56px; }
+      .ckdot { flex: none; width: 108px; height: 108px; border-radius: 50%; background: #34c759; color: #fff; font: 900 66px/108px Arial, sans-serif; text-align: center; }
+      .cktxt { font: 800 70px/1.12 "Montserrat", Arial, sans-serif; letter-spacing: -0.03em; }
       .tw .lead { font: italic 500 70px/1 "EB Garamond", Georgia, serif; }
       .tw .big { font: 900 230px/0.98 "Montserrat", Arial, sans-serif; letter-spacing: -0.04em; margin-top: 8px; white-space: nowrap; }
       img.cut { position: absolute; height: auto; filter: drop-shadow(0 18px 22px rgba(0,0,0,.35)); }

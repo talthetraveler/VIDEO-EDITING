@@ -3396,3 +3396,19 @@ sheet of the rendered file, one only after an upload:
   log and chain the render with `&&`.
 Hebrew, Hindi, Punjabi and Korean lines: captions are a translation nobody checked unless the source burned its own
 subtitles in (AFP). Say so in the hand-over; Tal reads Hebrew.
+
+
+## 137. "It wasn't flowing, just has weird cuts": what made the story reels choppy (2026-10-08)
+
+Tal, after thirteen stories: *"I love the videos you made but it wasn't flowing good, just has weird cuts."* Three
+things in the engine did it, none of them a real cut decision:
+1. **The hook was five separate voice takes** glued 0.04 s apart, so the melody restarted on every line. Now the hook
+   is ONE take, cut between lines at the character times ElevenLabs returns (`voice.py`), with no gap inside it.
+2. **Every shot longer than 2.6 s jumped 14% closer at its midpoint.** It was meant as a punch-in and read as a cut
+   to nothing. Off: a shot now pushes in once, smoothly.
+3. **Every paragraph opened with a 1.6x whip and a white flash.** Now 1.16x over a quarter second, flash at 10%.
+Also: 0.25 s of breath between paragraphs instead of 0.10. Shown to him on Hadad & Qureshi V2 before touching the
+other twelve. **Rule: a transition is something the viewer should not notice. One take per run of narration; no
+scale jump inside a shot; a flash only on the hook's last beat.** His hook question the same day ("are you using
+Jake Schincariol's skills for hooks?"): I had not been. `ig-reel/hookscore.py` now scores three hook options per
+story and the number is reported, never used as a gate (it rates his own titles WEAK).

@@ -22,6 +22,8 @@ turn, with a verified status, or it has not been dealt with.**
 | `kamilstanuch/Autocrop-vertical` | **works after a 3-line patch** — horizontal -> 9:16, one fixed crop per scene. See below | `system/vendor/Autocrop-vertical` (own `.venv`) |
 | `Jakeschincariol/instagram-agent-skill` | **installed in full, 13 loadable skills** — they write Instagram text (captions, comments, replies, DMs, scripts); they post nothing. Its hook scorer rates 60/60 of his titles WEAK and must never gate. See below | `/ig-reel`, `/ig-caption`, `/ig-comment` ... (`skills/ig-*`), `PYTHONUTF8=1 python` |
 | `harry0703/MoneyPrinterTurbo` | **installed 2026-10-08, works with ZERO keys on local clips** (script in, voice + subtitles + 9:16 cut out). Stock footage and AI script need a key. `litellm` did not install (Windows path limit). See below | `system/vendor/MoneyPrinterTurbo` (own `.venv`), `cli.py` |
+| Motion Graphics starter kit (Damiano Caudullo, PDF + zip Tal handed over 2026-10-08) | **in the toolbox as REFERENCE ONLY** (`skills/toolbox/motion-graphics-starter-kit/`). It is a prompt guide for HyperFrames, which the story reels already use: nothing new to install. Tal: "I don't want you to do the motion graphics, just have it as a skill for the reference", then "you can do some". |
+| `daymade/claude-code-skills` -> `youtube-downloader` | **in the toolbox, `--info` verified 2026-10-08** (`skills/toolbox/youtube-downloader/`). A wrapper round yt-dlp, which was already here (`system/bin/yt-dlp.exe` 2026.08.19) and pulled every interview for the story reels. |
 | `Alisa0808/vox-director` | **registered 2026-10-08, NOTHING RUN: needs a paid Atlas Cloud key that is not here.** Only the ffmpeg/Pillow stages are local. See below | `toolbox/vox-director/` (not loadable, on purpose) |
 
 ---
@@ -598,3 +600,45 @@ Budget on the higher figure.
 
 The clone carries its own `.git` folder: add it to our repo as plain files, or git records an empty submodule
 pointer instead of the skill.
+
+
+## Motion Graphics starter kit (Damiano Caudullo) — reference only, 2026-10-08
+
+`skills/toolbox/motion-graphics-starter-kit/`: the 20-page PDF, `prompts.md` (14 prompts), 9 code-made SFX
+(pop, tick, counter, chime, snap, star, switch, fill, success; 48 kHz mono, peaks -7 to -24 dB), 8 free fonts
+(Archivo Black, Inter, Space Grotesk, Bricolage Grotesque, Instrument Serif, JetBrains Mono), a practice clip of an
+AI-generated man, and made-up screenshots. Media is local only (not pushed).
+
+What it is: a way of ASKING for HyperFrames animations. Its setup prompt asks for Node 22+, FFmpeg, whisper-cpp and
+`npx hyperframes skills`: all already on this machine (HyperFrames 0.8.133 pinned for the story reels; 0.8.142 is the
+latest). So nothing was installed.
+
+What is worth taking from it:
+- **10 named moves**: rise, pop, count-up, checklist tick, typewriter, slide-in, blur-in, punch-in, reframe, bar fill.
+- **4 looks**: Kinetic Type (black, Archivo Black, one lime word), Liquid Glass (frosted cards), Editorial Grain
+  (paper #efe8dc, Instrument Serif, one red cut-out word: his "stories and opinions" look), Pop Bold.
+- **Rules**: nothing in the first 3 seconds but the hook; graphics off the face and out of the caption third; one
+  style per video; **no sound when a card slides in or leaves, and no whooshes**: only a tick, a counter, a chime,
+  about 20 dB under the voice; base first, then fix one spot at a time; `--crf 23` when a grainy file is huge.
+
+Built from it and available in `ai-story-kit/engine.py`, OFF unless a story asks: `count:#hex|lead|NUMBER|suffix`
+(a number that rolls up, with the kit's counter and chime) and `check:#hex|title|item|item|item` (a list that ticks
+itself on paper). The kit's sounds are in `ai-story-kit/mg-sfx/` as `mg_*.wav`, 6 dB lower. Tal's line on use:
+some, not much. One counter in a video is the level he was shown (Hadad & Qureshi V2).
+
+## daymade/claude-code-skills: youtube-downloader — in the toolbox, 2026-10-08
+
+`skills/toolbox/youtube-downloader/` (SKILL.md, `scripts/download_video.py`, references). `python
+scripts/download_video.py <url> --info` returned title, uploader and duration for a real video here. It is a set of
+rules round yt-dlp: PO-token helper (wants Docker, not installed), browser cookies only with permission, proxy
+handling. Nothing in it beats the plain call that already works:
+`system/bin/yt-dlp.exe --js-runtimes node -f "bv*[height<=720]+ba/b" <url>` (adding `--js-runtimes node` removes
+the "no JavaScript runtime" warning; Node 24 is installed, Deno is not). Use the skill's troubleshooting section
+when YouTube answers "Sign in to confirm you're not a bot" or "Only images are available".
+
+Sourcing pictures, the honest table (2026-10-08):
+| need | what works today |
+|---|---|
+| the real person, real places | Wikimedia Commons scripts (free, licensed) and interview footage via yt-dlp |
+| an action nobody photographed | Agnes AI (`ai-story-kit/gen.py`, his free key): hands, backs, objects, no faces |
+| stock clips of scenery | MoneyPrinterTurbo CAN fetch them, but only with a Pexels or Pixabay key (free, needs his account). No key is on this machine, so it sources nothing today. It never returns a picture of a specific real person. |
