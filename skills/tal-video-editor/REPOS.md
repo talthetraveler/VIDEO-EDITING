@@ -662,3 +662,20 @@ Why not plain Google Images: its results are mostly news-agency photos (Getty, A
 | `louisedesadeleer/b-roll-finder` | `skills/toolbox/find-broll/` (was already here) | The method the story reels follow: classify each spoken moment, search for that exact thing, vet the candidates, place the picture ON the word. |
 | `louisedesadeleer/cut-video` | `skills/toolbox/cut-video/` (was already here) | For removing dead air from a real recording. The story reels do the same job with `silencedetect` in `ai-story-kit/prep.py` (first word, last word, pauses over 0.6 s out). Its own notes record 1-6 s alignment drift on retake-heavy footage: check every boundary against the sound. |
 | `sasoder/stockpile` | `skills/toolbox/stockpile/` (copied 2026-10-08, media folder left out) | NOT runnable today: it needs a `GEMINI_API_KEY` (free from Google AI Studio, but it is his account to create) to plan and judge clips. The useful part is its flow: transcript -> list of b-roll needs with timestamps -> YouTube search per need -> download with yt-dlp -> an AI picks the best 2-10 s. Here that is done by hand with yt-dlp and a contact sheet. |
+
+## Anil-matcha/vox-ai-motion-graphics-generator — in the toolbox, its LOOK is used, its pipeline cannot run (2026-10-08)
+
+`skills/toolbox/vox-ai-motion-graphics-generator/` (SKILL.md, AGENTS.md, references, scripts, examples; the 13 MB of demo
+media was left out). It turns a topic into a Vox-style paper-collage video by ordering every picture, animation, voice and
+song from MuAPI, a paid service: it needs `MUAPI_API_KEY` and `OPENAI_API_KEY`. Neither is on this machine, so nothing in
+`scripts/` was run. Tal: "make sure you install this ... with this you can make the video more engaging".
+What IS used, with no key: its style block from `references/prompt-guide.md` (hand-cut paper collage, torn edges, tape
+corners, halftone dots, paper shadows) goes into `GENSTYLE` in a story file, and the free Agnes generator draws the
+illustrations in that look (`ai-story-kit/gen.py`). First use: Hadad & Qureshi V5.
+
+**The story-reel template after his notes of 2026-10-08 (shown on Hadad & Qureshi V5, awaiting his word before the other 12):**
+hook = "This man [arrow drawn onto the real person] ... . This is the story of NAME" (`arrow:X,Y,seconds` flag), a route
+map with two pins (`map:NAME,lon,lat;NAME,lon,lat@lon0,lon1,lat0,lat1`), collage illustrations, one counter
+(`count:`), one checklist (`check:`), his starter-kit sounds on titles and key words (`mg_pop`, `mg_snap`, `mg_tick`,
+`mg_counter`, `mg_chime`), hook voiced as one take, no jump inside a shot. He rejected the scorer-driven
+"You should try it" hooks the same day: his template outranks the 100 score (the template scores about 54).

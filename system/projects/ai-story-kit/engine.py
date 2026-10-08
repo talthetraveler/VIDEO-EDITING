@@ -65,6 +65,7 @@ POS = []
 T["end"] = (VOICE_END, DUR, DUR)
 
 h, tl, sfx, shots = [], [], [], []
+ARROWS, MAPS = [], []
 for seg, parts in PLAN:
     s0, _, s1 = T[seg]
     acc = s0
@@ -128,6 +129,12 @@ for i, (st, en, k, ref, x, flags, seg) in enumerate(shots):
         tl.append(f'tl.fromTo("#bnt{i}", {{scale:2.4, opacity:0}}, {{scale:1, opacity:1, duration:0.16, ease:"back.out(2.2)"}}, {st + 0.10:.2f}); tl.to("#bnt{i}", {{scale:1.08, duration:{max(0.1, d - 0.4):.2f}, ease:"none"}}, {st + 0.26:.2f}); tl.to("#bnt{i}", {{opacity:0, duration:0.10}}, {en - 0.12:.2f});')
         sfx.append((st + 0.08, "impact2", 1.2))
     for f_ in fl:
+        if f_.startswith("arrow:"):          # arrow:X,Y  -> a hand-drawn gold arrow from the title up to the person ("this man", Tal 2026-10-08)
+            av_ = [float(v) for v in f_[6:].split(",")]          # optional third number: how long the arrow stays (it may outlive its shot)
+            ARROWS.append((i, st, av_[2] if len(av_) > 2 else d, av_[0], av_[1]))
+        if f_.startswith("map:"):            # map:NAME,lon,lat;NAME,lon,lat@lon0,lon1,lat0,lat1  -> route map with two pins
+            pts_, box_ = f_[4:].split("@")
+            MAPS.append((i, st, d, [(q.split(",")[0].replace("_", " "), float(q.split(",")[1]), float(q.split(",")[2])) for q in pts_.split(";")], [float(v) for v in box_.split(",")]))
         if f_.startswith("count:"):          # count:#hex|lead|NUMBER|suffix  -> a number that rolls up (Motion Graphics starter kit: "count-up")
             col_, lead_, num_, *suf_ = f_.split(":", 1)[1].replace("_", " ").split("|")
             suf_ = suf_[0] if suf_ else ""
@@ -154,7 +161,7 @@ for i, (st, en, k, ref, x, flags, seg) in enumerate(shots):
             fs_ = 104 if len(parts_) > 2 else (118 if len(big_) > 9 else (150 if len(big_) > 5 else 230))
             h.append(f'      <div id="tw{i}" class="clip" data-start="{st:.2f}" data-duration="{d:.2f}" data-track-index="4">{bg_}<div class="tw{" dark" if mode == "inset" else ""}" style="top:{top_}px"><span class="lead" id="twl{i}">{lead_}</span><span class="big" id="twb{i}" style="font-size:{fs_}px">{big_}</span></div></div>')
             tl.append(f'tl.fromTo("#twl{i}", {{opacity:0, y:18}}, {{opacity:1, y:0, duration:0.16}}, {st + 0.05:.2f}); tl.fromTo("#twb{i}", {{opacity:0, scale:1.9}}, {{opacity:1, scale:1, duration:0.16, ease:"power4.out"}}, {st + min(0.45, d * 0.35):.2f}); tl.to("#twb{i}", {{scale:1.06, duration:{max(0.1, d - 0.7):.2f}, ease:"none"}}, {st + min(0.45, d * 0.35) + 0.16:.2f});')
-            sfx.append((st + min(0.45, d * 0.35) - 0.02, "boomshort", 1.0))
+            sfx.append((st + min(0.45, d * 0.35) - 0.02, "mg_pop", 0.17))
         if f_.startswith("cuts:"):
             names_ = f_[5:].split(",")
             for q_, o_ in enumerate(names_):
@@ -223,6 +230,16 @@ def arrow(aid, start, d, path, head, plen=1500):
     sfx.append((start + 0.04, "marker", 0.6))
 
 
+import math
+for i_, st_, d_, ax_, ay_ in ARROWS:
+    sx_, sy_ = (880.0, 1060.0) if ax_ < 620 else (200.0, 1060.0)
+    cx_, cy_ = sx_ + (140 if ax_ < 620 else -140), (sy_ + ay_) / 2
+    ang_ = math.atan2(ay_ - cy_, ax_ - cx_)
+    hd_ = " ".join(f"{'M' if k == 0 else 'L'}{ax_ - 78 * math.cos(ang_ + t_):.0f} {ay_ - 78 * math.sin(ang_ + t_):.0f} L{ax_:.0f} {ay_:.0f}" for k, t_ in enumerate((0.5, -0.5)))
+    arrow(f"ar{i_}", st_ + 0.18, max(0.5, d_ - 0.18), f"M{sx_:.0f} {sy_:.0f} Q {cx_:.0f} {cy_:.0f}, {ax_:.0f} {ay_:.0f}", hd_)
+for i_, st_, d_, pts_, box_ in MAPS:
+    _h, _t, _s = route_map(f"mp{i_}", st_, d_, pts_, f"photos/_map{i_}.jpg", box_[0], box_[1], box_[2], box_[3], track=3)
+    h.append(_h); tl += _t; sfx += [(x[0], x[1], 0.6) if len(x) == 2 else x for x in _s]
 a = shots[0]
 h.append(f'      <div id="open" class="clip" data-start="{a[0]:.2f}" data-duration="{a[1] - a[0]:.2f}" data-track-index="3"><div class="glow" id="glow"></div></div>')
 tl.append('tl.fromTo("#glow", {opacity:0, yPercent:30}, {opacity:1, yPercent:0, duration:0.3, ease:"power2.out"}, 0);')
@@ -249,7 +266,7 @@ def tall_at(t):
     return bool(s) and isinstance(s[4], str) and s[4].startswith("tall")
 
 
-HIDE = [(s_[0], s_[1]) for s_ in shots if "title:" in s_[5] or "card:" in s_[5] or "count:" in s_[5] or "check:" in s_[5]]      # the words are already on screen as a title
+HIDE = [(s_[0], s_[1]) for s_ in shots if "title:" in s_[5] or "card:" in s_[5] or "count:" in s_[5] or "check:" in s_[5] or "map:" in s_[5]]      # the words are already on screen as a title
 caps = []
 for seg, g in SEQ:
     if not TEXT[seg]:
@@ -285,7 +302,7 @@ for i, (a, txt, seg, key) in enumerate(caps):
     h.append(f'      <div id="c{i}" class="clip" data-start="{a:.2f}" data-duration="{max(0.25, b - a):.2f}" data-track-index="5"><div class="capx{" dk" if dark else ""}" style="top:{y_}px" id="ct{i}">{txt}</div></div>')
     tl.append(f'tl.fromTo("#ct{i}", {{opacity:0, y:18, scale:0.82}}, {{opacity:1, y:0, scale:1, duration:0.14, ease:"back.out(2.4)"}}, {a:.2f});')
     if key:
-        sfx.append((key, "boomshort", 1.0))
+        sfx.append((key, "mg_snap", 0.16))
 for seg, g in SEQ:
     if seg in WHO:
         h.append(f'      <div id="who_{seg}" class="clip" data-start="{T[seg][0]:.2f}" data-duration="{T[seg][1] - T[seg][0]:.2f}" data-track-index="6"><div class="who" style="top:{1600 if tall_at(T[seg][0] + 0.3) else 1580}px"><span>{WHO[seg]}</span></div></div>')
