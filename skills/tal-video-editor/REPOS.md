@@ -654,3 +654,11 @@ Sourcing pictures, the honest table (2026-10-08):
 | `system/projects/ai-story-kit/find_images.py` | written here instead | **Works with no key.** Searches Openverse (Creative Commons and public-domain pictures from Flickr, Wikimedia, museums), downloads the ones 1000 px or larger and writes author + licence + source into `CREDITS.json`. Tested: "halva Jerusalem market" returned 3 pictures, 4000x3000, CC BY-SA 4.0. `python find_images.py "query" raw/ --n 6 [--portrait]`. |
 
 Why not plain Google Images: its results are mostly news-agency photos (Getty, AP, Reuters, AFP). A reel built on those can be taken down, and the account takes the strike. Real footage of the person still comes from YouTube with yt-dlp, credited on screen and flagged as not cleared.
+
+## B-roll finding and dead-air cutting (Tal, 2026-10-08)
+
+| repo | where | state |
+|---|---|---|
+| `louisedesadeleer/b-roll-finder` | `skills/toolbox/find-broll/` (was already here) | The method the story reels follow: classify each spoken moment, search for that exact thing, vet the candidates, place the picture ON the word. |
+| `louisedesadeleer/cut-video` | `skills/toolbox/cut-video/` (was already here) | For removing dead air from a real recording. The story reels do the same job with `silencedetect` in `ai-story-kit/prep.py` (first word, last word, pauses over 0.6 s out). Its own notes record 1-6 s alignment drift on retake-heavy footage: check every boundary against the sound. |
+| `sasoder/stockpile` | `skills/toolbox/stockpile/` (copied 2026-10-08, media folder left out) | NOT runnable today: it needs a `GEMINI_API_KEY` (free from Google AI Studio, but it is his account to create) to plan and judge clips. The useful part is its flow: transcript -> list of b-roll needs with timestamps -> YouTube search per need -> download with yt-dlp -> an AI picks the best 2-10 s. Here that is done by hand with yt-dlp and a contact sheet. |

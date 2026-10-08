@@ -1,0 +1,10 @@
+openai-whisper
+google-genai
+yt-dlp
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+watchdog
+python-dotenv
+rich

@@ -1,0 +1,12 @@
+.env
+.kiro
+input
+output
+*.pyc
+src/broll_processor.log
+src/token.json
+token.json
+.venv
+
+*.DS_Store
+test_email.py
