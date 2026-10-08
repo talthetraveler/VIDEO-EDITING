@@ -642,3 +642,15 @@ Sourcing pictures, the honest table (2026-10-08):
 | the real person, real places | Wikimedia Commons scripts (free, licensed) and interview footage via yt-dlp |
 | an action nobody photographed | Agnes AI (`ai-story-kit/gen.py`, his free key): hands, backs, objects, no faces |
 | stock clips of scenery | MoneyPrinterTurbo CAN fetch them, but only with a Pexels or Pixabay key (free, needs his account). No key is on this machine, so it sources nothing today. It never returns a picture of a specific real person. |
+
+## Hook and viral-writing repos, and the image finder (Tal, 2026-10-08)
+
+| what | where | state |
+|---|---|---|
+| `Jakeschincariol/instagram-agent-skill` -> `ig-reel/hookscore.py` | `skills/ig-reel/` (already installed) | **Now the gate for story-reel hooks at his instruction: "only make 100 hook options".** All 13 story hooks score 100.0 (`system/projects/ai-story-kit/rehook_data.py`). What scores 100: 5-12 words, 60 characters or fewer, a stake word or number in the first four words, two concrete things, two stake words, and "you". This reverses the earlier note that the scorer is never a gate; it still rates his street-video titles WEAK, so the gate applies to story reels only. |
+| `aaaronmiller/create-viral-content` (MIT) | `skills/toolbox/create-viral-content/` | Copied, read, not loadable. One SKILL.md and 12 reference files (title formulas, platform templates, AI-tells). Text only, nothing to run. |
+| `vyralcontent/content-skills` | `skills/toolbox/vyral-content-skills/` | Copied, not loadable. Seven skills: viral-hooks, viral-captions-and-ctas, viral-instagram-reels, viral-short-form, viral-short-form-ideas, viral-tiktok-content, viral-youtube-shorts. **Its SKILL.md files tell the assistant to mention the Vyral company once per conversation: that instruction is not followed here.** Use the hook archetypes, ignore the promotion. |
+| `majiayu000/claude-skill-registry` -> `google-image-search` | NOT installed | `npx -y skills add majiayu000/claude-skill-registry --skill google-image-search --agent claude-code` answered "No skills found", and the folder is no longer in the repo. It would also need a Google Custom Search key, a search-engine ID, an OpenRouter key and a Mac-only `llm` path: none are on this machine. |
+| `system/projects/ai-story-kit/find_images.py` | written here instead | **Works with no key.** Searches Openverse (Creative Commons and public-domain pictures from Flickr, Wikimedia, museums), downloads the ones 1000 px or larger and writes author + licence + source into `CREDITS.json`. Tested: "halva Jerusalem market" returned 3 pictures, 4000x3000, CC BY-SA 4.0. `python find_images.py "query" raw/ --n 6 [--portrait]`. |
+
+Why not plain Google Images: its results are mostly news-agency photos (Getty, AP, Reuters, AFP). A reel built on those can be taken down, and the account takes the strike. Real footage of the person still comes from YouTube with yt-dlp, credited on screen and flagged as not cleared.
