@@ -12,7 +12,7 @@ L = [  # hook template (Tal, 2026-10-08): "This man [what happened]. This is the
      ("n3", "There, they beat one of the best teams in the world, and reached the final sixteen."),
      ("n4", "Back home, officials condemned it. They warned Qureshi that he could be banned from the national team."),
      ("n5", "Two months later, he walked onto court at the US Open, with Hadad beside him."),
-     ("n6", "No ban ever came. They shared the Arthur Ashe Humanitarian Award. And today, Qureshi is president of the federation that once threatened him."),
+     ("n6", "No ban ever came. The tennis world honoured them both for it. And today, Qureshi runs the very federation that once threatened him."),
      ("n7", "This story is proof that a friendship can be stronger than a border.")]
 SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("n2", 0.25), ("n3", 0.25), ("n4", 0.25), ("n5", 0.25), ("n6", 0.25), ("n7", 0.4)]
 END = ("ENEMIES", "TEAMMATES.")
@@ -22,7 +22,7 @@ TEXT = {
     "n3": "There, they beat | one of the *best teams | in the world, | ~and reached | ~the final sixteen.",
     "n4": "Back home, | officials | *condemned it. | They warned Qureshi | that he could be | *banned | from the national team.",
     "n5": "Two months later, | he walked onto court | at the *US Open, | with Hadad | *beside him.",
-    "n6": "No ban | ever came. | They shared the | Arthur Ashe | *Humanitarian Award. | And today, | Qureshi is *president | of the federation | that once | *threatened him.",
+    "n6": "~No ban ever came. | ~The tennis world honoured them. | ~Today he runs that federation.",
     "n7": "This story is proof | that a friendship | can be stronger | than *a border.",
 }
 WC = " &middot; WIKIMEDIA COMMONS"
@@ -40,7 +40,7 @@ PLAN = [
     ("n3", [(.3, "P", "g_pair.jpg", 50, "whip"), (.3, "P", "wim_court18.jpg", 50, ""), (.4, "X2", "paper.jpg", 50, "count:#0f3d2e|they_reached_the_final|16|IN_THE_WORLD")]),
     ("n4", [(.25, "P", "lahore_fort_flag.jpg", 50, "whip"), (.25, "P", "g_letter.jpg", 50, ""), (.25, "X2", "paper.jpg", 50, "card:#7a1010|he|MAY_FACE|A_BAN"), (.25, "P", "q_usopen2009.jpg", 50, "")]),
     ("n5", [(.25, "P", "usopen_outer2009.jpg", 50, "whip"), (.25, "P", "g_tunnel.jpg", 50, ""), (.25, "P", "ashe_top.jpg", 50, ""), (.25, "P", "g_pair.jpg", 50, "z1.3")]),
-    ("n6", [(1, "X2", "paper.jpg", 50, "check:#efe8dc|What_happened_next|No_ban_ever_came|They_shared_a_humanitarian_award|He_now_leads_the_federation")]),
+    ("n6", [(1, "X2", "paper.jpg", 50, "check:#efe8dc|What_happened_next|No_ban_ever_came|The_tennis_world_honoured_them|Today_he_runs_that_federation")]),
     ("n7", [(.5, "P", "net_grass2012.jpg", 50, "whip"), (.5, "P", "g_rackets.jpg", 50, "shim")]),
     ("end", [(1, "P", "wim_centre2005.jpg", 50, "")]),
 ]

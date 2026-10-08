@@ -2,12 +2,13 @@
 # Facts: DOSSIER.md. The feud and the night he prayed rest on his own account. He is not called "rabbi". Israel since 2016 (Beit Shemesh).
 V = "../src/P6d8EpWhoLw.mp4"
 VOICE = "EXAVITQu4vr4xnSDxMaL"          # Sarah
-L = [  # hook: "He lost 8 friends in Seattle. You won't believe where he is." (ig-reel hookscore 100.0)
-     ("h1", "He lost eight friends"),
-     ("h2", "in Seattle."),
-     ("h3", "He was selling drugs at twelve."),
-     ("h4", "You won't believe"),
-     ("h5", "where he is now."),
+L = [  # hook: "This man lost eight friends on the streets of Seattle. This is the story of Nissim Black." (ig-reel hookscore 0)
+     ("h1", "This man lost eight friends on the streets of Seattle."),
+     ("h2", "He was selling drugs at twelve."),
+     ("h3", "Today, he lives in Israel."),
+     ("h4", "This is the story of"),
+     ("h5", "Nissim Black."),
+       # hook: "He lost 8 friends in Seattle. You won't believe where he is." (ig-reel hookscore 100.0)
      ("n3", "Nissim Black grew up around gangs in Seattle. Both his parents were rappers. Drugs moved through his home."),
      ("n4", "He thought he would not survive it."),
      ("n6", "He left that life. He became an Orthodox Jew, and in 2016, he moved his family to Israel."),
@@ -22,7 +23,7 @@ SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("b2", 0.25), ("
 WHO = {"b2": "NISSIM BLACK", "b4": "NISSIM BLACK &middot; HIS VOICE", "b5": "NISSIM BLACK &middot; HIS VOICE"}
 END = ("LOST", "FOUND.")
 TEXT = {
-    "h1": "~He lost eight friends", "h2": "~in Seattle.", "h3": "~He was selling drugs at twelve.", "h4": "~You won&rsquo;t believe", "h5": "~where he is now.",
+    "h1": "~This man lost eight friends on the streets of Seattle.", "h2": "~He was selling drugs at twelve.", "h3": "~Today, he lives in Israel.", "h4": "~This is the story of", "h5": "~Nissim Black.",
     "b2": "I get into a | *kill or be killed | situation | with another rapper.",
     "n3": "Nissim Black | grew up around gangs | in *Seattle. | Both his parents | were *rappers. | Drugs moved | through *his home.",
     "n4": "He thought | he would not | *survive it.",
@@ -39,13 +40,13 @@ PC = {"him_2013_portrait.jpg": "NISSIM BLACK, 2013" + WC, "him_2016.jpg": "NISSI
       "sea_skyline_dusk.jpg": "SEATTLE" + WC, "sea_seward_rainier.jpg": "SEATTLE" + WC, "jer_kotel_night_portrait.jpg": "JERUSALEM" + WC, "jer_kotel_praying_portrait.jpg": "THE WESTERN WALL, JERUSALEM" + WC, "isr_beitshemesh.jpg": "BEIT SHEMESH, ISRAEL" + WC,
       "studio_mic_akg.jpg": "WIKIMEDIA COMMONS", "shabbat_table.jpg": "WIKIMEDIA COMMONS", "sea_synagogue_sbh_1.jpg": "SEATTLE" + WC, "jer_sunset_olives.jpg": "JERUSALEM" + WC, "sea_cd_downtown_1990.jpg": "SEATTLE, 1990" + WC}
 PLAN = [
-    ("h1", [(1, "P", "him_2013_portrait.jpg", 50, "glow title:he_lost|EIGHT|FRIENDS")]),
-    ("h2", [(1, "P", "sea_rainier_1977.jpg", 50, "title:in|SEATTLE")]),
-    ("h3", [(1, "P", "sea_cd_grocery_1980.jpg", 50, "title:selling_drugs_at|TWELVE")]),
-    ("h4", [(1, "P", "g_knees.jpg", 50, "title:you_won&rsquo;t|BELIEVE")]),
-    ("h5", [(1, "P", "jer_kotel_night_portrait.jpg", 50, "bigflash title:where_he_is|NOW")]),
+    ("h1", [(1, "P", "him_2013_portrait.jpg", 50, "glow arrow:240,740,2.8,310 title:this_man_lost|EIGHT|FRIENDS")]),
+    ("h2", [(1, "P", "sea_rainier_1977.jpg", 50, "title:selling_drugs_at|TWELVE")]),
+    ("h3", [(1, "P", "jer_kotel_night_portrait.jpg", 50, "title:today_he_lives_in|ISRAEL")]),
+    ("h4", [(1, "P", "sea_skyline_dusk.jpg", 50, "title:this_is|THE_STORY|OF")]),
+    ("h5", [(1, "P", "him_2026_stage.jpg", 50, "bigflash title:|NISSIM|BLACK")]),
     ("b2", [(-2.2, "V", "b_b2_0.mp4@0", "tall50", "whip"), (1, "V", "b_b2_0.mp4@2.2", "tall50", "z1.25")]),
-    ("n3", [(.17, "P", "sea_skyline_dusk.jpg", 50, "whip"), (.17, "P", "sea_cd_downtown_1990.jpg", 50, ""), (.17, "P", "studio_mic_akg.jpg", 50, ""), (.17, "P", "g_tape.jpg", 50, ""), (.16, "P", "sea_seward_rainier.jpg", 50, ""), (.16, "P", "g_stoop.jpg", 50, "")]),
+    ("n3", [(.34, "X2", "paper.jpg", 50, "map:SEATTLE,-122.3,47.6;ISRAEL,35.0,31.5@-132,48,14,62"), (.17, "P", "sea_skyline_dusk.jpg", 50, "whip"), (.17, "P", "sea_cd_downtown_1990.jpg", 50, ""), (.17, "P", "studio_mic_akg.jpg", 50, ""), (.17, "P", "g_tape.jpg", 50, ""), (.16, "P", "sea_seward_rainier.jpg", 50, ""), (.16, "P", "g_stoop.jpg", 50, "")]),
     ("n4", [(.5, "P", "g_street.jpg", 50, "whip"), (.5, "P", "g_street.jpg", 50, "z1.35")]),
     ("b4", [(.5, "P", "g_knees.jpg", 50, "whip"), (.5, "P", "g_knees.jpg", 50, "z1.4")]),
     ("b5", [(.5, "P", "g_window.jpg", 50, "whip"), (.5, "P", "him_2016.jpg", 50, "")]),
@@ -60,3 +61,6 @@ GEN = {"knees": "A pure black silhouette of a man kneeling on a bedroom floor wi
        "tape": "Close-up of a boy's hands holding an old cassette tape with a handwritten label beside a boombox on a kitchen table, 1990s, no face",
        "stoop": "An empty front stoop of a wooden house on a rainy Seattle street at dusk in the 1990s, a basketball left on the steps, wet pavement, streetlight, no people",
        "street": "An empty rain-soaked street at night in a 1990s American neighbourhood, a single streetlight, police lights reflected far away on the wet asphalt, no people"}
+
+# The illustrations in the Vox paper-collage look (style block from skills/toolbox/vox-ai-motion-graphics-generator), made with Agnes.
+GENSTYLE = "Mixed-media hand-cut paper collage, editorial zine style, vertical. Torn paper edges, scissor-cut borders, tape corners, halftone print dot patterns, paper drop shadows. Figures are printed-texture cut-outs from vintage photography. NOT 3D, NOT CGI. Palette: parchment cream, charcoal black, warm gold accent, one deep green. No text, no letters, no faces. Subject: "

@@ -3434,3 +3434,21 @@ that is."* The map named two birth towns nobody has heard of; the script used te
 **Rule: a map names COUNTRIES unless the town is the story. Every term a 15-year-old outside the field would not
 know is replaced by what it means: "Wimbledon, the biggest tennis tournament in the world"; "one of the best teams
 in the world", not "the eleventh seeds". Read the script once as someone who has never heard of the subject.**
+
+## 140. The approved story-reel template, and what the first full pass got wrong (2026-10-09)
+
+Tal approved Hadad & Qureshi V8 ("ok this is nice, fix up the rest and add this to the trials and the others to the
+trials ... trials once a day"). The template: hook "This man / woman / pilot [what happened]. [One more beat.] This is
+the story of NAME", a drawn arrow on the real person, a map with COUNTRY names, paper-collage illustrations, one
+counter or checklist, his SFX kit, the hook as one voice take. Fourteen stories now use it (`rehook_data.py`).
+Caught on the contact sheets while rolling it out, each a rule:
+- **The arrow tip must stop beside the head, never across the face.** Tal sent back the frame where it lay over
+  Rawan's eye. The arrow flag takes the face centre and a pull-back distance (face radius plus a margin):
+  `arrow:X,Y,seconds,pullback`. Check every opening with `ai-story-kit/hookonly.sh` (3-second draft) before a full render.
+- **Two names on one title line run off the screen.** Break after "&" (`|ALI_ABU_AWWAD|&_HANAN|SCHLESINGER`).
+- **A collage illustration can still draw a person** (a man at the head of a Shabbat table; a light-skinned man
+  walking out of prison in a story about a Black man; a child cut-out beside a pair of shoes). Say "no people" for
+  objects and "pure black silhouette" for a figure, and look at each one.
+- **A real photo beside the wrong sentence accuses someone.** Coptic priests appeared under "social media taught him
+  who the enemy was". Read each caption against its picture.
+- A quote cut from a transcript can begin on the previous speaker's "Oh,": print the words heard in each cut quote.

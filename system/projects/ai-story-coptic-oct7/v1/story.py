@@ -2,12 +2,13 @@
 # Facts: DOSSIER.md, all his own account. American-born Coptic Christian, California; six months in Egypt in 2024. The interview's political passages are NOT used: this is only the story of a man who questioned his own anger.
 V = "../src/abanoub-samaan_stand-tall-israel_FtyLuBH3RnQ.mp4"
 VOICE = "JBFqnCBsd6RMkjVDRZzb"          # George
-L = [  # hook: "He hated Israel until he doubted himself. You should try it." (ig-reel hookscore 100.0)
-     ("h1", "He hated Israel"),
-     ("h2", "until he doubted himself."),
-     ("h3", "You should try it."),
-     ("h4", "His phone taught him who to hate."),
-     ("h5", "Then he asked one question."),
+L = [  # hook: "This guy hated Israel, until he asked himself one question. This is the story of Abanoub Samaan." (ig-reel hookscore 0)
+     ("h1", "This guy hated Israel,"),
+     ("h2", "until he asked himself"),
+     ("h3", "one question."),
+     ("h4", "This is the story of"),
+     ("h5", "Abanoub Samaan."),
+       # hook: "He hated Israel until he doubted himself. You should try it." (ig-reel hookscore 100.0)
      ("n3", "Abanoub Samaan grew up in America. He says social media taught him who the enemy was, and he never checked."),
      ("n5", "Then he spent six months in Egypt, and started reading for himself."),
      ("n7", "This year, he said it out loud for the first time. He says it frightened him."),
@@ -22,7 +23,7 @@ SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("b2", 0.25), ("
 WHO = {"b2": "ABANOUB SAMAAN"}
 END = ("ANGER", "LOVE.")
 TEXT = {
-    "h1": "~He hated Israel", "h2": "~until he doubted himself.", "h3": "~You should try it.", "h4": "~His phone taught him who to hate.", "h5": "~Then he asked one question.",
+    "h1": "~This guy hated Israel,", "h2": "~until he asked himself", "h3": "~one question.", "h4": "~This is the story of", "h5": "~Abanoub Samaan.",
     "b2": "Why don&rsquo;t you | *doubt | your own beliefs, | and check | the *other side?",
     "n3": "Abanoub Samaan | grew up in *America. | He says social media | taught him | who *the enemy was, | and he never | *checked.",
     "b4": "I was *wrong | about that type | of thinking.",
@@ -38,13 +39,13 @@ WC = " &middot; WIKIMEDIA COMMONS"
 PC = {"coptic_stmark_a.jpg": "COPTIC CATHEDRAL, CAIRO" + WC, "coptic_hanging_a.jpg": "THE HANGING CHURCH, CAIRO" + WC, "coptic_cross_philae.jpg": "COPTIC CROSS, EGYPT" + WC, "cairo_muizz.jpg": "CAIRO" + WC, "cairo_talaat_harb.jpg": "CAIRO" + WC,
       "coptic_cave_church.jpg": "CAVE CHURCH, CAIRO" + WC, "coptic_service.jpg": "COPTIC SERVICE" + WC, "coptic_stgeorge_in_a.jpg": "COPTIC CAIRO" + WC, "cairo_shopping.jpg": "CAIRO" + WC, "coptic_hanging_b.jpg": "THE HANGING CHURCH, CAIRO" + WC}
 PLAN = [
-    ("h1", [(1, "P", "g_phone.jpg", 50, "glow title:he|HATED|ISRAEL")]),
-    ("h2", [(1, "P", "g_mirror.jpg", 50, "title:until_he|DOUBTED|HIMSELF")]),
-    ("h3", [(1, "open", 0.1, "tall50", "title:you_should|TRY_IT")]),
-    ("h4", [(1, "P", "g_room.jpg", 50, "title:his_phone_taught_him|WHO_TO|HATE")]),
-    ("h5", [(1, "P", "coptic_cross_philae.jpg", 50, "bigflash title:then_he_asked|ONE|QUESTION")]),
+    ("h1", [(1, "open", 0.1, "tall50", "glow arrow:540,790,1.5,300 title:this_guy|HATED|ISRAEL")]),
+    ("h2", [(1, "P", "g_phone.jpg", 50, "title:until_he_asked|HIMSELF")]),
+    ("h3", [(1, "P", "g_mirror.jpg", 50, "title:|ONE|QUESTION")]),
+    ("h4", [(1, "P", "coptic_cross_philae.jpg", 50, "title:this_is|THE_STORY|OF")]),
+    ("h5", [(1, "open", 1.4, "tall50", "bigflash title:|ABANOUB|SAMAAN")]),
     ("b2", [(-1.8, "V", "b_b2_0.mp4@0", "tall50", "whip"), (1, "V", "b_b2_0.mp4@1.8", "tall50", "z1.25")]),
-    ("n3", [(.2, "P", "g_street.jpg", 50, "whip"), (.2, "P", "g_phone.jpg", 50, "z1.3"), (.2, "P", "coptic_service.jpg", 50, ""), (.2, "P", "g_room.jpg", 50, "z1.2"), (.2, "P", "coptic_stmark_a.jpg", 50, "")]),
+    ("n3", [(.2, "P", "g_street.jpg", 50, "whip"), (.2, "P", "g_phone.jpg", 50, "z1.3"), (.2, "P", "g_room.jpg", 50, "z1.2"), (.2, "P", "coptic_stmark_a.jpg", 50, "")]),
     ("b4", [(1, "V", "b_b4_0.mp4@0", "tall50", "whip z1.1")]),
     ("n5", [(.25, "P", "cairo_talaat_harb.jpg", 50, "whip"), (.25, "P", "coptic_hanging_a.jpg", 50, ""), (.25, "P", "cairo_muizz.jpg", 50, ""), (.25, "P", "g_books.jpg", 50, "")]),
     ("b6", [(1, "V", "b_b6_0.mp4@0", "tall50", "whip z1.15")]),
@@ -60,3 +61,6 @@ GEN = {"phone": "Close-up of a young man's hands holding a smartphone in a dark 
        "feed": "Extreme close-up of a phone screen showing a blurred endless social media feed of angry red headlines and comment bubbles, text unreadable, a thumb scrolling",
        "books": "A wooden desk by a window with a stack of history books, an open notebook with handwriting, a cup of tea and a small wooden cross, morning light, no people",
        "mic": "A simple desk with a laptop, a webcam and a small microphone ready for an online interview, a chair pulled back, nervous hands of a young man clasped on the desk, no face"}
+
+# The illustrations in the Vox paper-collage look (style block from skills/toolbox/vox-ai-motion-graphics-generator), made with Agnes.
+GENSTYLE = "Mixed-media hand-cut paper collage, editorial zine style, vertical. Torn paper edges, scissor-cut borders, tape corners, halftone print dot patterns, paper drop shadows. Figures are printed-texture cut-outs from vintage photography. NOT 3D, NOT CGI. Palette: parchment cream, charcoal black, warm gold accent, one deep green. No text, no letters, no faces. Subject: "

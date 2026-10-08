@@ -4,12 +4,13 @@
 J = "../src/SXaxBnn2g0E.mp4"
 W_ = "../src/VK8rR-Z37dw.mp4"
 VOICE = "JBFqnCBsd6RMkjVDRZzb"          # George
-L = [  # hook: "Korea is still at war. You won't believe these 2 friends." (ig-reel hookscore 100.0)
-     ("h1", "Korea is still at war."),
-     ("h2", "You won't believe"),
-     ("h3", "these two friends."),
-     ("h4", "One from the North,"),
-     ("h5", "one from the South."),
+L = [  # hook: "These two women come from North and South Korea. This is the story of Hyun Jung-hwa and Ri Bun-hui." (ig-reel hookscore 0)
+     ("h1", "These two women come from North and South Korea."),
+     ("h2", "Their countries are still at war."),
+     ("h3", "They became friends anyway."),
+     ("h4", "This is the story of"),
+     ("h5", "Hyun Jung-hwa and Ri Bun-hui."),
+       # hook: "Korea is still at war. You won't believe these 2 friends." (ig-reel hookscore 100.0)
      ("n2", "In 1991, two rivals, Hyun Jung-hwa and Ri Bun-hui, were put on one Korean team. They lived and trained together for more than a month."),
      ("n3", "In Japan, their unified Korean team beat China, and became world champions."),
      ("n4", "Then they had to say goodbye. Hyun gave Ri a gold ring, so she would remember her."),
@@ -17,13 +18,13 @@ L = [  # hook: "Korea is still at war. You won't believe these 2 friends." (ig-r
      ("n7", "This story is proof that a border cannot end a friendship.")]
 CUTB = "crop=iw*0.75:ih*0.70:iw*0.125:0"          # removes the Korean caption at the bottom and the blurred side panels
 CLIPS = {"hyun": (J, 3.3, 6.3), "ring": (J, 8.6, 12.8, 1.0, "crop=iw:ih*0.66:0:ih*0.04"), "bye1": (J, 53.4, 55.6, 1.0, CUTB), "bye2": (J, 56.0, 58.3, 1.0, CUTB),
-         "duo": (J, 93.2, 95.6, 1.0, "crop=iw:ih*0.74:0:0"), "bed": (J, 108.4, 111.6, 1.0, "crop=iw:ih*0.72:0:0"), "react": (J, 36.0, 39.6, 1.0, "crop=iw:ih*0.80:0:0"),
+         "duo": (J, 93.2, 95.6, 1.0, "crop=iw:ih*0.74:0:0"), "bed": (J, 108.4, 111.6, 1.4, "crop=iw:ih*0.72:0:0"), "react": (J, 36.0, 39.6, 1.0, "crop=iw:ih*0.80:0:0"),
          "hall": (W_, 86.2, 89.6), "serve": (W_, 89.7, 91.5), "rally": (W_, 91.6, 96.6), "rally2": (W_, 103.2, 107.0), "crowd": (W_, 108.1, 110.0)}
 VID = {k: f"src/{k}.mp4" for k in CLIPS}
 SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("n2", 0.25), ("n3", 0.25), ("n4", 0.25), ("n5", 0.25), ("n7", 0.4)]
 END = ("RIVALS", "FRIENDS.")
 TEXT = {
-    "h1": "~Korea is still at war.", "h2": "~You won&rsquo;t believe", "h3": "~these two friends.", "h4": "~One from the North,", "h5": "~one from the South.",
+    "h1": "~These two women come from North and South Korea.", "h2": "~Their countries are still at war.", "h3": "~They became friends anyway.", "h4": "~This is the story of", "h5": "~Hyun Jung-hwa and Ri Bun-hui.",
     "n2": "In 1991, | two *rivals, | Hyun Jung-hwa | and Ri Bun-hui, | were put on | *one Korean team. | They lived | and trained *together | for more than a month.",
     "n3": "In Japan, | their unified | Korean team | beat *China, | and became | *world champions.",
     "n4": "Then they had to | say *goodbye. | Hyun gave Ri | a *gold ring, | so she would | *remember her.",
@@ -38,12 +39,12 @@ PC = {"pyongyang_skyline2019.jpg": "PYONGYANG &middot; WIKIMEDIA COMMONS", "seou
       "jsa_looking_north.jpg": "PANMUNJOM &middot; TRAVIS WISE, CC BY 2.0", "dmz_eulji_fence2.jpg": "THE DMZ &middot; WIKIMEDIA COMMONS, CC BY 2.0", "dmz_eulji_fence.jpg": "THE DMZ &middot; WIKIMEDIA COMMONS, CC BY 2.0",
       "imjingak_prayer.jpg": "IMJINGAK, SOUTH KOREA &middot; WIKIMEDIA COMMONS", "flag_stadium2005.jpg": "SEOUL, 2005 &middot; TIMOTHY FRIESEN, CC BY 2.0", "bridge_no_return.jpg": "BRIDGE OF NO RETURN &middot; WIKIMEDIA COMMONS, CC BY-SA 3.0"}
 PLAN = [
-    ("h1", [(1, "P", "jsa_looking_north.jpg", 50, "glow title:Korea_is|STILL|AT_WAR")]),
-    ("h2", [(1, "P", "flag_unification.jpg", 50, "title:you_won&rsquo;t|BELIEVE")]),
-    ("h3", [(1, "bed", 0.4, "band", "title:these_two|FRIENDS")]),
-    ("h4", [(1, "P", "pyongyang_skyline2019.jpg", 50, "title:one_from|THE_NORTH")]),
-    ("h5", [(1, "P", "seoul_night2018.jpg", 50, "bigflash title:one_from|THE_SOUTH")]),
-    ("n2", [(.2, "duo", 0.0, "band", "whip"), (.2, "hall", 0.0, "band", ""), (.2, "rally", 0.2, "band", ""), (.2, "bed", 0.0, "band", ""), (.2, "serve", 0.0, "band", "")]),
+    ("h1", [(1, "bed", 0.0, "band", "glow arrow:540,700,2.6 title:these_two_women_come_from|NORTH_AND|SOUTH_KOREA")]),
+    ("h2", [(1, "P", "jsa_looking_north.jpg", 50, "title:their_countries_are|STILL|AT_WAR")]),
+    ("h3", [(1, "duo", 0.0, "band", "title:they_became|FRIENDS|ANYWAY")]),
+    ("h4", [(1, "P", "flag_unification.jpg", 50, "title:this_is|THE_STORY|OF")]),
+    ("h5", [(1, "bed", 0.6, "band", "bigflash title:|HYUN_JUNG-HWA|&amp;_RI_BUN-HUI")]),
+    ("n2", [(.34, "X2", "paper.jpg", 50, "map:NORTH_KOREA,126.2,39.6;SOUTH_KOREA,127.6,36.4@118,136,32,44"), (.2, "duo", 0.0, "band", "whip"), (.2, "hall", 0.0, "band", ""), (.2, "rally", 0.2, "band", ""), (.2, "bed", 0.0, "band", ""), (.2, "serve", 0.0, "band", "")]),
     ("n3", [(.26, "rally", 1.8, "band", "whip"), (.24, "rally2", 0.0, "band", ""), (.22, "crowd", 0.0, "band", ""), (.28, "X2", "paper.jpg", 50, "card:#0b2a55|unified_Korea_became|WORLD|CHAMPIONS")]),
     ("n4", [(.24, "bye1", 0.0, "band", "whip"), (.24, "bye2", 0.0, "band", ""), (.22, "hyun", 0.0, "tall50", ""), (.30, "ring", 0.0, "band", "shim")]),
     ("n5", [(.2, "P", "jsa_looking_north.jpg", 50, "whip"), (.17, "P", "dmz_eulji_fence2.jpg", 50, ""), (.17, "P", "bridge_no_return.jpg", 50, ""), (.23, "react", 0.0, "tall50", ""), (.23, "ring", 1.6, "band", "z1.2")]),

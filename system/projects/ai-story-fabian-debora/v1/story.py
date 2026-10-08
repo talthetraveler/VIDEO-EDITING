@@ -4,12 +4,13 @@
 N = "../src/isUTwa1JEqY.mp4"
 P_ = "../src/Y4_IBcgUIIw.mp4"
 VOICE = "XrExE9yKIg1WjnnlVkGX"          # Matilda
-L = [  # hook: "At 12 he made his worst mistake. You should see him now." (ig-reel hookscore 100.0)
-     ("h1", "At twelve,"),
-     ("h2", "he made his worst mistake."),
-     ("h3", "You should see him now."),
-     ("h4", "He teaches kids like him"),
-     ("h5", "to paint."),
+L = [  # hook: "This man joined a gang at twelve. This is the story of Fabian Debora." (ig-reel hookscore 0)
+     ("h1", "This man joined a gang at twelve."),
+     ("h2", "Today, he teaches kids like him"),
+     ("h3", "to paint."),
+     ("h4", "This is the story of"),
+     ("h5", "Fabian Debora."),
+       # hook: "At 12 he made his worst mistake. You should see him now." (ig-reel hookscore 100.0)
      ("n3", "Fabian Debora grew up in Boyle Heights. He was in and out of prison, and lost in addiction."),
      ("n5", "Father Greg Boyle runs Homeboy Industries, where people leaving gangs get a second chance."),
      ("n7", "Today, Fabian runs the Homeboy Art Academy. His students are young people still caught up in gangs."),
@@ -25,7 +26,7 @@ SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("b2", 0.25), ("
 WHO = {"b2": "FABIAN DEBORA", "b4": "FABIAN DEBORA"}
 END = ("PRISONER", "TEACHER.")
 TEXT = {
-    "h1": "~At twelve,", "h2": "~he made his worst mistake.", "h3": "~You should see him now.", "h4": "~He teaches kids like him", "h5": "~to paint.",
+    "h1": "~This man joined a gang at twelve.", "h2": "~Today, he teaches kids like him", "h3": "~to paint.", "h4": "~This is the story of", "h5": "~Fabian Debora.",
     "b2": "I joined a gang | at the age of *12. | It was the | *worst mistake | I ever made.",
     "n3": "Fabian Debora | grew up in | *Boyle Heights. | He was in and out | of *prison, | and lost in | *addiction.",
     "b4": "Father Greg | just kept *accepting, | embracing, | and receiving me, | regardless of | where I was at | *in my life.",
@@ -45,11 +46,11 @@ PC = {"bh_street_2012.jpg": "BOYLE HEIGHTS, LOS ANGELES" + WC, "bh_ramona1.jpg":
       "la_freeway.jpg": "LOS ANGELES" + WC, "la_101_night.jpg": "LOS ANGELES" + WC, "homeboy_bakery_cafe.jpg": "HOMEBOY INDUSTRIES, LOS ANGELES" + WC, "homeboy_goldline.jpg": "HOMEBOY INDUSTRIES, LOS ANGELES" + WC,
       "bh_mural_religious.jpg": "BOYLE HEIGHTS" + WC, "la_6th_bridge.jpg": "LOS ANGELES" + WC, "ela_mural_blanquita1.jpg": "EAST LOS ANGELES" + WC, "bh_cesar_chavez.jpg": "BOYLE HEIGHTS" + WC}
 PLAN = [
-    ("h1", [(1, "P", "bh_street_2012.jpg", 50, "glow title:at|TWELVE")]),
-    ("h2", [(1, "P", "bh_ramona1.jpg", 50, "title:his|WORST|MISTAKE")]),
-    ("h3", [(1, "prof", 0.1, "tall50", "title:you_should|SEE_HIM|NOW")]),
-    ("h4", [(1, "teach", 0.0, "tall50", "title:he_teaches|KIDS|LIKE_HIM")]),
-    ("h5", [(1, "mural", 0.0, "band", "bigflash title:to|PAINT")]),
+    ("h1", [(1, "prof", 0.1, "tall50", "glow arrow:260,680,2.0,345 title:this_man_joined|A_GANG|AT_TWELVE")]),
+    ("h2", [(1, "teach", 0.0, "tall50", "title:today_he_teaches|KIDS|LIKE_HIM")]),
+    ("h3", [(1, "mural", 0.0, "band", "title:to|PAINT")]),
+    ("h4", [(1, "P", "bh_street_2012.jpg", 50, "title:this_is|THE_STORY|OF")]),
+    ("h5", [(1, "sketch", 0.0, "band", "bigflash title:|FABIAN|DEBORA")]),
     ("b2", [(-1.9, "P", "bh_ramona1.jpg", 50, "whip"), (1, "V", "b_b2_0.mp4@0", "band", "")]),
     ("n3", [(.2, "P", "bh_house.jpg", 50, "whip"), (.2, "P", "bh_cesar_chavez.jpg", 50, ""), (.2, "P", "g_cell.jpg", 50, ""), (.2, "P", "la_101_night.jpg", 50, ""), (.2, "P", "la_freeway.jpg", 50, "")]),
     ("b4", [(-2.3, "V", "b_b4_0.mp4@0", "tall68", "whip"), (-2.2, "V", "b_b4_0.mp4@2.3", "tall68", "z1.2"), (1, "V", "b_b4_0.mp4@4.5", "tall68", "")]),
@@ -61,3 +62,6 @@ PLAN = [
     ("end", [(1, "P", "la_6th_bridge.jpg", 50, "")]),
 ]
 GEN = {"cell": "An empty juvenile detention cell: narrow steel bed, small high window, a pencil drawing of a face taped to the concrete wall, no people"}
+
+# The illustrations in the Vox paper-collage look (style block from skills/toolbox/vox-ai-motion-graphics-generator), made with Agnes.
+GENSTYLE = "Mixed-media hand-cut paper collage, editorial zine style, vertical. Torn paper edges, scissor-cut borders, tape corners, halftone print dot patterns, paper drop shadows. Figures are printed-texture cut-outs from vintage photography. NOT 3D, NOT CGI. Palette: parchment cream, charcoal black, warm gold accent, one deep green. No text, no letters, no faces. Subject: "

@@ -4,12 +4,13 @@
 T_ = "../src/bVV2Zk88beY.mp4"
 I_ = "../src/G6X53uKLypE.mp4"
 VOICE = "XrExE9yKIg1WjnnlVkGX"          # Matilda
-L = [  # hook: "She held hate signs at 5. You won't believe who stopped her." (ig-reel hookscore 100.0)
-     ("h1", "She held hate signs"),
-     ("h2", "at five years old."),
-     ("h3", "For twenty years."),
-     ("h4", "You won't believe who stopped her:"),
-     ("h5", "a Jewish man, with dessert."),
+L = [  # hook: "This woman held hate signs at five years old. This is the story of Megan Phelps-Roper." (ig-reel hookscore 0)
+     ("h1", "This woman held hate signs at five years old."),
+     ("h2", "Then a Jewish man"),
+     ("h3", "answered her with dessert."),
+     ("h4", "This is the story of"),
+     ("h5", "Megan Phelps-Roper."),
+       # hook: "She held hate signs at 5. You won't believe who stopped her." (ig-reel hookscore 100.0)
      ("n2", "Megan Phelps-Roper grew up in the Westboro Baptist Church. Online, she attacked a Jewish blogger named David."),
      ("n3", "He answered with jokes. Then he walked up to her picket line, with halva from the Jerusalem market."),
      ("n5", "In 2012, she left. David invited her to stay with a rabbi she had once picketed."),
@@ -23,7 +24,7 @@ SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("n2", 0.25), ("
 WHO = {"b4": "MEGAN PHELPS-ROPER"}
 END = ("ENEMIES", "FRIENDS.")
 TEXT = {
-    "h1": "~She held hate signs", "h2": "~at five years old.", "h3": "~For twenty years.", "h4": "~You won&rsquo;t believe who stopped her:", "h5": "~a Jewish man, with dessert.",
+    "h1": "~This woman held hate signs at five years old.", "h2": "~Then a Jewish man", "h3": "~answered her with dessert.", "h4": "~This is the story of", "h5": "~Megan Phelps-Roper.",
     "n2": "Megan Phelps-Roper | grew up in the | *Westboro Baptist Church. | Online, | she attacked | a Jewish blogger | named *David.",
     "n3": "He answered | with *jokes. | Then he walked up | to her picket line, | with *halva | from the Jerusalem market.",
     "b4": "We&rsquo;d started | to see each other | as *human beings, | and it changed the way | we spoke | to *one another.",
@@ -40,12 +41,12 @@ PC = {"church03.jpg": "TOPEKA, KANSAS &middot; WIKIMEDIA COMMONS, CC BY 2.0", "t
       "shuk21400.jpg": "MAHANE YEHUDA MARKET, JERUSALEM &middot; " + C2, "halva00.jpg": "MAHANE YEHUDA MARKET, JERUSALEM &middot; WIKIMEDIA COMMONS, CC BY-SA 4.0", "megan01.jpg": "MEGAN PHELPS-ROPER, 2019 &middot; " + C2,
       "nmd19.jpg": "MEGAN PHELPS-ROPER, 2023 &middot; " + C2, "nmd18.jpg": "MEGAN PHELPS-ROPER, 2023 &middot; " + C2, "topeka_sky00.jpg": "TOPEKA, KANSAS &middot; WIKIMEDIA COMMONS, CC0"}
 PLAN = [
-    ("h1", [(1, "open", 0.1, "tall62", "glow title:she_held|HATE_SIGNS")]),
-    ("h2", [(1, "P", "church03.jpg", 42, "title:at|FIVE_YEARS|OLD")]),
-    ("h3", [(1, "P", "topeka_jackson00.jpg", 50, "title:for|TWENTY|YEARS")]),
-    ("h4", [(1, "P", "jlm_oldcity00.jpg", 60, "title:you_won&rsquo;t_believe|WHO_STOPPED|HER")]),
-    ("h5", [(.5, "P", "g_jman.jpg", 50, "title:a|JEWISH|MAN"), (.5, "P", "shuk21400.jpg", 50, "bigflash title:with|DESSERT")]),
-    ("n2", [(.2, "P", "megan01.jpg", 45, "whip"), (.18, "P", "church03.jpg", 42, "z1.3"), (.18, "P", "g_kid.jpg", 50, ""), (.14, "P", "g_phone.jpg", 50, ""), (.15, "P", "g_laptop.jpg", 50, ""), (.15, "david", 0.0, "band", "tag:DAVID ABITBOL")]),
+    ("h1", [(1, "P", "megan01.jpg", 45, "glow arrow:440,680,2.4,255 title:this_woman_held|HATE_SIGNS|AT_FIVE")]),
+    ("h2", [(1, "P", "g_jman.jpg", 50, "title:then_a|JEWISH|MAN")]),
+    ("h3", [(1, "P", "shuk21400.jpg", 50, "title:answered_her_with|DESSERT")]),
+    ("h4", [(1, "P", "topeka_jackson00.jpg", 50, "title:this_is|THE_STORY|OF")]),
+    ("h5", [(1, "P", "nmd19.jpg", 50, "bigflash title:|MEGAN|PHELPS-ROPER")]),
+    ("n2", [(.34, "X2", "paper.jpg", 50, "map:USA,-95.7,39.05;ISRAEL,35.2,31.8@-128,60,12,58"), (.2, "P", "megan01.jpg", 45, "whip"), (.18, "P", "church03.jpg", 42, "z1.3"), (.18, "P", "g_kid.jpg", 50, ""), (.14, "P", "g_phone.jpg", 50, ""), (.15, "P", "g_laptop.jpg", 50, ""), (.15, "david", 0.0, "band", "tag:DAVID ABITBOL")]),
     ("n3", [(.22, "P", "g_laugh.jpg", 50, "whip"), (.2, "P", "g_walk.jpg", 50, ""), (.2, "P", "g_gift.jpg", 50, ""), (.19, "P", "halva00.jpg", 50, ""), (.19, "P", "shuk21400.jpg", 50, "z1.3")]),
     ("b4", [(-2.2, "V", "b_b4_0.mp4@0", "tall45", "whip"), (1, "V", "b_b4_0.mp4@2.2", "tall45", "z1.25")]),
     ("n5", [(.28, "X2", "paper.jpg", 50, "card:#111111|in_2012|SHE_LEFT"), (.24, "P", "g_road.jpg", 50, "whip"), (.24, "P", "g_table.jpg", 50, ""), (.24, "P", "g_couch.jpg", 50, "")]),
@@ -63,5 +64,8 @@ GEN = {"jman": "A man in his forties seen from behind wearing a knitted kippah, 
        "walk": "A man seen from behind walking along a city sidewalk toward a small group of people standing in the distance, carrying a small gift box in one hand, faces not visible, daylight",
        "gift": "Close-up of a man's hands offering a small open box of halva sweets to a woman's hands outdoors on a street, no faces visible, daylight",
        "road": "A long empty Kansas highway at dawn seen through a car windscreen, two suitcases on the back seat reflected in the mirror, no people",
-       "table": "A long Shabbat dinner table in a warm family home, two lit candles, braided challah bread, many plates, hands passing a dish, no faces visible",
+       "table": "A long Shabbat dinner table set for many guests in a warm family home, two lit candles, braided challah bread, plates and glasses, every chair empty, absolutely no people, no hands, no faces",
        "couch": "A living room couch made up as a bed with folded blankets and two pillows in a warm book-filled family home at night, a lamp on, no people"}
+
+# The illustrations in the Vox paper-collage look (style block from skills/toolbox/vox-ai-motion-graphics-generator), made with Agnes.
+GENSTYLE = "Mixed-media hand-cut paper collage, editorial zine style, vertical. Torn paper edges, scissor-cut borders, tape corners, halftone print dot patterns, paper drop shadows. Figures are printed-texture cut-outs from vintage photography. NOT 3D, NOT CGI. Palette: parchment cream, charcoal black, warm gold accent, one deep green. No text, no letters, no faces. Subject: "

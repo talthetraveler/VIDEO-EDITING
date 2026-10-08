@@ -131,7 +131,7 @@ for i, (st, en, k, ref, x, flags, seg) in enumerate(shots):
     for f_ in fl:
         if f_.startswith("arrow:"):          # arrow:X,Y  -> a hand-drawn gold arrow from the title up to the person ("this man", Tal 2026-10-08)
             av_ = [float(v) for v in f_[6:].split(",")]          # optional third number: how long the arrow stays (it may outlive its shot)
-            ARROWS.append((i, st, av_[2] if len(av_) > 2 else d, av_[0], av_[1]))
+            ARROWS.append((i, st, av_[2] if len(av_) > 2 else d, av_[0], av_[1], av_[3] if len(av_) > 3 else 125))          # 4th number: how far from the face centre the tip stops (face radius + a margin)
         if f_.startswith("map:"):            # map:NAME,lon,lat;NAME,lon,lat@lon0,lon1,lat0,lat1  -> route map with two pins
             pts_, box_ = f_[4:].split("@")
             MAPS.append((i, st, d, [(q.split(",")[0].replace("_", " "), float(q.split(",")[1]), float(q.split(",")[2])) for q in pts_.split(";")], [float(v) for v in box_.split(",")]))
@@ -149,8 +149,8 @@ for i, (st, en, k, ref, x, flags, seg) in enumerate(shots):
             tl.append(f'tl.fromTo("#ckt{i}", {{opacity:0, y:20}}, {{opacity:1, y:0, duration:0.2}}, {st + 0.05:.2f});')
             for q in range(len(items_)):
                 t_ = st + 0.35 + q * (d - 0.9) / len(items_)
-                tl.append(f'tl.fromTo("#ck{i}_{q}", {{opacity:0, x:-40}}, {{opacity:1, x:0, duration:0.22, ease:"power3.out"}}, {t_:.2f}); tl.fromTo("#ckd{i}_{q}", {{scale:0}}, {{scale:1, duration:0.2, ease:"back.out(3)"}}, {t_ + 0.14:.2f});')
-                sfx.append((t_ + 0.14, "mg_success" if q == len(items_) - 1 else "mg_tick", 0.75 if q == len(items_) - 1 else 0.09))
+                tl.append(f'tl.fromTo("#ck{i}_{q}", {{opacity:0, scale:0.6, y:40}}, {{opacity:1, scale:1, y:0, duration:0.3, ease:"back.out(2.2)"}}, {t_:.2f}); tl.fromTo("#ckd{i}_{q}", {{scale:0}}, {{scale:1, duration:0.2, ease:"back.out(3)"}}, {t_ + 0.14:.2f});')
+                sfx += [(t_, "mg_pop", 0.17), (t_ + 0.14, "mg_success" if q == len(items_) - 1 else "mg_chime", 0.75 if q == len(items_) - 1 else 0.95)]          # a ding on every item (Tal: "when it pops up make a ding and nicer")
         if f_.startswith("title:") or f_.startswith("card:"):
             parts_ = f_.split(":", 1)[1].replace("_", " ").split("|")
             card = f_.startswith("card:")
@@ -231,12 +231,13 @@ def arrow(aid, start, d, path, head, plen=1500):
 
 
 import math
-for i_, st_, d_, ax_, ay_ in ARROWS:
+for i_, st_, d_, ax_, ay_, pb_ in ARROWS:
     sx_, sy_ = (880.0, 1060.0) if ax_ < 620 else (200.0, 1060.0)
     cx_, cy_ = sx_ + (140 if ax_ < 620 else -140), (sy_ + ay_) / 2
     ang_ = math.atan2(ay_ - cy_, ax_ - cx_)
+    ax_, ay_ = ax_ - pb_ * math.cos(ang_), ay_ - pb_ * math.sin(ang_)          # the tip stops beside the head and points at the person: it never lies across the face (Tal, 2026-10-09)
     hd_ = " ".join(f"{'M' if k == 0 else 'L'}{ax_ - 78 * math.cos(ang_ + t_):.0f} {ay_ - 78 * math.sin(ang_ + t_):.0f} L{ax_:.0f} {ay_:.0f}" for k, t_ in enumerate((0.5, -0.5)))
-    arrow(f"ar{i_}", st_ + 0.18, max(0.5, d_ - 0.18), f"M{sx_:.0f} {sy_:.0f} Q {cx_:.0f} {cy_:.0f}, {ax_:.0f} {ay_:.0f}", hd_)
+    arrow(f"ar{i_}_{int(ax_)}", st_ + 0.18, max(0.5, d_ - 0.18), f"M{sx_:.0f} {sy_:.0f} Q {cx_:.0f} {cy_:.0f}, {ax_:.0f} {ay_:.0f}", hd_)
 for i_, st_, d_, pts_, box_ in MAPS:
     _h, _t, _s = route_map(f"mp{i_}", st_, d_, pts_, f"photos/_map{i_}.jpg", box_[0], box_[1], box_[2], box_[3], track=3)
     h.append(_h); tl += _t; sfx += [(x[0], x[1], 0.6) if len(x) == 2 else x for x in _s]
@@ -335,10 +336,10 @@ css += '''
       .tw { position: absolute; left: 0; width: 1080px; display: flex; flex-direction: column; align-items: center; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,.6); }
       .tw.dark { color: #1b1712; text-shadow: none; }
       .cnsuf { font: 900 96px/1 "Montserrat", Arial, sans-serif; letter-spacing: -0.02em; color: #FACC27; margin-top: 14px; }
-      .ckwrap { position: absolute; left: 100px; top: 600px; width: 880px; color: #1a1a1a; }
+      .ckwrap { position: absolute; left: 80px; top: 470px; width: 920px; color: #1a1a1a; }
       .ckrule { width: 120px; height: 8px; background: #c2412d; margin-bottom: 34px; }
       .cktitle { font: italic 500 100px/1.05 "EB Garamond", Georgia, serif; margin-bottom: 54px; }
-      .ckrow { display: flex; align-items: center; gap: 36px; margin-bottom: 56px; }
+      .ckrow { display: flex; align-items: center; gap: 34px; margin-bottom: 40px; background: #fff; border-radius: 34px; padding: 34px 38px; box-shadow: 0 18px 44px rgba(40,30,10,.22), 0 2px 0 rgba(0,0,0,.06); transform-origin: 50% 50%; }
       .ckdot { flex: none; width: 108px; height: 108px; border-radius: 50%; background: #34c759; color: #fff; font: 900 66px/108px Arial, sans-serif; text-align: center; }
       .cktxt { font: 800 70px/1.12 "Montserrat", Arial, sans-serif; letter-spacing: -0.03em; }
       .tw .lead { font: italic 500 70px/1 "EB Garamond", Georgia, serif; }
@@ -349,6 +350,8 @@ css += '''
       video.footage.bandbg { inset: 0; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; filter: blur(30px) brightness(0.4); transform: scale(1.2); }
       .cinev { position: absolute; left: 40px; top: 400px; width: 1000px; height: 1040px; border-radius: 34px; background: radial-gradient(ellipse at 50% 42%, rgba(0,0,0,0) 38%, rgba(0,0,0,.78) 100%); }
 '''
+if os.environ.get('HOOK_ONLY'):
+    DUR = float(os.environ['HOOK_ONLY'])
 html = f'''<!doctype html>
 <html lang="en" data-resolution="portrait">
   <head>
