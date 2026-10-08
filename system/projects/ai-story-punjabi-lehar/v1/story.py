@@ -4,11 +4,12 @@
 A = "../src/nOKnBFNqKdA.mp4"
 B = "../src/ChBg5RFNshU.mp4"
 VOICE = "EXAVITQu4vr4xnSDxMaL"          # Sarah
-L = [("h1", "A Muslim and a Sikh"),
-     ("h2", "are best friends in Pakistan."),
-     ("h3", "With one phone camera,"),
-     ("h4", "they reunite families"),
-     ("h5", "torn apart in 1947."),
+L = [  # hook: "They lost each other for 74 years. You should see this." (ig-reel hookscore 100.0)
+     ("h1", "They lost each other"),
+     ("h2", "for seventy-four years."),
+     ("h3", "You should see this."),
+     ("h4", "A Muslim and a Sikh"),
+     ("h5", "reunite families with a phone."),
      ("n2", "When India and Pakistan were divided, millions fled across the new border. Brothers and sisters lost each other for a lifetime."),
      ("n3", "Nasir Dhillon and Bhupinder Singh Lovely film their stories, post them online, and wait for someone to recognise a face."),
      ("n4", "In 2022, two brothers met again, after seventy-four years."),
@@ -19,11 +20,11 @@ ON = {"b5": (A, [(15.0, 19.4)], (15.0, 19.45)),
 CLIPS = {"duo": (B, 82.1, 85.4), "film": (B, 86.1, 88.0), "selfie": (B, 92.2, 95.0), "call": (B, 128.3, 133.8), "walk": (A, 1.2, 5.6), "hug2": (A, 17.6, 21.5, 1.4), "phone": (A, 175.2, 179.8), "nasir": (A, 181.2, 185.8),
          "sis": (A, 255.2, 257.6, 1.0, "crop=iw:ih*0.80:0:0")}
 VID = {k: f"src/{k}.mp4" for k in CLIPS}
-SEQ = [("h1", .04), ("h2", .06), ("h3", .04), ("h4", .04), ("h5", .14), ("n2", .10), ("n3", .12), ("n4", .10), ("b5", .10), ("n6", .12), ("b7", .14), ("n8", .40)]
+SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("n2", 0.25), ("n3", 0.25), ("n4", 0.25), ("b5", 0.25), ("n6", 0.25), ("b7", 0.25), ("n8", 0.4)]
 WHO = {"b7": "SIKKA KHAN"}
 END = ("DIVIDED", "REUNITED.")
 TEXT = {
-    "h1": "~A Muslim and a Sikh", "h2": "~are best friends in Pakistan.", "h3": "~With one phone camera,", "h4": "~they reunite families", "h5": "~torn apart in 1947.",
+    "h1": "~They lost each other", "h2": "~for seventy-four years.", "h3": "~You should see this.", "h4": "~A Muslim and a Sikh", "h5": "~reunite families with a phone.",
     "n2": "When India and Pakistan | were *divided, | millions fled | across the new border. | Brothers and sisters | lost each other | for *a lifetime.",
     "n3": "Nasir Dhillon | and Bhupinder Singh Lovely | film their stories, | post them *online, | and wait for someone | to recognise | *a face.",
     "n4": "~In 2022, | two brothers | met again, | ~after | ~seventy-four years.",
@@ -39,11 +40,11 @@ PD = "1947 &middot; PUBLIC DOMAIN, WIKIMEDIA COMMONS"
 PC = {"p1947_columns.jpg": PD, "p1947_convoy.jpg": PD, "p1947_delhi_station.jpg": PD, "p1947_luggage.jpg": PD, "p1947_kingsway.jpg": PD, "faisalabad_clock.jpg": "FAISALABAD, PAKISTAN &middot; WIKIMEDIA COMMONS",
       "kartarpur_a.jpg": "KARTARPUR SAHIB, PAKISTAN &middot; WIKIMEDIA COMMONS", "kartarpur_07.jpg": "KARTARPUR SAHIB, PAKISTAN &middot; WIKIMEDIA COMMONS", "wagah_gate.jpg": "WAGAH BORDER &middot; WIKIMEDIA COMMONS", "corridor_zero_line.jpg": "KARTARPUR CORRIDOR &middot; WIKIMEDIA COMMONS"}
 PLAN = [
-    ("h1", [(1, "duo", 0.0, "band", "glow title:a|MUSLIM_AND_A|SIKH")]),
-    ("h2", [(1, "P", "faisalabad_clock.jpg", 50, "title:best_friends_in|PAKISTAN")]),
-    ("h3", [(1, "film", 0.0, "band", "title:with_one|PHONE|CAMERA")]),
-    ("h4", [(1, "call", 0.2, "band", "title:they_reunite|FAMILIES")]),
-    ("h5", [(1, "P", "p1947_columns.jpg", 50, "bigflash title:torn_apart_in|1947")]),
+    ("h1", [(1, "P", "p1947_columns.jpg", 50, "glow title:they|LOST|EACH_OTHER")]),
+    ("h2", [(1, "P", "wagah_gate.jpg", 50, "title:for|74_YEARS")]),
+    ("h3", [(1, "hug2", 0.0, "band", "title:you_should|SEE_THIS")]),
+    ("h4", [(1, "duo", 0.0, "band", "title:a|MUSLIM_AND|A_SIKH")]),
+    ("h5", [(1, "call", 0.2, "band", "bigflash title:reunite_families|WITH_A|PHONE")]),
     ("n2", [(.2, "P", "p1947_convoy.jpg", 50, "whip"), (.2, "P", "p1947_delhi_station.jpg", 50, ""), (.2, "P", "p1947_luggage.jpg", 50, ""), (.2, "P", "wagah_gate.jpg", 50, ""), (.2, "P", "p1947_kingsway.jpg", 50, "")]),
     ("n3", [(.2, "nasir", 0.0, "tall50", "whip tag:NASIR DHILLON"), (.2, "duo", 1.2, "band", "tag:BHUPINDER SINGH LOVELY"), (.2, "selfie", 0.0, "band", ""), (.2, "phone", 0.0, "band", ""), (.2, "call", 2.4, "band", "")]),
     ("n4", [(.3, "P", "kartarpur_a.jpg", 50, "whip"), (.34, "walk", 0.0, "band", ""), (.36, "X2", "paper.jpg", 50, "card:#7a1010|they_met_again_after|74_YEARS")]),

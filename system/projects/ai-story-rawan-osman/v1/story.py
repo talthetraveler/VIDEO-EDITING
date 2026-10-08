@@ -2,12 +2,13 @@
 # Facts: DOSSIER.md (her on-camera words + her Times of Israel blog + SA Jewish Report + Jewish Independent). Photos: Wikimedia Commons, raw/CREDITS.json.
 V = "../src/DruzFM253KA.mp4"
 VOICE = "nPczCjzI2devNBz1zQrb"          # Brian
-L = [("h1", "She was raised in Lebanon"),
-     ("h2", "to see Jews as the enemy."),
-     ("h3", "Then she moved to France,"),
-     ("h4", "walked into a small shop,"),
-     ("h5", "and heard Hebrew."),
-     ("n2", "Rawan Osman had never spoken to a Jew. She dropped her shopping, ran upstairs, and locked her door."),
+L = [  # hook: "She hated Jews in Lebanon. You won't believe who stopped it." (ig-reel hookscore 100.0)
+     ("h1", "She hated Jews"),
+     ("h2", "in Lebanon."),
+     ("h3", "You won't believe"),
+     ("h4", "who stopped it:"),
+     ("h5", "a Jewish shopkeeper."),
+     ("n2", "Rawan Osman had never spoken to a Jew. In France, she heard Hebrew in a small shop. She dropped her shopping, ran upstairs, and locked her door."),
      ("n4", "But nothing had happened. So she went back for her bags."),
      ("n5", "The owner was Jewish. He asked where she was from, and helped her carry them."),
      ("n7", "Today, she answers questions from Arabs who are curious about Jews."),
@@ -20,12 +21,12 @@ ON = {"b3": (V, [(141.44, 147.86)], (141.44, 147.90)),
 CLIPS = {"open": (V, 22.40, 24.70), "wide": (V, 228.76, 231.40), "sit": (V, 101.50, 103.60)}
 VID = {"open": "src/open.mp4", "wide": "src/wide.mp4", "sit": "src/sit.mp4"}
 
-SEQ = [("h1", .03), ("h2", .06), ("h3", .03), ("h4", .05), ("h5", .14), ("n2", .10), ("b3", .12), ("n4", .10), ("n5", .12), ("b6", .14), ("n7", .12), ("b8", .16), ("n9", .40)]
+SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("n2", 0.25), ("b3", 0.25), ("n4", 0.25), ("n5", 0.25), ("b6", 0.25), ("n7", 0.25), ("b8", 0.25), ("n9", 0.4)]
 WHO = {"b3": "RAWAN OSMAN"}
 END = ("ENEMY", "ALLY.")
 TEXT = {
-    "h1": "~She was raised in Lebanon", "h2": "~to see Jews as the enemy.", "h3": "~Then she moved to France,", "h4": "~walked into a small shop,", "h5": "~and heard Hebrew.",
-    "n2": "~Rawan Osman had never | ~spoken to a Jew. | She dropped her shopping, | ran upstairs, | and *locked her door.",
+    "h1": "~She hated Jews", "h2": "~in Lebanon.", "h3": "~You won&rsquo;t believe", "h4": "~who stopped it:", "h5": "~a Jewish shopkeeper.",
+    "n2": "~Rawan Osman had never | ~spoken to a Jew. | In France, | she heard *Hebrew | in a small shop. | She dropped her shopping, | ran upstairs, | and *locked her door.",
     "b3": "I was sharing | the same space | with *the enemy | for the first time | *ever.",
     "n4": "But nothing | had happened. | So she *went back | for her bags.",
     "n5": "The owner | was *Jewish. | He asked where | she was from, | and helped her | *carry them.",
@@ -42,12 +43,12 @@ PC = {"bekaa_valley.jpg": "BEKAA VALLEY, LEBANON &middot; KARAN JAIN, CC BY-SA 2
       "stras_avenue_paix_door.jpg": "STRASBOURG &middot; COYAU, CC BY-SA 3.0", "stras_contades_park.jpg": "STRASBOURG &middot; GUILHEM VELLUT, CC BY 2.0", "stras_synagogue_park.jpg": "STRASBOURG &middot; CLAUDE TRUONG-NGOC, CC BY-SA 3.0",
       "damascus_alley.jpg": "DAMASCUS &middot; V. ARGENBERG, CC BY 4.0", "damascus_street.jpg": "DAMASCUS &middot; V. ARGENBERG, CC BY 4.0", "damascus_oldcity.jpg": "DAMASCUS &middot; V. ARGENBERG, CC BY 4.0", "beirut_central.jpg": "BEIRUT &middot; V. ARGENBERG, CC BY 4.0"}
 PLAN = [
-    ("h1", [(1, "open", 0.1, "tall78", "glow title:she_was_raised_in|LEBANON")]),
-    ("h2", [(1, "P", "beirut_streets.jpg", 40, "title:to_see_Jews_as|THE_ENEMY")]),
-    ("h3", [(1, "P", "stras_petite_france.jpg", 50, "title:then_she_moved_to|FRANCE")]),
-    ("h4", [(1, "P", "g_shop.jpg", 50, "title:walked_into|A_SMALL|SHOP")]),
-    ("h5", [(1, "P", "g_inside.jpg", 50, "bigflash title:and_heard|HEBREW")]),
-    ("n2", [(.28, "X2", "paper.jpg", 50, "card:#111111|she_had_never_spoken_to|A_JEW"), (.24, "P", "g_drop.jpg", 50, "whip thud0"), (.24, "P", "g_stairs.jpg", 50, "run"), (.24, "P", "g_lock.jpg", 50, "door0")]),
+    ("h1", [(1, "open", 0.1, "tall78", "glow title:she|HATED|JEWS")]),
+    ("h2", [(1, "P", "beirut_streets.jpg", 40, "title:in|LEBANON")]),
+    ("h3", [(1, "P", "stras_petite_france.jpg", 50, "title:you_won&rsquo;t|BELIEVE")]),
+    ("h4", [(1, "P", "g_shop.jpg", 50, "title:who|STOPPED_IT")]),
+    ("h5", [(1, "P", "g_counter.jpg", 50, "bigflash title:a_Jewish|SHOPKEEPER")]),
+    ("n2", [(.2, "X2", "paper.jpg", 50, "card:#111111|she_had_never_spoken_to|A_JEW"), (.2, "P", "g_inside.jpg", 50, "whip"), (.2, "P", "g_drop.jpg", 50, "thud0"), (.2, "P", "g_stairs.jpg", 50, "run"), (.2, "P", "g_lock.jpg", 50, "door0")]),
     ("b3", [(-2.9, "V", "b_b3_0.mp4@0", "band", "whip"), (1, "V", "b_b3_0.mp4@2.9", "tall50", "")]),
     ("n4", [(.5, "P", "g_door.jpg", 50, "whip"), (.5, "P", "g_back.jpg", 50, "")]),
     ("n5", [(.34, "P", "g_counter.jpg", 50, "whip"), (.33, "P", "g_bags.jpg", 50, ""), (.33, "P", "g_bags.jpg", 50, "z1.35")]),

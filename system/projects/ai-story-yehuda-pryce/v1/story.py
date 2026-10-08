@@ -2,10 +2,11 @@
 # Facts: DOSSIER.md (24-year sentence, a little over 16 served, released 22 Oct 2018, converted 2020, doctorate in social work from Simmons University). Most of the pre-2018 story rests on his own account.
 V = "../src/gomU7uVqipg.mp4"
 VOICE = "nPczCjzI2devNBz1zQrb"          # Brian
-L = [("h1", "At nineteen,"),
-     ("h2", "he was sentenced to twenty-four years."),
-     ("h3", "He was a gang member."),
-     ("h4", "Then, in prison,"),
+L = [  # hook: "At 19 he got 24 years. You should not judge him." (ig-reel hookscore 100.0)
+     ("h1", "At nineteen,"),
+     ("h2", "he got twenty-four years."),
+     ("h3", "You should not judge him."),
+     ("h4", "In prison,"),
      ("h5", "he met a rabbi."),
      ("n3", "Yehudah Pryce grew up in Orange County, California. He says he joined a gang to belong somewhere. Then one day, in the prison yard, he looked around."),
      ("n5", "He started to study. And a rabbi told him something he never forgot."),
@@ -17,11 +18,11 @@ ON = {"b2": (V, [(178.58, 180.52)], (178.58, 180.56)),
       "b8": (V, [(1471.88, 1476.92)], (1471.88, 1476.96))}
 CLIPS = {"open": (V, 70.6, 73.2), "end": (V, 1739.9, 1742.6)}
 VID = {k: f"src/{k}.mp4" for k in CLIPS}
-SEQ = [("h1", .04), ("h2", .06), ("h3", .05), ("h4", .04), ("h5", .14), ("b2", .12), ("n3", .10), ("b4", .12), ("n5", .10), ("b6", .14), ("n7", .12), ("b8", .14), ("n9", .40)]
+SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("b2", 0.25), ("n3", 0.25), ("b4", 0.25), ("n5", 0.25), ("b6", 0.25), ("n7", 0.25), ("b8", 0.25), ("n9", 0.4)]
 WHO = {"b2": "DR. YEHUDAH PRYCE"}
 END = ("INMATE", "DOCTOR.")
 TEXT = {
-    "h1": "~At nineteen,", "h2": "~he was sentenced to twenty-four years.", "h3": "~He was a gang member.", "h4": "~Then, in prison,", "h5": "~he met a rabbi.",
+    "h1": "~At nineteen,", "h2": "~he got twenty-four years.", "h3": "~You should not judge him.", "h4": "~In prison,", "h5": "~he met a rabbi.",
     "b2": "I robbed | drug dealers | *for a living.",
     "n3": "Yehudah Pryce | grew up in | Orange County, *California. | He says he joined a gang | to *belong | somewhere. | Then one day, | in the prison yard, | he *looked around.",
     "b4": "Hey, y&rsquo;all, | we&rsquo;re *losers. | Like, we lost | *at life.",
@@ -38,9 +39,9 @@ PC = {"prison_pelicanbay_aerial.jpg": "PELICAN BAY STATE PRISON, CALIFORNIA" + W
       "prison_folsom_gate.jpg": "FOLSOM STATE PRISON, CALIFORNIA" + WC, "jewish_tefillin_head.jpg": "WIKIMEDIA COMMONS", "oc_irvine_aerial.jpg": "ORANGE COUNTY, CALIFORNIA" + WC, "jewish_siddur_koren.jpg": "WIKIMEDIA COMMONS", "grad_simmons_main.jpg": "SIMMONS UNIVERSITY, BOSTON" + WC}
 PLAN = [
     ("h1", [(1, "open", 0.1, "tall18", "glow title:at|NINETEEN")]),
-    ("h2", [(1, "P", "prison_pelicanbay_aerial.jpg", 50, "title:he_was_sentenced_to|24_YEARS")]),
-    ("h3", [(1, "P", "g_street.jpg", 50, "title:he_was_a|GANG|MEMBER")]),
-    ("h4", [(1, "P", "g_cell.jpg", 50, "title:then|IN_PRISON")]),
+    ("h2", [(1, "P", "prison_pelicanbay_aerial.jpg", 50, "title:he_got|24_YEARS")]),
+    ("h3", [(1, "P", "g_cell.jpg", 50, "title:you_should_not|JUDGE|HIM")]),
+    ("h4", [(1, "P", "g_yard.jpg", 50, "title:in|PRISON")]),
     ("h5", [(1, "P", "jewish_torah_open.jpg", 50, "bigflash title:he_met|A_RABBI")]),
     ("b2", [(1, "V", "b_b2_0.mp4@0", "tall18", "whip")]),
     ("n3", [(.14, "P", "oc_santaana.jpg", 50, "whip"), (.14, "P", "oc_irvine_aerial.jpg", 50, ""), (.14, "P", "g_street.jpg", 50, "z1.3"), (.14, "P", "g_hands.jpg", 50, ""), (.14, "P", "prison_folsom_gate.jpg", 50, ""), (.15, "P", "g_yard.jpg", 50, ""), (.15, "P", "g_yard.jpg", 50, "z1.4")]),

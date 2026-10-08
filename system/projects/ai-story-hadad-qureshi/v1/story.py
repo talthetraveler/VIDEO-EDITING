@@ -2,9 +2,10 @@
 # No footage of the pair and no free photo of Amir Hadad exists (DOSSIER.md): Qureshi is shown in real photos, Hadad only as illustration (backs and hands, no face).
 # Facts: DOSSIER.md (AP, Reuters, Dawn, AFP, ATP). He was never banned: the Pakistan Sports Board said he "may face a ban"; the federation dropped it by Sept 2002.
 VOICE = "JBFqnCBsd6RMkjVDRZzb"          # George
-L = [("h1", "His country told him"),          # V2 hook: the stakes first (ig-reel hookscore: 45.7 against 33.0 for the V1 hook; its top pick "Nobody tells you..." is not his voice)
-     ("h2", "to stop playing with an Israeli."),
-     ("h3", "He was Pakistan's best tennis player."),
+L = [  # hook: "Pakistan said stop playing with an Israeli. You should see." (ig-reel hookscore 100.0)
+     ("h1", "Pakistan said:"),
+     ("h2", "stop playing with an Israeli."),
+     ("h3", "You should see."),
      ("h4", "His doubles partner was a Jew from Israel."),
      ("h5", "He walked back onto the court."),
      ("n2", "In 2002, Aisam Qureshi of Pakistan and Amir Hadad of Israel both needed a partner. They chose each other, and fought their way into Wimbledon."),
@@ -13,10 +14,10 @@ L = [("h1", "His country told him"),          # V2 hook: the stakes first (ig-re
      ("n5", "Two months later, he walked onto court at the US Open, with Hadad beside him."),
      ("n6", "No ban ever came. They shared the Arthur Ashe Humanitarian Award. And today, Qureshi is president of the federation that once threatened him."),
      ("n7", "This story is proof that a friendship can be stronger than a border.")]
-SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", .30), ("n2", .25), ("n3", .25), ("n4", .25), ("n5", .25), ("n6", .25), ("n7", .40)]          # the hook is one take: no gaps inside it; a real breath between paragraphs
+SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("n2", 0.25), ("n3", 0.25), ("n4", 0.25), ("n5", 0.25), ("n6", 0.25), ("n7", 0.4)]
 END = ("ENEMIES", "TEAMMATES.")
 TEXT = {
-    "h1": "~His country told him", "h2": "~to stop playing with an Israeli.", "h3": "~He was Pakistan&rsquo;s best tennis player.", "h4": "~His doubles partner was a Jew from Israel.", "h5": "~He walked back onto the court.",
+    "h1": "~Pakistan said:", "h2": "~stop playing with an Israeli.", "h3": "~You should see.", "h4": "~His doubles partner was a Jew from Israel.", "h5": "~He walked back onto the court.",
     "n2": "In 2002, | Aisam Qureshi | of *Pakistan | and Amir Hadad | of *Israel | both needed | a partner. | They chose | *each other, | and fought their way | into *Wimbledon.",
     "n3": "They beat | the eleventh seeds, | ~and reached | ~the last sixteen.",
     "n4": "Back home, | officials | *condemned it. | They warned Qureshi | that he could be | *banned | from the national team.",
@@ -30,9 +31,9 @@ PC = {"q_early_a.jpg": Q, "q_early_b.jpg": Q, "q_usopen2009.jpg": Q, "q_wim2013.
       "wim_qualifying2016.jpg": "WIMBLEDON QUALIFYING" + WC, "net_grass2012.jpg": "WIKIMEDIA COMMONS", "lahore_minar_flags.jpg": "LAHORE, PAKISTAN" + WC, "lahore_badshahi.jpg": "LAHORE, PAKISTAN" + WC, "lahore_fort_flag.jpg": "LAHORE, PAKISTAN" + WC,
       "usopen_outer2009.jpg": "US OPEN, NEW YORK" + WC, "ashe_top.jpg": "ARTHUR ASHE STADIUM" + WC, "ramla_white_tower.jpg": "RAMLA, ISRAEL" + WC, "telaviv_skyline2018.jpg": "TEL AVIV" + WC, "ball_grass.jpg": "WIKIMEDIA COMMONS", "wim_outside2013.jpg": "WIMBLEDON" + WC}
 PLAN = [
-    ("h1", [(1, "P", "lahore_minar_flags.jpg", 50, "glow title:his_country|TOLD_HIM")]),
-    ("h2", [(1, "P", "g_letter.jpg", 50, "title:to_stop_playing_with|AN_ISRAELI")]),
-    ("h3", [(1, "P", "q_early_a.jpg", 50, "title:he_was_Pakistan&rsquo;s|BEST|PLAYER")]),
+    ("h1", [(1, "P", "lahore_minar_flags.jpg", 50, "glow title:Pakistan|SAID")]),
+    ("h2", [(1, "P", "g_letter.jpg", 50, "title:stop_playing_with|AN_ISRAELI")]),
+    ("h3", [(1, "P", "q_early_a.jpg", 50, "title:you_should|SEE")]),
     ("h4", [(1, "P", "g_back.jpg", 50, "title:his_doubles_partner|A_JEW_FROM|ISRAEL")]),
     ("h5", [(1, "P", "g_tunnel.jpg", 50, "bigflash title:he_walked|BACK_ONTO|THE_COURT")]),
     ("n2", [(.14, "P", "q_early_b.jpg", 50, "whip tag:PAKISTAN"), (.14, "P", "lahore_badshahi.jpg", 50, ""), (.14, "P", "g_back.jpg", 50, "z1.3 tag:ISRAEL"), (.14, "P", "ramla_white_tower.jpg", 50, ""), (.15, "P", "g_rackets.jpg", 50, ""), (.15, "P", "wim_qualifying2016.jpg", 50, ""), (.14, "P", "wim_outside2013.jpg", 50, "")]),

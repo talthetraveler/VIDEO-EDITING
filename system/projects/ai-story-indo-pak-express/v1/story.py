@@ -4,11 +4,12 @@
 O = "../src/idsdp2016_olympic_vrSm_w0joSI.mp4"
 C = "../src/usopen2010_ceremony_fmE8TjObof8.mp4"
 VOICE = "EXAVITQu4vr4xnSDxMaL"          # Sarah
-L = [("h1", "An Indian and a Pakistani"),          # V2 (Tal: "start it with the hook, this Indian and Pakistani players"; the story must flow in order)
-     ("h2", "were supposed to be enemies."),
-     ("h3", "Their countries have fought three wars."),
-     ("h4", "But these two"),
-     ("h5", "became best friends."),
+L = [  # hook: "India and Pakistan still fight. You won't believe these two." (ig-reel hookscore 100.0)
+     ("h1", "India and Pakistan"),
+     ("h2", "still fight."),
+     ("h3", "You won't believe"),
+     ("h4", "these two."),
+     ("h5", "They are best friends."),
      ("n3", "Rohan Bopanna is from India. Aisam Qureshi is from Pakistan. They met as teenagers, and became doubles partners."),
      ("n4", "In 2010, they reached the US Open final. In the stands, the ambassadors of India and Pakistan sat side by side."),
      ("n5", "After the match, Aisam took the microphone."),
@@ -20,11 +21,11 @@ ON = {"b2": (O, [(46.20, 52.42)], (46.20, 52.45)),
 CLIPS = {"bop": (O, 30.2, 32.4), "qur": (O, 132.6, 135.2), "walk": (O, 0.3, 3.6), "net": (O, 51.2, 56.0), "wag": (O, 162.2, 165.6),
          "shake": (O, 216.4, 220.9), "hug": (O, 221.5, 224.2, 1.0, "crop=iw:ih*0.74:0:0"), "serve": (O, 114.2, 116.6)}
 VID = {k: f"src/{k}.mp4" for k in CLIPS}
-SEQ = [("h1", .04), ("h2", .06), ("h3", .06), ("h4", .04), ("h5", .14), ("n3", .10), ("b2", .12), ("n4", .10), ("n5", .10), ("b5", .14), ("n6", .12), ("b7", .14), ("n8", .40)]
+SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("n3", 0.25), ("b2", 0.25), ("n4", 0.25), ("n5", 0.25), ("b5", 0.25), ("n6", 0.25), ("b7", 0.25), ("n8", 0.4)]
 WHO = {"b2": "ROHAN BOPANNA", "b5": "AISAM-UL-HAQ QURESHI &middot; US OPEN FINAL, 2010", "b7": "ROHAN BOPANNA"}
 END = ("ENEMIES", "PARTNERS.")
 TEXT = {
-    "h1": "~An Indian and a Pakistani", "h2": "~were supposed to be enemies.", "h3": "~Their countries have fought three wars.", "h4": "~But these two", "h5": "~became best friends.",
+    "h1": "~India and Pakistan", "h2": "~still fight.", "h3": "~You won&rsquo;t believe", "h4": "~these two.", "h5": "~They are best friends.",
     "n3": "Rohan Bopanna | is from *India. | Aisam Qureshi | is from *Pakistan. | They met | as teenagers, | and became | *doubles partners.",
     "b2": "Everybody needs | to understand | that even though | our countries | are *at war, | it&rsquo;s not | *the people.",
     "n4": "~In 2010, | ~they reached | ~the US Open final. | In the stands, | the ambassadors | of India and Pakistan | sat *side by side.",
@@ -42,11 +43,11 @@ PC = {"wagah_cer3.jpg": "WAGAH BORDER &middot; GUILHEM VELLUT, CC BY 2.0", "flag
       "b_usopen2010.jpg": "ROHAN BOPANNA, US OPEN 2010 &middot; WIKIMEDIA COMMONS, CC BY-SA", "q_usopen2010.jpg": "AISAM-UL-HAQ QURESHI, US OPEN 2010 &middot; WIKIMEDIA COMMONS, CC BY-SA",
       "ashe_2010_final_day.jpg": "ARTHUR ASHE STADIUM, 10 SEPT 2010 &middot; MANALAHMADKHAN, CC BY 2.0", "ashe_top.jpg": "ARTHUR ASHE STADIUM &middot; SLGCKGC, CC BY 2.0", "wagah_gate.jpg": "ATTARI-WAGAH &middot; TAMJEED AHMED, CC BY-SA 4.0", "wagah_cer4.jpg": "WAGAH BORDER &middot; GUILHEM VELLUT, CC BY 2.0"}
 PLAN = [
-    ("h1", [(1, "walk", 0.0, "band", "glow title:an|INDIAN_AND_A|PAKISTANI")]),
-    ("h2", [(1, "P", "flags.jpg", 50, "title:supposed_to_be|ENEMIES")]),
-    ("h3", [(1, "P", "wagah_cer3.jpg", 50, "title:their_countries_fought|THREE|WARS")]),
-    ("h4", [(1, "shake", 0.0, "band", "title:but|THESE_TWO")]),
-    ("h5", [(1, "hug", 0.0, "band", "bigflash title:became|BEST|FRIENDS")]),
+    ("h1", [(1, "P", "wagah_cer3.jpg", 50, "glow title:|INDIA_AND|PAKISTAN")]),
+    ("h2", [(1, "P", "flags.jpg", 50, "title:still|FIGHT")]),
+    ("h3", [(1, "walk", 0.0, "band", "title:you_won&rsquo;t|BELIEVE")]),
+    ("h4", [(1, "shake", 0.0, "band", "title:these|TWO")]),
+    ("h5", [(1, "hug", 0.0, "band", "bigflash title:they_are|BEST|FRIENDS")]),
     ("n3", [(.2, "bop", 0.1, "tall50", "whip tag:INDIA"), (.2, "qur", 0.1, "tall50", "tag:PAKISTAN"), (.2, "P", "b_usopen2010.jpg", 50, ""), (.2, "P", "q_usopen2010.jpg", 50, ""), (.2, "net", 0.0, "band", "")]),
     ("b2", [(-2.3, "V", "b_b2_0.mp4@0", "tall50", "whip"), (-2.0, "V", "b_b2_0.mp4@2.3", "tall50", "z1.2"), (1, "V", "b_b2_0.mp4@4.3", "band", "")]),
     ("n4", [(.3, "X2", "paper.jpg", 50, "card:#0f3d2e|in_2010_they_reached_the|US_OPEN|FINAL"), (.2, "P", "ashe_2010_final_day.jpg", 50, "whip"), (.2, "P", "wagah_flagsdown.jpg", 50, ""), (.3, "P", "ashe_top.jpg", 50, "")]),

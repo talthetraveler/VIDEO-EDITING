@@ -3412,3 +3412,16 @@ other twelve. **Rule: a transition is something the viewer should not notice. On
 scale jump inside a shot; a flash only on the hook's last beat.** His hook question the same day ("are you using
 Jake Schincariol's skills for hooks?"): I had not been. `ig-reel/hookscore.py` now scores three hook options per
 story and the number is reported, never used as a gate (it rates his own titles WEAK).
+
+## 138. Story-reel hooks must score 100 on Jake Schincariol's scorer, and each phrase gets its own picture (2026-10-08)
+
+Tal: *"you should be using one that's 10000"*, then *"only make 100 hook options"*, and on Megan's hook *"a Jewish
+man (put image), then with dessert (image), Jewish blogger named ... (image)"*.
+**Rules. (1) The hook line of a story reel scores 100.0 on `skills/ig-reel/hookscore.py` before it is voiced; the
+lines for all 13 stories are in `ai-story-kit/rehook_data.py`. The scorer wants 5-12 words, 60 characters or
+fewer, a stake word or number in the first four words, two concrete things, two stake words, and "you". The line
+must still be true: "nearly banned" was dropped for Hadad & Qureshi because he was only warned. (2) When a sentence
+names two things, it is two shots: the man, then the dessert; the blogger's real face when his name is said.**
+A cut that begins three frames before the shot you want shows as a flash of the wrong picture (students before
+Fabian Debora): look at frame 0 of every clip, and when the sound must start earlier than the picture, hold the
+first good frame (`tpad`) instead of starting the picture early.

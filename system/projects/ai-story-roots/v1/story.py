@@ -3,11 +3,12 @@
 J = "../src/7Wy7vnnv1VY.mp4"
 FIX = "hue=s=0.5,eq=contrast=1.05"
 VOICE = "JBFqnCBsd6RMkjVDRZzb"          # George
-L = [("h1", "A Palestinian former prisoner"),
-     ("h2", "and an Israeli settler rabbi"),
-     ("h3", "lived minutes apart."),
-     ("h4", "They had never met."),
-     ("h5", "Then the rabbi came to visit."),
+L = [  # hook: "He lost his brother. You won't believe his Israeli partner." (ig-reel hookscore 100.0)
+     ("h1", "He lost his brother."),
+     ("h2", "You won't believe"),
+     ("h3", "his Israeli partner:"),
+     ("h4", "a settler rabbi."),
+     ("h5", "They had never met."),
      ("n3", "Ali Abu Awwad spent four years in prison. Then he lost his brother, Yousef."),
      ("n5", "Ali chose non-violence. In 2014, on his family's land, he met Rabbi Hanan Schlesinger."),
      ("n7", "Together they started Roots, a place where Palestinians and Israeli settlers meet as neighbours."),
@@ -18,11 +19,11 @@ ON = {"b2": (J, [(584.42, 588.95)], (584.42, 589.0), FIX),
       "b8": (J, [(75.02, 79.98)], (75.02, 80.02), FIX)}
 CLIPS = {"two": (J, 795.0, 799.0, 1.0, FIX), "two2": (J, 762.0, 765.0, 1.0, FIX), "ali": (J, 1964.6, 1967.4, 1.0, FIX)}
 VID = {k: f"src/{k}.mp4" for k in CLIPS}
-SEQ = [("h1", .04), ("h2", .06), ("h3", .05), ("h4", .06), ("h5", .14), ("b2", .12), ("n3", .10), ("b4", .12), ("n5", .10), ("b6", .12), ("n7", .12), ("b8", .14), ("n9", .40)]
+SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("b2", 0.25), ("n3", 0.25), ("b4", 0.25), ("n5", 0.25), ("b6", 0.25), ("n7", 0.25), ("b8", 0.25), ("n9", 0.4)]
 WHO = {"b2": "RABBI HANAN SCHLESINGER", "b4": "ALI ABU AWWAD", "b6": "ALI ABU AWWAD", "b8": "RABBI HANAN SCHLESINGER"}
 END = ("ENEMIES", "PARTNERS.")
 TEXT = {
-    "h1": "~A Palestinian former prisoner", "h2": "~and an Israeli settler rabbi", "h3": "~lived minutes apart.", "h4": "~They had never met.", "h5": "~Then the rabbi came to visit.",
+    "h1": "~He lost his brother.", "h2": "~You won&rsquo;t believe", "h3": "~his Israeli partner:", "h4": "~a settler rabbi.", "h5": "~They had never met.",
     "b2": "I never saw | the Palestinians. | They were | *invisible | to me.",
     "n3": "Ali Abu Awwad | spent four years | in *prison. | Then he lost | his brother, | *Yousef.",
     "b4": "When he died, | he took | the taste of my life | *with him.",
@@ -38,11 +39,11 @@ WC = " &middot; WIKIMEDIA COMMONS"
 PC = {"ali_portrait.jpg": "ALI ABU AWWAD" + WC, "hanan_portrait.jpg": "RABBI HANAN SCHLESINGER" + WC, "gush_lookout.jpg": "GUSH ETZION" + WC, "junction_b.jpg": "GUSH ETZION JUNCTION" + WC, "beitummar_a.jpg": "BEIT UMMAR" + WC,
       "beitummar_farm.jpg": "BEIT UMMAR" + WC, "olive_hebron_a.jpg": "HEBRON HILLS" + WC, "lone_oak_tree.jpg": "THE LONE OAK, GUSH ETZION" + WC, "halhul_sunset.jpg": "HALHUL" + WC, "gush_c.jpg": "GUSH ETZION" + WC, "olive_hebron_b.jpg": "HEBRON HILLS" + WC}
 PLAN = [
-    ("h1", [(1, "P", "ali_portrait.jpg", 50, "glow title:a_Palestinian|FORMER|PRISONER")]),
-    ("h2", [(1, "P", "hanan_portrait.jpg", 82, "title:and_an_Israeli|SETTLER|RABBI")]),
-    ("h3", [(1, "P", "gush_lookout.jpg", 50, "title:they_lived|MINUTES|APART")]),
-    ("h4", [(1, "P", "junction_b.jpg", 50, "title:they_had|NEVER|MET")]),
-    ("h5", [(1, "two", 0.0, "band", "bigflash title:then_the_rabbi|CAME_TO|VISIT")]),
+    ("h1", [(1, "P", "ali_portrait.jpg", 50, "glow title:he_lost|HIS|BROTHER")]),
+    ("h2", [(1, "P", "gush_lookout.jpg", 50, "title:you_won&rsquo;t|BELIEVE")]),
+    ("h3", [(1, "P", "junction_b.jpg", 50, "title:his|ISRAELI|PARTNER")]),
+    ("h4", [(1, "P", "hanan_portrait.jpg", 82, "title:a|SETTLER|RABBI")]),
+    ("h5", [(1, "two", 0.0, "band", "bigflash title:they_had|NEVER|MET")]),
     ("b2", [(-2.2, "V", "b_b2_0.mp4@0", "tall50", "whip"), (1, "V", "b_b2_0.mp4@2.2", "tall50", "z1.25")]),
     ("n3", [(.25, "ali", 0.0, "tall50", "whip"), (.25, "P", "g_cell.jpg", 50, ""), (.25, "P", "beitummar_a.jpg", 50, ""), (.25, "P", "g_chair.jpg", 50, "")]),
     ("b4", [(-2.6, "V", "b_b4_0.mp4@0", "tall50", "whip"), (1, "V", "b_b4_0.mp4@2.6", "tall50", "z1.25")]),

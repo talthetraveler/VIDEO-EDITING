@@ -2,11 +2,12 @@
 # Facts: DOSSIER.md, all his own account. American-born Coptic Christian, California; six months in Egypt in 2024. The interview's political passages are NOT used: this is only the story of a man who questioned his own anger.
 V = "../src/abanoub-samaan_stand-tall-israel_FtyLuBH3RnQ.mp4"
 VOICE = "JBFqnCBsd6RMkjVDRZzb"          # George
-L = [("h1", "A young Coptic Christian"),
-     ("h2", "learned who to hate from his phone."),
-     ("h3", "He was angry at the world."),
-     ("h4", "Then he asked himself"),
-     ("h5", "one question."),
+L = [  # hook: "He hated Israel until he doubted himself. You should try it." (ig-reel hookscore 100.0)
+     ("h1", "He hated Israel"),
+     ("h2", "until he doubted himself."),
+     ("h3", "You should try it."),
+     ("h4", "His phone taught him who to hate."),
+     ("h5", "Then he asked one question."),
      ("n3", "Abanoub Samaan grew up in America. He says social media taught him who the enemy was, and he never checked."),
      ("n5", "Then he spent six months in Egypt, and started reading for himself."),
      ("n7", "This year, he said it out loud for the first time. He says it frightened him."),
@@ -17,11 +18,11 @@ ON = {"b2": (V, [(409.50, 412.95)], (409.50, 413.0)),
       "b8": (V, [(2939.52, 2942.65)], (2939.52, 2942.7))}
 CLIPS = {"open": (V, 409.6, 413.0)}
 VID = {k: f"src/{k}.mp4" for k in CLIPS}
-SEQ = [("h1", .04), ("h2", .06), ("h3", .05), ("h4", .04), ("h5", .14), ("b2", .12), ("n3", .10), ("b4", .12), ("n5", .10), ("b6", .12), ("n7", .12), ("b8", .14), ("n9", .40)]
+SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("b2", 0.25), ("n3", 0.25), ("b4", 0.25), ("n5", 0.25), ("b6", 0.25), ("n7", 0.25), ("b8", 0.25), ("n9", 0.4)]
 WHO = {"b2": "ABANOUB SAMAAN"}
 END = ("ANGER", "LOVE.")
 TEXT = {
-    "h1": "~A young Coptic Christian", "h2": "~learned who to hate from his phone.", "h3": "~He was angry at the world.", "h4": "~Then he asked himself", "h5": "~one question.",
+    "h1": "~He hated Israel", "h2": "~until he doubted himself.", "h3": "~You should try it.", "h4": "~His phone taught him who to hate.", "h5": "~Then he asked one question.",
     "b2": "Why don&rsquo;t you | *doubt | your own beliefs, | and check | the *other side?",
     "n3": "Abanoub Samaan | grew up in *America. | He says social media | taught him | who *the enemy was, | and he never | *checked.",
     "b4": "I was *wrong | about that type | of thinking.",
@@ -37,11 +38,11 @@ WC = " &middot; WIKIMEDIA COMMONS"
 PC = {"coptic_stmark_a.jpg": "COPTIC CATHEDRAL, CAIRO" + WC, "coptic_hanging_a.jpg": "THE HANGING CHURCH, CAIRO" + WC, "coptic_cross_philae.jpg": "COPTIC CROSS, EGYPT" + WC, "cairo_muizz.jpg": "CAIRO" + WC, "cairo_talaat_harb.jpg": "CAIRO" + WC,
       "coptic_cave_church.jpg": "CAVE CHURCH, CAIRO" + WC, "coptic_service.jpg": "COPTIC SERVICE" + WC, "coptic_stgeorge_in_a.jpg": "COPTIC CAIRO" + WC, "cairo_shopping.jpg": "CAIRO" + WC, "coptic_hanging_b.jpg": "THE HANGING CHURCH, CAIRO" + WC}
 PLAN = [
-    ("h1", [(1, "open", 0.1, "tall50", "glow title:a_young|COPTIC|CHRISTIAN")]),
-    ("h2", [(1, "P", "g_phone.jpg", 50, "title:learned_who_to_hate_from|HIS_PHONE")]),
-    ("h3", [(1, "P", "g_room.jpg", 50, "title:he_was|ANGRY_AT|THE_WORLD")]),
-    ("h4", [(1, "P", "coptic_cross_philae.jpg", 50, "title:then_he_asked|HIMSELF")]),
-    ("h5", [(1, "P", "g_mirror.jpg", 50, "bigflash title:just|ONE|QUESTION")]),
+    ("h1", [(1, "P", "g_phone.jpg", 50, "glow title:he|HATED|ISRAEL")]),
+    ("h2", [(1, "P", "g_mirror.jpg", 50, "title:until_he|DOUBTED|HIMSELF")]),
+    ("h3", [(1, "open", 0.1, "tall50", "title:you_should|TRY_IT")]),
+    ("h4", [(1, "P", "g_room.jpg", 50, "title:his_phone_taught_him|WHO_TO|HATE")]),
+    ("h5", [(1, "P", "coptic_cross_philae.jpg", 50, "bigflash title:then_he_asked|ONE|QUESTION")]),
     ("b2", [(-1.8, "V", "b_b2_0.mp4@0", "tall50", "whip"), (1, "V", "b_b2_0.mp4@1.8", "tall50", "z1.25")]),
     ("n3", [(.2, "P", "g_street.jpg", 50, "whip"), (.2, "P", "g_phone.jpg", 50, "z1.3"), (.2, "P", "coptic_service.jpg", 50, ""), (.2, "P", "g_room.jpg", 50, "z1.2"), (.2, "P", "coptic_stmark_a.jpg", 50, "")]),
     ("b4", [(1, "V", "b_b4_0.mp4@0", "tall50", "whip z1.1")]),

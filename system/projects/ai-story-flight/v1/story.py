@@ -6,11 +6,12 @@
 G = "../src/hLPZ1NJav4o.mp4"
 M = "../src/REmnuDhRZuE.mp4"
 VOICE = "nPczCjzI2devNBz1zQrb"          # Brian
-L = [("h1", "An Indian pilot"),
-     ("h2", "was attacked in his own cockpit."),
-     ("h3", "About one hundred and eighty people were on board."),
-     ("h4", "The plane began to fall."),
-     ("h5", "Then strangers ran to help."),
+L = [  # hook: "No pilot, 180 people. You should see who saved Flight 1073." (ig-reel hookscore 100.0)
+     ("h1", "No pilot."),
+     ("h2", "About a hundred and eighty people."),
+     ("h3", "You should see"),
+     ("h4", "who saved flight ten seventy-three."),
+     ("h5", "It started with the captain."),
      ("n2", "Captain Smit Machchhar was flying from Dubai to Tel Aviv. He was struck from behind, and fell to the cockpit floor."),
      ("n4", "The cockpit door was locked. So he got up."),
      ("n5", "Passengers rushed in. An Israeli plumber pulled back on the controls. An Israeli dentist stopped the captain's bleeding. Two off-duty pilots landed the plane in Saudi Arabia."),
@@ -22,11 +23,11 @@ ON = {"b3": (G, [(157.84, 158.30), (159.62, 163.62)], (157.84, 158.9)),
 LEFT = "crop=iw/2:ih:0:0"
 CLIPS = {"smit": (M, 149.0, 152.0, 1.0, LEFT), "smit2": (M, 435.6, 440.4, 1.0, LEFT)}
 VID = {k: f"src/{k}.mp4" for k in CLIPS}
-SEQ = [("h1", .04), ("h2", .06), ("h3", .05), ("h4", .05), ("h5", .14), ("n2", .10), ("b3", .12), ("n4", .10), ("b4", .12), ("n5", .12), ("b6", .12), ("n7", .10), ("n8", .40)]
+SEQ = [("h1", 0), ("h2", 0), ("h3", 0), ("h4", 0), ("h5", 0.3), ("n2", 0.25), ("b3", 0.25), ("n4", 0.25), ("b4", 0.25), ("n5", 0.25), ("b6", 0.25), ("n7", 0.25), ("n8", 0.4)]
 WHO = {"b3": "CAPTAIN SMIT MACHCHHAR &middot; HIS VOICE", "b4": "CAPTAIN SMIT MACHCHHAR &middot; HIS VOICE", "b6": "CAPTAIN SMIT MACHCHHAR &middot; HIS VOICE"}
 END = ("STRANGERS", "ONE CREW.")
 TEXT = {
-    "h1": "~An Indian pilot", "h2": "~was attacked in his own cockpit.", "h3": "~About one hundred and eighty people were on board.", "h4": "~The plane began to fall.", "h5": "~Then strangers ran to help.",
+    "h1": "~No pilot.", "h2": "~About a hundred and eighty people.", "h3": "~You should see", "h4": "~who saved flight ten seventy-three.", "h5": "~It started with the captain.",
     "n2": "Captain Smit Machchhar | was flying from Dubai | to *Tel Aviv. | He was struck | from behind, | and fell to the | *cockpit floor.",
     "b3": "I felt the aircraft, | and the whooshing sound, | and people | *screaming.",
     "n4": "The cockpit door | was *locked. | So he | *got up.",
@@ -42,11 +43,11 @@ WC = " &middot; WIKIMEDIA COMMONS"
 PC = {"cockpit_max_1.jpg": "BOEING 737 MAX COCKPIT" + WC, "cabin_flydubai_max.jpg": "FLYDUBAI 737 MAX CABIN" + WC, "fz1073_altitude_chart.jpg": "FLIGHT FZ1073 ALTITUDE" + WC, "plane_a6fkf_dxb.jpg": "THE AIRCRAFT, A6-FKF" + WC,
       "dxb_t2_ramp.jpg": "DUBAI" + WC, "tabuk_airport.jpg": "TABUK AIRPORT, SAUDI ARABIA" + WC, "tabuk_desert.jpg": "TABUK, SAUDI ARABIA" + WC, "window_flydubai.jpg": "WIKIMEDIA COMMONS", "plane_a6fmn_takeoff.jpg": "WIKIMEDIA COMMONS", "tlv_aerial.jpg": "TEL AVIV" + WC}
 PLAN = [
-    ("h1", [(1, "smit", 0.1, "tall50", "glow title:an|INDIAN|PILOT")]),
-    ("h2", [(1, "P", "cockpit_max_1.jpg", 50, "title:attacked_in_his|OWN|COCKPIT")]),
-    ("h3", [(1, "P", "cabin_flydubai_max.jpg", 50, "title:on_board_about|180|PEOPLE")]),
-    ("h4", [(1, "P", "g_dive.jpg", 50, "title:the_plane|BEGAN|TO_FALL")]),
-    ("h5", [(1, "P", "g_aisle.jpg", 50, "bigflash title:then|STRANGERS|RAN_TO_HELP")]),
+    ("h1", [(1, "P", "cockpit_max_1.jpg", 50, "glow title:|NO|PILOT")]),
+    ("h2", [(1, "P", "cabin_flydubai_max.jpg", 50, "title:about|180|PEOPLE")]),
+    ("h3", [(1, "P", "g_dive.jpg", 50, "title:you_should|SEE")]),
+    ("h4", [(1, "P", "g_aisle.jpg", 50, "title:who_saved|FLIGHT|1073")]),
+    ("h5", [(1, "smit", 0.1, "tall50", "bigflash title:it_started_with|THE|CAPTAIN")]),
     ("n2", [(.2, "P", "plane_a6fkf_dxb.jpg", 50, "whip"), (.2, "P", "dxb_t2_ramp.jpg", 50, ""), (.2, "P", "plane_a6fmn_takeoff.jpg", 50, ""), (.2, "P", "cockpit_max_1.jpg", 50, "z1.4"), (.2, "P", "g_floor.jpg", 50, "thud0")]),
     ("b3", [(.34, "P", "g_dive.jpg", 50, "whip z1.2"), (.33, "P", "fz1073_altitude_chart.jpg", 50, ""), (.33, "P", "window_flydubai.jpg", 50, "")]),
     ("n4", [(.5, "P", "g_door.jpg", 50, "whip"), (.5, "P", "g_floor.jpg", 50, "z1.3")]),
