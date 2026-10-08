@@ -3425,3 +3425,12 @@ names two things, it is two shots: the man, then the dessert; the blogger's real
 A cut that begins three frames before the shot you want shows as a flash of the wrong picture (students before
 Fabian Debora): look at frame 0 of every clip, and when the sound must start earlier than the picture, hold the
 first good frame (`tpad`) instead of starting the picture early.
+
+## 139. Write for someone who knows nothing about the subject (Hadad & Qureshi, 2026-10-08)
+
+Tal on V5: *"why did you do a Lahore to Ramla animation"* and *"'fought their way into Wimbledon'? No one knows what
+that is."* The map named two birth towns nobody has heard of; the script used tennis words ("fought their way into",
+"eleventh seeds", "last sixteen") as if the viewer followed the sport.
+**Rule: a map names COUNTRIES unless the town is the story. Every term a 15-year-old outside the field would not
+know is replaced by what it means: "Wimbledon, the biggest tennis tournament in the world"; "one of the best teams
+in the world", not "the eleventh seeds". Read the script once as someone who has never heard of the subject.**
