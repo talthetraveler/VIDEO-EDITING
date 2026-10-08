@@ -38,7 +38,7 @@ if not os.path.exists("words.json"):          # time the words one segment at a 
     key, allw = os.environ["GROQ_API_KEY"], []
     for n, g in SEQ:
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"vo/{n}.wav", "-ac", "1", "-ar", "16000", "vo/_x.flac"])
-        out = subprocess.run(["curl", "-s", "https://api.groq.com/openai/v1/audio/transcriptions", "-H", f"Authorization: Bearer {key}", "-F", "file=@vo/_x.flac", "-F", "model=whisper-large-v3-turbo", "-F", "response_format=verbose_json", "-F", "timestamp_granularities[]=word", "-F", "language=" + ("ar" if n in BITES else "en")], capture_output=True, text=True).stdout
+        out = subprocess.run(["curl", "-s", "https://api.groq.com/openai/v1/audio/transcriptions", "-H", f"Authorization: Bearer {key}", "-F", "file=@vo/_x.flac", "-F", "model=whisper-large-v3-turbo", "-F", "response_format=verbose_json", "-F", "timestamp_granularities[]=word", "-F", "language=" + getattr(S, "BITELANG", {}).get(n, "ar" if n in BITES else "en")], capture_output=True, text=True).stdout
         allw.append({"seg": n, "words": [{"word": x["word"].strip(), "start": round(x["start"], 3)} for x in json.loads(out).get("words", [])]})
     os.remove("vo/_x.flac")
     json.dump(allw, open("words.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
@@ -82,7 +82,7 @@ for i, (st, en, k, ref, x, flags, seg) in enumerate(shots):
     isvid = k in VID or k == "V"
     if (k, ref) in MAXLEN:
         assert d <= MAXLEN[(k, ref)] + 0.02, f"shot {k} {ref} is {d:.2f}s but only {MAXLEN[(k, ref)]}s of it exists ({seg})"
-    style = "" if mode in ("band", "win") else (f"object-position:{x}% 50%;transform-origin:50% 38%;" if mode == "tall" else f"object-position:{x}% 30%;transform-origin:{x}% 34%")
+    style = "" if mode in ("band", "win", "wide") else (f"object-position:{x}% 50%;transform-origin:50% 38%;" if mode == "tall" else f"object-position:{x}% 30%;transform-origin:{x}% 34%")
     if "grey" in flags.split():
         style += "filter:grayscale(1) brightness(.62) contrast(1.1);"
     if "cine" in flags:
@@ -108,7 +108,7 @@ for i, (st, en, k, ref, x, flags, seg) in enumerate(shots):
         src, ms = (f"src/{ref.split('@')[0]}", float(ref.split("@")[1]) if "@" in ref else 0.0) if k == "V" else (VID[k], ref)
         if mode == "inset":
             h.append(f'      <div id="pg{i}" class="clip" data-start="{st:.2f}" data-duration="{d:.2f}" data-track-index="30"><div class="solid" style="background:#f6f4ef"></div></div>')
-        if mode in ("band", "tall"):
+        if mode in ("band", "tall", "wide"):
             h.append(f'      <video id="bg{i}" class="clip footage bandbg" src="{src}" data-start="{st:.2f}" data-duration="{d:.2f}" data-media-start="{ms}" data-track-index="30" muted playsinline></video>')
         h.append(f'      <video id="v{i}" class="clip footage{cls}" src="{src}" data-start="{st:.2f}" data-duration="{d:.2f}" data-media-start="{ms}" data-track-index="0" muted playsinline style="{style}"></video>')
     else:
@@ -272,7 +272,7 @@ for i, (a, txt, seg, key) in enumerate(caps):
         sfx.append((key, "boomshort", 1.0))
 for seg, g in SEQ:
     if seg in WHO:
-        h.append(f'      <div id="who_{seg}" class="clip" data-start="{T[seg][0]:.2f}" data-duration="{T[seg][1] - T[seg][0]:.2f}" data-track-index="6"><div class="who" style="top:{1560 if tall_at(T[seg][0] + 0.3) else 1480}px"><span>{WHO[seg]}</span></div></div>')
+        h.append(f'      <div id="who_{seg}" class="clip" data-start="{T[seg][0]:.2f}" data-duration="{T[seg][1] - T[seg][0]:.2f}" data-track-index="6"><div class="who" style="top:{1600 if tall_at(T[seg][0] + 0.3) else 1580}px"><span>{WHO[seg]}</span></div></div>')
 sfx = sorted(set((round(max(0, t), 2), n, d) for t, n, d in sfx))
 h.append(f'      <audio id="music" data-start="0" data-duration="{DUR}" data-track-index="80" src="sfx/music_lo.wav"></audio>')
 h.append(f'      <audio id="vo" data-start="0" data-duration="{VOICE_END:.2f}" data-track-index="10" src="voice.wav"></audio>')
@@ -297,6 +297,7 @@ css += '''
       video.footage.tall { inset: auto; left: 0; top: 330px; width: 1080px; height: 1216px; object-fit: cover; }
       video.footage.band { inset: auto; left: 0; top: 560px; width: 1080px; height: 608px; object-fit: cover; }
       video.footage.band { inset: auto; left: 0; top: 420px; width: 1080px; height: 810px; object-fit: cover; }
+      video.footage.wide { inset: auto; left: 0; top: 600px; width: 1080px; height: 608px; object-fit: cover; }
       video.footage.bandbg { filter: blur(26px) brightness(0.62) saturate(1.15); }
       .tw { position: absolute; left: 0; width: 1080px; display: flex; flex-direction: column; align-items: center; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,.6); }
       .tw.dark { color: #1b1712; text-shadow: none; }

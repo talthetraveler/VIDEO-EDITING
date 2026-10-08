@@ -16,7 +16,7 @@ L = [("h1", "One from North Korea."),
      ("n7", "This story is proof that a border cannot end a friendship.")]
 CUTB = "crop=iw*0.75:ih*0.70:iw*0.125:0"          # removes the Korean caption at the bottom and the blurred side panels
 CLIPS = {"hyun": (J, 3.3, 6.3), "ring": (J, 8.6, 12.8, 1.0, "crop=iw:ih*0.66:0:ih*0.04"), "bye1": (J, 53.4, 55.6, 1.0, CUTB), "bye2": (J, 56.0, 58.3, 1.0, CUTB),
-         "duo": (J, 93.2, 95.6, 1.0, "crop=iw:ih*0.74:0:0"), "bed": (J, 108.4, 111.6), "react": (J, 36.0, 39.6, 1.0, "crop=iw:ih*0.80:0:0"),
+         "duo": (J, 93.2, 95.6, 1.0, "crop=iw:ih*0.74:0:0"), "bed": (J, 108.4, 111.6, 1.0, "crop=iw:ih*0.72:0:0"), "react": (J, 36.0, 39.6, 1.0, "crop=iw:ih*0.80:0:0"),
          "hall": (W_, 86.2, 89.6), "serve": (W_, 89.7, 91.5), "rally": (W_, 91.6, 96.6), "rally2": (W_, 103.2, 107.0), "crowd": (W_, 108.1, 110.0)}
 VID = {k: f"src/{k}.mp4" for k in CLIPS}
 SEQ = [("h1", .05), ("h2", .06), ("h3", .05), ("h4", .04), ("h5", .14), ("n2", .10), ("n3", .12), ("n4", .12), ("n5", .12), ("n7", .40)]

@@ -3378,3 +3378,21 @@ small `story.py` (lines, quote ranges, clips, plan, credits). Helpers: `new.sh` 
 His Drive music folder (`assets/music-library`, 42 files) is commercial instrumentals (Kanye, Kendrick, Drake, MF
 DOOM): Instagram can mute or block a reel for those, so they are not used under these reels unless he says so.
 Captions: Montserrat 900, 72 px, key words gold, upper case and 16% larger, popping in.
+
+## 136. Thirteen stories in a day: what broke, and the checks that caught it (2026-10-08)
+
+Tal: *"build everything."* Seven more stories went out after the first six. Four defects were caught on the contact
+sheet of the rendered file, one only after an upload:
+- **A quote that was the HOST speaking.** The Nissim Black bite "we overdo how much people hate us" came from a
+  transcript with no speakers; the picture showed the interviewer. Rule: every quote is confirmed by looking at who is
+  on screen while it is said. A voice-only quote is used only when the source is one person's call or monologue.
+- **Bite ends that ran into the next speaker** ("Where is this?", "Explain to me"). Rule: after the build, print the
+  words Whisper hears in each cut quote; anything after the last intended word means the out-point is late.
+- **Illustrations that drew a person anyway** (a face at a desk, a woman in a men's doubles pair, a propeller plane
+  for a 737). Rule: look at every generated picture at full size; wrong detail means regenerate or use a real photo.
+- **Burned-in subtitles cut off** by the 4:3 "band" crop. The new `wide` mode shows the full 16:9 frame.
+- **A failed build that still rendered.** `engine.py | head -1` hid an assertion error, the old index.html rendered
+  and was uploaded to Frame.io (Abanoub Samaan V1). Rule: never pipe the engine into `head`; write its output to a
+  log and chain the render with `&&`.
+Hebrew, Hindi, Punjabi and Korean lines: captions are a translation nobody checked unless the source burned its own
+subtitles in (AFP). Say so in the hand-over; Tal reads Hebrew.

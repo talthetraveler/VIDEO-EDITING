@@ -15,7 +15,9 @@ def vd(f):
     return float(re.search(r"mean_volume: ([-\d.]+)", e).group(1))
 
 
-for seg, (src, ranges, (pa, pb)) in getattr(S, "ON", {}).items():
+for seg, on_ in getattr(S, "ON", {}).items():
+    src, ranges, (pa, pb) = on_[:3]
+    vf_ = (on_[3] + "," if len(on_) > 3 else "") + VF          # optional picture filter first (crop, colour)
     ins, fc = [], []
     for i, (a, b) in enumerate(ranges):
         ins += ["-ss", str(a), "-to", str(b), "-i", src]
@@ -24,7 +26,7 @@ for seg, (src, ranges, (pa, pb)) in getattr(S, "ON", {}).items():
     subprocess.run(["ffmpeg", "-v", "error", "-y"] + ins + ["-filter_complex", ";".join(fc), "-map", "[o]", "-ar", "44100", "-ac", "1", "vo/_r.wav"], check=True)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", "vo/_r.wav", "-af", f"volume={-20.0 - vd('vo/_r.wav'):.1f}dB,alimiter=limit=0.9", f"vo/{seg}.wav"], check=True)
     os.remove("vo/_r.wav")
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(pa), "-to", str(pb), "-i", src, "-vf", VF, "-an", "-r", "30", "-c:v", "libx264", "-crf", "15", "-pix_fmt", "yuv420p", f"src/b_{seg}_0.mp4"], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(pa), "-to", str(pb), "-i", src, "-vf", vf_, "-an", "-r", "30", "-c:v", "libx264", "-crf", "15", "-pix_fmt", "yuv420p", f"src/b_{seg}_0.mp4"], check=True)
     print(seg, "sound", round(sum(b - a for a, b in ranges), 2), "picture", round(pb - pa, 2))
 for name, c in getattr(S, "CLIPS", {}).items():
     src, a, b = c[:3]
