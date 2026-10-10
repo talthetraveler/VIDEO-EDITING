@@ -3510,3 +3510,17 @@ clips the difference was plain: his are a heavy rounded face, 1-3 words, ONE bri
 - The Arabic map is keyed by caption chunk, so **re-chunking orphans it**: after any change that moves caption
   breaks, print the captions with no Arabic entry (must be an empty list) before rendering for review.
 - Put a crop of his caption next to a crop of mine BEFORE the first review, not after he asks twice.
+
+## 146. Street cuts: open on the greeting, title off the face, title simple (2026-10-10)
+Tal on the kebab cut, with a screenshot of the pill across the owner's forehead:
+*"change that to not cover his face, just simple: POV: meeting an Arab Christian in Israel"* and
+*"start always with the intro shot: hey, salam alaikum, how are you, boom."*
+- **The first shot is always the approach / greeting**, even one second of it ("What do you want?"). Never open
+  mid-conversation on the second line.
+- **The title pill never sits on a face.** `titleY` is a default, not a coordinate: look at frame 15 of every cut.
+  When the face is high in frame, put the pill on the chest (`"titleY": 830` here), above the captions.
+- **Title = "POV: MEETING A/AN <who> IN ISRAEL"**, two lines. No story summary in the pill.
+- He called V4 of this cut "perfect": street caption style + small Arabic + light grade + this title is the
+  template for the rest of street-oct10.
+- `selfreview.mjs` prints "2 issue(s)" without the reason; run `verify-cut.mjs <edit.json> --render <mp4>` to see it
+  (both were beats ending on a dangling "Yes," / "Thank").

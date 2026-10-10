@@ -1,0 +1,53 @@
+{
+ "beats": [
+  [
+   "local-0b9300886da0cb34",
+   0.2,
+   27.09,
+   0.5,
+   "Excuse me, I have a random question. Where are you from? I'm from Israel. You're from Israel? Ye"
+  ],
+  [
+   "local-aae0be41e8d9d126",
+   28.06,
+   31.96,
+   0.5,
+   "Never hide who you are. Never. Both sides."
+  ],
+  [
+   "local-aae0be41e8d9d126",
+   33.24,
+   49.28,
+   0.5,
+   "You never hide that you're Israeli or Jewish? I never hide. This is who I am. People accept it, "
+  ],
+  [
+   "local-aae0be41e8d9d126",
+   49.21,
+   50.99,
+   0.5,
+   "That's amazing. Thank you very much."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "MEETING AN ISRAELI\nFOOTBALL PLAYER ⚽ 🇮🇱",
+ "captionKeys": [
+  "football player",
+  "Maccabi Haifa",
+  "my dream",
+  "Never hide",
+  "who I am",
+  "Israeli",
+  "Romanian"
+ ],
+ "out": "ST_FOOTBALLER_V1.mp4",
+ "snap": false
+}

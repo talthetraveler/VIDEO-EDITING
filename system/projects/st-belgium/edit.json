@@ -1,0 +1,60 @@
+{
+ "beats": [
+  [
+   "local-ea98c8914d20b1be",
+   0.38,
+   16.89,
+   0.5,
+   "Excuse me. Hi, how are you? Where are you from? Hello, I'm from Belgium. You're from Belgium and"
+  ],
+  [
+   "local-ea98c8914d20b1be",
+   16.82,
+   26.55,
+   0.5,
+   "Why is Israel the most beautiful country? Because in Israel we accept everybody. We are very goo"
+  ],
+  [
+   "local-ea98c8914d20b1be",
+   26.66,
+   39.5,
+   0.5,
+   "What's your favorite part about Israel? I think it's the freedom that we have and the security. "
+  ],
+  [
+   "local-0719082e8b4d596c",
+   52.76,
+   65.62,
+   0.5,
+   "you You can wear your designer bag and no one steals your stuff? Yeah, of course, no, no. Really"
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "SHE MOVED FROM BELGIUM 🇧🇪\nTO ISRAEL 🇮🇱",
+ "captionKeys": [
+  "from Belgium",
+  "seven months",
+  "Beautiful country",
+  "accept everybody",
+  "the freedom",
+  "More than in Europe",
+  "designer bag",
+  "really happy"
+ ],
+ "out": "ST_BELGIUM_V1.mp4",
+ "snap": false,
+ "captionFix": [
+  {
+   "match": "I've traveled to",
+   "to": null
+  }
+ ]
+}

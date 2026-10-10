@@ -2,6 +2,13 @@
  "beats": [
   [
    "local-66c6d725d3832fe7",
+   0.0,
+   1.25,
+   0.5,
+   "What do you want in your business?"
+  ],
+  [
+   "local-66c6d725d3832fe7",
    3.16,
    17.76,
    0.5,
@@ -10,7 +17,7 @@
   [
    "local-92eaa7bf4f9b4aaf",
    1.53,
-   21.23,
+   20.55,
    0.5,
    "Tell me something interesting about yourself. Well, my family has been here for over 100 years. "
   ],
@@ -31,19 +38,19 @@
   [
    "local-51801357c9169293",
    0,
-   20.03,
+   20.6,
    0.5,
    "Excuse me, I want to pay. How much is it? No, no, no. It's okay, my friend. What do you mean, no"
   ]
  ],
- "titleY": 260,
+ "titleY": 830,
  "titleHold": 4.0,
  "capY": 0.69,
  "capSize": 74,
  "titleSize": 56,
  "autoFrame": false,
  "grade": "light",
- "title": "POV: I WENT TO A KEBAB SHOP\nOWNED BY ARAB CHRISTIANS ✝\nIN ISRAEL 🇮🇱",
+ "title": "POV: MEETING AN ARAB CHRISTIAN ✝\nIN ISRAEL 🇮🇱",
  "captionKeys": [
   "Johnny",
   "both Christian",
@@ -55,7 +62,7 @@
   "hospitality",
   "the best"
  ],
- "out": "ST_KEBAB_V3.mp4",
+ "out": "POV Meeting an Arab Christian in Israel FINAL.mp4",
  "captionFix": [
   {
    "match": "Akron",
@@ -73,5 +80,6 @@
   }
  ],
  "captionStyle": "street",
- "captionMaxWords": 4
+ "captionMaxWords": 4,
+ "snap": false
 }
