@@ -3,28 +3,42 @@
   [
    "local-0b9300886da0cb34",
    0.2,
-   27.09,
+   2.9,
    0.5,
-   "Excuse me, I have a random question. Where are you from? I'm from Israel. You're from Israel? Ye"
+   "Excuse me, I have a random question. Where are you from?"
+  ],
+  [
+   "local-aae0be41e8d9d126",
+   1.18,
+   9.89,
+   0.5,
+   "So, as an Israeli who plays for an Israeli team..."
+  ],
+  [
+   "local-0b9300886da0cb34",
+   37.52,
+   55.4,
+   0.5,
+   "What's your favorite part about Israel?"
   ],
   [
    "local-aae0be41e8d9d126",
    28.06,
-   31.96,
+   31.8,
    0.5,
-   "Never hide who you are. Never. Both sides."
+   "Never hide who you are."
   ],
   [
    "local-aae0be41e8d9d126",
    33.24,
-   49.28,
+   49.1,
    0.5,
-   "You never hide that you're Israeli or Jewish? I never hide. This is who I am. People accept it, "
+   "You never hide that you're Israeli or Jewish?"
   ],
   [
    "local-aae0be41e8d9d126",
-   49.21,
-   50.99,
+   49.25,
+   50.9,
    0.5,
    "That's amazing. Thank you very much."
   ]
@@ -38,16 +52,19 @@
  "grade": "light",
  "captionStyle": "street",
  "captionMaxWords": 4,
- "title": "MEETING AN ISRAELI\nFOOTBALL PLAYER ⚽ 🇮🇱",
+ "title": "POV: MEETING AN ISRAELI\nFOOTBALL PLAYER ⚽ 🇮🇱",
  "captionKeys": [
-  "football player",
-  "Maccabi Haifa",
-  "my dream",
+  "Romanian national team",
+  "both places",
+  "Jerusalem",
+  "family",
+  "special",
   "Never hide",
   "who I am",
   "Israeli",
   "Romanian"
  ],
- "out": "ST_FOOTBALLER_V1.mp4",
- "snap": false
+ "out": "ST_FOOTBALLER_V2.mp4",
+ "snap": false,
+ "captionFix": []
 }

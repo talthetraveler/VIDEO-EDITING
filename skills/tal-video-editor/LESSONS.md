@@ -3535,3 +3535,18 @@ it as written and ended the shot at 1.25s. The real speech runs to 1.56s (`speec
   otherwise.** I cannot listen; say so, and ask him for the line rather than shipping the transcript's guess.
 - **Fix the words in the cached transcript and re-align**, then re-render and REPLACE the media on any scheduled
   post (`updateScheduledPost` with the full original body; the uuid stays, the id changes).
+
+## 148. Batch notes from cutting the rest of street-oct10 (2026-10-10)
+- **`punct-segments.py` by TIME duplicated speech.** A segment starting just before the span stayed in, the new
+  text repeated its words, and the aligner pushed everything after it late ("What's one thing" landed on her answer).
+  Restore the clip from `cache/transcripts-groq/<id>.json`, list its segments with their indices, punctuate BY INDEX
+  (highest index first), then `align-cache.py <id> --force`. Do not use the time form.
+- **`autotrim.mjs` pads a window into the neighbouring word** when speech is continuous (head -0.12s). After
+  autotrim, run `verify-cut.mjs` and set the flagged in/out points by hand from the word times; set `"snap": false`.
+- **A face out of frame for 30 seconds is a reason to restructure, not to drop the person.** The footballer's
+  greeting clip shows his chin from 0:03 to 0:33; the cut now uses its first 2.7s, then the later clips where he is
+  framed. Sample a clip every 3 seconds on one sheet before building on it.
+- **Two builds at once roughly double each other's time**, and a 10-minute tool timeout then backgrounds the job.
+  Run finals in one background job and do transcript work, not renders, while it runs.
+- **Metricool via the quick tunnel: one upload at a time.** Two parallel creates both failed "Failed to normalize
+  media" when the tunnel reconnected; each succeeded alone a minute later.

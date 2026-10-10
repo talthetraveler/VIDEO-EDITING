@@ -1,0 +1,61 @@
+{
+ "beats": [
+  [
+   "local-d876c5c52a0b64f1",
+   1.91,
+   19.79,
+   0.5,
+   "Hey, Shabbat Shalom. How's it going? Shabbat Shalom, I'm here. Are you from Israel? No, I'm from"
+  ],
+  [
+   "local-767bfa8446aa9e2c",
+   0.69,
+   8.41,
+   0.5,
+   "So what brings you to Israel? I just want to show my fans, the people that see my content, that "
+  ],
+  [
+   "local-767bfa8446aa9e2c",
+   14.66,
+   30.15,
+   0.5,
+   "And do you get hated for posting about your Judaism? Of course, bro. Everyone does. Wow, it's cr"
+  ],
+  [
+   "local-366a099898b575e5",
+   16.82,
+   27.25,
+   0.5,
+   "I used to hide that I was Jewish and now I want to show the world that I'm a proud Jew. That's e"
+  ],
+  [
+   "local-767bfa8446aa9e2c",
+   159.31,
+   166.41,
+   0.5,
+   "I don't want to raise my kid in a bomb shelter and I wish for everyone in the world to be able t"
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING A JEWISH FITNESS CREATOR\nIN ISRAEL 🇮🇱",
+ "out": "ST_ALEX_V1.mp4",
+ "captionKeys": [
+  "Shabbat Shalom",
+  "so strong",
+  "fitness content",
+  "We want peace",
+  "make Aliyah",
+  "proud Jew",
+  "same messaging",
+  "without war"
+ ],
+ "snap": false
+}

@@ -1,0 +1,69 @@
+{
+ "beats": [
+  [
+   "local-af2881a40bf965f6",
+   2.47,
+   16.55,
+   0.5,
+   "Hey, excuse me. Sorry. Are you from Israel? No, I'm from England, bro. You're from England? Wow."
+  ],
+  [
+   "local-af2881a40bf965f6",
+   23.06,
+   28.28,
+   0.5,
+   "How many followers do you have? A million between all of them. Wait, so you have a million acros"
+  ],
+  [
+   "local-af2881a40bf965f6",
+   51.64,
+   60.98,
+   0.5,
+   "Uh, the people have been great. It's very welcoming. The hospitality is great. What do... Like, "
+  ],
+  [
+   "local-af2881a40bf965f6",
+   61.73,
+   73.92,
+   0.5,
+   "everybody's mixed together. Yeah. Everybody's talking. Have you, have you seen Muslims, Jews and"
+  ],
+  [
+   "local-af2881a40bf965f6",
+   136.6,
+   147.58,
+   0.5,
+   "What's your message to the world? That's just the world. Book that flight. Get traveling. The wo"
+  ],
+  [
+   "local-af2881a40bf965f6",
+   186.63,
+   188.77,
+   0.5,
+   "Yallah, brother. Have a good day. Yeah, you too."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING AN ENGLISH YOUTUBER\nIN ISRAEL 🇮🇱",
+ "out": "ST_YOUTUBER_V1.mp4",
+ "captionKeys": [
+  "from England",
+  "YouTuber",
+  "A million",
+  "welcoming",
+  "free food",
+  "eating together",
+  "surprised",
+  "Book that flight",
+  "friendly"
+ ],
+ "snap": false
+}
