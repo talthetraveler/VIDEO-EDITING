@@ -3,9 +3,16 @@
   [
    "local-8895c7c5688c3129",
    1.1,
-   17.91,
+   13.25,
    0.5,
    "Hey, excuse me. Sorry. Are you from Israel? No. Where are you from? Ethiopia. Wait, you're from "
+  ],
+  [
+   "local-8895c7c5688c3129",
+   15.98,
+   17.91,
+   0.5,
+   "I thought Jews only came from Europe."
   ],
   [
    "local-8895c7c5688c3129",
@@ -15,11 +22,11 @@
    "Jews come from countries in Africa like Ethiopia, Morocco, Algeria, Libya, Nigeria. Wow, that's"
   ],
   [
-   "local-fa11b8ad67a4ae7f",
-   9.78,
-   14.62,
+   "local-863370f1286819b1",
+   0.46,
+   4.23,
    0.5,
-   "feel safer in Israel than Europe yeah definitely say I feel safer"
+   "So in Israel, as a woman from Ethiopia, do you feel safe? Yeah."
   ],
   [
    "local-a470a529a9834188",
@@ -51,7 +58,7 @@
   ]
  ],
  "titleY": 260,
- "titleHold": 4.0,
+ "titleHold": 4,
  "capY": 0.69,
  "capSize": 64,
  "titleSize": 56,
@@ -69,15 +76,11 @@
   "human beings",
   "most diverse"
  ],
- "out": "ST_ETHIOPIA_V1.mp4",
+ "out": "ST_ETHIOPIA_V2.mp4",
  "captionFix": [
   {
    "match": "amazing. I",
    "to": "amazing."
-  },
-  {
-   "match": "feel safer in Israel than Europe yeah definitely say",
-   "to": "You feel safer in Israel than Europe? Yeah, definitely."
   },
   {
    "match": "is the most diverse",

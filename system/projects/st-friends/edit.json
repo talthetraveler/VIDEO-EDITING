@@ -31,16 +31,16 @@
   [
    "local-24b6e77cf456a77f",
    43.04,
-   60.51,
+   63.4,
    0.5,
    "So what is your message to the world? Because right now the world is divided with so much hate. "
   ],
   [
    "local-24b6e77cf456a77f",
-   78.72,
-   91.85,
+   88.3,
+   91.75,
    0.5,
-   "Like my family is from Iraq. Like I'm an Arab Jew. So like me. Yeah, we're the same. Exactly. We"
+   "Habibi. Habibi. Shalom. Salamu alaikum."
   ]
  ],
  "titleY": 260,
@@ -60,14 +60,19 @@
   "three times",
   "all human",
   "peace",
-  "all Arabs",
-  "Habibi"
+  "Habibi",
+  "with the people"
  ],
- "out": "ST_FRIENDS_V1.mp4",
+ "out": "ST_FRIENDS_V2.mp4",
  "captionFix": [
   {
    "match": "We work together. Wait,",
    "to": "We work together."
+  },
+  {
+   "match": "begins with the people",
+   "to": "Peace begins with the people",
+   "exact": true
   }
  ],
  "snap": false

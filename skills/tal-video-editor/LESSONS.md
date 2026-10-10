@@ -3475,3 +3475,16 @@ Measured SATAVG: raw clip 13.2, my V1 18.8, five of his finished clips from the 
 - He also widened selection the same day: the Nigerian Christians, the fitness creator and the Polish woman are OK
   to cut. "Nothing negative" means no bad reaction to HIM or to Israel, not "never mention anything hard".
   *(The last sentence is my reading of "good ... good ... is ok, that's fine"; confirm if a cut comes back.)*
+
+## 143. A line Tal FEEDS the person is coaching, not dialogue (2026-10-10)
+Tal on the Ethiopian cut: *"on 28 seconds I said, 'say you feel safer.' That didn't make sense. It didn't sound
+natural."* The transcript read `yeah definitely say I feel safer`; I took "say" for a mis-hearing and captioned it
+as her answer. It was him prompting her. His raw clips are full of this ("say I love the people", "now say there are
+Jews all over the world", "wait", "one second", "I'm not recording").
+- **Any "say ..." in his voice, and the answer that follows it, is out.** Use the clean take: he nearly always
+  re-asks the question in the next clip (here IMG_6141, four seconds, asked once and answered once).
+- **Never use captionFix to paper over a word that does not make sense.** Find out who said it first.
+- Same cut: two consecutive beats both said "Jews come from countries in Africa". Read the beats in order as one
+  script before rendering; a repeat is invisible beat by beat.
+- Same day, Muslim and Jewish friends: **cut "we are all Arabs"** (and the "I'm an Arab Jew" lead-in). End on the
+  peace message and "Habibi. Shalom. Salamu alaikum."
