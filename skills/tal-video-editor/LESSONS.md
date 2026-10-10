@@ -3464,3 +3464,14 @@ big"*, *"it needs to flow well"*.
 - **One person, one video.** Only really positive answers. A fumbled approach, a flat reaction or a negative answer
   means that person gets no video; do not pad the count.
 - **Some clips are sideways.** Check rotation on every clip before cutting.
+
+## 142. Phone footage is already graded: no saturation boost (2026-10-10)
+Tal on the first street-oct10 cut: *"the color grading was weird, maybe less saturation."* `build-edit.mjs`'s default
+GRADE adds +42% saturation, tuned for flat Sony / chest-cam files. His iPhone POV clips arrive already vivid.
+Measured SATAVG: raw clip 13.2, my V1 18.8, five of his finished clips from the same folder 7.2-17.4 (median 13.6).
+- **iPhone / phone-export footage: `"grade": false`.** The as-shot file already sits where his finished clips sit.
+- Also from this cut: `"autoFrame": false` on wide phone POV (the 1.35x face crop cut a head off and softened a
+  720p source; his finished clips are uncropped), `"capSize": 64`, `"titleSize": 56`, one yellow word via `captionKeys`.
+- He also widened selection the same day: the Nigerian Christians, the fitness creator and the Polish woman are OK
+  to cut. "Nothing negative" means no bad reaction to HIM or to Israel, not "never mention anything hard".
+  *(The last sentence is my reading of "good ... good ... is ok, that's fine"; confirm if a cut comes back.)*
