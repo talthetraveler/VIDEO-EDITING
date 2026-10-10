@@ -91,7 +91,9 @@ const GOLD = "0xF5C542";
 // has almost no contrast against either. Bigger alone would not fix that, so
 // the line now sits on a soft dark plate: the gold stays (it is the brand, and
 // APPROVED-JAMAICA-V14 is built on it) but it finally has something to sit on.
-const CAP_SIZE = 94, CAP_MAXW = 980;
+// "capSize": per-project override. Tal, 2026-10-10 (LESSONS 141): "the captions to not be so
+// big" - his finished street clips sit near 64px, not 94.
+const CAP_SIZE = cfg.capSize ?? 94, CAP_MAXW = 980;
 const CAP_BOX = "box=1:boxcolor=black@0.42:boxborderw=22";
 const PREVIEW_W = FINAL ? 1080 : 540, PREVIEW_H = FINAL ? 1920 : 960;
 const BEAT_W = 1080, BEAT_H = 1920;   // beats ALWAYS full size; scale once at the end
@@ -671,6 +673,18 @@ function nasKey(text) {
   return hit ?? null;
 }
 
+// STREET LOOK: one yellow word, as in his finished "MEETING A ... IN ISRAEL"
+// clips (street-oct10, 2026-10-10). Same rule as above - the edit names the
+// phrase in "captionKeys"; the LAST word of the phrase is the one lifted.
+function streetKey(text) {
+  const hit = nasKey(text);
+  if (!hit) return {};
+  const clean = (w) => String(w).toLowerCase().replace(/[^a-z0-9']/g, "");
+  const last = clean(String(hit).trim().split(/\s+/).pop());
+  const idx = String(text).split(/\s+/).filter(Boolean).findIndex((w) => clean(w) === last);
+  return idx >= 0 ? { key_index: idx } : {};
+}
+
 // STICKER LAYER. A beat may carry `sticker: {emoji, x, y, size, from, to}` (or
 // a list of them): an emoji drawn on the finished frame, centred at x/y in
 // 0..1 of the OUTPUT picture (after any zoom), `size` in px of a 1080-wide
@@ -726,7 +740,7 @@ function captionOverlays(caps, tmpDir, beatCapY) {
       tmpDir, String(CAP_MAXW), String(NAS ? 100 : GOTHIC ? 104 : CAP_SIZE)],
       { input: JSON.stringify(caps.map((c) => (NAS ? { text: c.text, style: "nas", key: nasKey(c.text) }
                                              : GOTHIC ? { text: c.text, style: "gothic" }
-                                                   : { text: c.text }))), encoding: "utf8" }).trim());
+                                                   : { text: c.text, ...streetKey(c.text) }))), encoding: "utf8" }).trim());
   } catch (e) {
     console.log(`  !! caption render failed: ${String(e.message).slice(0, 90)}`);
     return { suffix: "", label: "[v]" };
@@ -1135,7 +1149,7 @@ let LAST_ID = "";     // ...and the clip it came from: only the SAME clip can re
 // Only safe when the project-level settings (grade, captions, layout...) have
 // not changed since that build - it refuses if the recorded signature differs.
 const cfgSig = JSON.stringify([cfg.layout, cfg.autoFrame, cfg.grade, cfg.exposure, cfg.captionWords, cfg.captionStyle,
-  cfg.capY, cfg.captionFix, cfg.denoise, cfg.snap, cfg.maxZoom, cfg.tilts, cfg.faceMinY, cfg.captionKeys, cfg.silent]);
+  cfg.capY, cfg.captionFix, cfg.denoise, cfg.snap, cfg.maxZoom, cfg.tilts, cfg.faceMinY, cfg.captionKeys, cfg.silent, cfg.capSize]);
 const REUSE = (() => {
   if (!process.argv.includes("--reuse")) return null;
   const lp = join(OUT, "BUILD-LOG.json");
@@ -1701,7 +1715,7 @@ const args = ["-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", join(OUT,
 let fc = `[0:v]scale=${PREVIEW_W}:${PREVIEW_H}[v]`;
 if (cfg.title) {
   const png = join(OUT, "title.png");
-  execFileSync("python", [join(ROOT, "scripts/make-title.py"), cfg.title, png, "52"], { stdio: "pipe" });
+  execFileSync("python", [join(ROOT, "scripts/make-title.py"), cfg.title, png, String(cfg.titleSize ?? 52)], { stdio: "pipe" });
   args.push("-i", png);
   // `titleY` = the pill's TOP edge in px on the 1920 frame. 150 (0.078) was
   // the old guess; his posted "POV: MEETING A …" reels measure the pill at

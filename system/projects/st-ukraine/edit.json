@@ -1,0 +1,63 @@
+{
+ "beats": [
+  [
+   "local-81f36792b96b06ec",
+   2.24,
+   25.86,
+   0.5,
+   "Excuse me. Hi, how are you? Hi. Where are you from? I'm from Ukraine. You're from Ukraine? And w"
+  ],
+  [
+   "local-81f36792b96b06ec",
+   27.54,
+   35.38,
+   0.5,
+   "So you moved from Ukraine to Israel because of the war. Yeah. But there's also a war in Israel. "
+  ],
+  [
+   "local-81f36792b96b06ec",
+   36.1,
+   40.63,
+   0.5,
+   "And do you support Israel? Of course, I love Israel. Why do you support Israel?"
+  ],
+  [
+   "local-81f36792b96b06ec",
+   50.2,
+   57.46,
+   0.5,
+   "basically, Ukrainians and Israelis are both fighting for their right to exist. That's it."
+  ],
+  [
+   "local-9b41177fc097d41d",
+   3.98,
+   9.84,
+   0.5,
+   "So, I know we're strangers, but would you want to go to the beach and have a smoothie with me? A"
+  ]
+ ],
+ "title": "MEETING A UKRAINIAN 🇺🇦\nIN ISRAEL 🇮🇱",
+ "titleY": 260,
+ "titleHold": 4,
+ "capY": 0.69,
+ "capSize": 64,
+ "captionKeys": [
+  "from Ukraine",
+  "Jewish",
+  "the war",
+  "two wars",
+  "love Israel",
+  "to exist",
+  "smoothie",
+  "Absolutely"
+ ],
+ "out": "ST_UKRAINE_V1.mp4",
+ "titleSize": 56,
+ "autoFrame": false,
+ "captionFix": [
+  {
+   "match": "began And",
+   "to": "in Ukraine began"
+  }
+ ]
+}

@@ -30,14 +30,30 @@ EMOJI_RE = re.compile(
 # "JM" / "IL". Drawing the few flags Tal actually uses is exact and reliable.
 FLAG_CODE = {"🇯🇲": "JM", "🇮🇱": "IL",
              "🇵🇸": "PS", "🇺🇸": "US",
-             "🇲🇦": "MA", "🇦🇪": "AE"}
+             "🇲🇦": "MA", "🇦🇪": "AE",
+             # plain stripe flags (street-oct10, 2026-10-10) - see STRIPES below
+             "🇺🇦": "UA", "🇮🇩": "ID", "🇧🇪": "BE", "🇫🇷": "FR", "🇷🇴": "RO", "🇳🇬": "NG",
+             "🇵🇱": "PL", "🇮🇷": "IR", "🇪🇹": "ET", "🇻🇪": "VE"}
+# (direction, colours). IR / ET / VE are drawn WITHOUT their centre emblem or
+# stars: at title size it is a few pixels, and a wrong emblem is worse than none.
+STRIPES = {"UA": ("h", [(0, 87, 183), (255, 215, 0)]), "ID": ("h", [(206, 17, 38), (255, 255, 255)]),
+           "PL": ("h", [(255, 255, 255), (220, 20, 60)]), "IR": ("h", [(35, 159, 64), (255, 255, 255), (218, 0, 0)]),
+           "ET": ("h", [(7, 137, 48), (252, 221, 9), (218, 18, 26)]), "VE": ("h", [(255, 204, 0), (0, 36, 125), (207, 20, 43)]),
+           "BE": ("v", [(0, 0, 0), (253, 218, 36), (239, 51, 64)]), "FR": ("v", [(0, 85, 164), (255, 255, 255), (239, 65, 53)]),
+           "RO": ("v", [(0, 43, 127), (252, 209, 22), (206, 17, 38)]), "NG": ("v", [(0, 135, 81), (255, 255, 255), (0, 135, 81)])}
 
 def draw_flag(code, h):
     """Return an RGBA flag image of height h."""
     w = int(h * 1.5)
     im = Image.new("RGBA", (w, h), (255, 255, 255, 255))
     d2 = ImageDraw.Draw(im)
-    if code == "JM":
+    if code in STRIPES:
+        way, cols = STRIPES[code]
+        for k, c in enumerate(cols):
+            a, b2 = k / len(cols), (k + 1) / len(cols)
+            d2.rectangle([0, h * a, w, h * b2] if way == "h" else [w * a, 0, w * b2, h], fill=c + (255,))
+        d2.rectangle([0, 0, w - 1, h - 1], outline=(0, 0, 0, 60))
+    elif code == "JM":
         d2.rectangle([0, 0, w, h], fill=(0, 0, 0, 255))
         d2.polygon([(0, 0), (w, 0), (w / 2, h / 2)], fill=(0, 155, 58, 255))
         d2.polygon([(0, h), (w, h), (w / 2, h / 2)], fill=(0, 155, 58, 255))
