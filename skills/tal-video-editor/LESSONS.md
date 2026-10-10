@@ -3500,3 +3500,13 @@ that are small ... make it flow."*
 - **The Arabic is written by Claude and is UNVERIFIED** until an Arabic speaker reads it. Say so on delivery.
 - `render-caption.py` read stdin in the console codepage: without `PYTHONUTF8=1` the Arabic came out as
   mojibake ("Ùƒ Ø§Ù†Øª"). It now decodes stdin as UTF-8 itself. Look at a frame of the second line on every build.
+
+## 145. "Make the captions better" = make them HIS: `"captionStyle": "street"` (2026-10-10)
+My street captions were Arial Black, dull gold, up to seven words on two lines. Cropped next to six of his finished
+clips the difference was plain: his are a heavy rounded face, 1-3 words, ONE bright-yellow word in every caption.
+- `"captionStyle": "street"` -> Montserrat ExtraBold (`system/assets-fonts/Montserrat.ttf`), yellow (255,232,40),
+  a key word in every caption (`captionKeys` chooses it, otherwise the longest non-stopword).
+- `"captionMaxWords": 4` stops the 0.8s-merge from building a sentence. `"capSize": 74`.
+- The Arabic map is keyed by caption chunk, so **re-chunking orphans it**: after any change that moves caption
+  breaks, print the captions with no Arabic entry (must be an empty list) before rendering for review.
+- Put a crop of his caption next to a crop of mine BEFORE the first review, not after he asks twice.

@@ -118,6 +118,11 @@ const NAS = cfg.captionStyle === "nas";
 // Gothic Bold, white caps, dark outline, about two words a line. Same height
 // and timing as the street look; only the face and the line breaks change.
 const GOTHIC = cfg.captionStyle === "gothic";
+// "captionStyle": "street" = the look of his own finished "MEETING A ... IN ISRAEL"
+// clips, read off their frames 2026-10-10 (LESSONS 145): Montserrat ExtraBold,
+// white, ONE bright-yellow word in every caption, heavy outline. Pair it with
+// "captionMaxWords": 4 - his are 1-3 words, never a two-line sentence.
+const STREET = cfg.captionStyle === "street";
 const CAP_Y = Math.round(1920 * (cfg.capY ?? (NAS ? 0.72 : 0.66)));
 
 // caption-only corrections; audio is never altered
@@ -643,7 +648,7 @@ function captionFilters(id, ss, to, n, opts = {}) {
     // the next person included - replaces it; readable minimum; only a real
     // pause clears the screen. lib/caption-timing.mjs holdCaptions, tested by
     // scripts/test-caption-hold.mjs.
-    const shown = holdCaptions(kept, to - ss).filter((c) => c.b - c.a >= 0.2);
+    const shown = holdCaptions(kept, to - ss, cfg.captionMaxWords).filter((c) => c.b - c.a >= 0.2);
     for (const c of shown) CAPTIONS.push({ beat: n, at: c.a, to: c.b, text: c.text });
     return shown;
   }
@@ -753,6 +758,7 @@ function captionOverlays(caps, tmpDir, beatCapY) {
       tmpDir, String(CAP_MAXW), String(NAS ? 100 : GOTHIC ? 104 : CAP_SIZE)],
       { input: JSON.stringify(caps.map((c) => (NAS ? { text: c.text, style: "nas", key: nasKey(c.text) }
                                              : GOTHIC ? { text: c.text, style: "gothic" }
+                                             : STREET ? { text: c.text, style: "street", emphasis: true, ...streetKey(c.text), ...subLine(c.text) }
                                                    : { text: c.text, ...streetKey(c.text), ...subLine(c.text) }))), encoding: "utf8" }).trim());
   } catch (e) {
     console.log(`  !! caption render failed: ${String(e.message).slice(0, 90)}`);
@@ -1167,7 +1173,7 @@ let LAST_ID = "";     // ...and the clip it came from: only the SAME clip can re
 // Only safe when the project-level settings (grade, captions, layout...) have
 // not changed since that build - it refuses if the recorded signature differs.
 const cfgSig = JSON.stringify([cfg.layout, cfg.autoFrame, cfg.grade, cfg.exposure, cfg.captionWords, cfg.captionStyle,
-  cfg.capY, cfg.captionFix, cfg.denoise, cfg.snap, cfg.maxZoom, cfg.tilts, cfg.faceMinY, cfg.captionKeys, cfg.silent, cfg.capSize, SUBS]);
+  cfg.capY, cfg.captionFix, cfg.denoise, cfg.snap, cfg.maxZoom, cfg.tilts, cfg.faceMinY, cfg.captionKeys, cfg.silent, cfg.capSize, SUBS, cfg.captionMaxWords]);
 const REUSE = (() => {
   if (!process.argv.includes("--reuse")) return null;
   const lp = join(OUT, "BUILD-LOG.json");

@@ -122,7 +122,7 @@ const HOLD_MERGE_WORDS = 7;      // two short lines - still readable at the auto
  */
 const endsSentence = (c) => c.end ?? /[.!?]["']?$/.test(String(c.text).trim());
 
-export function holdCaptions(caps, end = Infinity) {
+export function holdCaptions(caps, end = Infinity, maxWords = HOLD_MERGE_WORDS) {
   const cs = caps.map((c) => ({ ...c })).sort((x, y) => x.a - y.a);
   // 1. a line that would be on screen shorter than READ_MIN before the next
   //    one arrives is MERGED into it (never delayed - delaying drifts).
@@ -130,7 +130,7 @@ export function holdCaptions(caps, end = Infinity) {
   for (const c of cs) {
     const prev = merged[merged.length - 1];
     const words = (t) => String(t).split(/\s+/).filter(Boolean).length;
-    if (prev && c.a - prev.a < READ_MIN && words(prev.text) + words(c.text) <= HOLD_MERGE_WORDS) {
+    if (prev && c.a - prev.a < READ_MIN && words(prev.text) + words(c.text) <= maxWords) {
       // Where a SENTENCE ended, the parts meet on a LINE BREAK - a space turned
       // two sentences into a run-on ("NICE TO MEET YOU WHAT'S YOUR NAME",
       // Yusuf). Mid-phrase they meet on a space - breaking there put

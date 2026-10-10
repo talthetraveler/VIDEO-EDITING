@@ -39,7 +39,7 @@
  "titleY": 260,
  "titleHold": 4.0,
  "capY": 0.69,
- "capSize": 64,
+ "capSize": 74,
  "titleSize": 56,
  "autoFrame": false,
  "grade": "light",
@@ -55,7 +55,7 @@
   "hospitality",
   "the best"
  ],
- "out": "ST_KEBAB_V2.mp4",
+ "out": "ST_KEBAB_V3.mp4",
  "captionFix": [
   {
    "match": "Akron",
@@ -71,5 +71,7 @@
    "to": "No need. Thank you",
    "exact": true
   }
- ]
+ ],
+ "captionStyle": "street",
+ "captionMaxWords": 4
 }

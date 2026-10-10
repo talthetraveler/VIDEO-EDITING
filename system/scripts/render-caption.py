@@ -48,10 +48,16 @@ STOP = set(("A AN THE AND OR BUT TO OF IN ON AT FOR FROM WITH IS ARE WAS WERE BE
 
 _cache = {}
 _FACE = [FONT_PATH]          # the face in force for the caption being drawn
+STREET_PATH = "C:/Users/taldo/Downloads/videos to edit/system/assets-fonts/Montserrat.ttf"   # variable font
+YELLOW = (255, 232, 40, 255)      # his finished street clips: bright yellow, not the Jamaica gold
+_KEYCOL = [GOLD]
 def font(sz):
     k = (_FACE[0], sz)
     if k not in _cache:
-        _cache[k] = ImageFont.truetype(_FACE[0], sz)
+        f = ImageFont.truetype(_FACE[0], sz)
+        if _FACE[0] == STREET_PATH:
+            f.set_variation_by_name("ExtraBold")
+        _cache[k] = f
     return _cache[k]
 
 def two_per_line(words, f, maxw):
@@ -133,7 +139,8 @@ def shape_sub(t):
         return t
 
 def render(text, key_idx, idx, style=None, sub=None):
-    _FACE[0] = GOTHIC_PATH if style == "gothic" else FONT_PATH
+    _FACE[0] = GOTHIC_PATH if style == "gothic" else STREET_PATH if style == "street" else FONT_PATH
+    _KEYCOL[0] = YELLOW if style == "street" else GOLD
     words = [w for w in re.split(r"\s+", text.strip()) if w]
     if not words:
         return None
@@ -190,7 +197,7 @@ def render(text, key_idx, idx, style=None, sub=None):
         lw = sum(wordw(w, f) for w in ln) + space * (len(ln) - 1)
         x = (W - lw) // 2
         for w in ln:
-            col = GOLD if n == key_idx else WHITE
+            col = _KEYCOL[0] if n == key_idx else WHITE
             # soft drop shadow first, then the stroked glyph
             d.text((x + 3, y + 4), w, font=f, fill=SHADOW,
                    stroke_width=stroke, stroke_fill=(0, 0, 0, 110))
