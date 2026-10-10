@@ -3452,3 +3452,15 @@ Caught on the contact sheets while rolling it out, each a rule:
 - **A real photo beside the wrong sentence accuses someone.** Coptic priests appeared under "social media taught him
   who the enemy was". Read each caption against its picture.
 - A quote cut from a transcript can begin on the previous speaker's "Oh,": print the words heard in each cut quote.
+
+## 141. Street-conversation batch: his finished clips are the template, captions small (2026-10-10)
+Tal, briefing a ~330-clip batch before handing it over: *"the ones with the title cards or captions, just take as
+references ... you can copy that exact thing"*, *"look at the captions, very small"*, *"the captions to not be so
+big"*, *"it needs to flow well"*.
+- **A clip in the folder that already has a title card or burned captions is a REFERENCE, never source.** Do not
+  re-edit it. Measure its title card and caption size from its own frames and match them on the new cuts.
+- **Captions are small.** Take the height from his finished clips in the same folder, not from the previous batch's
+  default. If in doubt, go smaller.
+- **One person, one video.** Only really positive answers. A fumbled approach, a flat reaction or a negative answer
+  means that person gets no video; do not pad the count.
+- **Some clips are sideways.** Check rotation on every clip before cutting.
