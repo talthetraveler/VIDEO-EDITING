@@ -1,0 +1,88 @@
+{
+ "beats": [
+  [
+   "local-8895c7c5688c3129",
+   1.1,
+   17.91,
+   0.5,
+   "Hey, excuse me. Sorry. Are you from Israel? No. Where are you from? Ethiopia. Wait, you're from "
+  ],
+  [
+   "local-8895c7c5688c3129",
+   20.92,
+   28.59,
+   0.5,
+   "Jews come from countries in Africa like Ethiopia, Morocco, Algeria, Libya, Nigeria. Wow, that's"
+  ],
+  [
+   "local-fa11b8ad67a4ae7f",
+   9.78,
+   14.62,
+   0.5,
+   "feel safer in Israel than Europe yeah definitely say I feel safer"
+  ],
+  [
+   "local-a470a529a9834188",
+   7.32,
+   24.83,
+   0.5,
+   "I live in Jerusalem and I have a neighbor that is Christian. And I have friends that are Muslims"
+  ],
+  [
+   "local-a470a529a9834188",
+   26.73,
+   34.51,
+   0.5,
+   "We should be respectful for each other. Yeah. and to know that we all came from the image of God"
+  ],
+  [
+   "local-c1bab5123ae60fd6",
+   9.72,
+   14.8,
+   0.5,
+   "What would you wish people knew about Israel? Israel is the most diverse country in the world."
+  ],
+  [
+   "local-a470a529a9834188",
+   87.08,
+   89.22,
+   0.5,
+   "nice to meet you Nice to meet you too. Goodbye."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 64,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": false,
+ "title": "MEETING AN ETHIOPIAN JEW 🇪🇹\nIN ISRAEL 🇮🇱",
+ "captionKeys": [
+  "Ethiopia",
+  "Jewish",
+  "in Africa",
+  "feel safer",
+  "Christian",
+  "Muslims",
+  "not true",
+  "human beings",
+  "most diverse"
+ ],
+ "out": "ST_ETHIOPIA_V1.mp4",
+ "captionFix": [
+  {
+   "match": "amazing. I",
+   "to": "amazing."
+  },
+  {
+   "match": "feel safer in Israel than Europe yeah definitely say",
+   "to": "You feel safer in Israel than Europe? Yeah, definitely."
+  },
+  {
+   "match": "is the most diverse",
+   "to": "Israel is the most diverse",
+   "exact": true
+  }
+ ]
+}

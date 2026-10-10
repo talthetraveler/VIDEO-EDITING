@@ -75,7 +75,7 @@ if (arg("--done")) {
       const dur = +execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src]).toString().trim();
       const vb = Math.min(9000, Math.floor((LIMIT_MB * 8192) / dur - 160));
       execFileSync("ffmpeg", ["-v", "error", "-y", "-i", src, "-vf", "scale='min(1080,iw)':-2", "-c:v", "libx264", "-preset", "medium", "-b:v", `${vb}k`, "-maxrate", `${Math.floor(vb * 1.5)}k`, "-bufsize", `${vb * 2}k`, "-pix_fmt", "yuv420p", "-color_range", "tv", "-r", "30", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", dst]);
-      const up = await fetch(`${env.SUPABASE_URL}/storage/v1/object/${BUCKET}/${key}`, { method: "POST", headers: { Authorization: `Bearer ${env.SUPABASE_ANON_KEY}`, apikey: env.SUPABASE_ANON_KEY, "Content-Type": "video/mp4", "x-upsert": "true" }, body: readFileSync(dst) });
+      const up = await fetch(`${env.SUPABASE_URL}/storage/v1/object/${BUCKET}/${key}`, { method: "POST", headers: { Authorization: `Bearer ${env.SUPABASE_ANON_KEY}`, apikey: env.SUPABASE_ANON_KEY, "Content-Type": "video/mp4" }, body: readFileSync(dst) });
       row.upload = up.status; row.seconds = +dur.toFixed(1); row.uploadedMb = +(statSync(dst).size / 1048576).toFixed(1);
       row.url = `${env.SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${key}`;
       rmSync(src, { force: true });

@@ -1,0 +1,72 @@
+{
+ "beats": [
+  [
+   "local-8c66fc21ab32fb98",
+   2.9,
+   17.14,
+   0.5,
+   "Hey, excuse me. Sorry. Hi, where are you from? Hello. As you can see, I'm from Iran. You're from"
+  ],
+  [
+   "local-8c66fc21ab32fb98",
+   17.78,
+   23.09,
+   0.5,
+   "Not only me, but also a lot of Iranian people love to come into Israel."
+  ],
+  [
+   "local-8c66fc21ab32fb98",
+   88.13,
+   103.68,
+   0.5,
+   "I was the first journalist that report against the Islamic regime and support Israel. You're the"
+  ],
+  [
+   "local-8c66fc21ab32fb98",
+   138.05,
+   146.67,
+   0.5,
+   "as a woman here in Israel, do you feel safe? Of course. I'm safe more than UK, more than everywh"
+  ],
+  [
+   "local-8c66fc21ab32fb98",
+   149.33,
+   154.54,
+   0.5,
+   "No, I want to say, everybody's please come and enjoy Israel."
+  ],
+  [
+   "local-8c66fc21ab32fb98",
+   214.5,
+   218.4,
+   0.5,
+   "support this. Amazing. It's so nice to meet you. Thank you so much. Thank you."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 64,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": false,
+ "title": "MEETING AN IRANIAN 🇮🇷\nIN ISRAEL 🇮🇱",
+ "captionKeys": [
+  "from Iran",
+  "love Israel",
+  "first journalist",
+  "feel safe",
+  "enjoy Israel"
+ ],
+ "out": "ST_IRAN_V1.mp4",
+ "captionFix": [
+  {
+   "match": "I'm leaving.",
+   "to": null
+  },
+  {
+   "match": "and like...",
+   "to": null
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "beats": [
+  [
+   "local-f9495148ab75b8a1",
+   1.41,
+   27.04,
+   0.5,
+   "Excuse me. Hi. Sorry. Where are you from? Hey, I'm from Indonesia. You're from Indonesia and you"
+  ],
+  [
+   "local-f9495148ab75b8a1",
+   27.7,
+   44.99,
+   0.5,
+   "And when you came to Israel as an Indonesian, were people friendly to you? Oh, yeah. Hella frien"
+  ],
+  [
+   "local-80249176927a6cac",
+   6.86,
+   22.2,
+   0.5,
+   "Yeah. The first time I came here, I know nobody, have no friends. I don't even speak the languag"
+  ],
+  [
+   "local-724ccf7a7742a1f7",
+   0.69,
+   9.11,
+   0.5,
+   "For any Indonesian that hates Israel, what would you tell them? I would tell them to save up som",
+   2
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 64,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": false,
+ "title": "HE IS FROM INDONESIA 🇮🇩\nAND LIVES IN ISRAEL 🇮🇱",
+ "captionKeys": [
+  "from Indonesia",
+  "chutzpah",
+  "Not me",
+  "Shabbat dinners",
+  "very safe",
+  "another child",
+  "come visit"
+ ],
+ "out": "ST_INDONESIA_V1.mp4",
+ "captionFix": [
+  {
+   "match": "zzzx",
+   "to": "rent free"
+  }
+ ]
+}

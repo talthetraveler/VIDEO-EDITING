@@ -1,0 +1,10 @@
+import { makeClient } from "./lib/frameio-deliver.mjs";
+const one = (r) => r?.response?.data ?? r?.data ?? r;
+const client = makeClient();
+const a = one(await client.accounts.index()); const acc = Array.isArray(a) ? a[0] : a;
+const trials = one(await client.folders.show(acc.id, "f77f3cb5-3d67-4d41-9106-9b9ccdf3c298"));
+const FINAL = trials.parent_id, POSTED = "a555fd61-ed24-40e4-8641-89b73aff07f3";
+const ensure = async (parent, name) => { const kids = one(await client.folders.list(acc.id, parent)) ?? []; const hit = (Array.isArray(kids) ? kids : [kids]).find(k => k.type === "folder" && k.name.trim().toLowerCase() === name.toLowerCase()); if (hit) return ["exists", hit.id]; const n = one(await client.folders.create(acc.id, parent, { data: { name } })); return ["created", n.id]; };
+console.log("FINAL VIDEOS", FINAL);
+console.log("TO REVIEW", ...(await ensure(FINAL, "TO REVIEW")));
+console.log("Posted to all platforms", ...(await ensure(POSTED, "Posted to all platforms")));

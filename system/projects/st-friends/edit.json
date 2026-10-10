@@ -1,0 +1,74 @@
+{
+ "beats": [
+  [
+   "local-1283d289dadf6cfc",
+   0.32,
+   12.79,
+   0.5,
+   "Hi, excuse me. Random question. Are you guys Jewish? No, I'm Muslim. You're Muslim? Nice to meet"
+  ],
+  [
+   "local-1283d289dadf6cfc",
+   12.93,
+   17.72,
+   0.5,
+   "Yes. We have a course together, actually. Wait, you guys do business together? We work together."
+  ],
+  [
+   "local-1283d289dadf6cfc",
+   73.12,
+   86.39,
+   0.5,
+   "And now what do you do for work? I'm teaching Hebrew. I'm a Hebrew teacher. Wait, so you're an A"
+  ],
+  [
+   "local-24b6e77cf456a77f",
+   22.86,
+   32.63,
+   0.5,
+   "And have you ever read the Quran? Actually, yes, three times. You read the Quran three times and"
+  ],
+  [
+   "local-24b6e77cf456a77f",
+   43.04,
+   60.51,
+   0.5,
+   "So what is your message to the world? Because right now the world is divided with so much hate. "
+  ],
+  [
+   "local-24b6e77cf456a77f",
+   78.72,
+   91.85,
+   0.5,
+   "Like my family is from Iraq. Like I'm an Arab Jew. So like me. Yeah, we're the same. Exactly. We"
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 64,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": false,
+ "title": "A MUSLIM ☪ AND A JEW ✡\nWHO ARE BEST FRIENDS 🇮🇱",
+ "captionKeys": [
+  "I'm Muslim",
+  "I'm Jewish",
+  "friends",
+  "teaching Hebrew",
+  "teach Arabic",
+  "three times",
+  "all human",
+  "peace",
+  "all Arabs",
+  "Habibi"
+ ],
+ "out": "ST_FRIENDS_V1.mp4",
+ "captionFix": [
+  {
+   "match": "We work together. Wait,",
+   "to": "We work together."
+  }
+ ],
+ "snap": false
+}
