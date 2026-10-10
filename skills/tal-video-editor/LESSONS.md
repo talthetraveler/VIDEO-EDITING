@@ -3550,3 +3550,12 @@ it as written and ended the shot at 1.25s. The real speech runs to 1.56s (`speec
   Run finals in one background job and do transcript work, not renders, while it runs.
 - **Metricool via the quick tunnel: one upload at a time.** Two parallel creates both failed "Failed to normalize
   media" when the tunnel reconnected; each succeeded alone a minute later.
+
+## 149. Re-posting one of his FINISHED cuts: zoom 4% and add the Arabic line (2026-10-11)
+Tal, about his own "Meeting a Lebanese in Israel": *"do a slight zoom in, maybe add Arabic captions under, so the
+metadata is different."* A finished cut going out again as a trial should not be the identical file.
+- `system/projects/st-lebanon/variant.py`: align the FINISHED file's words, write one Arabic line per sentence,
+  check every word of the transcript is consumed in order (it refuses on a mismatch), overlay the lines under his
+  burned captions (y 1375 of 1920 here; look at a frame first), scale 1.04 and centre-crop, re-encode.
+- His own captions, title and cut are untouched. Check the pill is still inside the frame after the zoom.
+- When he asks "where is the X one", he may mean a finished cut he wants back in rotation, not a missing edit.
