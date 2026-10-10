@@ -1,0 +1,6 @@
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/st-kebab/beats_8679489/01.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/st-kebab/beats_8679489/02.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/st-kebab/beats_8679489/03.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/st-kebab/beats_8679489/04.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/st-kebab/beats_8679489/05.mp4'
+file 'C:/Users/taldo/Downloads/videos to edit/system/projects/st-kebab/beats_8679489/06.mp4'

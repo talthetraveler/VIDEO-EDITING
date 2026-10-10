@@ -3524,3 +3524,14 @@ Tal on the kebab cut, with a screenshot of the pill across the owner's forehead:
   template for the rest of street-oct10.
 - `selfreview.mjs` prints "2 issue(s)" without the reason; run `verify-cut.mjs <edit.json> --render <mp4>` to see it
   (both were beats ending on a dangling "Yes," / "Thank").
+
+## 147. The opening line was captioned from a mis-hearing, and the shot cut off "my friend" (2026-10-10)
+Tal, after the kebab cut was already scheduled: *"you did it wrong, captions: it should say 'what do you want in
+your pita, my friend'."* The transcript had "What do you want in your business?" and stopped at 0.97s; I captioned
+it as written and ended the shot at 1.25s. The real speech runs to 1.56s (`speech-runs.py`: 0.00-0.95, 1.29-1.52).
+- **A first line added in a hurry gets the same check as the rest**: run `speech-runs.py` on the span and compare
+  with the last transcribed word. Speech after the last word means the transcript is short, not that it is silence.
+- **A caption that is an odd thing to say ("what do you want in your business") is a mis-hearing until proven
+  otherwise.** I cannot listen; say so, and ask him for the line rather than shipping the transcript's guess.
+- **Fix the words in the cached transcript and re-align**, then re-render and REPLACE the media on any scheduled
+  post (`updateScheduledPost` with the full original body; the uuid stays, the id changes).
