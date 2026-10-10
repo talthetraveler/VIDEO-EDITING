@@ -1,0 +1,60 @@
+{
+ "beats": [
+  [
+   "local-90f0c5c1dbf430ab",
+   7.43,
+   21.23,
+   0.5,
+   "Excuse me. I'm sorry to bother you. I have a question. Where are you guys from? From Nigeria. Fr"
+  ],
+  [
+   "local-90f0c5c1dbf430ab",
+   22,
+   42.2,
+   0.5,
+   "What are they doing to you guys? They're kidnapping people. They're kidnapping and killing Chris"
+  ],
+  [
+   "local-90f0c5c1dbf430ab",
+   51.74,
+   92.08,
+   0.5,
+   "And why is everyone dressed up today? Today is a love feast for the Christmas. For the Christmas"
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 64,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": false,
+ "title": "MEETING NIGERIAN CHRISTIANS 🇳🇬\nIN ISRAEL 🇮🇱",
+ "captionKeys": [
+  "From Nigeria",
+  "Christians",
+  "16 years",
+  "love feast",
+  "Very safe",
+  "treat us the same",
+  "welcome"
+ ],
+ "out": "ST_NIGERIA_FEAST_V1.mp4",
+ "snap": false,
+ "captionFix": [
+  {
+   "match": "Ah",
+   "to": "You live in Israel",
+   "exact": true
+  },
+  {
+   "match": "is a love",
+   "to": "Today is a love",
+   "exact": true
+  },
+  {
+   "match": "But your family in",
+   "to": null
+  }
+ ]
+}

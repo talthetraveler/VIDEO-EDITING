@@ -685,6 +685,19 @@ function streetKey(text) {
   return idx >= 0 ? { key_index: idx } : {};
 }
 
+// SMALL SECOND LINE under each caption (Tal, 2026-10-10: "add captions under in
+// Arabic that are small"). projects/<slug>/captions-ar.json maps the English
+// caption, upper-cased with single spaces, to its translation. A caption with
+// no entry simply has no second line. Written by hand per video: the wording
+// is UNVERIFIED until an Arabic speaker has read it.
+const SUBS = existsSync(join(OUT, "captions-ar.json"))
+  ? JSON.parse(readFileSync(join(OUT, "captions-ar.json"), "utf8")) : {};
+const subNorm = (t) => String(t).toUpperCase().replace(/\s+/g, " ").trim();
+function subLine(text) {
+  const s = SUBS[subNorm(text)];
+  return s ? { sub: s } : {};
+}
+
 // STICKER LAYER. A beat may carry `sticker: {emoji, x, y, size, from, to}` (or
 // a list of them): an emoji drawn on the finished frame, centred at x/y in
 // 0..1 of the OUTPUT picture (after any zoom), `size` in px of a 1080-wide
@@ -740,7 +753,7 @@ function captionOverlays(caps, tmpDir, beatCapY) {
       tmpDir, String(CAP_MAXW), String(NAS ? 100 : GOTHIC ? 104 : CAP_SIZE)],
       { input: JSON.stringify(caps.map((c) => (NAS ? { text: c.text, style: "nas", key: nasKey(c.text) }
                                              : GOTHIC ? { text: c.text, style: "gothic" }
-                                                   : { text: c.text, ...streetKey(c.text) }))), encoding: "utf8" }).trim());
+                                                   : { text: c.text, ...streetKey(c.text), ...subLine(c.text) }))), encoding: "utf8" }).trim());
   } catch (e) {
     console.log(`  !! caption render failed: ${String(e.message).slice(0, 90)}`);
     return { suffix: "", label: "[v]" };
@@ -920,8 +933,13 @@ function buildCard(text, dur, dest) {
 // this curve, the per-beat exposure lift and the saturation trim - and the
 // footage goes out as shot. Tal, 2026-10-02, on the Erez-style flowers cut
 // (phone footage, already bright): "so bad ... you don't need to color grade it."
-const NO_GRADE = cfg.grade === false;
-const GRADE = NO_GRADE ? "null" : "curves=all='0/0 0.04/0.01 0.25/0.265 0.55/0.61 0.85/0.92 1/1'," +
+// "grade": "light" (street-oct10, LESSONS 142/144): phone footage that is already
+// vivid. As-shot read flat to Tal, +42% read "weird" - this is the step between:
+// a gentle S-curve that holds both endpoints and +10% saturation, no warm push.
+const LIGHT_GRADE = cfg.grade === "light";
+const NO_GRADE = cfg.grade === false || LIGHT_GRADE;      // no exposure lift / saturation trim either way
+const GRADE = LIGHT_GRADE ? "curves=all='0/0 0.25/0.235 0.5/0.505 0.75/0.775 1/1',eq=saturation=1.10"
+  : NO_GRADE ? "null" : "curves=all='0/0 0.04/0.01 0.25/0.265 0.55/0.61 0.85/0.92 1/1'," +
   "eq=saturation=1.42:gamma=1.01,colorbalance=rm=0.015:bm=-0.015";
 // NO BEAT MAY REPLAY WHAT THE ONE BEFORE IT ALREADY SAID.
 //
@@ -1149,7 +1167,7 @@ let LAST_ID = "";     // ...and the clip it came from: only the SAME clip can re
 // Only safe when the project-level settings (grade, captions, layout...) have
 // not changed since that build - it refuses if the recorded signature differs.
 const cfgSig = JSON.stringify([cfg.layout, cfg.autoFrame, cfg.grade, cfg.exposure, cfg.captionWords, cfg.captionStyle,
-  cfg.capY, cfg.captionFix, cfg.denoise, cfg.snap, cfg.maxZoom, cfg.tilts, cfg.faceMinY, cfg.captionKeys, cfg.silent, cfg.capSize]);
+  cfg.capY, cfg.captionFix, cfg.denoise, cfg.snap, cfg.maxZoom, cfg.tilts, cfg.faceMinY, cfg.captionKeys, cfg.silent, cfg.capSize, SUBS]);
 const REUSE = (() => {
   if (!process.argv.includes("--reuse")) return null;
   const lp = join(OUT, "BUILD-LOG.json");

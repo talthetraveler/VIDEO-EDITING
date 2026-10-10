@@ -3488,3 +3488,15 @@ Jews all over the world", "wait", "one second", "I'm not recording").
   script before rendering; a repeat is invisible beat by beat.
 - Same day, Muslim and Jewish friends: **cut "we are all Arabs"** (and the "I'm an Arab Jew" lead-in). End on the
   peace message and "Habibi. Shalom. Salamu alaikum."
+
+## 144. Street batch look, second pass: light grade + a small Arabic line (2026-10-10)
+Tal, after the as-shot versions: *"add some sort of a little bit color grading, and add captions under in Arabic
+that are small ... make it flow."*
+- **`"grade": "light"`** in `build-edit.mjs`: gentle S-curve holding both endpoints, +10% saturation, no warm push,
+  no exposure lift. The step between `false` (he found it flat) and the default +42% (he found it "weird").
+- **A second caption line**: `projects/<slug>/captions-ar.json` maps each English caption (UPPER-CASE, single
+  spaces) to its Arabic; `render-caption.py` draws it under the English at 72% size, shaped with
+  arabic_reshaper + python-bidi. 58% was too small to read on a phone.
+- **The Arabic is written by Claude and is UNVERIFIED** until an Arabic speaker reads it. Say so on delivery.
+- `render-caption.py` read stdin in the console codepage: without `PYTHONUTF8=1` the Arabic came out as
+  mojibake ("Ùƒ Ø§Ù†Øª"). It now decodes stdin as UTF-8 itself. Look at a frame of the second line on every build.

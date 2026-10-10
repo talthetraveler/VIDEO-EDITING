@@ -119,7 +119,20 @@ def forced(parts, f, maxw):
             return None
     return parts
 
-def render(text, key_idx, idx, style=None):
+# SECOND LINE (street-oct10, 2026-10-10). Tal: "add captions under in Arabic that
+# are small." An item may carry "sub": a translation drawn BELOW the English at
+# 58% of its size, white, same stroke. PIL here has no raqm, so Arabic is shaped
+# with arabic_reshaper and ordered with python-bidi before drawing.
+SUB_FONT = "C:/Windows/Fonts/arialbd.ttf"
+def shape_sub(t):
+    try:
+        import arabic_reshaper
+        from bidi.algorithm import get_display
+        return get_display(arabic_reshaper.reshape(t))
+    except Exception:
+        return t
+
+def render(text, key_idx, idx, style=None, sub=None):
     _FACE[0] = GOTHIC_PATH if style == "gothic" else FONT_PATH
     words = [w for w in re.split(r"\s+", text.strip()) if w]
     if not words:
@@ -157,6 +170,17 @@ def render(text, key_idx, idx, style=None):
     gap = round(size * 0.14)
     W = MAXW + stroke * 4
     H = len(lines) * lh + (len(lines) - 1) * gap + stroke * 4
+    sub_f = None
+    if sub:
+        ss_ = max(36, round(size * 0.72))
+        sub_t = shape_sub(sub.strip())
+        while ss_ > 24:
+            sub_f = ImageFont.truetype(SUB_FONT, ss_)
+            if sub_f.getlength(sub_t) <= MAXW:
+                break
+            ss_ -= 2
+        sa, sd = sub_f.getmetrics()
+        H += sa + sd + gap
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
 
@@ -175,6 +199,12 @@ def render(text, key_idx, idx, style=None):
             x += wordw(w, f) + space
             n += 1
         y += lh + gap
+
+    if sub_f is not None:
+        sst = max(4, round(sub_f.size * 0.10))
+        sx = (W - sub_f.getlength(sub_t)) // 2
+        d.text((sx + 2, y + 3), sub_t, font=sub_f, fill=SHADOW, stroke_width=sst, stroke_fill=(0, 0, 0, 110))
+        d.text((sx, y), sub_t, font=sub_f, fill=WHITE, stroke_width=sst, stroke_fill=STROKE)
 
     img = img.crop(img.getbbox() or (0, 0, W, H))
     path = os.path.join(OUT, f"cap_{idx:04d}.png")
@@ -304,7 +334,7 @@ def render_nas(text, key, idx):
 
 def main():
     os.makedirs(OUT, exist_ok=True)
-    items = json.loads(sys.stdin.read())
+    items = json.loads(sys.stdin.buffer.read().decode("utf-8"))   # never the console codepage: Arabic arrived as mojibake
     res = []
     for i, it in enumerate(items):
         if isinstance(it, dict) and it.get("style") == "nas":
@@ -318,7 +348,8 @@ def main():
         if key is None:
             key = pick_key(words) if (isinstance(it, dict)
                                       and it.get("emphasis")) else -1
-        res.append(render(text, key, i, it.get("style") if isinstance(it, dict) else None))
+        res.append(render(text, key, i, it.get("style") if isinstance(it, dict) else None,
+                          it.get("sub") if isinstance(it, dict) else None))
     print(json.dumps(res))
 
 if __name__ == "__main__":

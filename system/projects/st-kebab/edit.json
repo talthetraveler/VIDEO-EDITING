@@ -1,0 +1,75 @@
+{
+ "beats": [
+  [
+   "local-66c6d725d3832fe7",
+   3.16,
+   17.76,
+   0.5,
+   "I want you to make me your favorite thing. No problem. What's your name by the way? I'm Johnny. "
+  ],
+  [
+   "local-92eaa7bf4f9b4aaf",
+   1.53,
+   21.23,
+   0.5,
+   "Tell me something interesting about yourself. Well, my family has been here for over 100 years. "
+  ],
+  [
+   "local-53a1016888dddac8",
+   0.34,
+   15.42,
+   0.5,
+   "This is for you, my friend. As a gift? Yes, it is. Why? Because if you visit my shop, this is a "
+  ],
+  [
+   "local-39abff00c23c2a27",
+   8.86,
+   11.53,
+   0.5,
+   "this is like the best kebab I've had in Israel so far"
+  ],
+  [
+   "local-51801357c9169293",
+   0,
+   20.03,
+   0.5,
+   "Excuse me, I want to pay. How much is it? No, no, no. It's okay, my friend. What do you mean, no"
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 64,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "title": "POV: I WENT TO A KEBAB SHOP\nOWNED BY ARAB CHRISTIANS ✝\nIN ISRAEL 🇮🇱",
+ "captionKeys": [
+  "Johnny",
+  "both Christian",
+  "100 years",
+  "peacefully",
+  "a gift",
+  "friendliest",
+  "best kebab",
+  "hospitality",
+  "the best"
+ ],
+ "out": "ST_KEBAB_V2.mp4",
+ "captionFix": [
+  {
+   "match": "Akron",
+   "to": "Akko"
+  },
+  {
+   "match": "for it No no",
+   "to": "for it",
+   "exact": true
+  },
+  {
+   "match": "need Thank you",
+   "to": "No need. Thank you",
+   "exact": true
+  }
+ ]
+}
