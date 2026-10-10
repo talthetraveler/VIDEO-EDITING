@@ -1,0 +1,76 @@
+{
+ "beats": [
+  [
+   "local-8fda94eff07d5669",
+   2.29,
+   20.13,
+   0.5,
+   "Hey, excuse me. Sorry, where are you from? Nigeria. You're from Nigeria and you live in Israel? ",
+   2
+  ],
+  [
+   "local-ba405484d88d0114",
+   0.63,
+   6.07,
+   0.5,
+   "in Israel as a Nigerian, do you feel safe? Yes. And are you Jewish? No, not Jewish."
+  ],
+  [
+   "local-ba405484d88d0114",
+   8.37,
+   22.43,
+   0.5,
+   "Even though you're not Jewish, you feel safe in Israel? Yes. And do people accept you for who yo"
+  ],
+  [
+   "local-ba405484d88d0114",
+   34.8,
+   41.47,
+   0.5,
+   "Tell me why do you love Israel? So I love the Israeli culture. I'm currently learning Hebrew."
+  ],
+  [
+   "local-ba405484d88d0114",
+   43.64,
+   52.34,
+   0.5,
+   "So I love how open everyone is. They don't also fake to be one's friend. They are very jovial an"
+  ],
+  [
+   "local-72eab1e94437c621",
+   0.3,
+   12.35,
+   0.5,
+   "When you came to Israel for the first time and you saw Christians, Jewish and Muslims living tog"
+  ],
+  [
+   "local-97270bbe2097b1b0",
+   11.87,
+   17.13,
+   0.5,
+   "Thank you. Really, bro. You're so welcome to be in Israel. This is your home. Yeah. Thank you so"
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING A NIGERIAN 🇳🇬\nWHO LIVES IN ISRAEL 🇮🇱",
+ "out": "POV Meeting a Nigerian who lives in Israel FINAL.mp4",
+ "captionKeys": [
+  "from Nigeria",
+  "love Israel",
+  "feel safe",
+  "discrimination",
+  "learning Hebrew",
+  "honest",
+  "harmony",
+  "your home"
+ ],
+ "snap": false
+}

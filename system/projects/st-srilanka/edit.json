@@ -1,0 +1,69 @@
+{
+ "beats": [
+  [
+   "local-458498df6fa1b915",
+   2.81,
+   16.49,
+   0.5,
+   "Hey, excuse me. Sorry. Where are you from? So my parents are from Sri Lanka, but I'm from France"
+  ],
+  [
+   "local-458498df6fa1b915",
+   24,
+   35.81,
+   0.5,
+   "People think that Jews only come from Europe, but they don't know that Jews come from so many co"
+  ],
+  [
+   "local-c85836d843984fc9",
+   0.53,
+   7.73,
+   0.5,
+   "So in France, do you feel safe as a Jew? I feel I have to hide that I'm Jewish in France. And in"
+  ],
+  [
+   "local-44ee50bf26cbd80d",
+   2.66,
+   14.19,
+   0.5,
+   "Israel is the safest place for Jews, man. You feel safer in Israel than in France as a Jew? Of c"
+  ],
+  [
+   "local-5eeaa97a741c9f23",
+   49.06,
+   64.47,
+   0.5,
+   "What's your message to anyone that hates Israel? My message to anyone who hates Israel, first of"
+  ],
+  [
+   "local-a06abed5b782e7bd",
+   30.22,
+   34.06,
+   0.5,
+   "I hope for peace, inshallah. Inshallah. Inshallah, Habibi."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING A SRI LANKAN JEW\nFROM FRANCE 🇫🇷 IN ISRAEL 🇮🇱",
+ "out": "ST_SRILANKA_V1.mp4",
+ "captionKeys": [
+  "Sri Lanka",
+  "Jewish",
+  "all over the world",
+  "have to hide",
+  "safest place",
+  "my kippah",
+  "buy a ticket",
+  "Just watch",
+  "peace"
+ ],
+ "snap": false
+}

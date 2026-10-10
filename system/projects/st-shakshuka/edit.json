@@ -1,0 +1,96 @@
+{
+ "beats": [
+  [
+   "local-d7377b68ae7b799d",
+   1.16,
+   12.5,
+   0.5,
+   "Hi, how are you? Nice to meet you. So what's your name? Abu Daud. Yes. Are you from Israel? Yeah"
+  ],
+  [
+   "local-d7377b68ae7b799d",
+   26.81,
+   44.81,
+   0.5,
+   "My brother, nice to meet you. So you are Muslim. I am Jewish. And I'm a Yahudi, I'm Jewish. We a"
+  ],
+  [
+   "local-2cb65c0648c0f17c",
+   0.28,
+   8.65,
+   0.5,
+   "Wait, so how long have you been working here? 25 years. Wow. My dad. Your dad used to work here?"
+  ],
+  [
+   "local-2cb65c0648c0f17c",
+   8.94,
+   13.94,
+   0.5,
+   "And your friends here, they are Jewish? All. Really? All friends, yes."
+  ],
+  [
+   "local-2cb65c0648c0f17c",
+   22.76,
+   26.53,
+   0.5,
+   "So can I order one? One shakshuka. One shakshuka."
+  ],
+  [
+   "local-8ecfe02be5eb35f0",
+   0.39,
+   4.35,
+   0.5,
+   "Wow, my brother, thank you. Hello, this is Shabshuka. Wow, wow."
+  ],
+  [
+   "local-ec3af195532d09ec",
+   0,
+   7.31,
+   0.5,
+   "Shokshuka is the best. Yeah, yeah? Yeah, the best. Please, palafate. For me? For you. My brother"
+  ],
+  [
+   "local-b5a61a2030648ee0",
+   0,
+   7.96,
+   0.5,
+   "Hey, Habibi. Thank you so much. The food was so good. Thank you, brother. Thank you so much. You"
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING A MUSLIM ☪\nSHAKSHUKA MAKER IN ISRAEL 🇮🇱",
+ "out": "POV Meeting a Muslim shakshuka maker in Israel FINAL.mp4",
+ "captionKeys": [
+  "Abu Daud",
+  "I am Jewish",
+  "We are brothers",
+  "all one",
+  "25 years",
+  "All friends",
+  "shakshuka",
+  "the best"
+ ],
+ "snap": false,
+ "captionFix": [
+  {
+   "match": "palafate",
+   "to": "falafel"
+  },
+  {
+   "match": "Shokshuka",
+   "to": "Shakshuka"
+  },
+  {
+   "match": "Shabshuka",
+   "to": "shakshuka"
+  }
+ ]
+}

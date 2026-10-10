@@ -1,0 +1,73 @@
+{
+ "beats": [
+  [
+   "local-468c541b6ced19ed",
+   2.57,
+   18.53,
+   0.5,
+   "Hey, excuse me. Sorry. Are you from Israel? Yeah, yeah, man. Wow, nice to meet you, bro. How's i"
+  ],
+  [
+   "local-468c541b6ced19ed",
+   19.46,
+   35.87,
+   0.5,
+   "From a thousand, like 2,000 years ago, a big thing happened in Israel. make us all being separat"
+  ],
+  [
+   "local-468c541b6ced19ed",
+   43,
+   50.47,
+   0.5,
+   "Were you born in Ethiopia? No, I was born here. Were your parents? Yeah, came here. So your fami"
+  ],
+  [
+   "local-468c541b6ced19ed",
+   50.52,
+   59.57,
+   0.5,
+   "And as a Jew that lives in Israel and you're black, do you feel safe? Yes, of course. Really? Th"
+  ],
+  [
+   "local-468c541b6ced19ed",
+   107.35,
+   112.77,
+   0.5,
+   "but people say that muslims cannot have the same rights as jews in israel Tell them to come here"
+  ],
+  [
+   "local-468c541b6ced19ed",
+   115.8,
+   120.44,
+   0.5,
+   "What's your name? Oded. Shabbat shalom, bro. Nice to meet you. Thanks. Bye."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING AN ETHIOPIAN JEW 🇪🇹\nBORN IN ISRAEL 🇮🇱",
+ "out": "POV Meeting an Ethiopian Jew born in Israel FINAL.mp4",
+ "captionKeys": [
+  "Ethiopian Jews",
+  "coming back",
+  "no color",
+  "born here",
+  "my home",
+  "come here and see",
+  "Shabbat shalom"
+ ],
+ "snap": false,
+ "captionFix": [
+  {
+   "match": "home. A",
+   "to": "home."
+  }
+ ]
+}

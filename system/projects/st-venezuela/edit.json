@@ -1,0 +1,74 @@
+{
+ "beats": [
+  [
+   "local-8445200d267803b1",
+   3.19,
+   13.16,
+   0.5,
+   "Hey, excuse me. Sorry. Are you from Israel? No, I'm from Venezuela. You're from Venezuela? Yeah."
+  ],
+  [
+   "local-8445200d267803b1",
+   13.26,
+   19.03,
+   0.5,
+   "You're an athlete? Yeah. What type of athlete? I'm a marathoner. Wait, so you came to Israel to "
+  ],
+  [
+   "local-315bd315235f5802",
+   12.62,
+   17.62,
+   0.5,
+   "and are you jewish I'm a Jew. Wait, I didn't know. Wait, there are Jews from Venezuela? A lot."
+  ],
+  [
+   "local-8445200d267803b1",
+   20.31,
+   24.63,
+   0.5,
+   "what's your favorite part about Israel? Everything. It's home for me. It's our homeland."
+  ],
+  [
+   "local-315bd315235f5802",
+   106.09,
+   117.23,
+   0.5,
+   "what's one thing you wish people knew about israel Uh, it's really safe. And it's fun. The food "
+  ],
+  [
+   "local-0fb853397e078b1a",
+   20.24,
+   22.73,
+   0.5,
+   "Yalla bro. Nice to meet you. Mucho gusto."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING A VENEZUELAN JEW 🇻🇪\nIN ISRAEL 🇮🇱",
+ "out": "POV Meeting a Venezuelan Jew in Israel FINAL.mp4",
+ "captionKeys": [
+  "from Venezuela",
+  "athlete",
+  "marathoner",
+  "a Jew",
+  "our homeland",
+  "really safe",
+  "Mucho gusto"
+ ],
+ "snap": false,
+ "captionFix": [
+  {
+   "match": "No",
+   "to": "No, I'm from Venezuela",
+   "exact": true
+  }
+ ]
+}

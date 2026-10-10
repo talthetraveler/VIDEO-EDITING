@@ -1,0 +1,73 @@
+{
+ "beats": [
+  [
+   "local-99677e2d61b556a4",
+   3.48,
+   18.82,
+   0.5,
+   "Hey, excuse me. Sorry. Are you from Israel? No, I'm not. Where are you from? Australia. You're f"
+  ],
+  [
+   "local-99677e2d61b556a4",
+   20.82,
+   29.04,
+   0.5,
+   "Wait, so you came to Israel, and how long ago have you, did you come here? I moved here one mont"
+  ],
+  [
+   "local-99677e2d61b556a4",
+   29.26,
+   45.78,
+   0.5,
+   "What's your favorite part about Israel? I'd just like to say like the vibe on the streets. This "
+  ],
+  [
+   "local-5e481fbf0a241a6e",
+   21.28,
+   24.29,
+   0.5,
+   "People are just genuinely friendly here. It's in their culture."
+  ],
+  [
+   "local-5e481fbf0a241a6e",
+   30.42,
+   33.97,
+   0.5,
+   "So Yala, so nice to meet you. Nice to meet you. Yala, I'll catch you around."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING AN AUSTRALIAN\nWHO MOVED TO ISRAEL 🇮🇱",
+ "out": "ST_AUSTRALIA_V1.mp4",
+ "captionKeys": [
+  "Australia",
+  "not Jewish",
+  "for the people",
+  "one month ago",
+  "so alive",
+  "kindness",
+  "until you see it",
+  "friendly"
+ ],
+ "snap": false,
+ "captionFix": [
+  {
+   "match": "your part about Israel",
+   "to": "What's your favorite part",
+   "exact": true
+  },
+  {
+   "match": "like to say",
+   "to": "I'd just like to say",
+   "exact": true
+  }
+ ]
+}

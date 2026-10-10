@@ -1,0 +1,72 @@
+{
+ "beats": [
+  [
+   "local-de4ad0d09b4d9903",
+   0.88,
+   16.22,
+   0.5,
+   "Hey, excuse me. Sorry. Are you from Israel? I'm from New York. You're from New York, man? How lo"
+  ],
+  [
+   "local-de4ad0d09b4d9903",
+   19.17,
+   34.08,
+   0.5,
+   "And what do you do? I make music. I spread love, I spread peace, and I show people the truth. Wa"
+  ],
+  [
+   "local-de4ad0d09b4d9903",
+   42.26,
+   48.16,
+   0.5,
+   "So what's your message to anyone that hates Israel? Have a conversation with an Israeli, and it'"
+  ],
+  [
+   "local-de4ad0d09b4d9903",
+   131.97,
+   142.2,
+   0.5,
+   "I just hope that the world can realize that we're all one, and that we all have a common goal. T"
+  ],
+  [
+   "local-de4ad0d09b4d9903",
+   150.91,
+   152.59,
+   0.5,
+   "Nice to meet you, bro."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING A NEW YORKER 🗽\nWHO MAKES MUSIC FOR PEACE 🇮🇱",
+ "out": "ST_NEWYORK_V1.mp4",
+ "captionKeys": [
+  "New York",
+  "the love",
+  "make music",
+  "spread peace",
+  "coming together",
+  "conversation",
+  "all one",
+  "happiness"
+ ],
+ "snap": false,
+ "captionFix": [
+  {
+   "match": "do you do",
+   "to": "And what do you do",
+   "exact": true
+  },
+  {
+   "match": "a long way. It",
+   "to": "a long way."
+  }
+ ]
+}

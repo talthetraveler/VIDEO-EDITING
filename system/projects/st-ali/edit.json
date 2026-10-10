@@ -1,0 +1,53 @@
+{
+ "beats": [
+  [
+   "local-c3ccfffa633ce07b",
+   0,
+   30.39,
+   0.5,
+   "Hi, Salamu Alaikum. Alaikum Salaam. Nice to meet you. What's your name? My name is Ali. Are you "
+  ],
+  [
+   "local-12911df87151d936",
+   87.5,
+   105.35,
+   0.5,
+   "i feel like less people would hate each other if they actually met each other. Yeah. You know, l"
+  ],
+  [
+   "local-12911df87151d936",
+   118.1,
+   122.59,
+   0.5,
+   "Yala, my brother. Nice to meet you. Nice to meet you. You're the best. Habibi."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING A PALESTINIAN MUSLIM ☪\nWHO LIVES IN ISRAEL 🇮🇱",
+ "out": "POV Meeting a Palestinian Muslim who lives in Israel FINAL.mp4",
+ "captionKeys": [
+  "Salamu Alaikum",
+  "I'm Jewish",
+  "are brothers",
+  "human beings",
+  "it's safe",
+  "our home",
+  "Habibi"
+ ],
+ "snap": false,
+ "captionFix": [
+  {
+   "match": "so you",
+   "to": "So you are a Muslim",
+   "exact": true
+  }
+ ]
+}

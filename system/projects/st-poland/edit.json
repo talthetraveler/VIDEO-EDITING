@@ -1,0 +1,68 @@
+{
+ "beats": [
+  [
+   "local-939888bbcd616827",
+   1.23,
+   7.85,
+   0.5,
+   "Hello. Hi, how are you? Where are you from? I'm originally from Poland. You're from Poland? And "
+  ],
+  [
+   "local-939888bbcd616827",
+   7.9,
+   13.01,
+   0.5,
+   "First I came here to fight for Israel and to tell the truth about Gaza."
+  ],
+  [
+   "local-939888bbcd616827",
+   13.58,
+   22.55,
+   0.5,
+   "Right now I'm fighting for freedom for the Iranian people who are being killed, silenced, and op"
+  ],
+  [
+   "local-939888bbcd616827",
+   31.12,
+   35.93,
+   0.5,
+   "You're a fighter for what? For peace? For humanity, for peace, for democracy."
+  ],
+  [
+   "local-939888bbcd616827",
+   35.86,
+   48.07,
+   0.5,
+   "But a lot of people don't support Israel. What would you tell them? Come to Israel and find out."
+  ],
+  [
+   "local-939888bbcd616827",
+   68.82,
+   72.78,
+   0.5,
+   "Are you Jewish? No, I'm not. And you're not Jewish and you support Israel? Yes."
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4.0,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "title": "POV: MEETING A POLISH WOMAN 🇵🇱\nIN ISRAEL 🇮🇱",
+ "out": "ST_POLAND_V1.mp4",
+ "captionKeys": [
+  "from Poland",
+  "Iranian people",
+  "protest for Iran",
+  "a fighter",
+  "for peace",
+  "find out",
+  "human rights",
+  "support Israel"
+ ],
+ "snap": false
+}
