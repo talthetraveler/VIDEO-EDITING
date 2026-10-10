@@ -1,0 +1,201 @@
+<title>Social Accords Posting Tracker</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: five tabs, each one plain spreadsheet-style table. Main posts carry four platform boxes per row. */
+:root{
+  --bg:#f3f6f8; --surface:#ffffff; --ink:#14212b; --muted:#566673; --line:#d6dee4;
+  --accent:#0b6e75; --accent-soft:#dff0f1;
+  --ok:#23763a; --ok-soft:#e0f2e4; --sched:#8a5a00; --sched-soft:#fbefd2; --none-soft:#e9eef2;
+  --warn:#a23b1e; --warn-soft:#fbe6df;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0f171d; --surface:#17222a; --ink:#e8eef2; --muted:#9fb0bc; --line:#2a3a45;
+  --accent:#5fc9d0; --accent-soft:#143338;
+  --ok:#7fcf91; --ok-soft:#163121; --sched:#f0c160; --sched-soft:#3a2d10; --none-soft:#202d36;
+  --warn:#f09a7e; --warn-soft:#3a1d14; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0f171d; --surface:#17222a; --ink:#e8eef2; --muted:#9fb0bc; --line:#2a3a45;
+  --accent:#5fc9d0; --accent-soft:#143338;
+  --ok:#7fcf91; --ok-soft:#163121; --sched:#f0c160; --sched-soft:#3a2d10; --none-soft:#202d36;
+  --warn:#f09a7e; --warn-soft:#3a1d14; color-scheme:dark }
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:24px 64px;display:flex;flex-direction:column;gap:18px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(24px,5vw,32px);line-height:1.1;margin:0;text-wrap:balance}
+h2{font-family:var(--display);font-weight:700;font-size:18px;margin:0 0 8px;text-wrap:balance}
+p{margin:0}
+.sub{color:var(--muted);margin-top:4px;font-size:14px}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.counts{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--muted)}
+.counts b{color:var(--ink);font-variant-numeric:tabular-nums}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tab{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:7px 14px;font-weight:600;font-size:14px}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.sheetwrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+table.sheet{border-collapse:collapse;width:100%;font-size:14px}
+.sheet th{text-align:left;padding:9px 12px;border-bottom:2px solid var(--line);font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600;white-space:nowrap}
+.sheet td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+.sheet tr:last-child td{border-bottom:0}
+.sheet td.n{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--muted)}
+.sheet td.c{text-align:center}
+.sheet.main{min-width:720px}
+.vcell{display:grid;grid-template-columns:1.6em 40px minmax(0,1fr);gap:10px;align-items:center}
+.num{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12.5px;text-align:right}
+.thumb{width:40px;height:71px;border-radius:4px;object-fit:cover;background:var(--none-soft);display:block}
+div.thumb{display:grid;place-items:center;color:var(--muted);font-size:9px;text-align:center}
+.title{font-weight:600;overflow-wrap:anywhere}
+.tcell{display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px;align-items:center}
+.sheet tr.day td{background:var(--accent-soft);font-family:var(--display);font-weight:700;font-size:14px;padding:7px 12px}
+.daycount{font-family:var(--body);font-weight:500;font-size:12.5px;color:var(--muted);margin-left:8px}
+.subl{display:flex;flex-wrap:wrap;gap:3px 8px;align-items:center;font-size:12.5px;color:var(--muted);margin-top:1px}
+.subl a{color:var(--accent)}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:99px;white-space:nowrap}
+.tag.sched{background:var(--sched-soft);color:var(--sched)} .tag.warn{background:var(--warn-soft);color:var(--warn)} .tag.ok{background:var(--ok-soft);color:var(--ok)} .tag.plain{background:var(--none-soft);color:var(--muted)}
+.chip{border:0;background:none;padding:2px;text-align:left;display:flex;flex-direction:column;gap:1px;font-size:12.5px;line-height:1.25;min-width:62px}
+.chip .ic{font-size:17px;line-height:1}
+.chip.posted .tx{color:var(--ok);font-weight:600} .chip.scheduled .tx{color:var(--sched);font-weight:600} .chip.none .tx{color:var(--muted)}
+.chip a{color:var(--accent)}
+.chip:disabled{cursor:default;opacity:1;color:inherit}
+.sheet select,.sheet input[type=text]{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:4px 6px;max-width:100%}
+.sheet input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent)}
+.add{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.add input,.add select{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:7px 9px;flex:1 1 150px;min-width:0}
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--bg);border-radius:6px;padding:7px 14px;font-weight:600;font-size:14px}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:20px;color:var(--muted);text-align:center}
+.note{font-size:12.5px;color:var(--muted)}
+section[hidden]{display:none}
+.stack{display:flex;flex-direction:column;gap:22px}
+dialog{border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);padding:20px;width:min(400px,calc(100vw - 32px))}
+dialog::backdrop{background:rgba(10,20,28,.5)}
+dialog h3{font-family:var(--display);margin:0 0 12px;font-size:17px}
+dialog form{display:flex;flex-direction:column;gap:10px}
+dialog label{display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--muted)}
+dialog input,dialog select{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:7px 9px;color:var(--ink)}
+.drow{display:flex;gap:8px;justify-content:flex-end;margin-top:6px}
+.btn.ghost{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.err{color:var(--warn);font-size:13px}
+footer{color:var(--muted);font-size:12.5px}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Social Accords Posting Tracker</h1>
+    <p class="sub">✅ posted · 🗓️ scheduled, with the date · ⬜ not scheduled. <span id="sync"></span></p>
+  </header>
+  <div class="counts" id="counts"></div>
+  <nav class="tabs" role="tablist" id="tabs">
+    <button class="tab" role="tab" data-tab="main" aria-selected="true">Main posts</button>
+    <button class="tab" role="tab" data-tab="trials" aria-selected="false">Trial reels</button>
+    <button class="tab" role="tab" data-tab="editing" aria-selected="false">In editing</button>
+    <button class="tab" role="tab" data-tab="shoots" aria-selected="false">Shoots and ideas</button>
+    <button class="tab" role="tab" data-tab="creators" aria-selected="false">Creators to DM</button>
+  </nav>
+
+  <section id="p-main"><div id="main"><div class="empty">Loading. If this stays empty, sign in to Claude to see the tracker.</div></div>
+    <div style="margin-top:22px"><h2>Files needed</h2><p class="note" style="margin-bottom:8px">On Instagram, not posted or scheduled elsewhere, and no file in Frame.io.</p><div id="need"></div></div></section>
+  <section id="p-trials" hidden><div id="trials"></div></section>
+  <section id="p-editing" hidden><div id="editing"></div></section>
+  <section id="p-shoots" hidden><div class="stack">
+    <div><h2>Upcoming shoots</h2><div id="shoots"></div>
+      <form class="add" id="add-shoot"><input id="sh-t" placeholder="Shoot" required><input id="sh-l" placeholder="Location"><input id="sh-d" type="date" aria-label="Date"><button class="btn">Add shoot</button></form></div>
+    <div><h2>Ideas</h2><div id="ideas"></div>
+      <form class="add" id="add-idea"><input id="id-t" placeholder="Idea" required><input id="id-w" placeholder="Why"><button class="btn">Add idea</button></form></div>
+  </div></section>
+  <section id="p-creators" hidden><div id="creators"></div>
+    <form class="add" id="add-creator"><input id="cr-n" placeholder="Creator name" required><input id="cr-h" placeholder="@handle"><input id="cr-v" placeholder="Video or idea"><button class="btn">Add creator</button></form></section>
+
+  <footer>Statuses come from Metricool once a day. Thumbnails are the Instagram covers.</footer>
+</div>
+
+<dialog id="dlg"><h3 id="dlg-t"></h3><form id="dlg-f" method="dialog"></form></dialog>
+
+<script>
+const PLAT=[["ig","Instagram"],["tt","TikTok"],["yt","YouTube"],["x","X"]];
+let rows=[],trials=[],shoots=[],ideas=[],creators=[],meta={},db=null,canWrite=false;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl=u=>/^https:\/\//i.test(u||"")?u:"";
+function fmtDate(d){ if(!d)return""; const t=new Date(d+"T12:00:00"); return isNaN(t)?d:t.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"}); }
+const isEditing=r=>r.edit!=="Ready to Post";
+const posted=r=>PLAT.filter(([k])=>r[k]?.s==="posted").length;
+const table=(cls,head,body)=>`<div class="sheetwrap"><table class="sheet ${cls}"><thead><tr>${head.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>${body}</tbody></table></div>`;
+const dis=()=>canWrite?"":"disabled";
+
+function chipHtml(r,k,l){
+  const p=r[k]||{s:"none"}, st=p.s||"none", url=safeUrl(p.url);
+  let ic="⬜", tx="Not scheduled";
+  if(st==="posted"){ic="✅";tx="Posted";}
+  else if(st==="scheduled"){ic="🗓️";const[d,t]=(p.at||"").split(" ");tx=d?(fmtDate(d).replace(/^\w+ /,"")+(t?" · "+t:"")):"Scheduled";}
+  return `<td><button class="chip ${st}" data-id="${r.id}" data-k="${k}" ${dis()} aria-label="${l}: ${esc(tx)}"><span class="ic">${ic}</span><span class="tx">${esc(tx)}</span>${url?`<a href="${esc(url)}" target="_blank" rel="noopener" data-link>Open</a>`:""}</button></td>`;
+}
+function render(){
+  const main=rows.filter(r=>!isEditing(r)).sort((a,b)=>a.n-b.n), ed=rows.filter(isEditing).sort((a,b)=>a.n-b.n);
+  const full=main.filter(r=>posted(r)===4).length, sched=main.filter(r=>PLAT.some(([k])=>r[k]?.s==="scheduled")).length;
+  const need=main.filter(r=>!r.frame&&PLAT.some(([k])=>(r[k]?.s||"none")==="none")).sort((a,b)=>b.views-a.views);
+  $("counts").innerHTML=`<span><b>${main.length}</b> main videos</span><span><b>${full}</b> posted everywhere</span><span><b>${sched}</b> with posts scheduled</span><span><b>${need.length}</b> files needed</span><span><b>${ed.length}</b> in editing</span><span><b>${trials.filter(t=>t.s!=="posted").length}</b> trial reels scheduled</span>`;
+  $("sync").textContent=meta.metricoolSync?("Metricool last checked "+meta.metricoolSync+"."):"";
+  $("main").innerHTML=!rows.length?`<div class="empty">No videos yet.</div>`:table("main",["Video",...PLAT.map(p=>p[1])],main.map(r=>{
+    const frame=safeUrl(r.frame);
+    return `<tr><td><div class="vcell"><span class="num">${r.n}</span>${r.thumb?`<img class="thumb" src="${esc(r.thumb)}" alt="" loading="lazy">`:`<div class="thumb">No image</div>`}
+      <div><div class="title">${esc(r.title)}</div><div class="subl">${r.viewsLabel?`<span>${esc(r.viewsLabel)} views</span>`:""}${frame?`<a href="${esc(frame)}" target="_blank" rel="noopener">Frame.io</a>`:(posted(r)===4?"":`<span class="tag warn">Missing from Frame.io</span>`)}${posted(r)===4?`<span class="tag ok">Posted everywhere</span>`:""}</div>${r.note?`<div class="note">${esc(r.note)}</div>`:""}</div></div></td>${PLAT.map(([k,l])=>chipHtml(r,k,l)).join("")}</tr>`;}).join(""));
+  $("need").innerHTML=need.length?table("",["#","Video","Views","Still needs"],need.map(r=>`<tr><td class="n">${r.n}</td><td>${esc(r.title)}</td><td class="n">${esc(r.viewsLabel||"")}</td><td>${esc(PLAT.filter(([k])=>(r[k]?.s||"none")==="none").map(p=>p[1]).join(", "))}</td></tr>`).join("")):`<div class="empty">Nothing is missing.</div>`;
+  // Trial reels: one block per day, thumbnail + time + status, so a full day (5) reads at a glance.
+  const tdays={}; trials.forEach(t=>(tdays[t.date]=tdays[t.date]||[]).push(t));
+  $("trials").innerHTML=trials.length?table("trl",["Time","Trial reel","Status"],Object.keys(tdays).sort().map(d=>{
+    const list=tdays[d].slice().sort((x,y)=>(x.time||"").localeCompare(y.time||""));
+    return `<tr class="day"><td colspan="3">${esc(fmtDate(d))} <span class="daycount">${list.length} trial reel${list.length===1?"":"s"}</span></td></tr>`+list.map(t=>`<tr><td class="n">${esc(t.time)}</td><td><div class="tcell">${t.thumb?`<img class="thumb" src="${esc(t.thumb)}" alt="" loading="lazy">`:`<div class="thumb">No image</div>`}<div><div class="title">${esc(t.text)}${safeUrl(t.url)?` <a href="${esc(t.url)}" target="_blank" rel="noopener">Open</a>`:""}</div><div class="subl">${t.by?`<span class="tag plain">${esc(t.by)}</span>`:""}${t.tool?`<span>${esc(t.tool)}</span>`:""}${t.note?`<span>${esc(t.note)}</span>`:""}</div></div></div></td><td>${t.s==="posted"?`<span class="tag ok">✅ Posted</span>`:`<span class="tag sched">🗓️ Scheduled</span>`}</td></tr>`).join("");
+  }).join("")):`<div class="empty">No trial reels listed yet.</div>`;
+  $("editing").innerHTML=ed.length?table("",["Video","Status","Location","Notes"],ed.map(r=>`<tr><td class="title">${esc(r.title)}</td><td><select data-edit="${r.id}" id="ed-${r.id}" ${dis()}>${["Not Filmed","Not Edited","In Editing","Ready to Post"].map(o=>`<option${o===r.edit?" selected":""}>${o}</option>`).join("")}</select></td><td>${esc(r.loc||"")}</td><td class="note">${esc(r.note||"")}</td></tr>`).join("")):`<div class="empty">Nothing in editing.</div>`;
+  $("shoots").innerHTML=shoots.length?table("",["Shoot","Location","Date","Filmed"],shoots.map(s=>`<tr><td class="title">${esc(s.title)}</td><td>${esc(s.loc||"")}</td><td class="n">${esc(fmtDate(s.date))}</td><td class="c"><input type="checkbox" data-col="shoots" data-id="${s.id}" data-f="done" id="s-${s.id}" ${s.done?"checked":""} ${dis()} aria-label="Filmed"></td></tr>`).join("")):`<div class="empty">No upcoming shoots yet. Add the first one below.</div>`;
+  $("ideas").innerHTML=ideas.length?table("",["Idea","Why","Priority","Done"],ideas.map(s=>`<tr><td class="title">${esc(s.title)}</td><td class="note">${esc(s.why||"")}</td><td>${s.pri?`<span class="tag ${s.pri==="High"?"ok":"plain"}">${esc(s.pri)}</span>`:""}</td><td class="c"><input type="checkbox" data-col="ideas" data-id="${s.id}" data-f="done" id="i-${s.id}" ${s.done?"checked":""} ${dis()} aria-label="Done"></td></tr>`).join("")):`<div class="empty">No ideas yet.</div>`;
+  const cb=(c,f,l)=>`<td class="c"><input type="checkbox" data-col="creators" data-id="${c.id}" data-f="${f}" id="c-${c.id}-${f}" ${c[f]?"checked":""} ${dis()} aria-label="${l}"></td>`;
+  $("creators").innerHTML=creators.length?table("",["Creator","Video or idea","Message sent","Replied","Follow up","Done"],creators.map(c=>`<tr><td><div class="title">${esc(c.name)}</div><div class="note">${esc(c.handle||"")}</div></td><td>${esc(c.video||"")}</td>${cb(c,"sent","Message sent")}${cb(c,"replied","Replied")}${cb(c,"follow","Follow up")}${cb(c,"done","Done")}</tr>`).join("")):`<div class="empty">No creators yet. Add the first one below.</div>`;
+  document.querySelectorAll(".add").forEach(f=>f.hidden=!canWrite);
+}
+
+// platform box editor
+const dlg=$("dlg"), form=$("dlg-f"); let onSave=null;
+function editPlatform(id,k){
+  const r=rows.find(x=>x.id===id), l=PLAT.find(p=>p[0]===k)[1], p=r[k]||{}; const[d,t]=(p.at||"").split(" ");
+  $("dlg-t").textContent=l+": "+r.title;
+  form.innerHTML=`<label>Status<select name="s" id="d-s"><option value="none">Not scheduled</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></label>
+    <label>Date<input type="date" name="d" id="d-d" value="${esc(d||"")}"></label><label>Time<input type="time" name="t" id="d-t" value="${esc(t||"")}"></label>
+    <label>Link to the post<input type="url" name="url" id="d-u" placeholder="https://" value="${esc(p.url||"")}"></label>
+    <p class="err" id="dlg-e" hidden></p><div class="drow"><button class="btn ghost" type="button" id="dlg-c">Cancel</button><button class="btn" type="submit">Save</button></div>`;
+  $("d-s").value=p.s||"none"; $("dlg-c").onclick=()=>dlg.close();
+  onSave=fd=>db.doc("videos/"+id).update({[k]:{s:fd.s,at:[fd.d,fd.t].filter(Boolean).join(" "),url:(fd.url||"").trim()}});
+  dlg.showModal();
+}
+form.addEventListener("submit",async e=>{ e.preventDefault(); if(!onSave)return; try{ await onSave(Object.fromEntries(new FormData(form))); dlg.close(); }catch(err){ const el=$("dlg-e"); el.hidden=false; el.textContent=err?.code==="invalid_argument"?"You can view this tracker but not change it.":"Could not save. Try again."; } });
+document.addEventListener("click",e=>{
+  if(e.target.closest("[data-link]"))return;
+  const tb=e.target.closest(".tab"); if(tb){document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t===tb));["main","trials","editing","shoots","creators"].forEach(n=>$("p-"+n).hidden=n!==tb.dataset.tab);return;}
+  const c=e.target.closest(".chip"); if(c&&canWrite)editPlatform(c.dataset.id,c.dataset.k);
+});
+document.addEventListener("change",e=>{
+  const t=e.target; if(!db||!canWrite)return;
+  if(t.dataset.edit) db.doc("videos/"+t.dataset.edit).update({edit:t.value}).catch(()=>{});
+  else if(t.dataset.col) db.doc(t.dataset.col+"/"+t.dataset.id).update({[t.dataset.f]:t.checked}).catch(()=>{t.checked=!t.checked;});
+});
+function addForm(id,col,build){ $(id).addEventListener("submit",async e=>{ e.preventDefault(); if(!db)return; try{ await db.collection(col).add({...build(),at:Date.now()}); e.target.reset(); }catch(_){} }); }
+addForm("add-shoot","shoots",()=>({title:$("sh-t").value.trim(),loc:$("sh-l").value.trim(),date:$("sh-d").value,done:false}));
+addForm("add-idea","ideas",()=>({title:$("id-t").value.trim(),why:$("id-w").value.trim(),pri:"",done:false}));
+addForm("add-creator","creators",()=>({name:$("cr-n").value.trim(),handle:$("cr-h").value.trim(),video:$("cr-v").value.trim(),sent:false,replied:false,follow:false,done:false}));
+
+(async function start(){
+  db=await claude?.use?.("db").catch(()=>null) ?? null;
+  if(!db){ $("main").innerHTML=`<div class="empty">The tracker could not load in this view. Open it while signed in to Claude.</div>`; return; }
+  const user=await claude.use("user").catch(()=>null);
+  canWrite=(await user?.can?.("data.write"))!==false;
+  const list=(col,set,sort)=>db.collection(col).onSnapshot(s=>{set(s.docs.map(d=>({id:d.id,...d.data()})).sort(sort));render();},()=>{});
+  list("videos",v=>rows=v,(a,b)=>a.n-b.n);
+  list("shoots",v=>shoots=v,(a,b)=>(a.date||"9").localeCompare(b.date||"9"));
+  list("ideas",v=>ideas=v,(a,b)=>(a.at||0)-(b.at||0));
+  list("creators",v=>creators=v,(a,b)=>(a.at||0)-(b.at||0));
+  db.doc("lists/trials").onSnapshot(s=>{trials=s.exists?(s.data().rows||[]):[];render();},()=>{});
+  db.doc("meta/tracker").onSnapshot(s=>{meta=s.exists?s.data():{};render();},()=>{});
+})();
+</script>
