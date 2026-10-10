@@ -31,7 +31,7 @@
   [
    "local-8c66fc21ab32fb98",
    149.33,
-   154.54,
+   154.53,
    0.5,
    "No, I want to say, everybody's please come and enjoy Israel."
   ],
@@ -46,11 +46,11 @@
  "titleY": 260,
  "titleHold": 4.0,
  "capY": 0.69,
- "capSize": 64,
+ "capSize": 74,
  "titleSize": 56,
  "autoFrame": false,
- "grade": false,
- "title": "MEETING AN IRANIAN 🇮🇷\nIN ISRAEL 🇮🇱",
+ "grade": "light",
+ "title": "POV: MEETING AN IRANIAN 🇮🇷\nIN ISRAEL 🇮🇱",
  "captionKeys": [
   "from Iran",
   "love Israel",
@@ -58,7 +58,7 @@
   "feel safe",
   "enjoy Israel"
  ],
- "out": "ST_IRAN_V1.mp4",
+ "out": "ST_IRAN_V2.mp4",
  "captionFix": [
   {
    "match": "I'm leaving.",
@@ -68,5 +68,8 @@
    "match": "and like...",
    "to": null
   }
- ]
+ ],
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "snap": true
 }

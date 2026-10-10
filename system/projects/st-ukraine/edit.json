@@ -3,7 +3,7 @@
   [
    "local-81f36792b96b06ec",
    2.24,
-   25.86,
+   26.0,
    0.5,
    "Excuse me. Hi, how are you? Hi. Where are you from? I'm from Ukraine. You're from Ukraine? And w"
   ],
@@ -36,11 +36,11 @@
    "So, I know we're strangers, but would you want to go to the beach and have a smoothie with me? A"
   ]
  ],
- "title": "MEETING A UKRAINIAN 🇺🇦\nIN ISRAEL 🇮🇱",
+ "title": "POV: MEETING A UKRAINIAN 🇺🇦\nIN ISRAEL 🇮🇱",
  "titleY": 260,
- "titleHold": 4,
+ "titleHold": 4.0,
  "capY": 0.69,
- "capSize": 64,
+ "capSize": 74,
  "captionKeys": [
   "from Ukraine",
   "Jewish",
@@ -51,7 +51,7 @@
   "smoothie",
   "Absolutely"
  ],
- "out": "ST_UKRAINE_V2.mp4",
+ "out": "ST_UKRAINE_V3.mp4",
  "titleSize": 56,
  "autoFrame": false,
  "captionFix": [
@@ -60,5 +60,8 @@
    "to": "in Ukraine began"
   }
  ],
- "grade": false
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "snap": true
 }

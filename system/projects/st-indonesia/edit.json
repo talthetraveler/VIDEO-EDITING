@@ -33,11 +33,11 @@
  "titleY": 260,
  "titleHold": 4.0,
  "capY": 0.69,
- "capSize": 64,
+ "capSize": 74,
  "titleSize": 56,
  "autoFrame": false,
- "grade": false,
- "title": "HE IS FROM INDONESIA 🇮🇩\nAND LIVES IN ISRAEL 🇮🇱",
+ "grade": "light",
+ "title": "POV: MEETING AN INDONESIAN 🇮🇩\nWHO LIVES IN ISRAEL 🇮🇱",
  "captionKeys": [
   "from Indonesia",
   "chutzpah",
@@ -47,11 +47,14 @@
   "another child",
   "come visit"
  ],
- "out": "ST_INDONESIA_V1.mp4",
+ "out": "ST_INDONESIA_V2.mp4",
  "captionFix": [
   {
    "match": "zzzx",
    "to": "rent free"
   }
- ]
+ ],
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "snap": true
 }

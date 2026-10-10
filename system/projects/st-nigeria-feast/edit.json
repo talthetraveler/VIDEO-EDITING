@@ -10,7 +10,7 @@
   [
    "local-90f0c5c1dbf430ab",
    22,
-   42.2,
+   41.92,
    0.5,
    "What are they doing to you guys? They're kidnapping people. They're kidnapping and killing Chris"
   ],
@@ -25,11 +25,11 @@
  "titleY": 260,
  "titleHold": 4.0,
  "capY": 0.69,
- "capSize": 64,
+ "capSize": 74,
  "titleSize": 56,
  "autoFrame": false,
- "grade": false,
- "title": "MEETING NIGERIAN CHRISTIANS 🇳🇬\nIN ISRAEL 🇮🇱",
+ "grade": "light",
+ "title": "POV: MEETING NIGERIAN CHRISTIANS 🇳🇬\nIN ISRAEL 🇮🇱",
  "captionKeys": [
   "From Nigeria",
   "Christians",
@@ -39,7 +39,7 @@
   "treat us the same",
   "welcome"
  ],
- "out": "ST_NIGERIA_FEAST_V1.mp4",
+ "out": "ST_NIGERIA_FEAST_V2.mp4",
  "snap": false,
  "captionFix": [
   {
@@ -53,8 +53,10 @@
    "exact": true
   },
   {
-   "match": "But your family in",
+   "match": "But your",
    "to": null
   }
- ]
+ ],
+ "captionStyle": "street",
+ "captionMaxWords": 4
 }

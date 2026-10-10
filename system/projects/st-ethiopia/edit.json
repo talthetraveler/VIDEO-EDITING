@@ -17,7 +17,7 @@
   [
    "local-8895c7c5688c3129",
    20.92,
-   28.59,
+   29.72,
    0.5,
    "Jews come from countries in Africa like Ethiopia, Morocco, Algeria, Libya, Nigeria. Wow, that's"
   ],
@@ -58,13 +58,13 @@
   ]
  ],
  "titleY": 260,
- "titleHold": 4,
+ "titleHold": 4.0,
  "capY": 0.69,
- "capSize": 64,
+ "capSize": 74,
  "titleSize": 56,
  "autoFrame": false,
- "grade": false,
- "title": "MEETING AN ETHIOPIAN JEW 🇪🇹\nIN ISRAEL 🇮🇱",
+ "grade": "light",
+ "title": "POV: MEETING AN ETHIOPIAN JEW 🇪🇹\nIN ISRAEL 🇮🇱",
  "captionKeys": [
   "Ethiopia",
   "Jewish",
@@ -76,16 +76,15 @@
   "human beings",
   "most diverse"
  ],
- "out": "ST_ETHIOPIA_V2.mp4",
+ "out": "ST_ETHIOPIA_V3.mp4",
  "captionFix": [
-  {
-   "match": "amazing. I",
-   "to": "amazing."
-  },
   {
    "match": "is the most diverse",
    "to": "Israel is the most diverse",
    "exact": true
   }
- ]
+ ],
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "snap": true
 }

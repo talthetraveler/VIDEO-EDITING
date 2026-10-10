@@ -46,11 +46,11 @@
  "titleY": 260,
  "titleHold": 4.0,
  "capY": 0.69,
- "capSize": 64,
+ "capSize": 74,
  "titleSize": 56,
  "autoFrame": false,
- "grade": false,
- "title": "A MUSLIM ☪ AND A JEW ✡\nWHO ARE BEST FRIENDS 🇮🇱",
+ "grade": "light",
+ "title": "POV: MEETING A MUSLIM ☪ AND A JEW ✡\nWHO ARE BEST FRIENDS 🇮🇱",
  "captionKeys": [
   "I'm Muslim",
   "I'm Jewish",
@@ -63,7 +63,7 @@
   "Habibi",
   "with the people"
  ],
- "out": "ST_FRIENDS_V2.mp4",
+ "out": "ST_FRIENDS_V3.mp4",
  "captionFix": [
   {
    "match": "We work together. Wait,",
@@ -75,5 +75,7 @@
    "exact": true
   }
  ],
- "snap": false
+ "snap": false,
+ "captionStyle": "street",
+ "captionMaxWords": 4
 }
