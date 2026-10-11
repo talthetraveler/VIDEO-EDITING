@@ -249,6 +249,13 @@ conflict with safety or honesty.
   numbered folder). Do not overwrite a delivered MP4. Do not delete outputs to
   "clean up" unless I explicitly ask for a specific file to be removed.
 
+> **AMENDED 2026-10-12 - NOTHING IS KEPT ON THE LAPTOP.** Tal, the night the disk hit 0 bytes mid-render:
+> *"do not save anything local to my computer and if you did, delete all that, everything should be on Frame."*
+> For RENDERED media and for copies of handed-over footage, Frame.io is the archive: upload, verify, delete the
+> local file. Keep one review copy per video while a job is live, none after. Read source files where they are -
+> do not copy them into a project. Text (specs, scripts, lessons) stays, in git. "Never destroy old versions"
+> above now means: never destroy the only copy. Check free disk before every render.
+
 ### Honesty
 - **Do not pretend success.** If a render failed, a step was skipped, a
   detection was low-confidence, or a heuristic guessed — say so plainly, with

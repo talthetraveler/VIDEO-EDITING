@@ -13,6 +13,7 @@
 import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, dirname, join, resolve } from "node:path";
+import { captionLines } from "./lib/caption-lines.mjs";
 
 const ROOT = "C:/Users/taldo/Downloads/videos to edit/system";
 const specPath = resolve(process.argv[2]);
@@ -44,20 +45,35 @@ for (const ws of byLine.values()) {
     for (let c = 0; c < k; c++) {
       const len = base + (extra-- > 0 ? 1 : 0), g = run.slice(i, i + len);
       i += len;
-      caps.push({ a: g[0].a, b: g[g.length - 1].b, n: g.length, comma: /,$/.test(g[g.length - 1].w),
+      caps.push({ a: g[0].a, b: g[g.length - 1].b, n: g.length, comma: /,$/.test(g[g.length - 1].w), stop: /[.?!]$/.test(g[g.length - 1].w),
         text: g.map((x) => x.w).join(" ").replace(/[.,]+$/, "").replace(/,/g, "") });
     }
     run = [];
   };
-  for (const w of ws) { run.push(w); if (/[.,?!]$/.test(w.w)) flush(); }
-  flush();
+  // PHRASES, not word slices (Tal, 2026-10-11: "the captions don't flow well"). The even 3-word split ended
+  // captions on "a", "to", "you're". lib/caption-lines.mjs breaks BEFORE a function word and keeps a short
+  // clause whole; its lines are mapped back onto the timed words by count. Fallback: the old splitter.
+  const phrases = captionLines(ws.map((x) => x.w).join(" "));
+  const count = phrases.reduce((s, ph) => s + ph.split(/\s+/).length, 0);
+  if (count === ws.length) {
+    let i = 0;
+    for (const ph of phrases) {
+      const len = ph.split(/\s+/).length, g = ws.slice(i, i + len);
+      i += len;
+      caps.push({ a: g[0].a, b: g[g.length - 1].b, n: g.length, comma: /,$/.test(g[g.length - 1].w), stop: /[.?!]$/.test(g[g.length - 1].w),
+        text: g.map((x) => x.w).join(" ").replace(/[.,]+$/, "").replace(/,/g, "") });
+    }
+  } else {
+    for (const w of ws) { run.push(w); if (/[.,?!]$/.test(w.w)) flush(); }
+    flush();
+  }
   // "Okay, bro." must not flash as OKAY then BRO: a lone word joins its
   // neighbour across a comma (never across a full stop), up to 4 words
   for (let i = lineStart; i < caps.length; i++) {
     const c = caps[i], p = caps[i - 1], nx = caps[i + 1];
     if (c.n !== 1) continue;
     if (i > lineStart && p.comma && p.n + 1 <= 4) {
-      p.b = c.b; p.text += " " + c.text; p.n++; p.comma = c.comma; caps.splice(i, 1); i--;
+      p.b = c.b; p.text += " " + c.text; p.n++; p.comma = c.comma; p.stop = c.stop; caps.splice(i, 1); i--;
     } else if (c.comma && nx && nx.n + 1 <= 4) {
       nx.a = c.a; nx.text = c.text + " " + nx.text; nx.n++; caps.splice(i, 1); i--;
     }
@@ -73,6 +89,12 @@ caps.forEach((c, i) => {
   // hold a beat after the last word, never into the next caption
   c.b = Math.min(Math.max(c.b + 0.3, c.a + 0.45), c.a + 2.2, next - 0.02);
 });
+for (let i = 0; i < caps.length - 1; i++) {
+  const c = caps[i], nx = caps[i + 1];
+  if (c.b - c.a < 0.5 && nx.a - c.b < 0.15 && !c.stop && c.n + nx.n <= 5) {
+    c.text += " " + nx.text; c.b = nx.b; c.n += nx.n; c.stop = nx.stop; caps.splice(i + 1, 1); i--;
+  }
+}
 caps = caps.filter((c) => c.b - c.a >= 0.12);
 // "extraCaptions": [{a, b, text}] - a line nobody says out loud but the picture shows (the "No" of a rejection)
 for (const e of S.extraCaptions || []) caps.push({ a: e.a, b: e.b, text: e.text, extra: true });
@@ -80,6 +102,10 @@ caps.sort((x, y) => x.a - y.a);
 // "capYSpans": [{a, b, y}] - move captions for a stretch (an emoji burned into the source sat under them)
 for (const c of caps) { const sp = (S.capYSpans || []).find((s) => c.a >= s.a && c.a < s.b); if (sp) c.y = sp.y; }
 
+if (process.argv.includes("--dry")) {      // read every caption before spending a render on it
+  console.log(caps.map((c) => `${c.a.toFixed(1)} [${(c.b - c.a).toFixed(1)}s] ${c.text}`).join(String.fromCharCode(10)));
+  process.exit(0);
+}
 // captions must sit on speech - measured from this file's own audio
 const runs = execFileSync("python", [join(ROOT, "scripts/speech-runs.py"), here(S.src)], { encoding: "utf8" })
   .trim().split(",").map((r) => r.split("-").map(Number));

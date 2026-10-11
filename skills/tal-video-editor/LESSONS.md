@@ -3637,3 +3637,15 @@ Tal: *"You just gotta make sure that these cuts are never wrong ... you should a
 - **A number two models disagree on ("23 years" / "three years") cannot be settled by re-running them** (six
   passes split 2-2 and four heard nothing; the aligner's scores were noise). Caption the bigger model's reading
   and tell him which line to check - do not leave an audible answer uncaptioned.
+
+## 152. The disk hit zero and two renders came out corrupt; nothing stays on the laptop (2026-10-12)
+`moov atom not found` on a preview = the disk filled while ffmpeg was writing (three sessions rendering at once,
+476 GB disk at 100%). I had 2.5 GB of ONE job on it. Tal: *"do not save anything local to my computer and if you
+did, delete all that, everything should be on Frame."*
+- Full render -> Frame.io -> verify -> delete the local file. One version on disk at a time.
+- One review copy per video while the job is live. Source files are read in place, not copied into `src/`.
+- `(Get-PSDrive C).Free/1GB` before every render; under ~2 GB, say so before starting.
+- Also this session: **"the captions don't flow"** was my even 2-3 word split ending captions on "a", "to",
+  "you". `title-captions.mjs` now uses `lib/caption-lines.mjs` (break BEFORE a function word, keep a short
+  clause whole) and merges a caption under 0.5s into the next. `--dry` prints every caption with its on-screen
+  time: read that list before spending a render.
