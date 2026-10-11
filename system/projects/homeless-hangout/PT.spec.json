@@ -1,0 +1,56 @@
+{
+ "src": "src/PT.mp4",
+ "out": "out/DAY 1 - BRANDON.mp4",
+ "words": "PT.words.json",
+ "hdr": true,
+ "title": [
+  [
+   [
+    "DAY 1",
+    "yellow"
+   ],
+   [
+    "OF ASKING",
+    "white"
+   ]
+  ],
+  [
+   [
+    "HOMELESS PEOPLE",
+    "white"
+   ]
+  ],
+  [
+   [
+    "TO",
+    "white"
+   ],
+   [
+    "HANG OUT",
+    "yellow"
+   ]
+  ]
+ ],
+ "labels": [
+  {
+   "a": 0,
+   "b": 1.767,
+   "text": "REJECTION 1",
+   "color": "red"
+  },
+  {
+   "a": 1.767,
+   "b": 5.267,
+   "text": "REJECTION 2",
+   "color": "red"
+  },
+  {
+   "a": 7.9,
+   "b": 9.6,
+   "text": "YES!",
+   "color": "green",
+   "size": 120
+  }
+ ],
+ "titleStart": 7.9
+}

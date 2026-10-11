@@ -1,0 +1,56 @@
+{
+ "src": "src/P3.mp4",
+ "out": "out/DAY 1 - RODNEY.mp4",
+ "words": "P3.words.json",
+ "hdr": true,
+ "title": [
+  [
+   [
+    "DAY 1",
+    "yellow"
+   ],
+   [
+    "OF ASKING",
+    "white"
+   ]
+  ],
+  [
+   [
+    "HOMELESS PEOPLE",
+    "white"
+   ]
+  ],
+  [
+   [
+    "TO",
+    "white"
+   ],
+   [
+    "HANG OUT",
+    "yellow"
+   ]
+  ]
+ ],
+ "labels": [
+  {
+   "a": 0,
+   "b": 3.133,
+   "text": "REJECTION 1",
+   "color": "red"
+  },
+  {
+   "a": 3.133,
+   "b": 6.267,
+   "text": "REJECTION 2",
+   "color": "red"
+  },
+  {
+   "a": 9.9,
+   "b": 11.6,
+   "text": "YES!",
+   "color": "green",
+   "size": 120
+  }
+ ],
+ "titleStart": 9.9
+}

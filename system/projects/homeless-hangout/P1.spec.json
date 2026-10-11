@@ -1,0 +1,56 @@
+{
+ "src": "src/P1.mp4",
+ "out": "out/DAY 1 - LIBRARY.mp4",
+ "words": "P1.words.json",
+ "hdr": false,
+ "title": [
+  [
+   [
+    "DAY 1",
+    "yellow"
+   ],
+   [
+    "OF ASKING",
+    "white"
+   ]
+  ],
+  [
+   [
+    "HOMELESS PEOPLE",
+    "white"
+   ]
+  ],
+  [
+   [
+    "TO",
+    "white"
+   ],
+   [
+    "HANG OUT",
+    "yellow"
+   ]
+  ]
+ ],
+ "labels": [
+  {
+   "a": 0,
+   "b": 2.0,
+   "text": "REJECTION 1",
+   "color": "red"
+  },
+  {
+   "a": 2.0,
+   "b": 4.333,
+   "text": "REJECTION 2",
+   "color": "red"
+  },
+  {
+   "a": 10.7,
+   "b": 12.5,
+   "text": "YES!",
+   "color": "green",
+   "size": 120
+  }
+ ],
+ "titleStart": 10.7
+}

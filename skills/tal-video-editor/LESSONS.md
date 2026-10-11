@@ -3559,3 +3559,19 @@ metadata is different."* A finished cut going out again as a trial should not be
   burned captions (y 1375 of 1920 here; look at a frame first), scale 1.04 and centre-crop, re-encode.
 - His own captions, title and cut are untouched. Check the pill is still inside the frame after the zoom.
 - When he asks "where is the X one", he may mean a finished cut he wants back in rotation, not a missing edit.
+
+## 150. Titling + captioning SOMEONE ELSE'S finished post: "day 1 of asking homeless to hang out" (2026-10-11)
+Three finished kindness posts (Chris, Miami) handed over to title, count the rejections and caption. The cut stays.
+- **Tal: "once he says yeah, you get the title card."** The opening is the rejections alone (REJECTION 1,
+  REJECTION 2 in red, switching on the picture cut); the white + yellow title appears the moment the person says
+  yes, with a green YES!, and stays. Do not pin the title from frame 0 on this series.
+- **Tal: "similar captions that you do for Tal editing style."** That is `"street"` (LESSONS 145), not gothic. I
+  built the first pass in gothic from an older memory; read the newest caption lesson before picking a look.
+- **Phone exports can be HLG HDR** (`color_transfer=arib-std-b67`, 10-bit, Dolby Vision profile 8). Untonemapped
+  they look washed out. `ffprobe` every handed-over file; `title-captions.mjs` tonemaps when the spec says `"hdr": true`.
+- **A quiet stranger wrecks the machine transcript** ("It's the weapon. Pork."). Wording: write the script by hand
+  from turbo + large-v3 + a boosted pass on the unclear windows; put speech nobody can make out in `{braces}` so it
+  is aligned but not shown. Timing: `align-script.py` (forced alignment of that script to the file's audio), with
+  `@seconds` anchors at confident points. The caption stays off the screen where the words are a guess.
+- Tools: `system/scripts/align-script.py`, `title-captions.mjs`, `render-label.py`. Specs in `system/projects/homeless-hangout/`.
+- ffmpeg 8 dropped `-filter_complex_script`; it is `-/filter_complex <file>` now.
