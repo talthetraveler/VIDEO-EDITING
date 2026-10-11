@@ -163,7 +163,7 @@ function render(){
   $("main").innerHTML=!rows.length?`<div class="empty">No videos yet.</div>`:table("main",["Video",...PLAT.map(p=>p[1])],main.map(r=>{
     const frame=safeUrl(r.frame);
     return `<tr><td><div class="vcell"><span class="num">${r.n}</span>${link(safeUrl(r.ig?.url)||frame,r.thumb?`<img class="thumb" src="${esc(r.thumb)}" alt="" loading="lazy">`:`<div class="thumb">No image</div>`)}
-      <div><div class="title">${esc(r.title)}</div><div class="subl">${r.viewsLabel?`<span>${esc(r.viewsLabel)} views</span>`:""}${frame?`<a href="${esc(frame)}" target="_blank" rel="noopener">Frame.io</a>`:(posted(r)===4?"":`<span class="tag warn">Missing from Frame.io</span>`)}${posted(r)===4?`<span class="tag ok">Posted everywhere</span>`:""}</div>${r.note?`<div class="note">${esc(r.note)}</div>`:""}</div></div></td>${PLAT.map(([k,l])=>chipHtml(r,k,l)).join("")}</tr>`;}).join(""));
+      <div><button class="ibtn" data-vid="${r.id}" data-main="1" ${dis()}>${esc(r.title)}</button><div class="subl">${r.viewsLabel?`<span>${esc(r.viewsLabel)} views</span>`:""}${frame?`<a href="${esc(frame)}" target="_blank" rel="noopener">Frame.io</a>`:(posted(r)===4?"":`<span class="tag warn">Missing from Frame.io</span>`)}${posted(r)===4?`<span class="tag ok">Posted everywhere</span>`:""}</div>${r.note?`<div class="note">${esc(r.note)}</div>`:""}</div></div></td>${PLAT.map(([k,l])=>chipHtml(r,k,l)).join("")}</tr>`;}).join(""));
   $("need").innerHTML=need.length?table("",["#","Video","Views","Still needs"],need.map(r=>`<tr><td class="n">${r.n}</td><td>${esc(r.title)}</td><td class="n">${esc(r.viewsLabel||"")}</td><td>${esc(PLAT.filter(([k])=>(r[k]?.s||"none")==="none").map(p=>p[1]).join(", "))}</td></tr>`).join("")):`<div class="empty">Nothing is missing.</div>`;
   // Trial reels: one block per day, thumbnail + time + status, so a full day (5) reads at a glance.
   const tdays={}; trials.forEach(t=>(tdays[t.date]=tdays[t.date]||[]).push(t));
@@ -229,7 +229,7 @@ function quickEdit(col,id,item,title,fields){
   $("dlg-t").textContent=title;
   form.innerHTML=fields.map(([l,n,ta])=>ta?`<label>${l}<textarea name="${n}" id="q-${n}">${esc(item[n]||"")}</textarea></label>`:`<label>${l}<input type="text" name="${n}" id="q-${n}" value="${esc(item[n]||"")}"></label>`).join("")+foot(col,id);
   wireFoot(col,id);
-  onSave=fd=>{const d={};for(const [,n] of fields)d[n]=(fd[n]||"").trim();return db.doc(col+"/"+id).update(d);};
+  onSave=fd=>{const d={};for(const [,n] of fields)d[n]=(fd[n]||"").trim();if("n" in d)d.n=Number(d.n)||item.n||0;return db.doc(col+"/"+id).update(d);};
   dlg.showModal();
 }
 const foot=()=>`<p class="err" id="dlg-e" hidden></p><div class="drow"><button class="btn ghost" type="button" id="dlg-d" style="margin-right:auto;color:var(--warn)">Delete</button><button class="btn ghost" type="button" id="dlg-c">Cancel</button><button class="btn" type="submit">Save</button></div>`;
@@ -259,7 +259,7 @@ document.addEventListener("click",e=>{
   const ib=e.target.closest(".ibtn"); if(ib&&canWrite){
     if(ib.dataset.idea)editIdea(ib.dataset.idea);
     else if(ib.dataset.cr){const c=creators.find(x=>x.id===ib.dataset.cr);if(c)quickEdit("creators",c.id,c,c.name,[["Creator","name"],["Instagram handle","handle"],["What they do, notes","video",1]]);}
-    else if(ib.dataset.vid){const r=rows.find(x=>x.id===ib.dataset.vid);if(r)quickEdit("videos",r.id,r,r.title,[["Video","title"],["File link","file"],["Location","loc"],["Notes","note",1]]);}
+    else if(ib.dataset.vid){const r=rows.find(x=>x.id===ib.dataset.vid);if(r)quickEdit("videos",r.id,r,r.title,[["Video","title"],["Position in the list (number)","n"],["File link","file"],["Location","loc"],["Notes","note",1]]);}
     return;}
   const c=e.target.closest(".chip"); if(c&&canWrite)editPlatform(c.dataset.id,c.dataset.k);
 });
