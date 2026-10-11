@@ -23,33 +23,33 @@
    "b": 3.133,
    "text": "Rejections: 0",
    "color": "white",
-   "size": 46
+   "size": 54
   },
   {
    "a": 3.133,
    "b": 6.267,
    "text": "Rejections: 1",
    "color": "white",
-   "size": 46
+   "size": 54
   },
   {
    "a": 6.267,
    "b": 9.9,
    "text": "Rejections: 2",
    "color": "white",
-   "size": 46
+   "size": 54
   },
   {
    "a": 9.9,
    "b": 11.6,
    "text": "He said yes!",
    "color": "green",
-   "size": 50
+   "size": 54
   }
  ],
  "titleEnd": 11.6,
  "audio": "aud/P3_mix.wav",
- "titleSize": 62,
+ "titleSize": 68,
  "titleY": 0.185,
  "captionCase": "sentence",
  "capSize": 68,

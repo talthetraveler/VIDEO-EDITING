@@ -82,6 +82,15 @@ const off = caps.filter((c) => !runs.some(([a, b]) => Math.min(b, c.b) - Math.ma
 console.log(`  ${caps.length} captions, ${off.length} over silence`);
 for (const c of off) console.log(`     !! ${c.a.toFixed(2)}-${c.b.toFixed(2)} ${c.text}`);
 
+// "cuts": [[a, b], ...] in SOURCE seconds are removed from picture and sound ("you can't hear anything, take
+// that part"). Captions and labels inside a cut are dropped; everything after it moves earlier.
+const CUTS = (S.cuts || []).slice().sort((x, y) => x[0] - y[0]);
+const shift = (t) => t - CUTS.reduce((s, [a, b]) => s + Math.max(0, Math.min(t, b) - a), 0);
+const inCut = (t) => CUTS.some(([a, b]) => t > a && t < b);
+caps = caps.filter((c) => !inCut(c.a + 0.05)).map((c) => ({ ...c, a: shift(c.a), b: shift(c.b) }));
+for (const l of S.labels) { l.a = shift(l.a); l.b = shift(l.b); }
+const cutExpr = CUTS.map(([a, b]) => `between(t\,${a}\,${b})`).join("+");
+
 const capMeta = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-caption.py"), join(TMP, "cap"), "940", String(S.capSize || 74)],
   { input: JSON.stringify(caps.map((c) => ({ text: c.text, style: S.captionStyle || "street", emphasis: true, keepcase: SENT }))), encoding: "utf8" }).trim());
 
@@ -97,7 +106,11 @@ const H = 1920;
 const base = S.hdr
   ? "zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,scale=1080:1920:flags=lanczos,format=yuv420p"
   : "scale=1080:1920:flags=lanczos:in_range=auto:out_range=tv,format=yuv420p";
-const parts = [`[0:v]${base}[b0]`];
+const AIN = S.audio ? 1 : 0;
+const parts = CUTS.length
+  ? [`[0:v]select='not(${cutExpr})',setpts=N/FRAME_RATE/TB,${base}[b0]`,
+     `[${AIN}:a]aselect='not(${cutExpr})',asetpts=N/SR/TB[a]`]
+  : [`[0:v]${base}[b0]`];
 let prev = "[b0]", n = 0;
 const add = (file, y, enable) => {
   const en = enable ? `:enable='between(t\\,${enable[0].toFixed(3)}\\,${enable[1].toFixed(3)})'` : "";
@@ -115,9 +128,9 @@ writeFileSync(graph, parts.join(";\n"), "utf8");
 // "audio": a replacement soundtrack (e.g. voice lifted, music ducked under speech) - same length as src
 const AUD = S.audio ? ["-i", here(S.audio)] : [];
 execFileSync("ffmpeg", ["-v", "error", "-stats", "-y", "-i", here(S.src), ...AUD, "-/filter_complex", graph,
-  "-map", "[v]", "-map", S.audio ? "1:a" : "0:a", "-c:v", "libx264", "-preset", PREVIEW ? "veryfast" : "medium",
+  "-map", "[v]", "-map", CUTS.length ? "[a]" : `${AIN}:a`, "-c:v", "libx264", "-preset", PREVIEW ? "veryfast" : "medium",
   "-crf", PREVIEW ? "27" : "18", "-pix_fmt", "yuv420p", "-color_range", "tv", "-colorspace", "bt709",
-  "-color_primaries", "bt709", "-color_trc", "bt709", ...(PREVIEW ? ["-c:a", "aac", "-b:a", "128k"] : S.audio ? ["-c:a", "aac", "-b:a", "192k"] : ["-c:a", "copy"]),
+  "-color_primaries", "bt709", "-color_trc", "bt709", ...(PREVIEW ? ["-c:a", "aac", "-b:a", "128k"] : (S.audio || CUTS.length) ? ["-c:a", "aac", "-b:a", "192k"] : ["-c:a", "copy"]),
   "-movflags", "+faststart", ...(S.t ? ["-t", String(S.t)] : []), OUT], { stdio: "inherit" });
 writeFileSync(OUT.replace(/\.mp4$/, ".captions.json"), JSON.stringify(caps, null, 1), "utf8");
 console.log(`  -> ${OUT}`);

@@ -3593,3 +3593,11 @@ Three finished kindness posts (Chris, Miami) handed over to title, count the rej
   written, mid-frame (`"captionCase": "sentence"`, `capY` 0.56), one yellow word kept ("I like how you did the
   yellow"); and the counter is a small white **"Rejections: 0"** under the caption that becomes 1 when the first
   person passes and 2 when the second does - not a big red "REJECTION 1" label.
+- **The counter flips when the person says no, while they are still on screen** - not on the cut to the next
+  person. And the one who says yes keeps "Rejections: 2"; no "He said yes!" label (Tal: *"You don't need to say he
+  said yes"*).
+- **A caption must not sit on the first person's face**: mid-frame (0.56, from the screenshot) covered the woman
+  on the bench; 0.66 with the counter at 0.72 clears her. Look at the opening still for every video in the series.
+- **"You can't hear anything" = take that part out**, not leave it uncaptioned. `"cuts": [[a, b]]` in the spec
+  (source seconds) removes picture and sound and moves captions/labels; snap each trim to a picture cut when one
+  is within a second (scene filter), otherwise it is a jump cut inside the shot.

@@ -20,39 +20,46 @@
  "labels": [
   {
    "a": 0,
-   "b": 1.767,
+   "b": 1.45,
    "text": "Rejections: 0",
    "color": "white",
-   "size": 46
+   "size": 54
   },
   {
-   "a": 1.767,
-   "b": 5.267,
+   "a": 1.45,
+   "b": 3.9,
    "text": "Rejections: 1",
    "color": "white",
-   "size": 46
+   "size": 54
   },
   {
-   "a": 5.267,
-   "b": 7.9,
+   "a": 3.9,
+   "b": 9.6,
    "text": "Rejections: 2",
    "color": "white",
-   "size": 46
-  },
-  {
-   "a": 7.9,
-   "b": 9.6,
-   "text": "He said yes!",
-   "color": "green",
-   "size": 50
+   "size": 54
   }
  ],
  "titleEnd": 9.6,
  "audio": "aud/PTc_mix.wav",
- "titleSize": 62,
+ "titleSize": 68,
  "titleY": 0.185,
  "captionCase": "sentence",
  "capSize": 68,
- "capY": 0.56,
- "labelY": 0.62
+ "capY": 0.66,
+ "labelY": 0.72,
+ "cuts": [
+  [
+   91.6,
+   96.95
+  ],
+  [
+   108.43,
+   116.67
+  ],
+  [
+   144.08,
+   148.67
+  ]
+ ]
 }
