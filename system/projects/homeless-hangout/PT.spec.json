@@ -52,5 +52,6 @@
    "size": 120
   }
  ],
- "titleStart": 7.9
+ "titleEnd": 9.6,
+ "audio": "aud/PT_mix.wav"
 }

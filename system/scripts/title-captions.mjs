@@ -109,10 +109,12 @@ parts.push(`${prev}${PREVIEW ? "scale=720:1280" : "null"}[v]`);
 const graph = join(TMP, "graph.txt");
 writeFileSync(graph, parts.join(";\n"), "utf8");
 
-execFileSync("ffmpeg", ["-v", "error", "-stats", "-y", "-i", here(S.src), "-/filter_complex", graph,
-  "-map", "[v]", "-map", "0:a", "-c:v", "libx264", "-preset", PREVIEW ? "veryfast" : "medium",
+// "audio": a replacement soundtrack (e.g. voice lifted, music ducked under speech) - same length as src
+const AUD = S.audio ? ["-i", here(S.audio)] : [];
+execFileSync("ffmpeg", ["-v", "error", "-stats", "-y", "-i", here(S.src), ...AUD, "-/filter_complex", graph,
+  "-map", "[v]", "-map", S.audio ? "1:a" : "0:a", "-c:v", "libx264", "-preset", PREVIEW ? "veryfast" : "medium",
   "-crf", PREVIEW ? "27" : "18", "-pix_fmt", "yuv420p", "-color_range", "tv", "-colorspace", "bt709",
-  "-color_primaries", "bt709", "-color_trc", "bt709", ...(PREVIEW ? ["-c:a", "aac", "-b:a", "128k"] : ["-c:a", "copy"]),
+  "-color_primaries", "bt709", "-color_trc", "bt709", ...(PREVIEW ? ["-c:a", "aac", "-b:a", "128k"] : S.audio ? ["-c:a", "aac", "-b:a", "192k"] : ["-c:a", "copy"]),
   "-movflags", "+faststart", ...(S.t ? ["-t", String(S.t)] : []), OUT], { stdio: "inherit" });
 writeFileSync(OUT.replace(/\.mp4$/, ".captions.json"), JSON.stringify(caps, null, 1), "utf8");
 console.log(`  -> ${OUT}`);

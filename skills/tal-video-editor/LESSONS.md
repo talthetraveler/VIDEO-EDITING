@@ -3562,9 +3562,17 @@ metadata is different."* A finished cut going out again as a trial should not be
 
 ## 150. Titling + captioning SOMEONE ELSE'S finished post: "day 1 of asking homeless to hang out" (2026-10-11)
 Three finished kindness posts (Chris, Miami) handed over to title, count the rejections and caption. The cut stays.
-- **Tal: "once he says yeah, you get the title card."** The opening is the rejections alone (REJECTION 1,
-  REJECTION 2 in red, switching on the picture cut); the white + yellow title appears the moment the person says
-  yes, with a green YES!, and stays. Do not pin the title from frame 0 on this series.
+- **Title: on the OPENING, then gone.** I read "once he says yeah, you get the title card" as "the title appears
+  at the yes" and he corrected it the next message: *"You need the title for the first couple seconds ... Title
+  should be on the first part."* White + yellow title from frame 0, over REJECTION 1 / REJECTION 2 (red, switching
+  on the picture cut) and the green YES!, then off (`"titleEnd"`). When a title note is ambiguous, the title
+  belongs on the hook.
+- **A voice under music: lower the music, do not cut the person.** Tal: *"you can't hear the people back ... reduce
+  the background noise so you can hear him speak"*, and *"if you can't hear him speak ... you need to ask me."*
+  Voice = DeepFilterNet output, levelled (`dynaudnorm m=6`); bed = original minus voice; bed ducked by
+  `sidechaincompress` keyed on the voice (ratio 3), so music-only stretches keep their level; then -14 LUFS.
+  Measured on Brandon: voice 8-12 dB UNDER the bed before, 4-11 dB over it after. Spec field `"audio"`.
+  Cleaning did NOT make the speech models hear the mumbled lines; those captions stay off and he is asked.
 - **Tal: "similar captions that you do for Tal editing style."** That is `"street"` (LESSONS 145), not gothic. I
   built the first pass in gothic from an older memory; read the newest caption lesson before picking a look.
 - **Phone exports can be HLG HDR** (`color_transfer=arib-std-b67`, 10-bit, Dolby Vision profile 8). Untonemapped
