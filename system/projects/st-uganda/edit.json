@@ -2,7 +2,7 @@
  "beats": [
   [
    "local-3b0b7fa81fabadc7",
-   138.04,
+   138.82,
    143.65,
    0.5,
    ""
@@ -99,9 +99,16 @@
    ""
   ],
   [
-   "local-3b0b7fa81fabadc7",
-   209.92,
-   219.15,
+   "local-9a2267308e037d97",
+   32.17,
+   41.45,
+   0.5,
+   ""
+  ],
+  [
+   "local-c11a7f7e68b16b1d",
+   0.26,
+   4.8,
    0.5,
    ""
   ],
@@ -114,7 +121,7 @@
   ],
   [
    "local-3b0b7fa81fabadc7",
-   245.73,
+   233.54,
    252.5,
    0.5,
    ""
@@ -189,10 +196,12 @@
   {
    "match": "community i had to find",
    "to": "community. I had to find"
+  },
+  {
+   "match": "one local,",
+   "to": "one locale,"
   }
  ],
- "out": "ST_UGANDA_V6.mp4",
- "denoise": 15,
- "music": "another-love-even.mp3",
- "musicVol": 0.3
+ "out": "ST_UGANDA_V7.mp4",
+ "denoise": 15
 }
