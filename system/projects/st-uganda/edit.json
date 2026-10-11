@@ -191,6 +191,8 @@
    "to": "community. I had to find"
   }
  ],
- "out": "ST_UGANDA_V5.mp4",
- "denoise": 15
+ "out": "ST_UGANDA_V6.mp4",
+ "denoise": 15,
+ "music": "another-love-even.mp3",
+ "musicVol": 0.3
 }

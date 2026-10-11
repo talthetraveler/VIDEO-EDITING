@@ -1783,7 +1783,7 @@ const amix = hasMusic
   // One continuous ambience track under hard picture cuts is what an Erez-style
   // cut does with its song. (flowers-notes-erez, 2026-10-03)
   ? `[0:a]${TIMELINE_AF}${cfg.bedOnly ? ",volume=0" : ""}[spk];` +
-    `[${musicIdx}:a]volume=${cfg.bedOnly ? 1.0 : cfg.silent ? 0.85 : 0.14},afade=t=in:st=0:d=${cfg.bedOnly ? 0.15 : 1.5}[bed];` +
+    `[${musicIdx}:a]volume=${cfg.bedOnly ? 1.0 : cfg.silent ? 0.85 : (cfg.musicVol ?? 0.14)},afade=t=in:st=0:d=${cfg.bedOnly ? 0.15 : 1.5}[bed];` +
     `[spk][bed]amix=inputs=2:duration=first:dropout_transition=0:normalize=0,` +
     `loudnorm=I=-16:TP=-1.5:LRA=11[a]`
   : null;
