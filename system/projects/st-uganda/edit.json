@@ -8,8 +8,22 @@
    ""
   ],
   [
+   "local-9a2267308e037d97",
+   13.54,
+   15.6,
+   0.5,
+   ""
+  ],
+  [
+   "local-9a2267308e037d97",
+   18.44,
+   21.9,
+   0.5,
+   ""
+  ],
+  [
    "local-3b0b7fa81fabadc7",
-   5.87,
+   11.15,
    15.85,
    0.5,
    ""
@@ -151,5 +165,6 @@
    "to": "So you're Christian, you're Muslim,"
   }
  ],
- "out": "ST_UGANDA_V2.mp4"
+ "out": "ST_UGANDA_V3.mp4",
+ "denoise": 15
 }
