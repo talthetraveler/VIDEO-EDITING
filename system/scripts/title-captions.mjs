@@ -74,11 +74,16 @@ caps.forEach((c, i) => {
   c.b = Math.min(Math.max(c.b + 0.3, c.a + 0.45), c.a + 2.2, next - 0.02);
 });
 caps = caps.filter((c) => c.b - c.a >= 0.12);
+// "extraCaptions": [{a, b, text}] - a line nobody says out loud but the picture shows (the "No" of a rejection)
+for (const e of S.extraCaptions || []) caps.push({ a: e.a, b: e.b, text: e.text, extra: true });
+caps.sort((x, y) => x.a - y.a);
+// "capYSpans": [{a, b, y}] - move captions for a stretch (an emoji burned into the source sat under them)
+for (const c of caps) { const sp = (S.capYSpans || []).find((s) => c.a >= s.a && c.a < s.b); if (sp) c.y = sp.y; }
 
 // captions must sit on speech - measured from this file's own audio
 const runs = execFileSync("python", [join(ROOT, "scripts/speech-runs.py"), here(S.src)], { encoding: "utf8" })
   .trim().split(",").map((r) => r.split("-").map(Number));
-const off = caps.filter((c) => !runs.some(([a, b]) => Math.min(b, c.b) - Math.max(a, c.a) > 0.05));
+const off = caps.filter((c) => !c.extra && !runs.some(([a, b]) => Math.min(b, c.b) - Math.max(a, c.a) > 0.05));
 console.log(`  ${caps.length} captions, ${off.length} over silence`);
 for (const c of off) console.log(`     !! ${c.a.toFixed(2)}-${c.b.toFixed(2)} ${c.text}`);
 
@@ -97,7 +102,8 @@ const capMeta = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-ca
 
 // ------------------------------------------------------------ title + labels
 const labelIn = [{ lines: S.title, size: S.titleSize || 66, maxw: 900, file: join(TMP, "title.png") },
-  ...S.labels.map((l, i) => ({ lines: [[[l.text, l.color || "white"]]], size: l.size || 92, maxw: 900, file: join(TMP, `label${i}.png`) }))];
+  ...S.labels.map((l, i) => ({ lines: [[[l.text, l.color || "white"]]], size: l.size || 92, maxw: 900, file: join(TMP, `label${i}.png`) })),
+  ...(S.stamp ? [{ lines: [[[S.stamp.text, "white"]]], size: S.stamp.size || 40, maxw: 700, file: join(TMP, "stamp.png") }] : [])];
 const labMeta = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-label.py")],
   { input: JSON.stringify(labelIn), encoding: "utf8" }).trim());
 
@@ -113,15 +119,17 @@ const parts = CUTS.length
      `[${AIN}:a]aselect='not(${cutExpr})',asetpts=N/SR/TB[a]`]
   : [`[0:v]${base}[b0]`];
 let prev = "[b0]", n = 0;
-const add = (file, y, enable) => {
+const add = (file, y, enable, x = "(W-w)/2") => {
   const en = enable ? `:enable='between(t\\,${enable[0].toFixed(3)}\\,${enable[1].toFixed(3)})'` : "";
   parts.push(`movie='${ff(file)}'[m${n}]`);
-  parts.push(`${prev}[m${n}]overlay=x=(W-w)/2:y=${y}-h/2:eval=init${en}[o${n}]`);
+  parts.push(`${prev}[m${n}]overlay=x=${x}:y=${y}-h/2:eval=init${en}[o${n}]`);
   prev = `[o${n}]`; n++;
 };
 add(labMeta[0].file, Math.round(H * (S.titleY || 0.2)), (S.titleStart || S.titleEnd) ? [S.titleStart || 0, S.titleEnd || 1e6] : null);
 S.labels.forEach((l, i) => add(labMeta[i + 1].file, Math.round(H * (l.y || S.labelY || 0.36)), [l.a, l.b]));
-caps.forEach((c, i) => capMeta[i] && add(capMeta[i].file, Math.round(H * (S.capY || 0.66)), [c.a, c.b]));
+caps.forEach((c, i) => capMeta[i] && add(capMeta[i].file, Math.round(H * (c.y || S.capY || 0.66)), [c.a, c.b]));
+// "stamp": {text, size, y} - the account handle, bold, top right, for the whole video
+if (S.stamp) add(labMeta[labMeta.length - 1].file, Math.round(H * (S.stamp.y || 0.135)), null, "W-w-36");
 parts.push(`${prev}${PREVIEW ? "scale=720:1280" : "null"}[v]`);
 const graph = join(TMP, "graph.txt");
 writeFileSync(graph, parts.join(";\n"), "utf8");

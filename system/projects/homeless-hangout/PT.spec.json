@@ -1,6 +1,6 @@
 {
  "src": "src/PT.mp4",
- "out": "out/DAY 1 - BRANDON.mp4",
+ "out": "out/DAY 1 - BRANDON v2.mp4",
  "words": "PT.words.json",
  "hdr": true,
  "title": [
@@ -65,5 +65,22 @@
    144.08,
    148.67
   ]
- ]
+ ],
+ "extraCaptions": [
+  {
+   "a": 1.42,
+   "b": 1.76,
+   "text": "No"
+  },
+  {
+   "a": 3.55,
+   "b": 4.55,
+   "text": "No I'm good"
+  }
+ ],
+ "stamp": {
+  "text": "@thesocialaccords",
+  "size": 50,
+  "y": 0.128
+ }
 }

@@ -3606,3 +3606,12 @@ Three finished kindness posts (Chris, Miami) handed over to title, count the rej
   for an audible reply in the next 2-3 seconds; none means the question and its silence go. A trim that starts
   inside a caption's first word left that caption on screen and 40ms of the word in the audio - start the trim
   at the END of the previous word, and the tool now drops any caption more than half removed.
+- **Series rules added while reviewing video 2 (2026-10-11):** each video is its own day (Day 1, Day 2, Day 3 -
+  not "Day 1" three times); every rejection gets a **"No" caption after the ask**, even when the person says
+  nothing audible (`"extraCaptions"`); **@thesocialaccords in bold, top right, the whole video** (`"stamp"`);
+  a stretch with no captions and nobody audible is deleted (he will name the seconds); the creator talking about
+  his own brand name near the end is cut; a caption never sits on an emoji burned into the source (`"capYSpans"`).
+- A trim that starts 0.2s after a picture cut leaves a flash of the next shot - start it ON the cut.
+- Two renders must not share scratch still names (`s_01.jpg`); the contact sheets came out half empty.
+- For Montana: "FOR MONTANA TO REVIEW", named `ROUGH DRAFT Vn - <title> (collab with Chris).mp4`. A corrected
+  version is uploaded beside the old one; name the old file in chat for him to remove (never move or delete).

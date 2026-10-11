@@ -1,12 +1,12 @@
 {
  "src": "src/P3.mp4",
- "out": "out/DAY 1 - RODNEY.mp4",
+ "out": "out/DAY 3 - RODNEY.mp4",
  "words": "P3.words.json",
  "hdr": true,
  "title": [
   [
    [
-    "Day 1 Of Asking Homeless",
+    "Day 3 Of Asking Homeless",
     "white"
    ]
   ],
@@ -53,5 +53,17 @@
    65.55,
    68.44
   ]
- ]
+ ],
+ "extraCaptions": [
+  {
+   "a": 1.4,
+   "b": 2.7,
+   "text": "No"
+  }
+ ],
+ "stamp": {
+  "text": "@thesocialaccords",
+  "size": 50,
+  "y": 0.128
+ }
 }

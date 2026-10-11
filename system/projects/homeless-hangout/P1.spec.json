@@ -1,12 +1,12 @@
 {
  "src": "src/P1.mp4",
- "out": "out/DAY 1 - LIBRARY.mp4",
+ "out": "out/DAY 2 - LIBRARY.mp4",
  "words": "P1.words.json",
  "hdr": false,
  "title": [
   [
    [
-    "Day 1 Of Asking Homeless",
+    "Day 2 Of Asking Homeless",
     "white"
    ]
   ],
@@ -27,13 +27,13 @@
   },
   {
    "a": 1.15,
-   "b": 3.3,
+   "b": 3.5,
    "text": "Rejections: 1",
    "color": "white",
    "size": 54
   },
   {
-   "a": 3.3,
+   "a": 3.5,
    "b": 12.6,
    "text": "Rejections: 2",
    "color": "white",
@@ -50,8 +50,39 @@
  "labelY": 0.72,
  "cuts": [
   [
+   5.75,
+   9.38
+  ],
+  [
+   38.68,
+   51.2
+  ],
+  [
    74.75,
    76.3
+  ],
+  [
+   95.9,
+   107.5
   ]
- ]
+ ],
+ "capYSpans": [
+  {
+   "a": 37.4,
+   "b": 46.9,
+   "y": 0.79
+  }
+ ],
+ "extraCaptions": [
+  {
+   "a": 1.15,
+   "b": 1.95,
+   "text": "No"
+  }
+ ],
+ "stamp": {
+  "text": "@thesocialaccords",
+  "size": 50,
+  "y": 0.128
+ }
 }
