@@ -1,0 +1,169 @@
+{
+ "beats": [
+  [
+   "local-9a2267308e037d97",
+   5.5,
+   15.55,
+   0.5,
+   ""
+  ],
+  [
+   "local-9a2267308e037d97",
+   16.36,
+   21.9,
+   0.5,
+   ""
+  ],
+  [
+   "local-9a2267308e037d97",
+   32.17,
+   36.45,
+   0.5,
+   ""
+  ],
+  [
+   "local-9a2267308e037d97",
+   37.75,
+   47.5,
+   0.5,
+   ""
+  ],
+  [
+   "local-9a2267308e037d97",
+   48.69,
+   50.45,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   79.3,
+   81.6,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   83.27,
+   95.35,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   138.04,
+   143.6,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   162.73,
+   166.75,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   168.77,
+   171.3,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   174.28,
+   183.25,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   187.96,
+   198.55,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   199.64,
+   208.45,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   229.63,
+   233,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   245.73,
+   252.45,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   274.12,
+   282.6,
+   0.5,
+   ""
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "snap": false,
+ "captionKeys": [
+  "from Uganda",
+  "a couple",
+  "Muslim",
+  "Christian",
+  "so beautiful",
+  "kill me",
+  "my family",
+  "hated me",
+  "Exactly",
+  "freedom forever",
+  "their truth",
+  "so much hate",
+  "there is peace",
+  "safe in Israel",
+  "is love",
+  "live in peace",
+  "deserves freedom",
+  "shalom and salam"
+ ],
+ "captionFix": [
+  {
+   "match": "Rezibian",
+   "to": "lesbian"
+  },
+  {
+   "match": "Waalaikum Salamu Raam wa rahmahtu wa baratah",
+   "to": "Wa alaikum salam"
+  },
+  {
+   "match": "But he could enough,",
+   "to": "But good enough,"
+  },
+  {
+   "match": "he could enough",
+   "to": "good enough"
+  },
+  {
+   "match": "prohibiting",
+   "to": "prohibited"
+  }
+ ],
+ "out": "ST_UGANDA_V1.mp4"
+}
