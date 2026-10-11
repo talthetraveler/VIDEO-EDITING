@@ -1,0 +1,54 @@
+diff --git a/shorts_generator/local/clipper.py b/shorts_generator/local/clipper.py
+index 931f99c..b100ab3 100644
+--- a/shorts_generator/local/clipper.py
++++ b/shorts_generator/local/clipper.py
+@@ -37,6 +37,28 @@ def _cut_subclip(source_path: str, start: float, end: float, out_path: str) -> s
+     return out_path
+ 
+ 
++def _face_detector(cv2, src_w: int, src_h: int):
++    """Return frame -> list of (x, y, w, h) faces, for whichever detector this OpenCV has."""
++    if hasattr(cv2, "CascadeClassifier"):
++        cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
++
++        def haar(frame):
++            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
++            return list(cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(40, 40)))
++        return haar
++
++    model = os.path.join(os.path.dirname(__file__), "..", "..", "models", "face_detection_yunet_2023mar.onnx")
++    if hasattr(cv2, "FaceDetectorYN_create") and os.path.exists(model):
++        yunet = cv2.FaceDetectorYN_create(model, "", (src_w, src_h), 0.6)
++
++        def yn(frame):
++            _, found = yunet.detect(frame)
++            return [] if found is None else [tuple(int(v) for v in f[:4]) for f in found]
++        return yn
++
++    return lambda frame: []
++
++
+ def _reframe_vertical(in_path: str, out_path: str, aspect_ratio: str) -> str:
+     """Crop the cut clip to the target aspect ratio, tracking faces if possible."""
+     try:
+@@ -66,7 +88,9 @@ def _reframe_vertical(in_path: str, out_path: str, aspect_ratio: str) -> str:
+     crop_w = max(2, crop_w - (crop_w % 2))
+     crop_h = max(2, crop_h - (crop_h % 2))
+ 
+-    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
++    # OpenCV 5 dropped CascadeClassifier; use the YuNet detector there (models/*.onnx),
++    # and fall back to a centre crop when neither detector is available.
++    detect = _face_detector(cv2, src_w, src_h)
+ 
+     silent_path = out_path + ".silent.mp4"
+     fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+@@ -79,8 +103,7 @@ def _reframe_vertical(in_path: str, out_path: str, aspect_ratio: str) -> str:
+         if not ret:
+             break
+ 
+-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+-        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(40, 40))
++        faces = detect(frame)
+         if len(faces) > 0:
+             # Pick the largest face — usually the speaker.
+             x, y, w, h = max(faces, key=lambda f: f[2] * f[3])

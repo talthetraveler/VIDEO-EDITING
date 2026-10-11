@@ -679,3 +679,29 @@ map with two pins (`map:NAME,lon,lat;NAME,lon,lat@lon0,lon1,lat0,lat1`), collage
 (`count:`), one checklist (`check:`), his starter-kit sounds on titles and key words (`mg_pop`, `mg_snap`, `mg_tick`,
 `mg_counter`, `mg_chime`), hook voiced as one take, no jump inside a shot. He rejected the scorer-driven
 "You should try it" hooks the same day: his template outranks the 100 score (the template scores about 54).
+
+## Long video -> ranked short clips (Tal, 2026-10-12: "i want u to install this also ... or use things from here")
+
+| repo | where | state |
+|---|---|---|
+| `Anil-matcha/AI-Youtube-Shorts-Generator` | `skills/toolbox/ai-youtube-shorts-generator/` (clone, `3d11f2e`) | WORKS in `--mode local`, tested on `FOOTAGE IN/2026-10-11 uganda couple/fe424c96.mp4` (287 s): transcribed, ranked 3 moments, cut the top 2 (52 s and 51 s, 576x1024, frames looked at). Use it to FIND and RANK moments in a long recording or a YouTube link; each pick comes with a score, a hook line and a reason. Its cuts are rough (cut on transcript segments, mpeg4 video, no captions, no grade), so a pick is a starting point for `build-edit`, never a finished video and never a gate on his own choices. |
+| `gfratmct/viral-clips-extractor` | `skills/toolbox/viral-clips-extractor/` (clone, `8d122ac`, 2024) | NOT runnable and not to be run as shipped: `clips_extractor.py` ends by UPLOADING the clips to TikTok with "#fyp #ai #random"; it also needs dlib (no compiler here), the removed `openai.ChatCompletion` API, `pytube` (broken) and an OpenAI key pasted into the source. Nothing in it does a job the repo above or `build-edit` does not already do. Kept for reference: `core/contents/face_cropping.py`. |
+
+How to run the first one (nothing new to pay for):
+
+```bash
+cd skills/toolbox/ai-youtube-shorts-generator
+LOCAL_OUTPUT_DIR="<scratch folder>" PYTHONUTF8=1 python main.py "<file or YouTube URL>" --mode local --num-clips 5 --language en --output-json "<scratch>/result.json"
+```
+
+- Its default `--mode api` needs a paid MuAPI key (not on this machine). Local mode wants an OpenAI or Gemini key; neither exists
+  here, so `.env` in that folder points its OpenAI client at Groq (`OPENAI_BASE_URL=https://api.groq.com/openai/v1`, the
+  `GROQ_API_KEY` from `system/.env`, model `openai/gpt-oss-120b`). `llama-3.3-70b-versatile` is NOT on this key (404).
+  The transcript text goes to Groq, the same service that already transcribes his footage.
+- Only `openai` and `python-dotenv` had to be installed; faster-whisper, opencv, yt-dlp and google-genai were already there.
+- Patched for this machine (`skills/toolbox/patches/ai-youtube-shorts-generator-opencv5.patch`): OpenCV 5 has no
+  `CascadeClassifier`, the clipper crashed before releasing the video and Windows then reported "file in use". It now
+  uses OpenCV's YuNet face detector (`models/face_detection_yunet_2023mar.onnx`, from opencv_zoo) and falls back to a
+  centre crop.
+- It writes the clips, a cached `.srt` and the downloaded source into `LOCAL_OUTPUT_DIR`: point that at a scratch folder
+  and delete it after ([[nothing-kept-local]]).

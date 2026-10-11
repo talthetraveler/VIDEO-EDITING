@@ -16,6 +16,8 @@ They are fully restorable, at the exact commit that is on the laptop:
 | `find-broll` | https://github.com/louisedesadeleer/b-roll-finder | `36b8a56` |
 | `video-use` | https://github.com/browser-use/video-use | `9575612` |
 | `youtube-clipper` | https://github.com/op7418/Youtube-clipper-skill | `f31f077` |
+| `ai-youtube-shorts-generator` | https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator | `3d11f2e` (then apply `patches/ai-youtube-shorts-generator-opencv5.patch`) |
+| `viral-clips-extractor` | https://github.com/gfratmct/viral-clips-extractor | `8d122ac` |
 
 To restore all six on a fresh machine:
 
@@ -30,6 +32,8 @@ cut-video         https://github.com/louisedesadeleer/cut-video          a5a87a6
 find-broll        https://github.com/louisedesadeleer/b-roll-finder      36b8a56
 video-use         https://github.com/browser-use/video-use               9575612
 youtube-clipper   https://github.com/op7418/Youtube-clipper-skill        f31f077
+ai-youtube-shorts-generator https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator 3d11f2e
+viral-clips-extractor https://github.com/gfratmct/viral-clips-extractor 8d122ac
 LIST
 ```
 
