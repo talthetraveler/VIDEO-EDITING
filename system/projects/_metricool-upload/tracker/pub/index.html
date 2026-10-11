@@ -109,7 +109,8 @@ footer{color:var(--muted);font-size:12.5px}
   <section id="p-main"><div id="main"><div class="empty">Loading. If this stays empty, sign in to Claude to see the tracker.</div></div>
     <div style="margin-top:22px"><h2>Files needed</h2><p class="note" style="margin-bottom:8px">On Instagram, not posted or scheduled elsewhere, and no file in Frame.io.</p><div id="need"></div></div></section>
   <section id="p-trials" hidden><div id="trials"></div></section>
-  <section id="p-editing" hidden><div id="editing"></div></section>
+  <section id="p-editing" hidden><div id="editing"></div>
+    <form class="add" id="add-edit"><input id="ed-t" placeholder="Video in editing" required><input id="ed-r" type="url" placeholder="Reference link (Instagram)"><button class="btn">Add video</button></form></section>
   <section id="p-shoots" hidden><div class="stack" style="gap:12px">
     <div class="pills" id="stages"></div>
     <input class="search" id="iq" type="search" placeholder="Search ideas, people, contacts" aria-label="Search ideas">
@@ -131,7 +132,7 @@ let rows=[],trials=[],ideas=[],creators=[],meta={},db=null,canWrite=false,istage
 const STG=[["idea","Ideas"],["outreach","Reaching out"],["soon","Filming soon"],["filmed","Filmed"],["editing","In editing"],["worked","What worked"],["all","All"]];
 const SLAB={idea:"Idea",outreach:"Reaching out",soon:"Filming soon",filmed:"Filmed",editing:"In editing",posted:"Posted",dropped:"Not happening"};
 const OUT={sent:["ok","Messaged"],noreply:["sched","No reply"],replied:["acc","Replied"]};
-const GORD=["Street questions","From what worked","New ideas","Stories: Israel","Stories: Los Angeles","Stories: Iran","Stories: Global","Organisations: Israel","Kindness: Israel","Kindness: Los Angeles"];
+const GORD=["Street questions","Social experiments","From what worked","New ideas","Stories: Israel","Stories: Los Angeles","Stories: Iran","Stories: Global","Organisations: Israel","Kindness: Israel","Kindness: Los Angeles"];
 const stg=i=>i.stage||(i.done?"posted":"idea"), grp=i=>i.group||"From what worked";
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -168,7 +169,7 @@ function render(){
     const list=tdays[d].slice().sort((x,y)=>(x.time||"").localeCompare(y.time||""));
     return `<tr class="day"><td colspan="3">${esc(fmtDate(d))} <span class="daycount">${list.length} trial reel${list.length===1?"":"s"}</span></td></tr>`+list.map(t=>`<tr><td class="n">${esc(t.time)}</td><td><div class="tcell">${link(safeUrl(t.url)||safeUrl(t.watch),t.thumb?`<img class="thumb" src="${esc(t.thumb)}" alt="" loading="lazy">`:`<div class="thumb">No image</div>`)}<div><div class="title">${esc(t.text)}${safeUrl(t.url)?` <a href="${esc(t.url)}" target="_blank" rel="noopener">Open</a>`:""}</div><div class="subl">${t.by?`<span class="tag plain">${esc(t.by)}</span>`:""}${t.tool?`<span>${esc(t.tool)}</span>`:""}${t.note?`<span>${esc(t.note)}</span>`:""}</div></div></div></td><td>${t.s==="posted"?`<span class="tag ok">✅ Posted</span>`:`<span class="tag sched">🗓️ Scheduled</span>`}</td></tr>`).join("");
   }).join("")):`<div class="empty">No trial reels listed yet.</div>`;
-  $("editing").innerHTML=ed.length?table("",["Video","Status","Location","Notes"],ed.map(r=>`<tr><td class="title">${esc(r.title)}</td><td><select data-edit="${r.id}" id="ed-${r.id}" ${dis()}>${["Not Filmed","Not Edited","In Editing","Ready to Post"].map(o=>`<option${o===r.edit?" selected":""}>${o}</option>`).join("")}</select></td><td>${esc(r.loc||"")}</td><td class="note">${esc(r.note||"")}</td></tr>`).join("")):`<div class="empty">Nothing in editing.</div>`;
+  $("editing").innerHTML=ed.length?table("",["Video","Status","Reference","Location","Notes"],ed.map(r=>`<tr><td class="title">${esc(r.title)}</td><td><select data-edit="${r.id}" id="ed-${r.id}" ${dis()}>${["Not Filmed","Not Edited","In Editing","Ready to Post"].map(o=>`<option${o===r.edit?" selected":""}>${o}</option>`).join("")}</select></td><td>${safeUrl(r.ref)?`<a href="${esc(r.ref)}" target="_blank" rel="noopener">Open reference</a> `:""}${canWrite?`<input type="text" inputmode="url" data-ref="${r.id}" id="rf-${r.id}" value="${esc(r.ref||"")}" placeholder="Paste a link" aria-label="Reference link" style="width:150px">`:""}</td><td>${esc(r.loc||"")}</td><td class="note">${esc(r.note||"")}</td></tr>`).join("")):`<div class="empty">Nothing in editing.</div>`;
   renderIdeas();
   const cb=(c,f,l)=>`<td class="c"><input type="checkbox" data-col="creators" data-id="${c.id}" data-f="${f}" id="c-${c.id}-${f}" ${c[f]?"checked":""} ${dis()} aria-label="${l}"></td>`;
   $("creators").innerHTML=creators.length?table("",["Creator","Video or idea","Message sent","Replied","Follow up","Done"],creators.map(c=>`<tr><td><div class="title">${esc(c.name)}</div><div class="note">${esc(c.handle||"")}</div></td><td>${esc(c.video||"")}</td>${cb(c,"sent","Message sent")}${cb(c,"replied","Replied")}${cb(c,"follow","Follow up")}${cb(c,"done","Done")}</tr>`).join("")):`<div class="empty">No creators yet. Add the first one below.</div>`;
@@ -236,11 +237,13 @@ document.addEventListener("click",e=>{
 document.addEventListener("change",e=>{
   const t=e.target; if(!db||!canWrite)return;
   if(t.dataset.edit) db.doc("videos/"+t.dataset.edit).update({edit:t.value}).catch(()=>{});
+  else if(t.dataset.ref) db.doc("videos/"+t.dataset.ref).update({ref:t.value.trim()}).catch(()=>{});
   else if(t.dataset.col) db.doc(t.dataset.col+"/"+t.dataset.id).update({[t.dataset.f]:t.checked}).catch(()=>{t.checked=!t.checked;});
 });
 function addForm(id,col,build){ $(id).addEventListener("submit",async e=>{ e.preventDefault(); if(!db)return; try{ await db.collection(col).add({...build(),at:Date.now()}); e.target.reset(); }catch(_){} }); }
 $("iq").addEventListener("input",e=>{iq=e.target.value;renderIdeas();});
 addForm("add-idea","ideas",()=>({title:$("id-t").value.trim(),how:$("id-h").value.trim(),ref:$("id-r").value.trim(),group:"New ideas",stage:"idea",out:""}));
+addForm("add-edit","videos",()=>({n:Math.max(0,...rows.map(r=>r.n||0))+1,title:$("ed-t").value.trim(),ref:$("ed-r").value.trim(),edit:"In Editing",loc:"",note:"",views:0}));
 addForm("add-creator","creators",()=>({name:$("cr-n").value.trim(),handle:$("cr-h").value.trim(),video:$("cr-v").value.trim(),sent:false,replied:false,follow:false,done:false}));
 
 (async function start(){
