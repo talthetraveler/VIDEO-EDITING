@@ -80,6 +80,8 @@ dialog input,dialog select{background:var(--bg);border:1px solid var(--line);bor
 .pills{display:flex;flex-wrap:wrap;gap:6px}
 .pill{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:5px 10px;font-size:13px;font-weight:600}
 .pill[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+a.pill{text-decoration:none;color:var(--ink)}
+.sheet a.title{color:var(--accent)}
 .pill b{font-weight:500;color:var(--muted);margin-left:5px;font-variant-numeric:tabular-nums}
 .search{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:7px 9px;width:100%;max-width:340px}
 .ibtn{border:0;background:none;padding:0;text-align:left;font-weight:600;overflow-wrap:anywhere}
@@ -103,7 +105,7 @@ footer{color:var(--muted);font-size:12.5px}
     <button class="tab" role="tab" data-tab="trials" aria-selected="false">Trial reels</button>
     <button class="tab" role="tab" data-tab="editing" aria-selected="false">In editing</button>
     <button class="tab" role="tab" data-tab="shoots" aria-selected="false">Shoot ideas</button>
-    <button class="tab" role="tab" data-tab="creators" aria-selected="false">Creators to DM</button>
+    <button class="tab" role="tab" data-tab="creators" aria-selected="false">Creators to contact</button>
   </nav>
 
   <section id="p-main"><div id="main"><div class="empty">Loading. If this stays empty, sign in to Claude to see the tracker.</div></div>
@@ -127,10 +129,10 @@ footer{color:var(--muted);font-size:12.5px}
 
 <script>
 const PLAT=[["ig","Instagram"],["tt","TikTok"],["yt","YouTube"],["x","X"]];
-let rows=[],trials=[],ideas=[],creators=[],meta={},db=null,canWrite=false,istage="idea",iq="";
+let refs={},rows=[],trials=[],ideas=[],creators=[],meta={},db=null,canWrite=false,istage="idea",iq="";
 // Shoot ideas board: every idea carries a stage, who reaches out, how to film it, a reference video and the outreach status.
-const STG=[["idea","Ideas"],["outreach","Reaching out"],["soon","Filming soon"],["filmed","Filmed"],["editing","In editing"],["worked","What worked"],["all","All"]];
-const SLAB={idea:"Idea",outreach:"Reaching out",soon:"Filming soon",filmed:"Filmed",editing:"In editing",posted:"Posted",dropped:"Not happening"};
+const STG=[["idea","Ideas"],["outreach","Reaching out"],["soon","Filming soon"],["filmed","Filmed"],["editing","In editing"],["ready","Edited, post soon"],["worked","What worked"],["refs","Reference videos"],["all","All"]];
+const SLAB={idea:"Idea",outreach:"Reaching out",soon:"Filming soon",filmed:"Filmed",editing:"In editing",ready:"Edited, post soon",posted:"Posted",dropped:"Not happening"};
 const OUT={sent:["ok","Messaged"],noreply:["sched","No reply"],replied:["acc","Replied"]};
 const GORD=["Street questions","Social experiments","From what worked","New ideas","Stories: Israel","Stories: Los Angeles","Stories: Iran","Stories: Global","Organisations: Israel","Kindness: Israel","Kindness: Los Angeles"];
 const stg=i=>i.stage||(i.done?"posted":"idea"), grp=i=>i.group||"From what worked";
@@ -172,14 +174,21 @@ function render(){
   $("editing").innerHTML=ed.length?table("",["Video","Status","Reference","Location","Notes"],ed.map(r=>`<tr><td class="title">${esc(r.title)}</td><td><select data-edit="${r.id}" id="ed-${r.id}" ${dis()}>${["Not Filmed","Not Edited","In Editing","Ready to Post"].map(o=>`<option${o===r.edit?" selected":""}>${o}</option>`).join("")}</select></td><td>${safeUrl(r.ref)?`<a href="${esc(r.ref)}" target="_blank" rel="noopener">Open reference</a> `:""}${canWrite?`<input type="text" inputmode="url" data-ref="${r.id}" id="rf-${r.id}" value="${esc(r.ref||"")}" placeholder="Paste a link" aria-label="Reference link" style="width:150px">`:""}</td><td>${esc(r.loc||"")}</td><td class="note">${esc(r.note||"")}</td></tr>`).join("")):`<div class="empty">Nothing in editing.</div>`;
   renderIdeas();
   const cb=(c,f,l)=>`<td class="c"><input type="checkbox" data-col="creators" data-id="${c.id}" data-f="${f}" id="c-${c.id}-${f}" ${c[f]?"checked":""} ${dis()} aria-label="${l}"></td>`;
-  $("creators").innerHTML=creators.length?table("",["Creator","Video or idea","Message sent","Replied","Follow up","Done"],creators.map(c=>`<tr><td><div class="title">${esc(c.name)}</div><div class="note">${esc(c.handle||"")}</div></td><td>${esc(c.video||"")}</td>${cb(c,"sent","Message sent")}${cb(c,"replied","Replied")}${cb(c,"follow","Follow up")}${cb(c,"done","Done")}</tr>`).join("")):`<div class="empty">No creators yet. Add the first one below.</div>`;
+  $("creators").innerHTML=creators.length?table("",["Creator","Video or idea","Message sent","Replied","Follow up","Done"],creators.map(c=>`<tr><td><div class="title">${esc(c.name)}</div><div class="note">${/^@[\w.]+$/.test(c.handle||"")?`<a href="https://www.instagram.com/${esc(c.handle.slice(1))}" target="_blank" rel="noopener">${esc(c.handle)}</a>`:esc(c.handle||"")}</div></td><td>${esc(c.video||"")}</td>${cb(c,"sent","Message sent")}${cb(c,"replied","Replied")}${cb(c,"follow","Follow up")}${cb(c,"done","Done")}</tr>`).join("")):`<div class="empty">No creators yet. Add the first one below.</div>`;
   document.querySelectorAll(".add").forEach(f=>f.hidden=!canWrite);
 }
 
 function renderIdeas(){
   const cnt=k=>k==="all"?ideas.length:ideas.filter(i=>stg(i)===k).length;
-  $("stages").innerHTML=STG.map(([k,l])=>`<button class="pill" data-stage="${k}" aria-pressed="${k===istage}">${l}${k==="worked"?"":`<b>${cnt(k)}</b>`}</button>`).join("");
-  $("iq").hidden=istage==="worked";
+  $("stages").innerHTML=STG.map(([k,l])=>`<button class="pill" data-stage="${k}" aria-pressed="${k===istage}">${l}${k==="worked"||k==="refs"?"":`<b>${cnt(k)}</b>`}</button>`).join("");
+  $("iq").hidden=istage==="worked"||istage==="refs";
+  if(istage==="refs"){
+    const used={}; ideas.forEach(i=>{if(i.ref)(used[i.ref]=used[i.ref]||[]).push(i.title);});
+    const rv=refs.videos||[], ra=refs.accounts||[];
+    $("ideas").innerHTML=(rv.length?`<h2>Reference videos</h2>`+table("",["#","Video","Used for"],rv.map(r=>`<tr><td class="n">${r.n}</td><td><a class="title" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.title)}</a></td><td class="note">${esc((used[r.url]||[]).join(" · "))}</td></tr>`).join("")):`<div class="empty">No reference videos yet.</div>`)
+      +(ra.length?`<h2 style="margin-top:22px">Reference accounts</h2><div class="pills">${ra.map(r=>`<a class="pill" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.name)}</a>`).join("")}</div>`:"");
+    return;
+  }
   if(istage==="worked"){
     const top=rows.filter(r=>r.views>0).sort((a,b)=>b.views-a.views).slice(0,15);
     $("ideas").innerHTML=top.length?`<p class="note" style="margin-bottom:8px">Top 15 by Instagram views. Ideas built on these are under “From what worked”.</p>`+table("",["Video","Views"],top.map(r=>`<tr><td><div class="tcell">${r.thumb?`<img class="thumb" src="${esc(r.thumb)}" alt="" loading="lazy">`:`<div class="thumb">No image</div>`}<div><div class="title">${esc(r.title)}${safeUrl(r.ig?.url)?` <a href="${esc(r.ig.url)}" target="_blank" rel="noopener">Open</a>`:""}</div>${r.note?`<div class="note">${esc(r.note)}</div>`:""}</div></div></td><td class="n">${esc(r.viewsLabel||"")}</td></tr>`).join("")):`<div class="empty">No view counts yet.</div>`;
@@ -255,6 +264,7 @@ addForm("add-creator","creators",()=>({name:$("cr-n").value.trim(),handle:$("cr-
   list("videos",v=>rows=v,(a,b)=>a.n-b.n);
   list("ideas",v=>ideas=v,(a,b)=>(a.at||0)-(b.at||0));
   list("creators",v=>creators=v,(a,b)=>(a.at||0)-(b.at||0));
+  db.doc("lists/refs").onSnapshot(s=>{refs=s.exists?s.data():{};render();},()=>{});
   db.doc("lists/trials").onSnapshot(s=>{trials=s.exists?(s.data().rows||[]):[];render();},()=>{});
   db.doc("meta/tracker").onSnapshot(s=>{meta=s.exists?s.data():{};render();},()=>{});
 })();
