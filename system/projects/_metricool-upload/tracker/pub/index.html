@@ -141,6 +141,8 @@ const isEditing=r=>r.edit!=="Ready to Post";
 const posted=r=>PLAT.filter(([k])=>r[k]?.s==="posted").length;
 const table=(cls,head,body)=>`<div class="sheetwrap"><table class="sheet ${cls}"><thead><tr>${head.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>${body}</tbody></table></div>`;
 const dis=()=>canWrite?"":"disabled";
+// A thumbnail opens the video in a new tab when there is somewhere to watch it.
+const link=(u,h)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener" data-link aria-label="Watch the video">${h}</a>`:h;
 
 function chipHtml(r,k,l){
   const p=r[k]||{s:"none"}, st=p.s||"none", url=safeUrl(p.url);
@@ -157,14 +159,14 @@ function render(){
   $("sync").textContent=meta.metricoolSync?("Metricool last checked "+meta.metricoolSync+"."):"";
   $("main").innerHTML=!rows.length?`<div class="empty">No videos yet.</div>`:table("main",["Video",...PLAT.map(p=>p[1])],main.map(r=>{
     const frame=safeUrl(r.frame);
-    return `<tr><td><div class="vcell"><span class="num">${r.n}</span>${r.thumb?`<img class="thumb" src="${esc(r.thumb)}" alt="" loading="lazy">`:`<div class="thumb">No image</div>`}
+    return `<tr><td><div class="vcell"><span class="num">${r.n}</span>${link(safeUrl(r.ig?.url)||frame,r.thumb?`<img class="thumb" src="${esc(r.thumb)}" alt="" loading="lazy">`:`<div class="thumb">No image</div>`)}
       <div><div class="title">${esc(r.title)}</div><div class="subl">${r.viewsLabel?`<span>${esc(r.viewsLabel)} views</span>`:""}${frame?`<a href="${esc(frame)}" target="_blank" rel="noopener">Frame.io</a>`:(posted(r)===4?"":`<span class="tag warn">Missing from Frame.io</span>`)}${posted(r)===4?`<span class="tag ok">Posted everywhere</span>`:""}</div>${r.note?`<div class="note">${esc(r.note)}</div>`:""}</div></div></td>${PLAT.map(([k,l])=>chipHtml(r,k,l)).join("")}</tr>`;}).join(""));
   $("need").innerHTML=need.length?table("",["#","Video","Views","Still needs"],need.map(r=>`<tr><td class="n">${r.n}</td><td>${esc(r.title)}</td><td class="n">${esc(r.viewsLabel||"")}</td><td>${esc(PLAT.filter(([k])=>(r[k]?.s||"none")==="none").map(p=>p[1]).join(", "))}</td></tr>`).join("")):`<div class="empty">Nothing is missing.</div>`;
   // Trial reels: one block per day, thumbnail + time + status, so a full day (5) reads at a glance.
   const tdays={}; trials.forEach(t=>(tdays[t.date]=tdays[t.date]||[]).push(t));
   $("trials").innerHTML=trials.length?table("trl",["Time","Trial reel","Status"],Object.keys(tdays).sort().map(d=>{
     const list=tdays[d].slice().sort((x,y)=>(x.time||"").localeCompare(y.time||""));
-    return `<tr class="day"><td colspan="3">${esc(fmtDate(d))} <span class="daycount">${list.length} trial reel${list.length===1?"":"s"}</span></td></tr>`+list.map(t=>`<tr><td class="n">${esc(t.time)}</td><td><div class="tcell">${t.thumb?`<img class="thumb" src="${esc(t.thumb)}" alt="" loading="lazy">`:`<div class="thumb">No image</div>`}<div><div class="title">${esc(t.text)}${safeUrl(t.url)?` <a href="${esc(t.url)}" target="_blank" rel="noopener">Open</a>`:""}</div><div class="subl">${t.by?`<span class="tag plain">${esc(t.by)}</span>`:""}${t.tool?`<span>${esc(t.tool)}</span>`:""}${t.note?`<span>${esc(t.note)}</span>`:""}</div></div></div></td><td>${t.s==="posted"?`<span class="tag ok">✅ Posted</span>`:`<span class="tag sched">🗓️ Scheduled</span>`}</td></tr>`).join("");
+    return `<tr class="day"><td colspan="3">${esc(fmtDate(d))} <span class="daycount">${list.length} trial reel${list.length===1?"":"s"}</span></td></tr>`+list.map(t=>`<tr><td class="n">${esc(t.time)}</td><td><div class="tcell">${link(safeUrl(t.url)||safeUrl(t.watch),t.thumb?`<img class="thumb" src="${esc(t.thumb)}" alt="" loading="lazy">`:`<div class="thumb">No image</div>`)}<div><div class="title">${esc(t.text)}${safeUrl(t.url)?` <a href="${esc(t.url)}" target="_blank" rel="noopener">Open</a>`:""}</div><div class="subl">${t.by?`<span class="tag plain">${esc(t.by)}</span>`:""}${t.tool?`<span>${esc(t.tool)}</span>`:""}${t.note?`<span>${esc(t.note)}</span>`:""}</div></div></div></td><td>${t.s==="posted"?`<span class="tag ok">✅ Posted</span>`:`<span class="tag sched">🗓️ Scheduled</span>`}</td></tr>`).join("");
   }).join("")):`<div class="empty">No trial reels listed yet.</div>`;
   $("editing").innerHTML=ed.length?table("",["Video","Status","Location","Notes"],ed.map(r=>`<tr><td class="title">${esc(r.title)}</td><td><select data-edit="${r.id}" id="ed-${r.id}" ${dis()}>${["Not Filmed","Not Edited","In Editing","Ready to Post"].map(o=>`<option${o===r.edit?" selected":""}>${o}</option>`).join("")}</select></td><td>${esc(r.loc||"")}</td><td class="note">${esc(r.note||"")}</td></tr>`).join("")):`<div class="empty">Nothing in editing.</div>`;
   renderIdeas();
