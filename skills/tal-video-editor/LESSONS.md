@@ -3615,3 +3615,19 @@ Three finished kindness posts (Chris, Miami) handed over to title, count the rej
 - Two renders must not share scratch still names (`s_01.jpg`); the contact sheets came out half empty.
 - For Montana: "FOR MONTANA TO REVIEW", named `ROUGH DRAFT Vn - <title> (collab with Chris).mp4`. A corrected
   version is uploaded beside the old one; name the old file in chat for him to remove (never move or delete).
+
+## 151. "These cuts are never wrong" - the trim check (2026-10-11)
+One review of the Day 2 cut found three bad joins of mine: a dead half-second before "You down to hang out?",
+a stray frame before the picture cut at 0:58, and a false start ("I know it's-") left in front of the real line.
+Tal: *"You just gotta make sure that these cuts are never wrong ... you should always remember, never do that."*
+- **Flash frame = a trim edge within 0.5s of a picture cut.** My trim ended at 76.30; the shot changed at 76.50;
+  0.2s of the old shot flashed. `title-captions.mjs` now lists the picture cuts (`<src>.scenes.json`), stops the
+  render on any such trim and prints where to move it. Remove the WHOLE shot the unwanted line sits in.
+- **A false start hides in a gap.** Between "...a little bit better, bro" and "I know it's not a lot, bro" one
+  model had "I know it's" at 84.6 and the other at 86.9 - both were right, he says it twice. Where two models
+  time the same words seconds apart, there are two takes: cut the first.
+- **A long speech run with a short caption under it has words missing.** The run was 86.9-92.6, my captions ended
+  at 89.1; "I feel good" was in there. Compare each caption line's span with the speech run it sits in.
+- **Three frames at every join** (-0.07s, +0.03s, +0.2s) on one sheet before sending. Always.
+- Also from this review: the handle goes at the TOP, with the line under it -
+  `@thesocialaccords` / `Use social media to spread love` (`"stamp": {"lines": [...], "x": "center"}`).

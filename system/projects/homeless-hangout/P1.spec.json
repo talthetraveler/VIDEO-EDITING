@@ -51,15 +51,23 @@
  "cuts": [
   [
    5.75,
-   9.38
+   9.86
   ],
   [
    38.68,
    51.2
   ],
   [
-   74.75,
-   76.3
+   73.3,
+   76.49
+  ],
+  [
+   83.86,
+   86.86
+  ],
+  [
+   89.0,
+   90.58
   ],
   [
    95.9,
@@ -81,8 +89,22 @@
   }
  ],
  "stamp": {
-  "text": "@thesocialaccords",
-  "size": 50,
-  "y": 0.128
+  "lines": [
+   [
+    [
+     "@thesocialaccords",
+     "white"
+    ]
+   ],
+   [
+    [
+     "Use social media to spread love",
+     "yellow"
+    ]
+   ]
+  ],
+  "size": 44,
+  "y": 0.085,
+  "x": "center"
  }
 }

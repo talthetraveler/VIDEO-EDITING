@@ -1,6 +1,6 @@
 {
  "src": "src/PT.mp4",
- "out": "out/DAY 1 - BRANDON v2.mp4",
+ "out": "out/DAY 1 - BRANDON v3.mp4",
  "words": "PT.words.json",
  "hdr": true,
  "title": [
@@ -79,8 +79,22 @@
   }
  ],
  "stamp": {
-  "text": "@thesocialaccords",
-  "size": 50,
-  "y": 0.128
+  "lines": [
+   [
+    [
+     "@thesocialaccords",
+     "white"
+    ]
+   ],
+   [
+    [
+     "Use social media to spread love",
+     "yellow"
+    ]
+   ]
+  ],
+  "size": 44,
+  "y": 0.085,
+  "x": "center"
  }
 }

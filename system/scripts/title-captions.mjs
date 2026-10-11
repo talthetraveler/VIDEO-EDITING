@@ -10,8 +10,8 @@
 //         titleStart (s - e.g. the moment he says yes), labels: [{a, b, text, color}], labelY, capY }
 // Caption WORDING is the hand-written script; TIMING is forced alignment of
 // that script to this file's audio. --preview renders 720x1280 for the chat.
-import { execFileSync } from "node:child_process";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { execFileSync, spawnSync } from "node:child_process";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, dirname, join, resolve } from "node:path";
 
 const ROOT = "C:/Users/taldo/Downloads/videos to edit/system";
@@ -95,6 +95,34 @@ const shift = (t) => t - CUTS.reduce((s, [a, b]) => s + Math.max(0, Math.min(t, 
 const lost = (c) => CUTS.reduce((s, [a, b]) => s + Math.max(0, Math.min(c.b, b) - Math.max(c.a, a)), 0) > (c.b - c.a) / 2;
 caps = caps.filter((c) => !lost(c)).map((c) => ({ ...c, a: shift(c.a), b: shift(c.b) }));
 for (const l of S.labels) { l.a = shift(l.a); l.b = shift(l.b); }
+// CUT CHECK (Tal, 2026-10-11: "you just gotta make sure that these cuts are never wrong"). A trim that ends a
+// few frames before a picture cut, or starts a few frames after one, leaves a FLASH of a shot on screen. That is
+// an error and the render stops. A trim edge inside speech is printed so it is a decision, never an accident.
+if (CUTS.length) {
+  const scenesFile = here(S.src) + ".scenes.json";
+  let scenes;
+  if (existsSync(scenesFile)) scenes = JSON.parse(readFileSync(scenesFile, "utf8"));
+  else {
+    const r = spawnSync("ffmpeg", ["-v", "info", "-i", here(S.src), "-vf", "scale=180:-2,select='gt(scene,0.25)',showinfo", "-f", "null", "-"],
+      { encoding: "utf8", maxBuffer: 1 << 28 });
+    scenes = [...r.stderr.matchAll(/pts_time:([0-9.]+)/g)].map((m) => +m[1]);
+    writeFileSync(scenesFile, JSON.stringify(scenes), "utf8");
+  }
+  const SLIVER = 0.5, FRAME = 1 / 30;
+  let bad = 0;
+  for (const [a, b] of CUTS) {
+    for (const sc of scenes) {
+      if (sc > b + FRAME && sc - b < SLIVER) { bad++; console.log(`  CUT ERROR  trim ${a}-${b} ends ${(sc - b).toFixed(2)}s before the picture cut at ${sc}: a flash of the old shot. End it at ${(sc - 0.01).toFixed(2)}.`); }
+      if (sc < a - FRAME && a - sc < SLIVER) { bad++; console.log(`  CUT ERROR  trim ${a}-${b} starts ${(a - sc).toFixed(2)}s after the picture cut at ${sc}: a flash of the new shot. Start it at ${(sc - 0.01).toFixed(2)}.`); }
+    }
+    for (const edge of [a, b]) {
+      const run = runs.find(([x, y]) => edge > x + 0.06 && edge < y - 0.06);
+      if (run) console.log(`  cut note   trim edge ${edge} is inside speech ${run[0]}-${run[1]} - confirm on purpose`);
+    }
+  }
+  if (bad && !process.argv.includes("--force")) { console.error(`  ${bad} cut error(s) - not rendering`); process.exit(3); }
+  if (!bad) console.log(`  cut check  ${CUTS.length} trim(s): no flash frames`);
+}
 const cutExpr = CUTS.map(([a, b]) => `between(t\,${a}\,${b})`).join("+");
 
 const capMeta = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-caption.py"), join(TMP, "cap"), "940", String(S.capSize || 74)],
@@ -103,7 +131,7 @@ const capMeta = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-ca
 // ------------------------------------------------------------ title + labels
 const labelIn = [{ lines: S.title, size: S.titleSize || 66, maxw: 900, file: join(TMP, "title.png") },
   ...S.labels.map((l, i) => ({ lines: [[[l.text, l.color || "white"]]], size: l.size || 92, maxw: 900, file: join(TMP, `label${i}.png`) })),
-  ...(S.stamp ? [{ lines: [[[S.stamp.text, "white"]]], size: S.stamp.size || 40, maxw: 700, file: join(TMP, "stamp.png") }] : [])];
+  ...(S.stamp ? [{ lines: S.stamp.lines || [[[S.stamp.text, "white"]]], size: S.stamp.size || 40, maxw: 900, file: join(TMP, "stamp.png") }] : [])];
 const labMeta = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-label.py")],
   { input: JSON.stringify(labelIn), encoding: "utf8" }).trim());
 
@@ -129,7 +157,7 @@ add(labMeta[0].file, Math.round(H * (S.titleY || 0.2)), (S.titleStart || S.title
 S.labels.forEach((l, i) => add(labMeta[i + 1].file, Math.round(H * (l.y || S.labelY || 0.36)), [l.a, l.b]));
 caps.forEach((c, i) => capMeta[i] && add(capMeta[i].file, Math.round(H * (c.y || S.capY || 0.66)), [c.a, c.b]));
 // "stamp": {text, size, y} - the account handle, bold, top right, for the whole video
-if (S.stamp) add(labMeta[labMeta.length - 1].file, Math.round(H * (S.stamp.y || 0.135)), null, "W-w-36");
+if (S.stamp) add(labMeta[labMeta.length - 1].file, Math.round(H * (S.stamp.y || 0.135)), null, S.stamp.x === "center" ? "(W-w)/2" : "W-w-36");
 parts.push(`${prev}${PREVIEW ? "scale=720:1280" : "null"}[v]`);
 const graph = join(TMP, "graph.txt");
 writeFileSync(graph, parts.join(";\n"), "utf8");
