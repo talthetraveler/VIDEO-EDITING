@@ -45,7 +45,7 @@ for (const ws of byLine.values()) {
       const len = base + (extra-- > 0 ? 1 : 0), g = run.slice(i, i + len);
       i += len;
       caps.push({ a: g[0].a, b: g[g.length - 1].b, n: g.length, comma: /,$/.test(g[g.length - 1].w),
-        text: g.map((x) => x.w).join(" ").replace(/[.,]+$/, "").replace(/,/g, "").toUpperCase() });
+        text: g.map((x) => x.w).join(" ").replace(/[.,]+$/, "").replace(/,/g, "") });
     }
     run = [];
   };
@@ -63,6 +63,9 @@ for (const ws of byLine.values()) {
     }
   }
 }
+// "captionCase": "sentence" keeps the words as written, first letter capital (Tal's 2026-10-11 screenshot)
+const SENT = S.captionCase === "sentence";
+for (const c of caps) if (!SENT) c.text = c.text.toUpperCase();
 caps.sort((x, y) => x.a - y.a);
 caps.forEach((c, i) => {
   const next = caps[i + 1] ? caps[i + 1].a : Infinity;
@@ -80,7 +83,7 @@ console.log(`  ${caps.length} captions, ${off.length} over silence`);
 for (const c of off) console.log(`     !! ${c.a.toFixed(2)}-${c.b.toFixed(2)} ${c.text}`);
 
 const capMeta = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-caption.py"), join(TMP, "cap"), "940", String(S.capSize || 74)],
-  { input: JSON.stringify(caps.map((c) => ({ text: c.text, style: S.captionStyle || "street", emphasis: true }))), encoding: "utf8" }).trim());
+  { input: JSON.stringify(caps.map((c) => ({ text: c.text, style: S.captionStyle || "street", emphasis: true, keepcase: SENT }))), encoding: "utf8" }).trim());
 
 // ------------------------------------------------------------ title + labels
 const labelIn = [{ lines: S.title, size: S.titleSize || 66, maxw: 900, file: join(TMP, "title.png") },

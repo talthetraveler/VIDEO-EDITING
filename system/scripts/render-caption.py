@@ -348,7 +348,9 @@ def main():
             # sentence case preserved - see the "nas" block above
             res.append(render_nas(it["text"], it.get("key"), i))
             continue
-        text = (it["text"] if isinstance(it, dict) else str(it)).upper()
+        text = (it["text"] if isinstance(it, dict) else str(it))
+        if not (isinstance(it, dict) and it.get("keepcase")):      # homeless-hangout 2026-10-11: sentence-case look
+            text = text.upper()
         words = [w for w in re.split(r"\s+", text.strip()) if w]
         # White by default. Gold only on explicit request — see the header.
         key = it.get("key_index") if isinstance(it, dict) else None

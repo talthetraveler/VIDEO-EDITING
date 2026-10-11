@@ -6,27 +6,13 @@
  "title": [
   [
    [
-    "DAY 1",
-    "yellow"
-   ],
-   [
-    "OF ASKING",
+    "Day 1 Of Asking Homeless",
     "white"
    ]
   ],
   [
    [
-    "HOMELESS PEOPLE",
-    "white"
-   ]
-  ],
-  [
-   [
-    "TO",
-    "white"
-   ],
-   [
-    "HANG OUT",
+    "People To Hang Out",
     "yellow"
    ]
   ]
@@ -35,23 +21,38 @@
   {
    "a": 0,
    "b": 2.0,
-   "text": "REJECTION 1",
-   "color": "red"
+   "text": "Rejections: 0",
+   "color": "white",
+   "size": 46
   },
   {
    "a": 2.0,
    "b": 4.333,
-   "text": "REJECTION 2",
-   "color": "red"
+   "text": "Rejections: 1",
+   "color": "white",
+   "size": 46
+  },
+  {
+   "a": 4.333,
+   "b": 10.7,
+   "text": "Rejections: 2",
+   "color": "white",
+   "size": 46
   },
   {
    "a": 10.7,
    "b": 12.5,
-   "text": "YES!",
+   "text": "He said yes!",
    "color": "green",
-   "size": 120
+   "size": 50
   }
  ],
  "titleEnd": 12.5,
- "audio": "aud/P1_mix.wav"
+ "audio": "aud/P1_mix.wav",
+ "titleSize": 62,
+ "titleY": 0.185,
+ "captionCase": "sentence",
+ "capSize": 68,
+ "capY": 0.56,
+ "labelY": 0.62
 }

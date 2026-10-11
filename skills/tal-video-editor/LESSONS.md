@@ -3583,3 +3583,13 @@ Three finished kindness posts (Chris, Miami) handed over to title, count the rej
   `@seconds` anchors at confident points. The caption stays off the screen where the words are a guess.
 - Tools: `system/scripts/align-script.py`, `title-captions.mjs`, `render-label.py`. Specs in `system/projects/homeless-hangout/`.
 - ffmpeg 8 dropped `-filter_complex_script`; it is `-/filter_complex <file>` now.
+- **Ask for the music-free export first.** Tal sent the same cut without music (frame-identical, lag 0.0s by
+  cross-correlation); transcribing THAT recovered most of the lines three passes on the mixed file could not
+  ("you don't meet pure souls, bro", "you actually take the time to take someone out to eat"). Voice = the clean
+  file, music = the bed from the first file, ducked under it. On a creator's post with music, ask for this before
+  spending an hour on separation.
+- **The look he picked for this series (two screenshots, 2026-10-11):** title in Title Case on two lines, white
+  then yellow ("Day 1 Of Asking Homeless / People To Hang Out"), on the opening only; captions NOT all-caps, as
+  written, mid-frame (`"captionCase": "sentence"`, `capY` 0.56), one yellow word kept ("I like how you did the
+  yellow"); and the counter is a small white **"Rejections: 0"** under the caption that becomes 1 when the first
+  person passes and 2 when the second does - not a big red "REJECTION 1" label.
