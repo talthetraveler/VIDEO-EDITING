@@ -3649,3 +3649,14 @@ did, delete all that, everything should be on Frame."*
   "you". `title-captions.mjs` now uses `lib/caption-lines.mjs` (break BEFORE a function word, keep a short
   clause whole) and merges a caption under 0.5s into the next. `--dry` prints every caption with its on-screen
   time: read that list before spending a render.
+- **Delivered 2026-10-12:** Day 1 (Brandon), Day 2 (library), Day 3 (Rodney) as `ROUGH DRAFT - Day N Of Asking
+  Homeless People To Hang Out - <who> (collab with Chris).mp4` in FOR MONTANA TO REVIEW. Tal: *"Delete any V2s,
+  V3s ... just the actual videos"* - one file per video on Frame.io, no version suffix left behind; superseded
+  drafts THIS session uploaded are deleted by exact name (`projects/homeless-hangout/tidy-frame.mjs`), other
+  sessions' files in the same folder are not touched.
+- The Frame.io login (`token-state.json`) and `certs/*.pem` are untracked; a folder cleanup wiped both at
+  midnight and three uploads failed "Not authenticated". Check `frameio-login-spa.mjs --status` BEFORE a long
+  export, and never include `projects/_frameio/` in a space cleanup. The cert is regenerable
+  (`openssl req -x509 ... -subj /CN=localhost`); the sign-in needs Tal.
+- To rebuild any of the three: the specs and hand-written scripts are in `projects/homeless-hangout/`; the media
+  was deleted from the laptop on purpose (sources: his `Edits_*` exports; the music-free Day 1 is in `EZEL/`).
