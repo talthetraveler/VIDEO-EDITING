@@ -158,6 +158,25 @@ S.labels.forEach((l, i) => add(labMeta[i + 1].file, Math.round(H * (l.y || S.lab
 caps.forEach((c, i) => capMeta[i] && add(capMeta[i].file, Math.round(H * (c.y || S.capY || 0.66)), [c.a, c.b]));
 // "stamp": {text, size, y} - the account handle, bold, top right, for the whole video
 if (S.stamp) add(labMeta[labMeta.length - 1].file, Math.round(H * (S.stamp.y || 0.135)), null, S.stamp.x === "center" ? "(W-w)/2" : "W-w-36");
+// "endCard": the handle on an END SCREEN, not over the film (Tal, 2026-10-11: "take out the social accords tag,
+// just at the end screen put it"). {lines, size, seconds} appends a black card; {from} (source seconds) puts it on
+// an end card the video already has.
+let END_PAD = 0;
+if (S.endCard) {
+  const card = JSON.parse(execFileSync("python", [join(ROOT, "scripts/render-label.py")],
+    { input: JSON.stringify([{ lines: S.endCard.lines, size: S.endCard.size || 64, maxw: 940, file: join(TMP, "endcard.png") }]), encoding: "utf8" }).trim())[0];
+  const srcDur = +execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", here(S.src)], { encoding: "utf8" }).trim();
+  const outDur = shift(srcDur);
+  let from = outDur;
+  if (S.endCard.from != null) from = shift(S.endCard.from);
+  else {
+    END_PAD = S.endCard.seconds || 2;
+    parts.push(`${prev}tpad=stop_mode=add:stop_duration=${END_PAD}:color=black[tp]`);
+    prev = "[tp]";
+  }
+  add(card.file, Math.round(H * (S.endCard.y || 0.47)), [from, outDur + END_PAD + 1]);
+}
+if (END_PAD) parts.push(CUTS.length ? `[a]apad=pad_dur=${END_PAD}[a2]` : `[${AIN}:a]apad=pad_dur=${END_PAD}[a2]`);
 parts.push(`${prev}${PREVIEW ? "scale=720:1280" : "null"}[v]`);
 const graph = join(TMP, "graph.txt");
 writeFileSync(graph, parts.join(";\n"), "utf8");
@@ -165,9 +184,9 @@ writeFileSync(graph, parts.join(";\n"), "utf8");
 // "audio": a replacement soundtrack (e.g. voice lifted, music ducked under speech) - same length as src
 const AUD = S.audio ? ["-i", here(S.audio)] : [];
 execFileSync("ffmpeg", ["-v", "error", "-stats", "-y", "-i", here(S.src), ...AUD, "-/filter_complex", graph,
-  "-map", "[v]", "-map", CUTS.length ? "[a]" : `${AIN}:a`, "-c:v", "libx264", "-preset", PREVIEW ? "veryfast" : "medium",
+  "-map", "[v]", "-map", END_PAD ? "[a2]" : CUTS.length ? "[a]" : `${AIN}:a`, "-c:v", "libx264", "-preset", PREVIEW ? "veryfast" : "medium",
   "-crf", PREVIEW ? "27" : "18", "-pix_fmt", "yuv420p", "-color_range", "tv", "-colorspace", "bt709",
-  "-color_primaries", "bt709", "-color_trc", "bt709", ...(PREVIEW ? ["-c:a", "aac", "-b:a", "128k"] : (S.audio || CUTS.length) ? ["-c:a", "aac", "-b:a", "192k"] : ["-c:a", "copy"]),
+  "-color_primaries", "bt709", "-color_trc", "bt709", ...(PREVIEW ? ["-c:a", "aac", "-b:a", "128k"] : (S.audio || CUTS.length || END_PAD) ? ["-c:a", "aac", "-b:a", "192k"] : ["-c:a", "copy"]),
   "-movflags", "+faststart", ...(S.t ? ["-t", String(S.t)] : []), OUT], { stdio: "inherit" });
 writeFileSync(OUT.replace(/\.mp4$/, ".captions.json"), JSON.stringify(caps, null, 1), "utf8");
 console.log(`  -> ${OUT}`);

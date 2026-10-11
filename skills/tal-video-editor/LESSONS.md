@@ -3631,3 +3631,9 @@ Tal: *"You just gotta make sure that these cuts are never wrong ... you should a
 - **Three frames at every join** (-0.07s, +0.03s, +0.2s) on one sheet before sending. Always.
 - Also from this review: the handle goes at the TOP, with the line under it -
   `@thesocialaccords` / `Use social media to spread love` (`"stamp": {"lines": [...], "x": "center"}`).
+- **Correction the same evening:** *"take out the social accords tag, just at the end screen put it."* The handle
+  and "Use social media to spread love" go on an END SCREEN only (`"endCard"`: a 2s black card, or `"from"` to
+  sit on an end card the video already has). Nothing branded over the film itself.
+- **A number two models disagree on ("23 years" / "three years") cannot be settled by re-running them** (six
+  passes split 2-2 and four heard nothing; the aligner's scores were noise). Caption the bigger model's reading
+  and tell him which line to check - do not leave an audible answer uncaptioned.

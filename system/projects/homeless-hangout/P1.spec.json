@@ -88,7 +88,7 @@
    "text": "No"
   }
  ],
- "stamp": {
+ "endCard": {
   "lines": [
    [
     [
@@ -103,8 +103,7 @@
     ]
    ]
   ],
-  "size": 44,
-  "y": 0.085,
-  "x": "center"
+  "size": 64,
+  "seconds": 2
  }
 }
