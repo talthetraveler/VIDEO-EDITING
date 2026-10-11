@@ -86,8 +86,9 @@ for (const c of off) console.log(`     !! ${c.a.toFixed(2)}-${c.b.toFixed(2)} ${
 // that part"). Captions and labels inside a cut are dropped; everything after it moves earlier.
 const CUTS = (S.cuts || []).slice().sort((x, y) => x[0] - y[0]);
 const shift = (t) => t - CUTS.reduce((s, [a, b]) => s + Math.max(0, Math.min(t, b) - a), 0);
-const inCut = (t) => CUTS.some(([a, b]) => t > a && t < b);
-caps = caps.filter((c) => !inCut(c.a + 0.05)).map((c) => ({ ...c, a: shift(c.a), b: shift(c.b) }));
+// a caption goes when a cut removes more than half of it
+const lost = (c) => CUTS.reduce((s, [a, b]) => s + Math.max(0, Math.min(c.b, b) - Math.max(c.a, a)), 0) > (c.b - c.a) / 2;
+caps = caps.filter((c) => !lost(c)).map((c) => ({ ...c, a: shift(c.a), b: shift(c.b) }));
 for (const l of S.labels) { l.a = shift(l.a); l.b = shift(l.b); }
 const cutExpr = CUTS.map(([a, b]) => `between(t\,${a}\,${b})`).join("+");
 

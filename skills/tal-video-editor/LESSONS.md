@@ -3601,3 +3601,8 @@ Three finished kindness posts (Chris, Miami) handed over to title, count the rej
 - **"You can't hear anything" = take that part out**, not leave it uncaptioned. `"cuts": [[a, b]]` in the spec
   (source seconds) removes picture and sound and moves captions/labels; snap each trim to a picture cut when one
   is within a second (scene filter), otherwise it is a jump cut inside the shot.
+- **A question with no answer is cut** ("What kind of food do you like?" - silence). Tal: *"You don't need to ask
+  that question. There's no response."* He named this as part of how he edits: on every cut, check each question
+  for an audible reply in the next 2-3 seconds; none means the question and its silence go. A trim that starts
+  inside a caption's first word left that caption on screen and 40ms of the word in the audio - start the trim
+  at the END of the previous word, and the tool now drops any caption more than half removed.
