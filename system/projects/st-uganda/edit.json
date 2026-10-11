@@ -2,6 +2,13 @@
  "beats": [
   [
    "local-3b0b7fa81fabadc7",
+   138.04,
+   143.65,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
    1.72,
    3.3,
    0.5,
@@ -23,8 +30,15 @@
   ],
   [
    "local-3b0b7fa81fabadc7",
-   11.15,
-   15.85,
+   24.58,
+   25.9,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   41,
+   46.15,
    0.5,
    ""
   ],
@@ -51,8 +65,15 @@
   ],
   [
    "local-3b0b7fa81fabadc7",
-   138.04,
-   143.65,
+   95.36,
+   98.45,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   99.9,
+   105.98,
    0.5,
    ""
   ],
@@ -67,13 +88,6 @@
    "local-3b0b7fa81fabadc7",
    174.28,
    183.25,
-   0.5,
-   ""
-  ],
-  [
-   "local-3b0b7fa81fabadc7",
-   187.96,
-   198.55,
    0.5,
    ""
   ],
@@ -163,8 +177,20 @@
   {
    "match": "So you Christian, you Muslim,",
    "to": "So you're Christian, you're Muslim,"
+  },
+  {
+   "match": "Yoganda",
+   "to": "Uganda"
+  },
+  {
+   "match": "yoganda",
+   "to": "Uganda"
+  },
+  {
+   "match": "community i had to find",
+   "to": "community. I had to find"
   }
  ],
- "out": "ST_UGANDA_V3.mp4",
+ "out": "ST_UGANDA_V5.mp4",
  "denoise": 15
 }
