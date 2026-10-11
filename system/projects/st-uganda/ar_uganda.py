@@ -210,3 +210,11 @@ save('st-uganda', {
  "do people fight": "يتقاتل الناس",
  "everything in one locale": "كل شيء في مكان واحد",
 })
+save('st-uganda', {
+ "against you": "ضدكما",
+ "you'll find there": "تجد هناك",
+ "is a mosque": "مسجدًا",
+ "which means why": "فلماذا",
+ "do people fight": "يتقاتل الناس",
+ "everything in one locale": "كل شيء في مكان واحد",
+})
