@@ -3660,3 +3660,13 @@ did, delete all that, everything should be on Frame."*
   (`openssl req -x509 ... -subj /CN=localhost`); the sign-in needs Tal.
 - To rebuild any of the three: the specs and hand-written scripts are in `projects/homeless-hangout/`; the media
   was deleted from the laptop on purpose (sources: his `Edits_*` exports; the music-free Day 1 is in `EZEL/`).
+
+## 153. A silent cut gets music from his Drive, without being asked (2026-10-12)
+
+Tal, on GIVING WATER - ALL SHOTS (SILENT): *"why not add music when it's silent like that, you have my Drive for music."*
+
+- **What went wrong:** the wordless water compilation (ek-water-all) was delivered with a digitally silent track. His note on it in round 1 was "good ... approved (music)", and the music never went on.
+- **Rule:** a cut with no dialogue is not finished without a music bed. Pull ONE track from Drive > Sound Design > Background Music (memory: sound-design-drive-library), lay it under the whole cut, fade in ~0.35 s and out over the last second, about -14 LUFS, and name the track in the reply. Picture stream is copied, never re-encoded.
+- **How it was fetched:** the Drive files download without the connector through `https://drive.usercontent.google.com/download?id=<fileId>&export=download&confirm=t` (curl), so nothing large passes through the chat.
+- **Track choice:** most of that library is instrumentals of commercial songs (ABBA, Kanye West, The Weeknd). The Classical folder ("...-PM-Music.mp3": Flower Duet, Blue Danube, Vivaldi Winter) is the safer pick for something that must not be muted. Pick the 21 s that builds to the track's loudest phrase and ends where it drops (measure RMS per second), so the payoff shot lands on the swell.
+- **Still true:** talking videos keep his rule "you don't need to add music"; this is for silent/wordless cuts only.
