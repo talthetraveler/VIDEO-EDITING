@@ -3672,3 +3672,16 @@ Tal, on GIVING WATER - ALL SHOTS (SILENT): *"why not add music when it's silent 
 - **The Drive connector does not list every folder** (Chill, Emotional, Hard and Jordy never came back from `search_files`). The full list is at `https://drive.google.com/embeddedfolderview?id=<folderId>`; Emotional is `1_KnFZiZd1l5xLTUK-mNK1UMVIXYEDcm0`.
 - **Still true:** talking videos keep his rule "you don't need to add music"; this is for silent/wordless cuts only.
 - **What he picked (2026-10-12):** Tom Odell "Another Love" (slowed), from the Emotional folder, after the classical pick, two "emotional" picks and *"need something more sad"*. For a wordless kindness cut, start with the SADDEST tracks in that folder, three options. He also expected the series title on it without asking: *"where with the title ... Day 1 of giving water to workers"* - white line then yellow line, opening 4 s only, same look as LESSONS 150 (`title-captions.mjs`, empty words file, spec in `system/projects/ek-water-all/title.spec.json`).
+
+## 154. Flowers Erez cut V16: what he asked for on V15 (2026-10-12)
+
+Tal, on the rebuilt V15 (voice note, English + Hebrew): the cuts are good; then seven changes.
+- **Never use a shot where the subject looks at the camera.** *"You really see her looking at the camera, maybe five times ... don't use any shots of her looking at the camera, maybe just her staring at her husband."* V15 had three (the 5c20d22d laugh, the ba76663e gasp, the start of the 810aafa2 turn). Check gaze on full-quality crops of every reaction beat before it goes in; a contact sheet at 150 px does not show it.
+- **Open on BOTH of them**, then zoom onto Tal jumping, slow-mo "a bit" (0.6), then his walk-in in slow-mo.
+- **The "shh" gets a zoom AND slow-mo.** The 4-frame zoom ramp into it read as *"some weird blur"*: hard-cut to the tight framing there instead of ramping.
+- **Show the pass.** A 2.3x crop on the giver hides the handoff; frame both people (1.6x) so the bouquet is seen changing hands.
+- **A sniff shot** (her face into the flowers), and **her looking at her husband in slow-mo, then the kiss with a heart and a cute emoji** (`sticker` list on the beat).
+- **A shot with strangers in black crossing the frame is cut** (13 s in V15).
+- **Title is the series title with the day and the place**: "Day 3 Of Giving Flowers / In Tel Aviv" + an Israel flag. Windows has no flag emoji, so the flag is a drawn PNG (`flag.png`) placed by the builder's `sticker: {image}` next to line 2 (x 0.754, y 0.207 at titleY 0.185, size 68), on the beats under the title only; `titleEnd` must equal the end of the last beat that carries it.
+- **End card:** "@thesocialaccords" / "Use social media to spread kindness", 2.5 s (`endCard` in `title-captions.mjs`). Its audio comes out longer than the picture; trim with `-c copy -t <video length>`.
+- A deleted render can be rebuilt from the spec: `fetch-hq.mjs <slug>` re-pulls only the spans used (185 MB here), and a missing music bed needs a placeholder wav in `system/projects/_music/`.
