@@ -1,0 +1,66 @@
+
+      @font-face { font-family: "Montserrat"; src: url("fonts/Montserrat.ttf"); font-weight: 100 900; }
+      @font-face { font-family: "Inter"; src: url("fonts/Inter.ttf"); font-weight: 100 900; }
+      @font-face { font-family: "EB Garamond"; src: url("fonts/EBGaramond.ttf"); font-weight: 400 800; }
+      @font-face { font-family: "EB Garamond"; src: url("fonts/EBGaramond-Italic.ttf"); font-weight: 400 800; font-style: italic; }
+      @font-face { font-family: "Cormorant Garamond"; src: url("fonts/CormorantGaramond.ttf"); font-weight: 300 700; }
+      @font-face { font-family: "Cormorant Garamond"; src: url("fonts/CormorantGaramond-Italic.ttf"); font-weight: 300 700; font-style: italic; }
+      @font-face { font-family: "Source Serif 4"; src: url("fonts/SourceSerif4.ttf"); font-weight: 200 900; }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0d0b0a; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background-color: #0d0b0a;
+        background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 60px 60px; }
+      .clip { position: absolute; inset: 0; }
+      video.footage { width: 1080px; height: 1920px; object-fit: cover; }
+      video.footage.win { inset: auto; left: 40px; top: 400px; width: 1000px; height: 1040px; border-radius: 34px; box-shadow: 0 24px 70px rgba(0,0,0,.6); }
+      .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 48%, rgba(0,0,0,.38) 100%); }
+      .dim, .solid { position: absolute; inset: 0; }
+      .dim { background: rgba(8,6,5,.55); }
+      .credit { position: absolute; left: 44px; top: 178px; font: 600 20px/1 "Inter", sans-serif; letter-spacing: .14em; color: #fff; background: rgba(0,0,0,.6); padding: 8px 10px; border-radius: 5px; }
+      .credit.lowc { top: 340px; left: 56px; }
+      .leak { position: absolute; inset: -10%; opacity: 0; mix-blend-mode: screen; background: radial-gradient(60% 80% at 30% 50%, rgba(255,214,90,.95) 0%, rgba(250,150,40,.7) 38%, rgba(250,120,30,0) 72%); }
+      .capwrap { position: absolute; left: 0; top: 65%; width: 1080px; height: 0; display: flex; justify-content: center; align-items: center; }
+      .capwrap .cap { position: static; transform: none; }
+      .qw { display: inline-block; opacity: 0; }
+      .cap-tal-quote .hl-gold { text-shadow: none; }
+      .glow { position: absolute; left: 0; right: 0; bottom: 0; height: 62%; background: linear-gradient(0deg, rgba(250,204,39,.82) 0%, rgba(250,150,40,.42) 38%, rgba(250,150,40,0) 100%); mix-blend-mode: screen; }
+      .arrow { position: absolute; left: 0; top: 0; filter: drop-shadow(0 3px 6px rgba(0,0,0,.5)); }
+      .big-black { top: 47%; font: 800 270px/1 "Montserrat", sans-serif; color: #0b0b0d; letter-spacing: -0.03em; }
+      .nameblocks { position: absolute; left: 0; top: 54%; width: 1080px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+      .nb { display: block; background: #FACC27; padding: 14px 58px 34px; transform-origin: 0 50%; }
+      .nb i { display: block; font: 600 150px/1 "Cormorant Garamond", Georgia, serif; font-style: normal; color: #0b0b0d; }
+      .yearbox { position: absolute; left: 0; top: 520px; width: 1080px; display: flex; justify-content: center; gap: 14px; }
+      .ycol { display: block; width: 190px; height: 250px; overflow: hidden; background: #0b0b0d; border-radius: 22px; box-shadow: 0 14px 40px rgba(0,0,0,.5); }
+      .ystrip { display: block; }
+      .ystrip b { display: block; height: 250px; font: 800 210px/250px "Montserrat", sans-serif; color: #FACC27; text-align: center; }
+      .vf { position: absolute; left: 150px; top: 470px; width: 780px; height: 700px; }
+      .vf .c { position: absolute; width: 90px; height: 90px; border: 7px solid #fff; }
+      .vf .tl { left: 0; top: 0; border-right: 0; border-bottom: 0; } .vf .tr { right: 0; top: 0; border-left: 0; border-bottom: 0; }
+      .vf .bl { left: 0; bottom: 0; border-right: 0; border-top: 0; } .vf .br { right: 0; bottom: 0; border-left: 0; border-top: 0; }
+      .vfname { position: absolute; left: 0; top: 1490px; width: 1080px; text-align: center; font: italic 500 104px/1 "EB Garamond", Georgia, serif; color: #fff; }
+      .vfsub { position: absolute; left: 0; top: 1616px; width: 1080px; text-align: center; font: 700 30px/1 "Montserrat", sans-serif; letter-spacing: .2em; color: #FACC27; }
+      .page { position: absolute; left: 0; top: 0; width: 1080px; padding: 230px 54px 0; color: #17171a; }
+      .meta { display: flex; justify-content: space-between; font: 600 21px/1.4 "Inter", sans-serif; letter-spacing: .16em; color: #4a4a50; padding-bottom: 20px; border-bottom: 2px solid #d9d8dc; }
+      .headline { font: 500 76px/1.14 "EB Garamond", Georgia, serif; padding: 30px 0 34px; border-bottom: 2px solid #d9d8dc; margin-bottom: 36px; }
+      .greek { height: 15px; border-radius: 4px; background: #cfced3; margin-bottom: 26px; }
+      .gap { height: 22px; }
+      .pola { position: absolute; width: 600px; padding: 26px 26px 92px; background: #fff; box-shadow: 0 18px 50px rgba(0,0,0,.32); }
+      .pola img { display: block; width: 548px; height: 411px; object-fit: cover; }
+    
+      /* Recovered 2026-10-12 from the session record after ai-story-daryl-davis/v10/index.html was lost; .wordmark, .strike, .e2 and .e3 base rules were rebuilt by eye. */
+      .who { position: absolute; left: 0; width: 1080px; text-align: center; font: 800 26px/1 "Montserrat", sans-serif; letter-spacing: .2em; color: #FACC27; }
+      .who span { background: rgba(8,6,5,.78); padding: 10px 16px; border-radius: 8px; }
+      .big-black { color: #0b0b0d; text-shadow: 0 0 40px rgba(250,204,39,.6); }
+      .endwrap { position: absolute; left: 0; top: 560px; width: 1080px; text-align: center; }
+      .e1 { position: relative; display: inline-block; font: 800 150px/0.98 "Inter", sans-serif; letter-spacing: -0.06em; color: #fff; }
+      .strike { position: absolute; left: -3%; top: 50%; width: 106%; height: 16px; margin-top: -8px; background: #FACC27; border-radius: 8px; transform-origin: 0 50%; }
+      .e2 { display: block; margin-top: 30px; font: 900 132px/1 "Montserrat", sans-serif; letter-spacing: -0.04em; color: #FACC27; }
+      .e3 { margin-top: 70px; font-family: "Montserrat", sans-serif; font-weight: 700; }
+      .wordmark { position: absolute; left: 0; top: 46px; width: 1080px; text-align: center; line-height: 1.3; text-shadow: 0 2px 14px rgba(0,0,0,.75); }
+      .wordmark span { display: block; font-family: "Montserrat", sans-serif; text-indent: 0.6em; }
+      .wordmark .w1 { font-weight: 400; font-size: 17px; letter-spacing: 0.62em; color: #fff; }
+      .wordmark .w2 { font-weight: 300; font-size: 29px; letter-spacing: 0.58em; color: #fff; }
+      .wordmark .w3 { font-weight: 700; font-size: 31px; letter-spacing: 0.46em; color: #E9C98F; }
+      .footage.bandbg { filter: blur(28px) brightness(0.42); }
+      .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 48%, rgba(0,0,0,.38) 100%); }

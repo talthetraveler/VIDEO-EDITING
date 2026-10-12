@@ -313,7 +313,7 @@ h.append(f'      <audio id="vo" data-start="0" data-duration="{VOICE_END:.2f}" d
 for i, (t, n, d) in enumerate(sfx):
     h.append(f'      <audio id="fx{i}" data-start="{t:.2f}" data-duration="{d}" data-track-index="{11 + i}" src="sfx/{n}.wav"></audio>')
 
-css = re.search(r"<style>(.*?)</style>", open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../ai-story-daryl-davis/v10/index.html"), encoding="utf-8").read(), re.S).group(1)
+css = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "base.css"), encoding="utf-8").read()          # was read out of ai-story-daryl-davis/v10/index.html, lost 2026-10-12
 css += MAP_CSS
 css += '''
       .capwrap .cap { white-space: nowrap; }

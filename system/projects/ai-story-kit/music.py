@@ -17,6 +17,6 @@ def vd(f):
     return float(re.search(r"mean_volume: ([-\d.]+)", e).group(1))
 
 
-ref = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../ai-story-rami-bassam/v4/sfx/music_lo.wav")
+ref = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../ai-story-elie-wiesel/v1/sfx/music_lo.wav")          # was rami-bassam/v4, lost 2026-10-12
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", "sfx/music_src.mp3", "-af", f"volume={vd(ref) - vd('sfx/music_src.mp3'):.1f}dB,afade=t=in:d=0.4", "-ar", "44100", "-ac", "2", "sfx/music_lo.wav"], check=True)
 print("music ok", round(vd("sfx/music_lo.wav"), 1), "dB mean")
