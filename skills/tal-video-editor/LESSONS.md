@@ -3714,3 +3714,11 @@ Stories: Levi Marhabi (Yemen's last Jews), Yahya ben Yosef (buried by his Muslim
 - **Tal: "we need to take off, on the top right, the logo, the Social Accords."** The five "Day 31x Of Giving Haircuts To The Homeless" videos (collab with Ezel) carried "@thesocialaccords" top right for their whole length. `ezel-v2/build.py` now skips it when the spec says `"handle": ""`; the logo-free specs are `<name>.nologo.json`. On a collab creator's video the handle is not burned in unless he asks; this narrows LESSONS 150 ("@thesocialaccords in bold, top right, the whole video"), which was for the Chris series.
 - **A blur is only added when he asks, and only on the person he names.** He asked for the passer-by who hands over the note in the flowers video: one fixed box over her face (`crop` + `gblur` + `overlay ... enable='between(t,a,b)'`), switched on from the frame she enters to the frame before the cut. Find both cuts with the scene filter so the box never lands on the next shot, then look at every tenth of a second.
 - **His own re-cut is the master.** He re-edited flowers V16 himself and uploaded it (`IMG_1870.mov`); the blur went onto his file, not onto my render.
+
+## 158. The Social Accords logo goes top right on EVERY video (2026-10-14)
+
+Tal: *"to every single video you ever do you need to add a logo on the top right, of the Social Accords."*
+- Last step on every full-quality render: `python system/scripts/stamp-logo.py <in.mp4> <out.mp4>`. It draws "@thesocialaccords" (bold white, dark outline) top right for the whole video, or uses `assets/brand/social-accords-logo.png` once he sends a real logo file.
+- This is the standing rule. The day before he had the handle taken OFF the five Ezel haircut videos (LESSONS 157); ask him whether those are the exception or whether that note was misheard, and do not remove a logo again without checking.
+- Story reels carry the THE / SOCIAL / ACCORDS wordmark top centre; it still has to move to the top right (`.wordmark` in `ai-story-kit/base.css`). Not done yet.
+- Not yet applied to: the three Uganda hook variations (waiting on the baby blur), the water compilation, the three scheduled story reels (Ella, Yahya, Levi).
