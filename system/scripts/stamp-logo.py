@@ -32,7 +32,7 @@ else:
     im = Image.new("RGBA", (box[2] - box[0] + 2 * s, box[3] - box[1] + 2 * s), (0, 0, 0, 0))
     ImageDraw.Draw(im).text((s - box[0], s - box[1]), text, font=ft, fill=(255, 255, 255, 255), stroke_width=s, stroke_fill=(0, 0, 0, 235))
 im.save(png)
-x, y = W - im.width - round(44 * k), round(150 * k)      # top right, under the app's own top bar
+x, y = W - im.width - round(44 * k), round(96 * k)       # top right; 96 keeps it above a title that starts near y=170
 a, b = arg("--from", "0"), arg("--to")
 en = f":enable='gte(t,{a})" + (f"*lt(t,{b})'" if b else "'")
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-i", png, "-filter_complex", f"[0:v][1:v]overlay={x}:{y}{en}[v]", "-map", "[v]", "-map", "0:a?",

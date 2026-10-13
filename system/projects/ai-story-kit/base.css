@@ -57,8 +57,8 @@
       .strike { position: absolute; left: -3%; top: 50%; width: 106%; height: 16px; margin-top: -8px; background: #FACC27; border-radius: 8px; transform-origin: 0 50%; }
       .e2 { display: block; margin-top: 30px; font: 900 132px/1 "Montserrat", sans-serif; letter-spacing: -0.04em; color: #FACC27; }
       .e3 { margin-top: 70px; font-family: "Montserrat", sans-serif; font-weight: 700; }
-      .wordmark { position: absolute; left: 0; top: 46px; width: 1080px; text-align: center; line-height: 1.3; text-shadow: 0 2px 14px rgba(0,0,0,.75); }
-      .wordmark span { display: block; font-family: "Montserrat", sans-serif; text-indent: 0.6em; }
+      .wordmark { position: absolute; right: 44px; top: 70px; text-align: right; line-height: 1.3; text-shadow: 0 2px 14px rgba(0,0,0,.75); }          /* top RIGHT: Tal 2026-10-14, the logo goes top right on every video */
+      .wordmark span { display: block; font-family: "Montserrat", sans-serif; }
       .wordmark .w1 { font-weight: 400; font-size: 17px; letter-spacing: 0.62em; color: #fff; }
       .wordmark .w2 { font-weight: 300; font-size: 29px; letter-spacing: 0.58em; color: #fff; }
       .wordmark .w3 { font-weight: 700; font-size: 31px; letter-spacing: 0.46em; color: #E9C98F; }
