@@ -1,0 +1,112 @@
+{
+ "name": "kyle",
+ "out": "KYLE_DAY311_REVIEW_v6_NOLOGO.mp4",
+ "dialogueLufs": -17,
+ "shots": [
+  {
+   "id": "spineA",
+   "src": "C:/Users/taldo/Downloads/EZEL/39e7c694700240b3aa2d86aba69e43b7.mov",
+   "in": 0.0,
+   "out": 34.1,
+   "fadeIn": 0,
+   "gainSetDb": 13.6
+  },
+  {
+   "id": "spineB",
+   "src": "C:/Users/taldo/Downloads/EZEL/39e7c694700240b3aa2d86aba69e43b7.mov",
+   "in": 38.9,
+   "out": 67.54,
+   "gainSetDb": 13.6
+  },
+  {
+   "id": "spineC",
+   "src": "C:/Users/taldo/Downloads/EZEL/39e7c694700240b3aa2d86aba69e43b7.mov",
+   "in": 70.77,
+   "out": 86.85,
+   "gainSetDb": 13.6,
+   "fadeIn": 0.05,
+   "fadeOut": 0
+  },
+  {
+   "id": "wash1",
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/IMG_0205.MOV",
+   "in": 16.62,
+   "out": 21.2533,
+   "hdr": true,
+   "asrc": "C:/Users/taldo/Downloads/EZEL/39e7c694700240b3aa2d86aba69e43b7.mov",
+   "ain": 86.85,
+   "gainSetDb": 13.6,
+   "fadeIn": 0,
+   "fadeOut": 0
+  },
+  {
+   "id": "wash2",
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/IMG_0205.MOV",
+   "in": 25.98,
+   "out": 31.8133,
+   "hdr": true,
+   "asrc": "C:/Users/taldo/Downloads/EZEL/39e7c694700240b3aa2d86aba69e43b7.mov",
+   "ain": 91.4833,
+   "gainSetDb": 13.6,
+   "fadeIn": 0,
+   "fadeOut": 0
+  },
+  {
+   "id": "spineE",
+   "src": "C:/Users/taldo/Downloads/EZEL/39e7c694700240b3aa2d86aba69e43b7.mov",
+   "in": 97.3167,
+   "out": 108.3,
+   "gainSetDb": 13.6,
+   "fadeIn": 0,
+   "fadeOut": 0.3
+  }
+ ],
+ "title": {
+  "lines": [
+   "DAY 311",
+   "OF GIVING HAIRCUTS",
+   "TO THE HOMELESS"
+  ],
+  "sizes": [
+   128,
+   58,
+   58
+  ],
+  "colors": [
+   [
+    255,
+    222,
+    60
+   ],
+   [
+    255,
+    255,
+    255
+   ],
+   [
+    255,
+    255,
+    255
+   ]
+  ],
+  "y": 300,
+  "t0": 0.15,
+  "t1": 3.8
+ },
+ "captionStyle": {
+  "size": 54,
+  "y": 1541,
+  "weight": 800
+ },
+ "erase": [
+  {
+   "x": 176,
+   "y": 1504,
+   "w": 728,
+   "h": 78,
+   "t0": 89.317,
+   "t1": 91.017
+  }
+ ],
+ "handle": ""
+}

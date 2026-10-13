@@ -1,0 +1,195 @@
+{
+ "name": "alex",
+ "out": "ALEX_DAY310_REVIEW_v6_NOLOGO.mp4",
+ "dialogueLufs": -17,
+ "shots": [
+  {
+   "id": "intro",
+   "src": "C:/Users/taldo/Downloads/EZEL/copy_D0AA1AF4-A5D9-4935-B36D-ED03BB890725.mov",
+   "in": 0.8,
+   "out": 48.22,
+   "asrc": "C:/Users/taldo/Downloads/videos to edit/system/projects/ezel-v2/alex/dfn/out/intro.wav",
+   "ain": 0.03
+  },
+  {
+   "id": "dream",
+   "src": "C:/Users/taldo/Downloads/EZEL/IMG_0188.mov",
+   "in": 2.92,
+   "out": 19.85,
+   "asrc": "C:/Users/taldo/Downloads/videos to edit/system/projects/ezel-v2/alex/dfn/out/dream.wav",
+   "ain": 0.03
+  },
+  {
+   "id": "cut1",
+   "src": "C:/Users/taldo/Downloads/EZEL/IMG_0191.mov",
+   "in": 1.2,
+   "out": 3.7,
+   "mute": true,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "focus": [
+    0.5,
+    0.35
+   ]
+  },
+  {
+   "id": "cut2",
+   "src": "C:/Users/taldo/Downloads/EZEL/IMG_0196.mov",
+   "in": 2.8,
+   "out": 5.4,
+   "mute": true,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "focus": [
+    0.5,
+    0.35
+   ]
+  },
+  {
+   "id": "cut3",
+   "src": "C:/Users/taldo/Downloads/EZEL/IMG_0199.mov",
+   "in": 6.4,
+   "out": 9.0,
+   "mute": true,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "focus": [
+    0.5,
+    0.4
+   ]
+  },
+  {
+   "id": "cut4",
+   "src": "C:/Users/taldo/Downloads/EZEL/copy_D0AA1AF4-A5D9-4935-B36D-ED03BB890725.mov",
+   "in": 89.0,
+   "out": 91.78,
+   "mute": true
+  },
+  {
+   "id": "reveal",
+   "src": "C:/Users/taldo/Downloads/EZEL/copy_D0AA1AF4-A5D9-4935-B36D-ED03BB890725.mov",
+   "in": 91.78,
+   "out": 100.8,
+   "fadeIn": 0.08,
+   "asrc": "C:/Users/taldo/Downloads/videos to edit/system/projects/ezel-v2/alex/dfn/out/reveal.wav",
+   "ain": 0.03
+  },
+  {
+   "id": "smile",
+   "src": "C:/Users/taldo/Downloads/EZEL/IMG_0203.mov",
+   "in": 1.0,
+   "out": 7.1,
+   "asrc": "C:/Users/taldo/Downloads/videos to edit/system/projects/ezel-v2/alex/dfn/out/smile.wav",
+   "ain": 0.03
+  },
+  {
+   "id": "before",
+   "src": "C:/Users/taldo/Downloads/EZEL/copy_D0AA1AF4-A5D9-4935-B36D-ED03BB890725.mov",
+   "in": 1.9,
+   "out": 3.7,
+   "mute": true,
+   "zoom": [
+    1.1,
+    1.16
+   ],
+   "focus": [
+    0.62,
+    0.32
+   ]
+  },
+  {
+   "id": "after",
+   "src": "C:/Users/taldo/Downloads/EZEL/IMG_0204.mov",
+   "in": 0.15,
+   "out": 3.7,
+   "mute": true,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "focus": [
+    0.5,
+    0.35
+   ]
+  }
+ ],
+ "title": {
+  "lines": [
+   "DAY 310",
+   "OF GIVING HAIRCUTS",
+   "TO THE HOMELESS"
+  ],
+  "sizes": [
+   128,
+   58,
+   58
+  ],
+  "colors": [
+   [
+    255,
+    222,
+    60
+   ],
+   [
+    255,
+    255,
+    255
+   ],
+   [
+    255,
+    255,
+    255
+   ]
+  ],
+  "y": 300,
+  "t0": 0.15,
+  "t1": 4.4
+ },
+ "labels": [
+  {
+   "text": "Before",
+   "t0": 89.97,
+   "t1": 91.77,
+   "y": 1380
+  },
+  {
+   "text": "After",
+   "t0": 91.77,
+   "t1": 95.33,
+   "y": 1380
+  }
+ ],
+ "music": [
+  {
+   "t0": 63.917,
+   "t1": 75.283,
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/Tom Odell - Another Love (Official Video).mp3",
+   "ss": 0.55,
+   "gainDb": 7,
+   "fadeIn": 0.5,
+   "fadeOut": 1.6,
+   "filter": "anull"
+  },
+  {
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/Tom Odell - Another Love (Official Video).mp3",
+   "ss": 9.3,
+   "t0": 89.567,
+   "t1": 95.3333,
+   "gainDb": 7,
+   "fadeIn": 0.5,
+   "fadeOut": 1.5,
+   "filter": "anull"
+  }
+ ],
+ "captionStyle": {
+  "size": 66,
+  "y": 1400
+ },
+ "handle": ""
+}

@@ -1,0 +1,51 @@
+{
+ "name": "old",
+ "out": "OLDER_MAN_DAY314_NOLOGO.mp4",
+ "dialogueLufs": -17,
+ "shots": [
+  {
+   "id": "all",
+   "src": "C:/Users/taldo/Downloads/EZEL/v24044gl0000da6uf5fog65r9r20ghs0.mp4",
+   "in": 0.0,
+   "out": 135.4,
+   "gainSetDb": 5,
+   "fadeIn": 0,
+   "fadeOut": 0.25
+  }
+ ],
+ "title": {
+  "lines": [
+   "DAY 314",
+   "OF GIVING HAIRCUTS",
+   "TO THE HOMELESS"
+  ],
+  "sizes": [
+   120,
+   56,
+   56
+  ],
+  "colors": [
+   [
+    255,
+    222,
+    60
+   ],
+   [
+    255,
+    255,
+    255
+   ],
+   [
+    255,
+    255,
+    255
+   ]
+  ],
+  "y": 1150,
+  "t0": 0.15,
+  "t1": 3.6
+ },
+ "preset": "veryfast",
+ "crf": 19,
+ "handle": ""
+}

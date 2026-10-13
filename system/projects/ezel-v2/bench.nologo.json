@@ -1,0 +1,178 @@
+{
+ "name": "bench",
+ "out": "BENCH_DAY312_REVIEW_v5_NOLOGO.mp4",
+ "dialogueLufs": -17,
+ "shots": [
+  {
+   "id": "before",
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/IMG_9893.MOV",
+   "in": 0.25,
+   "out": 3.45,
+   "hdr": true,
+   "mute": true
+  },
+  {
+   "id": "cut1",
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/IMG_9903.MOV",
+   "in": 0.2,
+   "out": 2.4,
+   "hdr": true,
+   "speed": 0.8,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "focus": [
+    0.5,
+    0.35
+   ]
+  },
+  {
+   "id": "cut2",
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/IMG_9904.MOV",
+   "in": 1.0,
+   "out": 3.2,
+   "hdr": true,
+   "speed": 0.8,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "focus": [
+    0.45,
+    0.35
+   ]
+  },
+  {
+   "id": "cut3",
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/IMG_9905.MOV",
+   "in": 1.0,
+   "out": 3.2,
+   "hdr": true,
+   "speed": 0.8,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "focus": [
+    0.5,
+    0.35
+   ]
+  },
+  {
+   "id": "react",
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/IMG_0206.MOV",
+   "in": 0.85,
+   "out": 23.4,
+   "hdr": true,
+   "fadeIn": 0.15,
+   "asrc": "C:/Users/taldo/Downloads/videos to edit/system/projects/ezel-v2/bench/dfn/out/react.wav",
+   "ain": 0.03
+  },
+  {
+   "id": "b4",
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/IMG_9893.MOV",
+   "in": 4.4,
+   "out": 5.85,
+   "hdr": true,
+   "mute": true,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "focus": [
+    0.5,
+    0.3
+   ]
+  },
+  {
+   "id": "after",
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/IMG_9905.MOV",
+   "in": 4.4,
+   "out": 7.1,
+   "hdr": true,
+   "speed": 0.8,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "focus": [
+    0.5,
+    0.35
+   ]
+  }
+ ],
+ "title": {
+  "lines": [
+   "DAY 312",
+   "OF GIVING HAIRCUTS",
+   "TO THE HOMELESS"
+  ],
+  "sizes": [
+   124,
+   58,
+   58
+  ],
+  "colors": [
+   [
+    255,
+    222,
+    60
+   ],
+   [
+    255,
+    255,
+    255
+   ],
+   [
+    255,
+    255,
+    255
+   ]
+  ],
+  "y": 1150,
+  "t0": 0.15,
+  "t1": 3.1
+ },
+ "labels": [
+  {
+   "text": "Before",
+   "t0": 33.9333,
+   "t1": 35.3667,
+   "y": 1380
+  },
+  {
+   "text": "After",
+   "t0": 35.3667,
+   "t1": 38.7333,
+   "y": 1380
+  }
+ ],
+ "music": [
+  {
+   "t0": 0.0,
+   "t1": 12.0,
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/Tom Odell - Another Love (Official Video).mp3",
+   "ss": 0.55,
+   "gainDb": 7,
+   "fadeIn": 0.5,
+   "fadeOut": 1.6,
+   "filter": "anull"
+  },
+  {
+   "src": "C:/Users/taldo/Downloads/EZEL/EZEL/Tom Odell - Another Love (Official Video).mp3",
+   "ss": 9.3,
+   "t0": 33.533,
+   "t1": 38.7333,
+   "gainDb": 7,
+   "fadeIn": 0.5,
+   "fadeOut": 1.5,
+   "filter": "anull"
+  }
+ ],
+ "captionStyle": {
+  "size": 66,
+  "y": 1400
+ },
+ "handle": ""
+}
