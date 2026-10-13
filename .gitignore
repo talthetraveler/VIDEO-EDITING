@@ -152,3 +152,6 @@ system/projects/ib-comp-debug/
 # ShortSync posting key + posting state - NEVER push (public repo)
 system/projects/_publish/
 system/projects/*/posting.json
+
+# files that hold real keys for Tal only (never pushed)
+*.local.md
