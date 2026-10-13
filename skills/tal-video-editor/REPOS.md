@@ -705,3 +705,18 @@ LOCAL_OUTPUT_DIR="<scratch folder>" PYTHONUTF8=1 python main.py "<file or YouTub
   centre crop.
 - It writes the clips, a cached `.srt` and the downloaded source into `LOCAL_OUTPUT_DIR`: point that at a scratch folder
   and delete it after ([[nothing-kept-local]]).
+
+## ORB-HD/deface — face blurring (installed 2026-10-14)
+
+Tal, on blurring the baby in the Uganda couple video: *"https://github.com/ORB-HD/deface, this has a skill for [it]."*
+
+- **Installed:** `pip install deface` (1.5.0, MIT). Command `deface <video> --keep-audio`, or the detector alone in Python.
+- **What it does:** finds every face in every frame (CenterFace) and covers it with a blurred ellipse, a box, a mosaic or a picture.
+- **What it cannot do: choose WHO.** It blurs every face it finds, so run as it is it would blur the people the video is about. For "blur only this person", use its detector and keep one face:
+  ```python
+  from deface.centerface import CenterFace
+  cf = CenterFace(backend="auto")
+  dets, _ = cf(cv2.resize(frame, None, fx=2, fy=2), threshold=0.2)   # x1, y1, x2, y2, score (halve the coordinates)
+  ```
+- **Measured on his footage (1024x576 glasses clips, baby's face about 50 px):** it found the baby in 4 of 4 test frames at 2x upscale, with scores from 0.27 to 0.79, so keep the threshold at 0.2. It also returns tiny background faces; drop anything under about 25 px.
+- A detector drops frames on a baby (profile, pacifier, motion blur). Bridge the gaps with tracking or hand-set positions and check enlarged stills every 0.25 s. One missed frame defeats the blur.

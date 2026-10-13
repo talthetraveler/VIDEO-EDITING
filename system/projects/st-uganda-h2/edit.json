@@ -1,0 +1,222 @@
+{
+ "beats": [
+  [
+   "local-9a2267308e037d97",
+   33.2,
+   36.65,
+   0.5,
+   ""
+  ],
+  [
+   "local-9a2267308e037d97",
+   37.75,
+   40.3,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   1.72,
+   3.3,
+   0.5,
+   ""
+  ],
+  [
+   "local-9a2267308e037d97",
+   13.54,
+   15.6,
+   0.5,
+   ""
+  ],
+  [
+   "local-9a2267308e037d97",
+   18.44,
+   21.9,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   24.58,
+   25.9,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   41,
+   46.15,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   60.2,
+   68.25,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   71.33,
+   76,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   83.27,
+   95.35,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   95.36,
+   98.45,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   99.9,
+   105.98,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   138.82,
+   143.65,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   168.77,
+   171.3,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   174.28,
+   183.25,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   199.64,
+   208.45,
+   0.5,
+   ""
+  ],
+  [
+   "local-9a2267308e037d97",
+   32.17,
+   41.45,
+   0.5,
+   ""
+  ],
+  [
+   "local-c11a7f7e68b16b1d",
+   0.26,
+   4.8,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   229.63,
+   233.05,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   233.54,
+   252.5,
+   0.5,
+   ""
+  ],
+  [
+   "local-3b0b7fa81fabadc7",
+   274.12,
+   282.6,
+   0.5,
+   ""
+  ]
+ ],
+ "titleY": 260,
+ "titleHold": 4,
+ "capY": 0.69,
+ "capSize": 74,
+ "titleSize": 56,
+ "autoFrame": false,
+ "grade": "light",
+ "captionStyle": "street",
+ "captionMaxWords": 4,
+ "snap": false,
+ "captionKeys": [
+  "from Uganda",
+  "a couple",
+  "in Israel",
+  "fell in love",
+  "kill us",
+  "my family",
+  "hated me",
+  "Exactly",
+  "their truth",
+  "so much hate",
+  "there is peace",
+  "safe in Israel",
+  "Muslim",
+  "Christian",
+  "is love",
+  "live in peace",
+  "deserves freedom",
+  "shalom and salam"
+ ],
+ "captionFix": [
+  {
+   "match": "Rezibian",
+   "to": "lesbian"
+  },
+  {
+   "match": "But he could enough,",
+   "to": "But good enough,"
+  },
+  {
+   "match": "he could enough",
+   "to": "good enough"
+  },
+  {
+   "match": "And so you Muslim?",
+   "to": "And so you're Muslim?"
+  },
+  {
+   "match": "So you Christian, you Muslim,",
+   "to": "So you're Christian, you're Muslim,"
+  },
+  {
+   "match": "Yoganda",
+   "to": "Uganda"
+  },
+  {
+   "match": "yoganda",
+   "to": "Uganda"
+  },
+  {
+   "match": "community i had to find",
+   "to": "community. I had to find"
+  },
+  {
+   "match": "one local,",
+   "to": "one locale,"
+  }
+ ],
+ "out": "ST_UGANDA_H2.mp4",
+ "denoise": 15,
+ "_brief": "Tal 2026-10-14: 'blur the little kid's face ... three variations with different hook'. Hook: Muslim and Christian, partners together. Body = st-uganda V7 with its old opening question back in its place. Sources are the blurred copies in st-uganda/blur/."
+}
