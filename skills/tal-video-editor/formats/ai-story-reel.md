@@ -284,6 +284,339 @@ TNG is the fastest thing here (69-85 shots a minute, a new picture every 2
 words). Venture is the slowest (20-31) and has the most designed graphics.
 Comma sits in the middle and is the most repeatable.
 
+### The article highlight (DeployTLV), how it is done — BUILT AND TESTED
+
+Tal, 2026-10-05, watching the Waze reel: *"look how they did all the
+highlighting ... they found the article and they did a screenshot of it ... you
+see how it highlighted it?"*
+
+It is **not a screenshot.** Read frame by frame: the article is re-typeset as a
+clean page so it is sharp at any size.
+
+- Off-white page. Top row: publication name in small spaced caps on the left,
+  the date on the right, a thin rule under it.
+- Headline in a serif, then a rule, then standfirst, byline and body in a sans.
+- **The highlight is a soft red bar that wipes left to right behind the key
+  words in about 0.35s, landing on the spoken word** ("$1 Billion-Plus" as the
+  voice says "a billion dollars").
+- A second mark for the biggest fact: a **hand-drawn red ring** that draws
+  itself around the number (Haaretz card, 40.8s).
+- The page drifts slowly upward the whole time; it never sits still.
+- The caption is italic serif in a white band between two thin black rules, at
+  about 60-70% height, and **the same red highlight wipes the key words in the
+  caption too.** The band stays put across cuts, including over footage.
+- Other Deploy pieces: photo cards with the person's name in italic beneath;
+  rounded video windows floating over a blurred copy of the same clip; thin
+  white corner brackets on a face. The cartoon cars are footage they found
+  (it looks like Waze's own old promo animation; not confirmed), not something
+  they animated.
+
+**Working build:** `system/projects/ai-story-fx-test/index.html` (HyperFrames,
+7s, passes `hyperframes check`, rendered and looked at). The highlight is a
+`background-size` tween from 0% to 100% on a span; the ring is an SVG path with
+a `stroke-dashoffset` tween; both are placed at the word's time from the
+voice's word timings. Copy that file as the starting block.
+
+**For a real video** the headline, publication and date must be the real
+article's, checked against the source, and the body is either the real opening
+lines or left out. The test card's body is grey bars on purpose.
+
+**Word timings for a generated voice:** `hyperframes transcribe` reports
+`whisper_unavailable` on this machine. Use Groq directly
+(`whisper-large-v3-turbo`, `timestamp_granularities[]=word`); it returned
+clean timings for the Kokoro voice.
+
+### The five caption styles — BUILT (Tal: "copy the caption style of the Jewish reports, and all of them")
+
+Ready to use: `system/projects/ai-story-kit/captions.css` with the fonts beside
+it in `fonts/` (all open licence, from github.com/google/fonts). Proof next to
+the references: `ai-story-kit/caption-compare.jpg` (theirs on top, ours under).
+
+| class | account | what it is, at 1080x1920 |
+|---|---|---|
+| `cap-jbr` | Jewish Business Report | white Source Serif 4, weight 560, 90px, sentence case, soft dark shadow, centred at 59% height, 1-2 lines |
+| `cap-comma` | The Comma Effect | red `#e8141c` block, white Montserrat 800 caps 46px, centred at 65% |
+| `cap-comma-name` | Comma name card | two stacked red blocks, white Cormorant Garamond 142px |
+| `cap-venture` | The Venture | black rounded pill, white Montserrat 600 caps 33px, at 76.5% |
+| `cap-venture-hook` | Venture hook line | white rounded pill, black Montserrat 700 caps 38px, two lines, at 75% |
+| `cap-venture-plain` | Venture long line | plain white Montserrat 500, 38px, two lines, at 51% |
+| `cap-tng` | The Numbers Game | white Inter 700, 58px, lower case, tight tracking, dead centre (49%); black on white cards |
+| `cap-deploy` + `band-deploy` + `hl` | DeployTLV | italic EB Garamond 66px in a white band between two rules, key words on a soft red highlight |
+
+The fonts are the closest open ones by eye at 480p, not confirmed matches;
+sizes and positions were measured off their frames.
+
+### OUR OWN STYLE: "TAL STORY" — the default from 2026-10-05
+
+**ELIE WIESEL FOUNDATION, THE WHOLE PAGE (8 reels measured 2026-10-07; Tal: "study Elie Wiesel, all of the videos...
+the soup video, I really, really liked it... it should just make sense. Boom, fast"). THIS IS THE HOUSE MODEL.**
+
+| Reel | Len | Cuts/min | Words/min | Opening line |
+|---|---|---|---|---|
+| DdbjUfvt5T2 soup | 63 s | 36 | 130 | "This soup is 500 years old and it's completely free." |
+| Dd1Zme0NLJD Yeonmi Park | 68 s | 31 | 164 | "This woman escaped North Korea. She's the most wanted woman in the country." |
+| Ddtg5_vN0xP Bashar and the baby | 60 s | 36 | 176 | "This Arab man found a baby abandoned on the street." |
+| Ddq9ZnAt-uo empty library | 68 s | 35 | 147 | "This secret library is holding thousands of invisible books, and it hides a dark secret." |
+| DdoYgC4NwAH ozone | 87 s | 29 | 148 | "Did you know there was only one time in history when every country agreed on something?" |
+| DeKSZLztRqk Wiesel on antisemitism | 118 s | 37 | 145 | (his own speech, archive) |
+| DT_WuiNkg_b, DQaFnNJDSEq (pinned) | 3-4 min | 18-27 | 67-107 | institutional films: not the model |
+
+- **Pace: 60-90 s, a cut every 1.7-2 s (29-37 a minute), 130-176 words a minute.** Fast, never frantic. (Obsession's
+  97 cuts a minute is a different channel; do not chase it.)
+- **Line 1 is always "This [person/thing] [one astonishing fact]."** Line 2 places it ("It all started on a rainy day on
+  the streets of Nazareth." / "Hidden inside the old city of Jerusalem is..."). No question is needed.
+- **The middle is plain chronology in short sentences, each one understandable alone**, with one human aside ("But this
+  place is so weird."). Numbers are made relatable ("That's before the United States existed, before electricity").
+- **The ending names the meaning in one sentence: "This story is beautiful because it proves that..." / "This story is
+  proof that..." / "Because sometimes, the most powerful thing you can give someone isn't money."** then "Follow the
+  Elie Wiesel Foundation for more." on a white logo card. OURS: "Follow The Social Accords for stories that unite people."
+- **"Bashar" (Ddtg5_vN0xP) is the exact template for a story with the real person on camera (Younes):** hook as BIG
+  words landing one at a time over the footage ("This / ARAB MAN / found a / Baby / ABANDONED / on the street");
+  a HOST on camera for the joining lines; the subject's own lines filmed where it happened; dark stylised
+  AI re-creations for the past (rainy street, the baby), never a fake face of the real people; both people together
+  for the reunion; captions = white sentence case, 2-3 words, THE KEY WORDS ON THE SECOND LINE IN YELLOW.
+- **Every phrase has the picture of that phrase.** If the line says Pakistan, the flag is on screen; if it says heart,
+  a heart. (Tal on Ayesha V2: "This girl is from Pakistan (Pakistan flag), switch, the heart (heart VFX) is from India
+  (flag cut).")
+
+**SOUND OF THE HOUSE MODEL (measured 2026-10-07 with demucs + numpy; the model cannot hear, so these are numbers, with a
+chance control for every SFX figure).**
+
+| Reel | Narrator pitch | Voice | Music bed | Bed under voice | Whoosh on cuts (chance) | Low hit on cuts (chance) |
+|---|---|---|---|---|---|---|
+| Soup DdbjUfvt5T2 | 226 Hz, a woman | -14.5 LUFS | -25.0 | 10.5 dB | 50% (39%) | 16% (17%) |
+| Yeonmi Park Dd1Zme0NLJD | 196 Hz, a woman | -15.1 | -21.8 | 6.7 dB | 60% (38%) | 37% (21%) |
+| Bashar Ddtg5_vN0xP | 186 Hz, a woman | -16.6 | (location sound leaks in: not readable) | n/a | 67% (49%) | 31% (20%) |
+| Obsession AboFlah DeEGDO-SH6n | 162 Hz | -15.0 | -21.5 | 6.5 dB | 66% (69%) | 17% (22%) |
+
+- **The Elie Wiesel narrator is a young woman, around 190-225 Hz, and no pause is longer than half a second.** Closest
+  AI voices to try: an ElevenLabs female narrator ("Sarah"), then compare with Brian, Kokoro and a free online voice.
+- **Music sits 6.5-10.5 dB under the voice and never stops.** Ours at -26 LUFS under a -17 LUFS voice is about 9 dB
+  under: inside their range (the soup reel's end of it).
+- **Their sound design is LIGHT.** A whoosh lands on roughly one cut in five more than chance, a low hit on about one in
+  six, and the soup reel has almost none: the music carries it. Obsession, at 97 cuts a minute, has NO measurable
+  effect on the cuts at all. **So: no click or tick on every cut.** A whoosh on a whip or a scene change, a hit on a
+  title or a number, a stamp on a date tag, and silence otherwise. (LESSONS 111's "SFX on every cut" was built for the
+  punch-layer style; it does not belong on the house model.)
+
+**REFERENCE: OBSESSION (@theobsession, 1.05M) "AboFlah" (DeEGDO-SH6n, 67 s, measured 2026-10-07). Tal: *"look at the
+Instagram page, the Obsession. Look how they do their videos"* (said after Ayesha V1 "doesn't really make sense").**
+- **Script: 194 words in 67 s (174 a minute), 19 sentences, NO interview bites, NO question after the hook.** Shape:
+  fact + twist in two sentences ("posted for four years without earning anything. Then he raised $11 million in 11
+  days.") -> "Meet X." -> straight chronology, one dated, numbered fact per sentence ("In October 2021...", "It took
+  him 28 hours.") -> today's number -> a CALLBACK ending that answers the obstacle from the start ("His father spent
+  years telling him it wasn't the right life. 50 million people disagree."). Every sentence is understandable alone:
+  a place or a thing is never named before the viewer knows why it matters.
+- **Picture: 108 cuts in 67 s = one new picture about every 0.6 s; the subject's FACE is in nearly every one.** Each
+  phrase of 2-3 words gets its own picture. Never an unexplained object.
+- **Cards:** flat RED (or white) full-screen cards with a few small words for a time jump or the punchline ("Three
+  months later / he did it again", "50 million / people disagree"); a cream name card with a red label and a photo;
+  news headlines zoomed until the number fills the screen, the number in a red box; counters ticking over footage.
+- **Captions:** tiny white sentence case, 1-3 words, dead centre of the frame (0.5), no box.
+
+**REFERENCE: JEWS OF NY "Younes + Shalev" (DeKU1HEqTxp, @jews_of_ny with @shalevb10, 97 s, measured 2026-10-07).
+Tal: *"I really liked how they... look at the script. Make it a bit similar"* and *"I don't think we should use the
+actual picture of the Jews of New York, that's their video."* SO: THE FRAMEWORK IS THE REFERENCE, THEIR FOOTAGE IS NOT
+A SOURCE. This is the model for a story where BOTH people are on camera (the two-voice story):**
+
+1. Both greet the camera together, one line (0-2 s).
+2. Each says who he is in ONE identity line: "I am an Arab Muslim who saved lives on October 7." / "I am Shalev, one
+   of the many people Younes saved." (2-12 s). No narrator anywhere.
+3. The meeting, told from BOTH sides, alternating every 3-5 s: "I saw a young guy, I was scared" / "The second I heard
+   his Arabic accent, I was terrified".
+4. The small detail that turns it (the earrings: "he wasn't a terrorist, he was one of us").
+5. The kindness, said by the one who received it ("like we were one of his kids. Water, food").
+6. The danger, told as DIALOGUE in direct quotes ("How can I help you?" / "You've got Jews inside the farm").
+7. The fear admitted ("I could barely stand, but I didn't show him"), then the line that saved them ("I'm a father,
+   I have a family, leave me alone").
+8. The other one names what it cost ("Younes risked his own life").
+9. Why they tell it + the message, split between the two ("Muslims and Jews / we can live together / humanity over
+   hatred"). 10. Thank you, and a hug. Hold the hug.
+
+Picture: 47 cuts in 97 s (29 a minute); the two stand side by side with one mic; a 1-2 s cutaway lands on the exact
+noun (earrings close-up, the room, the CCTV motorcycle, the crawl space, family photos, the rally). Punch-in on the
+speaker between sentences. Captions burned in white caps, 2-4 words, with an Arabic line under the opening and the
+closing only. Hebrew is spoken and captioned in English.
+
+**CAPTIONS AND TITLES, ELIE WIESEL FOUNDATION (three reels measured, 2026-10-06; LESSONS 119).** Caption: Inter 800,
+62 px on 1080x1920, sentence case, white with a soft shadow, no stroke, no box, dark on a light page, 2-4 words shown
+at once, centre at 0.70 of the height. Title: italic serif lead + heavy caps word (+ italic tail), in the same
+lower-centre zone, over a picture. **A title replaces the caption: never both on screen.** Built in
+`ai-story-retik-quigley/v2/build.py` (`.capx`, `HIDE`, `~phrase`).
+
+**REFERENCE: THE ELIE WIESEL FOUNDATION "Yeonmi Park" (Dd1Zme0NLJD), measured 2026-10-06. THIS IS THE CLOSEST MODEL
+FOR OUR PERSON STORIES.** Tal: *"study this style, study this script, study everything ... you should be able to do
+exactly these types of videos ... combine all my styles and make the best thing."* 68s, 186 words = **164 wpm**, 44 cuts
+(39 a minute by scene detect; more with the graphic changes), music+effects only 6 dB under the voice (loud).
+
+SCRIPT, sentence by sentence (20 sentences, average 9 words):
+1. "This woman escaped North Korea."                                  (who + the act, 5 words)
+2. "She's the most wanted woman in the country."                      (raise the stakes)
+3. "And Kim Jong-un's government is actively trying to find her ..."  (the threat, present tense)
+4. "But why?"                                                         (two-word question, host on camera)
+5. "This is Yeonmi Park."                                             (name card)
+6-7. childhood: "saw a lot of terrible things. Abandoned babies, malnourished kids, and people crying out for help."  (list of 3)
+8. "This is not a place where you can have a family or live a normal life."
+9. "So she decided to escape."                                        (the turn, host on camera)
+10. "At age 13, she and her mom took a chance and escaped through the Yalu River to China."   (age + route = MAP)
+11. "And she finally could start a new life in South Korea."          (map)
+12. what she does now. 13. the threat returns ("Now, the ... government is trying to find her and discredit her.")
+14. "But she keeps going."  15. "She's determined to share the truth with the world."
+16-19. the meaning, addressed to US: "She wants us to remember to never take freedom for granted. Because there are
+people out there risking their lives ... to know what it feels like to be free."   20. follow card.
+Present tense for now, past for the back-story. No quote from the subject at all: the HOST carries it.
+
+PICTURE, in order: subject close-up + two-weight title ("This WOMAN") -> three one-word place cards (ESCAPED / NORTH /
+KOREA, each on its own shot) -> **a stylised "wanted" portrait: the subject restyled against a line-up wall, then the same
+framing in a field** (AI image edit of her photo) with "Wanted WOMAN" -> host: "But why?" -> name on a white page with
+the footage in a framed inset ("This is YEONMI PARK", huge bold) -> host -> three one-word cards over archive ("A LOT OF /
+TERRIBLE / THINGS") -> **black-and-white photo COLLAGE on paper** (cut-out leader, buildings, children, red bar over the
+eyes), items added as the list is spoken, tiny caption under -> archive street footage with small captions -> host ->
+old photos (her at 13, with her mother) -> **animated MAP**: dotted red route drawn across a river, labels, then a
+satellite map zooming onto South Korea -> her on stage -> host -> leader footage with words stacking up line by line
+("is trying to / find her / and discredit / her") -> her portraits with two-weight titles ("She wants us to REMEMBER",
+"never take FREEDOM for GRANTED") -> host for the last lines -> logo card.
+
+WHAT WE HAVE / WHAT IS NEW:
+- have: two-weight titles, one-word cards, framed inset, name card, paper cut-out collage (Paperima), small captions,
+  punch-ins, sound on cuts, music.
+- NEW to build: (a) an **animated map** with a drawn route (SVG path with stroke-dashoffset over a map image; free map
+  tiles/Natural Earth, or a generated map still); (b) **words stacking line by line** over footage; (c) the **restyled
+  portrait** (needs an image-to-image model; our 4 GB card can do SD img2img at low res, quality unproven); (d) the HOST.
+- The host is about 40% of the running time and says the connective lines ("But why?", "So she decided to escape.",
+  the whole ending). Without Tal on camera we keep those as voice-over on pictures.
+
+**REFERENCE: THE ELIE WIESEL FOUNDATION "500-year-old soup" (DdbjUfvt5T2), measured 2026-10-06.**
+Tal: *"Study this reference and make sure you can do the exact same thing."* File:
+`assets/references/ai-story-reels/low2/DdbjUfvt5T2.mp4`; sheet + transcript in
+`assets/analysis/ai-story-reels/batch2/`. 63s, 136 words = **130 wpm** (slow and clear),
+~45 cuts (43 a minute), a HOST talking to her phone camera for about a third of it.
+
+Script (12 sentences): object hook with a number and a twist ("This soup is 500 years old
+and it's completely free.") -> where ("Hidden inside the Old City of Jerusalem is a tiny
+kitchen called ...") -> the date, then THREE comparisons ("before the United States
+existed, before electricity, before cars") -> the daily routine with numbers (6 a.m., 50
+kilos of rice) -> who it is for ("no matter their religion, nationality, or background")
+-> what it survived, as a list of three (empires, wars, pandemics) -> the turn ("But
+somehow, the soup never stopped.") -> the meaning ("the most powerful thing you can give
+someone isn't money. It's simply a warm meal ...") -> follow card.
+
+The six building blocks, all of which the engine can do:
+1. **Two-weight kinetic title over footage**: a small italic serif lead-in + one HUGE bold
+   sans keyword, built word by word, centred ("is 500 years old"; "and it's completely
+   FREE"; "called HASEKI SULTAN IMARET"; "in 1552"; "50 kilos of RICE").
+2. **Small plain captions** for ordinary sentences: white sans, about 2-3 words, low centre,
+   no box.
+3. **Framed inset**: the footage shrinks into a window on a white page with a dark caption
+   under it ("Hidden inside / the Old City / of Jerusalem").
+4. **Cut-out collage**: on a paper-textured background, one cut-out object pops in per
+   item of a list (Statue of Liberty = "the United States", a light bulb = "electricity",
+   a car = "cars"), each with its caption.
+5. **Colour card + cut-out + one word**: teal + a helmet "EMPIRES", dark teal + a soldier
+   silhouette "WARS", blue + a mask "PANDEMIC".
+6. **Host on camera** between sections, then a white logo card "follow for more".
+
+What it needs that we do not have by default: (a) cut-out objects (make with the local
+generator on a plain background + `hyperframes remove-background`, or Pexels photos cut
+out), (b) a real kitchen/location shoot, (c) Tal filmed talking to camera. Without (c)
+the same video works as voice-over only.
+
+**REFERENCE BATCH 2, measured 2026-10-06** (Tal: *"good references to add to the
+list, look how they do sound effects, movements and the b-rolls"*; of the
+Smashi reel: *"this is very good, I want to be able to copy this exact style
+if I need"*). Files: `assets/references/ai-story-reels/low2/`, measurements
+`assets/analysis/ai-story-reels/batch2/`.
+
+| Reel | Account | Length | Words/min | Cuts/min (scene detect) | What it is |
+|---|---|---|---|---|---|
+| DbfQ23EoxTd | smashibusiness | 86s | 195 | 26 | bin Laden: 100% AI-generated period images, each one MOVING (image-to-video), one consistent AI character |
+| DeGg_V_krJ- | smashibusiness | 101s | 180 | 46 | same house style, mixed with real footage |
+| DdrInyCThKy | founding.mena | 70s | 184 | 89 | AlBaik: a new real picture every ~0.6s, one-word captions, solid brand-yellow cards |
+| DeIScNvD_zb | the.genius.series | 56s | 199 | 79 | one-word centred captions, colour cards with big type, grids of faces |
+| DchZZ2biSNI / DcZrFUZkklt | theindicpulse | 90s / 107s | 156 / 148 | 28 / 27 | slower essay style |
+| DQ5N9sOjduX | unpackedmedia | 112s | 195 | 19 | news explainer |
+| DUTWuspjHIa | ysocialnetwork | 109s | 199 | 21 | talking explainer |
+
+Scene detection UNDER-counts these: it misses motion-graphic changes and
+moving AI shots. Read the 2 fps sheets, not the number.
+
+**What they share (and what we were missing):**
+- **The voice never stops and it is FAST: 180-200 words a minute.** No gaps
+  between sentences at all.
+- **A new picture every 0.6-1.0s in the fast ones** (founding.mena: one picture
+  per 1-3 spoken words).
+- **Captions are ONE or TWO words, centred**, popping with the word. Smashi:
+  bold white caps with a soft shadow, two short lines, low-centre.
+- **Solid colour cards as punctuation** (founding.mena: full-screen brand
+  yellow with one word, about every 8-10s; Genius: navy cards with big type).
+- **Sound under everything.** Rough count of sound hits with the voice removed
+  (demucs; the detector is NOT validated, treat as an order of magnitude):
+  founding.mena ~70 a minute, Genius ~58, Smashi far more (a busy, quiet bed).
+  40-66% of the cuts have a hit within 0.15s. Music sits 5-19 dB under the
+  voice (Genius 5, founding.mena 8, Smashi 19).
+
+**THE SMASHI STYLE (to copy exactly when asked):**
+1. Script: "This man [did the impossible thing]." -> "Meet [full name], the
+   [origin] who ..." -> rise in steps -> the relationship that made him ->
+   the numbers -> death/legacy -> "This dreamer arrived with nothing and left
+   behind ...". 280 words in 86s, zero pauses.
+2. Picture: ~35 AI images in ONE consistent look (warm sepia, period costume,
+   wide cinematic), the same character in most, each animated 2-3s (he walks
+   toward camera, crowds move, money falls, a plane in a storm). Never a real
+   photo.
+3. Layouts: full frame; a THREE-PANEL vertical stack when a list is spoken
+   ("no money, no connections, no formal education"; "Mecca, Medina and
+   Al-Aqsa"), one panel landing per item; a name title over a dark green grid
+   with a glitch on "Meet ...".
+4. Captions: white bold caps, 2 short lines, lower-centre, 2-4 words, changing
+   with the voice. Logo top-left the whole time.
+5. NEEDS: an image generator that can make ~35 consistent images and an
+   image-to-video model. The free services here give ~3 stills then stop, so
+   this style waits on Tal's open-source generator (he offered it 2026-10-06).
+
+**Updated 2026-10-06, later (Zaal + Boger, Liraz; LESSONS 110). Newest template:
+`system/projects/ai-story-zaal-boger/v2/build.py`** (tall window for 16:9
+talking heads, full-width band for two-shots, fixed-length shots with a
+negative share, per-event sounds, music bed, `hq/` 1080p sources). Three
+videos exist in this style: Daryl Davis (V14), Tim Zaal + Matthew Boger,
+Liraz Charhi. Rule added: read every real line cold, and give every event in
+the script a picture of that event (generate a faceless still if none exists).
+
+**Updated 2026-10-06 (Daryl Davis V13, LESSONS 109). Working template:
+`system/projects/ai-story-daryl-davis/v13/build.py`.**
+- Hook = fact, then twist, as two short lines ("This man convinced members of
+  the KKK to quit. And he's a Black musician.").
+- Arrows: one solid gold marker stroke, drawn FROM THE TOP down onto the thing.
+- One cinematic beat per video, on the reveal: grey picture, slow push, riser,
+  heartbeat, boom + low piano note.
+- Our sound set lives in `v13/sfx/` (marker, shutter, paper, glass, riser2,
+  heart, boom, pianolow, pianohi): a shutter on every plain photo cut, the
+  signature instrument of the subject on the name and the end card.
+- Every strong object in a frame is explained by the script or the shot goes.
+
+
+Tal: *"you choose the best or whatever you want, to make our own style."*
+Chosen, and built in `system/projects/ai-story-kit/captions.css` (sample:
+`ai-story-kit/tal/tal-story-style.mp4`). It has not been used on a real video
+or approved on one yet; treat his first reaction as the real test.
+
+It is the Comma Effect's system in his colours, not their red:
+
+| piece | class | what |
+|---|---|---|
+| caption | `cap-tal` | white rounded pill, black Montserrat 800 caps, 48px, 2-3 words, key phrase only, at 65% height |
+| the number / the turn | `cap-tal gold` | the same pill in his gold `#FACC27` |
+| name card | `cap-tal-name` | the name in white Cormorant Garamond, a gold tag line under it |
+| a real quote | `cap-tal-quote` | white italic EB Garamond (the Jewish Business Report feel), key words on a gold highlight |
+| big number | `cap-tal-big` | the figure huge in gold over a darkened shot |
+| article proof | `hl-gold` | the DeployTLV re-typeset article, highlight wipe in gold |
+
+Why these: the pill reads on any picture without an outline, white and gold
+are already his (LOOK-AND-SOUND: gold `#FACC27`), the serif is kept for names
+and real quotes so a quote looks different from narration, and nothing here is
+another account's colour. Script in the Venture voice, music 14 dB under the
+voice, a whoosh only on designed transitions.
+
 ## 3a. VOICE, MUSIC, SFX — measured, not listened to
 
 The model reads text and pictures; it cannot play sound. So audio is studied
@@ -412,6 +745,81 @@ kind of thing it already has).
 5. **Music is Tal's**: deliver with the voice on its own track and leave room.
 6. Preview in chat, he approves, then Frame.io.
 
-**State on 2026-10-05:** studied, not yet built. The first attempt,
-`AI VIDEO STYLE COOL STORIES EDITED BY AI/daryl-davis/`, was an empty
-HyperFrames starter when checked, and another session was editing it.
+**State on 2026-10-05:** first one built: Daryl Davis, four versions in one day
+(`system/projects/ai-story-daryl-davis/`, `v11/build.py` is the working
+template (timeline built from the sound; shots are shares of each voice segment) (the subject on camera for his own lines, real footage and Commons photos, no AI stills): shot table, caption table, real-voice quote table, effect blocks,
+SFX table). What Tal corrected on the way is LESSONS 100 to 107; read both
+before building the next one. Not approved yet.
+---
+
+## 8. A SECOND VOICE: THE SLOW PORTRAIT (@wardrobehistorian, Michèle Lamy, read 2026-10-05)
+
+Tal: *"look at the shots ... I like how real the shots looked, and look at the
+audio ... make sure you listen to the audio to know the script and how they do
+it so you're going to make the best script."* (48.9K likes, 115s.)
+
+**The script. This is the opposite of the fast business reels and it works.**
+
+| | Lamy portrait | Venture / Founded |
+|---|---|---|
+| speed | **134 wpm** | 170-220 |
+| pause between sentences | **0.8s median, 20 of 30 over half a second** | none |
+| sentences | 31, **8 words** each, 5 of them 1-3 words | 12-20 words |
+| opener | **"This is Michèle Lamy."** Name first, no hook number | stranger + number, name second |
+| order | strict life order: born, studied, moved, met | hook, then origin |
+
+- **Every sentence is one plain fact.** "She was born in 1944 in Jura,
+  France." No adjectives doing the work, no "incredible".
+- **One long list sentence early** to show a restless life (27 words: studied
+  law, skipped lectures, defence attorney, cabaret dancer, "sometimes on the
+  same day"), then short ones for the rest.
+- **Mirrored pairs**: "He fell in love with her. She fell in love with him.
+  She was 50. He was 33."
+- **One-word sentences for texture**: "Dark. Sculptural."
+- **A list that lands on the last word**: "Business partner, muse, mirror,
+  eventually wife."
+- **Present tense for the ending**: "She still wears his clothes every day."
+- **The other person's words close it**: "Rick once said, without Michèle
+  there is no Rick Owens."
+
+Use this voice when the subject is a PERSON and the feeling matters more than
+the numbers (which is most of Tal's people). Use the fast voice (section 1)
+for a business or a "how did he do it".
+
+**The sound (voice removed with demucs, measured).** Voice -14.1 LUFS, music
+and effects -32.5: the bed sits **18 dB under the voice**, the quietest of
+every reel studied. Sound effects on cuts: 12% against 11% by chance, which
+is none. Two soft events in the whole reel, at the start and the end. A calm
+voice, room to breathe, almost no effects. I cannot tell whether the voice is
+a person or a model.
+
+**The pictures are generated, not found.** 34 cuts a minute, 2-3 second
+shots, one colour grade throughout, and the same present-day face in 1944, in
+a 1979 restaurant and in a courtroom: these scenes were never filmed. It is a
+consistent-character image model plus image-to-video.
+
+- **What we can do today without connecting anything:** realistic STILLS. The
+  Hugging Face key already in `system/.env` reaches FLUX schnell
+  (`router.huggingface.co/fal-ai/fal-ai/flux/schnell`), about a second an
+  image. Tested 2026-10-05: three 1983-bar stills, used in Daryl Davis V6 with
+  a slow push. Each one carries an "ILLUSTRATION · AI-GENERATED" label.
+- **What needs a service:** MOVING generated shots like this reel, and a
+  consistent face across scenes.
+- **Our line:** generate places, objects, hands and backs. A real person's
+  face in a scene that never happened is not generated here; a real person is
+  shown with real photos and footage (Wikimedia Commons had seven freely
+  licensed photos of Daryl Davis; `photos/LEDGER.json` records each licence).
+
+## 9. VOICE: ELEVENLABS (key in `system/.env` as `ELEVENLABS_API_KEY`, added 2026-10-05)
+
+Use it for the narrator instead of Kokoro. Daryl Davis V10: voice "Brian"
+(`nPczCjzI2devNBz1zQrb`), model `eleven_multilingual_v2`, speed 1.12, one
+request per line with `previous_text` and `next_text` so the lines flow, the
+`/with-timestamps` endpoint. To re-voice a finished cut without re-timing the
+picture, place each new line at its old start time and speed it up by a few
+percent only if it would run into the next one (`v10/starts.json`).
+
+The account was on the free tier when tested: 10,000 characters a month (a
+56-second script is about 580), and **music generation was refused: "Music
+API is not available for free users."** Check
+`GET /v1/user/subscription` before promising music.

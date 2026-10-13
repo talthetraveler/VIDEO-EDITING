@@ -206,3 +206,40 @@ Downloading any new reference: `./bin/yt-dlp.exe -o "projects/_refs/%(id)s.%(ext
 
 - **@erez.v1 — cut and zoom grammar, MEASURED frame by frame 2026-10-03.** Wide → ~4-frame zoom-in → tight hold drifting in → hard cut to the other camera; time only forward. Written up in `instagram-2026-09-28/erez.v1.md` ("Cut and zoom grammar") and turned into a routable preset: `tal-video-editor/formats/erez-fast-cut.md`. Worked example: `system/projects/flowers-notes-erez`.
 - **AI story reels: @thecommaeffect (the target), @thenumbersgame1, @theventure, @jewishbusinessreport, @deploytlv — 14 reels, MEASURED 2026-10-05.** Narrated true business stories with no original footage. Hook formula "This [who] [did X with a number]. Meet [Name].", 166-222 wpm with no pauses, 20-85 shots/min, red-pill key-phrase captions, light-leak chapter transitions, year rollers, number flurries, real headlines with a highlight. Per-reel table, script skeleton, effects library and build recipe: `tal-video-editor/formats/ai-story-reel.md`. Low-res copies: `assets/references/ai-story-reels/low/`. Not built yet.
+
+
+### AI story reels, batch 2 (MEASURED 2026-10-06)
+Eight reels Tal sent as pacing / sound / B-roll references for the AI story style:
+smashibusiness (DbfQ23EoxTd bin Laden = "copy this exact style if I need", DeGg_V_krJ-),
+founding.mena (DdrInyCThKy AlBaik), the.genius.series (DeIScNvD_zb), theindicpulse
+(DchZZ2biSNI, DcZrFUZkklt), unpackedmedia (DQ5N9sOjduX), ysocialnetwork (DUTWuspjHIa).
+Low-res copies: `assets/references/ai-story-reels/low2/`. Measurements, sheets and
+transcripts: `assets/analysis/ai-story-reels/batch2/`. Findings: `formats/ai-story-reel.md`
+-> "REFERENCE BATCH 2". Headline: voice 180-200 wpm with no gaps, a picture every
+0.6-1.0s, one-or-two-word captions, colour cards, sound on every cut.
+
+- **theeliewieselfdn DdbjUfvt5T2 "500-year-old soup" (MEASURED 2026-10-06)**: 63s, 130 wpm, ~43 cuts/min, host to
+  camera + two-weight kinetic titles, framed insets on white, cut-out collage lists, colour cards. Tal: "make sure you can
+  do the exact same thing". Recipe in `formats/ai-story-reel.md` -> "THE ELIE WIESEL FOUNDATION". Low-res copy in
+  `assets/references/ai-story-reels/low2/`.
+
+- **theeliewieselfdn Dd1Zme0NLJD "Yeonmi Park" (MEASURED 2026-10-06)**: 68s, 164 wpm, the closest model for our person
+  stories (hook -> "But why?" -> "This is ..." -> list of 3 -> turn -> map -> now -> meaning addressed to us). Host on
+  camera ~40%, restyled "wanted" portrait, B/W paper collage, animated route map, stacking words. Tal: "you should be able
+  to do exactly these types of videos". Recipe in `formats/ai-story-reel.md`.
+
+- **Elie Wiesel Foundation, DeKSZLztRqk (118 s) and Dd4HHMSgKrd (68 s)**, MEASURED 2026-10-06 for captions and titles
+  (`assets/references/ai-story-reels/low2/`). Findings: `tal-video-editor/formats/ai-story-reel.md` and LESSONS 119.
+  The second is a plain subtitled speech clip, kept only as a counter-example.
+
+- **Jews of NY, DeKU1HEqTxp "Younes + Shalev" (97 s)**, MEASURED 2026-10-07 for SCRIPT FRAMEWORK only (two people
+  telling one story to camera, no narrator). `assets/references/ai-story-reels/low2/`. Recipe:
+  `tal-video-editor/formats/ai-story-reel.md`. Their footage is not to be used in his videos (LESSONS 120).
+
+- **Obsession (@theobsession), DeEGDO-SH6n "AboFlah" (67 s) and DeKZSQJs-I4 (32 s)**, MEASURED 2026-10-07: script
+  shape, cut rate (97 a minute), cards, captions. `assets/references/ai-story-reels/low2/`, sheet in
+  `assets/analysis/ai-story-reels/batch2/`. Recipe: `tal-video-editor/formats/ai-story-reel.md`.
+
+- **Elie Wiesel Foundation, whole page (8 reels)**, MEASURED 2026-10-07: Ddtg5_vN0xP "Bashar" (the template for a
+  real person on camera), Ddq9ZnAt-uo, DdoYgC4NwAH, DT_WuiNkg_b, DQaFnNJDSEq plus the three measured before. Table and
+  rules in `tal-video-editor/formats/ai-story-reel.md` ("THE HOUSE MODEL").
