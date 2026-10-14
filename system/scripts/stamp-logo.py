@@ -18,7 +18,7 @@ logo = arg("--logo") or os.path.join(ROOT, "assets", "brand", "social-accords-lo
 png = out + ".logo.png"
 if os.path.exists(logo):
     im = Image.open(logo).convert("RGBA")
-    w = round(230 * k)
+    w = round(260 * k)
     im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
 else:
     font = next(f for f in [os.path.join(ROOT, "system", "projects", "ai-story-kit", "fonts", "Montserrat.ttf"), "C:/Windows/Fonts/arialbd.ttf"] if os.path.exists(f))

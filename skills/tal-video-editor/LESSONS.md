@@ -3722,3 +3722,6 @@ Tal: *"to every single video you ever do you need to add a logo on the top right
 - This is the standing rule. The day before he had the handle taken OFF the five Ezel haircut videos (LESSONS 157); ask him whether those are the exception or whether that note was misheard, and do not remove a logo again without checking.
 - Story reels carry the THE / SOCIAL / ACCORDS wordmark top centre; it still has to move to the top right (`.wordmark` in `ai-story-kit/base.css`). Not done yet.
 - Not yet applied to: the three Uganda hook variations (waiting on the baby blur), the water compilation, the three scheduled story reels (Ella, Yahya, Levi).
+
+## 159. The real logo (2026-10-14)
+Tal sent the Social Accords logo ("THE / SOCIAL" white, "ACCORDS" gold, transparent PNG): `assets/brand/social-accords-logo.png` (local only, never pushed). `stamp-logo.py` uses it automatically, 260 px wide at 1080, 44 px from the right, y 96. He said "just put this logo on top right" - this replaces the @thesocialaccords text stamp on every video.
