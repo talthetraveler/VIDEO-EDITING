@@ -3725,3 +3725,6 @@ Tal: *"to every single video you ever do you need to add a logo on the top right
 
 ## 159. The real logo (2026-10-14)
 Tal sent the Social Accords logo ("THE / SOCIAL" white, "ACCORDS" gold, transparent PNG): `assets/brand/social-accords-logo.png` (local only, never pushed). `stamp-logo.py` uses it automatically, 260 px wide at 1080, 44 px from the right, y 96. He said "just put this logo on top right" - this replaces the @thesocialaccords text stamp on every video.
+
+## 160. A face blur is checked by a detector on the FINAL render, not by stills every 3 s (2026-10-14)
+Uganda hook 1: stills every 3 s and the helper's proof sheets looked clean, but at 0:52 the baby's eyes showed above the blur for ~0.5 s (the blur box sat low while the head moved). Found only by running CenterFace over every 3rd frame of the final render and flagging frames with one face too many, then zooming in on them. Also: the helper re-wrote the blurred source after hook 1 was built, so the build used a half-finished blur. Rule: build only after the blur job has finished, then scan the final with the detector and zoom on every flag before anything is posted. I had already scheduled it; turned to draft.
