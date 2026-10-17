@@ -155,3 +155,6 @@ system/projects/*/posting.json
 
 # files that hold real keys for Tal only (never pushed)
 *.local.md
+
+# Resemble Enhance (AI speech cleanup) - its own Python env, never pushed
+system/.venv-audio/

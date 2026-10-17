@@ -720,3 +720,30 @@ Tal, on blurring the baby in the Uganda couple video: *"https://github.com/ORB-H
   ```
 - **Measured on his footage (1024x576 glasses clips, baby's face about 50 px):** it found the baby in 4 of 4 test frames at 2x upscale, with scores from 0.27 to 0.79, so keep the threshold at 0.2. It also returns tiny background faces; drop anything under about 25 px.
 - A detector drops frames on a baby (profile, pacifier, motion blur). Bridge the gaps with tracking or hand-set positions and check enlarged stills every 0.25 s. One missed frame defeats the blur.
+
+## Open-source speech cleanup — Resemble Enhance, Demucs, ClearerVoice, pyannote (installed 2026-10-17)
+
+Tal, 2026-10-16, asking for Adobe Podcast "Enhance Speech": *"how do I direct like my AI to be using that? ... I guess I would have to use like an open source."* Adobe has no API an agent can drive, so these are the open-source equivalents. **The GitHub link he first pasted (`limitedneighb/AdobePodcast-Desktop...`) was refused: it is not Adobe's, and an "Adobe desktop" repo of that shape is a malware lure.**
+
+- **Where:** their own env, `system/.venv-audio` (torch 2.6.0+cu124, runs on the RTX 3050 Ti), so they cannot break WhisperX/pyannote in the main Python. Installed by `SETUP EVERYTHING.cmd`. One entry point: `system/tools/audio-ai.py enhance|clean|music|separate`.
+- **Resemble Enhance** (Resemble AI, MIT). `pip install resemble-enhance --no-deps` + its runtime deps — its own requirements pin torch 2.1.1 and **deepspeed, which does not build on Windows**. Three Windows fixes live in `audio-ai.py`, not in site-packages (a fresh setup needs no hand edit): a stand-in `deepspeed` module (it is imported for training only), `PosixPath -> WindowsPath` (the model's `hparams.yaml` was saved on Linux), and pointing at the downloaded weights, because its `download()` runs `git pull` on the 1.6 GB model repo on every call (~3 min each, measured). First use clones the model from Hugging Face (needs git-lfs).
+- **Demucs** htdemucs (Meta, MIT) — strips music/background bed, keeps voices.
+- **ClearerVoice-Studio** (Alibaba, Apache-2.0) — `MossFormer2_SE_48K` enhancement, `MossFormer2_SS_16K` separation. The separator wants an output FILE path (it writes `_s1`/`_s2` beside it) and refuses an existing folder.
+- **pyannote 4.0.7** was already installed (`system/scripts/diarize.py`, needs `HF_TOKEN`).
+
+**Measured on 15 s of a real noisy street interview** (proxy `0f1bfdfb`, "So what was your house like growing up?"). Floor = 10th-percentile 50 ms level; words = faster-whisper small re-transcription vs the original:
+
+| version | GPU time | noise floor | speech | words |
+|---|---|---|---|---|
+| original | — | -31.0 dB | -9.5 | reference |
+| DeepFilterNet `-a 10` (what every render uses now) | <1 s | -34.5 | -9.8 | identical |
+| Resemble **full enhance** | **78 s** | -42.6 | -11.2 | **dropped "but" and the last word** |
+| Resemble denoise-only | 4.4 s | -42.3 | -9.5 | identical |
+| ClearerVoice SE_48K | 13 s | **-43.8** | -9.8 | identical |
+| Demucs (music removal) | ~60 s | -33.6 | -9.6 | identical |
+
+- **Full enhance REGENERATES the voice** (a diffusion model). It is the closest to Adobe's sound and the only one here that changed the words. Never use it without listening, and never on a line that will be captioned until the caption is checked against the enhanced audio.
+- ClearerVoice and Resemble denoise-only each cut the floor ~12 dB with the words intact — the two strongest plain cleaners. That is also far past the do-not-over-denoise line (CLAUDE.md §1 Audio): they are for a clip where the noise hides the voice, chosen by ear, never a blanket pass on top of DeepFilterNet.
+- **Separation did NOT split question from answer** on this clip: everything went to `_s1`, `_s2` held a faint echo of one line (-37.5 dB). It separates people talking AT THE SAME TIME; turn-taking speech is pyannote's job.
+- **Speed is uneven:** full enhance took 78 s on the 15 s clip, but 10 min 15 s on a 4 s clip in the setup self-test (same GPU; cause not found). Budget for it; the self-test now uses `--denoise-only`.
+- Tal's verdict by ear: pending (the six versions were sent to him 2026-10-17).

@@ -1,0 +1,21 @@
+# Python tools the pipeline uses, at the versions verified working on Tal's laptop (2026-10-16).
+# Installed into the main Python by system/setup/setup_everything.py.
+# The heavy audio-AI tools (Resemble Enhance, Demucs, ClearerVoice) live in their own env,
+# system/.venv-audio - see setup_everything.py - so they cannot break these.
+torch==2.8.0
+torchaudio==2.8.0
+whisperx==3.8.6
+faster-whisper==1.2.1
+ctranslate2==4.8.2
+pyannote-audio==4.0.7
+opencv-python==5.0.0.93
+pillow==12.3.0
+numpy==2.5.3
+scipy==1.18.1
+soundfile==0.14.0
+openpyxl==3.1.5
+python-bidi==0.6.11
+arabic-reshaper==3.0.1
+scenedetect==0.7.1
+deface==1.5.0
+google-genai==2.23.0
