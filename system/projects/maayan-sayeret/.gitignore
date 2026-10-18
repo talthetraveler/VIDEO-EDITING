@@ -1,0 +1,9 @@
+# footage and working files stay local - public repo (CLAUDE.md: never push media/transcripts)
+raw/
+cache/
+contact/
+look/
+preview/
+sheet*.jpg
+files.json
+list.tsv
