@@ -1,0 +1,29 @@
+{
+ "slug": "maayan-sayeret",
+ "note": "V1 travel montage. Natural sound, no music (none supplied). Chronological day arc.",
+ "beats": [
+  {"v":"raw/IMG_1753.MOV","in":36.6,"out":39.6,"why":"cold open: dog launches into the pool"},
+  {"v":"raw/IMG_1764.MOV","in":0.3,"out":1.9,"why":"dog + frisbee close-up"},
+  {"v":"raw/IMG_1752.MOV","in":9.4,"out":11.6,"why":"cannonball splash"},
+  {"photos":["IMG_1768","IMG_1769","IMG_1770","IMG_1772","IMG_1773"],"each":0.2,"audio":{"src":"raw/IMG_1752.MOV","in":11.6}},
+  {"v":"raw/IMG_1751.MOV","in":18.4,"out":20.4,"why":"second splash"},
+  {"v":"raw/IMG_1765.MOV","in":0.0,"out":1.4},
+  {"v":"raw/IMG_1871.MOV","in":0.0,"out":1.9,"label":"chapter: the hike"},
+  {"v":"raw/IMG_6146.MOV","in":1.0,"out":3.6,"why":"dog runs at camera with frisbee"},
+  {"v":"raw/IMG_1837.MOV","in":0.5,"out":2.6},
+  {"photos":["IMG_1838","IMG_1839","IMG_1840","IMG_1841","IMG_1843","IMG_1844","IMG_1845","IMG_1846","IMG_1847","IMG_1848","IMG_1849"],"each":0.13,"audio":{"src":"raw/IMG_1830.MOV","in":0.0}},
+  {"photos":["IMG_8976","IMG_8978","IMG_8979","IMG_8980","IMG_8981","IMG_8982","IMG_8983"],"each":0.17,"audio":{"src":"raw/IMG_1830.MOV","in":1.5}},
+  {"v":"raw/IMG_6116.MOV","in":2.8,"out":5.5,"why":"selfie, dog, laughter"},
+  {"photos":["IMG_6105","IMG_6106","IMG_6107","IMG_6108","IMG_6109","IMG_6110"],"each":0.17,"audio":{"src":"raw/IMG_6116.MOV","in":5.5}},
+  {"photos":["IMG_1852","IMG_1853","IMG_1855","IMG_1856","IMG_1857","IMG_1858","IMG_1860","IMG_1862","IMG_1864","IMG_1866","IMG_1868","IMG_1870"],"each":0.13,"audio":{"src":"raw/IMG_6117.MOV","in":0.0}},
+  {"v":"raw/IMG_6162.MOV","in":0.0,"out":2.4},
+  {"v":"raw/מצפה אופיר/IMG_6168.MOV","in":0.0,"out":2.8,"title":"מצפה אופיר"},
+  {"v":"raw/מצפה אופיר/IMG_6182.MOV","in":5.0,"out":7.0},
+  {"photos":["IMG_6190","IMG_6191","IMG_6192","IMG_6193","IMG_6194"],"each":0.2,"audio":{"src":"raw/מצפה אופיר/IMG_6183.MOV","in":0.0}},
+  {"v":"raw/גבריאל המטייל/8ce71982-0bc3-49dc-a4eb-43ee49257a98.mp4","in":4.25,"out":5.35},
+  {"v":"raw/מהמצלמה של טליה/MVI_0739.mp4","in":18.0,"out":20.0},
+  {"photos":["IMG_9009","IMG_9016","IMG_9017"],"each":0.45,"audio":{"src":"raw/מהמצלמה של טליה/MVI_0739.mp4","in":20.0}},
+  {"photos":["IMG_8384","IMG_8385"],"each":0.6,"audio":{"src":"raw/מהמצלמה של טליה/MVI_0739.mp4","in":21.35}},
+  {"photos":["IMG_8375","IMG_8377","IMG_8379"],"each":1.1,"kb":true,"audio":{"src":"raw/מהמצלמה של טליה/MVI_0739.mp4","in":22.55},"why":"sunset silhouette over the Kinneret = ending"}
+ ]
+}
