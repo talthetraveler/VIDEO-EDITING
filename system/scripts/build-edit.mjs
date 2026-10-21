@@ -24,6 +24,7 @@ const FFDIR = "C:/Users/taldo/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpe
 const FF = join(FFDIR, "ffmpeg.exe"), FP = join(FFDIR, "ffprobe.exe");
 import { placeInSpeech, placeByWords, holdCaptions, oneWordCaptions } from "./lib/caption-timing.mjs";
 import { captionLines } from "./lib/caption-lines.mjs";
+import { placeTitle } from "./lib/title-place.mjs";
 // A REGEX LITERAL, not new RegExp("..."): inside a string the backslashes were
 // eaten, the class closed early, and it only matched "<symbol>]" - so a
 // captionFix "match" containing ? or . ran as a pattern and misfired
@@ -1755,12 +1756,30 @@ const args = ["-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", join(OUT,
 let fc = `[0:v]scale=${PREVIEW_W}:${PREVIEW_H}[v]`;
 if (cfg.title) {
   const png = join(OUT, "title.png");
-  execFileSync("python", [join(ROOT, "scripts/make-title.py"), cfg.title, png, String(cfg.titleSize ?? 52)], { stdio: "pipe" });
+  const hold = cfg.titleHold ?? 4.5;
+  let titleY = cfg.titleY;
+  if (cfg.titleStyle === "pill") {
+    // the old white/yellow pill (make-title.py), kept for re-cuts of earlier series
+    execFileSync("python", [join(ROOT, "scripts/make-title.py"), cfg.title, png, String(cfg.titleSize ?? 52)], { stdio: "pipe" });
+    // `titleY` = the pill's TOP edge in px on the 1920 frame. 150 (0.078) was
+    // the old guess; his posted "POV: MEETING A …" reels measure the pill at
+    // y ~0.15-0.19 (pov-meta-glasses.md section 5) -> "titleY": 260.
+    titleY ??= 150;
+  } else {
+    // SECTION 11 TITLE (default since 2026-10-21): white rounded box, black Barlow Condensed Black Italic, two
+    // lines, just above the speaker's head - measured on the RENDERED opening, so the crop and zoom already apply.
+    const box = JSON.parse(execFileSync("python", [join(ROOT, "scripts/make-title-box.py"), cfg.title, png, String(cfg.titleSize ?? 78)],
+      { encoding: "utf8" }).trim().split(/\r?\n/).pop());
+    if (titleY == null) {
+      const first = DURS.get(0) ?? hold;
+      const p = placeTitle(list[0], { from: 0, to: Math.min(hold, first), boxH: box.h });
+      titleY = p.y;
+      console.log(`  title: y ${titleY} - ${p.why}${first < hold ? ` (measured on beat 1 only: ${first.toFixed(1)}s of the ${hold}s hold)` : ""}`);
+    }
+  }
   args.push("-i", png);
-  // `titleY` = the pill's TOP edge in px on the 1920 frame. 150 (0.078) was
-  // the old guess; his posted "POV: MEETING A …" reels measure the pill at
-  // y ~0.15-0.19 (pov-meta-glasses.md section 5) -> "titleY": 260.
-  fc = `[0:v][1:v]overlay=(W-w)/2:${cfg.titleY ?? 150}:enable='lt(t\\,${cfg.titleHold ?? 4.5})'[tv];[tv]scale=${PREVIEW_W}:${PREVIEW_H}[v]`;
+  // on screen from the first frame, no fade-in (section 11)
+  fc = `[0:v][1:v]overlay=(W-w)/2:${titleY}:enable='lt(t\\,${hold})'[tv];[tv]scale=${PREVIEW_W}:${PREVIEW_H}[v]`;
 }
 // THE TIMELINE AUDIO CHAIN.
 //

@@ -14,6 +14,7 @@ import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, dirname, join, resolve } from "node:path";
 import { captionLines } from "./lib/caption-lines.mjs";
+import { placeTitle } from "./lib/title-place.mjs";
 
 const ROOT = "C:/Users/taldo/Downloads/videos to edit/system";
 const specPath = resolve(process.argv[2]);
@@ -179,7 +180,21 @@ const add = (file, y, enable, x = "(W-w)/2") => {
   parts.push(`${prev}[m${n}]overlay=x=${x}:y=${y}-h/2:eval=init${en}[o${n}]`);
   prev = `[o${n}]`; n++;
 };
-add(labMeta[0].file, Math.round(H * (S.titleY || 0.2)), (S.titleStart || S.titleEnd) ? [S.titleStart || 0, S.titleEnd || 1e6] : null);
+// SECTION 11 TITLE (default since 2026-10-21): white rounded box, black Barlow Condensed Black Italic, two lines,
+// just above the speaker's head. "titleStyle": "pill" keeps the old white + yellow lines for earlier series.
+let titleCenter = Math.round(H * (S.titleY || 0.2));
+if (S.title && S.titleStyle !== "pill") {
+  const text = S.title.map((line) => line.map(([t]) => t).join(" ")).join("\n");
+  const box = JSON.parse(execFileSync("python", [join(ROOT, "scripts/make-title-box.py"), text, labMeta[0].file, String(S.titleSize || 78)],
+    { encoding: "utf8" }).trim().split(/\r?\n/).pop());
+  if (S.titleY == null) {
+    const from = S.titleStart || 0;
+    const p = placeTitle(here(S.src), { from, to: from + 3, boxH: box.h });
+    titleCenter = p.y + Math.round(box.h / 2);
+    console.log(`  title: top y ${p.y} - ${p.why}`);
+  }
+}
+add(labMeta[0].file, titleCenter, (S.titleStart || S.titleEnd) ? [S.titleStart || 0, S.titleEnd || 1e6] : null);
 S.labels.forEach((l, i) => add(labMeta[i + 1].file, Math.round(H * (l.y || S.labelY || 0.36)), [l.a, l.b]));
 caps.forEach((c, i) => capMeta[i] && add(capMeta[i].file, Math.round(H * (c.y || S.capY || 0.66)), [c.a, c.b]));
 // "stamp": {text, size, y} - the account handle, bold, top right, for the whole video

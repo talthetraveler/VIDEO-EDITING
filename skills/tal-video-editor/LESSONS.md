@@ -3754,3 +3754,19 @@ implemented to be the ultimate video editor"). It holds three Effect-of-the-Day 
   down); caption-free top band saturation source 11.6 / raw 10.9 / old 14.6, brightness 140.6 / 140.3 / 140.0.
   **Old edit specs that say `"grade": "light"` or a `"denoise"` number still get it on a rebuild** - that is now an
   explicit choice in the spec, not a default.
+
+## 162. Section 11 title box and logo outro, built (2026-10-21)
+
+Tal: *"build the section 11 title box (white rounded box, Barlow Condensed Black Italic, above the head) and the
+animated Social Accords logo outro into the renderer."*
+
+- **Title:** `make-title-box.py` + `lib/title-place.mjs`, default in both `build-edit.mjs` and `title-captions.mjs`.
+  A two-colour spec (white + yellow lines) renders as one black-on-white box: section 11 says no yellow.
+- **Placement is measured on the rendered opening, not guessed.** Above the head when there is room between the
+  top-right logo (ends y 203) and the crown; on his POV street footage faces sit high, so it often lands UNDER the
+  chin instead, and the build says so. Tested: steakhouse reel -> "above the head (crown 750 px)", box ends 728;
+  Uganda POV -> "under the chin". On a multi-person shot it follows the biggest face - LOOK at the opening.
+- **Outro:** `src/effects/LogoOutro.tsx`, rendered once by `make-outro.mjs` (cached in `projects/_brand/`, keyed by the
+  logo + component), appended by `stamp-logo.py` after the mark, with an 80 ms audio fade at the join. Tested:
+  8.7 s cut -> 11.73 s, yuv420p tv, every shot >= 1.2 s. There was no outro file from him: this one is designed from
+  his logo PNG and the end-card words of LESSONS 155. **His first look at it is the real test.**

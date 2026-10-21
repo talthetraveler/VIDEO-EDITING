@@ -417,9 +417,29 @@ A translated caption is always *"timing verified, wording unverified."*
 
 The measured positions are **where to start, not where to stay.**
 
-Keep the visual language: **title toward the top, captions in the lower-middle,
-short caption groups, one highlighted word where appropriate.** That is what
-makes it look like Tal's.
+Keep the visual language: **title just above the speaker's head, captions in
+the lower-middle, short caption groups, one highlighted word where
+appropriate.** That is what makes it look like Tal's.
+
+**THE TITLE (section 11, built 2026-10-21, the default in `build-edit.mjs` and
+`title-captions.mjs`):** a solid white rounded box tight to the text, two lines,
+black **Barlow Condensed Black Italic**, centred, sentence case, no yellow, no
+emojis, on screen from the first frame, no fade-in. `make-title-box.py` draws it
+(font: `assets/brand/fonts/`, OFL — on a new machine fetch
+`BarlowCondensed-BlackItalic.ttf` from github.com/google/fonts `ofl/barlowcondensed/`).
+`lib/title-place.mjs` places it by measuring the face on the RENDERED opening
+(`face-eyes.py`): box bottom 22 px above the crown, never above y 215 so it never
+covers the top-right logo; when the head is too high for that it goes under the
+chin and the build says **LOOK at it**. `"titleY"` overrides; `"titleStyle": "pill"`
+brings back the old white/yellow pill for re-cuts of earlier series.
+
+**THE OUTRO (section 11, built 2026-10-21):** every video ends on the animated
+Social Accords logo (3 s: "THE SOCIAL" into focus, "ACCORDS" rises, a light
+sweep across the gold, then @thesocialaccords + "Using social media to spread
+positivity and fight hate"). `stamp-logo.py` — already the last step — appends
+it after stamping, so the top-right mark is never on it. `--no-outro` for a
+collab creator's cut or the Ezel videos. It replaces the old black end card:
+do not also set `"endCard"` in a `title-captions` spec.
 
 **But the footage wins.** If the default position would cover a face, eyes, a
 sign, or the object being talked about, **move it** — and keep it moved for that

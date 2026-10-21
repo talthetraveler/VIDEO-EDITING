@@ -257,7 +257,7 @@ person actually said; one ask ("Send this to someone who…"); three hashtags. W
 ## 11. Rules added since (October 2026)
 
 *From Tal's toolkit PDF (`tal_video_toolkit.pdf`, handed over 2026-10-21), verbatim. Where these differ from
-sections 3-4 above, these win.*
+sections 3-4 above, these win. All of them are built into the pipeline as of 2026-10-21 (LESSONS 161-162).*
 
 - Never a flash. No flash frames or micro-shots anywhere: every shot, B-roll or archive segment is at least 1.2 s.
   Check every render for segments under 1.2 s before delivering, including jump-cut remnants inside the source clips.

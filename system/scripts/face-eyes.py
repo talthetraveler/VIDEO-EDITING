@@ -11,7 +11,8 @@
 # stored 1280x720 at -90 is measured upright, the way it plays.
 #
 #   python scripts/face-eyes.py <video> <ss> <to> [samples]
-# -> {"found":n,"of":m,"cx":..,"w":..,"eyeY":..,"score":..,"dx":..}  (0-1 of the upright frame)
+# -> {"found":n,"of":m,"cx":..,"w":..,"eyeY":..,"score":..,"dx":..,"top":..,"bot":..}  (0-1 of the upright frame;
+#    top/bot are the HIGHEST and LOWEST the face box reaches across the window, for keeping text off it)
 import sys, json, subprocess, statistics as st
 import numpy as np, cv2
 from deface.centerface import CenterFace
@@ -35,7 +36,8 @@ for i in range(N):
     j = max(range(len(dets)), key=lambda k: (dets[k][2] - dets[k][0]) * (dets[k][3] - dets[k][1]))
     x1, y1, x2, y2, score = dets[j][:5]
     lm = lms[j]                                   # x0,y0, x1,y1 ... : left eye, right eye, nose, mouth L, mouth R
-    hits.append({"cx": (x1 + x2) / 2 / W, "w": (x2 - x1) / W, "eyeY": (lm[1] + lm[3]) / 2 / H, "score": float(score)})
+    hits.append({"cx": (x1 + x2) / 2 / W, "w": (x2 - x1) / W, "eyeY": (lm[1] + lm[3]) / 2 / H, "score": float(score),
+                 "top": y1 / H, "bot": y2 / H})
 
 if not hits:
     print(json.dumps({"found": 0, "of": N}))
@@ -43,4 +45,7 @@ else:
     med = lambda k: round(float(st.median(h[k] for h in hits)), 4)
     # dx: how far the face wanders across the window. A card is placed for the median; a face that moves can walk into it.
     dx = round(float(max(h["cx"] for h in hits) - min(h["cx"] for h in hits)), 4)
-    print(json.dumps({"found": len(hits), "of": N, "cx": med("cx"), "w": med("w"), "eyeY": med("eyeY"), "score": med("score"), "dx": dx}))
+    print(json.dumps({"found": len(hits), "of": N, "cx": med("cx"), "w": med("w"), "eyeY": med("eyeY"), "score": med("score"), "dx": dx,
+                      # face box edges: CenterFace's top sits near the hairline; the crown of the head is ~0.35 box above it
+                      "h": round(float(st.median(h["bot"] - h["top"] for h in hits)), 4),
+                      "top": round(float(min(h["top"] for h in hits)), 4), "bot": round(float(max(h["bot"] for h in hits)), 4)}))
