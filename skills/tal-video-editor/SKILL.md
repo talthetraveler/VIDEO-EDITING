@@ -103,14 +103,17 @@ for that second beat; it is the ending.
 ## Visual treatment
 
 - **Natural documentary look, not polished commercial.**
-- Correct exposure and colour enough to keep faces readable while preserving
-  the real environment.
+- **No grade, no LUT, no saturation, no colour added — the footage's natural
+  colours** (section 11, approved 2026-10-21). `build-edit.mjs` grades nothing
+  unless the edit says `"grade": "light"` or `"grade": true`. iPhone HDR is
+  still converted to SDR, as neutrally as possible: that is conversion, not grade.
 - Stabilise only when shake distracts; retain handheld movement for presence.
   (There is no stabilisation in the pipeline today — do not add a blanket one.)
 - Graphic effects sparingly. A brief light/flash accent can mark a major hook
   or transition; it is not the default.
 
-**The grade, measured from two of his own cuts:**
+**Background only — the grade the builder USED to apply, measured from two of
+his own cuts (superseded by "no grade" above; kept so an opt-in grade has a target):**
 
 | | coffee-shop cut | "Spread love" |
 |---|---|---|
@@ -125,16 +128,19 @@ Use `curves` (it holds the endpoints); `eq=contrast` lifts blacks.
 
 ## Audio
 
-- **Dialogue is primary.** Clean noise while **preserving natural voice
-  texture** — this is the do-not-over-denoise line. Street ambience is the
-  proof it is real.
+- **Dialogue is primary, and it is RAW.** No denoise, no noise reduction, no
+  heavy EQ, on any video — only loudness levelling (one static gain per shot +
+  one loudnorm on the timeline) and music ducking. Tal approved 2026-10-21
+  (section 11). Street ambience is the proof it is real. DeepFilterNet, the
+  70 Hz highpass and the floor expander run only when an edit asks:
+  `"denoise": 10` / `"denoise": "auto"`, `"audioCleanup": true`.
 - Ambient location sound low enough to keep realism without masking speech.
 - Music supports the arc, stays below dialogue, rises on movement, reactions,
   the payoff. **Tal, 2026-09-24: "you don't need to add music."** Deliver
   without it; do not caveat every cut for its absence.
 - Sound effects only to reinforce a real cut, reveal, or transition.
 
-> Denoise per shot, never per beat, and never measure the floor through
+> If an edit does opt in: denoise per shot, never per beat, and never measure the floor through
 > already-cleaned audio — that combination produced an ambience shift he heard
 > as a cut at 0:22.
 

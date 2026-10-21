@@ -9,7 +9,7 @@
  *
  * Audio: a gentle cleanup pass runs by default (highpass + mild afftdn +
  * light compression/limiter) — hum/rumble out, street ambience LEFT IN
- * (CLAUDE.md §1). --no-denoise to skip, --denoise-strong for a heavier pass.
+ * (CLAUDE.md §1). Off by default since 2026-10-21 (section 11): --denoise to run it, --denoise-strong for a heavier pass.
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync, rmSync, readdirSync, renameSync, statSync } from "node:fs";
 import { join } from "node:path";
@@ -162,7 +162,9 @@ try {
   const progPath = join(outDir, ".progress");
   const setProg = (n) => { try { writeFileSync(progPath, String(n)); } catch { /* noop */ } };
   console.log(`· rendering ${(composition.durationInFrames / p.fps).toFixed(1)}s at scale ${scale}…`);
-  const denoise = !args.includes("--no-denoise");
+  // Raw live audio by default - Tal's master prompt section 11 (approved 2026-10-21):
+  // "No noise reduction, denoise or heavy EQ on dialogue, on any video." Opt in with --denoise.
+  const denoise = args.includes("--denoise") || args.includes("--denoise-strong");
   const rawOut = denoise ? outPath.replace(/\.mp4$/, ".raw.mp4") : outPath;
   setProg(0);
   await renderMedia({

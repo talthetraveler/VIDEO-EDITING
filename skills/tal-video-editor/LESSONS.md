@@ -3745,6 +3745,12 @@ implemented to be the ultimate video editor"). It holds three Effect-of-the-Day 
 - **Burned-in captions on a reference lie.** The reel read "I just came here"; she says "I just came IN here".
 - **Never a flash < 1.2 s** had no check. `scripts/min-shot.mjs` reads the render; a planted 0.5 s shot came back
   exactly, and it caught a real 1.0 s opening shot in one of the references.
-- **OPEN, not changed without his yes:** section 11 says no denoise and no grade on any video. `build-edit.mjs` still
-  runs DeepFilterNet per shot by default and SKILL.md still grades blacks to 0 / highlights to 255. Written into
-  `MASTER-PROMPT.md` section 11; the builder defaults wait on his answer.
+- **DONE 2026-10-21, on his yes** (*"follow section 11: no denoise and no grade by default on every video. Only
+  loudness levelling and music ducking"*). `build-edit.mjs`: DeepFilterNet only with `"denoise": N|"auto"` (or a
+  beat's `push.denoise`); the 70 Hz highpass + floor expander only with `"audioCleanup": true`; no grade, no exposure
+  lift, no saturation unless `"grade": "light"|true`. `proj-render.mjs`: `--denoise` to opt in. Cache key bumped
+  (`raw-1`) so no beat cut under the old defaults is reused. Measured on a 2-shot Uganda build against the source,
+  same 4 s: speech-to-floor range source 22.7 dB / raw 21.6 / old chain 30.8 (the old chain pushed the street 8 dB
+  down); caption-free top band saturation source 11.6 / raw 10.9 / old 14.6, brightness 140.6 / 140.3 / 140.0.
+  **Old edit specs that say `"grade": "light"` or a `"denoise"` number still get it on a rebuild** - that is now an
+  explicit choice in the spec, not a default.

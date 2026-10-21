@@ -272,9 +272,11 @@ conflict with safety or honesty.
   384px POV frames are a **retrieval hint, not ground truth** — see §7.
 
 ### Audio
-- **Do NOT over-denoise.** Street ambience, wind, market noise, traffic — that
-  texture is the proof it's real. Remove hum, clicks, and clipping. Leave the
-  street in.
+- **Raw live audio. No denoise, no noise reduction, no heavy EQ on dialogue,
+  on any video** — only loudness levelling and music ducking. Tal approved this
+  2026-10-21 (his master prompt, section 11); it replaces "do not over-denoise".
+  Street ambience, wind, market noise, traffic — that texture is the proof it's
+  real. The builders denoise only when an edit asks (`"denoise"`, `--denoise`).
 - Never join fragments from two takes into one word. Protect first and last
   consonants, word tails, and breath. **If unsure, cut later, not earlier.**
 

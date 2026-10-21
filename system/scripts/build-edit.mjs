@@ -62,6 +62,7 @@ if (!slug) { console.error("usage: node scripts/build-edit.mjs <slug>"); process
 const FINAL = !process.argv.includes("--preview");
 const OUT = join(ROOT, "projects", slug);
 const cfg = JSON.parse(readFileSync(join(OUT, "edit.json"), "utf8"));
+const AUDIO_CLEANUP = cfg.audioCleanup === true;   // rumble cut + floor expander; off by default (section 11)
 const RUN = String(Date.now()).slice(-7);
 const BEATS = join(OUT, `beats_${RUN}`), TMP = join(OUT, `tmp_${RUN}`);
 
@@ -785,8 +786,16 @@ function captionOverlays(caps, tmpDir, beatCapY) {
   return { suffix: ";" + parts.join(";"), label: "[vbase]" };
 }
 
+// RAW LIVE AUDIO BY DEFAULT. Tal's master prompt, section 11 (approved
+// 2026-10-21): "Don't change his audio. No noise reduction, denoise or heavy EQ
+// on dialogue, on any video. Raw live audio; only loudness levelling and music
+// ducking." So DeepFilterNet only runs when an edit asks for it:
+//   "denoise": 10         a fixed attenuation (6-18) for every beat
+//   "denoise": "auto"     the old adaptive house behaviour described below
+//   push.denoise on a beat still sets that beat by hand.
 // DeepFilterNet -a 10. NEVER -a 25 — it gated real speech to silence.
-// Street ambience stays; that texture is the proof it's real.
+const AUTO_DN = cfg.denoise === "auto";
+const BASE_ATT = cfg.denoise == null || +cfg.denoise === 0 ? 0 : AUTO_DN ? 10 : Math.min(18, Math.max(6, +cfg.denoise));
 function cleanAudio(src, ss, to, n, attOverride) {
   const raw = join(TMP, `${n}.wav`);
   execFileSync(FF, ["-v", "error", "-y", "-ss", String(ss), "-to", String(to), "-i", src,
@@ -809,10 +818,10 @@ function cleanAudio(src, ss, to, n, attOverride) {
   // -a 16, -a 16, then -a 12, and the street tone shifted character mid-shot.
   // Adaptive denoise is still right ACROSS different locations; it is wrong
   // WITHIN one unbroken shot.
-  let att = Math.min(18, Math.max(6, cfg.denoise ?? 10));
+  let att = BASE_ATT;
   if (attOverride != null) {
     att = attOverride;
-  } else if (cfg.denoise == null) {
+  } else if (AUTO_DN) {
     const floor = noiseFloor(raw);
     if (floor != null && floor > -30) {
       att = Math.min(16, Math.round(att + (floor + 30) * 0.8));
@@ -942,8 +951,12 @@ function buildCard(text, dur, dest) {
 // "grade": "light" (street-oct10, LESSONS 142/144): phone footage that is already
 // vivid. As-shot read flat to Tal, +42% read "weird" - this is the step between:
 // a gentle S-curve that holds both endpoints and +10% saturation, no warm push.
+// NATURAL COLOURS BY DEFAULT. Section 11 (approved 2026-10-21): "Never add
+// colour, grade, LUT or saturation. Keep the footage's natural colours." No
+// grade unless the edit asks: "grade": "light" or "grade": true (the full chain
+// below). HDR sources are still tone-mapped to SDR - that is conversion, not grade.
 const LIGHT_GRADE = cfg.grade === "light";
-const NO_GRADE = cfg.grade === false || LIGHT_GRADE;      // no exposure lift / saturation trim either way
+const NO_GRADE = !(cfg.grade === true || cfg.grade === "full") || LIGHT_GRADE;   // no exposure lift / saturation trim either way
 const GRADE = LIGHT_GRADE ? "curves=all='0/0 0.25/0.235 0.5/0.505 0.75/0.775 1/1',eq=saturation=1.10"
   : NO_GRADE ? "null" : "curves=all='0/0 0.04/0.01 0.25/0.265 0.55/0.61 0.85/0.92 1/1'," +
   "eq=saturation=1.42:gamma=1.01,colorbalance=rm=0.015:bm=-0.015";
@@ -1172,7 +1185,9 @@ let LAST_ID = "";     // ...and the clip it came from: only the SAME clip can re
 // beats render. The final stitch (title, beds, loudness) always runs in full.
 // Only safe when the project-level settings (grade, captions, layout...) have
 // not changed since that build - it refuses if the recorded signature differs.
-const cfgSig = JSON.stringify([cfg.layout, cfg.autoFrame, cfg.grade, cfg.exposure, cfg.captionWords, cfg.captionStyle,
+// "raw-1": the 2026-10-21 switch to no denoise / no grade by default. The keys below did not change
+// value, only meaning, so without this a rebuild would reuse beats cut under the old defaults.
+const cfgSig = JSON.stringify(["raw-1", cfg.audioCleanup, cfg.layout, cfg.autoFrame, cfg.grade, cfg.exposure, cfg.captionWords, cfg.captionStyle,
   cfg.capY, cfg.captionFix, cfg.denoise, cfg.snap, cfg.maxZoom, cfg.tilts, cfg.faceMinY, cfg.captionKeys, cfg.silent, cfg.capSize, SUBS, cfg.captionMaxWords]);
 const REUSE = (() => {
   if (!process.argv.includes("--reuse")) return null;
@@ -1311,8 +1326,8 @@ cfg.beats.forEach(([id, ss, to, xc, why, beatRot, push], i) => {
     // measures luma 151-175 because it IS white, not because it is overexposed;
     // taming it to mid 0.44 turned EDEN HER STORY V10 grey and dim (2026-10-02).
     // "The midtone level belongs to the scene" - SKILL.md, the grade.
-    if (y != null && cfg.exposure === false) {
-      console.log(`      exposure: luma ${y.toFixed(0)} left as shot ("exposure": false)`);
+    if (y != null && (cfg.exposure === false || NO_GRADE)) {
+      console.log(`      exposure: luma ${y.toFixed(0)} left as shot (${NO_GRADE ? "no grade: section 11" : '"exposure": false'})`);
     } else if (y != null) {
       // MILKY. Gamma up to 1.70 plus +0.10 brightness is not an exposure lift,
       // it is a fog machine: it raises the BLACK POINT, so a dim interior came
@@ -1603,6 +1618,7 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
   // stops at 16; a hand value may go to 18, never past it.
   const sharedAtt = () => {
     if (push?.denoise != null) return +push.denoise === 0 ? 0 : Math.min(18, Math.max(6, +push.denoise));
+    if (!AUTO_DN) return BASE_ATT;            // raw by default: one fixed value, nothing measured
     const g = GROUP_ATT.get(i);
     if (!g) return undefined;                 // a real cut — measure per beat
     if (g.att == null) {
@@ -1617,8 +1633,8 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
           "-vn", "-ac", "1", "-ar", "48000", probe], { stdio: "pipe" });
       } catch {}
       const fl = existsSync(probe) ? noiseFloor(probe) : null;
-      let a = Math.min(18, Math.max(6, cfg.denoise ?? 10));
-      if (cfg.denoise == null && fl != null && fl > -30) a = Math.min(16, Math.round(a + (fl + 30) * 0.8));
+      let a = BASE_ATT;
+      if (fl != null && fl > -30) a = Math.min(16, Math.round(a + (fl + 30) * 0.8));
       g.att = a;
       console.log(`      one shot -> denoise -a ${a} for every beat in it`);
     }
@@ -1720,7 +1736,7 @@ const rot = beatRot ?? (cfg.layout !== "square" && W > H ? 1 : 0);
     // a non-zero sample — but on a run of contiguous beats from ONE clip there
     // is no splice to hide, and fading every join put a small dip in the middle
     // of continuous speech every few seconds. Tal: *"it doesn't flow."*
-    "-af", `highpass=f=70,volume=${push?.mute ? "0" : runGain(i, wav) + "dB"}` + boostF +
+    "-af", `${AUDIO_CLEANUP ? "highpass=f=70," : ""}volume=${push?.mute ? "0" : runGain(i, wav) + "dB"}` + boostF +
       (CONT.get(i)?.prev || ACONT.get(i)?.prev ? "" : ",afade=t=in:st=0:d=0.025") +
       (CONT.get(i)?.next || ACONT.get(i)?.next ? "" : `,afade=t=out:st=${Math.max(0, outDur - 0.025).toFixed(3)}:d=0.025`) +
       `,apad=whole_dur=${outDur}`,
@@ -1760,8 +1776,11 @@ if (cfg.title) {
 // quiet, and catch peaks so the loudest reaction does not clip.
 //   compand  - gentle downward expansion below -40dB, 2:1 above -12dB
 //   asubcut  - remove sub-70Hz wind/handling rumble the beats' highpass missed
-const TIMELINE_AF = "asubcut=cutoff=65," +
-  "compand=attacks=0.02:decays=0.35:points=-70/-80|-40/-34|-20/-16|-6/-5.5|0/-3:soft-knee=6";
+// Section 11 (2026-10-21): raw live audio. The rumble cut and the downward
+// expander push the street floor DOWN, which changes his audio, so they only
+// run with "audioCleanup": true. Loudness (beatGain + loudnorm) always runs.
+const TIMELINE_AF = AUDIO_CLEANUP ? "asubcut=cutoff=65," +
+  "compand=attacks=0.02:decays=0.35:points=-70/-80|-40/-34|-20/-16|-6/-5.5|0/-3:soft-knee=6" : "anull";
 
 // ONE loudness pass over the WHOLE timeline, not per beat. Per-beat loudnorm
 // made every cut jump in level, which is what Tal heard as the audio "messing
