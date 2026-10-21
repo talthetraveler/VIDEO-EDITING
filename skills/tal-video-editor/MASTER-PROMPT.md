@@ -253,3 +253,26 @@ person actually said; one ask ("Send this to someone who…"); three hashtags. W
   cleared, anything you guessed.
 - If a note of his was unclear, do the most likely thing, say what you assumed, and ask the one question that matters.
 - Plain words. No tool names, no internal labels.
+
+## 11. Rules added since (October 2026)
+
+*From Tal's toolkit PDF (`tal_video_toolkit.pdf`, handed over 2026-10-21), verbatim. Where these differ from
+sections 3-4 above, these win.*
+
+- Never a flash. No flash frames or micro-shots anywhere: every shot, B-roll or archive segment is at least 1.2 s.
+  Check every render for segments under 1.2 s before delivering, including jump-cut remnants inside the source clips.
+  (`node system/scripts/min-shot.mjs <render.mp4>`)
+- Never add colour, grade, LUT or saturation. Keep the footage's natural colours. For iPhone HDR footage, convert to
+  SDR as neutrally as possible.
+- Don't change his audio. No noise reduction, denoise or heavy EQ on dialogue, on any video. Raw live audio; only
+  loudness levelling and music ducking.
+- Every video looks like ONE series: same caption font, size and colours (white + yellow key words), same title style,
+  same logo position and size, same outro. Each video tells the full story: setup -> question -> answer -> payoff.
+- Logo: The Social Accords logo small in the top right, the same size and position on every video. Titles and name
+  tags never cover it.
+- Ending: after he says bye, every video ends on his animated Social Accords logo outro (it replaces a plain black end
+  card).
+- Titles (this replaces the title look in section 4): a solid white rounded box, tight to the text, two lines. Text
+  black, heavy condensed italic (Barlow Condensed Black Italic), centred, sentence case, no yellow, no emojis. Placed
+  low, with the box just above the top of the speaker's head, never over the face or head. On screen from the first
+  frame, no fade-in.

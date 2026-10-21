@@ -25,6 +25,12 @@ turn, with a verified status, or it has not been dealt with.**
 | Motion Graphics starter kit (Damiano Caudullo, PDF + zip Tal handed over 2026-10-08) | **in the toolbox as REFERENCE ONLY** (`skills/toolbox/motion-graphics-starter-kit/`). It is a prompt guide for HyperFrames, which the story reels already use: nothing new to install. Tal: "I don't want you to do the motion graphics, just have it as a skill for the reference", then "you can do some". |
 | `daymade/claude-code-skills` -> `youtube-downloader` | **in the toolbox, `--info` verified 2026-10-08** (`skills/toolbox/youtube-downloader/`). A wrapper round yt-dlp, which was already here (`system/bin/yt-dlp.exe` 2026.08.19) and pulled every interview for the story reels. |
 | `Alisa0808/vox-director` | **registered 2026-10-08, NOTHING RUN: needs a paid Atlas Cloud key that is not here.** Only the ffmpeg/Pillow stages are local. See below | `toolbox/vox-director/` (not loadable, on purpose) |
+| `nateherkai/herk-edit-kit` | **installed 2026-10-21, cut stage and cards WORK with no key** - 406 motion cards, all landscape 1920x1080 (none vertical); its only transcriber uploads to ElevenLabs and was not run. See below | `skills/toolbox/herk-edit-kit/` (not loadable, on purpose; own `node_modules`) |
+| `nextwork-projects/ai-video-editor-cooked` | **cloned 2026-10-21, measure + cut stages verified with ZERO keys; posting path (Zernio) present and never run; renderer not installed.** Median shot length matches ours to +-0.02 s; raw cut count 20-25% high on flash/whip transitions. Its retake finder assumes ONE speaker. See below | `skills/toolbox/ai-video-editor-cooked/` (not loadable), run with `AI_EDITOR_HOME=<clone>/.home` |
+| `tenfoldmarc/video-edit-skill` | **installed 2026-10-21, runs end to end with zero keys; its signature move (words behind the head) silently FAILS on iPhone HDR/HLG sources unless the A-roll is retagged/tone-mapped to BT.709 first.** Works on SDR. See below | `skills/toolbox/video-edit-skill/` (clone `3f01f2e`, own `.venv`, not loadable) |
+| `hypit-ai/hypit` | **installed 2026-10-21, local path WORKS with no key**: own clip + WhisperX words + word-anchored captions, rendered locally (~6 min for 13.8 s). Its headline "clone a viral video" job generates people/voices/B-roll through PAID services; none run or connected. See below | `skills/toolbox/hypit/` (not loadable), `node skills/toolbox/hypit/bin/hypit.mjs` |
+| `remotion-dev/remotion`, `heygen-com/hyperframes` | **already installed** (Remotion 4.0.520 in `system/`, HyperFrames CLI 0.8.181). The PDF's three Effect-of-the-Day prompts now run on the Remotion one: `system/scripts/effect.mjs` | `system/src/effects/` |
+| `talthetraveler/VIDEO-EDITING` | **this repo** | - |
 
 ---
 
@@ -747,3 +753,86 @@ Tal, 2026-10-16, asking for Adobe Podcast "Enhance Speech": *"how do I direct li
 - **Separation did NOT split question from answer** on this clip: everything went to `_s1`, `_s2` held a faint echo of one line (-37.5 dB). It separates people talking AT THE SAME TIME; turn-taking speech is pyannote's job.
 - **Speed is uneven:** full enhance took 78 s on the 15 s clip, but 10 min 15 s on a 4 s clip in the setup self-test (same GPU; cause not found). Budget for it; the self-test now uses `--denoise-only`.
 - Tal's verdict by ear: pending (the six versions were sent to him 2026-10-17).
+
+
+---
+
+## Tal's toolkit PDF (2026-10-21) — the three effects, and the repos it lists
+
+`tal_video_toolkit.pdf`: three Effect-of-the-Day prompts (Liquid Glass Velocity Graph, EP. 03 Screen Push, EP. 04
+Over-the-Shoulder Zoom), his master prompt, and six repos. The prompts build a separate `~/EffectOfTheDay` kit on
+Remotion 4.0.535; here they are ported into the main Remotion project (4.0.520) as their own entry point
+(`system/src/effects/index.ts`) so a render never bundles the 5 GB `public/` folder.
+
+```bash
+node system/scripts/effect.mjs glass    <clip> --title REVENUE --end '$10K' --colour gold --at 1
+node system/scripts/effect.mjs screen   <clip> --text "I just came in here" [--when 2-5] --colour amber
+node system/scripts/effect.mjs shoulder <clip> --from "BEFORE | 1 hug | a day" --to "AFTER | 100 hugs | a day" --style transition
+```
+
+Verified on a real 10 s vertical clip (frames looked at): all three render 1080x1920, yuv420p **tv** range, audio kept,
+about 3.5 min per 10 s. Fixes made on the way: paths with spaces (the CLI is called directly, not through a shell),
+iPhone rotation tags, a one-frame word flash (each word now holds >= 3 frames), and face framing (`face-eyes.py`,
+CenterFace, replaced Haar, which framed a hand). Master prompt section 11 is in `MASTER-PROMPT.md`.
+
+## nateherkai/herk-edit-kit - installed 2026-10-21, cuts and cards work, the cards are landscape only
+
+| | |
+|---|---|
+| What it is | Nate Herk's HyperFrames editing kit (MIT): 15 skills (`edit-video`, `short-form-edit`, `cut-silences`, `cut-mistakes`, `motion-showreel`, `style-library`, `video-storytelling`, ...), a 406-card motion-graphics library, 2 scene templates, 12 sample projects. |
+| Where | `skills/toolbox/herk-edit-kit/` at `10511e5`. Own `node_modules` (364 MB, `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm ci`). It pins HyperFrames **0.7.109**; the global one is 0.8.181. |
+| Code read before running | Hosts: `api.elevenlabs.io` (`scripts/transcribe-elevenlabs.mjs` UPLOADS the audio; `motion-showreel/scripts/sfx.mjs`), `api.kie.ai` (paid image generation), and OpenAI / ClickUp / Linear only in old sample projects. Cards pull GSAP from jsdelivr and Google Fonts at render. It posts nothing. None of the upload or paid scripts were run. |
+| Keys | The local path needs none. `ELEVENLABS_API_KEY` is in `system/.env`, but using it sends his audio to ElevenLabs: ask first. |
+| Verified | `npm test` 11/11, `npm run check` 406 cards 0 errors. Real speech over a 1080x1920 testsrc: `cut-silences --apply` 11.00 -> 6.35 s; `apply-cuts` 6.35 -> 5.37 s, transcript re-timed; a frame after the cut within 2 frames of expected. `t1-stat-odometer` rendered in 95 s. |
+| Cards | 406 (`vox-explainer` 106, `kallaway` 300). **Every card is hard-coded 1920x1080**; forced into 9:16 it letterboxes at 56% width. A vertical card has to be laid out again. |
+| Limits | The cutters trust the transcript alone: WhisperX missed "reciprocate." and the head trim would cut a real word. Cut outputs carry no colour-range tag. The clone has its own `.claude/skills/` + `CLAUDE.md`, picked up only when working inside that folder. |
+| Overlap | `toolbox/hyperframes-video-beats` IS this kit's skill. Its `hyperframes*` skills are older copies of the global ones. Its cutters lose to `autotrim.mjs` + `build-edit.mjs` (no speech-boundary padding). |
+| When | A motion card for a horizontal / explainer piece: pick from `style-library/registry.json`, copy the card + `tokens.css`, fill `data-slot` text, `npx hyperframes lint <dir>` then `render`. For 9:16 use the motion as the design. `cut-mistakes/scripts/find-cut-candidates.mjs <words.json>` as a second opinion on retakes. |
+
+## nextwork-projects/ai-video-editor-cooked — cloned 2026-10-21, measures a style well; its cut is for ONE speaker
+
+"cooked." (MIT). Measures 3-6 videos into a style.json (cut rate, median shot, zooms, pans, caption
+place/size/case/colour by OCR, face framing, wpm), then cuts a talking-head take and styles it with a Remotion
+renderer. Clone `ce6ab73`; venv + models in its own `.home/` (943 MB) via `AI_EDITOR_HOME=<clone>/.home`. The Remotion
+renderer (`setup.py remotion`, ~1 GB) is NOT installed.
+
+Code read: Hugging Face, GitHub, yt-dlp, modelscope.cn (OCR models), Gemini / ElevenLabs only with a key, Modal / AWS
+Lambda opt-in, and **Zernio** (`lib/ai_editor/post.py`) which POSTS to Instagram/TikTok/YouTube. Never run; Tal has no
+Zernio account. `keys.py` reads `.env` in the working folder: never run it from the repo root.
+
+Control test against `nas-explainer.md`:
+
+| ref | ours | cooked |
+|---|---|---|
+| Matthew | 41 cuts, median 1.55 s, 183 wpm | 51 cuts, median 1.57 s, ~182 wpm ex end card |
+| Kitchen | 86 cuts, median 1.13 s, 175 wpm | 105 cuts, median 1.15 s, ~179 wpm |
+
+Median shot and wpm reproduce. Cut COUNT double-counts flash/whip transitions. Caption geometry matched; it MISSED the
+gold key word. On a two-person street clip its retake finder flagged the STRANGER's replies as Tal's retakes and its
+pause trim clipped "doing?". **Reach for it to measure a new reference (a second instrument). Never to cut his
+conversations. Never `post`.**
+
+## hypit-ai/hypit — installed 2026-10-21, LOCAL PATH WORKS (no key); generation needs paid services
+
+| | |
+|---|---|
+| What it is | TypeScript video authoring for agents (Apache-2.0 + no hosted multi-tenant use / no resale). A video is SVML + SVS style sheets + an SVRun file; captions, B-roll and graphics are tied to WORDS in a `<script>`. Pages rendered in headless Chrome, joined with FFmpeg. Its own skill tells the agent to *generate* the material. |
+| Where | `skills/toolbox/hypit/` at `0d36de9` (v0.3.1), own pnpm `node_modules`. Its `.claude/skills/hypit` symlinks are 18-byte stubs on Windows, so nothing loads. |
+| Code read | Hosts: `hypit.ai/v1` (HypiHub OAuth, paid), beatapi, monid, pollo, hiapi, tokendance — media goes only to those generation services. No telemetry, posts nothing. `hypit auth` (Windows PasswordVault) never run. |
+| Verified | Its 8 s chat example: 540x960 yuv420p tv, 65 s to render. A real 13.8 s clip (Yosef Rubin) with WhisperX words and house-style captions -> 1080x1920 yuv420p tv, loudness unchanged (-20.8 LUFS in and out); stills at 2.0 / 9.0 / 12.6 s show the right words. Alignment ~3 min, raster ~6 min. |
+| Wiring | `chromePath` = Remotion's `chrome-headless-shell.exe` (its own Chrome not downloaded). WhisperX via its loopback service on the system Python (whisperx 3.8.6 = its pin). Its managed path needs `uv` (absent), not used. |
+| Gotchas | A caption `tail-frames` past the clip end fails only AFTER the 3-min transcription. **pnpm workspace links loop back on themselves: never run a recursive `du`, `Get-ChildItem -Recurse` or delete sweep over `skills/`** — it recursed to "Filename too long" and hung. |
+| Overlap | Word-anchored captions = `build-edit.mjs` + WhisperX, which renders in seconds. Word-placed B-roll = `find-broll`, except its B-roll is generated. |
+| When | Rarely: a word-locked motion-graphics or chat/board composition that Remotion/HyperFrames make awkward, on his own footage, local. Never his normal edits; never its generation path without Tal agreeing a budget. |
+
+## tenfoldmarc/video-edit-skill — installed 2026-10-21, WORKS with no key, one trap (HDR)
+
+| | |
+|---|---|
+| What it is | `/video-edit` (a creator's own Claude skill): raw talking-head phone clips -> best take per line (EDL by hand from a speech map) -> `assemble.py` (1080x1920 30fps CFR, 4K punch-ins, asserts frame counts) -> `hyperframes remove-background` cutout -> a HyperFrames page (`build.py`, GSAP) with kinetic words BEHIND the head, 3 looks (bold / cool girl / cool dude), SFX, `check_cuts.py` before/after strip. |
+| Where | `skills/toolbox/video-edit-skill/` at `3f01f2e`. `python scripts/setup.py` built `.venv` (faster-whisper, 301 MB). Run scripts with `.venv/Scripts/python.exe`; HyperFrames via `scripts/hf.py` (pinned 0.8.34, telemetry off). |
+| Code read | PyPI, GitHub raw (6 Pixabay SFX), Hugging Face (Whisper), npm, Google Fonts + jsdelivr at render. Uploads nothing, posts nothing. Optional Apify MCP (PAID) only to scrape IG reels for inserts; the template's `publish` script (HeyGen hosting) — never run it. |
+| Verified | Real 13.8 s talking-head proxy, 6-segment EDL: assemble 42 s (324 = 324 frames), medium.en transcribe 80 s, cutout 638 s on CPU (~1 s/frame), render 1 m 51 s -> 1080x1920 H.264 yuv420p bt709, -20.4 LUFS. Frames looked at: words behind the cap present. |
+| THE TRAP | iPhone HLG source: HyperFrames auto-switches to HDR -> HEVC 10-bit, 19 min, and ALL text missing. With `--sdr` the cutout loses its alpha, so every behind-head word vanishes. Fix: `-vf setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709` (+ x264 `-color_*` flags) on the A-roll first; output flags alone do NOT retag. Check `ffprobe color_transfer` before every render. |
+| vs. what we have | Duplicates autotrim/`build-edit.mjs`, our STT, and the cutout (`talking-to-camera-effects.md`). ADDS a working, timed words-behind-the-subject template and the frame-exact assembler. Does NOT match THE STANDARD: lowercase kinetic words, ~-20 LUFS, every word time in `build.py` typed by hand. |
+| When | Tal talking to camera (or one sit-down subject) and the edit wants text behind the head / the serif look: lift `assemble.py` + `cutout.py` + the build.py machinery into the HyperFrames route. Never for street POV compilations. Convert HDR first. |

@@ -18,6 +18,10 @@ They are fully restorable, at the exact commit that is on the laptop:
 | `youtube-clipper` | https://github.com/op7418/Youtube-clipper-skill | `f31f077` |
 | `ai-youtube-shorts-generator` | https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator | `3d11f2e` (then apply `patches/ai-youtube-shorts-generator-opencv5.patch`) |
 | `viral-clips-extractor` | https://github.com/gfratmct/viral-clips-extractor | `8d122ac` |
+| `ai-video-editor-cooked` | https://github.com/nextwork-projects/ai-video-editor-cooked | `ce6ab73` (tool venv + models in its own `.home/`: `AI_EDITOR_HOME=<clone>/.home python plugins/ai-editor/skills/setup/scripts/setup.py venv` then `... model`) |
+| `herk-edit-kit` | https://github.com/nateherkai/herk-edit-kit | `10511e5` (then `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm ci` inside it) |
+| `video-edit-skill` | https://github.com/tenfoldmarc/video-edit-skill | `3f01f2e` (then `python scripts/setup.py` inside it: builds its own `.venv`) |
+| `hypit` | https://github.com/hypit-ai/hypit | `0d36de9` (then `npx --yes pnpm@10.33.0 install --frozen-lockfile` inside it; Apache-2.0 with extra conditions) |
 
 To restore all six on a fresh machine:
 
@@ -34,6 +38,10 @@ video-use         https://github.com/browser-use/video-use               9575612
 youtube-clipper   https://github.com/op7418/Youtube-clipper-skill        f31f077
 ai-youtube-shorts-generator https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator 3d11f2e
 viral-clips-extractor https://github.com/gfratmct/viral-clips-extractor 8d122ac
+ai-video-editor-cooked https://github.com/nextwork-projects/ai-video-editor-cooked ce6ab73
+herk-edit-kit     https://github.com/nateherkai/herk-edit-kit            10511e5
+video-edit-skill  https://github.com/tenfoldmarc/video-edit-skill         3f01f2e
+hypit             https://github.com/hypit-ai/hypit                      0d36de9
 LIST
 ```
 

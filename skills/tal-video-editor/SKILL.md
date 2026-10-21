@@ -154,6 +154,7 @@ Use `curves` (it holds the endpoints); `eq=contrast` lifts blacks.
 | 3 — the rendered file | `python system/scripts/caption-sync.py <render.mp4> <slug>` |
 | 4, 5 | `node system/scripts/check-beats.mjs <slug>` |
 | 6 | band-energy / `signalstats` |
+| no flash: every shot >= 1.2 s | `node system/scripts/min-shot.mjs <render.mp4>` — exit 1 lists every shot under 1.2 s. Control-tested: a planted 0.5 s shot came back as 2.00-2.50. A whip pan can score as a cut, so a hit means LOOK, not reject |
 
 1, 2 and 7 are judgement. Make them by looking at stills of the opening, each
 retained in-point, and the last 3 seconds — and **say they were judged, not
@@ -226,6 +227,11 @@ that the job actually touches. "I have a toolbox" is not the same as reading it.
 | an INDEPENDENT check on caption timing | `caption-crosscheck.mjs` (AutoSubSync/ffsubsync) | a PASS is real evidence; anything else means **not checked**. It refuses on a montage and loses lock on sparse street speech - `REPOS.md` has the measurements |
 | cutting a person out, a vanish, 3D objects, a split-screen explainer | `formats/talking-to-camera-effects.md` -> `hyperframes-*` skills, `npx hyperframes remove-background` | needs a **clean plate** (2s of the empty room) from the shoot. Not yet built on his footage |
 | a launch video about a PROJECT or a URL | `/brag-slim` (installed skill) | reads a codebase, **not footage**. Never point it at a shoot |
+| an Effect of the Day on a talking clip: liquid-glass graph + counter, LCD screen push word by word, over-the-shoulder zoom with two cards | `node system/scripts/effect.mjs <glass / screen / shoulder> <clip> ...` (header lists every flag; components in `system/src/effects/`, ported from his toolkit PDF) | renders its own entry point, so it does NOT bundle `public/`. Screen push times words from the real transcript (Groq) and holds each >= 3 frames. Shoulder measures the face with `face-eyes.py` and warns when the face moves; **look at the check stills before the render** |
+| text BEHIND the head on a talking-to-camera clip | `toolbox/video-edit-skill/` (assemble -> cutout -> HyperFrames template) — `REPOS.md` | **iPhone HDR silently drops every word: retag to BT.709 first** |
+| measuring a NEW reference's pace + caption geometry, as a second instrument | `toolbox/ai-video-editor-cooked/` (`AI_EDITOR_HOME=<clone>/.home`) | median shot matches ours to 0.02 s; cut count runs high. **Never its cutter on a conversation (one-speaker tool), never `post`** |
+| a word-locked chat/board composition Remotion makes awkward | `toolbox/hypit/` — local path only | ~6 min per 14 s; its generation path is PAID |
+| a motion card (406, landscape only) | `toolbox/herk-edit-kit/style-library/registry.json` — `REPOS.md` has the commands | every card is 1920x1080; for 9:16 take the motion as the design, not the file |
 
 **None of this closes the real gap.** Every failure Tal has flagged was a
 **selection** failure — the wrong moment chosen, a wheelbarrow captioned "FOR

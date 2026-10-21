@@ -3728,3 +3728,23 @@ Tal sent the Social Accords logo ("THE / SOCIAL" white, "ACCORDS" gold, transpar
 
 ## 160. A face blur is checked by a detector on the FINAL render, not by stills every 3 s (2026-10-14)
 Uganda hook 1: stills every 3 s and the helper's proof sheets looked clean, but at 0:52 the baby's eyes showed above the blur for ~0.5 s (the blur box sat low while the head moved). Found only by running CenterFace over every 3rd frame of the final render and flagging frames with one face too many, then zooming in on them. Also: the helper re-wrote the blurred source after hook 1 was built, so the build used a half-finished blur. Rule: build only after the blur job has finished, then scan the final with the detector and zoom on every flag before anything is posted. I had already scheduled it; turned to draft.
+
+## 161. His toolkit PDF: three effects built, section 11 rules written down, two conflicts left open (2026-10-21)
+
+Tal handed over `tal_video_toolkit.pdf` ("lets install and use all the githubs, all the skills, and everything
+implemented to be the ultimate video editor"). It holds three Effect-of-the-Day prompts, his master prompt and six repos.
+
+- **The three effects are now part of the pipeline**, not a separate `~/EffectOfTheDay` kit:
+  `node system/scripts/effect.mjs glass|screen|shoulder <clip>` (components `system/src/effects/`). Rendered and
+  looked at on a real 10 s clip: 1080x1920, yuv420p tv range, audio kept, ~3.5 min per 10 s.
+- **Haar face detection is not good enough for framing.** `face-box.py` took an old woman's hand (a ring, knuckles)
+  for her face and the over-the-shoulder zoom pushed into the hand. `scripts/face-eyes.py` (deface's CenterFace +
+  eye landmarks) found the real face: eyes 0.245 vs 0.234 measured by eye.
+- **Whisper word timings can be 0.02 s apart** ("I" then "just"): a one-frame flash on the screen push. Each word now
+  holds >= 3 frames, pushing the next one later.
+- **Burned-in captions on a reference lie.** The reel read "I just came here"; she says "I just came IN here".
+- **Never a flash < 1.2 s** had no check. `scripts/min-shot.mjs` reads the render; a planted 0.5 s shot came back
+  exactly, and it caught a real 1.0 s opening shot in one of the references.
+- **OPEN, not changed without his yes:** section 11 says no denoise and no grade on any video. `build-edit.mjs` still
+  runs DeepFilterNet per shot by default and SKILL.md still grades blacks to 0 / highlights to 255. Written into
+  `MASTER-PROMPT.md` section 11; the builder defaults wait on his answer.
