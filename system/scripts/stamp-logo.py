@@ -1,7 +1,7 @@
 # The Social Accords mark, top right, on a finished video. Tal, 2026-10-14: "to every single video you ever do you
 # need to add a logo on the top right, of the Social Accords." Run it as the LAST step, on the full-quality render.
 #   python system/scripts/stamp-logo.py <in.mp4> <out.mp4> [--from 0] [--to END] [--logo path.png] [--no-outro]
-# Since 2026-10-21 it also APPENDS the animated Social Accords outro (make-outro.mjs) unless --no-outro.
+# Since 2026-10-21 it also APPENDS his Social Accords outro (assets/brand/social-accords-outro.mp4) unless --no-outro.
 # With no --logo it draws "@thesocialaccords" (bold white, dark outline). When Tal sends a real logo file, save it as
 # assets/brand/social-accords-logo.png and it is used automatically. The picture is re-encoded once (crf 15); sound is copied (re-encoded to AAC when the outro is joined).
 import sys, os, subprocess, json
@@ -37,11 +37,19 @@ x, y = W - im.width - round(44 * k), round(96 * k)       # top right; 96 keeps i
 a, b = arg("--from", "0"), arg("--to")
 en = f":enable='gte(t,{a})" + (f"*lt(t,{b})'" if b else "'")
 # THE OUTRO. Section 11 (approved 2026-10-21): "after he says bye, every video ends on his animated Social Accords
-# logo outro (it replaces a plain black end card)." Appended HERE, after the mark is stamped, so the top-right mark
-# never sits on the outro. --no-outro for a video that must not have one (a collab creator's cut, the Ezel videos).
+# logo outro (it replaces a plain black end card)." HIS file (assets/brand/social-accords-outro.mp4, conformed by
+# make-outro.mjs) is appended HERE, after the mark is stamped, so the top-right mark never sits on it.
+# No file yet -> no outro, said out loud. --no-outro for a collab creator's cut or the Ezel videos.
+TAG = "setparams=range=tv:colorspace=bt709:color_primaries=bt709:color_trc=bt709"
 outro = None
 if "--no-outro" not in sys.argv:
-    outro = subprocess.run(["node", os.path.join(ROOT, "system", "scripts", "make-outro.mjs")], capture_output=True, text=True, check=True).stdout.strip().splitlines()[-1]
+    r = subprocess.run(["node", os.path.join(ROOT, "system", "scripts", "make-outro.mjs")], capture_output=True, text=True)
+    if r.returncode == 0 and r.stdout.strip():
+        outro = r.stdout.strip().splitlines()[-1]
+    elif r.returncode == 3:
+        print("no outro added: his outro file is not in assets/brand/ yet (social-accords-outro.mp4)")
+    else:
+        sys.exit(f"outro could not be prepared: {r.stderr.strip()}")
 probe = json.loads(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,r_frame_rate:format=duration", "-of", "json", src], capture_output=True, text=True).stdout)
 has_audio = any(st["codec_type"] == "audio" for st in probe["streams"])
 if outro:
@@ -49,14 +57,16 @@ if outro:
     dur = float(probe["format"]["duration"])
     # the film's sound gets an 80 ms fade at its very end so the join to the silent outro does not click
     a0 = f"[0:a]aresample=48000,aformat=channel_layouts=stereo,afade=t=out:st={max(0, dur - 0.08):.3f}:d=0.08[a0];" if has_audio         else f"anullsrc=r=48000:cl=stereo,atrim=0:{dur:.3f}[a0];"
-    graph = (f"[0:v][1:v]overlay={x}:{y}{en},setsar=1[v0];"
-             f"[2:v]scale={W}:{H}:flags=lanczos,fps={fr},format=yuv420p,setsar=1[v1];" + a0 +
+    # TAG = range + all three colour fields INSIDE the graph. ffmpeg 9 writes the range only with all four set:
+    # "-color_range tv" alone, or setparams=range=tv alone, left an untagged source "unknown" (measured 2026-10-21)
+    graph = (f"[0:v][1:v]overlay={x}:{y}{en},setsar=1,{TAG}[v0];"
+             f"[2:v]scale={W}:{H}:flags=lanczos,fps={fr},format=yuv420p,setsar=1,{TAG}[v1];" + a0 +
              "[2:a]aresample=48000,aformat=channel_layouts=stereo[a1];[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]")
     cmd = ["ffmpeg", "-v", "error", "-y", "-i", src, "-i", png, "-i", outro, "-filter_complex", graph, "-map", "[v]", "-map", "[a]",
            "-c:v", "libx264", "-crf", "15", "-preset", "medium", "-pix_fmt", "yuv420p", "-color_range", "tv",
            "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out]
 else:
-    cmd = ["ffmpeg", "-v", "error", "-y", "-i", src, "-i", png, "-filter_complex", f"[0:v][1:v]overlay={x}:{y}{en}[v]", "-map", "[v]", "-map", "0:a?",
+    cmd = ["ffmpeg", "-v", "error", "-y", "-i", src, "-i", png, "-filter_complex", f"[0:v][1:v]overlay={x}:{y}{en},{TAG}[v]", "-map", "[v]", "-map", "0:a?",
            "-c:v", "libx264", "-crf", "15", "-preset", "medium", "-pix_fmt", "yuv420p", "-color_range", "tv", "-c:a", "copy", "-movflags", "+faststart", out]
 subprocess.run(cmd, check=True)
 os.remove(png)

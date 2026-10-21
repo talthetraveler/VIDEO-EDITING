@@ -3,8 +3,6 @@ import { CalculateMetadataFunction, Composition, Folder } from "remotion";
 import { LiquidGlassGraph } from "./LiquidGlassGraph";
 import { ScreenPush } from "./ScreenPush";
 import { OverTheShoulder } from "./OverTheShoulder";
-import { LOGO_OUTRO, LogoOutro } from "./LogoOutro";
-import type { LogoOutroProps } from "./LogoOutro";
 import { LIQUID_GLASS_GRAPH, OVER_THE_SHOULDER, SCREEN_PUSH } from "./settings";
 import type { LiquidGlassGraphProps, OverTheShoulderProps, ScreenPushProps } from "./settings";
 
@@ -26,7 +24,5 @@ export const EffectsRoot: React.FC = () => (
       fps={30} durationInFrames={300} defaultProps={SCREEN_PUSH} calculateMetadata={fromClip<ScreenPushProps>()} />
     <Composition id="OverTheShoulder" component={OverTheShoulder} width={1080} height={1920}
       fps={30} durationInFrames={300} defaultProps={OVER_THE_SHOULDER} calculateMetadata={fromClip<OverTheShoulderProps>()} />
-    <Composition id="LogoOutro" component={LogoOutro} width={1080} height={1920} fps={30} durationInFrames={90}
-      defaultProps={LOGO_OUTRO} calculateMetadata={({ props }: { props: LogoOutroProps }) => ({ durationInFrames: Math.round(props.seconds * 30) })} />
   </Folder>
 );

@@ -433,13 +433,15 @@ covers the top-right logo; when the head is too high for that it goes under the
 chin and the build says **LOOK at it**. `"titleY"` overrides; `"titleStyle": "pill"`
 brings back the old white/yellow pill for re-cuts of earlier series.
 
-**THE OUTRO (section 11, built 2026-10-21):** every video ends on the animated
-Social Accords logo (3 s: "THE SOCIAL" into focus, "ACCORDS" rises, a light
-sweep across the gold, then @thesocialaccords + "Using social media to spread
-positivity and fight hate"). `stamp-logo.py` — already the last step — appends
-it after stamping, so the top-right mark is never on it. `--no-outro` for a
-collab creator's cut or the Ezel videos. It replaces the old black end card:
-do not also set `"endCard"` in a `title-captions` spec.
+**THE OUTRO (section 11) is HIS file.** Tal, 2026-10-21, on one designed here:
+*"forget that, I'll give you the outro file."* Drop it at
+`assets/brand/social-accords-outro.mp4` (or .mov/.webm). `make-outro.mjs` conforms
+a copy once (1080x1920 fitted on black, 30 fps, limited range, stereo AAC) and
+`stamp-logo.py` — already the last step — appends it after stamping, so the
+top-right mark is never on it. **Until the file is there, no outro is added and
+`stamp-logo.py` says so** — never stand in a made-up one. `--no-outro` for a
+collab creator's cut or the Ezel videos. It replaces the old black end card: do
+not also set `"endCard"` in a `title-captions` spec.
 
 **But the footage wins.** If the default position would cover a face, eyes, a
 sign, or the object being talked about, **move it** — and keep it moved for that

@@ -3766,7 +3766,10 @@ animated Social Accords logo outro into the renderer."*
   top-right logo (ends y 203) and the crown; on his POV street footage faces sit high, so it often lands UNDER the
   chin instead, and the build says so. Tested: steakhouse reel -> "above the head (crown 750 px)", box ends 728;
   Uganda POV -> "under the chin". On a multi-person shot it follows the biggest face - LOOK at the opening.
-- **Outro:** `src/effects/LogoOutro.tsx`, rendered once by `make-outro.mjs` (cached in `projects/_brand/`, keyed by the
-  logo + component), appended by `stamp-logo.py` after the mark, with an 80 ms audio fade at the join. Tested:
-  8.7 s cut -> 11.73 s, yuv420p tv, every shot >= 1.2 s. There was no outro file from him: this one is designed from
-  his logo PNG and the end-card words of LESSONS 155. **His first look at it is the real test.**
+- **Outro: HIS FILE, not one made here.** An outro was designed from his logo (LogoOutro.tsx) and shown; Tal:
+  *"forget that, I'll give you the outro file."* Removed. `stamp-logo.py` now appends
+  `assets/brand/social-accords-outro.*` (conformed by `make-outro.mjs`, fitted on black, never cropped) and adds
+  NOTHING until that file exists. Lesson: a brand asset he owns (an outro, a logo, a sting) is asked for, not invented.
+- **ffmpeg 9 drops the colour-range tag** unless range + colorspace + primaries + trc are all set INSIDE the graph
+  (`setparams=...`). `-color_range tv` alone and `setparams=range=tv` alone both gave "unknown" on an untagged
+  source; all four gave "tv". Fixed in `stamp-logo.py` and `make-outro.mjs`.
