@@ -3773,3 +3773,19 @@ animated Social Accords logo outro into the renderer."*
 - **ffmpeg 9 drops the colour-range tag** unless range + colorspace + primaries + trc are all set INSIDE the graph
   (`setparams=...`). `-color_range tv` alone and `setparams=range=tv` alone both gave "unknown" on an untagged
   source; all four gave "tv". Fixed in `stamp-logo.py` and `make-outro.mjs`.
+
+## 2026-10-27 - "thats nto the lgoo": the logo is FLAT, and "small" is 170 px
+
+Re-stamping the Chris collab rough drafts and Ezel Day 310-314, Tal rejected the 3D gold logo, then a first flat
+version (too yellow, too bold), and sent the real mark: *"this is the logo."*
+
+- **The mark:** THE (white, bold, wide tracking) / SOCIAL (white, medium) / ACCORDS (flat muted gold, bold, widest).
+  No bevel, no gradient. `system/scripts/make-logo-flat.py` rebuilds `assets/brand/social-accords-logo.png` from
+  those measurements (Montserrat, tracking solved to each line's width); the old 3D one is kept as `-gold3d.png`.
+- **"It doesn't need to be so big ... nothing too big"** = `stamp-logo.py --width 170` (on a 1080-wide frame),
+  top right. The 260 px default stays for his own reels until he says otherwise.
+- **Collabs and Ezel cuts: `--no-outro`, and their old end screen is trimmed off** (*"No need the ending screen"*).
+  The end card was found with `blackdetect`, the cut made a few frames before it.
+- **A swear in a collab is fixed in the AUDIO only** when the burned caption already reads clean: Day 1 "pure
+  f***ing soul" muted 107.18-107.62 (word from Groq timestamps), verified -91 dB inside, -3 dB either side.
+- Lesson: when he sends a brand image, rebuild FROM THAT IMAGE and compare side by side before stamping anything.

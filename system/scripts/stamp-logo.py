@@ -1,6 +1,6 @@
 # The Social Accords mark, top right, on a finished video. Tal, 2026-10-14: "to every single video you ever do you
 # need to add a logo on the top right, of the Social Accords." Run it as the LAST step, on the full-quality render.
-#   python system/scripts/stamp-logo.py <in.mp4> <out.mp4> [--from 0] [--to END] [--logo path.png] [--no-outro]
+#   python system/scripts/stamp-logo.py <in.mp4> <out.mp4> [--from 0] [--to END] [--logo path.png] [--width 260] [--no-outro]
 # Since 2026-10-21 it also APPENDS his Social Accords outro (assets/brand/social-accords-outro.mp4) unless --no-outro.
 # With no --logo it draws "@thesocialaccords" (bold white, dark outline). When Tal sends a real logo file, save it as
 # assets/brand/social-accords-logo.png and it is used automatically. The picture is re-encoded once (crf 15); sound is copied (re-encoded to AAC when the outro is joined).
@@ -19,7 +19,7 @@ logo = arg("--logo") or os.path.join(ROOT, "assets", "brand", "social-accords-lo
 png = out + ".logo.png"
 if os.path.exists(logo):
     im = Image.open(logo).convert("RGBA")
-    w = round(260 * k)
+    w = round(float(arg("--width", "260")) * k)   # --width: logo width on a 1080-wide frame (Tal 2026-10-27: "small" = 170)
     im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
 else:
     font = next(f for f in [os.path.join(ROOT, "system", "projects", "ai-story-kit", "fonts", "Montserrat.ttf"), "C:/Windows/Fonts/arialbd.ttf"] if os.path.exists(f))
