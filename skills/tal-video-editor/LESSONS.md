@@ -3789,3 +3789,14 @@ version (too yellow, too bold), and sent the real mark: *"this is the logo."*
 - **A swear in a collab is fixed in the AUDIO only** when the burned caption already reads clean: Day 1 "pure
   f***ing soul" muted 107.18-107.62 (word from Groq timestamps), verified -91 dB inside, -3 dB either side.
 - Lesson: when he sends a brand image, rebuild FROM THAT IMAGE and compare side by side before stamping anything.
+
+## 163. iCloud footage: download "Most Compatible", never the HDR original (2026-10-28)
+
+Tal, after 21 clips came down from iCloud Photos as iPhone HDR (HEVC 10-bit HLG): *"dont download hdr"*.
+- In iCloud.com Photos, use the download menu's **Most Compatible** option (H.264 SDR), not Unmodified Original.
+- Download only the takes that are going in the cut. Listen first is not possible in the browser (no audio): shortlist
+  by thumbnail, download the shortlist, transcribe, keep the good takes, delete the rest the same day.
+- Groq word timestamps on these iPhone clips smeared silence into words ("Okay," 0.30-1.72 when it ended at 0.55), so
+  the self-review gate flagged false head cuts and its suggested in-points DROPPED real words ("you know Jews", "it",
+  "My"). Set boundaries from the audio level (50 ms RMS, speech above about -30 dB) or WhisperX on a short window,
+  never from the gate's suggestion alone.
