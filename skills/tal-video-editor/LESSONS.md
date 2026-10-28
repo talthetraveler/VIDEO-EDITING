@@ -3804,3 +3804,21 @@ Tal, after 21 clips came down from iCloud Photos as iPhone HDR (HEVC 10-bit HLG)
   the self-review gate flagged false head cuts and its suggested in-points DROPPED real words ("you know Jews", "it",
   "My"). Set boundaries from the audio level (50 ms RMS, speech above about -30 dB) or WhisperX on a short window,
   never from the gate's suggestion alone.
+
+## 164. Arab Q&A: no questions, open on the greeting; snap off on smeared word times (2026-10-28)
+
+Tal, on the Tel Aviv promenade man (IMG_1090/1092): *"start with the part where I say, I'm Jewish, you are Muslim. I
+love you. And then you go into the video where he speaks about how happy he is. You don't need to ask - I don't need
+the questions. We just need him speaking and sharing his story."*
+- On a stranger's story, cut Tal's questions out; the answers carry it. Open on the warm exchange, in the order he
+  names, even if that reorders the clip ("I'm Jewish / you're Muslim" before "I love you, habibi").
+- build-edit's boundary snap trusts Groq word spans. On this footage they were smeared ("حبيبي" 1.57-5.68), so snap
+  moved measured in-points into the previous beat and the same line played twice. With boundaries set from sound
+  levels and WhisperX, set `"snap": false`; the self-review gate then still flags those same smeared spans - check
+  each flag against WhisperX before acting on it.
+- Groq's Arabic->English translation read كره (hate) as كرة and wrote "football". Hand-translate Arabic captions and
+  say they are unverified by a native speaker.
+- The builder drops a word that a previous caption already said: "God keep you" after "Thank God" rendered as "KEEP
+  YOU". Read the rendered caption list (selfreview 2b), not the segments.
+- An iCloud zip exported "Most Compatible" came down as Apple-transcoded H.264 **720p** (3.3 Mbps); the originals are
+  1080p/4K HEVC. Cut from the 720p, then fetch only the used clips' originals for the final.
