@@ -24,7 +24,10 @@ copy its contents into anything that gets pushed.
 |---|---|
 | `formats/no-money-voiceover.md` | how a voiceover tells a story: say it, see it. Read for every VO |
 | `formats/no-money-templates.md` | the menu: 106 reel templates and the lead reference of each |
-| `assets/references/sidequester-kit/` | local only: his full doc, the master playbook (466 reels, country plans, scripts), transcripts by country, the footage index, the recreate notes, his voice notes on travel |
+| `formats/no-money-recipes.md` | every reel format with exact timings, what he praised, songs |
+| `formats/no-money-grades.md` | every color grade as an ffmpeg filter, letterbox sizes, text styles |
+| `formats/no-money-episodes.md` | Ep1 lessons, Ep2, the India brief, what comes after, Tab's unfinished list |
+| `assets/references/sidequester-kit/` | local only: his full doc, the master playbook (466 reels, country plans, scripts), transcripts by country, the footage index, the recreate notes, his voice notes on travel, `findings/` (684 KB of reading notes on all of it, including each country's story) |
 | `system/tools/sidequester/` | `footage_search.py`, `grade_match.py`, working here |
 
 ---
@@ -150,15 +153,32 @@ own words or the book, and flag what you cannot confirm.
 5. **Fill the sheet before cutting:** `time | line | picture word | shot | clip id`. Say it, see it
    (`no-money-voiceover.md`), then the mute test.
 6. **Build on the reference's exact cut times**, 1080x1920 at 30 fps. Tone-map iPhone HDR first
-   (section 5).
+   (section 5). Lay the reference's own audio under the cut and check every cut lands on the same
+   frame, side by side. He rejected a recreate as *"not the same at all ... Whenever you hear a beat
+   in the sound, you need to have a cut"*; this method fixed it. Use a song's own audio, never a
+   version with the singer stripped out (*"like a bicycle ... it's weird"*: that warble was Tab's).
 7. **VO.** His ElevenLabs professional voice (*"U can use v4"*; the key is in `system/.env`). A
    script built on his real lines, every unverifiable fact flagged.
 8. **Check everything before he sees it** (section 7).
-9. **Preview in chat.** One line, then the video. **Name the song** so he can add it on Instagram.
-   Keep a notes file: script, shot table, song, flags.
+9. **Preview in chat.** One line, then the video, small: *"Stop sending me in HD."* The song stays
+   in the preview (*"Need music"*) and is **named** so he can add it on Instagram. Keep a notes file:
+   script, shot table, song, flags. If he asks to finish it himself, he wants only a Final Cut XML:
+   *"You don't need the zip of the footages, I already have the footages."*
 10. **After his yes:** HD final -> Frame.io -> **Metricool, brand The Side Quester** (*"traveling my
     videos goes to the sidequester"*; anything about Israel goes to The Social Accords).
 11. **Add what he corrected** to `LESSONS.md`, the same turn.
+
+**Where the footage is.** Frame.io, project THE SIDE QUESTER, is the map; the Seagate drive
+(`A:\COPY 12`, read-only) is the fuller copy. Read originals from the drive when it is plugged in,
+matching by name AND size. **File names repeat across countries (`C0058`, `IMG_0001`): cut by asset
+id or full path, never by name alone.** Every clip's status is in the kit's `harddrive-listing.csv`.
+On 2026-10-30, 9,869 videos (688 GB) on the drive were not in the index: Georgia, Canary Islands,
+Thailand, Japan, Rhodes, California, Cyprus, Bulgaria, Albania, Portugal, South of France after
+Portugal, Miami, Malaysia. Thailand, Malaysia, Japan and California are in the main story. Working
+files go in `A:\CLAUDE WORK`, never in `COPY 12`. Never create or move folders on Frame.io.
+
+**Sort by trip, not only by country.** Check when a clip was filmed: *"you had to check when the
+videos was filmed."* Spain alone was two separate trips.
 
 **Footage order inside every country (his):** finished long-form -> short-form edits -> iPhone /
 iCloud -> GoPro -> Sony -> drone -> 360 -> photos. Long-form edits come first even when they are
@@ -181,7 +201,19 @@ Decide which one first. Numbers are Tab's measurements of his references.
 
 Also: explainers about a place (*"explainer videos for different places ... SFX, VFX, voiceover
 style"*), and the negotiation itself (*"people trying to get something for free by making
-videos, and then join the process"*).
+videos, and then join the process"*). A negotiation reel opens on the approach: *"This video should
+just start with me going up to him."*
+
+**Sound rules from his rejections:**
+
+- **Never lay a voiceover over a shot where he is talking on camera** (China #04: *"The audio is wrong
+  and clips should be checked before"*). His live line plays on its own lip-synced shot; VO goes only
+  on shots where nobody speaks.
+- No dead gaps. Tab found gaps of up to 3.5 s and a line that *"stopped speaking midway"*.
+- A moving shot is fine when the moment itself is the point (the bungee: *"12 is ok"*).
+
+**His bar for a shot:** *"you should always identify my best shots before putting them in."* The
+Turkey reel earned *"Great"* only when redone with the best drone shots, all steady.
 
 **Cinematic rules (C), from the 62 reels he sent on Oct 24:**
 
@@ -339,7 +371,15 @@ Presets live in the kit's `scripts/reflib/presets.json` (desert, green, snow, mo
 | recreate a reference, word-locked captions and pop-ups | **Hypit**, local path only: `node skills/toolbox/hypit/bin/hypit.mjs`. See `REPOS.md`. ~6 min per 14 s. **It replaces outside reel-cloning services; never its paid generation** |
 | motion: HUD, trade card, counters, cards, maps | Remotion (`system/src/`, `system/src/maps/RouteMap.tsx`), HyperFrames (local skills) |
 | one effect at a number or punchline | `system/scripts/effect.mjs`, at most one per video |
+| a documentary insert: route, counter, archive board | **lemo-opuscar**, drawn in code, no key. Always `LEMO_COLOR=bt709`. Tested on a vertical route + counter; a full style film not yet rendered |
+| a hand-drawn circle or arrow on a detail | **p5.brush**, transparent frames, overlaid with ffmpeg. `scaleBrushes` once, never per frame |
+| sound effects on the exact word | **`mix_sfx.py`** from `claude-youtube-editor`, measured +5 ms. Gain about -13, duck off, his own SFX (its library is not cleared) |
+| dialogue-free B-roll cut to a song | **BeatSync-Engine**, on the click or one frame early. Music only, drops source sound, so never a conversation. Prepare clips to 9:16 first: portrait clips came out stretched |
+| long-form title + 3 thumbnail ideas | `/packaging` rules in `claude-youtube-editor`, as text. Rendering a thumbnail needs a Gemini key and a face kit: not done |
+| one frame at a time in a short window | **`watch-video`**, our patched copy. Fully local, no speech |
 | his voice | ElevenLabs, his professional voice |
+| music and SFX | his Sound Design folder on Google Drive, by mood, one track at a time. Licence unknown: say which track |
+| caption, hook, script, plan | `ig-caption`, `ig-reel`, `ig-viral`, `ig-repurpose`, `ig-plan`, `ig-carousel`. Words only; the hook score is never a gate |
 | cut check | `selfreview.mjs`, `min-shot.mjs`, `toolbox/ai-video-editor-cooked/` |
 | schedule | Metricool, brand The Side Quester |
 
@@ -347,10 +387,13 @@ HeyGen's connector cannot compose or render from Claude Code; only its read tool
 the local HyperFrames skills.
 
 **Not built yet (gaps, none of them guessed around):** the series HUD template · the trade card
-template · cutting to the music beat automatically · a match-cut finder. Build the HUD and the
-trade card once and reuse them every episode.
+template · a match-cut finder. Build the HUD and the trade card once and reuse them every
+episode. Cutting to the beat now works for B-roll only (BeatSync-Engine); a beat-cut section
+inside a talking edit is still not built.
 
-**Several repos Tab used are not installed here,** listed in `REPOS.md`.
+**Tab's repos are tested, with the numbers, in `REPOS.md` -> "The Tab handoff repos".** The ones
+not listed above lost, or cannot run here. **`obi19999/smart-video-reframe` is a malware lure:
+never download it.**
 
 ---
 
@@ -377,7 +420,14 @@ without looking at it · music he did not name · a recap Tal has to sit through
 ## 8. Still open — ask, do not guess
 
 - The 1.2 s floor against the flicker formats (risk-over-regret, beat flicker, how-was-X, photo
-  grids), which are built on 0.2-0.6 s cuts. Never agreed. Default: keep the 1.2 s floor.
+  grids), which are built on 0.2-0.6 s cuts. Most of his favourite reels cut under it. Asked once, he
+  answered *"it needs to be similar to reference"*, which leans toward copying the reference on a
+  recreate, but he never said so directly. Default: keep the 1.2 s floor outside a recreate.
+- Noise cleanup. On Oct 26 he asked for Adobe Podcast on every video; the rule in force is raw
+  audio. Those notes were about Israel reels and VO. Default: raw, until he says otherwise.
+- Whether horizontal cinematic footage may ever be cropped to vertical. Default: never.
+- Facts: his age when he left, the Greece length, the Waorani money raised, the "40 countries" count.
+  Every source differs. Ask before any script states one.
 - Regular episode length: closer to 12-15 min or 20-30 min. Ep1 is settled at 5-7, max 8.
 - Frame.io destination for approved travel finals.
 - The cleared list of risky stories (in `PRIVATE-RULES.md`).

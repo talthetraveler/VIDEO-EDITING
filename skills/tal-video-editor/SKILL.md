@@ -295,7 +295,7 @@ Answer three questions first. Do not load a single specialist skill until you ha
 
 | Signal in the footage or the ask | Format |
 |---|---|
-| **ANY travel video**: The Side Quester, "travel the world with no money", a country folder on Frame.io, a travel reel to recreate, a YouTube episode (2026-10-30). **Anything shot in Israel is separate: never this row** | `no-money-travel` — read it first; it replaces parts of THE STANDARD for travel (grade, music, captions, steady shots). VO reels add `no-money-voiceover`, recreates add `no-money-templates` |
+| **ANY travel video**: The Side Quester, "travel the world with no money", a country folder on Frame.io, a travel reel to recreate, a YouTube episode (2026-10-30). **Anything shot in Israel is separate: never this row** | `no-money-travel` — read it first; it replaces parts of THE STANDARD for travel (grade, music, captions, steady shots). VO reels add `no-money-voiceover`, recreates add `no-money-templates` + `no-money-recipes` + `no-money-grades`, YouTube adds `no-money-episodes` |
 | Meta Ray-Ban POV, handheld, first-person | `pov-meta-glasses` |
 | Walking up to strangers, greetings, giving something | `pov-kindness` |
 | **"Like Erez" / "erezv1" / "fast cuts, fast zooms"**: a staged surprise from two cameras with little dialogue, Tal in the picture as the giver | `erez-fast-cut` — read his reel at 30 fps first; wide → 4-frame zoom → tight → cut; preview before anything |
