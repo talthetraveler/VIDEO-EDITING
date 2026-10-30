@@ -872,16 +872,34 @@ Tal handed over his WhatsApp chat with Tab; these were links he gave Tab. All li
 | `sang-w00/IN2OUT` (`4503579`) | **cannot run.** Trained weights are gone. Non-commercial licence | Drive link 404, control links 200 |
 | `seunghyuns98/VideoColorGrading` (`9d58052`) | **cannot run here today.** Failed loading its first weight file, before reaching the GPU. Use `grade_match.py`. Our low-VRAM patch was never executed; it needs float16 builds first (untested idea). Weights deleted | `OSError: The paging file is too small` (os error 1455); peak VRAM 0 MB, so whether it fits 4 GB is still unknown |
 
-**Added by the travel session; cloned and read, NOT run.** Auto mode blocked running them because the request came from another session, not from Tal. Nothing below is tested:
+**Added by the travel session; run 2026-10-30 once Tal said yes.** No key, no paid call, not installed as plugins. Test file: one 70.5 s reel, plus a real 141.8 s fast-cut reel for shot mode.
 
-| repo | read from the code |
-|---|---|
-| `taoufik123-collab/claude-watch` (`7711231`, MIT) | Local path: ffmpeg frames, one per shot (scene threshold 0.3), a 0-10 s pass, pacing, `report.md`. **Its Whisper is Groq or OpenAI only: no key means frames with no words.** SessionStart hook only prints a status line. `setup.py` writes `~/.config/watch/.env`. Obsidian save happens only if a vault is found (`$WATCH_VAULT_DIR`, `~/Documents/Obsidian`, `~/Obsidian`). |
-| `bradautomates/claude-video` (`03ceb42`, MIT) | Same core, newer, with tests, and it **adds local WhisperX**. Its `setup.py` can install `uv` and CPU torch, so do not run it blind. |
-| `guimatheus92/mcp-video-analyzer` (`e37c864`, MIT) | `tesseract.js` OCR, default languages `eng+por`. Its `prepare` script builds on install. OCR on a title is unmeasured. |
-| `solarssk/video-describer` (`d99e017`, MIT) | Says macOS only, but the Python core falls back from VideoToolbox and mlx-whisper to faster-whisper; `app.sh` is Mac. **Needs a paid AI provider** (Anthropic, OpenAI or Gemini); not run, no provider spent. |
+| repo | verdict | the number that decides it |
+|---|---|---|
+| `taoufik123-collab/claude-watch` (`7711231`, MIT, + our patch) | **the `/watch` to keep, NOT live yet.** Crashed on arrival (`-vsync`, ffmpeg 9); `skills/toolbox/patches/claude-watch.patch`. One frame per shot, 0-10 s hook pass (20 frames at 2 fps), pacing, a report | 3.5 s for a 141.8 s reel. **Its cuts/min is wrong past its frame cap: said 33.9, true 42.3** (80 frames ÷ duration). Use the shot frames; take cut rates from `refscan.mjs` |
+| `bradautomates/claude-video` (`03ceb42`, MIT) | works, second. No patch needed, 100 frames, has tests. No hook pass, no pacing | transcription needs its installer (`uv`, torch), or a Groq, OpenAI or Gemini key; not run |
+| `guimatheus92/mcp-video-analyzer` (`e37c864`, MIT) | **runs, OCR fails on real footage. Do not keep** | control read at 91-95%; **the real title: 0 results.** Unfiltered it gave gibberish, only "ISRAEL" |
+| `solarssk/video-describer` (`d99e017`, MIT) | **runs on Windows, despite its macOS badge.** Needs a paid provider to describe anything | frames + transcribe-only work, 125 s for 7 s on a busy machine. **Defaults to Polish:** "Hey, excuse me" came out "Słuchaj, sorry" |
 
-A `/watch` skill would need Tal's yes before it goes live and an exception in `CLAUDE.md`.
+- **Both `/watch` tools drop to evenly spaced frames under 10 detected shots.** On a slow clip you get a sample, not shots. Neither says so loudly: `claude-watch` prints "likely a static/screen-recorded source".
+- **Without a key neither has words.** `claude-watch` only speaks Groq or OpenAI. Hook word timing was not tested.
+- `claude-watch`: `setup.py` not run, hook not installed, Obsidian off (no vault found). Run the script directly: `python -I system/vendor/tab-handoff/claude-watch/scripts/watch.py <file> --out-dir <scratch> --no-whisper`.
+- `mcp-video-analyzer`: `npm ci --ignore-scripts` skips its own ffmpeg, so it fails until the system one is linked in. Its cache went to the real `%LOCALAPPDATA%` even with a sandboxed home. Deleted. `node_modules` removed, source kept.
+- `video-describer`: writes `.txt` next to the source, so **never point it at `FOOTAGE IN/`** without `--output-dir`. Its Whisper crashes if the calling script has no `__main__` guard on Windows. Set `language` and `output_language` in the config: both default to `pl`. Web page opens on 127.0.0.1 (HTTP 200, 58.7 s to start on a busy machine). `.venv` removed; no provider was called.
+
+**Gyroflow and friends, pasted by Tal 2026-10-30 (*"maybe this can be good"*). Checked on GitHub, NOT installed:**
+
+| repo | what is true | status |
+|---|---|---|
+| `gyroflow/gyroflow` | real, GPL-3.0, 9.6K stars, v1.6.3, Windows zip 45 MB | **Its supported list names Insta360 action cameras (OneR, OneRS, GO, Ace, Ace Pro) and no X series.** The pasted claim that it stabilises 360 `.insv` is not backed by its README |
+| `gyroflow/gyroflow-plugins` | real, GPL-3.0, OpenFX and Adobe | needs Resolve or Premiere, neither in this pipeline |
+| `Insta360Develop/Desktop-MediaSDK-Cpp` | real, official, no licence file, no release files | likely the true route for X-series stitching; not tried |
+| `alex-plekhanov/insvtools` | real, Apache-2.0, last push 2024, Windows zip 6 MB | a file toolkit, not a stabiliser |
+| `eltorio/reframe360XL` | GitHub answers "Moved Permanently" | not followed |
+
+No `.insv` is in `FOOTAGE IN/`, so none of this can be tested until Tal hands over one raw clip.
+
+`claude-watch` going live as `/watch` still needs Tal's yes and an exception in `CLAUDE.md`.
 
 **Refused: `obi19999/smart-video-reframe` is a malware lure. Never download it.** Its README points every download link at a zip inside `src/utils/` and says to double-click an `.exe`. Both zips hold `Launcher.cmd`, `luajit.exe` (one also `lua51.dll`) and a ~309 KB opaque `.txt`: a loader plus hidden payload. The Python beside them is cover. Names listed only; nothing was extracted or run; the clone was deleted. So there is no comparison with Autocrop-vertical, which stays the tool. Same family as the fake Adobe repo above: **a README that says "download this zip" instead of "pip install" is the tell.**
 

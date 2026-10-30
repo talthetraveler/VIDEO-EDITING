@@ -3861,6 +3861,8 @@ His notes on Tab's Israel POV reels, Oct 26, belong to the bible side:
 - "The captions are wrong sometimes": read them against the audio.
 - A voice or music bed under a POV that sounds odd gets called out ("It's weird"): check what is really under the talk.
 
+Tal, same day: *"The meeting a X in a country, that's a different type of video edit."* It is its own format. Never file it under travel, and a reel of that format is no reference for a travel cut.
+
 ## 167. A broken tool he will use gets fixed, not just written down (2026-10-30)
 
 I measured `beat-synced-edit` cutting 210 ms early on every cut and recorded "do not use". Tal: *"U NEED TO FIX THIS"*, because this job is mostly his 360 clips. A verdict is not the end of the job when he needs the tool: fix it, then re-measure.
