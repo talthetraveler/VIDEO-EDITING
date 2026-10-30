@@ -109,7 +109,8 @@ used on every video:
    ```
    Read the `linked` lines: a talking clip and the shots that prove it are already paired. Then
    **pull a frame of every candidate and LOOK.** *"You gotta actually watch a clip, not just
-   transcribe them."* The index is a retrieval hint; 20,863 records have no quality measurement.
+   transcribe them."* The index is a retrieval hint, built Oct 26: 31,325 unique videos, 4,099
+   flagged `cinematic_ok`. Anything added to Frame.io since then is not in it.
 5. **Fill the sheet before cutting:** `time | line | picture word | shot | clip id`. Say it, see it
    (`no-money-voiceover.md`), then the mute test.
 6. **Build on the reference's exact cut times**, 1080x1920 at 30 fps. Tone-map iPhone HDR first
