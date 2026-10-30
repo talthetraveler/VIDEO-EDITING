@@ -232,3 +232,127 @@ Songs, as fingerprinted by Tab. **All commercial. Use the reference's song or a 
 | the trending set that recurs | Papaoutai x4, Wavin' Flag x3, Old Man x3, STORM II x2, Timber x2 |
 
 Where a song is unidentified (a made stand-in, an original audio), say so. Do NOT invent a title; "Use audio" on the original reel is the clean route.
+
+---
+
+## DeIjJbwiP7u
+
+Reference sent by Tal 2026-10-30 ("This is nice we can do with my story"). A travel creator's 10.5 s dream montage. Measured from the file (720x1280, 30 fps, 10.53 s) at `assets/references/instagram-harvest/tal-2026-10-30/` (gitignored). Looked at: a 15-frame contact sheet, one frame per shot; the cut detector's times matched every shot change on it.
+
+**Template: T79, "Expectation vs reality" / two-beat caption flip (section 4).** It is the T79 lead reference. Correction to the catalogue note: the captions are a quoted question held on shot 1 ("What is your dream?"), then "The dream." on every later shot. There is no "Normal trip" line in the file.
+
+- **Hook words:** the question, in quotes, small white sans, over a wide shot of a woman standing on a green ridge with a walking pole. Face in frame from 0.0 s. Hold 3.6 s.
+- **Structure:** hold 0-3.6 s, then 14 more shots to 10.53 s. Cuts at 3.60, 4.13, 4.57, 5.03, 5.57, 6.07, 6.60, 7.03, 7.53, 8.10, 8.70, 9.17, 9.63, 10.07. Last shot 0.47 s, no end card, no CTA on screen.
+- **Cut rhythm:** 15 shots, average 0.70 s, median 0.50 s, shortest 0.43 s, longest 3.60 s (the hold). After the hold the cuts sit on a 0.43-0.60 s grid, about one cut per beat at roughly 120 BPM (my estimate from the cut grid, not a measured tempo). First cut lands at 3.6 s, 34% of the runtime.
+- **One activity per shot, none repeated:** ridge hike, running down a road, running into the sea, balloons at sunrise, a festival crowd, snow trek, boat deck, freediving beside a whale, horse ride, scuba, sailing, waterfall, ice climbing, bridge-jump platform, rock scramble. Every shot has a person or a vehicle moving; a person is visible in 14 of 15 frames. Mixed sources (phone, action cam, underwater housing), no uniform grade.
+- **Text:** ONE line the whole reel after the question. White sans, no outline, about 1.7% of frame height (roughly 20 px on 1280), centred horizontally, 34% down from the top (above centre, over sky or water, never over a face). Same position on every shot, nothing animates.
+- **Sound:** a commercial track, not identified (a quiet sung vocal in the hold; whisper.cpp heard only fragments). Integrated -14.1 LUFS, loudness range 1.6 LU, true peak -3.0 dBFS. No speech, no sound effects. Use "Use audio" on the original reel or a track Tal names; never rip it.
+- **Transcript:** none exists. Whisper on the audio returned sung fragments and "[Music]" only; the frames show nobody speaking.
+- **What makes it work:** the question costs nothing and sets the bar; the 3.6 s hold lets the answer feel like a release; then 14 different physical "yes" pictures in 7 s, each readable in under 0.5 s because the subject is big and moving. The words never change, so the eye never leaves the pictures.
+
+**How to do it with Tal's story (his real facts, public-safe only).** The dream is the Side Quester premise: the destination never mattered, the side quests did (book p14). Caption pair: a quoted question on the hold, then one short answer line, for example "What was your dream at 17?" then "Mine:" (wording for Tal to approve; do not reuse the reference's exact line). Use real, dated footage only; never imply old clips are happening today.
+
+- Hold (3.6 s, Tal in frame, wide, calm): Pakistan, Sony C0004, Tal walking a gravel path under snow peaks. `a pakistan/sony videos/C0004.MP4` id 79d77fc4-bcf7-420a-9bfd-fde157238439.
+- Drop, 12-14 shots at 0.45-0.6 s, one activity each. Best-matching clips (index descriptions, not all viewed; confirm each by eye before use):
+  1. Indonesia waterfall, arms out, Sony. `indonesia/sony clips/C1703.MP4` id 1cb8df58-1017-42c8-a670-637e8616285d
+  2. Indonesia waterfall, arms raised, phone. `indonesia/phone clips/IMG_2894.MOV` id a70c5f79-3e6f-492c-9c3c-abc0a959561b
+  3. Philippines canyon leap, red helmet, big splash. `PHILLIPINES/phone clips/IMG_0467.MOV` id 11cb9258-91f8-4695-8190-c3ea94bee580
+  4. Philippines canyon, countdown then leap (cut to the leap). `PHILLIPINES/phone clips/IMG_0476.MP4` id 2605f9ec-cd22-4089-aa0d-ef630d8b156f
+  5. Philippines hitchhiking selfie from the truck. `PHILLIPINES/phone clips/IMG_1534.MP4` id ec7c85c3-7b53-4e0d-8eb2-05e52f1e5dc1
+  6. Philippines truck-bed coastal ride. `PHILLIPINES/phone clips/IMG_0595.MOV` id 793097dc-e83c-46dc-9459-fae7d2df60b8
+  7. Greece turquoise river and waterfall. `Greece/IPHONE CLIPS/IMG_1557.MOV` id 3309b446-4fb3-40ec-ae30-664a76a34cdd
+  8. Greece quad bike on the coast road. `Greece/IPHONE CLIPS/IMG_2384.MOV` id 5d2582c0-468f-4d6f-92d2-69b5854ca8ea
+  9. Laos kayak into sunset. `Laos/IPHONE CLIPS/IMG_6081.MOV` id 99c9167a-6c4b-4e5c-8362-619d4c645531
+  10. Ecuador boat across the lake at sunset, Sony. `ECUADOR DONe/sony videos/00267.MTS` id b731db9b-3e8d-4fc0-9856-2dc43761b969
+  11. Pakistan two backpackers under snow peaks, Sony. `a pakistan/sony videos/C0006.MP4` id c060a62d-2243-4354-904e-d9e444b61776
+  12. Pakistan skateboarding a village road (70 s source, take a 0.5 s slice). `a pakistan/gopro 1 vlog/DJI_20250802172118_0054_D.MP4` id fdc7af6f-ab2f-44b9-a34e-8b32654d41a5
+  13. Taiwan drone viewpoint over a red-roofed village (47 s horizontal source; letterbox or tracked crop). `taiwan/drone/DJI_0052 (2).MP4` id 6df1607f-f11b-4ab0-a1c7-83b24132a79f
+- Rules: one clip per country where possible; no kids in close shots; vertical phone clips need no reframe, horizontal Sony and drone clips follow the letterbox-or-crop default in section 9; all mixed sources get the same plain look, as the reference does.
+- Build order: caption pair first, cuts on the beat of the chosen track, then verify with `selfreview.mjs`.
+
+---
+
+## DPPK-APD1vX
+
+Reference sent by Tal 2026-10-30 ("Can make like this obviously relating to my story"). A creator's first-person "how I went from nothing" life story, 46.1 s, 720x1280, 25 fps. Looked at: a 26-frame contact sheet (one frame per shot) plus one full-resolution frame. It is "Part 2" of a series (the end card says to follow for Part 3).
+
+**Template: NEW. Proposed T109, "Year-stamped life story, captions and music only."** Nearest existing: T2 ("So apparently..." life story), T11 ("My whole story in one video"), T74 (gratitude stats). Those are voiceover reels; this one has no voice and no on-camera speech, so the recipe is caption-led (like T71, section 4), and the pictures are the creator's own phone photos and clips.
+
+- **Hook words:** a stated starting point with a number ("I came to Dubai with $200"; for Tal: where he started and with how much), a year stamp, a selfie, face in frame from 0.0 s. At 1.9 s a flip to "but I made it work. How?", the open loop.
+- **Structure (46.1 s):** hook selfie 0-1.9; question beat 1.9-4.3; problem beats (no degree, few job choices, "my survival skill?") 4.3-8; first jobs 8-14; "bigger plans" 14-17; tools (a camera, a second-hand laptop) 17-20; lonely stretch; skill-building; a black time-jump card ("After a few years of hard work") held about 2.6 s at 26.5-29.1; then the payoff run: government projects, a business set up, filming abroad, working with creators, a residency card held up, social media built; closing question and the same selfie again as a bookend ("You only lose when you quit"); end card: black, an arrow emoji, "Follow for Part 3" at 44.3-46.1.
+- **Cut rhythm:** 28 cut points found, 3 are flash or double hits, so about 26 shots; average 1.77 s, shortest 0.16 s (a deliberate white flash transition at 5.8-5.96 s), longest 2.6 s (the black card). Spacing wanders 1.2-2.6 s, tied to the lines, not to a fixed grid. First cut at 1.92 s, first face at 0.0 s. The hook selfie is reused at 43.2 s.
+- **Frames:** almost all pictures sit in a window on black (phone photos shrunk, text above or below on the black); only a few go full-bleed. This keeps each caption off every face.
+- **Text:** bold white sans with a black outline, centred. About 2.0-2.6% of frame height (roughly 26-33 px on 1280). Position varies per shot: top bar 11-18% down, bottom band 62-80% down, or lower third. Captions are 2-5 words, about 1.7 words per second overall (about 80 words, counted from the contact sheet, not a transcript). One or two emoji as icons (a plane, a flag, a camera, a rocket). Year marks ("*2018", "*2019") on the hook and bookend shots only. No colour emphasis in this one.
+- **Sound:** a commercial track with a sung vocal (whisper.cpp heard a line about holding on and "look at us now"; the song is not identified). Integrated -14.4 LUFS, LRA 6.2 LU (a real dynamic lift), true peak -0.3 dBFS (hotter than our -1 limit; do not copy). No speech, no sound effects. The black time-jump card lands where the lyric says "look at us now", which reads as the intended drop (my inference, not verified).
+- **Transcript:** none exists; whisper's longer lines on this reel are hallucinated from the music and were discarded.
+- **What makes it work:** a number and a face in the first second; a question at 3 s that the rest of the reel answers; one picture per line, so "say it, see it" works with no voice; a clean time-jump card that says years passed; a payoff run of proof pictures (documents, awards, venues); a bookend on the starting face so the end loops; a "Part N" CTA because it is a series.
+
+**How to do it with Tal's story, public-safe.** Spine from his own book, in order, with the page that backs each line (`findings/07-book.md`). Every figure is the book's own; add no day count or country count. Say "no money to start" and "stopped paying for rooms, rides and food", never "never touched money" (he paid for flights; honesty rule).
+
+1. Hook (selfie, face, year stamp): "Left Miami in June 2023 with a $300 flight, a backpack and a skateboard" (p6, p137). Question card: "How?"
+2. Plan (a few shots): one cold ask in a hotel or shop, "Can I speak to the owner?", and a video shown on his phone (p74, p81).
+3. First trade: a free scooter in Nice in exchange for a video, July 2023 (p8). Source footage not found in the index; ask Tal or search again.
+4. First paid job: EUR 200 for 3 videos in Greece (p10). Greece quad-bike footage exists.
+5. Time-jump card: "After one year on the road" (only if he confirms the framing).
+6. Proof run: Laos, 22 rides to Vang Vieng (p45); Philippines, 35 rides in a day around Siargao (p89-90); a stay paid for with a video (p12).
+7. Latest chapter: Africa (spring 2025), Pakistan (August 2025, flew in "with no money", his own line on the Skardu clip).
+8. Bookend on the hook selfie with his own line from the book, "you only ever needed one yes" (p100). End card: "Follow for Part 2".
+
+Candidate clips (index descriptions; confirm each by eye, and mute or cut any speech if burned-in captions carry the line):
+
+1. Hook selfie with backpack, Skardu airport. `a pakistan/iCloud Photos/IMG_4289.MP4` id b7743269-7080-4735-8d97-47b9a2a16e79 (13 s, he speaks; use muted)
+2. Greece quad bike. `Greece/IPHONE CLIPS/IMG_2384.MOV` id 5d2582c0-468f-4d6f-92d2-69b5854ca8ea
+3. Greece quad convoy. `Greece/IPHONE CLIPS/IMG_5128.MOV` id bb4feb9b-90d5-4936-bc27-9013f6f3a305
+4. Greece river, Tal at the water. `Greece/IPHONE CLIPS/IMG_1557.MOV` id 3309b446-4fb3-40ec-ae30-664a76a34cdd
+5. Laos arrival at Vang Vieng, looking for a free bed (434 s source, take the opening lines). `Laos/copy_141758F6-4E8E-418D-8B56-0D1642773C48.MOV` id 3769c8b9-cdda-4bf5-a043-6c2b2fd26f99
+6. Philippines hitchhiking selfie. `PHILLIPINES/phone clips/IMG_1534.MP4` id ec7c85c3-7b53-4e0d-8eb2-05e52f1e5dc1
+7. Philippines truck ride. `PHILLIPINES/phone clips/IMG_0595.MOV` id 793097dc-e83c-46dc-9459-fae7d2df60b8
+8. Indonesia waterfall, Sony. `indonesia/sony clips/C1703.MP4` id 1cb8df58-1017-42c8-a670-637e8616285d
+9. Taiwan drone viewpoint. `taiwan/drone/DJI_0052 (2).MP4` id 6df1607f-f11b-4ab0-a1c7-83b24132a79f
+10. Africa lake and crater, Sony. `Africa Tour - Ethiopia, tanz, vic falls/sd card 1/SD CARD 1/CLIP/Mp4 vids/C0626.MP4` id d643d1b5-e708-4d8e-8dda-92c52bad6d72
+11. Pakistan skateboarding through a village. `a pakistan/gopro 1 vlog/DJI_20250802172118_0054_D.MP4` id fdc7af6f-ab2f-44b9-a34e-8b32654d41a5
+12. Edited reel where he says he is flying to Japan with zero dollars in his bag (use the audio line or rebuild; burned captions). `ALL EDITED VIDEOS. REELS AND MORE FROM TRAVELS/copy_B1772A29-8BC9-40CB-95AA-93AFD106E2B9.MOV` id 0bd3c3ef-550a-40d9-beb5-2f15b8968f40
+
+Gaps to tell Tal: no index hit for the Nice scooter trade or for Koh Lipe; the year stamps need his confirmation of the order; a "$0" word on screen is his framing and must carry the honesty note above.
+
+---
+
+## DYcuwNTMSEf
+
+Reference sent by Tal 2026-10-30, same note as the pair above. The same creator's one-video version of the same story: a "journey in 49 seconds" that actually runs 58.9 s (720x1280, 25 fps; the banner says 49, so the claim is off by 10 s and the reel still works). Looked at: a 26-frame contact sheet (one frame per shot) plus one full-resolution frame.
+
+**Template: the same NEW T109** (year-stamped life story, captions and music only), in its regular-grid form. The difference: every caption carries a year in brackets, so the timeline reads as a list; DPPK-APD1vX is the looser, question-led cut.
+
+- **Hook words:** a banner over the opening group portrait: "[N]-year journey in [city] in 49 seconds" (for Tal: a true number of years, a place, and a true seconds count). Faces in frame from 0.0 s.
+- **Structure (58.9 s):** title shot 0-2.6; then about 22 dated beats, each a bracketed year plus 2-5 words: arrival, no plan, job hunting, a small job, saved up, bought a phone to learn video, opened an Instagram account, bought an older laptop, taught himself editing, a setback, kept making videos, a global shock, became an amateur videographer, "then this happened...", hired to work with the biggest creators (three shots), "all was going well until..", a resignation email, a profile screenshot at 10K followers, another at 119K, invited to work with government entities, spoke at global summits. Ends on the summit stage with no end card; the last caption is the payoff.
+- **Cut rhythm:** 25 cut points at the 0.2 detector level plus one soft cut at 26.9 s (found at a lower threshold; the frame at 26.0 s is a flare), so about 27 shots. Average 2.2 s, spacing 2.16-2.56 s almost everywhere, i.e. a fixed grid, about one cut per 4 beats of a 104-110 BPM track (inference from the spacing). One fast stretch at 40.1-41.3 s (0.6 s, 0.6 s) where three "hired to work" frames flip on the same line. First cut at 2.6 s, first face at 0.0 s. Last shot about 2.4 s.
+- **Text:** the year in brackets on its own line above the caption, same size. Bold white sans with a black outline, centred, about 2.6% of frame height (about 33 px on 1280), lower third at 66-71% down on full-bleed pictures, in the black band on letterboxed ones. One key word per line gets a colour (red for setback words, green and yellow for achievement words); the rest stays white. 3-6 words per page, about 1.6 words per second overall (about 95 words, counted from the contact sheet, not a transcript).
+- **Proof shots:** four phone screenshots (an empty new profile, a profile at 10K, one at 119K, a resignation email) carry the status beats instead of a voice. Cheap, and they make the numbers credible.
+- **Look:** mixed phone and camera sources, no shared grade; a soft vignette on the 2020 clips; some clips are shaky or blown out and nobody minds, because the caption is the story.
+- **Sound:** a commercial track, no speech. Integrated -14.1 LUFS, LRA 3.9 LU, true peak -1.7 dBFS. Whisper returned only "[Music]" plus a few junk lines on spans where nothing is spoken (discarded). The track is not identified.
+- **What makes it work:** the year brackets make each beat a countable step, so viewers stay for the next number; a strict 2.3 s grid gives a calm, readable rhythm over 59 s; one picture per line; the dip (a resignation) comes just before the high point; the last two beats are the biggest pictures (a red carpet, a stage); no CTA, because the arc ends on the payoff.
+
+**How to do it with Tal's story, public-safe.** Same spine as DPPK-APD1vX, in the dated-bracket style. Everything from the book or his own files; no invented counters; if a number is not in the book or on a clip, it does not go on screen.
+
+- Title shot: a Tal portrait or selfie with locals, banner "[N] years on the road with no money to start, in [true seconds] seconds". Use only a true count of years; the book runs from June 2023 to the Oman writing stage, and the footage index runs into August 2025.
+- Beats (bracketed year plus 2-5 words; 22 beats at 2.3 s is about 55 s, 18 beats for a 45 s cut): (2023) left Miami, backpack, skateboard (p6) -> (2023) asked for a free scooter for a video (p8) -> (2023) first paid job, EUR 200 for 3 videos (p10) -> (2023) a free stay for a video (p12) -> (2023) first hitchhike (p13) -> (Dec 2023) no more paying for rooms, rides or food (p33) -> (2024) 22 rides to Vang Vieng (p45) -> (2024) twelve no's, then one yes (p45-48) -> (2024) 35 rides in one day (p89-90) -> (2025) Africa -> (2025) Pakistan.
+- Proof screens (his own, never invented): a screen recording of his own account growth from his insights, and a message or booking that says yes. Only real figures.
+- A safe setback beat: the missed flight in Greece (EUR 70 fee, p12). Colour the setback word red and the win word green, as the reference does.
+- Payoff: his own line "Just like that, I went from nothing to everything" (p37) or the "one yes" line (p100), whichever he picks; last shot a wide of him in a big landscape, no end card.
+
+Candidate clips (index descriptions, confirm by eye; different countries so no two beats look alike):
+
+1. Hook portrait or selfie, backpack. `a pakistan/iCloud Photos/IMG_4289.MP4` id b7743269-7080-4735-8d97-47b9a2a16e79
+2. Greece quad bike. `Greece/IPHONE CLIPS/IMG_2384.MOV` id 5d2582c0-468f-4d6f-92d2-69b5854ca8ea
+3. Greece river. `Greece/IPHONE CLIPS/IMG_1557.MOV` id 3309b446-4fb3-40ec-ae30-664a76a34cdd
+4. Greece, Tal walking a terminal with a backpack (the missed-flight or departure beat). `Greece/IPHONE CLIPS/IMG_5171.MOV` id fffc6bde-a4e8-47fc-bbac-7737d940bb5f
+5. Laos arrival, asking for a free bed (opening lines of the 434 s clip). `Laos/copy_141758F6-4E8E-418D-8B56-0D1642773C48.MOV` id 3769c8b9-cdda-4bf5-a043-6c2b2fd26f99
+6. Philippines hitchhiking selfie. `PHILLIPINES/phone clips/IMG_1534.MP4` id ec7c85c3-7b53-4e0d-8eb2-05e52f1e5dc1
+7. Indonesia edited short with his own line about strangers, truck and market (18 s; check the burned captions). `indonesia/edited content/copy_7874F6EE-F5DB-4FAD-9E99-E3F721B4AAA5.MP4` id 14a79922-41ef-4906-8aed-eff5abc4e4a6
+8. Ecuador boat across the lake at sunset, Sony. `ECUADOR DONe/sony videos/00267.MTS` id b731db9b-3e8d-4fc0-9856-2dc43761b969
+9. Taiwan drone viewpoint. `taiwan/drone/DJI_0052 (2).MP4` id 6df1607f-f11b-4ab0-a1c7-83b24132a79f
+10. Africa lake at sunset, narration of arriving in Botswana. `Africa Tour - Ethiopia, tanz, vic falls/iCloud Photos/IMG_7067.MP4` id 94445085-df7c-46d4-8665-1e72dae3fbe4
+11. Pakistan skateboarding through a village, locals wave. `a pakistan/gopro 1 vlog/DJI_20250802172118_0054_D.MP4` id fdc7af6f-ab2f-44b9-a34e-8b32654d41a5
+12. Pakistan Skardu arrival, edited 32 s reel (his own hook line; burned captions, use as a style check or rebuild). `ALL EDITED VIDEOS. REELS AND MORE FROM TRAVELS/copy_E7C08020-493F-4822-8C48-62F86EC17EC5.MP4` id 59c2d2a6-01da-4f5a-b857-c7fd90a9b9b6
+
+Which to build first: DPPK-APD1vX's looser form is quicker (about 26 shots of 1.8 s, 46 s); DYcuwNTMSEf's grid form is easier to verify (every beat a dated fact). Both need Tal's confirmation of the year order and the exact "no money" wording before any caption is written. Instrument caveat: shot counts come from ffmpeg scene scores at 0.2 and 0.06 checked against contact-sheet frames; text sizes are measured from one 1280 px-tall frame per reel and are good to about 0.3%; word counts come from the contact sheet, not a transcript.
