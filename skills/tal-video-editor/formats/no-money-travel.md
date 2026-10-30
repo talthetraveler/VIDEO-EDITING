@@ -434,3 +434,14 @@ without looking at it · music he did not name · a recap Tal has to sit through
 - Frame.io destination for approved travel finals.
 - The cleared list of risky stories (in `PRIVATE-RULES.md`).
 - Sponsor beats, thumbnail look, posting day.
+
+## Watching the footage (Tal's plan, 2026-10-31)
+
+Tal: *"watch a couple seconds of each video ... or screenshot of thumbnail so you know what's happening"*. Cheapest step first, so the costly look only happens on clips that earned it:
+
+1. **Frames:** 3 per clip from the drive (`A:\CLAUDE WORK\watch\sample_frames.py`). No proxies, no space on C:.
+2. **Local checks, free:** 2 seconds of each clip for shake, plus sharpness and exposure. Rejects never reach step 3.
+3. **Cheap description:** one sheet per clip, written in the same fields as the index, so `footage_search.py` finds drive clips and Frame.io clips the same way.
+4. **Final pick:** for each shot, line up 3 candidates and look at strips of the exact seconds used.
+
+Three frames say what a clip is and whether it looks good. They do not prove a moment happened, so step 4 is never skipped.
