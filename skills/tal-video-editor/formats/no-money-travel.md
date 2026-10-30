@@ -132,7 +132,7 @@ own words or the book, and flag what you cannot confirm.
 ### The steps, for every video
 
 1. **Take the brief.** Usually one reel and a short note: *"recreate"*, *"nice edit"*, *"like this
-   for every country"*. Look its shortcode up in the master, Part B. If it is new: download it low
+   for every country"*. **Open its entry in `pdf-text\00003369-tal_reference_library.txt` first** (*"the reference library explains everything"*): hook, cuts, text, grade, song and which of his clips to use. Still look at every clip, then check the master, Part B. If it is new: download it low
    quality (*"I don't need references in full quality"*), contact sheet, transcribe, write down
    the hook words, every shot length, text, VO, song, grade.
 2. **Copy the TYPE, never the content.** His rule, 2026-10-26: *"if the reference shows someone in
