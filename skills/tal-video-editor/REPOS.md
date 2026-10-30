@@ -1019,3 +1019,22 @@ python "$SKILL/scripts/run.py" sample-frames "<video>" --output-dir "<scratch>/w
 - **Open-Higgsfield-AI:** the screen says "Muapi", the code calls `api.kie.ai`. Do not run plain `vite` there.
 - **IN2OUT:** `skills/toolbox/patches/IN2OUT.patch` removes mmcv; base model loads. Last run died with `CUDA error: unknown error` while the machine was out of memory; cause not established. Apply patches here with `--ignore-whitespace`.
 - `system/.venv-audio` has CPU-only torchvision beside CUDA torch: `deform_conv2d` fails there.
+
+## Story engine stack, evaluated 2026-10-30
+
+Tal: *"Do not blindly install everything. What is needed???!"* This overrides "install all of it" for this list. Maintenance and licence read from the GitHub API that day. Laptop: RTX 3050 Ti, 4 GB VRAM, 17 GB RAM, no docker.
+
+| repo | last push | licence | verdict |
+|---|---|---|---|
+| `Breakthrough/PySceneDetect` | 2026-10-27 | BSD-3 | USE, already installed |
+| `mlfoundations/open_clip` (added) | 2026-10-29 | MIT-style, read it | USE, loads CLIP and SigLIP weights |
+| `openai/CLIP` | 2026-03-25 | MIT | SKIP, same weights through open_clip |
+| `google/siglip` | not found | | No such repo. SigLIP lives in `google-research/big_vision`; use the weights through open_clip |
+| `facebookresearch/faiss` | 2026-10-29 | MIT | USE `faiss-cpu`, not GPU |
+| `SYSTRAN/faster-whisper` | 2026-10-25 | MIT | USE, already installed; Groq stays first for bulk |
+| `m-bain/whisperX` | 2026-10-22 | BSD-2 | USE for word timing |
+| `remotion-dev/remotion` | 2026-10-30 | own licence, free for individuals and up to 3 employees | USE, already here, animated captions only; check the licence if the team grows |
+| `librosa/librosa` | 2026-10-06 | ISC | USE, beats and onsets |
+| `opencv/opencv` | 2026-10-30 | Apache-2.0 | USE, already installed, optical flow |
+| `pgvector/pgvector` | 2026-10-28 | PostgreSQL-style | SKIP for now, needs a server; no gain for one user |
+| `OpenGVLab/InternVideo` | 2026-07-02 | Apache-2.0 | SKIP for now, research code, not tried on 4 GB. Revisit only if action matching tests poorly |
