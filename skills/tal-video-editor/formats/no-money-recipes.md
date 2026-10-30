@@ -356,3 +356,13 @@ Candidate clips (index descriptions, confirm by eye; different countries so no t
 12. Pakistan Skardu arrival, edited 32 s reel (his own hook line; burned captions, use as a style check or rebuild). `ALL EDITED VIDEOS. REELS AND MORE FROM TRAVELS/copy_E7C08020-493F-4822-8C48-62F86EC17EC5.MP4` id 59c2d2a6-01da-4f5a-b857-c7fd90a9b9b6
 
 Which to build first: DPPK-APD1vX's looser form is quicker (about 26 shots of 1.8 s, 46 s); DYcuwNTMSEf's grid form is easier to verify (every beat a dated fact). Both need Tal's confirmation of the year order and the exact "no money" wording before any caption is written. Instrument caveat: shot counts come from ffmpeg scene scores at 0.2 and 0.06 checked against contact-sheet frames; text sizes are measured from one 1280 px-tall frame per reel and are good to about 0.3%; word counts come from the contact sheet, not a transcript.
+
+## Deo1QSWM-MV shape: "My best friend isn't a..." (@fayadkazim, MEASURED 2026-10-30)
+
+Tal 2026-10-30: *"Great video"*, flip it to a thing. Queue row 15. Measured on the reel, which beats the template notes where they differ.
+
+- 1348x1078 (the file itself is 5:4, not 9:16), 24 fps, 119.9 s, -14.1 LUFS, 24 scene cuts, 316 words, about 180 wpm once the voice starts, close mic.
+- Hook 0-11.9 s: one held landscape, a person walks in, 4 short yellow serif lines stack as they are spoken.
+- Then small lowercase yellow subtitles at the bottom, phrase by phrase. Slow shots that cut at sentence ends.
+- Script shape: statement, "For years, I wondered", three questions, common belief, "Then I realized something", "Think about it", every version of you with one self-mocking joke, then the hook repeated word for word.
+- The song is under the voice, so it cannot be lifted for a new VO; use a soft instrumental and name it.
