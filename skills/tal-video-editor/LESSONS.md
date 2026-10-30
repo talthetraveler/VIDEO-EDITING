@@ -3875,3 +3875,7 @@ I measured `beat-synced-edit` cutting 210 ms early on every cut and recorded "do
 ## 167. "Nice, but you can't see it as a nice hotel" (2026-10-30)
 
 First look at the Ep1 opening. A literal shot is not enough: the hotel entrance named the word but did not look like a place you would want. On a list like this, use the most beautiful version, drone included. Say it, see it, and make it look good. His order for the batch: finish every transcript, then Ep1, then all the reel templates, from the hard drive.
+
+## 168. "It's not the exact same": a recreate is built from the reel, not from notes (2026-10-30)
+
+The Mauritania reel was built from written numbers; nobody downloaded the reference. He compared them and it did not match. Even Tab's analysis is not the reel. For a recreate: download it, measure every cut, the text and the song section, rebuild shot for shot, and check side by side before he sees it. Same failure as LESSONS 76 ("built FROM the cut, not from notes ABOUT it").
