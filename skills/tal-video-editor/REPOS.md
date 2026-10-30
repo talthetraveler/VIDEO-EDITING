@@ -32,6 +32,17 @@ turn, with a verified status, or it has not been dealt with.**
 | `remotion-dev/remotion`, `heygen-com/hyperframes` | **already installed** (Remotion 4.0.520 in `system/`, HyperFrames CLI 0.8.181). The PDF's three Effect-of-the-Day prompts now run on the Remotion one: `system/scripts/effect.mjs` | `system/src/effects/` |
 | `talthetraveler/VIDEO-EDITING` | **this repo** | - |
 
+**Handed to his Tab, Oct 2026, NOT installed here yet** (from the chat in the Tab handoff; nothing below has been checked on
+this machine): `hassancs91/claude-youtube-editor` (Tab's main long-form add-on: word-synced SFX, 3-thumbnail packaging) ·
+`lemomo-ai/lemo-opuscar` (code-rendered maps, counters, documentary inserts) · `acamposuribe/p5.brush` (hand-drawn circles
+and arrows; Tab's Remotion component is in the kit) · `jordanrendric/claude-video-vision` · `TomGranot/watch-video` ·
+`Schabo/orbis-reframe` (360, needs a GPU) · `seunghyuns98/VideoColorGrading` (needs a GPU) · `Merserk/BeatSync-Engine` ·
+`ZiadAbdelkarim/beat-synced-edit` · `CoCoSol007/beats-into-shapes` · `blixvip/NullMotion` · `storytold/effectcraft` ·
+`boona13/image-extender` · `sang-w00/IN2OUT` · `chrcit/theo-thumbnail-checker` · `cryptobirr/VideoClipFinder` ·
+`Autom8AI/Open-Higgsfield-AI` · `wide-trace/open-higgsfield` · `yihui-dev/awesome-opus5-5-videos`.
+Tab's verdicts: image-extender and IN2OUT failed or could not run; VideoClipFinder adds nothing here.
+Tal, 2026-10-30, on outside reel-cloning services (n8n + Apify, Media.io, HookClone): not needed, Hypit covers it.
+
 ---
 
 ## AutoSubSync — a second opinion that can confirm but never convict

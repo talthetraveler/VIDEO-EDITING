@@ -295,7 +295,7 @@ Answer three questions first. Do not load a single specialist skill until you ha
 
 | Signal in the footage or the ask | Format |
 |---|---|
-| **Travelling with no money**: hitchhiking, asking strangers for a ride / a meal / a bed, the trip itself is the story (PROVISIONAL, 2026-09-28) | `no-money-travel` |
+| **ANY travel video**: The Side Quester, "travel the world with no money", a country folder on Frame.io, a travel reel to recreate, a YouTube episode (2026-10-30) | `no-money-travel` — read it first; it replaces parts of THE STANDARD for travel (grade, music, captions, steady shots). VO reels add `no-money-voiceover`, recreates add `no-money-templates` |
 | Meta Ray-Ban POV, handheld, first-person | `pov-meta-glasses` |
 | Walking up to strangers, greetings, giving something | `pov-kindness` |
 | **"Like Erez" / "erezv1" / "fast cuts, fast zooms"**: a staged surprise from two cameras with little dialogue, Tal in the picture as the giver | `erez-fast-cut` — read his reel at 30 fps first; wide → 4-frame zoom → tight → cut; preview before anything |
@@ -605,7 +605,7 @@ goes the wrong way.
 
 ### Provisional formats
 
-`nonprofit-story`, `startup-tech`, `longform`, `longform-to-shorts`, `no-money-travel` are marked
+`nonprofit-story`, `startup-tech`, `longform`, `longform-to-shorts` are marked
 **PROVISIONAL** — nothing in them was measured from an approved Tal video. On
 the first real edit in one of those formats, **replace the guessed rules with
 what he actually corrects.** Never present guessed style knowledge as though he

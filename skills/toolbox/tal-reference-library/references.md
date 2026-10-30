@@ -32,6 +32,7 @@ creator. **[S]**
 | KT-3 | **Coffee cart, 400 shekels, V4** (`4 revised.mov`): his revision of KT-2 | KINDNESS TEST | STYLE | **MEASURED** 2026-09-28: the V3->V4 delta is recorded. `formats/kindness-test.md` |
 
 | IG-2026-09-28 | **Last ~10 reels of six accounts: talthetraveler (10), nasdaily (9), aija (10), erez.v1 (9), montanatucker (10), mdmotivator (10)** | ALL | STYLE (his 1M / 536K POV "meeting a <religion>" = **GOLDEN candidate**) | **MEASURED** 2026-09-28: 58 reels, every shot on sheets, transcripts, audio. Text in `instagram-2026-09-28/` (README + one file per account) |
+| TAB-2026-10 | **Tal's travel references: 466 reels in 106 templates, 12 YouTube long-forms, measured by his Tab, Oct 23-27** | TRAVEL | STYLE (quality bars `Dd10WEzuHqY`, `DIEfg1DzwXS`; grade model `DMArsvVxOgm`; Ep1 pace `N-ZenLrInoc`) | **MEASURED BY TAB, not re-measured here.** Menu: `formats/no-money-templates.md`. Full library: `assets/references/sidequester-kit/` (local). Of 737 reel links in that chat, 246 are not in Tab's library: `reels-tab-never-catalogued.txt` |
 
 VO-1…KT-3 came in one zip on 2026-09-28. Originals:
 `assets/references/voiceover-broll-drive-2026-09-28/`; sheets, shot lists,

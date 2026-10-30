@@ -127,8 +127,11 @@ there should be like one skill ... this should all be one."* SKILL.md carries
 treatment, audio, and the 7-point quality check — so it is complete on its own.
 Everything else in that folder is an appendix, opened when a job needs it:
 
-- `formats/*.md` — the 16 presets; the more specific rule wins. A voiceover
-  of his over B-roll is `voiceover-broll.md` (the script decides every shot)
+- `formats/*.md` — the presets; the more specific rule wins. A voiceover
+  of his over B-roll is `voiceover-broll.md` (the script decides every shot).
+  **Any travel video is `no-money-travel.md`** (The Side Quester): it overrides
+  THE STANDARD on grade, music, captions and steady shots, and holds the
+  workflow from his Tab handoff (2026-10-30)
 - `LESSONS.md` — 49 defects and their causes. **Read before any rebuild.**
 - `APPROVED-JAMAICA-V14.md` — the first cut Tal approved; the shape to hit on V1
 - `COMPILATION-ORDER.md` — who appears and in what order. Never open a new

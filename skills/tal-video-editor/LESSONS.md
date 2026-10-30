@@ -3822,3 +3822,27 @@ the questions. We just need him speaking and sharing his story."*
   YOU". Read the rendered caption list (selfreview 2b), not the segments.
 - An iCloud zip exported "Most Compatible" came down as Apple-transcoded H.264 **720p** (3.3 Mbps); the originals are
   1080p/4K HEVC. Cut from the 720p, then fetch only the used clips' originals for the final.
+
+## 165. Travel videos: what he told his Tab, Oct 23-27 (2026-10-30)
+
+He handed over the whole chat with Tab. Full section: `formats/no-money-travel.md`. His corrections, each a defect Tab shipped:
+
+- "Nah it's cinematic": a cinematic reference is recreated from Sony + drone, never iPhone.
+- "I can't use this ... shaky footage": reels use only sharp, stable, exposed shots. Then again, Oct 26: "always use not
+  shaky footage".
+- "You should study the color grading": match each reference's grade per clip. This narrows "no grade" for travel
+  recreations only; the street videos stay ungraded.
+- "The music kind of stopped towards the end": the audio stream ran 10.2 s under a 12.1 s picture because `-frames:v` in
+  the same render cut it. Render video only, mux after, measure the audio stream.
+- "You downloaded the HDR version": caught three times. ffprobe and tone-map before anything; look at a still.
+- "It's obviously not a horizontal clip": a vertical clip forced horizontal is wrong. Use the Sony or GoPro source.
+- "One shot you just randomly had a drone shot, it doesn't align": every VO line gets the shot that shows it. When he says
+  "my backpack, my skateboard, my camera", that shot or a motion graphic. "I want to travel the world" is not a family photo.
+- Ep1 v4, "I really didn't like it": no cinematic grade, no motion graphics, not enough real shots, and a VO looking back.
+  Open on his face in the desert; tell it as it happens.
+- "You should always identify my best shots before putting them in."
+- "I don't need to be telling you the restructuring plan": do not recite his notes back as a plan. Do it.
+
+**What made Tab fast was preparation:** a searchable index of every clip, transcripts by country, every reference broken
+down, then a sheet of line -> picture -> clip before cutting. Tal: "you don't need to build anything right now ... that way
+when I do ask you to build, it can be easy because you already know which clips to find."
