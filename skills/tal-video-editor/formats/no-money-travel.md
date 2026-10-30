@@ -103,6 +103,29 @@ from words, never frames, so a link is a hint. It worked inside one folder, so *
 the Sony shot of that moment are never linked.** Drone clips were left out on purpose. 12,885 of
 31,325 videos have no link at all.
 
+### How the voiceover knows the story
+
+Tal, 2026-10-25: *"I'm vlogging the story ... if I vlogged the whole Oman trip and spoke about what
+happened ... then you can know how to build the story."* A voiceover is never invented. It is
+rebuilt from what he already said on camera.
+
+1. **Everything he said is transcribed:** about 15,000 clips with speech, one file per country in
+   `sources/transcripts/`, in capture order.
+2. **Each file turns that into a story:** what happened, trip beats, best lines, then a PLAN (story
+   arc, episode outline, short reels to cut), then every scene with its talking clips and B-roll.
+3. **Pick the story, write from his words.** His real lines come first, and the book fills gaps. The
+   script keeps the reference's structure and swaps in his facts. See `no-money-voiceover.md`.
+4. **Every line finds its clip.** Search the transcript for the words: the best shot is often the
+   clip where he says it on camera.
+5. **He records it, or it runs in his ElevenLabs voice.**
+
+**Gaps.** Taiwan (691 clips), Jamaica, Italy and Dubai have transcripts but no story or PLAN yet;
+write those from the transcripts before scripting. The edited-video files are transcripts only.
+
+**Check every fact.** The story sections and transcripts are machine-made and can be wrong: the
+Mongolia file says he "turns 28". Names and local-language lines are often off. Confirm against his
+own words or the book, and flag what you cannot confirm.
+
 ### The steps, for every video
 
 1. **Take the brief.** Usually one reel and a short note: *"recreate"*, *"nice edit"*, *"like this
