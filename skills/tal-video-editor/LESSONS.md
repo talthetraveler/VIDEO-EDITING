@@ -3869,3 +3869,7 @@ I measured `beat-synced-edit` cutting 210 ms early on every cut and recorded "do
 - **Test the fix for what the fix can break.** Letting cuts run to the next beat froze the end of 6 cuts for about 0.7 s each. `freezedetect` caught it; timing checks alone did not.
 - **A real song finds what a click track cannot:** embedded cover art failed the audio step.
 - **Read cuts back from the rendered file, against the audio in that same file.** The picture alone looked perfect at 210 ms off: both sat on a clean grid, just not the same grid.
+
+## 167. "Nice, but you can't see it as a nice hotel" (2026-10-30)
+
+First look at the Ep1 opening. A literal shot is not enough: the hotel entrance named the word but did not look like a place you would want. On a list like this, use the most beautiful version, drone included. Say it, see it, and make it look good. His order for the batch: finish every transcript, then Ep1, then all the reel templates, from the hard drive.
