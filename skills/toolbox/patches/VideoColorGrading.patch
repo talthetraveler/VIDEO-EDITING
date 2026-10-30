@@ -1,0 +1,354 @@
+--- a/grading.py
++++ b/grading.py
+@@ -22,8 +22,15 @@
+ from einops import rearrange
+ from pillow_lut import identity_table
+ import time
++
++def _load_weights(path, key):
++    if path.endswith(".safetensors"):
++        from safetensors.torch import load_file   # made by fetch_weights_light.py; no pickle
++        return load_file(path)
++    return torch.load(path, map_location="cpu")[key]
++
+ class Inference():
+-    def __init__(self, config="configs/prompts/video_demo.yaml") -> None:
++    def __init__(self, config="configs/prompts/video_demo.yaml", low_vram=False) -> None:
+         print("Initializing LUT Generation Pipeline...")
+         *_, func_args = inspect.getargvalues(inspect.currentframe())
+         func_args = dict(func_args)
+@@ -37,15 +44,16 @@
+         self.clip_image_encoder = ImageEncoder(model_path=config.pretrained_clip_path)
+         self.clip_image_processor = CLIPProcessor.from_pretrained(config.pretrained_clip_path, local_files_only=True)
+ 
+-        unet = UNet2DConditionModel.from_pretrained(config.pretrained_sd_path, subfolder="unet", in_channels=6, out_channels=3, low_cpu_mem_usage=False, ignore_mismatched_sizes=True)
+-        state_dict = torch.load(config.pretrained_LD_path, map_location="cpu")['unet_state_dict']
++        # Every UNet weight is overwritten below (strict=True), so the 3.4 GB stock SD1.5 UNet is not needed: config only.
++        unet = UNet2DConditionModel.from_config(UNet2DConditionModel.load_config(config.pretrained_sd_path, subfolder="unet"), in_channels=6, out_channels=3)
++        state_dict = _load_weights(config.pretrained_LD_path, 'unet_state_dict')
+         m, u = unet.load_state_dict(state_dict, strict=True)
+         print(f"### missing keys: {len(m)}; \n### unexpected keys: {len(u)} ###")
+         if len(m) !=0 or len(u) !=0:
+             print(f"### missing keys:\n{m}\n### unexpected keys:\n{u}\n ###")
+         
+-        self.referencenet = ReferenceNet.from_pretrained(config.pretrained_sd_path, subfolder="unet")
+-        state_dict = torch.load(config.pretrained_GE_path, map_location="cpu")["referencenet_state_dict"]
++        self.referencenet = ReferenceNet.from_config(ReferenceNet.load_config(config.pretrained_sd_path, subfolder="unet"))
++        state_dict = _load_weights(config.pretrained_GE_path, "referencenet_state_dict")
+         m, u = self.referencenet.load_state_dict(state_dict, strict=True)
+         print(f"### missing keys: {len(m)}; \n### unexpected keys: {len(u)} ###")
+         if len(m) !=0 or len(u) !=0:
+@@ -58,10 +66,16 @@
+             vae=vae, unet=unet,
+             scheduler=DDIMScheduler(**OmegaConf.to_container(inference_config.noise_scheduler_kwargs)),
+         )
+-        self.pipeline.to(device)
++        self.low_vram = low_vram
++        if low_vram:
++            # 4 GB card: float16 throughout, and the two UNets take turns on the GPU (see pipeline.py)
++            unet.half(); self.referencenet.half(); self.clip_image_encoder.half(); vae.half()
++            vae.to(device)
++        else:
++            self.pipeline.to(device)
+         print("Initialization Done!")
+ 
+-    def __call__(self, ref_sequence, input_path, save_path, random_seed, step, size=512, ncc=False):
++    def __call__(self, ref_sequence, input_path, save_path, random_seed, step, size=512, ncc=False, cube_path=None):
+ 
+         input_video = VideoReader(input_path).read()
+         input_video, input_video_resize = preprocess(input_video, ref_sequence, size, ncc)
+@@ -89,13 +103,22 @@
+             clip_image_encoder       = self.clip_image_encoder,
+             input_video              = input_video_resize,
+             id_lut                   = self.id_lut_chw,
+-            return_dict = False
++            return_dict = False,
++            low_vram                 = self.low_vram
+         )
+-    
+-        lut = lut[0].detach().cpu().numpy()
++        if torch.cuda.is_available():
++            print(f"peak VRAM allocated {torch.cuda.max_memory_allocated()/1e6:.0f} MB, reserved {torch.cuda.max_memory_reserved()/1e6:.0f} MB")
++
++        lut = lut[0].detach().float().cpu().numpy()
+         lut = rearrange(lut, "c h w -> h w c")
+         lut = lut + self.id_lut_hwc
+         lut = np.clip(lut, 0.0, 1.0)
++        if cube_path:
++            os.makedirs(os.path.dirname(os.path.abspath(cube_path)), exist_ok=True)
++            with open(cube_path, "w") as f:
++                f.write("LUT_3D_SIZE 16
++")
++                np.savetxt(f, lut.reshape(-1, 3), fmt="%.6f")   # red fastest, as .cube expects
+         lut = lut.flatten()
+         lut = ImageFilter.Color3DLUT(16, lut)
+         output_frames = []
+--- a/pipeline.py
++++ b/pipeline.py
+@@ -190,6 +190,7 @@
+         width = width or self.unet.config.sample_size * self.vae_scale_factor
+         batch_size = 1
+ 
++        low_vram = kwargs.get("low_vram", False)
+         device = self._execution_device
+ 
+         reference_control_writer = ReferenceNetAttention(referencenet, mode='write', fusion_blocks="full")
+@@ -201,7 +202,7 @@
+         self.scheduler.set_timesteps(num_inference_steps, device=device)
+         timesteps = self.scheduler.timesteps
+ 
+-        embedding_dtype = torch.float32
++        embedding_dtype = self.unet.dtype
+ 
+         latents = self.prepare_latents(
+             batch_size,
+@@ -262,14 +263,20 @@
+                     encoder_hidden_states=encoder_hidden_states,
+                     return_dict=False,
+                 )
+-                reference_control_reader.update(reference_control_writer)
++                reference_control_reader.update(reference_control_writer, dtype=latents.dtype)
+                 referencenet.to('cpu')
++                if low_vram:
++                    # the banks are all the UNet needs from here on; only now is there room for it
++                    for m in referencenet.modules():
++                        if hasattr(m, "bank"): m.bank = []
++                    torch.cuda.empty_cache()
++                    self.unet.to(device)
+             
+        
+             latent_model_input = latents.to(device)
+             latent_model_input = self.scheduler.scale_model_input(latent_model_input, t)
+ 
+-            latents_pose_input = id_lut.to(device)
++            latents_pose_input = id_lut.to(device, dtype=latents.dtype)
+             
+ 
+             noisy_latents = torch.cat([latent_model_input, latents_pose_input], dim=1)
+--- a/video_demo.py
++++ b/video_demo.py
+@@ -4,7 +4,7 @@
+ import argparse
+ 
+ def color_grading(args):
+-    grader = Inference(config=args.config)
++    grader = Inference(config=args.config, low_vram=args.low_vram)
+     ref_path = args.ref_path
+     input_path = args.input_path
+     save_path = args.save_path
+@@ -17,7 +17,7 @@
+     steps = args.steps
+     size = args.size
+     ncc = args.ncc
+-    output_path = grader(reference_image, input_path, save_path, seed, steps, size, ncc)
++    output_path = grader(reference_image, input_path, save_path, seed, steps, size, ncc, args.cube)
+     print(f"Result saved at {output_path}")
+ 
+ def parse_arguments():
+@@ -30,6 +30,8 @@
+     parser.add_argument('--steps', type=int, help='Number of steps for the animation.', default=25)
+     parser.add_argument('--size', type=int, help='Size of the image.', default=512)
+     parser.add_argument('--ncc', action='store_true', help='Color Correction')
++    parser.add_argument('--low_vram', action='store_true', help='float16, one UNet on the GPU at a time (needed on 4 GB)')
++    parser.add_argument('--cube', type=str, default=None, help='also write the generated LUT as a .cube file')
+     return parser.parse_args()
+ 
+ if __name__ == "__main__":
+--- a/configs/prompts/video_demo.yaml
++++ b/configs/prompts/video_demo.yaml
+@@ -1,7 +1,7 @@
+ pretrained_sd_path: "pretrained_models/stable-diffusion-v1-5"
+ pretrained_clip_path: "pretrained_models/clip-vit-base-patch32"
+-pretrained_GE_path: "pretrained_models/GS-Extractor.ckpt"
+-pretrained_LD_path: "pretrained_models/L-Diffuser.ckpt"
++pretrained_GE_path: "pretrained_models/GS-Extractor.safetensors"
++pretrained_LD_path: "pretrained_models/L-Diffuser.safetensors"
+ 
+ savename: null
+ 
+--- /dev/null
++++ b/fetch_weights_light.py
+@@ -0,0 +1,183 @@
++"""Fetch only the tensors grading.py needs from the two public Drive checkpoints, as float16.
++
++step1.ckpt (6.87 GB) and step2.ckpt (3.44 GB) are torch zip files, stored uncompressed, and Drive
++answers byte-range requests. So this reads each zip's directory remotely, parses data.pkl with an
++unpickler that executes nothing, and pulls one tensor at a time. Result: 3.4 GB on disk, not 10.3 GB,
++and torch.load (pickle) is never run on a downloaded file.
++
++  python fetch_weights_light.py --inspect
++  python fetch_weights_light.py --out pretrained_models
++"""
++import argparse, io, json, os, pickle, struct, sys, time, zipfile, zlib
++import numpy as np, requests
++
++URL = "https://drive.usercontent.google.com/download?id={}&export=download&confirm=t"
++FILES = {"step1": "1WIVo09KWjIH2LVfk-uHz2MEuDODU419H", "step2": "1VnE0ezMAPs8E4q4eZeA1ljlyuhNvzitt"}
++WANT = {"step1": ("referencenet_state_dict", "GS-Extractor.safetensors"),
++        "step2": ("unet_state_dict", "L-Diffuser.safetensors")}
++DTYPES = {"FloatStorage": np.float32, "HalfStorage": np.float16, "DoubleStorage": np.float64,
++          "LongStorage": np.int64, "IntStorage": np.int32, "BoolStorage": np.bool_, "ByteStorage": np.uint8}
++
++
++class HttpFile(io.RawIOBase):
++    def __init__(self, url):
++        self.url, self.s, self.pos = url, requests.Session(), 0
++        self.s.headers["User-Agent"] = "Mozilla/5.0"
++        r = self.s.get(url, headers={"Range": "bytes=0-0"}, timeout=60)
++        if r.status_code != 206:
++            raise RuntimeError(f"no range support: HTTP {r.status_code} {r.text[:200]}")
++        self.size = int(r.headers["Content-Range"].split("/")[1])
++        self.bytes = 0
++    def seekable(self): return True
++    def readable(self): return True
++    def tell(self): return self.pos
++    def seek(self, off, whence=0):
++        self.pos = off if whence == 0 else (self.pos + off if whence == 1 else self.size + off)
++        return self.pos
++    def read(self, n=-1):
++        if n is None or n < 0: n = self.size - self.pos
++        n = min(n, self.size - self.pos)
++        if n <= 0: return b""
++        for attempt in range(6):
++            try:
++                r = self.s.get(self.url, headers={"Range": f"bytes={self.pos}-{self.pos+n-1}"}, timeout=120)
++                if r.status_code != 206: raise RuntimeError(f"HTTP {r.status_code}: {r.text[:300]}")
++                d = r.content
++                if len(d) != n: raise RuntimeError(f"short read {len(d)}/{n}")
++                self.pos += n; self.bytes += n
++                return d
++            except (requests.RequestException, RuntimeError) as e:
++                print("retry", attempt, e, flush=True)
++                if "HTTP 4" in str(e) and attempt >= 2: raise
++                time.sleep(2 ** attempt)
++        raise RuntimeError("gave up")
++
++
++class ODict(dict):
++    pass
++class Rec:
++    def __init__(self, name): self.name = name
++    def __call__(self, *a, **k): return {"__call__": self.name, "args": a}
++class Storage:
++    def __init__(self, cls, key, size): self.cls, self.key, self.size = cls, key, size
++class Tensor:
++    def __init__(self, st, off, shape): self.st, self.off, self.shape = st, off, shape
++
++
++class SafeUnpickler(pickle.Unpickler):
++    """Executes nothing: every global becomes an inert record, tensors become Tensor records."""
++    def find_class(self, module, name):
++        full = f"{module}.{name}"
++        if full == "collections.OrderedDict": return ODict
++        if full in ("torch._utils._rebuild_tensor_v2", "torch._utils._rebuild_tensor"):
++            return lambda st, off, shape, *a: Tensor(st, off, shape)
++        return Rec(full)
++    def persistent_load(self, pid):
++        _, cls, key, _, size = pid
++        return Storage(cls.name.split(".")[-1], key, size)
++
++
++def contents(tag):
++    z = zipfile.ZipFile(HttpFile(URL.format(FILES[tag])))
++    names = z.namelist()
++    root = names[0].split("/")[0]
++    obj = SafeUnpickler(io.BytesIO(z.read(f"{root}/data.pkl"))).load()
++    return z, root, obj
++
++
++def summarise(o, depth=0):
++    if isinstance(o, dict):
++        for k, v in list(o.items())[:12]:
++            if isinstance(v, dict) and v and all(isinstance(x, Tensor) for x in v.values()):
++                total = sum(int(np.prod(x.shape, dtype=np.int64)) * np.dtype(DTYPES[x.st.cls]).itemsize for x in v.values())
++                dt = {x.st.cls for x in v.values()}
++                print(" " * depth, k, f"{len(v)} tensors, {total/1e9:.3f} GB, {dt}")
++            elif isinstance(v, dict):
++                print(" " * depth, k, f"dict[{len(v)}]"); summarise(v, depth + 2)
++            else:
++                print(" " * depth, k, repr(v)[:100])
++
++
++def fetch(tag, outdir):
++    """Stream the wanted members in one continuous range (per-tensor requests ran at 0.4 MB/s) and
++    write each straight to its place in a preallocated .safetensors, so RAM stays flat and an
++    interrupted run resumes (the machine this was built on had 2 GB free)."""
++    key, fname = WANT[tag]
++    z, root, obj = contents(tag)
++    sd = obj[key]
++    by_key = {t.st.key: (n, t) for n, t in sd.items()}
++    infos = sorted((i for i in z.infolist() if i.filename.startswith(f"{root}/data/")
++                    and i.filename.rsplit("/", 1)[1] in by_key), key=lambda i: i.header_offset)
++    if len(infos) != len(sd):
++        raise RuntimeError(f"{len(infos)} zip members for {len(sd)} tensors")
++    # safetensors layout, fixed in advance from the pickle's shapes
++    meta, off, plan = {}, 0, []
++    for i in infos:
++        name, t = by_key[i.filename.rsplit("/", 1)[1]]
++        if t.st.cls != "FloatStorage": raise RuntimeError(f"unexpected {t.st.cls} for {name}")
++        n = int(np.prod(t.shape, dtype=np.int64)) * 2
++        meta[name] = {"dtype": "F16", "shape": [int(x) for x in t.shape], "data_offsets": [off, off + n]}
++        plan.append((i, t, off)); off += n
++    head = json.dumps(meta, separators=(",", ":")).encode()
++    head += b" " * (8 - len(head) % 8 if len(head) % 8 else 0)
++    base = 8 + len(head)
++    os.makedirs(outdir, exist_ok=True)
++    path, mark = os.path.join(outdir, fname), os.path.join(outdir, fname + ".progress")
++    idx = int(open(mark).read()) if os.path.exists(mark) and os.path.exists(path) else 0
++    if idx == 0:
++        with open(path, "wb") as f:
++            f.write(struct.pack("<Q", len(head)) + head); f.truncate(base + off)
++    print(tag, "resume at", idx, "of", len(infos), flush=True)
++    end = infos[-1].header_offset + infos[-1].file_size + 4096
++    url, http = URL.format(FILES[tag]), requests.Session()
++    http.headers["User-Agent"] = "Mozilla/5.0"
++    t0, got = time.time(), 0
++    buf = bytearray(max(i.file_size for i in infos))
++    with open(path, "r+b") as f:
++        while idx < len(infos):
++            pos = infos[idx].header_offset
++            try:
++                r = http.get(url, headers={"Range": f"bytes={pos}-{end}"}, stream=True, timeout=120)
++                if r.status_code != 206:
++                    raise RuntimeError(f"HTTP {r.status_code}: {r.text[:300]}")
++                raw = r.raw
++                raw.decode_content = False
++                def take(n, into=None):
++                    v, done = memoryview(into if into is not None else bytearray(n)), 0
++                    while done < n:
++                        c = raw.read(min(n - done, 1 << 20))
++                        if not c: raise IOError("stream ended")
++                        v[done:done + len(c)] = c; done += len(c)
++                    return v[:n]
++                while idx < len(infos):
++                    i, t, o = plan[idx]
++                    if i.header_offset > pos:
++                        take(i.header_offset - pos); pos = i.header_offset
++                    h = bytes(take(30))
++                    if h[:4] != b"PK": raise RuntimeError("bad local header")
++                    nlen, xlen = struct.unpack("<HH", h[26:30])
++                    take(nlen + xlen)
++                    data = take(i.file_size, buf)
++                    if zlib.crc32(data) != i.CRC: raise RuntimeError("CRC mismatch " + i.filename)
++                    pos += 30 + nlen + xlen + i.file_size
++                    a = np.frombuffer(data, dtype=np.float32)[t.off:t.off + int(np.prod(t.shape, dtype=np.int64))]
++                    f.seek(base + o); f.write(a.astype(np.float16).tobytes())
++                    got += i.file_size; idx += 1
++                    if idx % 50 == 0:
++                        f.flush(); open(mark, "w").write(str(idx))
++                        print(f"{tag} {idx}/{len(infos)} {got/1e9:.2f} GB {got/1e6/(time.time()-t0):.1f} MB/s", flush=True)
++            except (requests.RequestException, IOError, OSError) as e:
++                print("reconnect at member", idx, repr(e)[:200], flush=True); time.sleep(3)
++    if os.path.exists(mark): os.remove(mark)
++    print("saved", path, round(os.path.getsize(path) / 1e9, 3), "GB", flush=True)
++
++
++if __name__ == "__main__":
++    p = argparse.ArgumentParser()
++    p.add_argument("--inspect", action="store_true"); p.add_argument("--out", default="pretrained_models")
++    a = p.parse_args()
++    for tag in FILES:
++        if a.inspect:
++            _, root, obj = contents(tag); print("==", tag, root); summarise(obj)
++        else:
++            fetch(tag, a.out)

@@ -1,0 +1,11 @@
+--- a/scripts/plan-sections.mjs
++++ b/scripts/plan-sections.mjs
+@@ -42,7 +42,7 @@
+   result[reference.id] = sections;
+   const times = sections.flatMap(({ start, end }) => [start + (end - start) * .3, start + (end - start) * .8]);
+   const select = times.map(t => `lt(prev_t\\,${t.toFixed(2)})*gte(t\\,${t.toFixed(2)})`).join('+');
+-  await run(['-y', '-loglevel', 'error', '-i', file, '-an', '-vf', `select='${select}',scale=320:-2,tile=2x${sections.length}:padding=4`, '-frames:v', '1', '-vsync', 'vfr',
++  await run(['-y', '-loglevel', 'error', '-i', file, '-an', '-vf', `select='${select}',scale=320:-2,tile=2x${sections.length}:padding=4`, '-frames:v', '1', '-fps_mode', 'vfr',
+     fileURLToPath(new URL(`.artifacts/sections/${reference.id}.jpg`, root))]);
+   console.log(reference.id, sections.map(s => `${s.start}-${s.end}`).join(' '));
+ }

@@ -3860,3 +3860,12 @@ His notes on Tab's Israel POV reels, Oct 26, belong to the bible side:
 - Check the spelling: "traveler" has one L.
 - "The captions are wrong sometimes": read them against the audio.
 - A voice or music bed under a POV that sounds odd gets called out ("It's weird"): check what is really under the talk.
+
+## 167. A broken tool he will use gets fixed, not just written down (2026-10-30)
+
+I measured `beat-synced-edit` cutting 210 ms early on every cut and recorded "do not use". Tal: *"U NEED TO FIX THIS"*, because this job is mostly his 360 clips. A verdict is not the end of the job when he needs the tool: fix it, then re-measure.
+
+- **Think about HIS footage, not the test clip.** A 360 clip is one long take. A tool that finds one scene and uses each scene once gives one cut: 60 s became 2 s. Short clips hid that.
+- **Test the fix for what the fix can break.** Letting cuts run to the next beat froze the end of 6 cuts for about 0.7 s each. `freezedetect` caught it; timing checks alone did not.
+- **A real song finds what a click track cannot:** embedded cover art failed the audio step.
+- **Read cuts back from the rendered file, against the audio in that same file.** The picture alone looked perfect at 210 ms off: both sat on a clean grid, just not the same grid.

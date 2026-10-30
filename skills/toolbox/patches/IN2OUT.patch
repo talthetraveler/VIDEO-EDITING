@@ -1,0 +1,185 @@
+--- a/infer_example.py
++++ b/infer_example.py
+@@ -21,6 +21,7 @@
+ parser.add_argument("--num_ref", type=int, default=6)
+ parser.add_argument("--neighbor_stride", type=int, default=4)
+ parser.add_argument("--savefps", type=int, default=24)
++parser.add_argument("--vfid", action="store_true", help="also compute VFID; needs release_model/i3d_rgb_imagenet.pt")
+ 
+ # args for e2fgvi_hq (which can handle videos with arbitrary resolution)
+ parser.add_argument("--set_size", action='store_true', default=False)
+@@ -49,7 +50,7 @@
+ print(f'Loading model from: {args.ckpt}')
+ model.eval()
+ 
+-i3d_model = init_i3d_model() # for VFID 
++i3d_model = init_i3d_model() if args.vfid else None # for VFID 
+ 
+ def infer_video_single_loop(imgs, frames, masks, size, desc):
+     video_length = len(frames)
+@@ -123,7 +124,7 @@
+         frames_PIL.append(Image.fromarray(frames[i].astype(np.uint8)))
+         comp_PIL.append(Image.fromarray(comp_frames[i].astype(np.uint8)))
+     psnr, ssim = psnr / video_length, ssim / video_length 
+-    frames_i3d, comp_i3d = calculate_i3d_activations(frames_PIL, comp_PIL, i3d_model, device=device)
++    frames_i3d, comp_i3d = calculate_i3d_activations(frames_PIL, comp_PIL, i3d_model, device=device) if args.vfid else (None, None)
+ 
+     if save_video:
+         save_dir_name = os.path.join(args.video, 'results')
+@@ -132,6 +133,7 @@
+         save_path = os.path.join(save_dir_name, f'{video_idx}.mp4')
+         writer = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*"mp4v"),
+                                     default_fps, size)
++        print('peak VRAM MB', torch.cuda.max_memory_allocated() / 1e6)
+         for f in range(video_length):
+             comp = comp_frames[f].astype(np.uint8)
+             writer.write(cv2.cvtColor(comp, cv2.COLOR_BGR2RGB))
+@@ -160,6 +162,6 @@
+     print('Video PSNR/SSIM: 'f'{psnr:.2f}/{ssim:.4f}/')
+ avg_psnr = all_psnr / len(videos)
+ avg_ssim = all_ssim / len(videos)   
+-fid_score = calculate_vfid(real_i3d_activations, output_i3d_activations)
++fid_score = calculate_vfid(real_i3d_activations, output_i3d_activations) if args.vfid else float('nan')
+ print('Finish evaluation... Average PSNR/SSIM/VFID: '
+           f'{avg_psnr:.2f}/{avg_ssim:.4f}/{fid_score:.3f}')
+\ No newline at end of file
+--- a/core/metrics.py
++++ b/core/metrics.py
+@@ -1,5 +1,5 @@
+ import numpy as np
+-from skimage import measure
++from skimage.metrics import structural_similarity
+ from scipy import linalg
+ 
+ import torch
+@@ -45,11 +45,7 @@
+     img2 = img2.astype(np.float64)
+ 
+     psnr = calculate_psnr(img1, img2)
+-    ssim = measure.compare_ssim(img1,
+-                                img2,
+-                                data_range=255,
+-                                multichannel=True,
+-                                win_size=65)
++    ssim = structural_similarity(img1, img2, data_range=255, channel_axis=-1, win_size=65)
+ 
+     return psnr, ssim
+ 
+--- a/utils/generate_mask.py
++++ b/utils/generate_mask.py
+@@ -1,31 +1,17 @@
+ import argparse
+-from moviepy.editor import VideoFileClip
++import cv2
+ from PIL import Image
+ from tqdm import tqdm 
+ import os
+ 
+ def get_video_dimensions(filename):
+-    video_clip = VideoFileClip(filename)
+-    width, height = video_clip.size
+-    duration = video_clip.duration
+-    fps = video_clip.fps
+-    num_frames = int(duration * fps)
+-    
+-    print(f"Width: {width}, Height: {height}")
+-    print(f"Duration: {duration} seconds")
+-    print(f"Frames per second (FPS): {fps}")
+-    print(f"Total number of frames: {num_frames}")
++    cap = cv2.VideoCapture(filename)
++    width, height = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
++    num_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
++    cap.release()
++    print(f"Width: {width}, Height: {height}, frames: {num_frames}")
+     return width, height, num_frames
+ 
+-def truncate_video(filename, output, num_frames):
+-    video_clip = VideoFileClip(filename)
+-    fps = video_clip.fps
+-    duration = num_frames / fps
+-    
+-    truncated_clip = video_clip.subclip(0, duration)
+-    truncated_clip.write_videofile(output, codec="libx264")
+-    print(f"Video truncated to {num_frames} frames and saved as {output}")
+-
+ def generate_png_image(w1, w2, h):
+     image = Image.new("RGB", (w2, h), color="white")
+     for y in range(h):
+--- a/model/modules/flow_comp.py
++++ b/model/modules/flow_comp.py
+@@ -4,8 +4,7 @@
+ import torch.nn.functional as F
+ import torch
+ 
+-from mmcv.cnn import ConvModule
+-from mmcv.runner import load_checkpoint
++from mmcv_shim import ConvModule, load_checkpoint
+ 
+ 
+ class FlowCompletionLoss(nn.Module):
+--- a/model/modules/feat_prop.py
++++ b/model/modules/feat_prop.py
+@@ -4,8 +4,7 @@
+ import torch
+ import torch.nn as nn
+ 
+-from mmcv.ops import ModulatedDeformConv2d, modulated_deform_conv2d
+-from mmcv.cnn import constant_init
++from mmcv_shim import ModulatedDeformConv2d, modulated_deform_conv2d, constant_init
+ 
+ from model.modules.flow_comp import flow_warp
+ 
+--- /dev/null
++++ b/mmcv_shim.py
+@@ -0,0 +1,51 @@
++"""The three things IN2OUT uses from mmcv, without mmcv.
++
++mmcv has no wheel for Python 3.12 on Windows and building it needs a C++ compiler. torchvision's
++deform_conv2d(mask=...) is the same operation (modulated deformable convolution, DCNv2); its groups
++are worked out from the tensor shapes, so deform_groups=16 / groups=1 needs no extra arguments.
++"""
++import torch, torch.nn as nn
++from torchvision.ops import deform_conv2d
++
++
++def constant_init(module, val, bias=0):
++    nn.init.constant_(module.weight, val)
++    if getattr(module, "bias", None) is not None:
++        nn.init.constant_(module.bias, bias)
++
++
++class ConvModule(nn.Module):
++    """Conv + activation with mmcv's sub-module names, so checkpoint keys match."""
++    def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, norm_cfg=None, act_cfg=None):
++        super().__init__()
++        assert norm_cfg is None and act_cfg in (None, dict(type="ReLU"))
++        self.conv = nn.Conv2d(in_channels, out_channels, kernel_size, stride, padding, bias=True)
++        self.activate = nn.ReLU(inplace=True) if act_cfg else None
++    def forward(self, x):
++        x = self.conv(x)
++        return self.activate(x) if self.activate else x
++
++
++def load_checkpoint(model, url, strict=True):
++    """SPyNet's own pretrained download. Skipped: the E2FGVI checkpoint carries those weights
++    (update_spynet.*), and infer_example.py loads it with strict=True, so a gap would raise."""
++    print("mmcv_shim: skipping", url)
++
++
++class ModulatedDeformConv2d(nn.Module):
++    def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1,
++                 groups=1, deform_groups=1, bias=True):
++        super().__init__()
++        p = lambda v: (v, v) if isinstance(v, int) else tuple(v)
++        self.in_channels, self.out_channels = in_channels, out_channels
++        self.kernel_size, self.stride, self.padding, self.dilation = p(kernel_size), p(stride), p(padding), p(dilation)
++        self.groups, self.deform_groups = groups, deform_groups
++        self.weight = nn.Parameter(torch.Tensor(out_channels, in_channels // groups, *self.kernel_size))
++        self.bias = nn.Parameter(torch.Tensor(out_channels)) if bias else None
++        nn.init.kaiming_uniform_(self.weight, a=5 ** 0.5)
++        if self.bias is not None:
++            nn.init.zeros_(self.bias)
++
++
++def modulated_deform_conv2d(x, offset, mask, weight, bias, stride, padding, dilation, groups, deform_groups):
++    return deform_conv2d(x, offset, weight, bias, stride, padding, dilation, mask)

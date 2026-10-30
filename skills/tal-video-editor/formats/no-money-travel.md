@@ -374,7 +374,7 @@ Presets live in the kit's `scripts/reflib/presets.json` (desert, green, snow, mo
 | a documentary insert: route, counter, archive board | **lemo-opuscar**, drawn in code, no key. Always `LEMO_COLOR=bt709`. Tested on a vertical route + counter; a full style film not yet rendered |
 | a hand-drawn circle or arrow on a detail | **p5.brush**, transparent frames, overlaid with ffmpeg. `scaleBrushes` once, never per frame |
 | sound effects on the exact word | **`mix_sfx.py`** from `claude-youtube-editor`, measured +5 ms. Gain about -13, duck off, his own SFX (its library is not cleared) |
-| dialogue-free B-roll cut to a song | **BeatSync-Engine**, on the click or one frame early. Music only, drops source sound, so never a conversation. Prepare clips to 9:16 first: portrait clips came out stretched |
+| dialogue-free B-roll cut to a song, long 360 takes included | **`beat-synced-edit`, our patched copy** (`REPOS.md`). Cuts within a frame of the beat, 1080x1920, bt709. Flat exports only, never a raw `.insv`; not yet run on a real 360 export. Music only, so never a conversation. `--max-scene` and `--beat-stride` set how many cuts |
 | long-form title + 3 thumbnail ideas | `/packaging` rules in `claude-youtube-editor`, as text. Rendering a thumbnail needs a Gemini key and a face kit: not done |
 | one frame at a time in a short window | **`watch-video`**, our patched copy. Fully local, no speech |
 | his voice | ElevenLabs, his professional voice |
@@ -388,7 +388,7 @@ the local HyperFrames skills.
 
 **Not built yet (gaps, none of them guessed around):** the series HUD template · the trade card
 template · a match-cut finder. Build the HUD and the trade card once and reuse them every
-episode. Cutting to the beat now works for B-roll only (BeatSync-Engine); a beat-cut section
+episode. Cutting to the beat now works for B-roll only (`beat-synced-edit`); a beat-cut section
 inside a talking edit is still not built.
 
 **Tab's repos are tested, with the numbers, in `REPOS.md` -> "The Tab handoff repos".** The ones

@@ -1,0 +1,47 @@
+--- a/skills/watch-video/scripts/sample_frames.py
++++ b/skills/watch-video/scripts/sample_frames.py
+@@ -104,6 +104,7 @@
+     fps: float,
+     width: int,
+     max_frames: int,
++    source_fps: float = 0.0,
+ ) -> list[dict[str, Any]]:
+     uniform_dir = output_dir / "uniform"
+     reset_directory(uniform_dir)
+@@ -135,9 +136,12 @@
+     ]
+     subprocess.run(command, check=True)
+     images = sorted(uniform_dir.glob("frame_*.jpg"))
++    # ffmpeg's fps filter keeps the last source frame of each output bin, so a
++    # sample sits about half an interval after index/fps. Label it where it is.
++    bin_offset = max(0.0, 0.5 / fps - (0.5 / source_fps if source_fps > 0 else 0.0))
+     return [
+         {
+-            "timestamp": min(start + index / fps, start + span),
++            "timestamp": min(start + index / fps + bin_offset, start + span),
+             "kind": "uniform",
+             "path": str(image.relative_to(output_dir)),
+         }
+@@ -196,11 +200,8 @@
+ 
+ 
+ def merge_frames(uniform: list[dict[str, Any]], scenes: list[dict[str, Any]]) -> list[dict[str, Any]]:
+-    merged = list(uniform)
+-    for scene in scenes:
+-        if any(abs(scene["timestamp"] - frame["timestamp"]) < 0.15 for frame in uniform):
+-            continue
+-        merged.append(scene)
++    # Keep every scene frame: it is the only record of when a cut happened.
++    merged = list(uniform) + list(scenes)
+     merged.sort(key=lambda frame: (frame["timestamp"], frame["kind"] != "scene"))
+     return merged
+ 
+@@ -340,7 +341,7 @@
+     span = end - start
+     sampling_fps = choose_rate(args.mode, span, source_fps, args.fps, args.interval)
+ 
+-    uniform = extract_uniform(video, output_dir, start, span, sampling_fps, args.width, args.max_frames)
++    uniform = extract_uniform(video, output_dir, start, span, sampling_fps, args.width, args.max_frames, source_fps)
+     scenes: list[dict[str, Any]] = []
+     scenes_truncated = False
+     if args.scene_threshold is not None:

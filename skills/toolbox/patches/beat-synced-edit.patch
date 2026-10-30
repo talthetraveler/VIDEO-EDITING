@@ -1,0 +1,270 @@
+diff --git a/clip_tag.py b/clip_tag.py
+index 5b1bdd4..4c1f8d7 100644
+--- a/clip_tag.py
++++ b/clip_tag.py
+@@ -211,7 +211,26 @@ def get_video_duration(video_path):
+     return 0
+ 
+ 
+-def process_video(video_path, scene_threshold=27.0):
++def split_long_scenes(scenes, max_scene):
++    """Split scenes longer than max_scene into equal pieces. A 360 or POV clip
++    is one long take, so scene detection alone finds one scene and the edit
++    gets one cut. Pieces are sub-clips of that take."""
++    if not max_scene or max_scene <= 0:
++        return scenes
++    out = []
++    for s in scenes:
++        n = int(s['duration'] // max_scene)
++        if n < 2:
++            out.append(s)
++            continue
++        step = s['duration'] / n
++        for k in range(n):
++            a = s['start'] + k * step
++            out.append({"start": round(a, 3), "end": round(a + step, 3), "duration": round(step, 3)})
++    return out
++
++
++def process_video(video_path, scene_threshold=27.0, max_scene=2.5):
+     """
+     Process a video file: detect scenes and tag each clip.
+     """
+@@ -231,6 +250,8 @@ def process_video(video_path, scene_threshold=27.0):
+             "duration": round(duration, 3)
+         }]
+ 
++    scenes = split_long_scenes(scenes, max_scene)
++
+     # Analyze each scene/clip
+     print(f"Analyzing {len(scenes)} clips...")
+     clips = []
+@@ -342,6 +363,9 @@ def main():
+     parser.add_argument("-o", "--output", help="Output JSON file path", default=None)
+     parser.add_argument("--threshold", type=float, default=27.0,
+                         help="Scene detection threshold (lower = more sensitive, default: 27)")
++    parser.add_argument("--max-scene", type=float, default=2.5,
++                        help="Split scenes longer than this many seconds, so a long take gives many "
++                             "clips (default 2.5, 0 = off)")
+     parser.add_argument("--html", action="store_true", help="Generate HTML visualization")
+     parser.add_argument("--thumbs", action="store_true",
+                         help="Export a representative JPG per scene (+ a labeled contact sheet) for "
+@@ -375,7 +399,7 @@ def main():
+     # Process each video
+     all_results = []
+     for video in videos:
+-        result = process_video(video, scene_threshold=args.threshold)
++        result = process_video(video, scene_threshold=args.threshold, max_scene=args.max_scene)
+         all_results.append(result)
+ 
+     # Combine results
+@@ -388,6 +412,7 @@ def main():
+         for result in all_results:
+             for clip in result['clips']:
+                 clip['source'] = result['source']
++                clip['source_path'] = result['source_path']
+                 clip['id'] = clip_id
+                 clip_id += 1
+                 all_clips.append(clip)
+diff --git a/plan_edit.py b/plan_edit.py
+index dde0dc2..d5dd08b 100644
+--- a/plan_edit.py
++++ b/plan_edit.py
+@@ -288,6 +288,8 @@ def match_clips_to_beats(beatmap, clips_data, use_best_segment=True, segment_ind
+             unused = [c for c in clips
+                       if c['id'] not in used_clips and c['id'] not in forced_clip_ids]
+             if not unused:
++                print(f"  WARNING: clips ran out at beat {i} of {len(beats_relative)}. "
++                      f"Add footage, lower --max-scene in clip_tag, or raise --beat-stride.")
+                 break  # No more clips available - stop the edit
+ 
+             # Select appropriate clip from unused pool
+@@ -310,9 +312,11 @@ def match_clips_to_beats(beatmap, clips_data, use_best_segment=True, segment_ind
+         used_clips.add(clip['id'])
+         last_source_center = (clip['start'] + clip['end']) / 2
+ 
+-        # Calculate clip duration (until next beat or end)
++        # Duration runs to the next beat, never less: render_edit joins clips
++        # end to end, so a short clip would pull every later cut off the beat.
++        # render_edit holds the last frame if the source runs out.
+         if i + 1 < len(beats_relative):
+-            clip_duration = min(beats_relative[i + 1] - beat_time, clip['duration'])
++            clip_duration = beats_relative[i + 1] - beat_time
+         else:
+             clip_duration = min(duration - beat_time, clip['duration'])
+ 
+@@ -326,14 +330,19 @@ def match_clips_to_beats(beatmap, clips_data, use_best_segment=True, segment_ind
+             src_start = clip['start']
+         else:
+             src_start = clip['start'] + max(0.0, (clip['duration'] - clip_duration) / 2)
++            # Slide back so the window stays inside the file, or the end of the
++            # cut freezes on the last frame.
++            file_end = max(c['end'] for c in all_clips if c.get('source') == clip.get('source'))
++            src_start = max(0.0, min(src_start, file_end - clip_duration))
+ 
+         edl.append({
+             "timeline_start": round(beat_time, 3),
+             "timeline_end": round(beat_time + clip_duration, 3),
+             "clip_id": clip['id'],
+-            "clip_source": clip.get('source', clips_data.get('source', '')),
++            "clip_source": clip.get('source_path', clips_data.get('source_path',
++                                    clip.get('source', clips_data.get('source', '')))),
+             "clip_start": round(src_start, 3),
+-            "clip_end": round(min(src_start + clip_duration, clip['end']), 3),
++            "clip_end": round(src_start + clip_duration, 3),
+             "clip_duration": round(clip_duration, 3),
+             "clip_motion": clip['motion'],
+             "clip_energy": clip['energy'],
+@@ -344,16 +353,20 @@ def match_clips_to_beats(beatmap, clips_data, use_best_segment=True, segment_ind
+ 
+     # Calculate actual duration based on edits (may be shorter if clips ran out)
+     actual_duration = edl[-1]['timeline_end'] if edl else 0
++    # The render starts picture and song together, and the picture starts on the
++    # first beat, so the song must start there too. Without this every cut sits
++    # early by the first beat's time (measured: 210 ms).
++    first_beat = edl[0]['timeline_start'] if edl else 0
+ 
+     return {
+         "audio_source": beatmap['file'],
+         "video_source": clips_data.get('source', clips_data.get('sources', ['unknown'])),
+         "timeline_duration": round(actual_duration, 3),
+         "audio_segment": {
+-            "start": start_time,
++            "start": round(start_time + first_beat, 3),
+             "end": round(start_time + actual_duration, 3),
+-            "duration": round(actual_duration, 3)
+-        } if use_best_segment else None,
++            "duration": round(actual_duration - first_beat, 3)
++        },
+         "tempo": beatmap['tempo'],
+         "edit_count": len(edl),
+         "edits": edl
+diff --git a/render_edit.py b/render_edit.py
+index c06c7d5..50fa8f2 100644
+--- a/render_edit.py
++++ b/render_edit.py
+@@ -38,18 +38,33 @@ def check_ffmpeg():
+         return False
+ 
+ 
+-def extract_clip(video_path, start, end, output_path, temp_dir):
+-    """Extract a clip segment from video using FFmpeg."""
+-    duration = end - start
++def extract_clip(video_path, start, frames, output_path, temp_dir, fps=30, size=None):
++    """Extract exactly `frames` frames from video using FFmpeg.
++
++    Every clip gets the same size, frame rate and limited-range BT.709, so they
++    join without a re-encode and the cuts stay on the frame they were placed on.
++    tpad holds the last frame if the source ends first.
++    """
++    vf = []
++    if size:
++        w, h = size.lower().split('x')
++        vf += [f"scale={w}:{h}:force_original_aspect_ratio=increase:out_color_matrix=bt709:out_range=tv",
++               f"crop={w}:{h}"]
++    else:
++        vf.append("scale=trunc(iw/2)*2:trunc(ih/2)*2:out_color_matrix=bt709:out_range=tv")
++    vf += ["setsar=1", f"fps={fps}", "tpad=stop_mode=clone:stop_duration=60", "format=yuv420p"]
+ 
+     cmd = [
+         'ffmpeg', '-y',
+         '-ss', str(start),
+         '-i', video_path,
+-        '-t', str(duration),
++        '-vf', ','.join(vf),
++        '-frames:v', str(frames),
+         '-c:v', 'libx264',
+-        '-preset', 'slow',
++        '-preset', 'medium',
+         '-crf', '18',
++        '-color_range', 'tv', '-colorspace', 'bt709',
++        '-color_primaries', 'bt709', '-color_trc', 'bt709',
+         '-an',  # No audio for individual clips
+         '-avoid_negative_ts', 'make_zero',
+         output_path
+@@ -71,6 +86,7 @@ def extract_audio_segment(audio_path, start, end, output_path):
+         '-ss', str(start),
+         '-i', audio_path,
+         '-t', str(duration),
++        '-vn',  # a song's embedded cover art is a video stream
+         '-c:a', 'aac',
+         '-b:a', '192k',
+         output_path
+@@ -78,7 +94,7 @@ def extract_audio_segment(audio_path, start, end, output_path):
+ 
+     result = subprocess.run(cmd, capture_output=True, text=True)
+     if result.returncode != 0:
+-        print(f"  Warning: Audio extraction error: {result.stderr[:200]}")
++        print(f"  Warning: Audio extraction error: {result.stderr[-300:]}")
+         return False
+     return True
+ 
+@@ -98,9 +114,7 @@ def concatenate_clips(clip_paths, output_path, temp_dir):
+         '-f', 'concat',
+         '-safe', '0',
+         '-i', concat_file,
+-        '-c:v', 'libx264',
+-        '-preset', 'slow',
+-        '-crf', '18',
++        '-c', 'copy',
+         output_path
+     ]
+ 
+@@ -131,7 +145,7 @@ def add_audio_to_video(video_path, audio_path, output_path):
+     return True
+ 
+ 
+-def render_edl(edl, audio_path, video_path, output_path, temp_dir):
++def render_edl(edl, audio_path, video_path, output_path, temp_dir, fps=30, size=None):
+     """Render the full video from EDL."""
+ 
+     edits = edl['edits']
+@@ -150,15 +164,25 @@ def render_edl(edl, audio_path, video_path, output_path, temp_dir):
+             # Check if it's a full path or just filename
+             if os.path.isfile(edit['clip_source']):
+                 source_video = edit['clip_source']
++            elif os.path.basename(edit['clip_source']) != os.path.basename(video_path):
++                print(f"Error: clip source not found: {edit['clip_source']}")
++                return False
++
++        # Frames come from the timeline, rounded once from the first cut, so
++        # rounding cannot add up across cuts.
++        t0 = edits[0]['timeline_start']
++        frames = round((edit['timeline_end'] - t0) * fps) - round((edit['timeline_start'] - t0) * fps)
+ 
+-        print(f"  [{i+1}/{total_edits}] Extracting {edit['clip_start']}s - {edit['clip_end']}s ({edit['beat_type']})")
++        print(f"  [{i+1}/{total_edits}] Extracting {edit['clip_start']}s + {frames} frames ({edit['beat_type']})")
+ 
+         success = extract_clip(
+             source_video,
+             edit['clip_start'],
+-            edit['clip_end'],
++            frames,
+             clip_file,
+-            temp_dir
++            temp_dir,
++            fps=fps,
++            size=size
+         )
+ 
+         if success and os.path.exists(clip_file):
+@@ -207,6 +231,9 @@ def main():
+     parser.add_argument("-v", "--video", required=True, help="Source video file path")
+     parser.add_argument("-o", "--output", help="Output video file path", default=None)
+     parser.add_argument("--keep-temp", action="store_true", help="Keep temporary files")
++    parser.add_argument("--fps", type=int, default=30, help="Output frame rate (default 30)")
++    parser.add_argument("--size", default=None,
++                        help="Output size WxH, cover-cropped, e.g. 1080x1920 (default: source size)")
+     parser.add_argument("--overunder", action="store_true",
+                         help="Also output an over-under 'duplicated view' (3D-style) version: the same "
+                              "view stacked top+bottom. Writes <output>_overunder.mp4 alongside the normal render.")
+@@ -254,7 +281,8 @@ def main():
+ 
+     try:
+         # Render
+-        success = render_edl(edl, args.audio, args.video, output_path, temp_dir)
++        success = render_edl(edl, args.audio, args.video, output_path, temp_dir,
++                             fps=args.fps, size=args.size)
+ 
+         if success:
+             # Get file size

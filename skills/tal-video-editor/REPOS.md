@@ -32,15 +32,7 @@ turn, with a verified status, or it has not been dealt with.**
 | `remotion-dev/remotion`, `heygen-com/hyperframes` | **already installed** (Remotion 4.0.520 in `system/`, HyperFrames CLI 0.8.181). The PDF's three Effect-of-the-Day prompts now run on the Remotion one: `system/scripts/effect.mjs` | `system/src/effects/` |
 | `talthetraveler/VIDEO-EDITING` | **this repo** | - |
 
-**Handed to his Tab, Oct 2026, NOT installed here yet** (from the chat in the Tab handoff; nothing below has been checked on
-this machine): `hassancs91/claude-youtube-editor` (Tab's main long-form add-on: word-synced SFX, 3-thumbnail packaging) ·
-`lemomo-ai/lemo-opuscar` (code-rendered maps, counters, documentary inserts) · `acamposuribe/p5.brush` (hand-drawn circles
-and arrows; Tab's Remotion component is in the kit) · `jordanrendric/claude-video-vision` · `TomGranot/watch-video` ·
-`Schabo/orbis-reframe` (360, needs a GPU) · `seunghyuns98/VideoColorGrading` (needs a GPU) · `Merserk/BeatSync-Engine` ·
-`ZiadAbdelkarim/beat-synced-edit` · `CoCoSol007/beats-into-shapes` · `blixvip/NullMotion` · `storytold/effectcraft` ·
-`boona13/image-extender` · `sang-w00/IN2OUT` · `chrcit/theo-thumbnail-checker` · `cryptobirr/VideoClipFinder` ·
-`Autom8AI/Open-Higgsfield-AI` · `wide-trace/open-higgsfield` · `yihui-dev/awesome-opus5-5-videos`.
-Tab's verdicts: image-extender and IN2OUT failed or could not run; VideoClipFinder adds nothing here.
+**Handed to his Tab, Oct 2026: installed and tested 2026-10-30.** Every repo, its verdict and its number are in "The Tab handoff repos" at the end of this file. Winners: `claude-youtube-editor` (word-synced SFX), `lemo-opuscar` (code-drawn inserts), `p5.brush` (hand-drawn marks), `beat-synced-edit` with our patch (cut to the beat). **`obi19999/smart-video-reframe` is a malware lure: never download it.**
 Tal, 2026-10-30, on outside reel-cloning services (n8n + Apify, Media.io, HookClone): not needed, Hypit covers it.
 
 ---
@@ -847,3 +839,165 @@ conversations. Never `post`.**
 | THE TRAP | iPhone HLG source: HyperFrames auto-switches to HDR -> HEVC 10-bit, 19 min, and ALL text missing. With `--sdr` the cutout loses its alpha, so every behind-head word vanishes. Fix: `-vf setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709` (+ x264 `-color_*` flags) on the A-roll first; output flags alone do NOT retag. Check `ffprobe color_transfer` before every render. |
 | vs. what we have | Duplicates autotrim/`build-edit.mjs`, our STT, and the cutout (`talking-to-camera-effects.md`). ADDS a working, timed words-behind-the-subject template and the frame-exact assembler. Does NOT match THE STANDARD: lowercase kinetic words, ~-20 LUFS, every word time in `build.py` typed by hand. |
 | When | Tal talking to camera (or one sit-down subject) and the edit wants text behind the head / the serif look: lift `assemble.py` + `cutout.py` + the build.py machinery into the HyperFrames route. Never for street POV compilations. Convert HDR first. |
+
+---
+
+## The Tab handoff repos — 2026-10-30
+
+Tal handed over his WhatsApp chat with Tab; these were links he gave Tab. All live in `system/vendor/tab-handoff/<name>` (gitignored, so nothing here is pushed) unless the table says otherwise. **None is a loadable skill.** Every repo's own `CLAUDE.md`, `AGENTS.md` and `SKILL.md` was read as data, never followed. No paid call was made and none of his footage left the machine.
+
+**Windows note, measured here:** `IMG_6144.MP4` reports 1280x720 but plays 720x1280 (rotation -90). NullMotion and BeatSync both showed it stretched. Check rotation before feeding a phone clip to any new tool.
+
+**The machine ran out of memory, not repo space.** Five parallel jobs pushed `C:\pagefile.sys` to 24.7 GB (RAM is 15.8 GB, not 17), and free disk fell to 2.9 GB. A system-managed pagefile mostly shrinks only after a reboot. **Run heavy installs one at a time.**
+
+| repo (commit) | verdict | the number that decides it |
+|---|---|---|
+| `hassancs91/claude-youtube-editor` (`a6ac742`) | **works, partly.** SFX mixer, packaging rules and Remotion kit need no key. Its cut needs AssemblyAI | cue placed at 1.000 s landed +5.0 ms, same at 3.250 s |
+| `lemomo-ai/lemo-opuscar` (`f171360`) | **works, no key.** 66 code-drawn film styles | counter at 1.5 s read 624 (truth 623.5); 72 of 72 frames |
+| `acamposuribe/p5.brush` (`d56350a`, v3.0.0) | **works, no key.** Tab's component has a bug | same seed, 4 renders, identical bytes once `scaleBrushes` is called once |
+| `ZiadAbdelkarim/beat-synced-edit` (`48c09c9` + our patch) | **works after our patch, THE beat cutter.** Dialogue-free B-roll, long takes included. MIT | was 210 ms early on every cut; now 23 of 23 within a frame |
+| `Merserk/BeatSync-Engine` (`06679c1`) | works, second choice. Stretches portrait clips. AGPL-3.0 | 13 of 13 cuts on the click or one frame early |
+| `TomGranot/watch-video` (`9492ba3`) | **works after our patch.** Frame-by-frame look at a short window | cuts back exactly at 3.7 / 8.3 / 8.8 s after the patch |
+| `jordanrendric/claude-video-vision` (`4a4f990`) | works with limits, **not recommended** | timestamps are whole seconds; cuts 0.5 s apart both read 00:00:08 |
+| `blixvip/NullMotion` (`1cd03c6`) | works with limits. To study a motion ad; skip for travel | export 19 frames in 6.4 s with the pane hidden |
+| `chrcit/theo-thumbnail-checker` (`0dd71a6`) | works, **irrelevant**. Alerts on a changed thumbnail file, cannot rate one | same picture as PNG reads as "changed" |
+| `yihui-dev/awesome-opus5-5-videos` (`92aee2f`) | reference only | 703 prompts, none a travel map, 3 worth keeping |
+| `boona13/image-extender` (`4a8d674`) | **runs, does nothing without a paid key** (`OPENROUTER_API_KEY`). Tab's "failed" is half right | key dialog cannot be closed; 0 images |
+| `wide-trace/open-higgsfield` (`b16a0ef`) | runs, paid Higgsfield front end, no licence file | 0 output; uploads become public URLs |
+| `Autom8AI/Open-Higgsfield-AI` (`d32d022`) | runs, **never use**, no licence file | as shipped its dev server forwards sign-in to a stranger's Netlify |
+| `cryptobirr/VideoClipFinder` (`85c56be`) | **cannot do its job.** Tab was right | 2 routes exist; `/health` is hard-coded |
+| `CoCoSol007/beats-into-shapes` (`61d888b`) | **wrong kind of thing.** A Godot game with hand-typed tempos | no audio analysis at all |
+| `storytold/effectcraft` (`ec7ced1`, 0.18.0) | **cannot run here.** Alpha; no Rust or C compiler, build estimated past 3 GB | nothing run. A signed 74.5 MB portable zip exists, not run (prebuilt binary, needs Tal's OK) |
+| `Schabo/orbis-reframe` (`611d14e`) | **cannot run here.** Linux and Wayland only, X5 fully supported; its X4 doc says no X4 file examined | `CMAKE_CXX_COMPILER not set`; `main.cpp:114` forces Wayland; WSL not installed. The GPU is not the blocker |
+| `sang-w00/IN2OUT` (`4503579`) | **cannot run.** Trained weights are gone. Non-commercial licence | Drive link 404, control links 200 |
+| `seunghyuns98/VideoColorGrading` (`9d58052`) | **not finished.** The first test was stopped by the disk emergency, not by a blocker in the repo; weights are public, ~3.4 GB | two 3.44 GB UNets against 4 GB VRAM is arithmetic, not a measured failure. Retest in progress |
+
+**Added by the travel session; cloned and read, NOT run.** Auto mode blocked running them because the request came from another session, not from Tal. Nothing below is tested:
+
+| repo | read from the code |
+|---|---|
+| `taoufik123-collab/claude-watch` (`7711231`, MIT) | Local path: ffmpeg frames, one per shot (scene threshold 0.3), a 0-10 s pass, pacing, `report.md`. **Its Whisper is Groq or OpenAI only: no key means frames with no words.** SessionStart hook only prints a status line. `setup.py` writes `~/.config/watch/.env`. Obsidian save happens only if a vault is found (`$WATCH_VAULT_DIR`, `~/Documents/Obsidian`, `~/Obsidian`). |
+| `bradautomates/claude-video` (`03ceb42`, MIT) | Same core, newer, with tests, and it **adds local WhisperX**. Its `setup.py` can install `uv` and CPU torch, so do not run it blind. |
+| `guimatheus92/mcp-video-analyzer` (`e37c864`, MIT) | `tesseract.js` OCR, default languages `eng+por`. Its `prepare` script builds on install. OCR on a title is unmeasured. |
+| `solarssk/video-describer` (`d99e017`, MIT) | Says macOS only, but the Python core falls back from VideoToolbox and mlx-whisper to faster-whisper; `app.sh` is Mac. **Needs a paid AI provider** (Anthropic, OpenAI or Gemini); not run, no provider spent. |
+
+A `/watch` skill would need Tal's yes before it goes live and an exception in `CLAUDE.md`.
+
+**Refused: `obi19999/smart-video-reframe` is a malware lure. Never download it.** Its README points every download link at a zip inside `src/utils/` and says to double-click an `.exe`. Both zips hold `Launcher.cmd`, `luajit.exe` (one also `lua51.dll`) and a ~309 KB opaque `.txt`: a loader plus hidden payload. The Python beside them is cover. Names listed only; nothing was extracted or run; the clone was deleted. So there is no comparison with Autocrop-vertical, which stays the tool. Same family as the fake Adobe repo above: **a README that says "download this zip" instead of "pip install" is the tell.**
+
+**Not installed, by the travel session's instruction:** `kennyzheng-builds/seek-and-analyze-video` (paid upload, no licence) · `sheldonxxxx/insta360-ai-toolkit` (Mac, photo only) · `PumpGame/Insta360_Project_Tools` (no licence) · `aregrid/frame` (stale since May 2025).
+
+### Word-synced SFX: `claude-youtube-editor`
+
+The one thing Tab used it for, and the best new tool in this batch.
+
+```bash
+cd system/vendor/tab-handoff/claude-youtube-editor
+venv/Scripts/python tools/mix_sfx.py <plan.json> --print     # cue sheet, no render
+venv/Scripts/python tools/mix_sfx.py <plan.json>             # video copied, cues mixed in
+```
+
+Plan: `{"catalog":"media/library/sfx/catalog.json","render":{"preview":"<in.mp4>","out":"<out.mp4>","end_s":60,"duck":false},"events":[{"at_s":4.44,"sfx_id":"pop-reveal","gain_db":-13,"cue":"on the word"}]}`
+
+Pop on the spoken word "Ethiopia" (voice -30.3 dB in a 0.3 s window):
+
+| gain | duck | adds | file peak |
+|---|---|---|---|
+| -13 | on | +5.7 dB | -1.1 dBFS |
+| -13 | off | +2.1 dB | -1.1 dBFS |
+| 0 | on | +14.9 dB | **+2.6 dBFS, over** |
+| 0 | off | +11.7 dB | **+1.1 dBFS, over** |
+
+- **Ducking makes the cue LOUDER**, because `makeup=2` lifts the bus. Do not read "duck" as "safer".
+- **Stay near -13 on street audio.** Its short-form table (0 to +7) assumes a loud studio voice, and clipped here.
+- **Library licence: 32 of 36 clips are ElevenLabs-generated, commercial use "per the account's plan" of the author. Treat as not cleared.** Point the catalog at `tal-video-editor/assets/sfx/` before anything is posted.
+- **`clean_voice.py` defaults to the PAID ElevenLabs route.** Always pass `--method rnnoise`. Even then RNNoise **deleted "Okay, so"** from a clip's first second (base-model transcript). House rule stands: no denoise.
+- `/packaging` is text only and works: one title, 3 thumbnail levers. Rendering a thumbnail needs `GEMINI_API_KEY` and a face kit, so **no real thumbnail was made**. `thumb_scrim.py` works locally (top-left 126.9 -> 59.7, rest untouched).
+- Its 144 Remotion shots render (`RuleCard`, 165 frames, 4 min 18 s on a busy machine), but they are 16:9 software UIs in a calm indigo brand, and they output **full-range `yuvj420p`**: the colour trap in CLAUDE.md §7. Not his world.
+- `render_cuts.py` (NVENC, 4K60 10-bit) and `verify_cut.py` not run: both start from an AssemblyAI transcript. Worth copying: **mux audio once, never per segment** (15-20 ms drift per cut, its finding, not re-measured), and a second transcription of the render to catch ghost speech.
+- Never run: `yt_upload.py`, `notion_sync.py`.
+
+### Code-drawn inserts: `lemo-opuscar`
+
+A page with `window.READY`, `window.render(t)` and `window.DUR` renders frame by frame. Installed by hand, NOT as its plugin (that would add a skill and clone to `~/lemo-opuscar`). `setup.sh` not run: it expects `.venv/bin`. Chrome is Remotion's, through `PLAYWRIGHT_CHROME`. Code-level hosts: local server only. Style demos fetch public data (NASA, Wikimedia, archive.org). `tools/publish.sh` and `release.py` are the owner's: never run.
+
+```bash
+cd system/vendor/tab-handoff/lemo-opuscar
+export PLAYWRIGHT_CHROME="<system/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe>"
+node core/render/video.mjs <folder> --size 1080x1920 --fps 30 --workers 3 --out <folder>/out.mp4
+LEMO_COLOR=bt709 sh core/render/mux.sh <folder>/out.mp4 mix.wav final.mp4 30 0
+```
+
+- Vertical route + counter, 1080x1920, 3 s: exact frame count, right number at the right time. 57 s on a busy machine.
+- **Always set `LEMO_COLOR=bt709`.** Without it: `yuvj420p`, `pc`, bt470bg. With it: yuv420p, `tv`, bt709, dark pixels 19 -> 31 as limited range should be.
+- `transit-map` style stills looked at (3D metro map, flip counters) at 1920x1080 and 1080x1920. **Its fonts are not in git**: a missing one gives `[pageerror] A network error occurred`; `build.sh` lines 20-23 fetch them. **A full film of a style was not rendered.**
+- `--size 1080x1920` reframes, it does not recompose. Check any style with text.
+- `readcheck` fails every rolling counter. Report only the final number in `window.TEXTS`.
+- `mux.sh` targets -14 LUFS and adds grain unless the 5th argument is 0.
+- Copy techniques into a project folder; never build in `styles/`. Best fits: `transit-map`, `satellite-briefing`, `archive-lighttable`, `caption-news`, `visual-investigation`. Voice tier and music packs not installed.
+
+### Hand-drawn marks: `p5.brush`
+
+No network code; `dist/` ships built, so nothing was installed. Marker circle + arrow on a transparent 1080x1920 canvas, overlaid on a real frame and looked at: right place, street visible through. About 0.5 s a frame once warm, on software WebGL (`--use-angle=swiftshader`). Not added to `system/package.json`.
+
+> **`scaleBrushes()` multiplies, it does not set.** Called each frame, strokes grew 2.9x per render (27,071 -> 77,775 -> 222,920 -> 644,372 pixels). Call it ONCE.
+
+Tab's `BrushAnnotation.tsx` calls it inside `begin()`, twice per frame, and his pinned 2.2.3 has the same code (`src/stroke/stroke.js:235`). Read, not run; the kit was not changed. Tested version here is 3.0.0.
+
+### Cutting to the beat: `beat-synced-edit`, patched by us
+
+Tal, 2026-10-30, on the 210 ms bug: *"U NEED TO FIX THIS"*, because this job is mostly his 360 clips. Fixed in our copy: `skills/toolbox/patches/beat-synced-edit.patch`. **`system/vendor/` is gitignored, so re-apply the patch after any re-clone.**
+
+Both tools use the same librosa tracker. Against click tracks at 120, 128 and 90 BPM: BeatSync found 336 of 336, beat-synced-edit 331 of 336, both about +20 ms. **Ignore the printed BPM on both** (said 117.5 for 120); the beat list is right.
+
+**What the patch fixed, all found by running it:**
+
+| defect as shipped | measured | after the patch |
+|---|---|---|
+| song and picture start at 0, first cut planned on the first beat | **every cut 210 ms before the sound** | +21.9 ms, 23 of 23 within a frame, no drift |
+| one long take = one scene, each scene used once | **60 s take: 2 cuts, 2 s of video** | 24 cuts (`--max-scene`, default 2.5 s) |
+| short scene shortened the clip, later cuts slid | by reading, then removed | every cut runs to the next beat, frames rounded once |
+| folder of clips fell back to one file with no warning | by reading | full paths; a missing source now stops with an error |
+| no size or colour handling | portrait clips | `--size 1080x1920` cover crop, 30 fps, yuv420p, `tv`, bt709 |
+| a song with cover art failed | `render` exit, real DOOM track | `-vn` on the audio step |
+
+My own first version froze the end of 6 cuts (about 0.7 s each) by running past the end of a clip. Caught with `freezedetect`, fixed by sliding the window back into the file, re-checked: 0 freezes.
+
+**Real run:** 6 of his portrait phone clips + a real song, 24 cuts, 57.7 s, 1080x1920, 72 MB, 1 min 49 s, faces natural on a contact sheet, 0 frozen frames. 21 of 23 planned cuts detected within a frame; the other 2 were not found by the scene detector at threshold 0.2 (likely near-identical pieces of one take; not proven).
+
+```bash
+cd <scratch folder>
+B="system/vendor/tab-handoff/beat-synced-edit"
+PYTHONUTF8=1 $B/.venv/Scripts/python $B/beat_map.py song.mp3 -o song_beatmap.json
+PYTHONUTF8=1 $B/.venv/Scripts/python $B/clip_tag.py <folder or file> -o clips.json --max-scene 1.5
+PYTHONUTF8=1 $B/.venv/Scripts/python $B/plan_edit.py song_beatmap.json clips.json --full --beat-stride 4 -o edl.json
+PYTHONUTF8=1 $B/.venv/Scripts/python $B/render_edit.py edl.json -a song.mp3 -v <any one clip> --size 1080x1920 -o out.mp4
+```
+
+- **Not tested on a real 360 export: no such file is on this laptop.** It needs a flat export (`.mp4`), never a raw `.insv`. A 60 s take is simulated with a colour-drifting clip.
+- **Enough footage or the edit stops early, with a warning**: each piece is used once. 60 s of footage at 2.5 s pieces gives 24 cuts. Lower `--max-scene` or raise `--beat-stride` (cuts every Nth beat).
+- Pieces of one take are chosen by energy, not by what is in them. It has no idea what makes a good shot. Look at every cut.
+- Music only: source sound is dropped. **Never for a conversation.** `--html` reports load Chart.js from a CDN.
+- `-ss` is before `-i`, so a variable-frame-rate phone clip is not proven frame-exact in source. Cuts in the OUTPUT are.
+- Loudness is the song's: not levelled. Logo, captions and his own final checks are still needed.
+
+**`BeatSync-Engine`, for comparison, unpatched:** 13 of 13 cuts on the click or one frame early, no drift. But portrait clips came out **stretched** into 1280x720 (seen on a contact sheet; likely cause: it reads the size without the rotation flag), 212 MB for 20 s (`.mkv`, `pcm_s24le`), only 7 shots in 20 s, it lists every clip twice on Windows, and it is AGPL-3.0. Installer, web UI, GPU code and Qwen tagging not run. Keep it as a second opinion on the beat list.
+
+### Frames and analysis: `watch-video`, `claude-video-vision`
+
+Neither watches video. Both are frames + transcript, our method. `watch-video` is fully local with no speech-to-text; `skills/toolbox/patches/watch-video.patch` fixes two real bugs (it threw away all 3 detected cuts; overview labels up to 0.125 s early). Its one new use: every frame of a short window, which caught a one-frame flash on its exact label. `make-contact-sheet.mjs` and `refscan.mjs` cover the rest.
+
+```bash
+SKILL="system/vendor/tab-handoff/watch-video/skills/watch-video"
+python "$SKILL/scripts/run.py" sample-frames "<video>" --output-dir "<scratch>/win" --mode every-frame --start 4.9 --end 5.1
+```
+
+`claude-video-vision`: **an unconfigured `video_watch` on a local file silently downloaded a 3.1 GB model** before failing with `spawn whisper-cli ENOENT`. Its `.mcp.json` runs `npx ...@latest`, which is not the code read here. Do not register it.
+
+### The rest, what to remember
+
+- **NullMotion:** `skills/toolbox/patches/NullMotion.patch` (`-vsync` -> `-fps_mode`, the ffmpeg 9 break again). Grey "Part 1/2/3" boxes on your own clips. No map, counter or travel template.
+- **awesome-opus5-5-videos:** 207 of 703 are tweet captions, 66 are full prompts. Keep `twoclipping-496100` (paper-map unfold, plus a real-footage rule: re-encode `-g 1`, wait for `seeked`, every style a pure function of time), `twoclipping-747965` (night and day photo crossfade), `0xkarmi-129839` (6 counters drawn from the frame number).
+- **Open-Higgsfield-AI:** the screen says "Muapi", the code calls `api.kie.ai`. Do not run plain `vite` there.
+- **IN2OUT:** `skills/toolbox/patches/IN2OUT.patch` removes mmcv; base model loads. Last run died with `CUDA error: unknown error` while the machine was out of memory; cause not established. Apply patches here with `--ignore-whitespace`.
+- `system/.venv-audio` has CPU-only torchvision beside CUDA torch: `deform_conv2d` fails there.
