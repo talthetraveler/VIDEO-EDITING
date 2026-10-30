@@ -3846,3 +3846,17 @@ He handed over the whole chat with Tab. Full section: `formats/no-money-travel.m
 **What made Tab fast was preparation:** a searchable index of every clip, transcripts by country, every reference broken
 down, then a sheet of line -> picture -> clip before cutting. Tal: "you don't need to build anything right now ... that way
 when I do ask you to build, it can be easy because you already know which clips to find."
+
+## 166. Israel videos are separate from travel (2026-10-30)
+
+He pointed at Tab's "Meeting an Indonesian Christian in Israel" reel: *"this has nothing to do with travels, this is for Tal
+editing bible ... anything with Israel is separate."* Everything from that Tab chat gets sorted first: Israel street POV ->
+`TAL-EDITING-BIBLE.md` and The Social Accords; everything else -> `formats/no-money-travel.md` and The Side Quester.
+
+His notes on Tab's Israel POV reels, Oct 26, belong to the bible side:
+
+- The title sits lower, or on top if it blocks nobody, and never covers a face.
+- It says "in Israel", not the city: "meeting a Muslim in Israel", not Jaffa.
+- Check the spelling: "traveler" has one L.
+- "The captions are wrong sometimes": read them against the audio.
+- A voice or music bed under a POV that sounds odd gets called out ("It's weird"): check what is really under the talk.

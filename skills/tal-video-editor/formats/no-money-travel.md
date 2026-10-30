@@ -7,6 +7,11 @@ This file is that framework and that workflow. It comes from his Tab handoff (a 
 whole WhatsApp chat, Oct 13-29): his own SIDE QUESTER doc, the Episode 1 and 2 briefs, 458
 voice notes, 48 PDFs and the kit Tab built so another editor could take over.
 
+**Travel only.** Tal, 2026-10-30: *"anything with Israel is separate."* His street POV videos in
+Israel, like "Meeting an Indonesian Christian in Israel", are NOT travel videos, even with a
+traveler in them. They follow `TAL-EDITING-BIBLE.md` and THE STANDARD, and nothing here applies to
+them. The Tab chat mixes both, so sort every clip, reel and note into one side first.
+
 **Status.** The rules are his, in his words. The measurements are Tab's, not re-measured
 here. **No travel cut has been approved yet**: he turned down Ep1 v4, so the long-form half is
 taught, not proven. Replace anything he corrects; do not stack a second file beside this one.
