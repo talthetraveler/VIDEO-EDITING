@@ -3879,3 +3879,7 @@ First look at the Ep1 opening. A literal shot is not enough: the hotel entrance 
 ## 168. "It's not the exact same": a recreate is built from the reel, not from notes (2026-10-30)
 
 The Mauritania reel was built from written numbers; nobody downloaded the reference. He compared them and it did not match. Even Tab's analysis is not the reel. For a recreate: download it, measure every cut, the text and the song section, rebuild shot for shot, and check side by side before he sees it. Same failure as LESSONS 76 ("built FROM the cut, not from notes ABOUT it").
+
+## 169. "Copying their same music": a recreate keeps the reference's song, and the job is volume (2026-10-30)
+
+Three recreates went out with commercial tracks I picked from his library, because I would not lift the reference's audio. He wanted the reel's own song: the same music is part of the copy. He gave the reel and asked for it, so the song from that reel goes under the low-res preview, named in the notes. It stays out of any final: he adds it in Instagram, because a baked-in copy can get a reel muted. He also expected a bunch of these, not six in a day. Two agents took about two hours for four reels because each studied everything. Build in batches of five, about 20 minutes a reel, on the shared tools in `A:\CLAUDE WORK\reels\_tools`.

@@ -161,7 +161,9 @@ own words or the book, and flag what you cannot confirm.
    script built on his real lines, every unverifiable fact flagged.
 8. **Check everything before he sees it** (section 7).
 9. **Preview in chat.** One line, then the video, small: *"Stop sending me in HD."* The song stays
-   in the preview (*"Need music"*) and is **named** so he can add it on Instagram. Keep a notes file:
+   in the preview (*"Need music"*) and is **named** so he can add it on Instagram. On a recreate that
+   song is **the reference's own audio**, from the reel he gave, in the low-res preview only. A library
+   track is not a stand-in (LESSONS 169). Keep a notes file:
    script, shot table, song, flags. If he asks to finish it himself, he wants only a Final Cut XML:
    *"You don't need the zip of the footages, I already have the footages."*
 10. **After his yes:** HD final -> Frame.io -> **Metricool, brand The Side Quester** (*"traveling my
@@ -337,7 +339,7 @@ they are newer and more specific:
 | topic | street standard | travel |
 |---|---|---|
 | **grade** | none | **Long form: cinematic grade required. A recreation: match that reference's grade, per clip** (Oct 25, 9:26 AM voice note: *"That's what really makes the video really cinematic"*). A vlog or talking clip: natural. Never one look for everything |
-| **music** | none | Cinematic and caption reels are built on it and it plays to the last frame. VO reels run a steady bed. **Talking videos: none unless he asks.** Use the reference's song or the track he names; flag commercial tracks |
+| **music** | none | Cinematic and caption reels are built on it and it plays to the last frame. VO reels run a steady bed. **Talking videos: none unless he asks.** A recreate uses the reference's own song; otherwise the track he names; flag commercial tracks |
 | **captions** | white caps, 1-3 words, lower-middle | Copy the reference on a recreation. VO: 1-2 words, key word big with its picture. Long form: sentence subtitles. **Always:** only what is spoken, never over a face, one text layer at a time (hide captions under kinetic words) |
 | **footage quality** | handheld is presence | *"Always use steady shots ... always use not shaky footage."* Sharp, stable, well exposed. No exceptions in reels; handheld stays only for raw vlog moments |
 | **title box** | white box above the head | Only when the reference has one |
