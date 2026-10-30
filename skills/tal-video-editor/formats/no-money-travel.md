@@ -84,11 +84,19 @@ used on every video:
 
 | built once | what it is | where |
 |---|---|---|
-| **footage index** | one record per Frame.io asset, 52,978: what is on screen, who, country, camera, shot type, orientation, HDR, kids flag, transcript snippet, measured sharpness / stability / exposure, a `cinematic_ok` flag, and `links` tying a talking clip to the shots that show what it says | `index/tal_footage_index.json` |
+| **footage index** | one record per Frame.io asset, 52,978: what is on screen, who, country, camera, shot type, orientation, HDR, kids flag, transcript snippet, measured sharpness / stability / exposure, a `cinematic_ok` flag, and `links` grouping clips of one moment (see below) | `index/tal_footage_index.json` |
 | **country transcripts** | every clip with speech, in capture order: story so far, best lines, plan, long-form order | `sources/transcripts/<Country>.md` |
 | **reference library** | every reel he sent: hook words, every shot with its length, text, VO, song, grade | `pdf-text/*tal_reference_library.txt`, master Part B |
 | **templates** | those reels grouped into 106 repeatable types, each with a recipe and his version | `formats/no-money-templates.md`, master Part A |
 | **lessons** | every note he ever gave, as a permanent rule | `sources/editing/tal_editing_lessons.md`, `LESSONS.md` here |
+
+**How the links were made** (`scripts/footage_index/chains.py` in the kit). Each folder was sorted by
+file name, then 35 clips at a time went to a model as TEXT: name, length, who, shot type, the
+description, the first 220 characters of speech. It returned groups of four types: same-moment
+(13,092 links), activity (3,512), enter-place (2,209), talk-then-show (1,283). **Limits:** it judged
+from words, never frames, so a link is a hint. It worked inside one folder, so **an iPhone line and
+the Sony shot of that moment are never linked.** Drone clips were left out on purpose. 12,885 of
+31,325 videos have no link at all.
 
 ### The steps, for every video
 
