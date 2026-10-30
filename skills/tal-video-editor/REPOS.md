@@ -870,7 +870,7 @@ Tal handed over his WhatsApp chat with Tab; these were links he gave Tab. All li
 | `storytold/effectcraft` (`ec7ced1`, 0.18.0) | **cannot run here.** Alpha; no Rust or C compiler, build estimated past 3 GB | nothing run. A signed 74.5 MB portable zip exists, not run (prebuilt binary, needs Tal's OK) |
 | `Schabo/orbis-reframe` (`611d14e`) | **cannot run here.** Linux and Wayland only, X5 fully supported; its X4 doc says no X4 file examined | `CMAKE_CXX_COMPILER not set`; `main.cpp:114` forces Wayland; WSL not installed. The GPU is not the blocker |
 | `sang-w00/IN2OUT` (`4503579`) | **cannot run.** Trained weights are gone. Non-commercial licence | Drive link 404, control links 200 |
-| `seunghyuns98/VideoColorGrading` (`9d58052`) | **not finished.** The first test was stopped by the disk emergency, not by a blocker in the repo; weights are public, ~3.4 GB | two 3.44 GB UNets against 4 GB VRAM is arithmetic, not a measured failure. Retest in progress |
+| `seunghyuns98/VideoColorGrading` (`9d58052`) | **cannot run here today.** Failed loading its first weight file, before reaching the GPU. Use `grade_match.py`. Our low-VRAM patch was never executed; it needs float16 builds first (untested idea). Weights deleted | `OSError: The paging file is too small` (os error 1455); peak VRAM 0 MB, so whether it fits 4 GB is still unknown |
 
 **Added by the travel session; cloned and read, NOT run.** Auto mode blocked running them because the request came from another session, not from Tal. Nothing below is tested:
 
