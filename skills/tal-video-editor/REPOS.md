@@ -1064,3 +1064,29 @@ PYTHONUTF8=1 system/vendor/Autocrop-vertical/.venv/Scripts/python.exe system/too
 ```
 
 `plan.json` in `<dir>` holds aim, zoom and span per quarter second, editable by hand. `--size 1080x1920` decodes the full lenses.
+
+- **A thin dark line sits in the raw lens near 93 degrees from its axis.** The seam blend must end before it: `SEAM_DEG` 2, not 6. Cause not identified; it follows the lens edge, so it is not the stick.
+- Lens brightness is matched at the seam per frame. A faint band still shows in clear sky.
+
+## Concat: the edit step after a reframe, 2026-10-31
+
+`jub0t/Concat` v0.2.8, AGPL-3.0, 13K stars, beta. Tal: *"reframe the 360 clips your way, and then use this Concat if it's helpful for editing."* He does not need to edit by hand. **It has no 360 or `.insv` support; feed it the flat 9:16.**
+
+Installed per user at `%LOCALAPPDATA%\Programs\Concat` from `Concat-0.2.8-windows-x86_64-setup.exe`: SHA-256 matched `SHA256SUMS`, Defender found nothing, the file is unsigned as its `CODE_SIGNING.md` says, and `concat.iss` asks for no admin and adds only the app and shortcuts. Silent install: `/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /CURRENTUSER /NOICONS`.
+
+**Driven by `system/tools/concat-mcp.py`**, which speaks JSON to `concat.exe --mcp headless` over stdio: 42 tools, no window, no Claude settings changed. It is not registered as an MCP server, because the `claude` command is not on PATH here. Run the file to list tools; name a tool to see its arguments.
+
+Known-answer test on the train clip: keep 0-3 s and 6-11 s, add a title, export.
+
+| check | result |
+|---|---|
+| duration | **8.000 s**, asked 8.0 |
+| frame after the cut | matches source 6.0 s; the next frame scores lower |
+| format | h264, yuv420p, limited range, bt709, 30/1 |
+| time | 18.4 s for the whole run, CPU only, on a busy machine |
+| title | white caps, dark stroke, drawn correctly; checked on a `preview_frame` |
+
+- `timeline_read` nests under `timeline`: `tl["timeline"]["tracks"]`, `tl["timeline"]["clips"]`. Tracks list top to bottom, so the last one is the bottom lane.
+- Edits stay in memory until `project_save`. A window and a headless run cannot hold one project at once.
+- Not tested: `captions_add` timing, `clip_stabilize`, audio ducking, 1080x1920 speed. Our caption and QA gates still apply to anything it exports.
+- `project_create` with no `video` makes a 1920x1080 timeline: always pass 1080x1920 at 30/1.

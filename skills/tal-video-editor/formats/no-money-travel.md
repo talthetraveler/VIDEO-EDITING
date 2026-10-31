@@ -376,6 +376,8 @@ Presets live in the kit's `scripts/reflib/presets.json` (desert, green, snow, mo
 | a documentary insert: route, counter, archive board | **lemo-opuscar**, drawn in code, no key. Always `LEMO_COLOR=bt709`. Tested on a vertical route + counter; a full style film not yet rendered |
 | a hand-drawn circle or arrow on a detail | **p5.brush**, transparent frames, overlaid with ffmpeg. `scaleBrushes` once, never per frame |
 | sound effects on the exact word | **`mix_sfx.py`** from `claude-youtube-editor`, measured +5 ms. Gain about -13, duck off, his own SFX (its library is not cleared) |
+| raw 360 `.insv` to a level 9:16 that follows the people | **`system/tools/insv-reframe.py`**, ours (`REPOS.md`). Stitches with no Insta360 Studio. Tested on one X4 clip; preview only so far |
+| cutting and titling from JSON, after the reframe | **Concat via `system/tools/concat-mcp.py`** (`REPOS.md`). Tal does not need to touch it. Frame-accurate cut measured; captions untested |
 | dialogue-free B-roll cut to a song, long 360 takes included | **`beat-synced-edit`, our patched copy** (`REPOS.md`). Cuts within a frame of the beat, 1080x1920, bt709. Flat exports only, never a raw `.insv`; not yet run on a real 360 export. Music only, so never a conversation. `--max-scene` and `--beat-stride` set how many cuts |
 | long-form title + 3 thumbnail ideas | `/packaging` rules in `claude-youtube-editor`, as text. Rendering a thumbnail needs a Gemini key and a face kit: not done |
 | one frame at a time in a short window | **`watch-video`**, our patched copy. Fully local, no speech |

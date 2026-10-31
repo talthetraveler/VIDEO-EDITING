@@ -26,7 +26,9 @@ YOLO_WEIGHTS = Path(__file__).parents[1] / "vendor/Autocrop-vertical/yolov8n.pt"
 SAMPLE_FPS = 4
 EQ_W, EQ_H = 1600, 800
 LENS_REACH_DEG = 92.0     # the black rim of the lens starts near 95 degrees from its axis
-SEAM_DEG = 6.0            # each lens fades out over this far past 90 degrees...
+SEAM_DEG = 2.0            # half width of the seam blend. On this X4 a thin dark line sits in
+                          # the raw lens near 93 degrees from its axis: stay inside it
+RIM_FROM = math.radians(60.0)  # brightness matching starts this far from a lens's axis
 MIN_HALF_V, MAX_HALF_V = 46.0, 64.0  # zoom limits; past 64 a flat view stretches at the edges
 MARGIN_DEG = 7.0          # air kept around the outermost person
 CURVE = 0.75              # see view_dirs: flat lenses stretch people, Tal saw it in preview 2
@@ -203,7 +205,7 @@ def render(args):
         "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", "-color_range", "tv",
         "-c:v", "libx264", "-preset", "medium", "-crf", "20" if H >= 1920 else "24",
         "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
-    use, counts = None, {0: 0, 1: 0, "blend": 0}
+    use, gain, counts = None, None, {0: 0, 1: 0, "blend": 0}
     log = []
     for n, (a, b) in enumerate(decode(args.clip, side, start, end - start)):
         i = first + n
@@ -231,7 +233,20 @@ def render(args):
             f1 = cv2.remap(b, cv2.resize(x1 * k, size), cv2.resize(y1 * k, size), cv2.INTER_CUBIC,
                            borderMode=cv2.BORDER_REPLICATE)
             ww = cv2.resize(w, size)[..., None]
-            frame = (f0 * ww + f1 * (1 - ww)).astype(np.uint8)
+            # the lenses differ near their rims: meet in the middle at the seam, fading to none
+            # 30 degrees inside it, so the sky keeps no step and the people keep their colour
+            t0, t1 = cv2.resize(th0.astype(np.float32), size), cv2.resize(th1.astype(np.float32), size)
+            band = np.abs(t0 - math.pi / 2) < math.radians(1.5)
+            if band.sum() > 500:
+                ratio = np.clip(np.median((f0[band] + 1.0) / (f1[band] + 1.0), axis=0), 0.6, 1.6)
+                gain = ratio if gain is None else 0.85 * gain + 0.15 * ratio
+            if gain is not None:
+                half = np.sqrt(gain)
+                ease0 = (np.clip((t0 - RIM_FROM) / (math.pi / 2 - RIM_FROM), 0, 1) ** 2)[..., None]
+                ease1 = (np.clip((t1 - RIM_FROM) / (math.pi / 2 - RIM_FROM), 0, 1) ** 2)[..., None]
+                f0 = f0 * (1 + (1 / half - 1) * ease0)
+                f1 = f1 * (1 + (half - 1) * ease1)
+            frame = np.clip(f0 * ww + f1 * (1 - ww), 0, 255).astype(np.uint8)
             counts["blend"] += 1
         log.append((round(t, 2), use, round(yaw, 1), round(pitch, 1)))
         enc.stdin.write(frame.tobytes())
