@@ -3891,3 +3891,5 @@ Agents skipped reels because the downloaded reel did not match its note in `reel
 ## 171. "It was cut, you can't see it": a 360 reframe holds the whole group, and he judges the whole clip (2026-10-31)
 
 Tal on the first `.insv` preview: *"I DONT UNDERTAND IF THIS WAS BEST SINCE IT WAS CUT U CANT SEE IT."* I aimed a tight 9:16 at the middle of the people and sent only the 8 seconds the score chose, so riders were cut at the edge and he could not judge the reframe at all. A 360 clip has no reason to crop anyone: the camera can always turn or widen. Frame the outermost person with air around them, not the group's centre of area, and show the full clip until he has approved the framing. Fixed in `system/tools/insv-reframe.py`.
+
+Tal, on the wide fix: *"sometimes I'm a bit distorted, is that just because of the camera?"* It was the framing. A flat view stretches people at the edges once it goes wide, and the wide zoom was mine. `view_dirs` now takes a curve (0 flat, 1 stereographic, default 0.75): same width covered, people about 20% larger and natural. The cost is a bent horizon when the view tips down, at the start and end of this clip.

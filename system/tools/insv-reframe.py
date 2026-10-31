@@ -29,6 +29,7 @@ LENS_REACH_DEG = 92.0     # the black rim of the lens starts near 95 degrees fro
 SEAM_DEG = 6.0            # each lens fades out over this far past 90 degrees...
 MIN_HALF_V, MAX_HALF_V = 46.0, 64.0  # zoom limits; past 64 a flat view stretches at the edges
 MARGIN_DEG = 7.0          # air kept around the outermost person
+CURVE = 0.75              # see view_dirs: flat lenses stretch people, Tal saw it in preview 2
 
 
 def rot_view(yaw, pitch):
@@ -40,14 +41,20 @@ def rot_view(yaw, pitch):
     return Ry @ Rx
 
 
-def view_dirs(w, h, half_v_deg):
-    tv = math.tan(math.radians(half_v_deg))
-    th = tv * w / h
+def view_dirs(w, h, half_h_deg, curve=CURVE):
+    """Rays of a view `half_h_deg` wide. curve 0 is a flat lens, which stretches whatever sits at
+    the edges; 1 is stereographic, which keeps shapes and bends straight lines."""
+    h_rad = math.radians(half_h_deg)
+    x_max = (1 + curve) * math.sin(h_rad) / (curve + math.cos(h_rad))
+    y_max = x_max * h / w
     xs = (np.arange(w) + 0.5) / w * 2 - 1
     ys = (np.arange(h) + 0.5) / h * 2 - 1
-    x, y = np.meshgrid(xs * th, ys * tv)
-    d = np.stack([x, y, np.ones_like(x)], -1)
-    return d / np.linalg.norm(d, axis=-1, keepdims=True)
+    x, y = np.meshgrid(xs * x_max, ys * y_max)
+    z = np.full_like(x, 1 + curve)
+    n2 = x * x + y * y + z * z
+    # from a point `curve` behind the sphere's centre, through the image plane, onto the sphere
+    t = (curve * z + np.sqrt((curve * z) ** 2 + n2 * (1 - curve * curve))) / n2
+    return np.stack([t * x, t * y, t * z - curve], -1)
 
 
 class Motion:
@@ -202,7 +209,8 @@ def render(args):
         i = first + n
         t = float(times[min(i, len(times) - 1)])
         yaw, pitch = float(np.interp(t, pt, py)), float(np.interp(t, pt, pp))
-        grid = view_dirs(gw, gh, float(np.interp(t, pt, pz)))
+        half_v = math.radians(float(np.interp(t, pt, pz)))
+        grid = view_dirs(gw, gh, math.degrees(math.atan(math.tan(half_v) * W / H)), plan.get("curve", args.curve))
         d = grid @ rot_view(yaw, pitch).T @ motion.at(t)
         (x0, y0, th0), (x1, y1, th1) = clip.lenses[0].project(d), clip.lenses[1].project(d)
         reach = [float(np.degrees(th0.max())), float(np.degrees(th1.max()))]
@@ -241,6 +249,7 @@ def main():
     p.add_argument("--size", default="540x960")
     p.add_argument("--span", help="start,end in seconds, overrides plan.json")
     p.add_argument("--name")
+    p.add_argument("--curve", type=float, default=CURVE)
     a = p.parse_args()
     if a.span == "all":
         a.span = f"0,{Insv(a.clip).duration}"

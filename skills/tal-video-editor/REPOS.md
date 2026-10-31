@@ -1056,7 +1056,7 @@ Measured on `VID_20250316_075047_00_296.insv` (X4, 2880x2880 twice, 29.97 fps):
 - **The frames show a 5890-wide square of the 8000x6000 canvas**, found by seam correlation: 0.63 at 5890, 0.05 at the canvas height, 0.08 at the file's own 5760 crop. One unit, one clip: re-measure on another camera.
 - **The black lens rim starts near 95 degrees from the axis.** A 98-degree reach showed it on screen; now 92, with the seam blend ending before the rim.
 - A person near the camera ghosts across a seam, because the two lenses sit apart. Lens brightness is not matched yet: a faint arc shows in the sky on some panoramas.
-- Wide framing pins at the 64-degree zoom limit on this clip, so riders are small on screen. The best-part score is a heuristic (person area plus picture change), not judgement; it preferred 11-19 s over the swing-out. Speech is not read.
+- Wide framing pins at the 64-degree zoom limit on this clip. Tal saw the flat view stretch him, so `render` now curves the view (`--curve`, default 0.75); the horizon bends when the view tips down. The best-part score is a heuristic (person area plus picture change), not judgement; it preferred 11-19 s over the swing-out. Speech is not read.
 
 ```bash
 PYTHONUTF8=1 system/vendor/Autocrop-vertical/.venv/Scripts/python.exe system/tools/insv-reframe.py analyze <clip.insv> --out <dir>
