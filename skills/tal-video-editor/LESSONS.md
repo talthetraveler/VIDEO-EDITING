@@ -3883,3 +3883,7 @@ The Mauritania reel was built from written numbers; nobody downloaded the refere
 ## 169. "Copying their same music": a recreate keeps the reference's song, and the job is volume (2026-10-30)
 
 Three recreates went out with commercial tracks I picked from his library, because I would not lift the reference's audio. He wanted the reel's own song: the same music is part of the copy. He gave the reel and asked for it, so the song from that reel goes under the low-res preview, named in the notes. It stays out of any final: he adds it in Instagram, because a baked-in copy can get a reel muted. He also expected a bunch of these, not six in a day. Two agents took about two hours for four reels because each studied everything. Build in batches of five, about 20 minutes a reel, on the shared tools in `A:\CLAUDE WORK\reels\_tools`.
+
+## 170. A queue note is his version; the link is only the format (2026-10-31)
+
+Agents skipped reels because the downloaded reel did not match its note in `reel-queue.csv`, and I had told them to. That was wrong. Tab's plan is "copy the TYPE": the shortcode gives the template and the note gives Tal's words and country. Keep the note, copy the reel's rhythm, framing and text style. Skip only when the footage does not exist. Lesson 168 still stands for a reel Tal hands over himself to recreate exactly.
