@@ -3887,3 +3887,7 @@ Three recreates went out with commercial tracks I picked from his library, becau
 ## 170. A queue note is his version; the link is only the format (2026-10-31)
 
 Agents skipped reels because the downloaded reel did not match its note in `reel-queue.csv`, and I had told them to. That was wrong. Tab's plan is "copy the TYPE": the shortcode gives the template and the note gives Tal's words and country. Keep the note, copy the reel's rhythm, framing and text style. Skip only when the footage does not exist. Lesson 168 still stands for a reel Tal hands over himself to recreate exactly.
+
+## 171. "It was cut, you can't see it": a 360 reframe holds the whole group, and he judges the whole clip (2026-10-31)
+
+Tal on the first `.insv` preview: *"I DONT UNDERTAND IF THIS WAS BEST SINCE IT WAS CUT U CANT SEE IT."* I aimed a tight 9:16 at the middle of the people and sent only the 8 seconds the score chose, so riders were cut at the edge and he could not judge the reframe at all. A 360 clip has no reason to crop anyone: the camera can always turn or widen. Frame the outermost person with air around them, not the group's centre of area, and show the full clip until he has approved the framing. Fixed in `system/tools/insv-reframe.py`.

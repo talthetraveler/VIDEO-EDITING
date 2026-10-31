@@ -1038,3 +1038,29 @@ Tal: *"Do not blindly install everything. What is needed???!"* This overrides "i
 | `opencv/opencv` | 2026-10-30 | Apache-2.0 | USE, already installed, optical flow |
 | `pgvector/pgvector` | 2026-10-28 | PostgreSQL-style | SKIP for now, needs a server; no gain for one user |
 | `OpenGVLab/InternVideo` | 2026-07-02 | Apache-2.0 | SKIP for now, research code, not tried on 4 GB. Revisit only if action matching tests poorly |
+
+## Raw `.insv` to 9:16, 2026-10-30
+
+Tal handed over one X4 clip: *"find a way to have my github be able to reframe this the best and choose best parts."* **No repo did this on Windows on an X4, so it is ours:** `system/tools/insv.py` (read, stitch, gyro) and `system/tools/insv-reframe.py` (`analyze`, `render`). Python from `system/vendor/Autocrop-vertical/.venv`, which holds cv2, ultralytics and `yolov8n.pt`. No key, no paid call, no Insta360 Studio, no GPU.
+
+| repo | verdict | why |
+|---|---|---|
+| `bubo-squared/GyroView` (`00f1f74`, MIT) | **the source of our format reading.** Not run: a browser player | `docs/FORMAT.md` and its ADRs give the trailer, calibration, lens pose and orientation filter. It never had an X4 file; its X4 IMU frame is a guess |
+| `JimWas/JimWas-Insta360-INSV-to-Shorts` (`04f50b5`, no licence) | read, not run. Do not use | one lens, generic 190 degrees, no tracking, no stitch. The X4's sensors sit at a quarter turn, so the output would be on its side |
+| `JasonInRVA/basketball-360-autoframe` (`bc333b3`, no licence) | read, not run | needs Insta360 Studio and training on your own edits; basketball |
+| `Insta360Develop/Desktop-MediaSDK-Cpp` | not tried | README: apply for the SDK at insta360.com/sdk/apply; v3 needs a GPU. The likely quality ceiling if ours falls short |
+
+Measured on `VID_20250316_075047_00_296.insv` (X4, 2880x2880 twice, 29.97 fps):
+
+- **IMU axes on this X4 are `x, -z, y`, NOT the X5 and X4 Air's `x, z, -y`.** 24-way ranking, world-locked: 11.93 against 14.4 unstabilised, runner-up 14.73. Horizon level and sun fixed across 19 s on nine panoramas.
+- **The frames show a 5890-wide square of the 8000x6000 canvas**, found by seam correlation: 0.63 at 5890, 0.05 at the canvas height, 0.08 at the file's own 5760 crop. One unit, one clip: re-measure on another camera.
+- **The black lens rim starts near 95 degrees from the axis.** A 98-degree reach showed it on screen; now 92, with the seam blend ending before the rim.
+- A person near the camera ghosts across a seam, because the two lenses sit apart. Lens brightness is not matched yet: a faint arc shows in the sky on some panoramas.
+- Wide framing pins at the 64-degree zoom limit on this clip, so riders are small on screen. The best-part score is a heuristic (person area plus picture change), not judgement; it preferred 11-19 s over the swing-out. Speech is not read.
+
+```bash
+PYTHONUTF8=1 system/vendor/Autocrop-vertical/.venv/Scripts/python.exe system/tools/insv-reframe.py analyze <clip.insv> --out <dir>
+PYTHONUTF8=1 system/vendor/Autocrop-vertical/.venv/Scripts/python.exe system/tools/insv-reframe.py render <clip.insv> --out <dir> --span all
+```
+
+`plan.json` in `<dir>` holds aim, zoom and span per quarter second, editable by hand. `--size 1080x1920` decodes the full lenses.
