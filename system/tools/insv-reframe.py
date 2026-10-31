@@ -29,7 +29,8 @@ LENS_REACH_DEG = 92.0     # the black rim of the lens starts near 95 degrees fro
 SEAM_DEG = 2.0            # half width of the seam blend. On this X4 a thin dark line sits in
                           # the raw lens near 93 degrees from its axis: stay inside it
 RIM_FROM = math.radians(60.0)  # brightness matching starts this far from a lens's axis
-ODD_RATIO = 0.25          # log brightness gap past the typical one that marks a person on the seam
+ODD_RATIO = 0.35          # log brightness gap between the lenses that marks a person on the seam
+ODD_EDGE = 40.0           # local contrast that marks a person's outline on the seam
 MIN_HALF_V, MAX_HALF_V = 46.0, 64.0  # zoom limits; past 64 a flat view stretches at the edges
 MARGIN_DEG = 7.0          # air kept around the outermost person
 CURVE = 0.75              # see view_dirs: flat lenses stretch people, Tal saw it in preview 2
@@ -73,8 +74,11 @@ def seam_field(f0, f1, th0, th1):
     ratio = cv2.medianBlur(np.clip(np.log(s0 / s1), -0.7, 0.7).astype(np.float32), 5)
     # someone near the camera lands in a different place in each lens, so what the two lenses
     # disagree on there is the person, not the brightness: leave them out and fill from around
-    typical = np.median(ratio[band], axis=0)
-    odd = (np.abs(ratio - typical).max(-1) > ODD_RATIO).astype(np.uint8)
+    # not a gap from the seam's average: where the seam is mostly sand, that throws out the sky
+    grey0, grey1 = s0.mean(-1), s1.mean(-1)
+    edges = np.maximum(cv2.morphologyEx(grey0, cv2.MORPH_GRADIENT, np.ones((3, 3), np.uint8)),
+                       cv2.morphologyEx(grey1, cv2.MORPH_GRADIENT, np.ones((3, 3), np.uint8)))
+    odd = ((np.abs(np.log(grey0 / grey1)) > ODD_RATIO) | (edges > ODD_EDGE)).astype(np.uint8)
     good = band & ~cv2.dilate(odd, np.ones((5, 5), np.uint8)).astype(bool)
     if good.sum() >= 8:
         band = good
