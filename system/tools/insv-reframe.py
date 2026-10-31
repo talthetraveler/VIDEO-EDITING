@@ -29,6 +29,7 @@ LENS_REACH_DEG = 92.0     # the black rim of the lens starts near 95 degrees fro
 SEAM_DEG = 2.0            # half width of the seam blend. On this X4 a thin dark line sits in
                           # the raw lens near 93 degrees from its axis: stay inside it
 RIM_FROM = math.radians(60.0)  # brightness matching starts this far from a lens's axis
+ODD_RATIO = 0.25          # log brightness gap past the typical one that marks a person on the seam
 MIN_HALF_V, MAX_HALF_V = 46.0, 64.0  # zoom limits; past 64 a flat view stretches at the edges
 MARGIN_DEG = 7.0          # air kept around the outermost person
 CURVE = 0.75              # see view_dirs: flat lenses stretch people, Tal saw it in preview 2
@@ -57,6 +58,37 @@ def view_dirs(w, h, half_h_deg, curve=CURVE):
     # from a point `curve` behind the sphere's centre, through the image plane, onto the sphere
     t = (curve * z + np.sqrt((curve * z) ** 2 + n2 * (1 - curve * curve))) / n2
     return np.stack([t * x, t * y, t * z - curve], -1)
+
+
+def seam_field(f0, f1, th0, th1):
+    """Log brightness of lens 0 over lens 1, per channel, read along the seam and carried out to
+    the rest of the view from the nearest seam point. One number cannot do this: sky and sand
+    differ by different amounts, and a single gain left a hard edge across the sky."""
+    grid = (th0.shape[1], th0.shape[0])
+    band = np.abs(th0 - th1) < math.radians(3.0)
+    if band.sum() < 8:
+        return None
+    s0 = cv2.resize(f0, grid, interpolation=cv2.INTER_AREA).astype(np.float32) + 1
+    s1 = cv2.resize(f1, grid, interpolation=cv2.INTER_AREA).astype(np.float32) + 1
+    ratio = cv2.medianBlur(np.clip(np.log(s0 / s1), -0.7, 0.7).astype(np.float32), 5)
+    # someone near the camera lands in a different place in each lens, so what the two lenses
+    # disagree on there is the person, not the brightness: leave them out and fill from around
+    typical = np.median(ratio[band], axis=0)
+    odd = (np.abs(ratio - typical).max(-1) > ODD_RATIO).astype(np.uint8)
+    good = band & ~cv2.dilate(odd, np.ones((5, 5), np.uint8)).astype(bool)
+    if good.sum() >= 8:
+        band = good
+    _, nearest = cv2.distanceTransformWithLabels((~band).astype(np.uint8), cv2.DIST_L2, 5,
+                                                 labelType=cv2.DIST_LABEL_PIXEL)
+    values = np.zeros((nearest.max() + 1, 3), np.float32)
+    values[nearest[band]] = ratio[band]
+    return cv2.GaussianBlur(values[nearest], (0, 0), 3.0)
+
+
+def lens_gain(field, theta, size):
+    """Full strength at the seam, none RIM_FROM from the lens's axis, so people keep their colour."""
+    ease = np.clip((theta - RIM_FROM) / (math.pi / 2 - RIM_FROM), 0, 1) ** 2
+    return cv2.resize(np.exp(field * ease[..., None]).astype(np.float32), size)
 
 
 class Motion:
@@ -233,19 +265,12 @@ def render(args):
             f1 = cv2.remap(b, cv2.resize(x1 * k, size), cv2.resize(y1 * k, size), cv2.INTER_CUBIC,
                            borderMode=cv2.BORDER_REPLICATE)
             ww = cv2.resize(w, size)[..., None]
-            # the lenses differ near their rims: meet in the middle at the seam, fading to none
-            # 30 degrees inside it, so the sky keeps no step and the people keep their colour
-            t0, t1 = cv2.resize(th0.astype(np.float32), size), cv2.resize(th1.astype(np.float32), size)
-            band = np.abs(t0 - math.pi / 2) < math.radians(1.5)
-            if band.sum() > 500:
-                ratio = np.clip(np.median((f0[band] + 1.0) / (f1[band] + 1.0), axis=0), 0.6, 1.6)
-                gain = ratio if gain is None else 0.85 * gain + 0.15 * ratio
+            field = seam_field(f0, f1, th0, th1)
+            if field is not None:
+                gain = field if gain is None else 0.6 * gain + 0.4 * field
             if gain is not None:
-                half = np.sqrt(gain)
-                ease0 = (np.clip((t0 - RIM_FROM) / (math.pi / 2 - RIM_FROM), 0, 1) ** 2)[..., None]
-                ease1 = (np.clip((t1 - RIM_FROM) / (math.pi / 2 - RIM_FROM), 0, 1) ** 2)[..., None]
-                f0 = f0 * (1 + (1 / half - 1) * ease0)
-                f1 = f1 * (1 + (half - 1) * ease1)
+                f0 = f0 * lens_gain(-gain / 2, th0, size)
+                f1 = f1 * lens_gain(gain / 2, th1, size)
             frame = np.clip(f0 * ww + f1 * (1 - ww), 0, 255).astype(np.uint8)
             counts["blend"] += 1
         log.append((round(t, 2), use, round(yaw, 1), round(pitch, 1)))
