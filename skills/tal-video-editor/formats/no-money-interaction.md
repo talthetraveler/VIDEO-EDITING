@@ -39,6 +39,16 @@ Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not play
 8. **Natural colour, raw sound.** Raise the local's voice, because he holds the camera.
 9. **End on the warmest second.** A hug, a thank-you, food being shared. No call to action.
 
+## Crazy moments count too (Tal, 2026-11-01)
+
+*"the viral moments are the crazy ones, being stuck at night in the dark in Mauritania... interactions with people or crazy moments, people love that, so let's focus on that."* Real danger and real low points work the same way as kindness: one raw moment, title on top, his own live reaction.
+
+**Framing on these reels.** This overrides the "never crop" rule for this format only. Tal: *"the footage maybe needs to be rotated, sometimes they can be cropped, it doesn't need to be vertical but like horizontal like Arthur did, that's ok."*
+
+- Rotate a sideways clip so it's the right way up, checked on a decoded frame.
+- Crop when the person stays in frame and it stays sharp.
+- If a crop would lose people, keep the clip horizontal in the middle of the 9:16 frame with a blurred copy of itself above and below, as Arthur does, and the white pill title on the top band.
+
 ## The Nolan Saumure version
 
 Tal: *"so simple."* Same bones, one change: **a sentence of talk to camera sets up the moment**, in his own words, live or dropped over the footage. "Apparently inside this floating house is a barber." "So our entrance into the temple comes with a stick." Then the moment plays. His dry reactions are the jokes. Nothing is scripted to a template.
