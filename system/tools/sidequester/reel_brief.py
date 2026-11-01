@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Everything Tab wrote about one reference, before a recreation starts (LESSONS 172).
 python system/tools/sidequester/reel_brief.py <shortcode> [--save <folder>]
-Prints the queue row, the master row, the template and the library entry. Exit 1 = no entry: measure it."""
-import argparse, csv, os, re, sys
+Prints the queue row, master row, template, Tab's build notes and the library entry. Exit 1 = no entry: measure it."""
+import argparse, csv, glob, os, re, sys
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..'))
 KIT = os.path.join(ROOT, 'assets', 'references', 'sidequester-kit')
 LIB = os.path.join(KIT, 'pdf-text', '00003369-tal_reference_library.txt')
 MASTER = os.path.join(KIT, 'sources', 'Tal_NoMoney_Series_Master_v2.md')
 TEMPLATES = os.path.join(ROOT, 'skills', 'tal-video-editor', 'formats', 'no-money-templates.md')
+RECREATES = os.path.join(KIT, 'sources', 'recreates')
 HEAD = re.compile(r'^([CDB][A-Za-z0-9_-]{10})(?: \S |\s*$)', re.M)
 NOISE = re.compile(r'^(?:--- page \d+ ---|\d{1,3})$', re.M)
 
@@ -63,8 +64,12 @@ def main():
         tr = [l.strip() for l in read(TEMPLATES).split('\n') if l.lstrip().startswith(f'| {tmpl[1]} |')]
         if tr:
             parts.append('TEMPLATE:\n' + '\n'.join(tr))
+    built = glob.glob(os.path.join(RECREATES, f'*{code}*'))
+    for b in built:
+        parts.append(f'TAB BUILT THIS ONE, HIS NOTES ({os.path.basename(b)}):
+' + read(b).strip())
     e = entries(code)
-    found = bool(e)
+    found = bool(e or built)
     if e:
         parts.append('LIBRARY ENTRY:\n' + '\n\n'.join(e))
     if not e or len(' '.join(e)) < 400:

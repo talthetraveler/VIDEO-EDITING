@@ -35,6 +35,7 @@ creator. **[S]**
 | TAB-2026-10 | **Tal's travel references: 466 reels in 106 templates, 12 YouTube long-forms, measured by his Tab, Oct 23-27** | TRAVEL | STYLE (quality bars `Dd10WEzuHqY`, `DIEfg1DzwXS`; grade model `DMArsvVxOgm`; Ep1 pace `N-ZenLrInoc`) | **MEASURED BY TAB, not re-measured here.** Menu: `formats/no-money-templates.md`. Full library: `assets/references/sidequester-kit/` (local). Of 737 reel links in that chat, 246 are not in Tab's library: `reels-tab-never-catalogued.txt` |
 | TAB-HANDBOOK-2026-11 | **Tal's Editing Handbook, by his Tab, Nov 1: style, workflow, say it see it worked examples, rules, 30 templates** | TRAVEL | STYLE | **WRITTEN BY TAB, not re-measured here.** Additions are in `formats/no-money-travel.md` section 5. Full PDF is local in the kit |
 | TAB-NISSIM-2026-11 | **"POV: Meeting a Black Jew in Israel", about 1.5M views: Tab's beat map from the edit** | STREET | HOOK + STYLE | **MEASURED BY TAB, not re-measured here.** `formats/pov-walk-up.md` |
+| TAB-MODEL-DeZXr1uzouY | **Tab's recreation Tal loves: "When did we decide you need money to travel?", Taiwan** | TRAVEL | STYLE + STORY | **MEASURED on the finished file, 2026-11-01.** `formats/no-money-craft.md`, "The model". The file is local in `assets/references/tab-finished/` |
 
 VO-1…KT-3 came in one zip on 2026-09-28. Originals:
 `assets/references/voiceover-broll-drive-2026-09-28/`; sheets, shot lists,

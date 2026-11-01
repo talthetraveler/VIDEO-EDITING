@@ -634,3 +634,22 @@ Not settled by the decisions above.
 - Notify mode on travel trials: Tab's note says it drops the music; our memory uses it.
 - Carousels on his feed.
 - Ep1 letterbox or full 16:9 (`no-money-episodes.md` 1.4).
+
+---
+
+## The model: a recreation Tal loves (2026-11-01)
+
+Tal: *"This video was edited by Tab, it found the reference reel I gave it and made it in my story and everything."* Reference `DeZXr1uzouY`, a 28 s challenge-launch reel filmed in Taiwan. Measured on Tab's finished file, not the reference: 25.6 s, 1080x1920, 20 shots, 1.28 s average, -14.3 LUFS, peak -1.8 dB. Tab's own notes: `sources/recreates/tal_recreate_DeZXr1uzouY_notes.md` in the kit, printed by `reel_brief.py`.
+
+Do these on every recreation:
+
+1. **Find the same story in his life first.** The reference is a woman starting a challenge in Taiwan. Tab used his own Taiwan trip, same island, same coast. Choose the country because the reference fits it, not the other way round.
+2. **Keep the reference's sentences and swap the meaning.** Its idea line becomes "When did we decide you need money to travel?". The frame stays: the "in another life" list, "we only ever see...", "so I'm giving myself a challenge", "follow along". The script reads as his because everything from the challenge line on comes from things he said on camera.
+3. **Table first: time, line, clip, why it matches.** Every line gets a clip and a written reason. "A place like this" is the mountain with him tiny on the cliff. "How do I get there?" is the road. "Zero dollars" sits on him at the restaurant he's eating at for free. If you can't write the reason, the clip is wrong.
+4. **His face carries it.** He's in 12 of the 19 distinct shots, mostly close selfies. Between them sit only the places the words name.
+5. **Copy the whole text system, not just the timing.** Three tiers: lowercase white words building in the middle of the frame, small white lines lower down, one pink bold italic caps key word (MONEY, $0, EAST COAST). Quoted thoughts in italic serif. Two black cards with stacked words. Tilted photo pop-ups landing on "a backpacker, a hitchhiker, someone who sleeps in a tent".
+6. **Same structure, retimed to his voice.** 19 cuts and the same long hold under the pop-ups, but every cut moved to land on his words, so the film runs 2.5 s shorter than the reference.
+7. **Music enters where the reference's does:** on the challenge card, at about 14 s. Before that, a quiet bed.
+8. **Write the flags.** Tab sent nine: the tense, what "zero dollars" hides, which line is the weakest match, which clip he couldn't confirm. That list is why Tal can trust the cut.
+
+Text sits on faces in the first shots here and Tal loved it, because the reference does too. That's the recreation exception in section 1.
