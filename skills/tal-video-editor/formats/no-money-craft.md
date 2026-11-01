@@ -681,3 +681,18 @@ Tab's cut from `De6rEXSonQc`, a 45 s orca reel. Measured: 45.01 s, 21 shots, 2.1
 **The file Tal sent still has the three faults the handbook lists for this reel:** "I woke up early" sits on a daytime selfie on the wagon, "we waited by the tracks" sits on shots already on top of the train, and "then, after dark" sits on a shot into the sun. Time words need their own time of day. Copy the method, not those three shots.
 
 **The three models together:** the reference tells you the sentences, the grid and the shot types. His life supplies the facts. The first job is choosing a reference he has really lived.
+
+### Fourth model: "Zero dollars. That's what I spent on a four-day motorbike trip"
+
+Tab's cut from `DdLg6A0pCvi` (Logan Anthony, "$200. That's what I spent..."). Measured: 56.2 s, about 55 shots, around 1 s each, -14.3 LUFS, peak -1.1 dB. Tab's notes print with `reel_brief.py`, and they describe a longer 78 s version, so this file is a tighter cut.
+
+- **One number swap makes the whole reel.** His $200 becomes $0. The sentences stay: the same trip, the same place, a true twist. Tal really did the Ha Giang Loop, and a tour company gave it to him for videos.
+- **Graphics on the words:** a big yellow $0 on the first shot, a map card landing on "Ha Giang Loop", THE SIDE QUESTER on the last shot.
+- **List, one shot per item, in order:** skateboarding, family meals, the party, above the clouds, the China border flag tower, the cliff ledge held longest on "this photo".
+- **The clip he says it in beats a pretty road.** In this file "a tour company", "I hitchhiked" and "I met my group" sit on road drones or a parked bike. The handbook marks those rows as faults and names the fix: his own clips saying it. Copy the structure, not those rows.
+
+### Tab's method, in Tab's words, as sent by Tal
+
+For `De6rEXSonQc`: (1) break the reference down shot by shot; (2) write out its story arc; (3) tell his story through the same arc, line for line; (4) for each shot, find the matching moment in his footage; (5) keep the timing exactly, including the white flash; (6) same text style; (7) his cloned voice reads the script with a quiet bed and no gaps over half a second; (8) no grade, because the reference has none, and end on the same kind of cliffhanger shot.
+
+Tal said Tab used his ElevenLabs key for step 7. Here, voice still needs his yes on each script (`no-money-travel.md`).
