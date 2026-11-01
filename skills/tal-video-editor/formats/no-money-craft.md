@@ -656,7 +656,9 @@ Text sits on faces in the first shots here and Tal loved it, because the referen
 
 ### Second model: "Pakistan, you were the country I was warned about"
 
-Tab's finished cut, 2026-11-01. Measured: 74.5 s, 1080x1920, 48 shots, 1.55 s average, -14.2 LUFS, peak -2.1 dB. Tal says the reference is a Safin Clark reel. The exact reel isn't identified: the only Safin Clark reel in Tab's library, `DevTG_Bv_z-`, is a 23.5 s music film, not a voiceover letter. The file is local in `assets/references/tab-finished/tab-02`.
+Tab's finished cut, 2026-11-01. Measured: 74.5 s, 1080x1920, 48 shots, 1.55 s average, -14.2 LUFS, peak -2.1 dB. Reference: Safin Clark, `DZoOjVCP6Ux`, a letter to Bangladesh, about 148K likes (85 s, music bed, a fast flash burst around 55-57 s). Tal: *"thats the reel it copied."*
+
+**How close Tab stayed.** The script is the reference line by line, with only the facts swapped: "Bangladesh, you were the first country we were warned about, but also the one that left the biggest mark" becomes the Pakistan version. "Cycling north through your bustling cities and endless rice fields" becomes "hitchhiking north through your crazy cities and endless mountains". "The worst scammers", "feed you far too much, refuse to let you pay", "a barber", "full bellies and even fuller hearts" all stay, because he lived the same things. Every swapped item is true of his trip and has a clip. This only works because his Pakistan really does match it. Find that match first.
 
 - **A letter to the country.** The whole VO speaks to Pakistan as "you". One idea, and it holds the whole 74 s.
 - **The turn is the warning.** "The country I was warned about" opens it. Near the end, "the worst scammers" are the people who feed you and refuse to let you pay. The fear gets turned into the proof.
