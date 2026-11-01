@@ -57,6 +57,7 @@ Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not play
 - **Insta360 hitchhiking** in the Sahara: walking with his thumb out, cars refusing, the run to a stopped truck.
 - **iPhone at night** in Mauritania: stuck, no place to sleep.
 - **Oman, the camels:** the cargo ship with camels on board.
+- **Ecuador** (*"Ecuador has viral moments"*): the Amazon boat trip, the night arrival, the blowgun with the elder.
 
 ## The Nolan Saumure version
 
