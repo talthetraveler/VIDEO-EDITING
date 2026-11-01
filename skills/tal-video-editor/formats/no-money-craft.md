@@ -653,3 +653,16 @@ Do these on every recreation:
 8. **Write the flags.** Tab sent nine: the tense, what "zero dollars" hides, which line is the weakest match, which clip he couldn't confirm. That list is why Tal can trust the cut.
 
 Text sits on faces in the first shots here and Tal loved it, because the reference does too. That's the recreation exception in section 1.
+
+### Second model: "Pakistan, you were the country I was warned about"
+
+Tab's finished cut, 2026-11-01. Measured: 74.5 s, 1080x1920, 48 shots, 1.55 s average, -14.2 LUFS, peak -2.1 dB. The reference isn't identified yet. The file is local in `assets/references/tab-finished/tab-02`.
+
+- **A letter to the country.** The whole VO speaks to Pakistan as "you". One idea, and it holds the whole 74 s.
+- **The turn is the warning.** "The country I was warned about" opens it. Near the end, "the worst scammers" are the people who feed you and refuse to let you pay. The fear gets turned into the proof.
+- **Places lose to people.** It names the tallest mountains, then says that's not what he'll remember. "It's your people." The last stretch is faces, one per item: the smiles, the chai, the generosity.
+- **A long list, one literal shot each.** The back of a truck, a zip line, pushing a broken car at midnight, chai, food, a vintage jeep, sick as a dog, a horse cart, a barber. Each shot is that exact thing, and most are from his own trip days.
+- **Bookend.** It opens on the Pakistani flag and ends on it.
+- **The text stays quiet.** Small white typewriter-style lines low in the frame, no big words, no pink. The story and the faces carry it. This is a different system from `DeZXr1uzouY`: copy each reference's own.
+
+Works for any country he knows well. Write it from his real trip, not from a template.
