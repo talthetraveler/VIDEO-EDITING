@@ -386,6 +386,8 @@ this file and `no-money-voiceover.md`. What it adds:
   clean-shaven and often wears a light-blue jacket.
 - **Long form footage order:** GoPro vlog folders first, then Sony and drone.
 - **Photo reels:** people first, sharp portraits into the lens, elders, a person with an animal.
+- **Voice:** a cloned voice is only ever a placeholder to judge a cut, made with his consent from his
+  own recordings, and only with his yes on that script. The final post uses his real read.
 
 ---
 
