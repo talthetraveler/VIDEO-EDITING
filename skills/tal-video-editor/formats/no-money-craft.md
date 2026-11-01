@@ -696,3 +696,32 @@ Tab's cut from `DdLg6A0pCvi` (Logan Anthony, "$200. That's what I spent..."). Me
 For `De6rEXSonQc`: (1) break the reference down shot by shot; (2) write out its story arc; (3) tell his story through the same arc, line for line; (4) for each shot, find the matching moment in his footage; (5) keep the timing exactly, including the white flash; (6) same text style; (7) his cloned voice reads the script with a quiet bed and no gaps over half a second; (8) no grade, because the reference has none, and end on the same kind of cliffhanger shot.
 
 Tal said Tab used his ElevenLabs key for step 7. Here, voice still needs his yes on each script (`no-money-travel.md`).
+
+## Long-form model: Drew Binsky's Papua film
+
+`S4quEQW3TFA`, "Visiting the Tribe that EATS HUMANS", 24:38, 19.5M views on the page when measured, 9 chapters. Tal sent it for the storytelling and for how it mixes vlog with narration: *"The intro, everything... sometimes it includes him like in the vlog."* Measured 2026-11-01 from a low-res copy, its transcript and the opening shots. Cuts per minute by minute: 46, 20, 17, 24, 22, 23, then 9, 7, 10 at first contact, then 8 to 27.
+
+**The intro, 0:00 to 1:16**
+
+| time | what happens |
+|---|---|
+| 0:00 | One claim that stops you, over a close face. A sentence, not a greeting |
+| 0:06-0:30 | Montage of faces and places, 46 cuts in the minute, one live line in the middle with real danger behind him |
+| 0:30 | Title card, on black: place, then the promise |
+| 0:37 | Why it matters: scale and numbers, with a map beside something the viewer knows (Texas) |
+| 1:02 | Live selfie with the exact time and place, then the problem: his camera guy is denied entry, so he goes alone. "I'm kind of petrified" |
+
+**The structure**
+
+1. **Setbacks before the goal, 1:17 to 4:46.** A full chapter of small disasters: no guide, tickets only by hand, a card stuck in the ATM, a permit, the guide an hour late. Each is one short live scene. VO joins them in a line. The viewer earns the jungle.
+2. **His doubt is said out loud.** "My gut tells me don't go." Quietly, to camera. Each scene ends with something still unsolved.
+3. **A night check-in closes the act.** A storm outside, "see you guys when I wake up". The day structure is the vlog.
+4. **Fear gets planted by a person, not the narrator.** The guide explains the treehouses on the walk and jokes that he might kill him.
+5. **The big moment gets the slowest cutting.** First contact runs at 7-10 cuts a minute, with 30 s of only their voices through the jungle. The film slows at the moment everything built towards.
+6. **A twist he admits.** It's the wrong tribe, he was misled, he stays. Honesty keeps it believable.
+7. **The body is daily life, one small mission at a time.** Felling a tree, food, a night walk, a bad sleep, bites in the morning, the hunt. A joke every minute or so.
+8. **The title is paid, then turned.** The cannibal question gets answered in the middle. The ending changes the question: they're just like me and you. VO over faces, then a one-line goodbye.
+
+**How vlog and narration mix.** Live talk carries everything happening now, in present tense, with his reactions. VO carries only facts, time jumps and links, in about one or two lines at a time, then hands straight back to a live moment. The picture under VO is the thing named. In the slow middle, long stretches have no VO at all.
+
+**For Tal's series.** Copy the structure: claim, montage, title, why it matters, the problem, setbacks, the slow big moment, the turn at the end. His VO stays present tense (Tal, Oct 25): Drew's past-tense narration is the one thing not to copy. Stories that fit best: the iron-ore train, the Waorani, Pakistan. Never shown in Tal's versions: anything on his no-go list.

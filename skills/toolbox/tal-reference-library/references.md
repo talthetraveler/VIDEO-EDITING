@@ -37,6 +37,7 @@ creator. **[S]**
 | TAB-NISSIM-2026-11 | **"POV: Meeting a Black Jew in Israel", about 1.5M views: Tab's beat map from the edit** | STREET | HOOK + STYLE | **MEASURED BY TAB, not re-measured here.** `formats/pov-walk-up.md` |
 | TAB-MODEL-DeZXr1uzouY | **Tab's recreation Tal loves: "When did we decide you need money to travel?", Taiwan** | TRAVEL | STYLE + STORY | **MEASURED on the finished file, 2026-11-01.** `formats/no-money-craft.md`, "The model". The file is local in `assets/references/tab-finished/` |
 | TAL-VIRAL-2026-11 | **His own viral travel interactions (Jordan glasses, Pakistan) plus Arthur's** | TRAVEL | HOOK + STYLE | **MEASURED 2026-11-01.** `formats/no-money-interaction.md`. His own results outrank any template |
+| YT-DREW-S4quEQW3TFA | **Drew Binsky, Papua film, 24:38: Tal's storytelling model for long form** | TRAVEL | STORY | **MEASURED 2026-11-01.** `formats/no-money-craft.md`, "Long-form model" |
 
 VO-1…KT-3 came in one zip on 2026-09-28. Originals:
 `assets/references/voiceover-broll-drive-2026-09-28/`; sheets, shot lists,
