@@ -295,7 +295,7 @@ Answer three questions first. Do not load a single specialist skill until you ha
 
 | Signal in the footage or the ask | Format |
 |---|---|
-| **ANY travel video**: The Side Quester, "travel the world with no money", a country folder on Frame.io, a travel reel to recreate, a YouTube episode (2026-10-30). **Anything shot in Israel is separate: never this row** | `no-money-travel` — read it first; it replaces parts of THE STANDARD for travel (grade, music, captions, steady shots). VO reels add `no-money-voiceover`, recreates add `no-money-templates` + `no-money-recipes` + `no-money-grades`, YouTube adds `no-money-episodes` |
+| **ANY travel video**: The Side Quester, "travel the world with no money", a country folder on Frame.io, a travel reel to recreate, a YouTube episode (2026-10-30). **Anything shot in Israel is separate: never this row** | `no-money-travel` — read it first; it replaces parts of THE STANDARD for travel (grade, music, captions, steady shots). Every build adds `no-money-craft` (which rule wins, clip rules, recipes, methods). VO reels add `no-money-voiceover`, recreates add `no-money-templates` + `no-money-recipes` + `no-money-grades`, YouTube adds `no-money-episodes` |
 | Meta Ray-Ban POV, handheld, first-person | `pov-meta-glasses` |
 | Walking up to strangers, greetings, giving something | `pov-kindness` |
 | **"POV: Meeting a ___"**: a street interview with someone who carries a surprising identity, "the Nissim one" (2026-11-01) | `pov-walk-up`: open on the walk-up, never a teaser |

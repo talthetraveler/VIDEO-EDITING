@@ -110,3 +110,31 @@ Part of `no-money-travel.md`. Every travel reel Tal sent, grouped by Tab into re
 | T104 | Series + local tip + 20 s history lesson ("[skating] my way across [country]", episode N)  (new, Oct 26 batch D) |  |  |
 | T105 | Age countdown ("I'm 23 now, but when I was 22…")  (new, Oct 26 batch D) |  |  |
 | T108 | Talking moment (one raw to-camera take + captions)  (new, Oct 26; belongs with Part A) |  |  |
+
+## Numbering: which T is which
+
+Tab used three numbering schemes, plus an older one. **The master's T1-T108 are the numbers to cite**, and the ones this menu and `no-money-craft.md` use. A "T4" in a library or PDF page is not the master's T4, so translate before pulling a recipe. The mapping below comes from the lead reference of each template, looked up in Part B.
+
+| library (template recipes) | master |
+|---|---|
+| T1 They said / Watch this | T18 |
+| T2 question to montage | T15 |
+| T3 Mom said | T23 |
+| T4 family-voice line | T21 |
+| T5 Plan A/B | T19 |
+| T6 beat-grid postcard | T52 |
+| T7 held one-liner, list of lives | T29 |
+| T8 reality checklist | T20 |
+| T9 lyric-sync | T61 |
+| T10 VO life story | T11 |
+| T11 Day-X, Part N | T12 (its full Day X rules are T7) |
+| T12 one caption, one wow clip | T62 (the flip-reveal is T56) |
+| T13 the people | T60 |
+| T14 map zoom | T63 |
+| C carousels | T68 |
+
+**4B letters** (`Tal_Templates_Oct25g`): A = T43, B = T44, C = T54, D = T46, E = T27, F = T14, G = T26, H = T32, I = T60, J = T2, K = T3, L = T1, M = T9, N = T28. H and I are by the Part B rows of their references; the 4B pages describe H more like T65.
+
+**4A numbers** (`Tal_Templates_Oct25f`, the older one): T1 = T30, T2 = T43, T3 = T41, T4 = T45, T5 = T47, T6 = T55, T7 = T4, T8 = T5, T9 = T6, T10 = T25.
+
+The menu's title for T15 says "Homelessmaxxing"; his own word is "Hitchikemaxxing" (`no-money-craft.md` section 10).

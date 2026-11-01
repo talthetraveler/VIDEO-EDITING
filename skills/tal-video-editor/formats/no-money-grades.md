@@ -2,7 +2,7 @@
 
 Part of `no-money-travel.md` (its section 5 sets the rule). Every number here is Tab's measurement of a reference reel, **not re-measured here**. The filters are Tab's fits to those measurements, starting points only: tone-map first, apply, then compare one still against the reference.
 
-**Filter-string check.** These came out of PDF text. I read every string for broken numbers and split lines. None of the ones in sections 3 and 4 showed damage. The strings in section 5 were rejoined from broken lines by an earlier reader and never diffed against Tab's `.md` source: marked `[REJOINED]`. Tab's 4B filters were also "built from measurements, not yet test-rendered on Tal's frames." Nothing below was rendered here.
+**Filter-string check.** These came out of PDF text. I read every string for broken numbers and split lines. None of the ones in sections 3 and 4 showed damage. The two strings marked `[REJOINED]` in section 4 were rejoined from broken lines by an earlier reader; both now match the text of Tab's template PDFs (`00003329`, lines 265-266; `00003331`, lines 73-74). Tab's 4B filters were also "built from measurements, not yet test-rendered on Tal's frames." Nothing below was rendered here.
 
 ---
 
@@ -210,13 +210,14 @@ Marking: **"good green" is an open question for Tal** ("good, green-light this" 
 | 3:2 | 1080x720, 31-69%, y=600 | `scale=-2:720,crop=1080:720,pad=1080:1920:0:600:black` |
 | 5:4 | 1080x862, 27.5-72.4%, y=528 | `scale=1080:-2,crop=1080:862,pad=1080:1920:0:528:black` |
 | 16:9 | 1080x608, centred | `scale=1080:-2,pad=1080:1920:0:(oh-ih)/2:black` |
-| 2.39:1 | bars 55-68% black | same filter as 16:9; no crop of horizontal Sony footage |
+| 2.39:1 | 1080x452, y=734, about 76% black | `scale=1080:-2,crop=1080:452,pad=1080:1920:0:734:black`. A 16:9 clip loses its top and bottom; our arithmetic, not rendered here. Tab's "same filter as 16:9" gives 68% bars, not 2.39:1 |
 | wide band for a news-style card | 1080x708 at y=606 (63%) | geometry only, filter not given |
 
+- **The arithmetic on 1080x1920:** 16:9 is 608 tall, 68% bars. 3:2 is 720, 62.5%. 4:3 is 810, 58%. 5:4 is 864, 55%. 2.39:1 is 452, 76%. A library label of "2.35:1" or "2:1" on 55% bars is a 5:4 window: trust the measured bars, not the label.
 - Measured bar sizes across references run 39-68% of the frame height, so there is no single "right" ratio: copy the reference.
 - The 4:3 and 3:2 forms crop the sides of a 16:9 clip. Keep the subject centred (our reading, not Tab's).
 - Text goes on the **black bars**, never on the picture, in every letterboxed format. Caption sits 40-60 px above the picture; type 38-46 px.
-- "one day:" box is about 5:4, 85% of width, about 52% of the height black. A 4:3 clip with no letterbox, cropped like a phone video, is 960x720.
+- "one day:" box is about 5:4 at about 85% of width, which is 918x734, or 62% black. The library's measured 52% black does not fit that box, so measure the reference frame before building it. A 4:3 clip with no letterbox, cropped like a phone video, is 960x720.
 - Format switch as the drop: first shot full-frame 9:16, then a hard cut into the window on the beat (or the reverse).
 - [TAL] rule: **never crop a horizontal clip to fill vertical**. The face-tracked crop in the Shorts Pack is a conflicting practice that Tal has not ruled on (see `no-money-recipes.md`).
 

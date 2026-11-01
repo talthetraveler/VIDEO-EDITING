@@ -27,6 +27,7 @@ copy its contents into anything that gets pushed.
 | `formats/no-money-recipes.md` | every reel format with exact timings, what he praised, songs |
 | `formats/no-money-grades.md` | every color grade as an ffmpeg filter, letterbox sizes, text styles |
 | `formats/no-money-episodes.md` | Ep1 lessons, Ep2, the India brief, what comes after, Tab's unfinished list |
+| `formats/no-money-craft.md` | which rule wins when sources disagree, clip rules per format, recipes the menu only names, storyline patterns, cut and sound methods, YouTube graphics, what he said per reel, the "every country" series, bad data in Tab's files. **Read for every build** |
 | `assets/references/sidequester-kit/` | local only: his full doc, the master playbook (466 reels, country plans, scripts), transcripts by country, the footage index, the recreate notes, his voice notes on travel, `findings/` (684 KB of reading notes on all of it, including each country's story) |
 | `system/tools/sidequester/` | `footage_search.py`, `grade_match.py`, working here |
 
@@ -132,9 +133,10 @@ own words or the book, and flag what you cannot confirm.
 ### The steps, for every video
 
 1. **Take the brief.** Usually one reel and a short note: *"recreate"*, *"nice edit"*, *"like this
-   for every country"*. **Open its entry in `pdf-text\00003369-tal_reference_library.txt` first** (*"the reference library explains everything"*): hook, cuts, text, grade, song and which of his clips to use. Still look at every clip, then check the master, Part B. If it is new: download it low
+   for every country"*. **Run `python system/tools/sidequester/reel_brief.py <shortcode> --save <project>` first: it prints the queue row, master row, template and library entry, and a reel brief that doesn't quote them is not ready to build (LESSONS 172)** (*"the reference library explains everything"*): hook, cuts, text, grade, song and which of his clips to use. Still look at every clip, then check the master, Part B. If it is new: download it low
    quality (*"I don't need references in full quality"*), contact sheet, transcribe, write down
    the hook words, every shot length, text, VO, song, grade.
+   Then open `no-money-craft.md`: section 1 settles any conflict, section 2 says how to choose clips for that format, section 3 has the recipe if the menu only names it, and section 10 lists entries not to trust.
 2. **Copy the TYPE, never the content.** His rule, 2026-10-26: *"if the reference shows someone in
    the first couple seconds and then it goes into the reel, you find that kind of clip."* Opens
    on someone talking -> open on Tal saying a real line. Someone running -> find Tal running.
@@ -359,7 +361,7 @@ SDR BEFORE measuring or grading, and look at a still:
 python system/tools/sidequester/grade_match.py --target desert_orange_storm --src clip.mp4 --strength 0.5
 ```
 Presets live in the kit's `scripts/reflib/presets.json` (desert, green, snow, mountain, city).
-`DMArsvVxOgm` is his grade model, `DcymL3TKSyQ` the Western Sahara one.
+`DMArsvVxOgm` is his grade model. `DcymL3TKSyQ` is the Mauritania iron-ore train in a sand storm: he called it a Western Sahara video and asked to study its grade, so only the grade is copied.
 
 **Tab's Editing Handbook (2026-11-01, 27 pages, local in the kit as `Tal_Editing_Handbook.pdf`).**
 For short reels it is the newest statement of his rules; long form stays in section 4. It agrees with
@@ -437,7 +439,7 @@ His rule: *"Before you give it a video, you make sure it's perfect."*
 - [ ] Captions re-transcribed from the FINAL audio and diffed word for word
 - [ ] Mute test: captions alone describe every shot
 - [ ] No text over a face, no two text layers at once
-- [ ] No shot under 1.2 s, no shot used twice (see below)
+- [ ] No shot under 1.2 s, no shot used twice (on a recreation, copy the reference's timing: `no-money-craft.md` section 1; more checks in its section 9)
 - [ ] Music reaches the last frame (audio stream duration)
 - [ ] No shaky, blurry or dark shot; no identifiable kids in close shots unless he cleared the clip
 - [ ] HDR tone-mapped; a still checked by eye
@@ -453,8 +455,8 @@ without looking at it · music he did not name · a recap Tal has to sit through
 
 - The 1.2 s floor against the flicker formats (risk-over-regret, beat flicker, how-was-X, photo
   grids), which are built on 0.2-0.6 s cuts. Most of his favourite reels cut under it. Asked once, he
-  answered *"it needs to be similar to reference"*, which leans toward copying the reference on a
-  recreate, but he never said so directly. Default: keep the 1.2 s floor outside a recreate.
+  answered *"it needs to be similar to reference"*. Working rule, `no-money-craft.md` section 1: copy
+  the reference on a recreation and say so when sending; the 1.2 s floor holds everywhere else.
 - Noise cleanup. On Oct 26 he asked for Adobe Podcast on every video; the rule in force is raw
   audio. Those notes were about Israel reels and VO. Default: raw, until he says otherwise.
 - Whether horizontal cinematic footage may ever be cropped to vertical. Default: never.

@@ -1090,3 +1090,11 @@ Known-answer test on the train clip: keep 0-3 s and 6-11 s, add a title, export.
 - Edits stay in memory until `project_save`. A window and a headless run cannot hold one project at once.
 - Not tested: `captions_add` timing, `clip_stabilize`, audio ducking, 1080x1920 speed. Our caption and QA gates still apply to anything it exports.
 - `project_create` with no `video` makes a 1920x1080 timeline: always pass 1080x1920 at 30/1.
+
+## 123angmish/ai-virality-predictor (installed 2026-11-01, not a judge)
+
+Tal pasted it. Cloned to `A:\CLAUDE WORK\repos\ai-virality-predictor`, venv in `A:\CLAUDE WORK\repos\vp-venv`, no hooks run. The Python code makes no outside calls beyond an optional yt-dlp step, and the model pickle was scanned with `pickletools` before loading: a 737-byte sklearn LinearRegression.
+
+**Its score means nothing.** The README says "10,000+ empirical social video records". `backend/dataset_loader.py` generates them with `np.random`, and the app's own metadata calls it a synthetic benchmark, so the model only learns the formula that made the fake data. Known-answer test on two references: a 42M-play reel scored 44.7, a 4.6M-play reel scored 82.8. Only two, because only those had both a file and a count, but with synthetic training data no more are needed.
+
+Never report its 0-100 score to Tal as a prediction, and never reject a cut on it. The extractor's raw numbers (cuts per second, hook motion, audio energy) are ordinary measurements we already take. For what goes viral, the evidence we have is Tal's own Metricool and Instagram numbers.
