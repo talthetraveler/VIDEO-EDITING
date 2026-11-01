@@ -656,7 +656,7 @@ Text sits on faces in the first shots here and Tal loved it, because the referen
 
 ### Second model: "Pakistan, you were the country I was warned about"
 
-Tab's finished cut, 2026-11-01. Measured: 74.5 s, 1080x1920, 48 shots, 1.55 s average, -14.2 LUFS, peak -2.1 dB. The reference isn't identified yet. The file is local in `assets/references/tab-finished/tab-02`.
+Tab's finished cut, 2026-11-01. Measured: 74.5 s, 1080x1920, 48 shots, 1.55 s average, -14.2 LUFS, peak -2.1 dB. Tal says the reference is a Safin Clark reel. The exact reel isn't identified: the only Safin Clark reel in Tab's library, `DevTG_Bv_z-`, is a 23.5 s music film, not a voiceover letter. The file is local in `assets/references/tab-finished/tab-02`.
 
 - **A letter to the country.** The whole VO speaks to Pakistan as "you". One idea, and it holds the whole 74 s.
 - **The turn is the warning.** "The country I was warned about" opens it. Near the end, "the worst scammers" are the people who feed you and refuse to let you pay. The fear gets turned into the proof.
