@@ -1098,3 +1098,9 @@ Tal pasted it. Cloned to `A:\CLAUDE WORK\repos\ai-virality-predictor`, venv in `
 **Its score means nothing.** The README says "10,000+ empirical social video records". `backend/dataset_loader.py` generates them with `np.random`, and the app's own metadata calls it a synthetic benchmark, so the model only learns the formula that made the fake data. Known-answer test on two references: a 42M-play reel scored 44.7, a 4.6M-play reel scored 82.8. Only two, because only those had both a file and a count, but with synthetic training data no more are needed.
 
 Never report its 0-100 score to Tal as a prediction, and never reject a cut on it. The extractor's raw numbers (cuts per second, hook motion, audio energy) are ordinary measurements we already take. For what goes viral, the evidence we have is Tal's own Metricool and Instagram numbers.
+
+## thunderifang/rpocket-team-tube-assistant (DO NOT INSTALL, looks like malware, 2026-11-01)
+
+Same pattern as `obi19999/smart-video-reframe`. Created the same day, 0 stars, no code: one fake C++ file saved as `.html` and a long `CONTRIBUTING.md`. Fake "40K+ downloads" and "4.8/5" badges. Its download button goes to a shortener off GitHub, not a release, and it says to extract with a password and run as Administrator. Read as text only, never run, clone deleted. Never follow that link.
+
+**How to spot these:** a new repo with no stars, no source, a password-protected archive or "run as administrator". A description that copies a real tool word for word (this one copies AI-Content-Studio) proves nothing.
