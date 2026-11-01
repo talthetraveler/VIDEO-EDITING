@@ -725,3 +725,13 @@ Tal said Tab used his ElevenLabs key for step 7. Here, voice still needs his yes
 **How vlog and narration mix.** Live talk carries everything happening now, in present tense, with his reactions. VO carries only facts, time jumps and links, in about one or two lines at a time, then hands straight back to a live moment. The picture under VO is the thing named. In the slow middle, long stretches have no VO at all.
 
 **For Tal's series.** Copy the structure: claim, montage, title, why it matters, the problem, setbacks, the slow big moment, the turn at the end. His VO stays present tense (Tal, Oct 25): Drew's past-tense narration is the one thing not to copy. Stories that fit best: the iron-ore train, the Waorani, Pakistan. Never shown in Tal's versions: anything on his no-go list.
+
+## From the Nov 1 library
+
+The 761-page library's long-form section is unchanged. What's new in it: six voiceover recreates and the later reel batches. Full notes: `A:\CLAUDE WORK\transcribe\tab_pdf\review_E.md`.
+
+- **Tense:** present tense is for long form and live moments. The voiceover recreates he praised run in past tense, so a recreation follows its reference.
+- **Voiceover recreates:** his read ran 9-28% shorter than the reference voice in four of six. Retime the cuts to his voice, as `DeZXr1uzouY` did.
+- **Long-form gaps worth adding to an episode:** a sit-down to camera for the why, mid-episode (`5cNrCPKlEKY` 12:32); a parody documentary cold open (`ww92-_lI29U`); a funding bar that fills across episodes; a comedy beat about every 4 minutes; an older person's emotional beat before the close; a language tag on translated subtitles.
+- **Street references near the interaction format:** `DZwxDDnMilN`, `DY1gmQMs95b`, `De7GLIWO8Ky`, `DcMkATnuEpT`, `DaH6mPQSXo7`. Check each one before citing it. Tab's library has no study of Tal's own interaction reels, so `no-money-interaction.md` is the source.
+- **Still open:** those street vlogs cut at every speaker change, while our interaction rule says cuts only remove dead air. Follow the reference being recreated.
