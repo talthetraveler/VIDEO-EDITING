@@ -66,8 +66,7 @@ def main():
             parts.append('TEMPLATE:\n' + '\n'.join(tr))
     built = glob.glob(os.path.join(RECREATES, f'*{code}*'))
     for b in built:
-        parts.append(f'TAB BUILT THIS ONE, HIS NOTES ({os.path.basename(b)}):
-' + read(b).strip())
+        parts.append(f'TAB BUILT THIS ONE, HIS NOTES ({os.path.basename(b)}):\n' + read(b).strip())
     e = entries(code)
     found = bool(e or built)
     if e:
