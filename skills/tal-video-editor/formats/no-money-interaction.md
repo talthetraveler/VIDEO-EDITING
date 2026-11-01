@@ -49,6 +49,15 @@ Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not play
 - Crop when the person stays in frame and it stays sharp.
 - If a crop would lose people, keep the clip horizontal in the middle of the 9:16 frame with a blurred copy of itself above and below, as Arthur does, and the white pill title on the top band.
 
+## What he says is viral (Tal, 2026-11-01)
+
+*"Oman and the camels is viral, and like Mauritania iPhone clips in the night like stuck with no place to sleep, and hitchhiking in Mauritania... 360 clips especially and like the 360 clips with the border are super viral!"* Go to these first:
+
+- **Insta360 at the border** in Mauritania: the closed gates, the police, no man's land. Raw `.insv`, reframed by hand to 9:16 with the person or the gate in frame.
+- **Insta360 hitchhiking** in the Sahara: walking with his thumb out, cars refusing, the run to a stopped truck.
+- **iPhone at night** in Mauritania: stuck, no place to sleep.
+- **Oman, the camels:** the cargo ship with camels on board.
+
 ## The Nolan Saumure version
 
 Tal: *"so simple."* Same bones, one change: **a sentence of talk to camera sets up the moment**, in his own words, live or dropped over the footage. "Apparently inside this floating house is a barber." "So our entrance into the temple comes with a stick." Then the moment plays. His dry reactions are the jokes. Nothing is scripted to a template.
