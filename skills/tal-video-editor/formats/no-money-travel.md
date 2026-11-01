@@ -361,6 +361,32 @@ python system/tools/sidequester/grade_match.py --target desert_orange_storm --sr
 Presets live in the kit's `scripts/reflib/presets.json` (desert, green, snow, mountain, city).
 `DMArsvVxOgm` is his grade model, `DcymL3TKSyQ` the Western Sahara one.
 
+**Tab's Editing Handbook (2026-11-01, 27 pages, local in the kit as `Tal_Editing_Handbook.pdf`).**
+For short reels it is the newest statement of his rules; long form stays in section 4. It agrees with
+this file and `no-money-voiceover.md`. What it adds:
+
+- **Shot floor: nothing under 1.2 s, no flash frames** (*"Never do a flash"*), except flicker formats
+  he has agreed to. The handbook also gives VO shots of 0.5-2 s and cinematic bursts of 0.4-1.1 s.
+  It contradicts itself there, so hold 1.2 s unless the reference is an agreed flicker format, and ask.
+- **Talking moments** (T108): one 20-32 s take, no cuts, no music, word by word in bold white caps
+  with a black outline and the spoken word in teal, under his chin.
+- **Captions:** at least 0.7 s on screen, no capital after a comma, break where the speaker breaks.
+  A word you can't make out is left uncaptioned and flagged, never guessed.
+- **Cut lines, not whole clips.** His words play over the shot he said them in. The same moment from
+  a second angle is a repeat. The journey never cuts back to a point the story has passed.
+- **Time words are picture words:** "early", "after dark", "all night" each need a shot from that
+  time of day. Two picture words in one line means two shots.
+- **Zoom** only on an emotional or surprising word, onto a face doing something.
+- **Audio:** when he holds the phone, raise the other person's lines, not his. A video with no
+  talking gets 2 or 3 music options; the final choice is his.
+- **Privacy:** if someone on camera says it won't be published, mute and blur that moment and keep
+  the rest. Blur only the people needed or named.
+- **Reject rule:** rejected twice means ask him what's really wrong before trying again.
+- **Check the face.** The footage log can be wrong about who is who. He has curly hair, is
+  clean-shaven and often wears a light-blue jacket.
+- **Long form footage order:** GoPro vlog folders first, then Sony and drone.
+- **Photo reels:** people first, sharp portraits into the lens, elders, a person with an animal.
+
 ---
 
 ## 6. Tools
