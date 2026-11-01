@@ -1,0 +1,45 @@
+# TRAVEL INTERACTION REEL — one real moment with a local, a title on top
+
+Tal, 2026-11-01: *"These videos got 10 million views because they were so natural and authentic. People love the authentic interactions... especially with the meta glasses."* And: *"just like interactions with people. They have like a title card on top, super simple edits... Not voiceover style videos or template style videos."*
+
+This is his proven format on the travel page: his own numbers beat every template. No voiceover, no recreation, no grid to copy. The moment is the video. Part of `no-money-travel.md`.
+
+## What the reels are
+
+Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not plays; Tal's view counts are his.
+
+| reel | account | likes | length | shots | what happens |
+|---|---|---|---|---|---|
+| `DXVM1dZCKcF` | his | 239,681 | 68 s | 30 | Buys a watermelon, the seller won't take money, "in America only money, here the heart" |
+| `DX-C4j0gpY9` | his | 156,009 | 68 s | 29 | The same cut, retitled "POV: you're a tourist in Jordan" |
+| `DXgjyARgKr3` | his | 75,270 | 23 s | 13 | A kid takes him home for tea, food is brought out |
+| `DXgkevMgEWP` | his | 28,063 | 23 s | 10 | The same moment, recut |
+| `DWqUz1TgGPt` | his | 20,018 | 39 s | 6 | Pakistan, "it's free for you", the zip line |
+| `DWpAPLhgLY-` | his | 13,024 | 48 s | 4 | First foreigner in his car, "I don't want money" |
+| `Dd5iOOJggLu` | his | 7,691 | 33 s | 7 | Boat ride, a joke with locals |
+| `DXgc2_8gNPS` | his | 7,772 | 54 s | 18 | Meeting locals in Jordan |
+| `DcVU2oihvw_` | Arthur | 556,120 | 17 s | 8 | A question to a local with a surprising answer |
+| `Da5ASvcBP_E` | Arthur | 218,173 | 48 s | 17 | "Who said Egypt is full of scammers?" A man gives him food and won't take money |
+| `DcfhNcPhVOz` | Arthur | 216,862 | 42 s | 7 | A police siren in a car |
+
+## The recipe
+
+1. **One real exchange with one person.** Offer, refuse, insist, warmth. The strongest beat is someone refusing his money.
+2. **Open already inside it.** First frame is the person, the hand, the thing. His first words are on the first frame.
+3. **Long shots.** 2-12 s each. Cuts only remove dead air, and the sound of the moment carries it. Never a montage, no b-roll layered over talk.
+4. **Title on top for the whole reel or the first 4 s.** It names the viewer or a tension, with the country and flag:
+   - his: `pov: you are a tourist in Jordan 🇯🇴`
+   - Arthur's: `Who said Egypt is full of Scammers? 🇪🇬` in black bold on a white pill, held to the end
+5. **The caption is the post's second title.** "Don't be scared to travel" is his best one.
+6. **Captions:** white, lower-middle, 1-4 words. Translate what locals say. Arthur colours the local's lines yellow so two voices read apart. Keep the local's own broken English word for word: it's the charm.
+7. **A small joke caption is allowed:** `kid spawns in*`. An end word can land the idea: `JORDANIAN HOSPITALITY`.
+8. **Natural colour, raw sound.** Raise the local's voice, because he holds the camera.
+9. **End on the warmest second.** A hug, a thank-you, food being shared. No call to action.
+
+## Choosing clips
+
+- **Meta glasses first** for POV, with his hand in frame. Then the GoPro vlog folders. Tal: *"especially my vlogs, in Oman, getting in the car."*
+- Search the transcripts for refusals and offers: "no money", "for free", "my friend", "welcome", "you are our guest", "habibi", "how much".
+- Check the whole clip for the person's face being sharp and warm.
+- Same moment, new title, can run again: `DXVM1dZCKcF` and `DX-C4j0gpY9` are the same cut. Ask him before reposting.
+- Check `PRIVATE-RULES.md` and his no-go list before using any clip: a clip's talk can rule it out even when the moment is warm. No identifiable kids in close shots without his yes.

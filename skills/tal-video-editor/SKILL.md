@@ -298,6 +298,7 @@ Answer three questions first. Do not load a single specialist skill until you ha
 | **ANY travel video**: The Side Quester, "travel the world with no money", a country folder on Frame.io, a travel reel to recreate, a YouTube episode (2026-10-30). **Anything shot in Israel is separate: never this row** | `no-money-travel` — read it first; it replaces parts of THE STANDARD for travel (grade, music, captions, steady shots). Every build adds `no-money-craft` (which rule wins, clip rules, recipes, methods). VO reels add `no-money-voiceover`, recreates add `no-money-templates` + `no-money-recipes` + `no-money-grades`, YouTube adds `no-money-episodes` |
 | Meta Ray-Ban POV, handheld, first-person | `pov-meta-glasses` |
 | Walking up to strangers, greetings, giving something | `pov-kindness` |
+| **Travel, one real moment with a local, a title on top**, "like my viral Jordan ones", glasses or GoPro interactions (2026-11-01). Check this before any template: it's his proven format | `no-money-interaction` |
 | **"POV: Meeting a ___"**: a street interview with someone who carries a surprising identity, "the Nissim one" (2026-11-01) | `pov-walk-up`: open on the walk-up, never a teaser |
 | **"Like Erez" / "erezv1" / "fast cuts, fast zooms"**: a staged surprise from two cameras with little dialogue, Tal in the picture as the giver | `erez-fast-cut` — read his reel at 30 fps first; wide → 4-frame zoom → tight → cut; preview before anything |
 | One person, real substance, a payoff | `human-story` |

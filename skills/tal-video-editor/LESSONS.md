@@ -3912,3 +3912,7 @@ Tal: *"if u read thr eediting handoff, it hsoudl explain exaclty hwo to edit all
 ## 173. Tab's reel he loved: the same story first, then the timing (2026-11-01)
 
 Tal sent Tab's recreation of `DeZXr1uzouY`: *"it found the reference reel I gave it and made it in my story and everything."* Tab found the part of his life that matched the reference, kept its sentences, and swapped the meaning. Then Tab wrote a table with a clip and a reason for every line. Our reels mostly copied cut times and text positions onto clips that were findable. The rules are in `no-money-craft.md`, "The model". Before building, ask which real moment of his this reference already is. If there isn't one, say so.
+
+## 174. His biggest reels aren't templates (2026-11-01)
+
+Tal sent his most viral travel reels: *"so natural and authentic... People love the authentic interactions."* None is a recreation. One real exchange with a local, a title on top, long shots, raw sound. We spent 53 reels on templates and voiceovers while his own best format sat in the glasses folder. Before planning a batch, look at what already worked on his page. His own numbers outrank any reference. Format: `no-money-interaction.md`.
