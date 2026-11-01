@@ -21,6 +21,9 @@ Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not play
 | `DcVU2oihvw_` | Arthur | 556,120 | 17 s | 8 | A question to a local with a surprising answer |
 | `Da5ASvcBP_E` | Arthur | 218,173 | 48 s | 17 | "Who said Egypt is full of scammers?" A man gives him food and won't take money |
 | `DcfhNcPhVOz` | Arthur | 216,862 | 42 s | 7 | A police siren in a car |
+| `DQJ-HAkD6Ad` | Nolan Saumure | 716,209 | 71 s | 31 | A 19-year-old barber in a floating house |
+| `DObRtLjj-e4` | Nolan Saumure | 451,893 | 18 s | 10 | A temple hands him a stick, then the monkeys come |
+| `C__PSz1y4Yz` | Nolan Saumure | 244,873 | 65 s | about 15 | A street dentist in Pakistan |
 
 ## The recipe
 
@@ -35,6 +38,12 @@ Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not play
 7. **A small joke caption is allowed:** `kid spawns in*`. An end word can land the idea: `JORDANIAN HOSPITALITY`.
 8. **Natural colour, raw sound.** Raise the local's voice, because he holds the camera.
 9. **End on the warmest second.** A hug, a thank-you, food being shared. No call to action.
+
+## The Nolan Saumure version
+
+Tal: *"so simple."* Same bones, one change: **a sentence of talk to camera sets up the moment**, in his own words, live or dropped over the footage. "Apparently inside this floating house is a barber." "So our entrance into the temple comes with a stick." Then the moment plays. His dry reactions are the jokes. Nothing is scripted to a template.
+
+It suits places Tal walked into: a strange job, a local trade, a thing he'd never seen. His live line beats a recorded voiceover. Only use a voice-over line if he has no line, and only with his yes.
 
 ## Choosing clips
 
