@@ -5,12 +5,12 @@ Prints the queue row, master row, template, Tab's build notes and the library en
 import argparse, csv, glob, os, re, sys
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..'))
 KIT = os.path.join(ROOT, 'assets', 'references', 'sidequester-kit')
-LIB = os.path.join(KIT, 'pdf-text', '00003369-tal_reference_library.txt')
+LIB = os.path.join(KIT, 'pdf-text', 'Tal_Reference_Library_Nov1.txt')
 MASTER = os.path.join(KIT, 'sources', 'Tal_NoMoney_Series_Master_v2.md')
 TEMPLATES = os.path.join(ROOT, 'skills', 'tal-video-editor', 'formats', 'no-money-templates.md')
 RECREATES = os.path.join(KIT, 'sources', 'recreates')
 HEAD = re.compile(r'^([CDB][A-Za-z0-9_-]{10})(?: \S |\s*$)', re.M)
-NOISE = re.compile(r'^(?:--- page \d+ ---|\d{1,3})$', re.M)
+NOISE = re.compile(r'^\s*(?:--- page \d+ ---|\d{1,3}(?: / \d+)?)\s*$', re.M)
 
 
 def read(p):

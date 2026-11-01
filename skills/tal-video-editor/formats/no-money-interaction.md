@@ -43,3 +43,7 @@ Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not play
 - Check the whole clip for the person's face being sharp and warm.
 - Same moment, new title, can run again: `DXVM1dZCKcF` and `DX-C4j0gpY9` are the same cut. Ask him before reposting.
 - Check `PRIVATE-RULES.md` and his no-go list before using any clip: a clip's talk can rule it out even when the moment is warm. No identifiable kids in close shots without his yes.
+
+## Priority (Tal, 2026-11-01)
+
+*"we dont want to focus so much on voiceover reels and template reels, we can do a couple... i want mostly to be focusing on recreating the videos that went viral."* Batches are mostly this format. A voiceover or template reel is the exception, a couple at most, chosen for a story he has really lived.

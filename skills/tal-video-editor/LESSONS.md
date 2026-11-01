@@ -3907,7 +3907,7 @@ Fifty-three template reels went out in batches and he said a lot of them were no
 
 Tal: *"if u read thr eediting handoff, it hsoudl explain exaclty hwo to edit all the vids."* Tab's reference library has an entry for each reel he sent: hook, shot list, text, song, grade and which of his clips fill it. `no-money-travel.md` already said to open it first, but nothing enforced that. Of the 19 agents that worked on reels, 8 never opened it, so they measured the reel from scratch and missed what the entry says. That is one likely reason many of the 53 reels did not copy what he wanted. `refcuts.py` also skipped the library's method: it scanned the full frame, where letterbox bars hide cuts. It now crops the centre half.
 
-**Rule:** before any recreation, read that reel's entry in `pdf-text\00003369-tal_reference_library.txt`, then the Editing Handbook. A reel brief that doesn't quote its entry is not ready to build. If the reel has no entry, say so and measure it.
+**Rule:** before any recreation, read that reel's entry in `pdf-text\Tal_Reference_Library_Nov1.txt`, then the Editing Handbook. A reel brief that doesn't quote its entry is not ready to build. If the reel has no entry, say so and measure it.
 
 ## 173. Tab's reel he loved: the same story first, then the timing (2026-11-01)
 
