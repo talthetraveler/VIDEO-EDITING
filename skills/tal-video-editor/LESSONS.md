@@ -3902,3 +3902,9 @@ Tal assumed the edge left in the opening sky could not be fixed. It could: my pe
 ## 171. Volume without his taste is wasted (2026-10-31)
 
 Fifty-three template reels went out in batches and he said a lot of them were not good and did not copy what he wanted. Matching cut times and text position is not the same as copying what makes a reel work. Reels were also sent one by one in chat with no way to watch them together. Keep previews in one named folder, `A:\CLAUDE WORK\TRAVEL REELS TO REVIEW`, and before the next batch get his picks: which ones work and what is wrong with the rest. Build more of the ones he likes, not more of the list.
+
+## 172. The library entry comes first, on every reel (2026-11-01)
+
+Tal: *"if u read thr eediting handoff, it hsoudl explain exaclty hwo to edit all the vids."* Tab's reference library has an entry for each reel he sent: hook, shot list, text, song, grade and which of his clips fill it. `no-money-travel.md` already said to open it first, but nothing enforced that. Of the 19 agents that worked on reels, 8 never opened it, so they measured the reel from scratch and missed what the entry says. That is one likely reason many of the 53 reels did not copy what he wanted. `refcuts.py` also skipped the library's method: it scanned the full frame, where letterbox bars hide cuts. It now crops the centre half.
+
+**Rule:** before any recreation, read that reel's entry in `pdf-text\00003369-tal_reference_library.txt`, then the Editing Handbook. A reel brief that doesn't quote its entry is not ready to build. If the reel has no entry, say so and measure it.
