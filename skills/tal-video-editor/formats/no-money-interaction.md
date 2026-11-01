@@ -53,7 +53,7 @@ Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not play
 
 *"Oman and the camels is viral, and like Mauritania iPhone clips in the night like stuck with no place to sleep, and hitchhiking in Mauritania... 360 clips especially and like the 360 clips with the border are super viral!"* Go to these first:
 
-- **Insta360 at the border** in Mauritania: the closed gates, the police, no man's land. Raw `.insv`, reframed by hand to 9:16 with the person or the gate in frame.
+- **Insta360 at the border** in Mauritania: the closed gates, the police, no man's land. Raw `.insv` through `system/tools/insv-reframe.py` (`analyze`, then `render --span all`, `REPOS.md`), with `plan.json` changed only where a frame shows the aim missing the person or the gate.
 - **Insta360 hitchhiking** in the Sahara: walking with his thumb out, cars refusing, the run to a stopped truck.
 - **iPhone at night** in Mauritania: stuck, no place to sleep.
 - **Oman, the camels:** the cargo ship with camels on board.
