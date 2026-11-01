@@ -1104,3 +1104,16 @@ Never report its 0-100 score to Tal as a prediction, and never reject a cut on i
 Same pattern as `obi19999/smart-video-reframe`. Created the same day, 0 stars, no code: one fake C++ file saved as `.html` and a long `CONTRIBUTING.md`. Fake "40K+ downloads" and "4.8/5" badges. Its download button goes to a shortener off GitHub, not a release, and it says to extract with a password and run as Administrator. Read as text only, never run, clone deleted. Never follow that link.
 
 **How to spot these:** a new repo with no stars, no source, a password-protected archive or "run as administrator". A description that copies a real tool word for word (this one copies AI-Content-Studio) proves nothing.
+
+## Installed 2026-11-01 (Tal: "download and install this")
+
+All in `A:\CLAUDE WORK\repos\`, Python venvs in `venvs\`, 3.7 GB, cloned with hooks off and installed one at a time. Each was read first: no malware signs, and the "powershell" and "base64" hits are start scripts and audio or image decoding. **Dependencies load and the code imports or parses. None has made a video yet.**
+
+| repo | what it's for | needs before it can run |
+|---|---|---|
+| `harry0703/MoneyPrinterTurbo` (MIT) | topic to script, TTS, stock b-roll, subtitles | an LLM key and a stock-footage key. Stock b-roll isn't his footage, so it doesn't fit his travel videos as is |
+| `el-frontend/video-wizard` (MIT) | subtitle presets including `mrbeast`, `mrbeastemoji` | the web app, `apps/web`. Useful for its caption templates |
+| `naqashafzal/AI-Content-Studio` | script, voice, assets, thumbnail, YouTube upload | Gemini or other keys, and Google sign-in to upload. **Never connect the upload: nothing posts without Tal's yes.** The repo with the same name by `yuloop255` was not used |
+| `lcy362/agnes-video-generator` (MIT) | text to generated multi-scene video, for shots he doesn't have | `AGNES_API_KEY`, and prompts go to Agnes's servers. Tal has said AI shots must not look like AI, and never a real person's face |
+
+Tal adds keys himself. The interaction reels, his proven format, need none of these.
