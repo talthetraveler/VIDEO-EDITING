@@ -668,3 +668,16 @@ Tab's finished cut, 2026-11-01. Measured: 74.5 s, 1080x1920, 48 shots, 1.55 s av
 - **The text stays quiet.** Small white typewriter-style lines low in the frame, no big words, no pink. The story and the faces carry it. This is a different system from `DeZXr1uzouY`: copy each reference's own.
 
 Works for any country he knows well. Write it from his real trip, not from a template.
+
+### Third model: "Come with me to ride the most dangerous train in the world"
+
+Tab's cut from `De6rEXSonQc`, a 45 s orca reel. Measured: 45.01 s, 21 shots, 2.14 s average, -14.4 LUFS, peak -1.9 dB. Tab's notes print with `reel_brief.py`.
+
+- **Exact grid.** Same length and the same 21 cut times as the reference, to the frame. On a VO reel this tight, the script is written to fit the grid.
+- **Shot-for-shot type match.** Selfie to selfie, wide to wide. Feet on the boat edge become feet on the wagon. The white flash on his jump into the water stays as a white flash on the climb. The cliffhanger close-up becomes the goggles close-up.
+- **Sentence-for-sentence swap.** "Come with me to meet the biggest predator" becomes the most dangerous train. "But then the most extreme thing I could imagine happened" and "You won't believe what you'll see in the next video" stay close to word for word.
+- **Text copied as well:** big two-line white title with a black outline on shot one only, then 2-4 word captions mid-frame.
+
+**The file Tal sent still has the three faults the handbook lists for this reel:** "I woke up early" sits on a daytime selfie on the wagon, "we waited by the tracks" sits on shots already on top of the train, and "then, after dark" sits on a shot into the sun. Time words need their own time of day. Copy the method, not those three shots.
+
+**The three models together:** the reference tells you the sentences, the grid and the shot types. His life supplies the facts. The first job is choosing a reference he has really lived.
