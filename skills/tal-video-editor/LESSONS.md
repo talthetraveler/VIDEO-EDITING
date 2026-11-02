@@ -3932,3 +3932,7 @@ Tal named his trade asks as a priority: walking into a restaurant or hotel, offe
 ## 178. Raw 360 beats the flattened export (2026-11-02)
 
 Tal: in folders like `India\360 reframmed`, the `temp_video_*.mp4` files are old flattened exports. Use the raw `.insv` they came from, *"so I can have more access to edit it"*: aim, zoom and 16:9 or 9:16 are all still open. Match a flattened file to its raw by the words in the transcript; the `temp_video` number is an export time. Keep a flattened file only where no raw exists (Greece, the graduation video), and say so.
+
+## 179. 360 framing: face in, hand out (2026-11-02)
+
+Tal on the no-man's-land reel: half his face was off the edge in the truck cab, his back filled another shot, and his camera hand was huge and stretched at the bottom of most frames. *"You should be able to see me or the person, so it makes sense... maybe zoom in a bit, so my hand doesn't look that way."* Rules: whoever talks is fully in frame with the face visible, every beat; zoom in (half_v nearer 46-52 than 64), tilt up a little and aim away from the stick side so the hand leaves the frame or sits small at the edge. Check every beat at one frame per second before sending.

@@ -60,6 +60,7 @@ Tal's own trial reel, screenshot in `assets/references/tal-viral/trial-unedited-
 - The camera is a director: aim at whoever is talking, Tal or the other person, and follow them as they move. Turn to the other person on their first word, back to Tal on his.
 - Zoom by the moment: close on a face for a line that matters, wide for a place or an arrival.
 - The tool's default aim is a start. Set the aim per beat from the panorama, then check it on frames.
+- Face in, hand out (LESSONS 179): the person talking is fully in frame with the face visible; zoom in, tilt up and aim off the stick side so his camera hand never fills the bottom of the frame.
 - Always start from the raw `.insv`, never a flattened `temp_video_*.mp4` export, unless no raw exists (LESSONS 178).
 
 ## Crazy moments count too (Tal, 2026-11-01)
