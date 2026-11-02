@@ -3940,3 +3940,7 @@ Tal on the no-man's-land reel: half his face was off the edge in the truck cab, 
 ## 180. If the crop hides the speaker, keep the clip horizontal (2026-11-02)
 
 Tal on the Morocco bill reel at 0:06: a crop-to-fill showed a blurred room while the man said "No, no, not a stranger". *"You can't see the person talking, so it doesn't need to be vertical. It can be horizontal, in a vertical frame."* Check every beat: whoever is talking must be visible. If the 9:16 crop loses them, keep the horizontal clip whole in the middle with a blurred copy above and below (`"layout": "middle"`).
+
+## 181. Titles don't need "pov:" (2026-11-02)
+
+Tal retitled the Sahara hitchhike reel: *"you don't need to say like POV... maybe just say, right on top, hitchhiking in the Sahara Desert gone wrong."* A plain headline with a hook ("gone wrong") can beat a "pov:" line. Offer both kinds in the alternates, and don't default every title to "pov:".
