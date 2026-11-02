@@ -7,6 +7,7 @@
 `analyze` writes <dir>/plan.json: the camera path, each sample's score and the chosen span.
 `render` reads it. Edit plan.json by hand to change the aim, the span or the zoom.
 The picture is world-locked and level from the gyro, one lens wherever the view fits inside it.
+Insta360 X4 and X3. For an X3 5.7K clip pass the `_00_` file; its `_10_` twin must sit beside it.
 """
 import argparse
 import json
@@ -20,7 +21,7 @@ import cv2
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent))
-from insv import Insv, decode, equirect_dirs, quat_matrix  # noqa: E402
+from insv import CAMERAS, Insv, decode, equirect_dirs, quat_matrix  # noqa: E402
 
 YOLO_WEIGHTS = Path(__file__).parents[1] / "vendor/Autocrop-vertical/yolov8n.pt"
 SAMPLE_FPS = 4
@@ -117,13 +118,13 @@ def analyze(args):
     clip = Insv(args.clip)
     motion = Motion(clip)
     model = YOLO(str(YOLO_WEIGHTS))
-    side = 1440
+    side = min(1440, clip.width)
     k = side / clip.width
     dirs = equirect_dirs(EQ_W, EQ_H)
     samples, prev = [], None
     wrap = EQ_W // 8  # people on the panorama's edge
     cache = Path(args.out, "detections.json")
-    frames = [] if cache.exists() else decode(args.clip, side, rate=SAMPLE_FPS)
+    frames = [] if cache.exists() else decode(clip, side, rate=SAMPLE_FPS)
     for n, (a, b) in enumerate(frames):
         t = n / SAMPLE_FPS
         m0, m1, w = clip.blend_map(dirs @ motion.at(t))
@@ -222,7 +223,7 @@ def render(args):
     plan = json.loads(Path(args.out, "plan.json").read_text())
     W, H = (int(x) for x in args.size.split("x"))
     start, end = plan["span"] if args.span is None else [float(x) for x in args.span.split(",")]
-    side = 2880 if H >= 1920 else 1920
+    side = min(2880 if H >= 1920 else 1920, clip.width)
     k = side / clip.width
     gw, gh = W // 4, H // 4
     pt = np.array([p["t"] for p in plan["path"]])
@@ -241,9 +242,11 @@ def render(args):
         "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", "-color_range", "tv",
         "-c:v", "libx264", "-preset", "medium", "-crf", "20" if H >= 1920 else "24",
         "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
+    cam = CAMERAS.get(clip.model, {})
+    lens_reach, seam_deg = cam.get("reach", LENS_REACH_DEG), cam.get("seam", SEAM_DEG)
     use, gain, counts = None, None, {0: 0, 1: 0, "blend": 0}
     log = []
-    for n, (a, b) in enumerate(decode(args.clip, side, start, end - start)):
+    for n, (a, b) in enumerate(decode(clip, side, start, end - start)):
         i = first + n
         t = float(times[min(i, len(times) - 1)])
         yaw, pitch = float(np.interp(t, pt, py)), float(np.interp(t, pt, pp))
@@ -252,7 +255,7 @@ def render(args):
         d = grid @ rot_view(yaw, pitch).T @ motion.at(t)
         (x0, y0, th0), (x1, y1, th1) = clip.lenses[0].project(d), clip.lenses[1].project(d)
         reach = [float(np.degrees(th0.max())), float(np.degrees(th1.max()))]
-        fits = [reach[0] < LENS_REACH_DEG, reach[1] < LENS_REACH_DEG]
+        fits = [reach[0] < lens_reach, reach[1] < lens_reach]
         if use is None or not fits[use]:
             use = 0 if fits[0] and (not fits[1] or reach[0] <= reach[1]) else (1 if fits[1] else None)
         size = (W, H)
@@ -263,7 +266,7 @@ def render(args):
                               cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
             counts[use] += 1
         else:
-            w = np.clip(0.5 + (th1 - th0) / math.radians(2 * SEAM_DEG), 0, 1).astype(np.float32)
+            w = np.clip(0.5 + (th1 - th0) / math.radians(2 * seam_deg), 0, 1).astype(np.float32)
             f0 = cv2.remap(a, cv2.resize(x0 * k, size), cv2.resize(y0 * k, size), cv2.INTER_CUBIC,
                            borderMode=cv2.BORDER_REPLICATE)
             f1 = cv2.remap(b, cv2.resize(x1 * k, size), cv2.resize(y1 * k, size), cv2.INTER_CUBIC,

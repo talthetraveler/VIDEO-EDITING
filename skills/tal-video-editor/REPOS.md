@@ -1070,6 +1070,24 @@ PYTHONUTF8=1 system/vendor/Autocrop-vertical/.venv/Scripts/python.exe system/too
 
 **Hand-held 360, measured on Mauritania 2026-11-02:** the default aim held on people standing still, but lost him for long stretches when he holds the camera out and swings around it, because the tool only looks within 70 degrees of one direction. Render the default, look at frames, then fix the plan from panoramas (9 of about 30 clips needed it). Speed: about 25x realtime at 1080x1920 with full lenses, about 10x at 540x960, so previews run at 540x960.
 
+**Insta360 X3, measured 2026-11-02.** Before this the tool stopped on the X3 with `KeyError: 'Insta360 X3'`. Survey of every `.insv` in `A:\COPY 12` (model read from the trailer): **816 files. 303 X4** (one unit, Africa, Mauritania, Georgia, Cyprus, Canary Islands, Cuba, Miami). **262 X3 `_00_` files, plus 249 `_10_` twins** (one unit, serial `IAQEB2303QSUYW`, India, Vietnam, Laos, Thailand, Taiwan, Philippines, Indonesia, Japan). The `_10_` files carry no trailer; the `_00_` holds it. No other model.
+
+| | X4 | X3 |
+|---|---|---|
+| how the lenses are stored | one file, two video streams, 2880x2880 each | **5.7K (240 clips): two files**, `_00_` = lens 0, `_10_` = lens 1, 2880x2880 each. **4K (20 clips, all Vietnam, VN954 among them): one 3840x1920 stream, lenses side by side.** 60 fps (2 India clips): two files of 2880x1440, a band of each lens |
+| canvas per lens (trailer `offset`) | 8000x6000 | 5952x5952 |
+| square the frames show | 5890 | **5890 too**: band-pass seam correlation 0.72 at 5880-5900 on both a split and a side-by-side clip, 0.21 at 5952, negative by 6000 |
+| IMU axes | `x, -z, y` | **`x, z, -y`**: 14.71 against 19.14 runner-up (17.50 unstabilised) on VN954, 20.41 against 25.02 on India 549. The X4's axes do not hold |
+| gyro | raw, 1 kHz, 20-byte samples | the same |
+| the two split files in sync | n/a | frame n matches frame n: seam correlation 0.74 at offset 0 against 0.39 at one frame off. `_10_` often has one frame fewer, at the end |
+| rim and dark line | rim near 95, line near 93 degrees | none showed with the X4's 92-degree reach and 2-degree seam on VN954 or India 549, so the same values are used |
+
+The tool reads the layout from the disk, never from the model name: two streams = X4; a `_10_` beside the `_00_` = X3 split; one stream twice as wide as tall = X3 side by side. Pass the `_00_` file. **Still unsupported, with a clear error:** the X3 60 fps band (2 clips, `VID_20231027_073028`, `_073408`), the 5 India `_10_` files whose `_00_` is missing (no trailer, so no calibration or gyro), and 2 Philippines `_00_` files with no `moov` (cut-off recordings: `VID_20240223_135113_00_157`, `VID_20240303_141849_00_174`).
+
+**How each fact was measured, so the next model is measured the same way:** each instrument was first checked against the X4's known answers (scripts in `A:\CLAUDE WORK\insv-models\measure.py`). Seam correlation of band-passed brightness across the window side: 0.37-0.43 at 5890-5910 on the X4, sharp falloff at 5850 and 5930. 24-way axis ranking, scored by how much world-locked panoramas move frame to frame: `x, -z, y` won on two X4 clips. X4 output after the change: **byte-identical** to before (same MD5 for the 9:16 and 16:9 of `VID_20250317_173640_00_309`, same `plan.json`).
+
+**Tested on VN954 (side by side, 47 s) and India 549 (split, 16 s)**, 540x960 and 960x540, looked at frame by frame and on world-locked panoramas: horizon level throughout, seam clean in full frames, no rim, him found from 6 s on VN954 and the whole of 549. Near-camera people still ghost across the seam (the scooter rider at 549's 12 s), as on the X4. **On both cameras the 16:9 default aim cuts his head off when he is close** (the 16:9 view is narrower in height than the 9:16), so a 16:9 needs the plan's pitch raised or the zoom widened (LESSONS 179).
+
 ## Concat: the edit step after a reframe, 2026-10-31
 
 `jub0t/Concat` v0.2.8, AGPL-3.0, 13K stars, beta. Tal: *"reframe the 360 clips your way, and then use this Concat if it's helpful for editing."* He does not need to edit by hand. **It has no 360 or `.insv` support; feed it the flat 9:16.**

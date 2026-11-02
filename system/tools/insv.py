@@ -2,12 +2,13 @@
 
 The file format, the lens pose and the orientation filter are ported from
 bubo-squared/GyroView (MIT), docs/FORMAT.md and docs/adr 0008, 0009, 0025.
-That project had no X4 file; the X4 facts here were measured on Tal's Mauritania
-clips (see skills/tal-video-editor/REPOS.md).
+That project had no X4 or X3 file; the facts here were measured on Tal's Mauritania (X4)
+and Vietnam and India (X3) clips (see skills/tal-video-editor/REPOS.md).
 
 Directions use GyroView's body frame: x right, y down, z along lens 0.
 """
 import math
+import os
 import struct
 import subprocess
 
@@ -21,9 +22,21 @@ FEATHER_DEG = 3.0
 # window side = the canvas square the frames show, by seam correlation (peak 0.63 at 5890,
 # 0.05 at the canvas height of 6000). IMU axes = the 24-way world-stillness ranking
 # (11.93 against 14.4 unstabilised, runner-up 14.73). The X5's x, z, -y scored worse.
+# X3 (serial IAQEB2303QSUYW, 2026-11-02, scripts in A:/CLAUDE WORK/insv-models): canvas 5952 square
+# per lens, the frames show 5890 of it, band-pass seam peak 0.72 at 5880-5900 on both a split and
+# a side-by-side clip (0.21 at 5952). Axes x, z, -y: 14.71 against 19.14 runner-up (17.50
+# unstabilised) on VN954, 20.41 against 25.02 on India 549. The X4's x, -z, y does not hold here.
+# A model missing from this table stops: measure it, never assume.
 CAMERAS = {
     "Insta360 X4": {"side": 5890, "axes": ("x", "-z", "y")},
+    "Insta360 X3": {"side": 5890, "axes": ("x", "z", "-y")},
 }
+
+# How the lenses reach the disk. Read from the files, never from the model name:
+#   dual  one file, one video stream per lens (X4)
+#   split one stream per file, lens 0 in `_00_` (which holds the trailer), lens 1 in `_10_` (X3 5.7K)
+#   sbs   one stream, the two lenses side by side (X3 4K)
+LAYOUTS = ("dual", "split", "sbs")
 
 
 def proto_fields(buf):
@@ -155,8 +168,32 @@ class Insv:
         crop = proto_fields(info[27][0]) if 27 in info else {}
         self.window_crop = {k: v[0] for k, v in crop.items()}
         self.info = info
+        self.paths, self.layout = self._layout()
         self.width, self.height, self.fps, self.nframes, self.duration = self._probe()
+        if self.layout == "sbs":
+            self.width //= 2  # width and height are one lens's frame
+        if self.width != self.height:
+            raise ValueError(f"{self.model} {self.width}x{self.height} per lens: the lens is cropped to a "
+                             "band (X3 60 fps mode), not a full circle; not supported")
         self.lenses = self._lenses()
+
+    def _layout(self):
+        """Files and stream layout, from what is on disk."""
+        p = self.path
+        streams = subprocess.check_output([
+            "ffprobe", "-v", "error", "-select_streams", "v", "-show_entries", "stream=width,height",
+            "-of", "csv=p=0", p], text=True).split()
+        if len(streams) >= 2:
+            return [p], "dual"
+        name = os.path.basename(p)
+        if "_00_" in name:
+            other = os.path.join(os.path.dirname(p), name.replace("_00_", "_10_"))
+            if os.path.exists(other):
+                return [p, other], "split"
+        w, h = (int(x) for x in streams[0].rstrip(",").split(",")[:2])
+        if w == 2 * h and self.window_crop.get(3) == self.window_crop.get(4):
+            return [p], "sbs"
+        raise ValueError(f"{name}: one {w}x{h} stream and no _10_ file beside it; lens layout unknown")
 
     @staticmethod
     def _records(t):
@@ -223,7 +260,11 @@ class Insv:
     def orientation(self, body_axes=None, gain=0.2):
         """(video times, rotation body->world per sample). World: y down, heading of the first
         half second. Mahony filter as GyroView's OrientationTrack: gyro rules, gravity pulls."""
-        body_axes = body_axes or CAMERAS[self.model]["axes"]
+        if body_axes is None:
+            if self.model not in CAMERAS:
+                raise ValueError(f"{self.model}: lens window and IMU axes not measured yet "
+                                 "(REPOS.md, 'Raw .insv to 9:16', says how)")
+            body_axes = CAMERAS[self.model]["axes"]
         t, acc, rate = self.gyro()
         t = (t * 1e6 - self.first_frame_ts) / 1e6 + self.gyro_offset_ms / 1e3
         F = axes_matrix(body_axes)
@@ -276,13 +317,22 @@ class Insv:
         return (x0, y0), (x1, y1), w0
 
 
-def decode(path, side, start=0.0, dur=None, rate=None):
-    """Yield (lens0, lens1) BGR frames, each scaled to side x side, from `start`."""
-    f = f"[0:v:0]scale={side}:{side}[a];[0:v:1]scale={side}:{side}[b];[a][b]hstack"
+def decode(src, side, start=0.0, dur=None, rate=None):
+    """Yield (lens0, lens1) BGR frames, each scaled to side x side, from `start`.
+    `src` is an Insv (any layout) or the path of a dual-stream file."""
+    layout, paths = ("dual", [src]) if isinstance(src, str) else (src.layout, src.paths)
+    if layout == "dual":
+        f = f"[0:v:0]scale={side}:{side}[a];[0:v:1]scale={side}:{side}[b];[a][b]hstack"
+    elif layout == "split":
+        f = f"[0:v:0]scale={side}:{side}[a];[1:v:0]scale={side}:{side}[b];[a][b]hstack"
+    else:
+        f = f"[0:v:0]scale={2 * side}:{side}"
     if rate:
         f += f",fps={rate}"
     f += ",scale=in_color_matrix=bt709:in_range=pc:out_range=pc,format=bgr24"
-    cmd = ["ffmpeg", "-v", "error", "-ss", f"{start:.3f}", "-i", path]
+    cmd = ["ffmpeg", "-v", "error"]
+    for p in paths:
+        cmd += ["-ss", f"{start:.3f}", "-i", p]
     if dur:
         cmd += ["-t", f"{dur:.3f}"]
     cmd += ["-filter_complex", f, "-f", "rawvideo", "-"]
