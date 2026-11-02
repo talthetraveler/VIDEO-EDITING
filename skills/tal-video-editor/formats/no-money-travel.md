@@ -477,3 +477,12 @@ Tal: *"watch a couple seconds of each video ... or screenshot of thumbnail so yo
 4. **Final pick:** for each shot, line up 3 candidates and look at strips of the exact seconds used.
 
 Three frames say what a clip is and whether it looks good. They do not prove a moment happened, so step 4 is never skipped.
+
+## Tal's decisions, 2026-11-02 (these win)
+
+- Episodes 12 to 20 minutes. Ethiopia can run shorter, as its own episode.
+- Long form: non-copyright music only, or none. Short form: the reference reel's own song first, then his Drive tracks.
+- Voiceover: his ElevenLabs pro voice.
+- Short-form edits with weak wording become B-roll in long form. No B-roll or no storyline: AI video generation, never a real person's face.
+- Plant people early: *"whenever I mention someone at the beginning, we can give like a hint."*
+- He leaves picture format and episode splits to the editor's judgement.

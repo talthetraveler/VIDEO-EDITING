@@ -3916,3 +3916,7 @@ Tal sent Tab's recreation of `DeZXr1uzouY`: *"it found the reference reel I gave
 ## 174. His biggest reels aren't templates (2026-11-01)
 
 Tal sent his most viral travel reels: *"so natural and authentic... People love the authentic interactions."* None is a recreation. One real exchange with a local, a title on top, long shots, raw sound. We spent 53 reels on templates and voiceovers while his own best format sat in the glasses folder. Before planning a batch, look at what already worked on his page. His own numbers outrank any reference. Format: `no-money-interaction.md`.
+
+## 175. Long-form rules changed (2026-11-02)
+
+Tal: episodes run 12 to 20 minutes, not 10 to 12. Long form takes non-copyright music only, or none. Short form takes the reference reel's own song first, then his Drive tracks. Voiceover is his ElevenLabs pro voice. Where a long form has no good wording, use short-form edits as B-roll; where there's no B-roll or storyline, use AI video generation (*"which is important"*), never a real person's face. Hint at anyone who matters later near the start of the episode.
