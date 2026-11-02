@@ -3936,3 +3936,7 @@ Tal: in folders like `India\360 reframmed`, the `temp_video_*.mp4` files are old
 ## 179. 360 framing: face in, hand out (2026-11-02)
 
 Tal on the no-man's-land reel: half his face was off the edge in the truck cab, his back filled another shot, and his camera hand was huge and stretched at the bottom of most frames. *"You should be able to see me or the person, so it makes sense... maybe zoom in a bit, so my hand doesn't look that way."* Rules: whoever talks is fully in frame with the face visible, every beat; zoom in (half_v nearer 46-52 than 64), tilt up a little and aim away from the stick side so the hand leaves the frame or sits small at the edge. Check every beat at one frame per second before sending.
+
+## 180. If the crop hides the speaker, keep the clip horizontal (2026-11-02)
+
+Tal on the Morocco bill reel at 0:06: a crop-to-fill showed a blurred room while the man said "No, no, not a stranger". *"You can't see the person talking, so it doesn't need to be vertical. It can be horizontal, in a vertical frame."* Check every beat: whoever is talking must be visible. If the 9:16 crop loses them, keep the horizontal clip whole in the middle with a blurred copy above and below (`"layout": "middle"`).
