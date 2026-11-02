@@ -251,3 +251,4 @@ transcripts: `assets/analysis/ai-story-reels/batch2/`. Findings: `formats/ai-sto
   rules in `tal-video-editor/formats/ai-story-reel.md` ("THE HOUSE MODEL").
 
 - **Deo1QSWM-MV** (@fayadkazim), voiceover essay, MEASURED 2026-10-30: 5:4, 24 fps, 119.9 s, 316 words, stacked yellow serif hook then small yellow subtitles. Tal wants it flipped. Details: `formats/no-money-recipes.md`.
+| `trial-unedited-hitchhike` | his trial reel | Insta360 X4 single take, desert road, serif POV title across the sky | screenshot only, MEASURED: layout only | 2026-11-02 |

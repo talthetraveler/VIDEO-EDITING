@@ -39,6 +39,10 @@ Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not play
 8. **Natural colour, clean speech.** Reduce wind and background noise under the talk (Tal, 2026-11-02), keeping voices natural. Raise the local's voice, because he holds the camera.
 9. **End on the warmest second.** A hug, a thank-you, food being shared. No call to action.
 
+## The unedited 360 reel (his trial reel, 2026-11-02)
+
+Tal's own trial reel, screenshot in `assets/references/tal-viral/trial-unedited-hitchhike/`: one Insta360 X4 shot, him on an empty desert road in Mauritania, turban, thumb out, the "Insta360 X4" mark top left, and a title in a white serif across the sky: *"POV: Unedited footage of me hitchhiking thousands of kilometers from Morocco to Mauritania through the desert alone at 19 years old."* Caption: "I love life." A song under it. One long take, no cuts, the place does the work. Results not measured yet.
+
 ## The negotiation reel (Tal, 2026-11-02)
 
 *"Important to highlight is where I negotiate, like getting things for free. Going up to restaurants saying, hey, I'll make you a video. And then they say no, no. The rejection, and then getting one saying yes. That's important."*
