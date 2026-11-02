@@ -29,6 +29,7 @@ Every line has a picture word: a noun, a place, a number, an action or a person.
 | Dd91OHvolzZ (Hallie Rose) | "I'm 23 now, but when I was 22, I sailed across the Pacific Ocean." | reverse-age list, one clip per age | 20 s | blows out the cake |
 | DdB95uZuBL_ | "So apparently if you're bored with your life, you do what any normal person would do and book a one-way flight to Europe…" | setback → "so you do what any normal person would do" → next place | 289 wpm, ASL 1.8 s | — |
 | DeZXr1uzouY (Harmony) | "When did we decide it's embarrassing to be bad at something…" | idea → "So I'm giving myself a challenge" | 28 s, 19 cuts | "Follow along to see me suck." |
+| DeWOnGEIrTw (Diego, Spanish) | "This is me jumping off the most dangerous train in the world, and this is part two of how you can do this trip too." | the end shown first → a wall → first leg + a rule → a fork that hides the real prize → side quests → the gatekeeper → the ambush in the dark → the dawn reveal → the jump again, in context | 4.07 words/s, 76 shots / 104 s | pays the 9 s promise: "comment VIAJE and I'll send you everything". Full recipe below: "The quest with a gatekeeper" |
 
 Pace across the story VOs is 150–290 wpm (median ~210), with a cut every 1.2–2 s and a cut on almost every phrase boundary. Tal's scripts read best at 150–210 wpm (2.5–3.5 words/s).
 
@@ -174,3 +175,64 @@ Lines in the Tal column that aren't from a build are drafts. Check each fact aga
 
 **Tal's version (best fit: Pakistan hospitality, not the Ryan story):** "The best thing in Pakistan is completely free. And when you're travelling with zero dollars, it's the only thing that matters. It doesn't need a reservation [hotel owner: "Please come stay for free", c0039a3c], there's no waiting list [a stranger offers a ride before he even hitchhikes, 12e1e53b], you don't need to know anybody [stranger in the car brings him food and won't let him pay, fade5a90 / b3918d67]… I'm talking about the hospitality." Then chai invites (0d19574e, bee42579), "Why don't you take money from me? You are our guest" (8c20f928), the farmer's truck (19477519), and end on "Pakistan, the best country in the world… life is good" (c82e5e62).
 Flags: clips that show Ryan (c4d36e9d, 74814ccd, f77323b4, eb068624) are left out because that story is already used. Check each clip by eye for kids before cutting. The "23 hours" style closing line needs Tal's own line, e.g. "and tomorrow, another stranger will do it all over again."
+
+### DeWOnGEIrTw · "The quest with a gatekeeper" (Diego, @diego_fplife, Spanish, MEASURED 2026-11-02)
+
+Tal sent it with: "Understand that storytelling." So this entry is about the story first; the cuts, text and music are here only where they serve it.
+
+**Measured** on a low-res copy (720x1280, 30 fps), not the posted file:
+- 104.1 s long.
+- Shots: scene detection at 0.20 found 84 cuts. Eight of them were double hits under 0.15 s, checked on the contact sheet, so there are 76 real shots. Average 1.37 s, median 1.15 s, shortest 0.53 s, longest 5.33 s, about 43 cuts a minute.
+- Voice: Spanish voiceover from start to end. Groq large-v3 heard 424 words, 4.07 words/s overall.
+- Who speaks: only the creator, in voiceover. People on screen talk, but their sound is never heard and no live line comes through in the transcript.
+- Silence: none. silencedetect at -35 dB found no gap, and at -28 dB found one gap of 0.29 s at 102.9 s. So a music bed runs under every word.
+- Loudness: -14.2 LUFS integrated, LRA 6.7 LU.
+- Music: the bed can't be identified from the file. Its shape was measured with the bass band under 120 Hz, second by second; see beats 6 to 8.
+
+**The story in ten beats.** "Words/s" is counted from the word timings, "shots" from the contact sheet.
+
+| # | Beat | Time | Length | Shots | Words/s | What it does |
+|---|---|---|---|---|---|---|
+| 1 | Hook: the ending shown first | 0–5.1 | 5.1 s | 3 | 4.9 | Opens on the last action of the story, him landing in the sand beside the train, plus a superlative ("the most dangerous train in the world") and a second-person promise ("how you can do this trip too"). It plants question 1: how do you get on and off that thing? A "Part 2" title is pinned at the top. |
+| 2 | The wall and the promise | 5.1–11.9 | 6.8 s | 5 | 3.9 | "There's a problem: without contacts there, this is practically impossible. Relax, at the end of the video I'll give you ours." The obstacle is named, and a promise is made that the last line pays. The shots under it are the contacts: a driver, a host in a tent. |
+| 3 | First leg and a rule | 11.9–29.5 | 17.7 s | 14 | 4.0 | A map pin lands on the place name, then a list of the first night, one shot each: stars, a shoulder put back in, crossing moving wagons. Then a rule with a cost: get off at this stop, because if you stay on you end up where the military is. |
+| 4 | The fork and the twist | 29.5–38.6 | 9.1 s | 6 | 4.5 | "Two options: wait hours for the train back (yes, the real one, the one in the photos) or do what we did." The viewer learns the train they just watched was not the real one. That plants question 2: when do we see it? |
+| 5 | Side quests | 38.6–53.7 | 15.1 s | 12 | 3.7 | "We turned the Sahara into a video game and did every side mission": eleven people, cargo and a goat in one car, a swim in a desert pool, a village, the last sunset from a dune. One shot per item, in the order they're said. This is the release before the dark stretch: daylight, colour, joy. |
+| 6 | The gatekeeper | 53.7–62.2 | 8.6 s | 3 | 5.0 | "Now we really had to catch it. The problem: only this man knows when and where it comes, and if you don't pay him he won't say a word." This beat has the reel's slowest picture: a 5.33 s locked shot of the man at 57.0 s. The voice speeds up while the picture holds still. |
+| 7 | The ambush | 62.2–69.2 | 7.0 s | 6 | 5.0 | "Suddenly they tell us it's coming, we pile into his car, he drops us in the middle of the desert, we wait hidden, and when it appears we climb on without being seen." The frames are near black, lit only by headlights and head torches. The voice is at its fastest. The bass falls about 10 dB at 61–63 s, the only real drop in the reel. |
+| 8 | The reveal | 69.2–81.1 | 11.9 s | 7 | 3.6 | "And now, yes: THIS is the iron train you've probably seen hundreds of times." On "now, yes" the cut goes from night straight to sunrise. Then the widest shot, then texture: full wagons, kilometres of desert, iron dust everywhere, the sunrise. The voice slows to its slowest and the bass is at its loudest (69–70 s). This pays question 2. |
+| 9 | Arrival: the jump again | 81.1–95.3 | 14.2 s | 11 | 3.9 | One last rule ("you can't get off wherever you like; our contact told us exactly where, because he'd be waiting"). Then "we grab the bags, we jump, and after several days crossing the Sahara… this is over." The hook's action comes back, now earned, and is followed by grinning, dust-black faces at about 0.9 s each. This pays question 1, and the emotional last line ("this is over") lands here, not at the end. |
+| 10 | Paying the promise | 95.3–104.1 | 8.8 s | 9 | 3.5 | "If you want this exact trip, with our itinerary, where we slept and every contact we used, comment VIAJE and I'll send it all." This is the fastest picture in the reel: a recap of the best shots at 0.98 s each, then an end card. The music thins out from 96 s. |
+
+**How the tension works**
+- **Three open loops, closed in reverse order.** Question 1 opens at 0 s (how?) and closes at 92 s. The promise opens at 9 s (contacts) and closes at 101 s. Question 2 opens at 33 s (where is the real train?) and closes at 70 s. At any moment at least one loop is open.
+- **Obstacles stack, and each is a person or a rule.** The order is: no contacts, then a stop you must get off at, then a man who only talks if paid, then hiding, then a contact waiting at one exact spot. Each one is said in a single line and never explained further.
+- **Releases are cuts to daylight.** Beat 5 comes after the first night and beat 8 after the ambush. Both are colour, wide shots and slower words.
+- **The slow moment is the gatekeeper, not the view.** The longest hold sits on the man who decides whether the story can go on. The scenery never gets a hold longer than 2.9 s.
+- **The picture and the voice move against each other.** In beat 6 the picture is slowest and the voice fastest. In beat 8 the voice slows while the picture opens up. The cut rate stays at about one shot per 1.3 s almost everywhere. The changes in feel come from the speech rate and the light, not from the editing pace.
+
+**Text, only as far as it serves the story**
+- Captions show one word at a time: small white lowercase semi-bold sans, centred about 71% down, no box. At 4 words/s each word is on screen for about 0.25 s. They are for sound-off reading only and never compete with the picture.
+- The hook alone gets big text: yellow highlight blocks that blur in, phrase by phrase ("and this is part two / of how you can / do this trip / you too"), with the "Part 2" title pinned at the top.
+- Place names arrive as phone-map screenshots with a red pin and a white label, and as a pin label over live footage. The map is the establishing shot.
+- The end card repeats the call to action in the same yellow highlight style.
+
+**The recipe, reusable for any quest story with footage**
+1. **Hook (≤5 s):** the last action of the story, plus a superlative, plus a promise to the viewer. Bring the same shot back in beat 9.
+2. **Wall (≈7 s):** "without ___ it's practically impossible." Promise something the last line will deliver.
+3. **First leg (≈15–18 s):** a map pin on the place name, 3–5 sensory items with one shot each, and one rule with a consequence.
+4. **Fork (≈9 s):** "two options: the easy one, or what we did," and reveal that the real prize is still ahead. This plants the second question.
+5. **Side quests (≈15 s):** 4–6 items, one shot each, in daylight. The fun before the dark.
+6. **Gatekeeper (≈8 s):** the one person who controls access, the price or condition in one line, and the longest hold of the film on his face or hands.
+7. **Ambush (≈7 s):** everything at once in the dark. The voice is at its fastest, the shots near black, and the music drops out under it.
+8. **Reveal (≈12 s):** cut to light on "and now…". The widest shot, the voice slowing down, the music at its loudest. This pays the second question.
+9. **Arrival (≈14 s):** one last rule, the hook's action again in context, then faces. The emotional last line goes here.
+10. **Pay the promise (≈9 s):** the call to action over a recap of the best shots at about 1 s each.
+
+**Where it differs from the rest of this file**
+- It is longer (104 s, against the 45/60 s template in section 3).
+- It is faster (4.07 words/s, against the 3.4 the template assumes).
+- It has no silent gap. Rule 15 asks for one 0.4–0.9 s silence; this reel instead drops the music under the ambush. Both are measurements of other creators, not of Tal's own work, so neither overrides the other. Pick per story.
+- It uses no live line at all. Where a story's footage has a strong live line from the gatekeeper or from the dark stretch, beats 6 and 7 are the place for it. That is our choice, not the reference's.
+
+Local files: low-res copy, transcript, word timings, contact sheets and shot list are in `assets/references/tab-finished/ref-DeWOnGEIrTw/`. That folder is gitignored and never pushed.
