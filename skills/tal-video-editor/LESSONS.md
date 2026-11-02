@@ -3928,3 +3928,7 @@ Tal: *"when I'm speaking, you should reduce the background noise so there's no l
 ## 177. Negotiation reels: no, no, then yes (2026-11-02)
 
 Tal named his trade asks as a priority: walking into a restaurant or hotel, offering a video, getting turned down, then the one that says yes. These come from iPhone clips, GoPro vlogs and the best stretch of an old long form. Shape and rules in `formats/no-money-interaction.md`, "The negotiation reel".
+
+## 178. Raw 360 beats the flattened export (2026-11-02)
+
+Tal: in folders like `India\360 reframmed`, the `temp_video_*.mp4` files are old flattened exports. Use the raw `.insv` they came from, *"so I can have more access to edit it"*: aim, zoom and 16:9 or 9:16 are all still open. Match a flattened file to its raw by the words in the transcript; the `temp_video` number is an export time. Keep a flattened file only where no raw exists (Greece, the graduation video), and say so.
