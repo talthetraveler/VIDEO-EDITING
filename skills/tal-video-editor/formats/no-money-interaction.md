@@ -39,6 +39,15 @@ Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not play
 8. **Natural colour, clean speech.** Reduce wind and background noise under the talk (Tal, 2026-11-02), keeping voices natural. Raise the local's voice, because he holds the camera.
 9. **End on the warmest second.** A hug, a thank-you, food being shared. No call to action.
 
+## The negotiation reel (Tal, 2026-11-02)
+
+*"Important to highlight is where I negotiate, like getting things for free. Going up to restaurants saying, hey, I'll make you a video. And then they say no, no. The rejection, and then getting one saying yes. That's important."*
+
+- Shape: the ask, a no (or several no's cut tight), then the yes and what he gets. The no's make the yes land.
+- Show the real pitch in his words: "I'll make you a video", "in exchange for", "for free".
+- Sources: iPhone clips, GoPro vlogs, and his old long-form edits. In a long form, find the best stretch and lift only that.
+- Keep each no long enough to sting, a second or two of the face, then cut.
+
 ## Framing a 360 clip (Tal, 2026-11-02)
 
 *"You can reframe it to be vertical, reframe it to be horizontal... usually for reels it's vertical, for my long form episodes horizontal. You could choose how zoomed in you want it on my face... if I'm speaking to someone, it could be on me, and then to him."*

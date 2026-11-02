@@ -3924,3 +3924,7 @@ Tal: episodes run 12 to 20 minutes, not 10 to 12. Long form takes non-copyright 
 ## 176. Clean the speech, direct the 360 (2026-11-02)
 
 Tal: *"when I'm speaking, you should reduce the background noise so there's no like wind."* The raw-audio rule of 2026-10-21 is replaced: denoise under speech, per beat, and prove the words survive by re-transcribing the render. On 360 clips he wants the view directed: on whoever is talking, closer on faces for lines that matter, wider for places; vertical for reels, horizontal for long form. The default tool aim stays a starting point only.
+
+## 177. Negotiation reels: no, no, then yes (2026-11-02)
+
+Tal named his trade asks as a priority: walking into a restaurant or hotel, offering a video, getting turned down, then the one that says yes. These come from iPhone clips, GoPro vlogs and the best stretch of an old long form. Shape and rules in `formats/no-money-interaction.md`, "The negotiation reel".
