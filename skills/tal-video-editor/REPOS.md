@@ -1068,6 +1068,8 @@ PYTHONUTF8=1 system/vendor/Autocrop-vertical/.venv/Scripts/python.exe system/too
 - **A thin dark line sits in the raw lens near 93 degrees from its axis.** The seam blend must end before it: `SEAM_DEG` 2, not 6. Cause not identified; it follows the lens edge, so it is not the stick.
 - **Lens brightness is matched along the seam, per frame and per channel** (`seam_field`). One gain for the whole seam left a hard edge in the sky, because sky and sand differ by different amounts. People crossing the seam are left out of the reading, or they throw a pale glow into the sky; find them by the lenses' own gap and local contrast, never by distance from the seam's average, which throws out the sky wherever the seam is mostly sand. Measured at 8 s: step 4.2-4.4 against the sky's own fade of 4.6-5.1 (7.0 with one gain, 13 with a wide blend). Sky flicker no worse: worst frame jump 1.66 against 1.76.
 
+**Hand-held 360, measured on Mauritania 2026-11-02:** the default aim held on people standing still, but lost him for long stretches when he holds the camera out and swings around it, because the tool only looks within 70 degrees of one direction. Render the default, look at frames, then fix the plan from panoramas (9 of about 30 clips needed it). Speed: about 25x realtime at 1080x1920 with full lenses, about 10x at 540x960, so previews run at 540x960.
+
 ## Concat: the edit step after a reframe, 2026-10-31
 
 `jub0t/Concat` v0.2.8, AGPL-3.0, 13K stars, beta. Tal: *"reframe the 360 clips your way, and then use this Concat if it's helpful for editing."* He does not need to edit by hand. **It has no 360 or `.insv` support; feed it the flat 9:16.**
