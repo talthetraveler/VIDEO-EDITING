@@ -89,6 +89,29 @@ Tal: *"so simple."* Same bones, one change: **a sentence of talk to camera sets 
 
 It suits places Tal walked into: a strange job, a local trade, a thing he'd never seen. His live line beats a recorded voiceover. Only use a voice-over line if he has no line, and only with his yes.
 
+## Interesting-person reels: two references (Tal, 2026-11-02)
+
+*"Have I met any really really interesting people we can make like this!!"* Both measured from 480p downloads (`assets/references/tab-finished/ref-<code>/`, study files beside them). Cuts by scene detection checked on 1 fps frame sheets, music by low-band beat periodicity.
+
+| | `DZXVJgNsWGd` (Ty Travels) | `DMGKZAytDYU` (Kieran Brown) |
+|---|---|---|
+| Likes | 379K | 367K |
+| Length | 36.6 s | 73.6 s |
+| Camera | one phone, wide lens, handheld, one continuous scene | selfie talk to camera plus handheld B-roll of the trip and the person |
+| Cuts | about 5 real cuts; the rest of what scene detection finds is whip pans | about 20 shots, 3.5 s average; two black frames used as beats |
+| Who talks | the two creators and the room, live | the creator only: live selfie lines and VO. The person himself barely speaks |
+| VO or live | all live | mixed, about half VO laid over B-roll, the rest live to camera |
+| Text | small white title top, sentence case, flag, first 6 s; a "3... 2... 1..." count at the top; small sentence-case captions lower third, colour per speaker (creator white, partner yellow, locals pink); end card "Follow to..." on the title line | no title. Heavy lowercase captions, 2-3 words, white, about 65% down, key words and every number coloured (red, yellow, blue) |
+| Music | a beat bed under the live sound, steady at about 139 BPM | no beat found; live and VO carry it |
+| Loudness | -14.5 LUFS | -14.2 LUFS |
+
+**How each shows why the person is interesting.**
+
+- **Ty: the setup line, then the proof.** One sentence to camera names the dare ("this is how easy it is to..."), a count-down, and he walks straight in. The room's reaction is the point: they toast, flex, shout back. No explaining after the door opens. Fits a group of strangers or a scene that plays itself.
+- **Kieran: the claim, the journey, the facts, the proof, the gift.** The first 9 s is the creator to camera saying the one remarkable fact, with the number coloured. Then VO over B-roll: how far he went to find the person, who they are, the strangest detail. Then a physical proof on camera (an object, a crowd). It closes on a gift and a goodbye wave. Fits one person whose life is a headline, even if they speak little.
+
+**For Tal's footage.** Both open on the claim in the first second. Use Ty's shape when the moment is live and loud; use Kieran's when the person has a fact worth saying in one line, and let the person say it if they can (his live line beats VO, as above). A VO line needs his yes. Every number gets a coloured word on screen.
+
 ## Choosing clips
 
 - **Meta glasses first** for POV, with his hand in frame. Then the GoPro vlog folders. Tal: *"especially my vlogs, in Oman, getting in the car."*

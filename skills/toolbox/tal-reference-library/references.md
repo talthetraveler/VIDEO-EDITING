@@ -252,3 +252,5 @@ transcripts: `assets/analysis/ai-story-reels/batch2/`. Findings: `formats/ai-sto
 
 - **Deo1QSWM-MV** (@fayadkazim), voiceover essay, MEASURED 2026-10-30: 5:4, 24 fps, 119.9 s, 316 words, stacked yellow serif hook then small yellow subtitles. Tal wants it flipped. Details: `formats/no-money-recipes.md`.
 | `trial-unedited-hitchhike` | his trial reel | Insta360 X4 single take, desert road, serif POV title across the sky | screenshot only, MEASURED: layout only | 2026-11-02 |
+| `DZXVJgNsWGd` | Ty Travels | 36.6 s, one handheld phone in one room, setup line to camera then walk in; small top title + per-speaker coloured captions; beat bed about 139 BPM; -14.5 LUFS | MEASURED: cuts, words, text, music, loudness. Recipe in `formats/no-money-interaction.md` | 2026-11-02 |
+| `DMGKZAytDYU` | Kieran Brown | 73.6 s, about 20 shots; selfie claim to camera in the first 9 s, then VO over trip and person B-roll mixed with live lines, proof object, gift, goodbye; no title, lowercase captions with coloured numbers; no beat found; -14.2 LUFS | MEASURED: cuts, words, text, music, loudness. Recipe in `formats/no-money-interaction.md` | 2026-11-02 |
