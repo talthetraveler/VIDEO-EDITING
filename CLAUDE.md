@@ -275,11 +275,14 @@ conflict with safety or honesty.
   384px POV frames are a **retrieval hint, not ground truth** — see §7.
 
 ### Audio
-- **Raw live audio. No denoise, no noise reduction, no heavy EQ on dialogue,
-  on any video** — only loudness levelling and music ducking. Tal approved this
-  2026-10-21 (his master prompt, section 11); it replaces "do not over-denoise".
-  Street ambience, wind, market noise, traffic — that texture is the proof it's
-  real. The builders denoise only when an edit asks (`"denoise"`, `--denoise`).
+- **Clean speech: reduce background noise while people speak.** Tal,
+  2026-11-02: *"when I'm speaking, you should reduce the background noise so
+  there's no like wind in the background."* This replaces the 2026-10-21 "raw
+  live audio, no denoise" rule. Wind and hiss go; voices stay natural, with no
+  swallowed word tails and no robotic sound. Prove it on the render: the words
+  still transcribe the same, and the floor between words drops. Denoise per
+  beat, never one setting over a whole film (LESSONS on DeepFilterNet gating
+  real speech). No heavy EQ.
 - Never join fragments from two takes into one word. Protect first and last
   consonants, word tails, and breath. **If unsure, cut later, not earlier.**
 

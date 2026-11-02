@@ -3920,3 +3920,7 @@ Tal sent his most viral travel reels: *"so natural and authentic... People love 
 ## 175. Long-form rules changed (2026-11-02)
 
 Tal: episodes run 12 to 20 minutes, not 10 to 12. Long form takes non-copyright music only, or none. Short form takes the reference reel's own song first, then his Drive tracks. Voiceover is his ElevenLabs pro voice. Where a long form has no good wording, use short-form edits as B-roll; where there's no B-roll or storyline, use AI video generation (*"which is important"*), never a real person's face. Hint at anyone who matters later near the start of the episode.
+
+## 176. Clean the speech, direct the 360 (2026-11-02)
+
+Tal: *"when I'm speaking, you should reduce the background noise so there's no like wind."* The raw-audio rule of 2026-10-21 is replaced: denoise under speech, per beat, and prove the words survive by re-transcribing the render. On 360 clips he wants the view directed: on whoever is talking, closer on faces for lines that matter, wider for places; vertical for reels, horizontal for long form. The default tool aim stays a starting point only.

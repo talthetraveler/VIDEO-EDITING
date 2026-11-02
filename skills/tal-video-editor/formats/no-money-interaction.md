@@ -36,8 +36,17 @@ Measured 2026-11-01 from low-res downloads. Instagram gives likes here, not play
 5. **The caption is the post's second title.** "Don't be scared to travel" is his best one.
 6. **Captions:** white, lower-middle, 1-4 words. Translate what locals say. Arthur colours the local's lines yellow so two voices read apart. Keep the local's own broken English word for word: it's the charm.
 7. **A small joke caption is allowed:** `kid spawns in*`. An end word can land the idea: `JORDANIAN HOSPITALITY`.
-8. **Natural colour, raw sound.** Raise the local's voice, because he holds the camera.
+8. **Natural colour, clean speech.** Reduce wind and background noise under the talk (Tal, 2026-11-02), keeping voices natural. Raise the local's voice, because he holds the camera.
 9. **End on the warmest second.** A hug, a thank-you, food being shared. No call to action.
+
+## Framing a 360 clip (Tal, 2026-11-02)
+
+*"You can reframe it to be vertical, reframe it to be horizontal... usually for reels it's vertical, for my long form episodes horizontal. You could choose how zoomed in you want it on my face... if I'm speaking to someone, it could be on me, and then to him."*
+
+- Reels 9:16, long form 16:9, from the same `.insv`.
+- The camera is a director: aim at whoever is talking, Tal or the other person, and follow them as they move. Turn to the other person on their first word, back to Tal on his.
+- Zoom by the moment: close on a face for a line that matters, wide for a place or an arrival.
+- The tool's default aim is a start. Set the aim per beat from the panorama, then check it on frames.
 
 ## Crazy moments count too (Tal, 2026-11-01)
 
