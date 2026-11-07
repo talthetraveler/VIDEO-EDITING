@@ -3944,3 +3944,7 @@ Tal on the Morocco bill reel at 0:06: a crop-to-fill showed a blurred room while
 ## 181. Titles don't need "pov:" (2026-11-02)
 
 Tal retitled the Sahara hitchhike reel: *"you don't need to say like POV... maybe just say, right on top, hitchhiking in the Sahara Desert gone wrong."* A plain headline with a hook ("gone wrong") can beat a "pov:" line. Offer both kinds in the alternates, and don't default every title to "pov:".
+
+## 182. The editor's guide leaves the editor free (2026-11-07)
+
+Tal on the episode guides: *"the editor should have their free will... you can explain like the good B rolls are XXX, the good lines to include are from these clips. You don't have to give them like the exact framework... in the top you should say what happened."* Per episode: what happens (top), the good lines to include with their clips, where the good footage is by moment (suggestions, no fixed order), a good voiceover draft, Shorts to pull, and the questions. No step-by-step shot list, no timings per step. His own briefs are the backbone; clips only add facts and flag "Check with Tal" where they disagree.
