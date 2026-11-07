@@ -43,6 +43,8 @@ copy its contents into anything that gets pushed.
 
 *"That should be the lens through which every editor ... looks at the footage."*
 
+**The premise, in one question (Tal, 2026-11-07):** *"Can I travel the whole world with no money, just by creating content for businesses?"* No money spent on food, beds or transport, but he makes money with his camera. Earning is part of the challenge, never a contradiction of it. Never frame a leg as a daily budget ("$5 a day").
+
 **Two workflows run at once. Know which one the job is.**
 
 | | ARCHIVE POSTS | THE CANONICAL SERIES |
