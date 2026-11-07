@@ -256,6 +256,8 @@ His references: Reuben Schmitz "Free World Trip" (15 episodes, the backbone), Ke
 "£0.01" (31). **Quality bars he named: `Dd10WEzuHqY`, `DIEfg1DzwXS`.** Ep1's pace reference:
 `N-ZenLrInoc`: *"Do not copy it. Use it to understand the feeling."*
 
+**The episode template: docu hook, then "let me take you back" (Tal, 2026-11-07).** Open every episode on its most interesting place or moment and go into it documentary-style: *"I'm right now going to learn Tai Chi at this monastery... But in order to get here, let me tell you my journey."* Then the story plays in order back to that place, where the docu depth pays off. The iron ore train, the kung fu monastery and the Waorani are built this way, inside the series episode, not as separate specials. Standalone specials ("How to Ride the Most Dangerous Train on Earth With No Money") are a later option. Episodes run 5-15 min; longer stories go out as Part 1 and Part 2.
+
 **Three things are REQUIRED** (his notes on Ep1 v4, which he did not like): a cinematic grade,
 motion graphics, and enough real shots.
 
