@@ -3948,3 +3948,7 @@ Tal retitled the Sahara hitchhike reel: *"you don't need to say like POV... mayb
 ## 182. The editor's guide leaves the editor free (2026-11-07)
 
 Tal on the episode guides: *"the editor should have their free will... you can explain like the good B rolls are XXX, the good lines to include are from these clips. You don't have to give them like the exact framework... in the top you should say what happened."* Per episode: what happens (top), the good lines to include with their clips, where the good footage is by moment (suggestions, no fixed order), a good voiceover draft, Shorts to pull, and the questions. No step-by-step shot list, no timings per step. His own briefs are the backbone; clips only add facts and flag "Check with Tal" where they disagree.
+
+## 183. Everyone on camera is OK, kids included (2026-11-08)
+
+Tal, asked whether a Bedouin man in Oman who first said "no video" was fine being filmed: *"Yes, he was fine."* Then, for the travel footage as a whole: *"Everyone's okay with being filmed. That's fine. You can just make them. Kids is okay."* This replaces the old travel rule of keeping identifiable kids out of frame. Still keep a child's full name out of the captions and leave phone numbers out, and still leave out a line where someone refuses the camera, because it reads badly on screen even when they were fine.
