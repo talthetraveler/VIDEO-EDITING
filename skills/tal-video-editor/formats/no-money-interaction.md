@@ -125,3 +125,11 @@ It suits places Tal walked into: a strange job, a local trade, a thing he'd neve
 ## Priority (Tal, 2026-11-01)
 
 *"we dont want to focus so much on voiceover reels and template reels, we can do a couple... i want mostly to be focusing on recreating the videos that went viral."* Batches are mostly this format. A voiceover or template reel is the exception, a couple at most, chosen for a story he has really lived.
+
+## The viral pass (Tal, 2026-11-08: "imagine you're the best video editor in the whole world")
+
+1. **Hook in the first 1.5 s.** Frame 1 is a face or the thing, and the first word is the strongest line of the setup, never "alright so". If the payoff line is the killer (a refusal of money, "you don't know if I come back alive", "my home is your home"), ALSO write a second spec `edit-coldopen.json` that opens on that line for 1.5-3 s and then cuts to the start. Render it only if the first cut is done and verified, and report both. Tal picks.
+2. **Punch-in on the key line** (skills/toolbox/add-zooms, as a hard cut, not zoompan): in a "fill" beat, split the beat at the start of the payoff line and give the second half `"zoom": 1.25` (keep x/y on the face). One or two punches per reel, never on a "middle" letterboxed beat. The in/out are contiguous, so the sound runs on.
+3. **Translations checked** (skills/toolbox/multilingual-dialogue-qc): any Arabic, Spanish, Urdu, Swahili or other non-English line gets its original words kept in the spec (`"orig"` next to `"say"`). Mark a translation you're not sure of as `UNSURE` in your report, never as verified.
+4. **Two titles:** one "pov: ..." and one plain headline with a hook (LESSONS 181: "hitchhiking in the Sahara gone wrong"). Put the stronger one in `title` and the other first in `title_options`.
+5. **End on the warmest second**, and make it loop-friendly: no "bye guys" or walking-away tail after the emotional line.
