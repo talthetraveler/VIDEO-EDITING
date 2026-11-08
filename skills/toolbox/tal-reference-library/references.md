@@ -267,3 +267,9 @@ Tal: the type of cinematic he wants (look, VO, music). 93.5 s, native 2.35:1, 55
 
 ## yt-5A_4_k1nwzk (Levon, roller-skating grandfather) - MEASURED 2026-11-08
 Tal: loves its SFX and storytelling. 73 s, 43 cuts, 146 wpm VO, hook in 2 s, wrong impression then a one-line turn then payoff, hits on title cards, hot flat mix. Files in assets/references/yt-5A_4_k1nwzk/; recipe in formats/cinematic-trailer.md section 9.
+
+## Qz7yyfet7jQ "Travelling the world in 1 minute | Move by Rick Mereki" (Random Acts) - MEASURED 2026-11-08
+Tal: "make a video like this with the journey." 72 s 16:9; 55 s body of about 200 five-frame shots (0.2 s, then 0.45 s, then 0.12-0.25 s), one man dead-centre in every wide across 11 countries, no VO, no captions, title MOVE twice (open and end card), about 140 BPM score cut on the 8th note, long walk-away close, sky release. Files in `assets/references/Qz7yyfet7jQ/`; recipe in `formats/move-one-walk-montage.md`.
+
+## DeFGdNVtr97 "what is your five year plan?" (heydenhansen) - MEASURED 2026-11-08
+Tal: "recreate this." 15.3 s, 720x1280, 5:4 picture band centred in black, one white text line above it (question, then "plan?" from the first cut), airport sit-still hook 5.4 s, then 7 one-second verb shots on a 60 BPM pulse, ends walking away, text off in the last 0.7 s. Files in `assets/references/DeFGdNVtr97/`; recipe in `formats/line-above-picture-no-plan.md`.
