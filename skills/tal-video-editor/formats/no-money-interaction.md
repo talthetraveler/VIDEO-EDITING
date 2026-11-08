@@ -83,6 +83,8 @@ Tal's own trial reel, screenshot in `assets/references/tal-viral/trial-unedited-
 - **Oman, the camels:** the cargo ship with camels on board.
 - **Ecuador** (*"Ecuador has viral moments"*): the Amazon boat trip, the night arrival, the blowgun with the elder.
 
+**Hospitality first (Tal, 2026-11-08):** *"usually the most viral videos are with Muslims or with hospitality, like inshallah, people love that, or any salam alaikum... hospitality or Muslim moments are the best, or in Oman hitchhiking."* When choosing what to cut next, rank a stranger's kindness first: a greeting of "salam alaikum", "inshallah", "you are my guest", a refused payment, an invitation home for tea or food. Oman hitchhiking is the richest source. He also named the kung fu monk in China. A shortlist from a transcript scan for these words is in `A:/CLAUDE WORK/reels/hospitality-scan.md`.
+
 ## The Nolan Saumure version
 
 Tal: *"so simple."* Same bones, one change: **a sentence of talk to camera sets up the moment**, in his own words, live or dropped over the footage. "Apparently inside this floating house is a barber." "So our entrance into the temple comes with a stick." Then the moment plays. His dry reactions are the jokes. Nothing is scripted to a template.
