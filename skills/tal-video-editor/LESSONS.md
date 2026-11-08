@@ -3952,3 +3952,7 @@ Tal on the episode guides: *"the editor should have their free will... you can e
 ## 183. Everyone on camera is OK, kids included (2026-11-08)
 
 Tal, asked whether a Bedouin man in Oman who first said "no video" was fine being filmed: *"Yes, he was fine."* Then, for the travel footage as a whole: *"Everyone's okay with being filmed. That's fine. You can just make them. Kids is okay."* This replaces the old travel rule of keeping identifiable kids out of frame. Still keep a child's full name out of the captions and leave phone numbers out, and still leave out a line where someone refuses the camera, because it reads badly on screen even when they were fine.
+
+## 184. A phone pointed at the ground can come out upside down (2026-11-08)
+
+Tal on the Georgia walnut reel: *"last video is wrong, it's flipped."* The iPhone clip was shot looking down at the ground, and its rotation tag (90°) turned it so the camera holder's own feet were at the TOP of the frame. Nothing in the file is wrong, so no check catches it. For any shot looking down, up, or at hands, judge orientation from the content: the holder's feet and hands come in from the bottom edge, and the other person faces the camera. Fix with `"rotate": 180` on the beat.
