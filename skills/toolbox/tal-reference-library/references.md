@@ -273,3 +273,13 @@ Tal: "make a video like this with the journey." 72 s 16:9; 55 s body of about 20
 
 ## DeFGdNVtr97 "what is your five year plan?" (heydenhansen) - MEASURED 2026-11-08
 Tal: "recreate this." 15.3 s, 720x1280, 5:4 picture band centred in black, one white text line above it (question, then "plan?" from the first cut), airport sit-still hook 5.4 s, then 7 one-second verb shots on a 60 BPM pulse, ends walking away, text off in the last 0.7 s. Files in `assets/references/DeFGdNVtr97/`; recipe in `formats/line-above-picture-no-plan.md`.
+
+
+## yt-jZlWScl9wS8 "I Tried 6 Levels of Waterparks!" (Jeremy Hutchins) - MEASURED 2026-11-08
+Tal: how fast the voiceover is, the sound effects, how it tells the story. First 185 s: 184 wpm, 39.6 cuts/min, 1.5 s shots, 4.6 words/shot, promise-and-escalation hook in 12 s, first turn at 13 s, level-select map graphic, red-outline cutout, HUD hearts. SFX labels inferred. Files in assets/references/yt-jZlWScl9wS8/; findings in formats/no-money-voiceover.md "Measured: YouTube storytelling VO references".
+
+## yt-0e3GPea1Tyg "$456,000 Squid Game In Real Life!" (MrBeast) - MEASURED 2026-11-08
+Tal: "see how good they did that." First 185 s: 160 wpm, 32.4 cuts/min, 1.8 s shots, 99 percent speech, one-sentence hook (what + stakes + number) in 9 s, first turn at 9 s, staged 1.2-4.4 s holds, one-word captions on the spoken word, prize/counter/dot/arrow graphics. SFX labels inferred. Files in assets/references/yt-0e3GPea1Tyg/; findings in formats/no-money-voiceover.md.
+
+## yt-YlvcFJOE-OE "Giving iPhones Instead Of Candy on Halloween" (MrBeast Short) - MEASURED 2026-11-08
+Tal: "see how engaging it is" (short-form). 39.6 s vertical, live POV dialogue, 50 cuts/min, 1.16 s shots, first word 0.3 s, no gap over 0.4 s, same door framing repeated to teach a pattern, escalation (iPhone, $10,000, PlayStation), peanut-butter punchline at 36 s with a cut on it, SUBSCRIBE sticker over the last frames, 1-3 word captions at 63 percent height, no music and no designed SFX (inferred). Files in assets/references/yt-YlvcFJOE-OE/; findings in formats/no-money-voiceover.md section C.

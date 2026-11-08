@@ -236,3 +236,74 @@ Tal sent it with: "Understand that storytelling." So this entry is about the sto
 - It uses no live line at all. Where a story's footage has a strong live line from the gatekeeper or from the dark stretch, beats 6 and 7 are the place for it. That is our choice, not the reference's.
 
 Local files: low-res copy, transcript, word timings, contact sheets and shot list are in `assets/references/tab-finished/ref-DeWOnGEIrTw/`. That folder is gitignored and never pushed.
+
+
+## Measured: YouTube storytelling VO references (2026-11-08)
+
+Three references from Tal. Method: audio extracted, words timed with Groq whisper-large-v3-turbo (`system/scripts/lib/stt.mjs`, word level), cuts counted with ffmpeg scene score above 0.3, loudness measured per word and per pause, and each video looked at as contact sheets (1 frame per second for 0-30 s, then 1 per 3 s; the short at 1 per second). Files: `assets/references/yt-jZlWScl9wS8/`, `yt-0e3GPea1Tyg/`, `yt-YlvcFJOE-OE/` (first 185 s of the two long ones; the whole short).
+
+**Read this first.** None of the three is a pure voiceover over B-roll. They are on-camera narration and live dialogue over action footage, cut tight. The wpm below is speech density of the whole soundtrack, not of a studio VO. The pure-VO measurement of other creators is sections 1-10 above and `cinematic-trailer.md`.
+
+**Measured vs inferred.** Measured: words, timings, wpm, pauses, cut times, loudness, text and graphics seen in frames. Inferred (I cannot play audio): every sound-effect label. I took broadband energy jumps (roughly the top 1.5 percent of frame-to-frame jumps) and labelled them from the words and picture beside them. Onset detection is weak under speech and music, so SFX counts are a floor, not a count. Cut detection was checked against the contact sheets: a new shot nearly every second in all three, consistent with the 1.2-1.8 s averages.
+
+### A. "I Tried 6 Levels of Waterparks!" (Jeremy Hutchins, 1552 s, 16:9). First 185 s.
+- Speech: 568 words, **184 wpm** overall, 214 wpm while someone is talking (speech present 86 percent of the time). Per 30 s: 196, 148, 184, 202, 198, 176 wpm.
+- Sentences: 88, mean 6.5 words, median 4.5, longest 36. Questions: 11 in 3 min (one per 17 s), mostly from the friend, not the host.
+- Pauses: 28 gaps over 0.25 s, 14 over 0.7 s, 11 over 1.0 s, longest 4.0 s (a slide). Gaps are not silence: the level inside a 1-3 s gap is -16 to -20 dBFS against -17 dBFS median on words, so action sound or music fills it at nearly VO level. Only 2 gaps drop 10 dB or more (151-155 s, -26 and -31 dBFS), on the ice-cream review gag.
+- Cuts: 122 in 185 s = **39.6 per minute**, average shot **1.5 s**, **4.6 words per shot**.
+- Hook, exact: "Today, I'm trying six levels of water parks, starting with the most basic to the most mind-blowing. So each level will progressively get more extreme, which means so will the slides. Two, one, launch!" Over a cold open of slide POV shots and a shark tunnel. 31 words in 12 s, one idea: six levels, rising extreme.
+- Structure: 0-12 s promise plus launch countdown; 13 s "But first, we're at level one, a backyard water park" (first turn); 14 s a video-game level-select map (floating islands, "Level 1" in green pixel type); a friend arrives at 17 s and is rude about the park ("It's already leaking"); gags and a slide at 25-50 s; 51 s summary line; 58 s "But this is nothing compared to what" (bridge to the next level). Open loops: the number 6, the escalation promise, the level map showing the next island, the ice-cream review teased at 147 s.
+- Picture (frames seen): red-outline cutout of the host on the first shot, a glow-portal effect on a jump, a motion-blur whip on a cut, an overhead drone shot for layout, game HUD with named heart rows (BEN, JEREMY) during a contest, a level-select map between levels, a handwritten "LEVEL 1 WATERPARK" sign as the establishing card. Rhythm: host talking to camera, POV action shot, wide, repeat.
+- Literal picture: about 6 of 8 lines in the first minute show exactly what is named (slide, bucket drop, bounce house, dinosaur slide).
+- Tone: loud, jokey, friends insulting each other, an exclamation about every 7 s ("Oh!", "Stop!" are their own sentences).
+- SFX inferred (floor): cut-aligned jumps are few because speech and action noise mask them. Likely designed hits from picture: a sting on the cold-open launch (about 10-12 s), a whoosh into the map (13-14 s), pops on the HUD hearts. Onsets I could confirm: 45.4 s (on a cut), 112.7 s (pause, on a cut), 131.9 s, 150.3 s (low thud inside a pause, likely a boom on "Ready?"). About 6-8 designed hits a minute is plausible.
+- Music: continuous bed; level not isolable. Pauses at -16 to -20 dBFS mean it is not ducked to nothing.
+
+### B. "$456,000 Squid Game In Real Life!" (MrBeast, 1541 s, 16:9). First 185 s.
+- Speech: 493 words, **160 wpm**, speech present 99 percent of the time. Per 30 s: 170, 196, 174, 168, 144, 110 wpm (it slows as tension rises).
+- Pauses: only 13 gaps over 0.25 s in 3 minutes, 5 over 1.0 s. Staged breaths: 79 s (1.7 s), 166.8 s (1.6 s, "...nervous."), 169.3 s (1.2 s), 171-175.4 s (**4.4 s**, the green light / red light hold). Level in the 4.4 s hold is -15.7 dBFS against -14.6 on words: crowd and music fill it.
+- Cuts: 100 in 185 s = **32.4 per minute**, average shot **1.8 s**, **4.9 words per shot**. First 30 s: 17 cuts.
+- Hook, exact (0-9 s): "I recreated every single set from Squid Game in real life and whichever one of these 456 people survives the longest wins 456 grand." One sentence, 24 words: what he did + stakes + the number. Cold open on the doll's face, then the logo card, then a wide of the sets.
+- First turn at 9.1 s: first game and its rule in one sentence ("30 minutes to cross the red line"). Live suspense starts at 16.8 s ("green light"). Open loops: who survives, 456 players, the clock, "30 people have gotten out", "23 minutes left".
+- Questions in narration: 1 in 3 min. The pull is stakes and a timer, not questions.
+- Picture (frames seen): doll cold open; logo card at 1 s; "456" at 5 s; one-word captions on the spoken word in bold italic outlined type ("SURVIVES" 6 s, "WINS" 7 s); "$456,000" in green with falling-cash art at 8 s; RED LIGHT / GREEN LIGHT rule card at 12 s; green and red status dots top-left from 18 s; red arrow on the moving player at 20-21 s; close crop on a jersey number as a punch-in at 25-27 s; live counter "455 REMAINING" bottom-left at 28 s. Wide establishing, tight faces, wide again.
+- Literal picture: nearly every line lands on its picture (red light shows the doll, 456 shows 456 uniforms, the prize word lands on the money graphic).
+- Tone: confident, factual, escalating; humour is quiet.
+- SFX inferred: strong non-speech jumps at 18.95 and 20.3 s (red-light stings tied to "Red light."), then 37.9, 45.1, 67.0, 72.8, 119.7, 120.4, 121.9 s, 7 of them on cuts. The narration names a device that "pops" at 24 s, so an elimination pop exists there. Floor: about 7 strong hits per minute, about 40 percent on a cut, none on a plain word.
+- Music: continuous bed under all speech (the quiet frames are within 0.4 dB of speech frames on the whole track), never faded out. Level versus VO not separable.
+
+### C. Short: "Giving iPhones Instead Of Candy on Halloween" (MrBeast, 39.6 s, 1080x1920)
+- Speech: 145 words in 39.6 s = **220 wpm**, but the giver and the kids overlap (speech time came out at 128 percent of the clip). Sentences: 42, mean 3.5 words, max 8. No gap over 0.4 s anywhere. No VO: live dialogue, chest POV, at a door.
+- Hook: first word at 0.3 s ("Hey, you want an iPhone?"), first caption ("Hey!") on the first frame. No title, no build-up: the offer is the hook.
+- Cuts: 33 in 39.6 s = **50 per minute**, average shot **1.16 s**, 4.3 words per shot.
+- Structure and payoff: 0-9 s the premise is shown, not told (iPhone box to a kid, three times, same door framing); 9.5 s first escalation ("here's $10,000", cash in the bucket) with a parent's "no, no, you keep it" (3 s reaction); 15-28 s the same ask to five more groups (the repeated framing teaches the pattern); 29 s second escalation ("a PlayStation?", AirPods); 33.6 s a new person ("Who's that over there?"); **36-39.6 s punchline**: "I want a candy." "I've got a jar of peanut butter." "I'm allergic." The video cuts on "I'm allergic". A hard stop on a joke invites a replay; that is inferred, not something I could observe.
+- Retention tricks: escalation with no flat patch (iPhone, iPhone, cash, PlayStation, reversal); the pattern is taught in 5 s then broken in the last 4 s; the surprise is withheld to the last 3.5 s; the receiver's reaction is the subject; the ending is a SUBSCRIBE sticker with three red arrows over the last frame (seen at the 39 s frame), not a card.
+- Captions (frames seen): bold sans, white or yellow, dark outline, 1-3 words, one at a time, centred at about 63 percent of frame height, same size every time. About 14 in 40 s, so not every line: only the lines that carry the plot ("iPhone?", "Thank you!", "Happy Halloween!", "you keep it!", "Who's that over there?"). The last joke is split into three captions, one per beat ("I've got a" / "jar of peanut butter").
+- Sound: the floor between lines is 9 dB under speech (relative scale -52.8 vs -43.9): room tone and street, not a music bed. No designed SFX in the envelope (onsets at 5.7 and 21.7 s are cut-aligned handling noise). Inferred: **no music and no SFX**; the authentic sound is part of why it reads as real.
+- Zooms: none digital. The motion is the handheld POV swinging to each kid and one whip-pan at 14 s.
+
+### D. Comparison
+| | Waterparks | MrBeast long | MrBeast short |
+|---|---|---|---|
+| wpm (overall) | 184 | 160 | 220 (overlapping voices) |
+| cuts per minute | 39.6 | 32.4 | 50 |
+| average shot | 1.5 s | 1.8 s | 1.16 s |
+| words per shot | 4.6 | 4.9 | 4.3 |
+| first word | 0.0 s | 0.0 s | 0.3 s |
+| hook | promise + escalation | action + stakes + number | the offer itself |
+| gaps over 0.7 s in 3 min | 14 | 5 | 0 |
+| music | constant | constant | none |
+
+### E. Checklist for a 30-60 s VO reel
+1. **Words per minute 160-190** on a single VO (the two long-form numbers are 160 and 184). Above 200 only for the last 5 s or a rush. The short's 220 is two voices overlapping, not one.
+2. **Hook formula:** what it is + the stakes + a number in one sentence (20-30 words) for long form; for a short, the offer or question itself with the first word by 0.3 s, a caption on frame 1, no logo or intro.
+3. **First turn by 9-13 s** (a rule or "but first"); in a short, the first escalation by 9-10 s.
+4. **Pauses:** 0-0.4 s between sentences; one staged 1.2-1.7 s breath before a reveal every 30-60 s; one 4 s hold at the peak. Never dead air: keep ambience or action under it within about 3 dB of the VO. True drops (10 dB or more) only for a gag.
+5. **Sentences:** median 3-4.5 words; one long hook sentence only.
+6. **Cuts:** 32-40 a minute for long form, about 50 for a short; shots 1-2 s, 4-5 words per shot; no shot over 3 s unless a face does the work.
+7. **Literal picture:** about 3 of 4 lines show what they name; a number gets a text pop on the number.
+8. **Text pops:** 1-3 words, bold, outlined, on the spoken word; prize or number in a second colour; a rule card for the first rule; a counter or status dots for stakes; a red arrow on the thing to watch. Vertical short: about 63 percent height, only plot lines, about one per 3 s.
+9. **SFX:** 6-8 designed hits a minute as a floor (inferred, not heard), about 40 percent on a cut and the rest on a text pop or a named object. A sting on the cold-open launch, a whoosh into each card or map, a pop on each number, a thud before a reveal. Not on every cut. Real street dialogue can run with room tone and no SFX.
+10. **Music:** a constant bed that fills the gaps; duck only for a gag or a staged breath; none at all is right for live dialogue.
+11. **Open loops:** plant a number (6 levels, 456 players, a timer) and pay it in order; end each section on a teaser. For a short: teach a pattern in 5 s, break it in the last 4 s.
+12. **Ending:** cut on the punchline or the strongest human moment; a subscribe prompt is a sticker over the last frames, never a card.
